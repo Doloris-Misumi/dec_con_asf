@@ -1,0 +1,39 @@
+_BASE_CONFIG_: './configs/v1_0/cfg_A2F_scl_final.yml'
+
+GENERAL:
+  NAME: 'ASF_v1_0_local'
+  LOGGING:
+    INTERVAL_EPOCH_UTIL: 1
+
+DATASET:
+  path_data:
+    list_dir_kradar: ['/home/hongsheng/k_radar_dataset']
+    split: ['./resources/split/train.txt', './resources/split/test.txt']
+    revised_label_v1_1: './tools/revise_label/kradar_revised_label_v1_1'
+    revised_label_v2_0: './tools/revise_label/kradar_revised_label_v2_0/KRadar_refined_label_by_UWIPL'
+    revised_label_v2_1: './tools/revise_label/kradar_revised_label_v2_1/KRadar_revised_visibility'
+  label_version: 'v1_0'
+  cam_dir:
+    load: 'ori'
+    undistorted: '/home/hongsheng/k_radar_dataset'
+    cropped: '/home/hongsheng/k_radar_dataset'
+  ldr64:
+    processed: False
+    dir: '/home/hongsheng/k_radar_dataset'
+    skip_line: 13
+    n_attr: 9
+    n_used: 5
+    inside_ldr64: True
+    calib: True
+  rdr_sparse:
+    processed: True
+    dir: '/home/hongsheng/k_radar_dataset'
+
+MODEL:
+  CAMERA:
+    PRETRAINED: './pretrained/v1_0/CAMERA_MODEL_v1_0_10.pt'
+  LIDAR:
+    PRETRAINED: './pretrained/v1_0/SECOND_v1_0_10.pt'
+  RADAR:
+    PRETRAINED: './pretrained/v1_0/RTNH_v1_0_10.pt'
+

@@ -1,0 +1,29 @@
+{
+  "num_checkpoints": 11,
+  "checkpoints": [
+    "model_0.pt",
+    "model_1.pt",
+    "model_10.pt",
+    "model_2.pt",
+    "model_3.pt",
+    "model_4.pt",
+    "model_5.pt",
+    "model_6.pt",
+    "model_7.pt",
+    "model_8.pt",
+    "model_9.pt"
+  ],
+  "sizes": {
+    "model_0.pt": "318.7MB",
+    "model_1.pt": "318.7MB",
+    "model_10.pt": "318.7MB",
+    "model_2.pt": "318.7MB",
+    "model_3.pt": "318.7MB",
+    "model_4.pt": "318.7MB",
+    "model_5.pt": "318.7MB",
+    "model_6.pt": "318.7MB",
+    "model_7.pt": "318.7MB",
+    "model_8.pt": "318.7MB",
+    "model_9.pt": "318.7MB"
+  }
+}

@@ -1,0 +1,50 @@
+# Runtime outputs and checkpoints
+logs/
+pretrained/
+pretrained
+*.pt
+*.pth
+*.ckpt
+events.out.tfevents*
+
+# Python/cache/build artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+build/
+dist/
+*.egg-info/
+
+# Native extension build products
+ops/build/
+*.so
+*.o
+*.obj
+*.a
+
+# Large/generated data artifacts
+*.npy
+*.npz
+*.pkl
+*.pickle
+*.mat
+*.zip
+*.pcd
+*.ply
+*.bin
+
+# Large media examples
+*.gif
+
+# Local/editor files
+.env
+.venv/
+venv/
+.idea/
+.vscode/
+
+# Keep compact summaries, skip copied raw training logs
+results/**/raw/*.log

@@ -1,0 +1,451 @@
+DATASET:
+  NAME: KRadarFusion_v1_0
+  NUM: null
+  calib:
+    z_offset: 0.7
+  cam:
+    front0: false
+    front1: false
+    left0: false
+    left1: false
+    rear0: false
+    rear1: false
+    right0: false
+    right1: false
+  cam_calib:
+    dir: ./resources/cam_calib/calib_seq
+    load: false
+  cam_dir:
+    cropped: /media/oem/HDD_8TB/kradar_imgs/cropped
+    load: ori
+    undistorted: /media/oem/HDD_8TB/kradar_imgs/undistorted
+  cam_process:
+    crop:
+    - 96
+    - 170
+    - 800
+    - 426
+    is_use_imgnet_mean_std: true
+    mean:
+    - 0.303
+    - 0.303
+    - 0.307
+    ori_shape:
+    - 1280
+    - 720
+    resize: 0.7
+    std:
+    - 0.113
+    - 0.119
+    - 0.107
+  collate_fn: v2_1
+  depth_labels:
+    d_minmax:
+    - 2.0
+    - 80.0
+    dir: /media/oem/HDD_8TB/kradar_depth_labels/cropped
+    img_size:
+    - 704
+    - 256
+    load: false
+    margin: 1
+    stride: 8
+  item:
+    calib: true
+    cam: true
+    ldr128: false
+    ldr64: true
+    rdr: false
+    rdr_sparse: true
+  label:
+    Bicycle:
+    - false
+    - -1
+    - - 1
+      - 1
+      - 0
+    - - 0
+      - 255
+      - 255
+    Bicycle Group:
+    - false
+    - -1
+    - - 0
+      - 0.5
+      - 1
+    - - 0
+      - 128
+      - 255
+    Bus or Truck:
+    - true
+    - 2
+    - - 1
+      - 0.2
+      - 0
+    - - 0
+      - 50
+      - 255
+    Label:
+    - false
+    - -1
+    - - 0.5
+      - 0.5
+      - 0.5
+    - - 128
+      - 128
+      - 128
+    Motorcycle:
+    - false
+    - -1
+    - - 1
+      - 0
+      - 0
+    - - 0
+      - 0
+      - 255
+    Pedestrian:
+    - false
+    - -1
+    - - 0
+      - 0
+      - 1
+    - - 255
+      - 0
+      - 0
+    Pedestrian Group:
+    - false
+    - -1
+    - - 0.4
+      - 0
+      - 1
+    - - 255
+      - 0
+      - 100
+    Sedan:
+    - true
+    - 1
+    - - 0
+      - 1
+      - 0
+    - - 0
+      - 255
+      - 0
+    calib: true
+    consider_cls: true
+    consider_roi: true
+    onlyR: false
+    remove_0_obj: true
+  label_version: v2_0
+  ldr64:
+    calib: true
+    inside_ldr64: true
+    n_attr: 9
+    n_used: 5
+    processed: false
+    skip_line: 13
+  obj_mask:
+    dir: /media/oem/HDD_8TB/kradar_obj_mask_1_5_expand
+    load: false
+  path_data:
+    list_dir_kradar:
+    - /home/hongsheng/k_radar_dataset
+    revised_label_v1_1: ./tools/revise_label/kradar_revised_label_v1_1
+    revised_label_v2_0: ./tools/revise_label/kradar_revised_label_v2_0/KRadar_refined_label_by_UWIPL
+    revised_label_v2_1: ./tools/revise_label/kradar_revised_label_v2_1/KRadar_revised_visibility
+    split:
+    - ./resources/split/train.txt
+    - ./resources/split/test.txt
+  portion: null
+  rdr:
+    cube: false
+  rdr_sparse:
+    dir: /home/hongsheng/k_radar_dataset
+    processed: true
+  roi:
+    azimuth_deg:
+    - -55
+    - 55
+    check_azimuth_for_rdr: false
+    filter: true
+    grid_size: 0.4
+    keys: []
+    voxel_size:
+    - 0.4
+    - 0.4
+    - 0.4
+    xyz:
+    - 0.0
+    - -16.0
+    - -2.0
+    - 72.0
+    - 16.0
+    - 7.6
+  t_params:
+    dir: ./resources/cam_calib/T_params_seq
+    load: true
+    ref_sensor: radar
+GENERAL:
+  COMMENT1: ROI 0~72, -16~16, -2~7.6
+  COMMENT2: 'lXpYtZdWact (UCP): linearX patchY totalZ dimW act'
+  COMMENT3: lx (PFT)
+  DEVICE: gpu
+  IS_CUDA_SEED: true
+  IS_DETERMINISTIC: true
+  LOGGING:
+    INTERVAL_EPOCH_MODEL: 1
+    INTERVAL_EPOCH_UTIL: 5
+    IS_LOGGING: true
+    IS_SAVE_MODEL: true
+    PATH_LOGGING: ./logs
+  NAME: A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16
+  RESUME:
+    IS_COPY_LOGS: true
+    IS_RESUME: false
+    PATH_EXP: null
+    START_EP: null
+  SEED: 20250215
+MODEL:
+  FREEZE: true
+  FREEZE_BN: false
+  FUSER:
+    DIM_FEATS:
+    - 512
+    - 768
+    KEY_FEATS:
+    - spatial_features_2d
+    - bev_feat
+    NAME: A2Fusion
+    N_HEADS_MHA: 16
+    PFT:
+      ACTIVATION: GELU
+      LAYER_NORM: true
+      METHOD: LinearN
+      N_LAYER: 2
+    POST_CHANNEL: true
+    TO_EMBED:
+      ACTIVATION: Identity
+      DIM_COMMON: 256
+      LAYER_NORM: true
+      METHOD: Linear1
+      N_LAYER: 1
+    UCP:
+      ACTIVATION: GELU
+      DIM_PATCH: 256
+      LAYER_NORM: true
+      METHOD: LinearN
+      N_LAYER: 2
+      N_QUERY: 32
+      PATCH_SIZE:
+      - 2
+      - 2
+  HEAD:
+    ANCHOR_GENERATOR_CONFIG:
+    - align_center: false
+      anchor_bottom_heights:
+      - -1.08
+      anchor_rotations:
+      - 0
+      - 1.57
+      anchor_sizes:
+      - - 4.2
+        - 2.1
+        - 2.0
+      class_name: Sedan
+      feature_map_stride: 1
+      matched_threshold: 0.6
+      unmatched_threshold: 0.45
+    - align_center: false
+      anchor_bottom_heights:
+      - -1.08
+      anchor_rotations:
+      - 0
+      - 1.57
+      anchor_sizes:
+      - - 9.5
+        - 3.2
+        - 3.7
+      class_name: Bus or Truck
+      feature_map_stride: 1
+      matched_threshold: 0.55
+      unmatched_threshold: 0.4
+    CLASS_AGNOSTIC: false
+    DIR_LIMIT_OFFSET: 0.0
+    DIR_OFFSET: 0.78539
+    INPUT_CHANNELS: 2048
+    KEY_FEATURES: fused_feat
+    LOSS_CONFIG:
+      LOSS_WEIGHTS:
+        cls_weight: 1.0
+        code_weights:
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
+        - 1.0
+        dir_weight: 0.2
+        loc_weight: 2.0
+    NAME: AnchorHeadSingleIntegrated
+    NUM_DIR_BINS: 2
+    POST_PROCESSING:
+      EVAL_METRIC: kitti
+      NMS_CONFIG:
+        MULTI_CLASSES_NMS: false
+        NMS_POST_MAXSIZE: 500
+        NMS_PRE_MAXSIZE: 4096
+        NMS_THRESH: 0.01
+        NMS_TYPE: nms_gpu
+      OUTPUT_RAW_SCORE: false
+      RECALL_THRESH_LIST:
+      - 0.3
+      - 0.5
+      - 0.7
+      SCORE_THRESH: 0.1
+    TARGET_ASSIGNER_CONFIG:
+      BOX_CODER: ResidualCoder
+      MATCH_HEIGHT: false
+      NAME: AxisAlignedTargetAssigner
+      NORM_BY_NUM_EXAMPLES: false
+      POS_FRACTION: -1.0
+      SAMPLE_SIZE: 512
+    USE_DIRECTION_CLASSIFIER: true
+  LIDAR:
+    CFG: ./configs/cfg_SECOND_local.yml
+    CHANNEL: 512
+    KEY: spatial_features_2d
+    PRETRAINED: ./pretrained/SECOND_10.pt
+  LOSS:
+    INDIV_WEIGHT: 1.0
+  RADAR:
+    CFG: ./configs/cfg_RTNH_wide.yml
+    CHANNEL: 768
+    KEY: bev_feat
+    PRETRAINED: ./pretrained/RTNH_wide_10.pt
+  SCL: false
+  SKELETON: FusionBaseIntegrated
+OPTIMIZER:
+  BATCH_SIZE: 8
+  BETAS:
+  - 0.9
+  - 0.999
+  LR: 0.004
+  MAX_EPOCH: 30
+  MIN_LR: 0.0001
+  MOMENTUM: 0.9
+  NAME: AdamW
+  NUM_WORKERS: 0
+  SCHEDULER: CosineAnnealingLR
+  TYPE_TOTAL_ITER: every
+  WEIGHT_DECAY: 0.01
+VAL:
+  CLASS_VAL_KEYWORD:
+    Bicycle: bic
+    Bicycle Group: big
+    Bus or Truck: bus
+    Motorcycle: mot
+    Pedestrian: ped
+    Pedestrian Group: peg
+    Sedan: sed
+  IS_CONSIDER_VAL_SUBSET: false
+  IS_VALIDATE: true
+  LIST_CARE_VAL:
+  - Sedan
+  - Bus or Truck
+  LIST_VAL_CONF_THR:
+  - 0.0
+  - 0.3
+  LIST_VAL_IOU:
+  - 0.7
+  - 0.5
+  - 0.3
+  NUM_SUBSET: 500
+  REGARDING: anchor
+  VAL_PER_EPOCH_FULL: 11
+  VAL_PER_EPOCH_SUBSET: 1
+VIS:
+  CLASS_BGR:
+    Bicycle:
+    - 0
+    - 255
+    - 255
+    Bus or Truck:
+    - 0
+    - 50
+    - 255
+    Label:
+    - 128
+    - 128
+    - 128
+    Motorcycle:
+    - 0
+    - 0
+    - 255
+    Pedestrian:
+    - 255
+    - 0
+    - 0
+    Pedestrian Group:
+    - 255
+    - 0
+    - 100
+    Sedan:
+    - 0
+    - 255
+    - 0
+  CLASS_RGB:
+    Bicycle:
+    - 1
+    - 1
+    - 0
+    Bus or Truck:
+    - 1
+    - 0.2
+    - 0
+    Label:
+    - 0.5
+    - 0.5
+    - 0.5
+    Motorcycle:
+    - 1
+    - 0
+    - 0
+    Pedestrian:
+    - 0
+    - 0
+    - 1
+    Pedestrian Group:
+    - 0.4
+    - 0
+    - 1
+    Sedan:
+    - 0
+    - 1
+    - 0
+  ROI:
+    DEFAULT:
+    - 0
+    - 100
+    - -40
+    - 40
+    - -10
+    - 60
+    TYPE: default
+  Z_CENTER:
+    Bicycle: 0.5
+    Bus or Truck: 1.5
+    Motorcycle: 0.5
+    Pedestrian: 0.5
+    Pedestrian Group: 0.5
+    Sedan: 0.5
+  Z_HEIGHT:
+    Bicycle: -1
+    Bus or Truck: 1.9
+    Motorcycle: -1
+    Pedestrian: 2
+    Pedestrian Group: -1
+    Sedan: 1.9
+cfg_dataset_ver2: true
+cfg_eval_ver2: true
+get_loss_from: detector
+is_validation_updated: true

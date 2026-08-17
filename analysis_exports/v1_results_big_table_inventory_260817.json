@@ -1,0 +1,392 @@
+{
+  "included": [
+    {
+      "path": "/home/hongsheng/K-Radar-main/logs/exp_260725_230526_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/none/0.3/complete_results.txt",
+      "reason": "near_config:config.yml",
+      "rows": 36
+    },
+    {
+      "path": "/home/hongsheng/K-Radar-main/logs/exp_260814_212832_ASF_v1_0_local_repro/test_kitti/none/0.3/complete_results.txt",
+      "reason": "path",
+      "rows": 18
+    },
+    {
+      "path": "/home/hongsheng/K-Radar-main/official_downloads/asf_v1_official_logs_min/exp_250219_134333_A2F_v1_0/test_kitti/none/0.0/complete_results.txt",
+      "reason": "path",
+      "rows": 18
+    },
+    {
+      "path": "/home/hongsheng/K-Radar-main/official_downloads/asf_v1_official_logs_min/exp_250303_200024_A2F_v1_0/test_kitti/none/0.0/complete_results.txt",
+      "reason": "path",
+      "rows": 18
+    },
+    {
+      "path": "/home/hongsheng/K-Radar-main/official_downloads/asf_v1_official_logs_min/exp_250303_200024_A2F_v1_0/test_kitti/none/0.3/complete_results.txt",
+      "reason": "path",
+      "rows": 18
+    },
+    {
+      "path": "/home/hongsheng/K-Radar-main/results/asf_bs4_ep15/summary_conf0.3.md",
+      "reason": "near_config:config.yml",
+      "rows": 38
+    },
+    {
+      "path": "/home/hongsheng/K-Radar-main/results/decu_bs4_ep15/summary_conf0.3.md",
+      "reason": "near_config:config.yml",
+      "rows": 38
+    },
+    {
+      "path": "/home/hongsheng/K-Radar-main/results/demo/summary_conf0.3.md",
+      "reason": "near_config:config.yml",
+      "rows": 38
+    },
+    {
+      "path": "/home/hongsheng/K-Radar-main/results/exp_260715_125207_SECOND/summary_conf0.3.md",
+      "reason": "near_config:config.yml",
+      "rows": 38
+    },
+    {
+      "path": "/home/hongsheng/K-Radar-main/results/exp_260717_130203_RTNH/summary_conf0.3.md",
+      "reason": "k-radar-results-summary",
+      "rows": 38
+    },
+    {
+      "path": "/home/hongsheng/K-Radar-main/results/exp_260717_184456_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/summary_conf0.3.md",
+      "reason": "near_config:config.yml",
+      "rows": 38
+    },
+    {
+      "path": "/home/hongsheng/K-Radar-main/results/exp_260721_133144_ASF_LR_bs4_ep15/summary_conf0.3.md",
+      "reason": "near_config:config.yml",
+      "rows": 38
+    },
+    {
+      "path": "/home/hongsheng/K-Radar-main/results/exp_260721_133145_ASF_LR_bs8_ep30/summary_conf0.3.md",
+      "reason": "near_config:config.yml",
+      "rows": 38
+    },
+    {
+      "path": "/home/hongsheng/K-Radar-main/results/exp_260725_230526_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/summary_conf0.0.md",
+      "reason": "near_config:config.yml",
+      "rows": 4
+    },
+    {
+      "path": "/home/hongsheng/K-Radar-main/results/exp_260725_230526_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/summary_conf0.3.md",
+      "reason": "near_config:config.yml",
+      "rows": 38
+    },
+    {
+      "path": "/home/hongsheng/K-Radar-main/results/official_asf_v1_exp250219/summary_conf0.0.md",
+      "reason": "path",
+      "rows": 19
+    },
+    {
+      "path": "/home/hongsheng/K-Radar-main/results/official_asf_v1_exp250303/summary_conf0.0.md",
+      "reason": "path",
+      "rows": 19
+    },
+    {
+      "path": "/home/hongsheng/K-Radar-main/results/official_asf_v1_exp250303/summary_conf0.3.md",
+      "reason": "path",
+      "rows": 19
+    },
+    {
+      "path": "/home/hongsheng/K-Radar-main/results/official_asf_v2_RLC/summary_conf0.0.md",
+      "reason": "k-radar-results-summary",
+      "rows": 38
+    },
+    {
+      "path": "/home/hongsheng/K-Radar-main/results/official_asf_v2_RLC/summary_conf0.3.md",
+      "reason": "k-radar-results-summary",
+      "rows": 38
+    },
+    {
+      "path": "/home/hongsheng/asf_patch_dec/logs/exp_260729_213501_ObjPatchDecGentle_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/subset_eval_summary.json",
+      "reason": "near_config:config.yml",
+      "rows": 14
+    },
+    {
+      "path": "/home/hongsheng/asf_patch_dec/logs/exp_260729_213503_ObjPatchDecStrong_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/subset_eval_summary.json",
+      "reason": "near_config:config.yml",
+      "rows": 14
+    },
+    {
+      "path": "/home/hongsheng/asf_patch_dec/logs/exp_260803_204106_ObjPatchDecGentle_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/subset_eval_summary.json",
+      "reason": "near_config:config.yml",
+      "rows": 8
+    },
+    {
+      "path": "/home/hongsheng/asf_patch_dec/logs/exp_260803_204106_ObjPatchDecStrong_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/subset_eval_summary.json",
+      "reason": "near_config:config.yml",
+      "rows": 8
+    },
+    {
+      "path": "/home/hongsheng/asf_patch_dec/logs/exp_260803_210429_ObjPatchDecStrong_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/full_eval_summary.json",
+      "reason": "near_config:config.yml",
+      "rows": 4
+    },
+    {
+      "path": "/home/hongsheng/asf_patch_dec/results/exp_260726_144405_PatchDec_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/summary_conf0.0.md",
+      "reason": "near_config:config.yml",
+      "rows": 4
+    },
+    {
+      "path": "/home/hongsheng/asf_patch_dec/results/exp_260726_144405_PatchDec_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/summary_conf0.3.md",
+      "reason": "near_config:config.yml",
+      "rows": 38
+    },
+    {
+      "path": "/home/hongsheng/asf_patch_dec/results/exp_260728_162524_PatchDec_model8_full/summary_conf0.0.md",
+      "reason": "near_config:config.yml",
+      "rows": 4
+    },
+    {
+      "path": "/home/hongsheng/asf_patch_dec/results/exp_260728_162524_PatchDec_model8_full/summary_conf0.3.md",
+      "reason": "near_config:config.yml",
+      "rows": 4
+    },
+    {
+      "path": "/home/hongsheng/asf_patch_dec/results/exp_260728_181732_ObjPatchDecGentle_full/summary_conf0.3.md",
+      "reason": "near_config:config.yml",
+      "rows": 38
+    },
+    {
+      "path": "/home/hongsheng/asf_patch_dec/results/exp_260728_181732_ObjPatchDecStrong_full/summary_conf0.3.md",
+      "reason": "near_config:config.yml",
+      "rows": 38
+    },
+    {
+      "path": "/home/hongsheng/asf_patch_dec/results/exp_260803_210429_ObjPatchDecStrong_model8_full/full_eval_summary.json",
+      "reason": "near_config:config.yml",
+      "rows": 4
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260810_221258_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/none/0.0/complete_results.txt",
+      "reason": "path",
+      "rows": 18
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260810_221258_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/none/0.3/complete_results.txt",
+      "reason": "path",
+      "rows": 18
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260810_221300_TaskDecControlBalanced_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/none/0.0/complete_results.txt",
+      "reason": "path",
+      "rows": 18
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260810_221300_TaskDecControlBalanced_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/none/0.3/complete_results.txt",
+      "reason": "path",
+      "rows": 18
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260812_211936_TaskDecControlBalanced_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/subset_eval_summary.json",
+      "reason": "path",
+      "rows": 22
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260812_211952_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/subset_eval_summary.json",
+      "reason": "path",
+      "rows": 22
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232646_TaskDecControlBalanced_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/full_eval_summary.json",
+      "reason": "path",
+      "rows": 2
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232646_TaskDecControlBalanced_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_2_total/0.3/complete_results.txt",
+      "reason": "path",
+      "rows": 18
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/full_eval_summary.json",
+      "reason": "path",
+      "rows": 2
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/complete_results.txt",
+      "reason": "path",
+      "rows": 18
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260813_203247_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/full_eval_summary.json",
+      "reason": "path",
+      "rows": 2
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260813_225556_TaskDecControlMoreOpenGate_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/none/0.3/complete_results.txt",
+      "reason": "path",
+      "rows": 18
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260813_225557_TaskDecControlStrongerControl_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/none/0.3/complete_results.txt",
+      "reason": "path",
+      "rows": 18
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260814_231746_TaskDecControlMoreOpenGate_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/subset_eval_summary.json",
+      "reason": "path",
+      "rows": 9
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260815_044028_TaskDecControlMoreOpenGate_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/subset_eval_summary.json",
+      "reason": "path",
+      "rows": 2
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260815_115940_TaskDecControlStrongerControl_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/subset_eval_summary.json",
+      "reason": "path",
+      "rows": 6
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260815_120021_TaskDecControlStrongerControl_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/subset_eval_summary.json",
+      "reason": "path",
+      "rows": 5
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260817_000340_TaskDecControlMoreOpenGate_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/full_eval_summary.json",
+      "reason": "path",
+      "rows": 2
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260817_000340_TaskDecControlMoreOpenGate_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/complete_results.txt",
+      "reason": "path",
+      "rows": 18
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260817_000340_TaskDecControlStrongerControl_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/full_eval_summary.json",
+      "reason": "path",
+      "rows": 2
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260817_000340_TaskDecControlStrongerControl_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_4_total/0.3/complete_results.txt",
+      "reason": "path",
+      "rows": 18
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260817_000503_TaskDecControlStrongerControl_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/full_eval_summary.json",
+      "reason": "path",
+      "rows": 2
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260817_000503_TaskDecControlStrongerControl_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_2_total/0.3/complete_results.txt",
+      "reason": "path",
+      "rows": 18
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260817_000507_TaskDecControlMoreOpenGate_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/full_eval_summary.json",
+      "reason": "path",
+      "rows": 2
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/logs/exp_260817_000507_TaskDecControlMoreOpenGate_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_2_total/0.3/complete_results.txt",
+      "reason": "path",
+      "rows": 18
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/results/exp_260810_221258_TaskDecControlRobust_v1_final/summary_conf0.0.md",
+      "reason": "file_text",
+      "rows": 19
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/results/exp_260810_221258_TaskDecControlRobust_v1_final/summary_conf0.3.md",
+      "reason": "file_text",
+      "rows": 19
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/results/exp_260810_221300_TaskDecControlBalanced_v1_final/summary_conf0.0.md",
+      "reason": "file_text",
+      "rows": 19
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/results/exp_260810_221300_TaskDecControlBalanced_v1_final/summary_conf0.3.md",
+      "reason": "file_text",
+      "rows": 19
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/results/exp_260812_232646_TaskDecControlBalanced_v1_model2_full/summary_conf0.0.md",
+      "reason": "file_text",
+      "rows": 2
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/results/exp_260812_232646_TaskDecControlBalanced_v1_model2_full/summary_conf0.3.md",
+      "reason": "file_text",
+      "rows": 19
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/results/exp_260812_232650_TaskDecControlRobust_v1_model0_full/summary_conf0.0.md",
+      "reason": "file_text",
+      "rows": 2
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/results/exp_260812_232650_TaskDecControlRobust_v1_model0_full/summary_conf0.3.md",
+      "reason": "file_text",
+      "rows": 19
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/results/v1_best_checkpoint_full_comparison_260813.json",
+      "reason": "file_text",
+      "rows": 96
+    },
+    {
+      "path": "/home/hongsheng/dec_con_asf/results/v1_task_dec_published_comparison_260812.json",
+      "reason": "file_text",
+      "rows": 64
+    },
+    {
+      "path": "/home/hongsheng/decu_asf/logs/exp_260725_230532_DeCU_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/none/0.3/complete_results.txt",
+      "reason": "near_config:config.yml",
+      "rows": 36
+    },
+    {
+      "path": "/home/hongsheng/decu_asf/results/exp_260721_133144_DeCU_ASF_LR_bs4_ep15/summary_conf0.3.md",
+      "reason": "near_config:config.yml",
+      "rows": 38
+    },
+    {
+      "path": "/home/hongsheng/decu_asf/results/exp_260721_133144_DeCU_ASF_LR_bs8_ep30/summary_conf0.3.md",
+      "reason": "near_config:config.yml",
+      "rows": 38
+    },
+    {
+      "path": "/home/hongsheng/decu_asf/results/exp_260725_230532_DeCU_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/summary_conf0.0.md",
+      "reason": "near_config:config.yml",
+      "rows": 4
+    },
+    {
+      "path": "/home/hongsheng/decu_asf/results/exp_260725_230532_DeCU_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/summary_conf0.3.md",
+      "reason": "near_config:config.yml",
+      "rows": 38
+    },
+    {
+      "path": "/home/hongsheng/v2/results/exp_260714_024354_RL_3df_gate/summary_conf0.3.md",
+      "reason": "near_config:config.yml",
+      "rows": 19
+    }
+  ],
+  "skipped": [
+    "/home/hongsheng/K-Radar-main/official_downloads/asf_v2_official_logs_min/logs_FUSION_AVAIL/exp_250218_134456_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16_RLC/test_kitti/none/0.0/complete_results.txt",
+    "/home/hongsheng/K-Radar-main/official_downloads/asf_v2_official_logs_min/logs_FUSION_AVAIL/exp_250218_134456_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16_RLC/test_kitti/none/0.3/complete_results.txt",
+    "/home/hongsheng/asf_patch_dec/logs/exp_260803_210803_FgGatedPatchDec_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/none/0.3/complete_results.txt",
+    "/home/hongsheng/asf_patch_dec/logs/exp_260803_224341_FgGatedPatchDecSelective_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/none/0.3/complete_results.txt",
+    "/home/hongsheng/asf_patch_dec/logs/exp_260805_230701_FgGatedPatchDecSelective_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/subset_eval_summary.json",
+    "/home/hongsheng/asf_patch_dec/logs/exp_260805_230701_FgGatedPatchDec_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/subset_eval_summary.json",
+    "/home/hongsheng/asf_patch_dec/results/exp_260803_210803_FgGatedPatchDec_final/summary_conf0.3.md",
+    "/home/hongsheng/asf_patch_dec/results/exp_260803_224341_FgGatedPatchDecSelective_final/summary_conf0.3.md",
+    "/home/hongsheng/dec_con_asf/logs/exp_260806_000821_DecControlledASFGentle_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/none/0.3/complete_results.txt",
+    "/home/hongsheng/dec_con_asf/logs/exp_260806_000825_DecControlledASFStrong_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/none/0.3/complete_results.txt",
+    "/home/hongsheng/dec_con_asf/logs/exp_260808_131759_TaskDecControlBalanced_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/none/0.3/complete_results.txt",
+    "/home/hongsheng/dec_con_asf/logs/exp_260808_131759_TaskDecControlRobust_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/none/0.3/complete_results.txt",
+    "/home/hongsheng/dec_con_asf/results/exp_260806_000821_DecControlledASFGentle_final/summary_conf0.0.md",
+    "/home/hongsheng/dec_con_asf/results/exp_260806_000821_DecControlledASFGentle_final/summary_conf0.3.md",
+    "/home/hongsheng/dec_con_asf/results/exp_260806_000825_DecControlledASFStrong_final/summary_conf0.0.md",
+    "/home/hongsheng/dec_con_asf/results/exp_260806_000825_DecControlledASFStrong_final/summary_conf0.3.md",
+    "/home/hongsheng/dec_con_asf/results/exp_260808_131759_TaskDecControlBalanced_final/summary_conf0.0.md",
+    "/home/hongsheng/dec_con_asf/results/exp_260808_131759_TaskDecControlBalanced_final/summary_conf0.3.md",
+    "/home/hongsheng/dec_con_asf/results/exp_260808_131759_TaskDecControlRobust_final/summary_conf0.0.md",
+    "/home/hongsheng/dec_con_asf/results/exp_260808_131759_TaskDecControlRobust_final/summary_conf0.3.md",
+    "/home/hongsheng/dec_con_asf/results/task_dec_control_comparison_260810.json"
+  ]
+}
