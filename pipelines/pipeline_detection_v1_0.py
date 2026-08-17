@@ -318,6 +318,8 @@ class PipelineDetection_v1_0():
             self.network.training = True
             avg_loss = []
             for idx_iter, dict_datum in enumerate(tqdm(data_loader_train)):
+                dict_datum['_train_epoch'] = epoch
+                dict_datum['_train_iter'] = idx_iter
                 if self.optim_fastai:
                     self.scheduler.step(accumulated_iter, epoch)
                 

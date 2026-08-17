@@ -494,6 +494,10 @@ class DecControlledA2Fusion(PatchDecA2Fusion):
         self.dec_control_balance_weight = float(model_cfg.get("DEC_CONTROL_BALANCE_WEIGHT", 0.0))
         self.dec_control_use_dec_token = bool(model_cfg.get("DEC_CONTROL_USE_DEC_TOKEN", True))
         self.dec_control_dec_res_scale = float(model_cfg.get("DEC_CONTROL_DEC_RES_SCALE", 0.05))
+        self.dec_control_decay_start_epoch = model_cfg.get("DEC_CONTROL_DECAY_START_EPOCH", None)
+        self.dec_control_decay_end_epoch = model_cfg.get("DEC_CONTROL_DECAY_END_EPOCH", None)
+        self.dec_control_schedule_min = float(model_cfg.get("DEC_CONTROL_SCHEDULE_MIN", 1.0))
+        self.dec_control_loss_schedule = bool(model_cfg.get("DEC_CONTROL_LOSS_SCHEDULE", False))
 
         def make_score_head():
             return nn.Sequential(
@@ -520,6 +524,32 @@ class DecControlledA2Fusion(PatchDecA2Fusion):
             float(model_cfg.get("DEC_CONTROL_GATE_INIT_BIAS", -2.0)),
         )
 
+    def _dec_control_schedule_factor(self, batch_dict):
+        if not self.training or self.dec_control_decay_start_epoch is None:
+            return 1.0
+
+        epoch = batch_dict.get("_train_epoch", None)
+        if epoch is None:
+            return 1.0
+        if isinstance(epoch, torch.Tensor):
+            epoch = epoch.detach().float().mean().item()
+        else:
+            epoch = float(epoch)
+
+        start = float(self.dec_control_decay_start_epoch)
+        min_factor = max(0.0, min(1.0, self.dec_control_schedule_min))
+        if epoch < start:
+            return 1.0
+
+        if self.dec_control_decay_end_epoch is None:
+            return min_factor
+        end = float(self.dec_control_decay_end_epoch)
+        if end <= start or epoch >= end:
+            return min_factor
+
+        ratio = (epoch - start) / max(end - start, 1.0e-6)
+        return 1.0 + ratio * (min_factor - 1.0)
+
     def _dec_control_gate_loss(self, gate_logits, fg_mask):
         target = fg_mask.float()
         num_pos = target.sum()
@@ -533,7 +563,7 @@ class DecControlledA2Fusion(PatchDecA2Fusion):
         )
         return F.binary_cross_entropy_with_logits(gate_logits, target, pos_weight=pos_weight)
 
-    def _dec_control_scores(self, keys, base_tokens, common_tokens, unique_tokens):
+    def _dec_control_scores(self, keys, base_tokens, common_tokens, unique_tokens, control_factor=1.0):
         common_mean = torch.stack(common_tokens, dim=0).mean(dim=0)
         unique_abs_mean = torch.stack([tok.abs() for tok in unique_tokens], dim=0).mean(dim=0)
 
@@ -557,7 +587,8 @@ class DecControlledA2Fusion(PatchDecA2Fusion):
             sensor_prob = torch.softmax(score_logits / temperature, dim=1)
 
         num_sensor = float(score_logits.shape[1])
-        token_scale = 1.0 + self.dec_control_strength * gate.unsqueeze(1) * (
+        effective_strength = self.dec_control_strength * float(control_factor)
+        token_scale = 1.0 + effective_strength * gate.unsqueeze(1) * (
             num_sensor * sensor_prob - 1.0
         )
         token_scale = token_scale.clamp(min=self.dec_control_scale_min, max=self.dec_control_scale_max)
@@ -590,18 +621,25 @@ class DecControlledA2Fusion(PatchDecA2Fusion):
             common_tokens.append(self.patch_common[key](base))
             unique_tokens.append(self.patch_unique[key](base))
 
+        control_factor = self._dec_control_schedule_factor(batch_dict)
         gate_logits, gate_prob, gate, _, sensor_prob, token_scale = self._dec_control_scores(
             keys,
             base_tokens,
             common_tokens,
             unique_tokens,
+            control_factor=control_factor,
         )
 
         controlled_tokens = []
         for sensor_idx, (base, common, unique) in enumerate(zip(base_tokens, common_tokens, unique_tokens)):
             controlled = base
             if self.dec_control_use_dec_token:
-                controlled = controlled + self.dec_control_dec_res_scale * gate.unsqueeze(-1) * (common + unique)
+                controlled = controlled + (
+                    self.dec_control_dec_res_scale
+                    * control_factor
+                    * gate.unsqueeze(-1)
+                    * (common + unique)
+                )
             controlled = controlled * token_scale[:, sensor_idx].unsqueeze(-1)
             controlled_tokens.append(controlled.unsqueeze(1))
 
@@ -654,6 +692,8 @@ class DecControlledA2Fusion(PatchDecA2Fusion):
                     + self.dec_control_entropy_weight * entropy_loss
                     + self.dec_control_balance_weight * balance_loss
                 )
+                if self.dec_control_loss_schedule:
+                    patch_dec_loss = patch_dec_loss * control_factor
                 batch_dict["patch_dec_loss"] = patch_dec_loss
 
                 bg_mask = ~fg_mask
@@ -674,6 +714,7 @@ class DecControlledA2Fusion(PatchDecA2Fusion):
                     "dec_control_scale_mean": token_scale.detach().mean().item(),
                     "dec_control_scale_min": token_scale.detach().min().item(),
                     "dec_control_scale_max": token_scale.detach().max().item(),
+                    "dec_control_schedule_factor": float(control_factor),
                     "patch_dec_num_patches": float(idx.numel()),
                     "patch_dec_fg_patches": float(num_fg),
                     "patch_dec_fg_ratio": float(fg_ratio),
@@ -704,6 +745,13 @@ class TaskAwareDecControlledA2Fusion(DecControlledA2Fusion):
         hidden_dim = int(model_cfg.get("DEC_CONTROL_CLASS_HIDDEN_DIM", max(dim_patch // 2, 1)))
 
         self.dec_control_num_classes = int(model_cfg.get("DEC_CONTROL_NUM_CLASSES", 2))
+        context_mode = model_cfg.get("DEC_CONTROL_CONTEXT_MODE", "auto")
+        if context_mode == "auto":
+            context_mode = "task_binary" if self.dec_control_num_classes <= 1 else "class"
+        if context_mode not in ("task_binary", "class"):
+            raise ValueError(f"Unsupported DEC_CONTROL_CONTEXT_MODE: {context_mode}")
+        self.dec_control_context_mode = context_mode
+        self.dec_control_context_dim = 1 if context_mode == "task_binary" else self.dec_control_num_classes
         self.dec_control_class_loss_weight = float(model_cfg.get("DEC_CONTROL_CLASS_LOSS_WEIGHT", 0.2))
         self.dec_control_class_pos_weight_max = float(model_cfg.get("DEC_CONTROL_CLASS_POS_WEIGHT_MAX", 8.0))
         self.dec_control_query_strength = float(model_cfg.get("DEC_CONTROL_QUERY_STRENGTH", 0.08))
@@ -713,19 +761,37 @@ class TaskAwareDecControlledA2Fusion(DecControlledA2Fusion):
             nn.LayerNorm(dim_patch * 2),
             nn.Linear(dim_patch * 2, hidden_dim, bias=True),
             nn.GELU(),
-            nn.Linear(hidden_dim, self.dec_control_num_classes, bias=True),
+            nn.Linear(hidden_dim, self.dec_control_context_dim, bias=True),
         )
         nn.init.zeros_(self.dec_control_class_head[-1].weight)
         nn.init.zeros_(self.dec_control_class_head[-1].bias)
 
-        self.dec_control_class_context = nn.Linear(self.dec_control_num_classes, dim_patch, bias=False)
+        self.dec_control_class_context = nn.Linear(self.dec_control_context_dim, dim_patch, bias=False)
         nn.init.normal_(
             self.dec_control_class_context.weight,
             mean=0.0,
             std=float(model_cfg.get("DEC_CONTROL_CLASS_CONTEXT_INIT_STD", 0.01)),
         )
 
-    def _class_loss(self, class_logits, class_targets, idx):
+    def _class_loss(self, class_logits, class_targets, idx, fg_mask=None):
+        if self.dec_control_context_mode == "task_binary":
+            if fg_mask is None:
+                return class_logits.new_tensor(0.0)
+            target = fg_mask.float().unsqueeze(-1)
+            num_pos = target.sum()
+            if num_pos <= 0:
+                return class_logits.new_tensor(0.0)
+            num_neg = target.numel() - num_pos
+            pos_weight = (num_neg / num_pos.clamp_min(1.0)).clamp(
+                min=1.0,
+                max=self.dec_control_class_pos_weight_max,
+            )
+            return F.binary_cross_entropy_with_logits(
+                class_logits,
+                target,
+                pos_weight=pos_weight.reshape(1),
+            )
+
         if idx is None or idx.numel() == 0 or class_targets is None:
             return class_logits.new_tensor(0.0)
 
@@ -750,7 +816,10 @@ class TaskAwareDecControlledA2Fusion(DecControlledA2Fusion):
         unique_abs_mean = torch.stack([tok.abs() for tok in unique_tokens], dim=0).mean(dim=0)
         class_input = torch.cat([common_mean, unique_abs_mean], dim=-1)
         class_logits = self.dec_control_class_head(class_input)
-        class_prob = torch.softmax(class_logits, dim=-1)
+        if self.dec_control_context_mode == "task_binary":
+            class_prob = torch.sigmoid(class_logits)
+        else:
+            class_prob = torch.softmax(class_logits, dim=-1)
         class_context = torch.tanh(self.dec_control_class_context(class_prob))
         return class_logits, class_prob, class_context
 
@@ -778,23 +847,34 @@ class TaskAwareDecControlledA2Fusion(DecControlledA2Fusion):
             common_tokens.append(self.patch_common[key](base))
             unique_tokens.append(self.patch_unique[key](base))
 
+        control_factor = self._dec_control_schedule_factor(batch_dict)
         gate_logits, gate_prob, gate, _, sensor_prob, token_scale = self._dec_control_scores(
             keys,
             base_tokens,
             common_tokens,
             unique_tokens,
+            control_factor=control_factor,
         )
         class_logits, class_prob, class_context = self._task_context(common_tokens, unique_tokens)
 
         gated_context = gate.unsqueeze(-1) * class_context
-        batch_dict["_dec_control_query_delta"] = self.dec_control_query_strength * gated_context
-        batch_dict["_dec_control_fused_delta"] = self.dec_control_fused_res_strength * gated_context
+        batch_dict["_dec_control_query_delta"] = (
+            self.dec_control_query_strength * control_factor * gated_context
+        )
+        batch_dict["_dec_control_fused_delta"] = (
+            self.dec_control_fused_res_strength * control_factor * gated_context
+        )
 
         controlled_tokens = []
         for sensor_idx, (base, common, unique) in enumerate(zip(base_tokens, common_tokens, unique_tokens)):
             controlled = base
             if self.dec_control_use_dec_token:
-                controlled = controlled + self.dec_control_dec_res_scale * gate.unsqueeze(-1) * (common + unique)
+                controlled = controlled + (
+                    self.dec_control_dec_res_scale
+                    * control_factor
+                    * gate.unsqueeze(-1)
+                    * (common + unique)
+                )
             controlled = controlled * token_scale[:, sensor_idx].unsqueeze(-1)
             controlled_tokens.append(controlled.unsqueeze(1))
 
@@ -838,7 +918,7 @@ class TaskAwareDecControlledA2Fusion(DecControlledA2Fusion):
                 gate_loss = self._dec_control_gate_loss(gate_logits, fg_mask)
                 if gate_loss is None:
                     gate_loss = base_tokens[0].new_tensor(0.0)
-                class_loss = self._class_loss(class_logits, class_targets, idx)
+                class_loss = self._class_loss(class_logits, class_targets, idx, fg_mask=fg_mask)
                 entropy_loss, balance_loss = self._control_regularizers(sensor_prob)
 
                 patch_dec_loss = (
@@ -850,6 +930,8 @@ class TaskAwareDecControlledA2Fusion(DecControlledA2Fusion):
                     + self.dec_control_entropy_weight * entropy_loss
                     + self.dec_control_balance_weight * balance_loss
                 )
+                if self.dec_control_loss_schedule:
+                    patch_dec_loss = patch_dec_loss * control_factor
                 batch_dict["patch_dec_loss"] = patch_dec_loss
 
                 bg_mask = ~fg_mask
@@ -873,15 +955,24 @@ class TaskAwareDecControlledA2Fusion(DecControlledA2Fusion):
                     "dec_control_scale_max": token_scale.detach().max().item(),
                     "dec_control_query_delta_norm": batch_dict["_dec_control_query_delta"].detach().norm(dim=-1).mean().item(),
                     "dec_control_fused_delta_norm": batch_dict["_dec_control_fused_delta"].detach().norm(dim=-1).mean().item(),
+                    "dec_control_schedule_factor": float(control_factor),
                     "patch_dec_num_patches": float(idx.numel()),
                     "patch_dec_fg_patches": float(num_fg),
                     "patch_dec_fg_ratio": float(fg_ratio),
                     "patch_dec_selection_code": 1.0,
                 }
                 class_prob_detached = class_prob.detach()
-                for cls_idx in range(self.dec_control_num_classes):
-                    logging[f"dec_control_cls_prob_{cls_idx + 1}"] = class_prob_detached[:, cls_idx].mean().item()
-                    logging[f"dec_control_cls_fg_prob_{cls_idx + 1}"] = class_prob_detached[fg_mask, cls_idx].mean().item()
+                if self.dec_control_context_mode == "task_binary":
+                    task_prob = class_prob_detached[:, 0]
+                    logging["dec_control_task_prob_mean"] = task_prob.mean().item()
+                    logging["dec_control_task_prob_fg_mean"] = task_prob[fg_mask].mean().item()
+                    logging["dec_control_task_prob_bg_mean"] = task_prob[bg_mask].mean().item() if bg_mask.any() else 0.0
+                    logging["dec_control_cls_prob_1"] = logging["dec_control_task_prob_mean"]
+                    logging["dec_control_cls_fg_prob_1"] = logging["dec_control_task_prob_fg_mean"]
+                else:
+                    for cls_idx in range(self.dec_control_num_classes):
+                        logging[f"dec_control_cls_prob_{cls_idx + 1}"] = class_prob_detached[:, cls_idx].mean().item()
+                        logging[f"dec_control_cls_fg_prob_{cls_idx + 1}"] = class_prob_detached[fg_mask, cls_idx].mean().item()
                 for sensor_idx, key in enumerate(keys):
                     prob = sensor_prob.detach()[:, sensor_idx]
                     logging[f"dec_control_w_{key}"] = prob.mean().item()
