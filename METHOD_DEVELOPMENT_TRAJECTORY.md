@@ -239,6 +239,34 @@ K-Radar sample
 5. 进一步，不把解耦只作为辅助 loss，而是用它预测 foreground gate、sensor reliability 和 class context。
 6. 这些控制量动态调制 ASF 的 K/V token、attention query 和 fused token，从而形成任务感知、patch-level、sensor-aware 的融合机制。
 
+## 13. 论文 insight 表达重点
+
+这篇论文不宜把重点写成“重新设计 ASF 主干”，而应把 ASF 定位为一个强大的统一 canonical patch 空间。论文真正要强调的是：在这个已经对齐的 patch 空间中，如何通过 DEC 式跨模态解耦来判断每个目标相关区域中哪些信息值得被融合。
+
+一个更锋利的中心洞察可以写成：
+
+> ASF 解决的是 where-to-fuse：把不同传感器放到统一 canonical patch 空间；本文解决的是 what-to-trust：在每个 canonical patch 上判断哪些信息是跨模态一致的目标线索，哪些只是模态特有残差信息，并据此控制融合。
+
+也可以概括为：
+
+> 我们将 sensor availability 从“某个传感器是否存在”推进到“某个目标相关 patch 上，该传感器的信息是否可靠”。
+
+围绕这个洞察，方法行文可以分三层。
+
+第一，canonical alignment is not enough。ASF 的统一空间让 patch-level fusion 成为可能，但空间统一并不等价于信息质量统一。即使 camera、LiDAR 和 radar 已经落到同一个 canonical patch 上，不同模态在遮挡、弱反射、远距离、恶劣天气或背景区域中的可靠性仍然不同。因此，仅有 learned attention 不一定显式揭示每个 patch 的 object evidence 来自哪里、是否可靠。
+
+第二，common/unique 解耦不是为了形式上的表示分解，而是为了暴露 fusion 所需的 reliability cues。common 表征可被解释为跨模态一致的目标证据，unique 表征可被解释为模态特有优势或模态残差信息。二者之间的关系反映了 patch-level agreement / disagreement，正是估计传感器可靠性的关键信号。
+
+第三，foreground-aware decoupling 比全图解耦更适合 3D detection。检测任务中大多数 canonical patches 是背景，若对所有 patch 平均施加跨模态解耦，模型容易学到背景一致性，而不是目标层面的共享语义。因此，将 common alignment 和 unique separation 聚焦在 GT foreground patch 上，可以让解耦表征更偏向 object-level target evidence。
+
+推荐把主创新写成三条：
+
+1. Object-aware patch-level sensor reliability：把 availability-aware fusion 从传感器存在性扩展到局部目标信息可靠性。
+2. Foreground-aware decoupled canonical representation：在 ASF 的统一 patch 空间中分离跨模态共享目标证据和模态特有残差信息。
+3. Decoupling-guided fusion controller：将 common/unique 表征转化为 patch-level sensor reliability modulation，使解耦不只是辅助 loss，而是直接参与融合决策。
+
+不建议把 v1.0 的 `task_binary` 作为主要创新来写。它更适合作为 implementation detail：在 Sedan-only 单类设置下，类别上下文退化为 objectness context，避免单类 softmax 没有有效监督。控制强度 schedule 可以作为 training dynamics 或 ablation 来讲，用来解释早期指标高、后期 3D@0.3 和 BEV@0.5 跳变的问题：强控制前期帮助模型发现可靠性模式，后期若持续过强则可能过度干预 ASF 已经收敛的检测表征。
+
 一句更简洁的论文贡献可以写成：
 
 > We extend ASF with a task-aware decoupled control module in the unified canonical patch space. The module decomposes each modality patch into common and unique factors, then converts them into foreground gates, sensor reliability weights, and class-aware context to modulate patch-level sensor fusion.

@@ -115,6 +115,23 @@ def mean_available(values):
     return sum(values) / len(values)
 
 
+def format_metric(value):
+    return f"{value:.2f}" if value is not None else "-"
+
+
+def append_top_epochs(lines, rows, conf, cls_name, metric_name, iou, title):
+    scored = []
+    for row in rows:
+        value = metric(row["results"], conf, cls_name, metric_name, iou)
+        if value is not None:
+            scored.append((value, row["epoch"]))
+    scored.sort(reverse=True)
+    if scored:
+        best = ", ".join([f"epoch {epoch}: {score:.2f}" for score, epoch in scored[:3]])
+        lines.append(f"{title}: {best}")
+        lines.append("")
+
+
 def write_summary(path_log, rows, confs):
     json_path = path_log / "subset_eval_summary.json"
     md_path = path_log / "subset_eval_summary.md"
@@ -129,6 +146,32 @@ def write_summary(path_log, rows, confs):
     lines.append("")
     for conf in confs:
         lines.append(f"## conf={conf}")
+        lines.append("")
+        lines.append("### Sedan All IoU Metrics")
+        lines.append("")
+        lines.append(
+            "| Epoch | BEV@0.7 | 3D@0.7 | BEV@0.5 | 3D@0.5 | BEV@0.3 | 3D@0.3 |"
+        )
+        lines.append("|-------|---------|--------|---------|--------|---------|--------|")
+        for row in rows:
+            if conf not in row["results"]:
+                continue
+            lines.append(
+                "| {epoch} | {bev07} | {d307} | {bev05} | {d305} | {bev03} | {d303} |".format(
+                    epoch=row["epoch"],
+                    bev07=format_metric(metric(row["results"], conf, "sed", "BEV", "0.7")),
+                    d307=format_metric(metric(row["results"], conf, "sed", "3D", "0.7")),
+                    bev05=format_metric(metric(row["results"], conf, "sed", "BEV", "0.5")),
+                    d305=format_metric(metric(row["results"], conf, "sed", "3D", "0.5")),
+                    bev03=format_metric(metric(row["results"], conf, "sed", "BEV", "0.3")),
+                    d303=format_metric(metric(row["results"], conf, "sed", "3D", "0.3")),
+                )
+            )
+        lines.append("")
+        append_top_epochs(lines, rows, conf, "sed", "3D", "0.3", "Top by sed 3D@0.3")
+        append_top_epochs(lines, rows, conf, "sed", "BEV", "0.5", "Top by sed BEV@0.5")
+
+        lines.append("### Legacy Mean Table")
         lines.append("")
         lines.append(
             "| Epoch | sed BEV@0.3 | sed 3D@0.3 | bus BEV@0.3 | bus 3D@0.3 | mean 3D@0.3 |"
@@ -147,11 +190,11 @@ def write_summary(path_log, rows, confs):
             lines.append(
                 "| {epoch} | {sed_bev} | {sed_3d} | {bus_bev} | {bus_3d} | {mean_3d} |".format(
                     epoch=row["epoch"],
-                    sed_bev=f"{vals['sed_bev']:.2f}" if vals["sed_bev"] is not None else "-",
-                    sed_3d=f"{vals['sed_3d']:.2f}" if vals["sed_3d"] is not None else "-",
-                    bus_bev=f"{vals['bus_bev']:.2f}" if vals["bus_bev"] is not None else "-",
-                    bus_3d=f"{vals['bus_3d']:.2f}" if vals["bus_3d"] is not None else "-",
-                    mean_3d=f"{mean_3d:.2f}" if mean_3d is not None else "-",
+                    sed_bev=format_metric(vals["sed_bev"]),
+                    sed_3d=format_metric(vals["sed_3d"]),
+                    bus_bev=format_metric(vals["bus_bev"]),
+                    bus_3d=format_metric(vals["bus_3d"]),
+                    mean_3d=format_metric(mean_3d),
                 )
             )
         lines.append("")
