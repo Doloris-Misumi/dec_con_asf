@@ -228,8 +228,9 @@ def main():
     import torch
     from pipelines.pipeline_detection_v1_0 import PipelineDetection_v1_0
 
-    confs = [float(item.strip()) for item in args.confs.split(",") if item.strip()]
-    conf_keys = [f"{conf:g}" for conf in confs]
+    conf_items = [item.strip() for item in args.confs.split(",") if item.strip()]
+    confs = [float(item) for item in conf_items]
+    conf_keys = [str(float(item)) for item in conf_items]
     exp_dir = Path(args.exp_dir).resolve()
     ckpt_dir = exp_dir / "models"
     all_ckpts = sorted(ckpt_dir.glob("model_*.pt"), key=checkpoint_epoch)
