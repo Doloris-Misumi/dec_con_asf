@@ -174,8 +174,9 @@ def arrow(s, points, fill=MUTED, width=1.6, dashed=False):
 def card(s, x, y, w, h, title, body, accent=TEAL, body_size=19):
     box(s,x,y,w,h,WHITE,LINE,True)
     box(s,x,y,.045,h,accent)
-    text(s,x+.22,y+.17,w-.44,.5,title,22,accent,True)
-    text(s,x+.22,y+.85,w-.44,h-.98,body,body_size)
+    short=h<1.5
+    text(s,x+.22,y+(.10 if short else .17),w-.44,.5,title,18 if short else 22,accent,True)
+    text(s,x+.22,y+(.57 if short else .85),w-.44,h-(.63 if short else .98),body,body_size)
 
 
 def pill(s, x, y, w, label, fill=PALE, ink=TEAL):
@@ -569,6 +570,116 @@ def build():
         ['待讨论','补强关键证据','优先选择能改变审稿判断的一组实验','未启动'],
     ],row_h=.67,font=17)
     takeaway(s,'先用现有证据形成完整初稿，再围绕最关键的问题补强。',y=6.45)
+
+    s=slide('备份 A｜主比较的完整四项 AP 指标','BACKUP / 完整主表',
+            'AP 单位为 %；“文献”行是已收集的公开报告，ASF 为官方 checkpoint 同阈值复评。',
+            '依据：v1 compact 主表；C=相机，L=LiDAR，R=4D Radar；conf=0.3',
+            '这张表用于回答 BEV 指标与 IoU=0.5 的问题。L4DR 的公开数值来自文献汇总；本地强制 label v1.0 和替代 radar sparse 的跑法未协议对齐，所以不把 24.80 AP3D@0.3 的诊断结果纳入论文排名。',
+            ['main','l4drkr','protocol'])
+    rows=[]
+    for r in main_rows:
+        rows.append(['TaskDec' if r[0].startswith('TaskDec') else r[0],r[1],r[3],r[4],r[5],r[6]])
+    table(s,.57,2.16,[3.05,1.38,1.94,1.94,1.94,1.95],
+          ['方法','模态','BEV@0.5','3D@0.5','BEV@0.3','3D@0.3'],rows,row_h=.47,font=17,highlight=[6])
+    takeaway(s,'L4DR 的本地 K-Radar 协议错配诊断不进入有效性能比较。',y=6.44,size=18)
+
+    s=slide('备份 B｜天气分解的精确数值','BACKUP / 天气表',
+            '同一官方 ASF checkpoint 与 TaskDec 主模型；保留两种 IoU 阈值。',
+            '依据：v1 weather compact 表；所有差值由表内数值相减得到',
+            '按读者提问查数。AP@0.3 的 Rain +7.93；AP@0.5 的 Rain +7.59。Sleet 的 IoU=0.3 基本相当，但 IoU=0.5 -9.68。不要把 Sleet 与 Rain / Light snow 的强收益混为一谈。',
+            ['main'])
+    rows=[]
+    for i,name in enumerate(weather_names):
+        rows.append([name,weather_asf03[i+3],weather_ours03[i+3],f'{delta03[i]:+.2f}',
+                     weather_asf05[i+3],weather_ours05[i+3],f'{delta05[i]:+.2f}'])
+    table(s,.57,2.18,[2.42,1.63,1.63,1.63,1.63,1.63,1.63],
+          ['天气','ASF @0.3','Ours @0.3','Δ @0.3','ASF @0.5','Ours @0.5','Δ @0.5'],
+          rows,row_h=.49,font=16,color_columns={3,6})
+    takeaway(s,'Total 是全测试集 AP，不等于这里七行的算术平均。',y=6.48,size=18)
+
+    s=slide('备份 C｜官方 checkpoint 与置信度敏感性','BACKUP / 比较口径',
+            '主比较使用官方 ASF checkpoint；其他置信度和本地重训结果作为敏感性材料。',
+            '依据：主协议审计、conf=0.0 全量汇总、本地 ASF 重训汇总',
+            '主动准备这张表应对 baseline 选择问题。官方 headline 接近 conf=0.0 的结果，主表是同 conf=0.3 复评，不能拿 conf=0.3 的 +8.05 去宣称相对所有 ASF 跑法都有这个增益。本地 ASF 重训 AP3D@0.3 为 88.57，高于 TaskDec 的 88.36；因此保留训练与选择敏感性说明。它作为附录材料，不替换已决定使用的官方 checkpoint 主表。',
+            ['protocol','conf0','localasf'])
+    table(s,.57,2.13,[5.3,1.6,2.65,2.65],['模型 / 来源','conf_thr','AP3D@0.3','AP3D@0.5'],[
+        ['ASF 官方日志 / exp250219','0.0','87.42','73.58'],
+        ['ASF 官方日志 / exp250303','0.0','87.34','72.95'],
+        ['TaskDec 主模型','0.0','88.06','72.83'],
+        ['ASF 官方 ckpt 复评 / 主对照','0.3','80.31','67.19'],
+        ['TaskDec 主模型 / 主表','0.3','88.36','67.50'],
+        ['ASF 本地重训 / model_2','0.3','88.57','67.49'],
+    ],row_h=.52,font=17,highlight=[3,4])
+    takeaway(s,'限定比较对象与协议；不宣称对所有 ASF 训练结果或阈值都存在大幅优势。',size=17)
+
+    s=slide('备份 D｜VoD 中的 L4DR 本地复现与训练差异','BACKUP / 9 月 10 日新增',
+            '完整 L4DR 的文献结果和本地复现都高于当前 TaskDec-PP。',
+            '依据：l4dr_vod_local_repro_results_260910.md；VoD 官方 EAA / DC',
+            '新增 L4DR 运行正常完成 100 epochs，最终两次评测中 epoch99 更好：71.00 EAA /84.84 DC；不是证明对全部 100 个 epochs 搜索后的全局最优。与 TaskDec-PP 比高 0.82 /1.05。L4DR 是 2GPU、100ep、syncBN；PP /TaskDec 是 80ep，且训练精度和 warm start 不同。AP_R40 的 TaskDec best Moderate 来自 epoch73，不把其数值与官方 EAA 的 epoch79 当成同一个 checkpoint。',
+            ['l4dr','vod'])
+    table(s,.57,2.15,[3.5,3.5,2.6,2.6],['方法','来源 / checkpoint','EAA mAP','DC mAP'],[
+        ['PP-Concat','本地 / epoch80','69.88','83.80'],
+        ['TaskDec-PP','warm mild / epoch79','70.18','83.79'],
+        ['L4DR','本地 / epoch99','71.00','84.84'],
+        ['L4DR','文献 Table 3','72.70','87.47'],
+    ],row_h=.64,font=19,highlight=[1])
+    text(s,.75,5.68,11.75,.83,'训练差异：PP-Concat 用 AMP；TaskDec-PP 用 FP32 并 warm start；\nL4DR 本地复现为 2 GPU / 100 epochs / sync BN。',18,MUTED)
+
+    s=slide('备份 E｜机制诊断的支持范围','BACKUP / 表征与控制读数',
+            '中心距离是二维 PCA 诊断；前景 gate 统计与空间热力图属于不同证据。',
+            '依据：168 帧分析导出、metrics.json；此处不推断传感器主导权切换',
+            '左图是分别拟合的 PCA 空间中的模态中心距离，其数值不能作为严格的统计独立性证据。右图是采样 patch 的 gate 均值，不是所有 BEV patch 的全量均值。另一个重要事实是当前 reliability 偏 LiDAR，而 common/unique 的 Camera 前景绝对 cosine 约0.927，所以不能说所有分支已实现正交解耦。',
+            ['pca','analysis_exports/taskdec_paper_visuals_260909/paper_visual_caption_notes.md'])
+    picture(s,VIS_DIR/'paper_fig_taskdec_decoupling_and_gate.png',.58,2.0,12.17,3.82)
+    for x,title,body in [(.58,'common 高维相似度','前景跨模态 cosine：0.948–0.962'),
+                         (4.74,'不等于严格独立','Camera 的 |cos(c,u)| ≈ 0.927'),
+                         (8.90,'reliability 偏 LiDAR','不支持“按天气切换主导模态”')]:
+        box(s,x,6.02,3.84,.82,WHITE,LINE,True)
+        text(s,x+.13,6.10,3.56,.31,title,16,TEAL,True)
+        text(s,x+.13,6.50,3.56,.25,body,12,MUTED)
+
+    s=slide('备份 F｜控制强度与辅助损失权重','BACKUP / 配置细节',
+            '主模型 γ=0.75；关闭 reliability control 的移除结果来自单独选定的运行。',
+            '依据：strength 比较、主配置；辅助损失外层 PATCH_DEC_WEIGHT=0.12',
+            '非零强度0.5、0.75、1.0的 AP3D@0.3接近；0.0为组件移除，不能把表描述成同 checkpoint 的连续推理扫参。损失权重均还乘外层0.12：orth0.10、common0.12、unique0.015、gate0.15、task0.30。训练时 encoder 参数冻结，但 FREEZE_BN=False，状态更新设置必须明确。',
+            ['strength','configs/ASF_task_dec_controlled_robust_v1_0.yml','configs/v1_0/cfg_A2F_scl_final.yml'])
+    text(s,.62,2.13,5.8,.45,'控制强度 / 全量评测',22,INK,True)
+    table(s,.57,2.81,[1.45,1.90,2.55],['γ','checkpoint','AP3D@0.3'],[
+        ['0.0','model_9','79.62'],['0.5','model_0','88.19'],['0.75','model_0','88.36'],['1.0','model_0','88.33'],
+    ],row_h=.57,font=18,highlight=[2])
+    text(s,6.86,2.13,5.8,.45,'辅助损失 / 括号内权重',22,INK,True)
+    table(s,6.81,2.81,[3.97,1.99],['项目','权重'],[
+        ['common / unique 去相关','0.10'],['common 跨模态对齐','0.12'],['unique 分离','0.015'],
+        ['foreground gate','0.15'],['task context','0.30'],
+    ],row_h=.47,font=17)
+    takeaway(s,'记录外层辅助权重 0.12，以及 FREEZE=True / FREEZE_BN=False。',size=17)
+
+    assert len(prs.slides)==24
+    # Geometry and provenance validation before saving.
+    outside=[]
+    for i,s in enumerate(prs.slides,1):
+        for sh in s.shapes:
+            if sh.left < -1000 or sh.top < -1000 or sh.left+sh.width>prs.slide_width+1000 or sh.top+sh.height>prs.slide_height+1000:
+                outside.append((i,sh.name))
+        for ref in SLIDES[i-1]['sources']:
+            assert (ROOT/ref).exists(),ref
+    assert not outside,outside
+    target=OUT/'TaskDec_现有结果与投稿讨论_260911.pptx'
+    prs.save(target)
+    metadata=dict(slides=len(prs.slides),main_slides=18,backup_slides=6,slide_size='16:9',
+                  font=FONT,source_date='2026-09-11',weather_delta03=delta03,weather_delta05=delta05,
+                  main_table=main_rows,ablation=ablation,availability=availability,pca=PCA_INFO,
+                  sources=SOURCES,slides_with_notes=SLIDES,geometry_check='All slide objects within canvas',
+                  generation='Existing local results only; no model training or inference')
+    (OUT/'deck_manifest.json').write_text(json.dumps(metadata,indent=2,ensure_ascii=False)+'\n')
+    md=['# TaskDec 汇报讲稿与来源','',
+        '2026-09-11。前 18 页主讲，后 6 页备份；建议 15–20 分钟，按讨论节奏使用备份页。','']
+    for record in SLIDES:
+        md += [f"## {record['page']:02d}. {record['title']}",'',record['notes'],'','资料来源：','']
+        md += [f'- [{Path(p).name}](../../{p})' for p in record['sources']]
+        md += ['']
+    (OUT/'汇报讲稿与来源.md').write_text('\n'.join(md)+'\n')
+    print(f'Saved {target} ({target.stat().st_size/2**20:.2f} MiB); {len(prs.slides)} slides with speaker notes.')
 
 
 if __name__ == '__main__':
