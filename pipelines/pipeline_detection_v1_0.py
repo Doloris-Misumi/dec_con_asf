@@ -425,6 +425,19 @@ class PipelineDetection_v1_0():
         pt_dict_model = torch.load(path_dict_model)
         self.network.load_state_dict(pt_dict_model, strict=is_strict)
 
+    def infer_mode_to_avail_feats(self, infer_mode='rlc'):
+        infer_mode = str(infer_mode).lower()
+        list_avail_feats = []
+        if 'c' in infer_mode:
+            list_avail_feats.append('cam_bev_feat')
+        if 'l' in infer_mode:
+            list_avail_feats.append('spatial_features_2d')
+        if 'r' in infer_mode:
+            list_avail_feats.append('bev_feat')
+        if len(list_avail_feats) == 0:
+            raise ValueError(f'Invalid infer_mode: {infer_mode}')
+        return list_avail_feats
+
     # V2
     def vis_infer(self, sample_indices, conf_thr=0.7, is_nms=True, vis_mode=['lpc', 'spcube', 'cube'], is_train=False):
         '''
@@ -513,9 +526,10 @@ class PipelineDetection_v1_0():
         return list_obj_label, list_obj_pred
 
     # V2
-    def validate_kitti(self, epoch=None, list_conf_thr=None, is_subset=False):
+    def validate_kitti(self, epoch=None, list_conf_thr=None, is_subset=False, infer_mode='rlc'):
         self.network.training=False
         self.network.eval()
+        list_avail_feats = self.infer_mode_to_avail_feats(infer_mode)
 
         eval_ver2 = self.cfg.get('cfg_eval_ver2', False)
         if eval_ver2:
@@ -569,6 +583,7 @@ class PipelineDetection_v1_0():
                 break
             
             try:
+                dict_datum['avail_feats'] = list_avail_feats
                 with torch.no_grad():
                     dict_out = self.network(dict_datum) # inference
                 is_feature_inferenced = True
@@ -704,8 +719,9 @@ class PipelineDetection_v1_0():
                 }, epoch)
         ### Validate per conf ###
 
-    def validate_kitti_conditional(self, epoch=None, list_conf_thr=None, is_subset=False, is_print_memory=False):
+    def validate_kitti_conditional(self, epoch=None, list_conf_thr=None, is_subset=False, is_print_memory=False, infer_mode='rlc'):
         self.network.eval()
+        list_avail_feats = self.infer_mode_to_avail_feats(infer_mode)
 
         eval_ver2 = self.cfg.get('cfg_eval_ver2', False)
         if eval_ver2:
@@ -842,6 +858,7 @@ class PipelineDetection_v1_0():
                 break
 
             try:
+                dict_datum['avail_feats'] = list_avail_feats
                 with torch.no_grad():
                     dict_out = self.network(dict_datum) # inference
                 is_feature_inferenced = True

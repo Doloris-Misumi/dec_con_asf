@@ -283,18 +283,33 @@ K-Radar sample
 6. v1 Sedan-only 上，TaskDec Balanced final 已经稳定小幅超过 official ASF v1。
 7. v2 Sedan+Bus 上，Bus 和 Rain 仍然是主要短板，说明 class-aware 控制还没有完全解决多类/恶劣天气鲁棒性。
 
+## 14. 评测协议更新：`conf=0.3` 主表
+
+2026-08-19 复核 RTNH、3D-LRF、L4DR 的公开代码/日志后，v1.0 论文主表更适合采用 `conf_thr=0.3` 作为统一外部对比口径。RTNH/K-Radar 公开 evaluator 使用 `[0.3, 0.5, 0.7]`，3D-LRF 官方 evaluator 使用 `[0.3]`，L4DR 的 K-Radar evaluator 包含 `[0.1, 0.2, 0.3]` 且公开 v1.1 log 是 `Conf thr: 0.3`。ASF 论文 Table 1 则与官方 `conf=0.0` log 对齐，因为当前 `main_cond_0_args.py` 默认 `conf_thr=[0.0]`，官方文档中的评测命令也没有显式传入 `--conf_thr`。
+
+因此，论文主表建议写成：沿用 K-Radar 相关公开方法的 confidence-filtered protocol (`conf_thr=0.3`)，并把 ASF released checkpoint 也在 `conf_thr=0.3` 下重评作为 baseline。ASF 论文 Table 1 的 `conf=0.0` 数值保留到附录/协议敏感性分析中。
+
+当前 `conf=0.3` 下最有用的 TaskDec 结果：
+
+| 方法 | 3D@0.3 | 3D@0.5 | BEV@0.5 | 判断 |
+|---|---:|---:|---:|---|
+| Official ASF v1 released ckpt | 80.31 | 67.19 | 80.33 | 协议一致 baseline |
+| MoreOpenGate `model_2` | 88.51 | 67.80 | 80.35 | 3D@0.3 最强 |
+| Robust `model_0` | 88.36 | 67.50 | 88.10 | BEV@0.5/3D@0.3 最均衡 |
+| StrongerControl `model_4` | 80.51 | 68.06 | 80.42 | 3D@0.5 最强 |
+
+注意：我们自己的 ASF local repro `model_2` 在 `conf=0.3` 下也有 `3D@0.3=88.57`，说明 0.3 结果强烈受 score calibration 和 checkpoint 影响。论文中可以说我们相对 released ASF `conf=0.3` baseline 有优势，但不应声称任意 ASF 训练都被压制。
+
 暂不能过度声称的结论：
 
 1. Robust `model_0` 的 88.36 full 3D@0.3 如果不复验，不能作为最终主结果。
-2. `MoreOpenGate` 和 `StrongerControl` 还没有 final eval，当前只能说训练进入后段，不能说结果好坏。
+2. `MoreOpenGate` 和 `StrongerControl` 已有选定 checkpoint 的 full eval，但还不能替代完整 ablation 和重复实验。
 3. 当前没有完整 ablation，因此还不能定量证明 gate、sensor score、class context 各自的独立贡献。
 
-## 14. 下一步建议
+## 15. 下一步建议
 
-1. 等 `MoreOpenGate` 和 `StrongerControl` 完整结束。
-2. 对两组实验运行 checkpoint subset scan，优先看 `model_0` 到 final 的曲线。
-3. 对 subset 最优、final、以及早期异常强 checkpoint 跑 full eval。
-4. 复跑 Robust `model_0`，确认 88.36 是否可复现。
-5. 做核心 ablation：无 dec token residual、无 K/V scale、无 query delta、无 fused delta、无 class loss、无 gate loss。
-6. 导出 TensorBoard 里的 gate 前景/背景均值、sensor reliability 分布、class context 置信度，并按 weather/class 分组看它们和 AP 的关系。
-7. 针对 v2 Bus/Rain 尝试更温和的 per-class scale clamp 或 class-specific gate，避免强控制误伤大车和雨天样本。
+1. 复跑 Robust `model_0` 和 MoreOpenGate `model_2`，确认 88.x 的 `conf=0.3` 结果是否可复现。
+2. 把 `conf=0.0` 和 `conf=0.3` 都保留成附表，写清楚它们分别回答 paper-default 和 public-method protocol 两个问题。
+3. 做核心 ablation：无 dec token residual、无 K/V scale、无 query delta、无 fused delta、无 class loss、无 gate loss。
+4. 导出 TensorBoard 里的 gate 前景/背景均值、sensor reliability 分布、class context 置信度，并按 weather/class 分组看它们和 AP 的关系。
+5. 针对 v2 Bus/Rain 尝试更温和的 per-class scale clamp 或 class-specific gate，避免强控制误伤大车和雨天样本。

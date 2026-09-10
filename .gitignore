@@ -1,11 +1,19 @@
 # Runtime outputs and checkpoints
 logs/
+evals/
+output/
+outputs/
+checkpoints/
+checkpoint/
+ckpts/
+runs/
 pretrained/
 pretrained
 *.pt
 *.pth
 *.ckpt
 events.out.tfevents*
+*.log
 
 # Python/cache/build artifacts
 __pycache__/

@@ -24,6 +24,11 @@ def parse_args():
     parser.add_argument("--pin-memory", action="store_true")
     parser.add_argument("--persistent-workers", action="store_true")
     parser.add_argument("--prefetch-factor", type=int, default=None)
+    parser.add_argument(
+        "--infer-mode",
+        default="rlc",
+        help="Available sensors for fusion: rlc, rl, rc, lc, r, l, or c",
+    )
     return parser.parse_args()
 
 
@@ -135,6 +140,7 @@ def main():
     print(f"* Epoch tag: {args.epoch}")
     print(f"* Full conf thresholds: {[normalize_conf(c) for c in confs]}")
     print(f"* Conditional: {args.conditional}")
+    print(f"* Infer mode: {args.infer_mode}")
 
     pline = PipelineDetection_v1_0(path_cfg=args.config, mode="test")
     pline.cfg.OPTIMIZER.NUM_WORKERS = args.num_workers
@@ -155,7 +161,12 @@ def main():
     with open(stdout_log, "w") as log_file:
         tee = Tee(sys.stdout, log_file)
         with contextlib.redirect_stdout(tee):
-            pline.validate_kitti(epoch=args.epoch, list_conf_thr=confs, is_subset=False)
+            pline.validate_kitti(
+                epoch=args.epoch,
+                list_conf_thr=confs,
+                is_subset=False,
+                infer_mode=args.infer_mode,
+            )
 
     print(f"* Full stdout log: {stdout_log}")
     results = parse_stdout_eval_results(stdout_log.read_text(errors="ignore"))
@@ -172,6 +183,7 @@ def main():
                     list_conf_thr=cond_confs,
                     is_subset=False,
                     is_print_memory=False,
+                    infer_mode=args.infer_mode,
                 )
         print(f"* Conditional stdout log: {cond_stdout_log}")
 
