@@ -1,0 +1,39 @@
+{
+  "stage": "complete",
+  "updated_at": "2026-09-16T01:34:20.473471+08:00",
+  "pid": 3829968,
+  "destination": "/home/hongsheng/datasets/V2X-Radar-V/extracted_260916",
+  "split_counts": {
+    "train": 8391,
+    "val": 1498,
+    "test": 1501,
+    "trainval": 9889
+  },
+  "modality_counts": {
+    "image_2": 11390,
+    "velodyne": 11390,
+    "radar": 11390,
+    "calib": 11390,
+    "label_2": 11390
+  },
+  "dataset_root": "/home/hongsheng/datasets/V2X-Radar-V/extracted_260916/V2X-Radar-V",
+  "split_root": "/home/hongsheng/datasets/V2X-Radar-V/extracted_260916/ImageSets",
+  "scope": "Archive SHA256, extraction CRC/size, split disjointness and modality path coverage; geometry pending",
+  "archives": [
+    {
+      "name": "ImageSets.zip",
+      "bytes": 48903,
+      "sha256": "fc3426ec086f8b984ab3ad964ffc9e9eb21cd03a8ab1b271f74f956755401bb0"
+    },
+    {
+      "name": "V2X-Radar-V.zip",
+      "bytes": 23926089849,
+      "sha256": "3d7506ccd8716e70cccdb3ec034de42c439b2a01399da04bef3f6f6fafbd93df"
+    }
+  ],
+  "extracted_files": {
+    "ImageSets.zip": 4,
+    "V2X-Radar-V.zip": 56950
+  },
+  "revision": "c38cce27cd84fdbd5671a797dd6df2bbe3dcc907"
+}

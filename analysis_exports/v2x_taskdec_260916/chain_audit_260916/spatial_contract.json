@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "impulse_xyz": [
+    3,
+    7,
+    0
+  ],
+  "expected_output_yx": [
+    7,
+    3
+  ],
+  "camera_pool_equals_pillar_scatter": true,
+  "patch_unpatch_exact": true
+}

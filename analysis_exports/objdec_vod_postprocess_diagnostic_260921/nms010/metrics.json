@@ -1,0 +1,84 @@
+{
+  "settings": {
+    "score": 0.1,
+    "nms": 0.1
+  },
+  "official": {
+    "entire_area": {
+      "Car_3d_all": "68.56",
+      "Pedestrian_3d_all": "65.8",
+      "Cyclist_3d_all": "79.36",
+      "3d_all": "71.24"
+    },
+    "roi": {
+      "Car_3d_all": "90.74",
+      "Pedestrian_3d_all": "73.6",
+      "Cyclist_3d_all": "90.09",
+      "3d_all": "84.81"
+    }
+  },
+  "operating_point": {
+    "EAA": {
+      "Car": {
+        "valid_gt": 4291,
+        "tp": 2982,
+        "fp": 1879,
+        "fn": 1309,
+        "recall": 0.6949429037520392,
+        "precision": 0.6134540218062127,
+        "score_threshold": 0.1
+      },
+      "Pedestrian": {
+        "valid_gt": 3749,
+        "tp": 2826,
+        "fp": 5192,
+        "fn": 923,
+        "recall": 0.7538010136036276,
+        "precision": 0.3524569718134198,
+        "score_threshold": 0.1
+      },
+      "Cyclist": {
+        "valid_gt": 1434,
+        "tp": 1229,
+        "fp": 1054,
+        "fn": 205,
+        "recall": 0.8570432357043236,
+        "precision": 0.5383267630310994,
+        "score_threshold": 0.1
+      }
+    },
+    "DC": {
+      "Car": {
+        "valid_gt": 955,
+        "tp": 895,
+        "fp": 122,
+        "fn": 53,
+        "recall": 0.93717277486911,
+        "precision": 0.880039331366765,
+        "score_threshold": 0.1
+      },
+      "Pedestrian": {
+        "valid_gt": 1706,
+        "tp": 1432,
+        "fp": 2069,
+        "fn": 267,
+        "recall": 0.839390386869871,
+        "precision": 0.40902599257355043,
+        "score_threshold": 0.1
+      },
+      "Cyclist": {
+        "valid_gt": 588,
+        "tp": 553,
+        "fp": 218,
+        "fn": 33,
+        "recall": 0.9404761904761905,
+        "precision": 0.7172503242542153,
+        "score_threshold": 0.1
+      }
+    }
+  },
+  "detections": 15162,
+  "seconds": 11.859412031248212,
+  "overlap_partition": "one_frame",
+  "evaluator_rules_unchanged": true
+}

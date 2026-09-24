@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "variant": "concat",
+  "batch_size": 2,
+  "measured_steps": 220,
+  "warmup_excluded": 20,
+  "stable_steps": 200,
+  "mean_seconds": 0.14821430952288212,
+  "median_seconds": 0.14704551734030247,
+  "p95_seconds": 0.16749897431582209,
+  "loader_batches": 4196,
+  "train_frames": 8391,
+  "peak_allocated_gib": 2.6251516342163086,
+  "peak_reserved_gib": 4.36328125,
+  "device": "1",
+  "parameters": 33136685,
+  "note": "Fresh initialization, augmented real loader, all-encoder FP32 training; includes I/O and optimizer updates, no validation"
+}

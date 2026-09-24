@@ -1,0 +1,9 @@
+{
+  "configs/v1_0/cfg_A2F_scl_final.yml": "8b935884e29677fb536949d4194db7b0593af86d22bd8ae61e7cf45c95a0f6a8",
+  "configs/v1_0/cfg_CAMERA_MODEL_Base.yml": "3beea603011bcdfa896110f375a033f08be7e4652b1403f354cc4ca1edab7e7b",
+  "configs/v1_0/cfg_SECOND.yml": "6ae54d261cbe5a164cfc09d2223fb5728413552cd3d5129c35dae907e5378d78",
+  "configs/v1_0/cfg_RTNH.yml": "75744e36f0341852b6351ebcbc1fe9cc2a706c79113139c0b345e6fda3ee9009",
+  "resources/split/test.txt": "47c8c1883acf65ea2939db5b92588a5d5f66bc56471e6ba80a1c94a9961d1d2c",
+  "tools/analysis/benchmark_taskdec_inference_260917.py": "2a27a1915ed66128a44bb0745280f85a74ad95d6e4bb6cca9ecdd5bc1fd6705d",
+  "tools/analysis/taskdec_inference_optimizations.py": "2ae536489f59a4486faf5d179b0a6c448b88fe604ffe4857919197f839f27c5a"
+}

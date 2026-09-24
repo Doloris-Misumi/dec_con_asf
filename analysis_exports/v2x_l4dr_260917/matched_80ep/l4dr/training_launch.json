@@ -1,0 +1,17 @@
+{
+  "pid": 3995315,
+  "gpu": 1,
+  "command": [
+    "nice",
+    "-n",
+    "10",
+    "/home/hongsheng/dec_con_asf/v2x_taskdec/.venv/bin/python",
+    "-u",
+    "/home/hongsheng/dec_con_asf/analysis_exports/v2x_l4dr_260917/run.py",
+    "train"
+  ],
+  "started_at": "2026-09-17T01:21:51.096325+08:00",
+  "controller_pid": 3990038,
+  "exit_code": 0,
+  "finished_at": "2026-09-19T01:13:15.928346+08:00"
+}

@@ -1,0 +1,1927 @@
+{
+  "fuser_checks": [
+    {
+      "patch": 4,
+      "queries": 16,
+      "output_shape": [
+        1,
+        128,
+        8,
+        8
+      ],
+      "finite_forward": true,
+      "finite_backward": true,
+      "no_gt_inference_finite": true,
+      "parameters": 611847,
+      "caveat": "8x8 synthetic CPU fuser check only; not a full detector or GPU memory benchmark"
+    },
+    {
+      "patch": 2,
+      "queries": 4,
+      "output_shape": [
+        1,
+        128,
+        8,
+        8
+      ],
+      "finite_forward": true,
+      "finite_backward": true,
+      "no_gt_inference_finite": true,
+      "parameters": 410631,
+      "caveat": "8x8 synthetic CPU fuser check only; not a full detector or GPU memory benchmark"
+    }
+  ],
+  "seed": 260920,
+  "train_ids": [
+    "00728",
+    "00772",
+    "01030",
+    "01039",
+    "01099",
+    "01152",
+    "01343",
+    "01521",
+    "01615",
+    "01704",
+    "01746",
+    "01874",
+    "01947",
+    "02100",
+    "03356",
+    "03635",
+    "03753",
+    "03908",
+    "04142",
+    "04425",
+    "04554",
+    "06844",
+    "06850",
+    "06968",
+    "06995",
+    "07030",
+    "07119",
+    "07414",
+    "08999",
+    "09068",
+    "09641",
+    "09847"
+  ],
+  "pillar_summary": [
+    {
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "median": 3178.0,
+      "maximum": 4492,
+      "over_train_16000": 0
+    },
+    {
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "median": 3878.5,
+      "maximum": 5227,
+      "over_train_16000": 0
+    },
+    {
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "median": 4780.5,
+      "maximum": 6198,
+      "over_train_16000": 0
+    },
+    {
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "median": 5655.0,
+      "maximum": 7204,
+      "over_train_16000": 0
+    },
+    {
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "median": 508.0,
+      "maximum": 798,
+      "over_train_16000": 0
+    },
+    {
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "median": 552.0,
+      "maximum": 876,
+      "over_train_16000": 0
+    },
+    {
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "median": 592.5,
+      "maximum": 974,
+      "over_train_16000": 0
+    },
+    {
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "median": 631.0,
+      "maximum": 1029,
+      "over_train_16000": 0
+    }
+  ],
+  "point_count_records": [
+    {
+      "frame": "00728",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 21324,
+      "active_pillars": 2836
+    },
+    {
+      "frame": "00728",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 21324,
+      "active_pillars": 3488
+    },
+    {
+      "frame": "00728",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 21324,
+      "active_pillars": 4286
+    },
+    {
+      "frame": "00728",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 21324,
+      "active_pillars": 5060
+    },
+    {
+      "frame": "00728",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 597,
+      "active_pillars": 418
+    },
+    {
+      "frame": "00728",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 597,
+      "active_pillars": 448
+    },
+    {
+      "frame": "00728",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 597,
+      "active_pillars": 487
+    },
+    {
+      "frame": "00728",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 597,
+      "active_pillars": 513
+    },
+    {
+      "frame": "00772",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 25854,
+      "active_pillars": 1981
+    },
+    {
+      "frame": "00772",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 25854,
+      "active_pillars": 2497
+    },
+    {
+      "frame": "00772",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 25854,
+      "active_pillars": 3291
+    },
+    {
+      "frame": "00772",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 25854,
+      "active_pillars": 4125
+    },
+    {
+      "frame": "00772",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 627,
+      "active_pillars": 442
+    },
+    {
+      "frame": "00772",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 627,
+      "active_pillars": 476
+    },
+    {
+      "frame": "00772",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 627,
+      "active_pillars": 511
+    },
+    {
+      "frame": "00772",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 627,
+      "active_pillars": 551
+    },
+    {
+      "frame": "01030",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 23188,
+      "active_pillars": 2409
+    },
+    {
+      "frame": "01030",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 23188,
+      "active_pillars": 2961
+    },
+    {
+      "frame": "01030",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 23188,
+      "active_pillars": 3697
+    },
+    {
+      "frame": "01030",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 23188,
+      "active_pillars": 4435
+    },
+    {
+      "frame": "01030",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 845,
+      "active_pillars": 523
+    },
+    {
+      "frame": "01030",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 845,
+      "active_pillars": 572
+    },
+    {
+      "frame": "01030",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 845,
+      "active_pillars": 631
+    },
+    {
+      "frame": "01030",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 845,
+      "active_pillars": 666
+    },
+    {
+      "frame": "01039",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 23294,
+      "active_pillars": 2821
+    },
+    {
+      "frame": "01039",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 23294,
+      "active_pillars": 3462
+    },
+    {
+      "frame": "01039",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 23294,
+      "active_pillars": 4286
+    },
+    {
+      "frame": "01039",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 23294,
+      "active_pillars": 5184
+    },
+    {
+      "frame": "01039",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 772,
+      "active_pillars": 457
+    },
+    {
+      "frame": "01039",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 772,
+      "active_pillars": 489
+    },
+    {
+      "frame": "01039",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 772,
+      "active_pillars": 558
+    },
+    {
+      "frame": "01039",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 772,
+      "active_pillars": 610
+    },
+    {
+      "frame": "01099",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 23756,
+      "active_pillars": 3361
+    },
+    {
+      "frame": "01099",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 23756,
+      "active_pillars": 4054
+    },
+    {
+      "frame": "01099",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 23756,
+      "active_pillars": 4964
+    },
+    {
+      "frame": "01099",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 23756,
+      "active_pillars": 5878
+    },
+    {
+      "frame": "01099",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 828,
+      "active_pillars": 527
+    },
+    {
+      "frame": "01099",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 828,
+      "active_pillars": 577
+    },
+    {
+      "frame": "01099",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 828,
+      "active_pillars": 623
+    },
+    {
+      "frame": "01099",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 828,
+      "active_pillars": 668
+    },
+    {
+      "frame": "01152",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 23746,
+      "active_pillars": 3828
+    },
+    {
+      "frame": "01152",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 23746,
+      "active_pillars": 4669
+    },
+    {
+      "frame": "01152",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 23746,
+      "active_pillars": 5744
+    },
+    {
+      "frame": "01152",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 23746,
+      "active_pillars": 6781
+    },
+    {
+      "frame": "01152",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 662,
+      "active_pillars": 435
+    },
+    {
+      "frame": "01152",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 662,
+      "active_pillars": 504
+    },
+    {
+      "frame": "01152",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 662,
+      "active_pillars": 526
+    },
+    {
+      "frame": "01152",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 662,
+      "active_pillars": 557
+    },
+    {
+      "frame": "01343",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 22740,
+      "active_pillars": 4155
+    },
+    {
+      "frame": "01343",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 22740,
+      "active_pillars": 5044
+    },
+    {
+      "frame": "01343",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 22740,
+      "active_pillars": 6008
+    },
+    {
+      "frame": "01343",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 22740,
+      "active_pillars": 7026
+    },
+    {
+      "frame": "01343",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 895,
+      "active_pillars": 647
+    },
+    {
+      "frame": "01343",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 895,
+      "active_pillars": 691
+    },
+    {
+      "frame": "01343",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 895,
+      "active_pillars": 740
+    },
+    {
+      "frame": "01343",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 895,
+      "active_pillars": 778
+    },
+    {
+      "frame": "01521",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 21472,
+      "active_pillars": 3791
+    },
+    {
+      "frame": "01521",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 21472,
+      "active_pillars": 4492
+    },
+    {
+      "frame": "01521",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 21472,
+      "active_pillars": 5405
+    },
+    {
+      "frame": "01521",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 21472,
+      "active_pillars": 6297
+    },
+    {
+      "frame": "01521",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 778,
+      "active_pillars": 537
+    },
+    {
+      "frame": "01521",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 778,
+      "active_pillars": 579
+    },
+    {
+      "frame": "01521",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 778,
+      "active_pillars": 629
+    },
+    {
+      "frame": "01521",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 778,
+      "active_pillars": 673
+    },
+    {
+      "frame": "01615",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 22678,
+      "active_pillars": 4291
+    },
+    {
+      "frame": "01615",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 22678,
+      "active_pillars": 5142
+    },
+    {
+      "frame": "01615",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 22678,
+      "active_pillars": 6198
+    },
+    {
+      "frame": "01615",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 22678,
+      "active_pillars": 7172
+    },
+    {
+      "frame": "01615",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 814,
+      "active_pillars": 575
+    },
+    {
+      "frame": "01615",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 814,
+      "active_pillars": 623
+    },
+    {
+      "frame": "01615",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 814,
+      "active_pillars": 666
+    },
+    {
+      "frame": "01615",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 814,
+      "active_pillars": 695
+    },
+    {
+      "frame": "01704",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 21754,
+      "active_pillars": 4239
+    },
+    {
+      "frame": "01704",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 21754,
+      "active_pillars": 5032
+    },
+    {
+      "frame": "01704",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 21754,
+      "active_pillars": 5996
+    },
+    {
+      "frame": "01704",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 21754,
+      "active_pillars": 6914
+    },
+    {
+      "frame": "01704",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 991,
+      "active_pillars": 725
+    },
+    {
+      "frame": "01704",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 991,
+      "active_pillars": 767
+    },
+    {
+      "frame": "01704",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 991,
+      "active_pillars": 805
+    },
+    {
+      "frame": "01704",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 991,
+      "active_pillars": 848
+    },
+    {
+      "frame": "01746",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 25668,
+      "active_pillars": 3887
+    },
+    {
+      "frame": "01746",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 25668,
+      "active_pillars": 4811
+    },
+    {
+      "frame": "01746",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 25668,
+      "active_pillars": 5938
+    },
+    {
+      "frame": "01746",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 25668,
+      "active_pillars": 7014
+    },
+    {
+      "frame": "01746",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 866,
+      "active_pillars": 710
+    },
+    {
+      "frame": "01746",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 866,
+      "active_pillars": 754
+    },
+    {
+      "frame": "01746",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 866,
+      "active_pillars": 787
+    },
+    {
+      "frame": "01746",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 866,
+      "active_pillars": 805
+    },
+    {
+      "frame": "01874",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 22156,
+      "active_pillars": 3492
+    },
+    {
+      "frame": "01874",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 22156,
+      "active_pillars": 4213
+    },
+    {
+      "frame": "01874",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 22156,
+      "active_pillars": 5145
+    },
+    {
+      "frame": "01874",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 22156,
+      "active_pillars": 6068
+    },
+    {
+      "frame": "01874",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 786,
+      "active_pillars": 523
+    },
+    {
+      "frame": "01874",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 786,
+      "active_pillars": 563
+    },
+    {
+      "frame": "01874",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 786,
+      "active_pillars": 604
+    },
+    {
+      "frame": "01874",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 786,
+      "active_pillars": 638
+    },
+    {
+      "frame": "01947",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 25934,
+      "active_pillars": 1775
+    },
+    {
+      "frame": "01947",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 25934,
+      "active_pillars": 2278
+    },
+    {
+      "frame": "01947",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 25934,
+      "active_pillars": 2989
+    },
+    {
+      "frame": "01947",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 25934,
+      "active_pillars": 3810
+    },
+    {
+      "frame": "01947",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 499,
+      "active_pillars": 306
+    },
+    {
+      "frame": "01947",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 499,
+      "active_pillars": 332
+    },
+    {
+      "frame": "01947",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 499,
+      "active_pillars": 374
+    },
+    {
+      "frame": "01947",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 499,
+      "active_pillars": 395
+    },
+    {
+      "frame": "02100",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 19698,
+      "active_pillars": 2333
+    },
+    {
+      "frame": "02100",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 19698,
+      "active_pillars": 2848
+    },
+    {
+      "frame": "02100",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 19698,
+      "active_pillars": 3451
+    },
+    {
+      "frame": "02100",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 19698,
+      "active_pillars": 4082
+    },
+    {
+      "frame": "02100",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 751,
+      "active_pillars": 453
+    },
+    {
+      "frame": "02100",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 751,
+      "active_pillars": 504
+    },
+    {
+      "frame": "02100",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 751,
+      "active_pillars": 548
+    },
+    {
+      "frame": "02100",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 751,
+      "active_pillars": 577
+    },
+    {
+      "frame": "03356",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 20588,
+      "active_pillars": 2334
+    },
+    {
+      "frame": "03356",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 20588,
+      "active_pillars": 2868
+    },
+    {
+      "frame": "03356",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 20588,
+      "active_pillars": 3548
+    },
+    {
+      "frame": "03356",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 20588,
+      "active_pillars": 4217
+    },
+    {
+      "frame": "03356",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 801,
+      "active_pillars": 493
+    },
+    {
+      "frame": "03356",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 801,
+      "active_pillars": 541
+    },
+    {
+      "frame": "03356",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 801,
+      "active_pillars": 581
+    },
+    {
+      "frame": "03356",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 801,
+      "active_pillars": 624
+    },
+    {
+      "frame": "03635",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 21698,
+      "active_pillars": 1898
+    },
+    {
+      "frame": "03635",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 21698,
+      "active_pillars": 2326
+    },
+    {
+      "frame": "03635",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 21698,
+      "active_pillars": 2944
+    },
+    {
+      "frame": "03635",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 21698,
+      "active_pillars": 3571
+    },
+    {
+      "frame": "03635",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 689,
+      "active_pillars": 399
+    },
+    {
+      "frame": "03635",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 689,
+      "active_pillars": 447
+    },
+    {
+      "frame": "03635",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 689,
+      "active_pillars": 480
+    },
+    {
+      "frame": "03635",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 689,
+      "active_pillars": 515
+    },
+    {
+      "frame": "03753",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 20160,
+      "active_pillars": 1829
+    },
+    {
+      "frame": "03753",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 20160,
+      "active_pillars": 2266
+    },
+    {
+      "frame": "03753",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 20160,
+      "active_pillars": 2797
+    },
+    {
+      "frame": "03753",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 20160,
+      "active_pillars": 3408
+    },
+    {
+      "frame": "03753",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 564,
+      "active_pillars": 308
+    },
+    {
+      "frame": "03753",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 564,
+      "active_pillars": 329
+    },
+    {
+      "frame": "03753",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 564,
+      "active_pillars": 368
+    },
+    {
+      "frame": "03753",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 564,
+      "active_pillars": 408
+    },
+    {
+      "frame": "03908",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 20020,
+      "active_pillars": 1864
+    },
+    {
+      "frame": "03908",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 20020,
+      "active_pillars": 2301
+    },
+    {
+      "frame": "03908",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 20020,
+      "active_pillars": 2844
+    },
+    {
+      "frame": "03908",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 20020,
+      "active_pillars": 3431
+    },
+    {
+      "frame": "03908",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 724,
+      "active_pillars": 400
+    },
+    {
+      "frame": "03908",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 724,
+      "active_pillars": 448
+    },
+    {
+      "frame": "03908",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 724,
+      "active_pillars": 477
+    },
+    {
+      "frame": "03908",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 724,
+      "active_pillars": 522
+    },
+    {
+      "frame": "04142",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 23536,
+      "active_pillars": 4226
+    },
+    {
+      "frame": "04142",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 23536,
+      "active_pillars": 5029
+    },
+    {
+      "frame": "04142",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 23536,
+      "active_pillars": 6081
+    },
+    {
+      "frame": "04142",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 23536,
+      "active_pillars": 7095
+    },
+    {
+      "frame": "04142",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 1083,
+      "active_pillars": 754
+    },
+    {
+      "frame": "04142",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 1083,
+      "active_pillars": 805
+    },
+    {
+      "frame": "04142",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 1083,
+      "active_pillars": 867
+    },
+    {
+      "frame": "04142",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 1083,
+      "active_pillars": 925
+    },
+    {
+      "frame": "04425",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 21770,
+      "active_pillars": 3770
+    },
+    {
+      "frame": "04425",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 21770,
+      "active_pillars": 4509
+    },
+    {
+      "frame": "04425",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 21770,
+      "active_pillars": 5410
+    },
+    {
+      "frame": "04425",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 21770,
+      "active_pillars": 6309
+    },
+    {
+      "frame": "04425",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 1186,
+      "active_pillars": 794
+    },
+    {
+      "frame": "04425",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 1186,
+      "active_pillars": 842
+    },
+    {
+      "frame": "04425",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 1186,
+      "active_pillars": 924
+    },
+    {
+      "frame": "04425",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 1186,
+      "active_pillars": 971
+    },
+    {
+      "frame": "04554",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 19184,
+      "active_pillars": 3167
+    },
+    {
+      "frame": "04554",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 19184,
+      "active_pillars": 3860
+    },
+    {
+      "frame": "04554",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 19184,
+      "active_pillars": 4739
+    },
+    {
+      "frame": "04554",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 19184,
+      "active_pillars": 5529
+    },
+    {
+      "frame": "04554",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 855,
+      "active_pillars": 597
+    },
+    {
+      "frame": "04554",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 855,
+      "active_pillars": 639
+    },
+    {
+      "frame": "04554",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 855,
+      "active_pillars": 695
+    },
+    {
+      "frame": "04554",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 855,
+      "active_pillars": 728
+    },
+    {
+      "frame": "06844",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 22924,
+      "active_pillars": 2942
+    },
+    {
+      "frame": "06844",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 22924,
+      "active_pillars": 3579
+    },
+    {
+      "frame": "06844",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 22924,
+      "active_pillars": 4349
+    },
+    {
+      "frame": "06844",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 22924,
+      "active_pillars": 5214
+    },
+    {
+      "frame": "06844",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 728,
+      "active_pillars": 442
+    },
+    {
+      "frame": "06844",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 728,
+      "active_pillars": 483
+    },
+    {
+      "frame": "06844",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 728,
+      "active_pillars": 542
+    },
+    {
+      "frame": "06844",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 728,
+      "active_pillars": 577
+    },
+    {
+      "frame": "06850",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 23348,
+      "active_pillars": 3050
+    },
+    {
+      "frame": "06850",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 23348,
+      "active_pillars": 3698
+    },
+    {
+      "frame": "06850",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 23348,
+      "active_pillars": 4528
+    },
+    {
+      "frame": "06850",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 23348,
+      "active_pillars": 5388
+    },
+    {
+      "frame": "06850",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 711,
+      "active_pillars": 434
+    },
+    {
+      "frame": "06850",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 711,
+      "active_pillars": 482
+    },
+    {
+      "frame": "06850",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 711,
+      "active_pillars": 531
+    },
+    {
+      "frame": "06850",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 711,
+      "active_pillars": 564
+    },
+    {
+      "frame": "06968",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 23924,
+      "active_pillars": 3189
+    },
+    {
+      "frame": "06968",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 23924,
+      "active_pillars": 3897
+    },
+    {
+      "frame": "06968",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 23924,
+      "active_pillars": 4822
+    },
+    {
+      "frame": "06968",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 23924,
+      "active_pillars": 5781
+    },
+    {
+      "frame": "06968",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 481,
+      "active_pillars": 314
+    },
+    {
+      "frame": "06968",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 481,
+      "active_pillars": 338
+    },
+    {
+      "frame": "06968",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 481,
+      "active_pillars": 363
+    },
+    {
+      "frame": "06968",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 481,
+      "active_pillars": 390
+    },
+    {
+      "frame": "06995",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 22244,
+      "active_pillars": 2789
+    },
+    {
+      "frame": "06995",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 22244,
+      "active_pillars": 3428
+    },
+    {
+      "frame": "06995",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 22244,
+      "active_pillars": 4208
+    },
+    {
+      "frame": "06995",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 22244,
+      "active_pillars": 5046
+    },
+    {
+      "frame": "06995",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 667,
+      "active_pillars": 493
+    },
+    {
+      "frame": "06995",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 667,
+      "active_pillars": 525
+    },
+    {
+      "frame": "06995",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 667,
+      "active_pillars": 550
+    },
+    {
+      "frame": "06995",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 667,
+      "active_pillars": 583
+    },
+    {
+      "frame": "07030",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 22478,
+      "active_pillars": 2102
+    },
+    {
+      "frame": "07030",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 22478,
+      "active_pillars": 2681
+    },
+    {
+      "frame": "07030",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 22478,
+      "active_pillars": 3395
+    },
+    {
+      "frame": "07030",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 22478,
+      "active_pillars": 4268
+    },
+    {
+      "frame": "07030",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 856,
+      "active_pillars": 622
+    },
+    {
+      "frame": "07030",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 856,
+      "active_pillars": 670
+    },
+    {
+      "frame": "07030",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 856,
+      "active_pillars": 713
+    },
+    {
+      "frame": "07030",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 856,
+      "active_pillars": 757
+    },
+    {
+      "frame": "07119",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 23298,
+      "active_pillars": 3566
+    },
+    {
+      "frame": "07119",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 23298,
+      "active_pillars": 4296
+    },
+    {
+      "frame": "07119",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 23298,
+      "active_pillars": 5332
+    },
+    {
+      "frame": "07119",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 23298,
+      "active_pillars": 6342
+    },
+    {
+      "frame": "07119",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 902,
+      "active_pillars": 605
+    },
+    {
+      "frame": "07119",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 902,
+      "active_pillars": 669
+    },
+    {
+      "frame": "07119",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 902,
+      "active_pillars": 712
+    },
+    {
+      "frame": "07119",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 902,
+      "active_pillars": 746
+    },
+    {
+      "frame": "07414",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 22890,
+      "active_pillars": 2682
+    },
+    {
+      "frame": "07414",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 22890,
+      "active_pillars": 3410
+    },
+    {
+      "frame": "07414",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 22890,
+      "active_pillars": 4317
+    },
+    {
+      "frame": "07414",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 22890,
+      "active_pillars": 5240
+    },
+    {
+      "frame": "07414",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 535,
+      "active_pillars": 357
+    },
+    {
+      "frame": "07414",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 535,
+      "active_pillars": 386
+    },
+    {
+      "frame": "07414",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 535,
+      "active_pillars": 422
+    },
+    {
+      "frame": "07414",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 535,
+      "active_pillars": 454
+    },
+    {
+      "frame": "08999",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 23378,
+      "active_pillars": 4314
+    },
+    {
+      "frame": "08999",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 23378,
+      "active_pillars": 5156
+    },
+    {
+      "frame": "08999",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 23378,
+      "active_pillars": 6144
+    },
+    {
+      "frame": "08999",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 23378,
+      "active_pillars": 7204
+    },
+    {
+      "frame": "08999",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 1190,
+      "active_pillars": 798
+    },
+    {
+      "frame": "08999",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 1190,
+      "active_pillars": 876
+    },
+    {
+      "frame": "08999",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 1190,
+      "active_pillars": 974
+    },
+    {
+      "frame": "08999",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 1190,
+      "active_pillars": 1029
+    },
+    {
+      "frame": "09068",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 24252,
+      "active_pillars": 4118
+    },
+    {
+      "frame": "09068",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 24252,
+      "active_pillars": 4970
+    },
+    {
+      "frame": "09068",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 24252,
+      "active_pillars": 5987
+    },
+    {
+      "frame": "09068",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 24252,
+      "active_pillars": 6943
+    },
+    {
+      "frame": "09068",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 1027,
+      "active_pillars": 744
+    },
+    {
+      "frame": "09068",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 1027,
+      "active_pillars": 802
+    },
+    {
+      "frame": "09068",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 1027,
+      "active_pillars": 859
+    },
+    {
+      "frame": "09068",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 1027,
+      "active_pillars": 895
+    },
+    {
+      "frame": "09641",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 21594,
+      "active_pillars": 4492
+    },
+    {
+      "frame": "09641",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 21594,
+      "active_pillars": 5227
+    },
+    {
+      "frame": "09641",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 21594,
+      "active_pillars": 6066
+    },
+    {
+      "frame": "09641",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 21594,
+      "active_pillars": 6866
+    },
+    {
+      "frame": "09641",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 546,
+      "active_pillars": 371
+    },
+    {
+      "frame": "09641",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 546,
+      "active_pillars": 401
+    },
+    {
+      "frame": "09641",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 546,
+      "active_pillars": 436
+    },
+    {
+      "frame": "09641",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 546,
+      "active_pillars": 453
+    },
+    {
+      "frame": "09847",
+      "modality": "lidar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 24804,
+      "active_pillars": 3922
+    },
+    {
+      "frame": "09847",
+      "modality": "lidar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 24804,
+      "active_pillars": 4792
+    },
+    {
+      "frame": "09847",
+      "modality": "lidar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 24804,
+      "active_pillars": 5809
+    },
+    {
+      "frame": "09847",
+      "modality": "lidar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 24804,
+      "active_pillars": 6814
+    },
+    {
+      "frame": "09847",
+      "modality": "radar",
+      "voxel_xy": 0.16,
+      "valid_point_count": 774,
+      "active_pillars": 549
+    },
+    {
+      "frame": "09847",
+      "modality": "radar",
+      "voxel_xy": 0.128,
+      "valid_point_count": 774,
+      "active_pillars": 600
+    },
+    {
+      "frame": "09847",
+      "modality": "radar",
+      "voxel_xy": 0.1,
+      "valid_point_count": 774,
+      "active_pillars": 640
+    },
+    {
+      "frame": "09847",
+      "modality": "radar",
+      "voxel_xy": 0.08,
+      "valid_point_count": 774,
+      "active_pillars": 675
+    }
+  ],
+  "caveats": [
+    "Existing native coordinate transform and camera FOV filtering used.",
+    "Native vertical voxel geometry retained; no augmentation or GT sampling.",
+    "Counts do not measure the augmented full training distribution.",
+    "No GPU allocation, training, checkpoint change or AP evaluation."
+  ]
+}

@@ -1,0 +1,19 @@
+{
+  "stage": "cache_complete_waiting_official_subset",
+  "pid": 317950,
+  "gpu": 2,
+  "started_at": "2026-09-20T23:00:42.694337+08:00",
+  "official_weather_result": false,
+  "official_subset_available": false,
+  "updated_at": "2026-09-20T23:04:10.396645+08:00",
+  "epoch": 30,
+  "frames_done": 1487,
+  "frames_total": 1487,
+  "elapsed_seconds": 183.81807625293732,
+  "peak_allocated_gib": 3.2072982788085938,
+  "inference_seconds": 199.40780016221106,
+  "predictions_bytes": 42770420,
+  "predictions_sha256": "0128ae8e72e0228a4006bd1a2b1308d499b92b2356525fc8c1f25e3a89ba025c",
+  "next_requirement": "Official adverse-weather frame IDs and data-version mapping",
+  "gpu_work_complete": true
+}

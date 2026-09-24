@@ -1,0 +1,50 @@
+{
+  "epoch": 0,
+  "frames": 8,
+  "official": {
+    "entire_area": {
+      "Car_3d_all": "0.0",
+      "Pedestrian_3d_all": "0.0",
+      "Cyclist_3d_all": "0.0",
+      "3d_all": "0.0"
+    },
+    "roi": {
+      "Car_3d_all": "0.0",
+      "Pedestrian_3d_all": "0.0",
+      "Cyclist_3d_all": "0.0",
+      "3d_all": "0.0"
+    }
+  },
+  "kitti": {
+    "Car_3d/easy_R40": 0.0,
+    "Car_3d/moderate_R40": 0.0,
+    "Car_3d/hard_R40": 0.0,
+    "Car_bev/easy_R40": 0.0,
+    "Car_bev/moderate_R40": 0.0,
+    "Car_bev/hard_R40": 0.0,
+    "Car_image/easy_R40": 0.0,
+    "Car_image/moderate_R40": 0.0,
+    "Car_image/hard_R40": 0.0,
+    "Pedestrian_3d/easy_R40": 0.0,
+    "Pedestrian_3d/moderate_R40": 0.0,
+    "Pedestrian_3d/hard_R40": 0.0,
+    "Pedestrian_bev/easy_R40": 0.0,
+    "Pedestrian_bev/moderate_R40": 0.0,
+    "Pedestrian_bev/hard_R40": 0.0,
+    "Pedestrian_image/easy_R40": 0.0,
+    "Pedestrian_image/moderate_R40": 0.0,
+    "Pedestrian_image/hard_R40": 0.0,
+    "Cyclist_3d/easy_R40": 0.0,
+    "Cyclist_3d/moderate_R40": 0.0,
+    "Cyclist_3d/hard_R40": 0.0,
+    "Cyclist_bev/easy_R40": 0.0,
+    "Cyclist_bev/moderate_R40": 0.0,
+    "Cyclist_bev/hard_R40": 0.0,
+    "Cyclist_image/easy_R40": 0.0,
+    "Cyclist_image/moderate_R40": 0.0,
+    "Cyclist_image/hard_R40": 0.0
+  },
+  "validation_seconds": 13.003295756876469,
+  "gt_used_in_network": false,
+  "selection_metric": "official.entire_area.3d_all"
+}

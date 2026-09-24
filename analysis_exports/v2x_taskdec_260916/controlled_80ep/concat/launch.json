@@ -1,0 +1,20 @@
+{
+  "command": [
+    "nice",
+    "-n",
+    "10",
+    "/home/hongsheng/dec_con_asf/v2x_taskdec/.venv/bin/python",
+    "-u",
+    "-m",
+    "v2x_taskdec.train",
+    "--variant",
+    "concat"
+  ],
+  "pid": 3877510,
+  "gpu": 1,
+  "started_at": "2026-09-16T08:11:51.427403+08:00",
+  "resource_snapshot": {
+    "free_mib": 40051,
+    "utilization": 0
+  }
+}

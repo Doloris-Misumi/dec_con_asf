@@ -1,0 +1,498 @@
+{
+  "model": "taskdec",
+  "checkpoint": "/home/hongsheng/dec_con_asf/logs/exp_260810_221258_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/models/model_0.pt",
+  "checkpoint_sha256": "99eb07e8a0b01ec397d3f2ac890091fe539194149a2c542cf41c465c9f02a2d3",
+  "config": "/home/hongsheng/dec_con_asf/logs/exp_260810_221258_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/config.yml",
+  "config_sha256": "e82a6d31b648d11d32bb5d867e52974f451a8745dbf2b5d4d256baa713f2fb20",
+  "script_sha256": "569cd31a787ce0ad8de9794ca4dedc2332df372bee057b7b419bd7e512b20088",
+  "optimization": "none",
+  "optimization_info": {},
+  "gpu": "2",
+  "gpu_name": "NVIDIA RTX A6000",
+  "torch_version": "1.10.1+cu113",
+  "cuda_version": "11.3",
+  "torch_threads": 4,
+  "cudnn_benchmark": false,
+  "cudnn_deterministic": true,
+  "matmul_tf32": true,
+  "cudnn_tf32": true,
+  "precision": "FP32, no autocast; TF32 flags above",
+  "batch_size": 1,
+  "params_m": 79.468971,
+  "dataset_size": 10065,
+  "indices": [
+    0,
+    592,
+    1184,
+    1776,
+    2368,
+    2960,
+    3552,
+    4144,
+    4736,
+    5328,
+    5920,
+    6512,
+    7104,
+    7696,
+    8288,
+    8880,
+    9472,
+    10064
+  ],
+  "warmup": 4,
+  "measured": 14,
+  "profile": true,
+  "timing_scope": "network(batch), including camera/H2D/point preprocessing, fusion, head decoding/NMS and (unless explicitly disabled) GT recall diagnostics; excludes synchronous data loading, initialization, optimization preparation and output comparison",
+  "source_sha256": {
+    "models/skeletons/fusion_base_integrated.py": "669ffc0bb26bfd6be1f8a1e18b32729136bcb638b0ab5bf44926f46361cfcd1c",
+    "models/fuser/a2_fusion.py": "6a918e943e61fc920949d95e811d1cd25dc859428df78649db7eba38fe4bce38",
+    "models/fuser/patch_dec_a2_fusion.py": "04bf1f4a1bf0a3874b36d3d5e70a2a052c95f09e24dde0fadbf929025bc67f51",
+    "models/head/anchor_head_integrated.py": "af55905967f64635eb67f2ea860a11db5633e917853b5e5c654c65d119a5ff0c"
+  },
+  "rows": [
+    {
+      "index": 2368,
+      "seq": "12",
+      "radar_id": "00346",
+      "weather": "normal",
+      "load_ms": 723.6559148877859,
+      "forward_wall_ms": 86.16609312593937,
+      "forward_cuda_ms": 86.10771179199219,
+      "prediction_count": 2
+    },
+    {
+      "index": 2960,
+      "seq": "15",
+      "radar_id": "00275",
+      "weather": "normal",
+      "load_ms": 773.4660487622023,
+      "forward_wall_ms": 87.6811034977436,
+      "forward_cuda_ms": 87.62239837646484,
+      "prediction_count": 5
+    },
+    {
+      "index": 3552,
+      "seq": "17",
+      "radar_id": "00305",
+      "weather": "normal",
+      "load_ms": 623.5458441078663,
+      "forward_wall_ms": 91.73617698252201,
+      "forward_cuda_ms": 91.67542266845703,
+      "prediction_count": 1
+    },
+    {
+      "index": 4144,
+      "seq": "19",
+      "radar_id": "00568",
+      "weather": "normal",
+      "load_ms": 1011.6843041032553,
+      "forward_wall_ms": 92.1430941671133,
+      "forward_cuda_ms": 92.07936096191406,
+      "prediction_count": 1
+    },
+    {
+      "index": 4736,
+      "seq": "22",
+      "radar_id": "00242",
+      "weather": "overcast",
+      "load_ms": 621.7647660523653,
+      "forward_wall_ms": 91.92263148725033,
+      "forward_cuda_ms": 91.86396789550781,
+      "prediction_count": 1
+    },
+    {
+      "index": 5328,
+      "seq": "24",
+      "radar_id": "00235",
+      "weather": "rain",
+      "load_ms": 600.0933609902859,
+      "forward_wall_ms": 88.60106952488422,
+      "forward_cuda_ms": 88.5417251586914,
+      "prediction_count": 3
+    },
+    {
+      "index": 5920,
+      "seq": "30",
+      "radar_id": "00133",
+      "weather": "sleet",
+      "load_ms": 608.9681666344404,
+      "forward_wall_ms": 90.41873551905155,
+      "forward_cuda_ms": 90.3485107421875,
+      "prediction_count": 1
+    },
+    {
+      "index": 6512,
+      "seq": "39",
+      "radar_id": "00231",
+      "weather": "fog",
+      "load_ms": 650.1727681607008,
+      "forward_wall_ms": 87.25825510919094,
+      "forward_cuda_ms": 87.1869125366211,
+      "prediction_count": 1
+    },
+    {
+      "index": 7104,
+      "seq": "42",
+      "radar_id": "00461",
+      "weather": "lightsnow",
+      "load_ms": 542.2235317528248,
+      "forward_wall_ms": 84.92875471711159,
+      "forward_cuda_ms": 84.86985778808594,
+      "prediction_count": 5
+    },
+    {
+      "index": 7696,
+      "seq": "45",
+      "radar_id": "00283",
+      "weather": "fog",
+      "load_ms": 848.3967948704958,
+      "forward_wall_ms": 85.53443104028702,
+      "forward_cuda_ms": 85.4698257446289,
+      "prediction_count": 2
+    },
+    {
+      "index": 8288,
+      "seq": "49",
+      "radar_id": "00157",
+      "weather": "lightsnow",
+      "load_ms": 590.6281843781471,
+      "forward_wall_ms": 85.47195233404636,
+      "forward_cuda_ms": 85.41273498535156,
+      "prediction_count": 1
+    },
+    {
+      "index": 8880,
+      "seq": "52",
+      "radar_id": "00566",
+      "weather": "sleet",
+      "load_ms": 579.2070813477039,
+      "forward_wall_ms": 83.37161503732204,
+      "forward_cuda_ms": 83.31238555908203,
+      "prediction_count": 3
+    },
+    {
+      "index": 9472,
+      "seq": "55",
+      "radar_id": "00147",
+      "weather": "heavysnow",
+      "load_ms": 562.7322252839804,
+      "forward_wall_ms": 85.94534173607826,
+      "forward_cuda_ms": 85.88742065429688,
+      "prediction_count": 1
+    },
+    {
+      "index": 10064,
+      "seq": "58",
+      "radar_id": "00562",
+      "weather": "heavysnow",
+      "load_ms": 560.0221455097198,
+      "forward_wall_ms": 82.07924850285053,
+      "forward_cuda_ms": 82.01958465576172,
+      "prediction_count": 1
+    }
+  ],
+  "stages": [
+    {
+      "cam.backbone": 29.340822249650955,
+      "cam.neck": 1.6870349645614624,
+      "cam.depthnet": 0.3226716071367264,
+      "cam.downsample": 1.3900566846132278,
+      "cam": 39.26765359938145,
+      "ldr.backbone3d": 8.951880037784576,
+      "ldr.backbone2d": 4.015745595097542,
+      "ldr": 19.644323736429214,
+      "rdr": 13.316761702299118,
+      "fuser": 10.982956737279892,
+      "head": 2.7247294783592224
+    },
+    {
+      "cam.backbone": 29.469160363078117,
+      "cam.neck": 1.704670488834381,
+      "cam.depthnet": 0.3189835697412491,
+      "cam.downsample": 1.3922881335020065,
+      "cam": 39.43849168717861,
+      "ldr.backbone3d": 8.934969082474709,
+      "ldr.backbone2d": 4.028080031275749,
+      "ldr": 19.641710445284843,
+      "rdr": 14.22058790922165,
+      "fuser": 10.990237817168236,
+      "head": 3.151422366499901
+    },
+    {
+      "cam.backbone": 32.402005046606064,
+      "cam.neck": 1.7569884657859802,
+      "cam.depthnet": 0.32913126051425934,
+      "cam.downsample": 1.3904981315135956,
+      "cam": 42.46837645769119,
+      "ldr.backbone3d": 9.026434272527695,
+      "ldr.backbone2d": 4.053795710206032,
+      "ldr": 20.927362143993378,
+      "rdr": 14.216164126992226,
+      "fuser": 11.004095897078514,
+      "head": 2.8802063316106796
+    },
+    {
+      "cam.backbone": 30.2845761179924,
+      "cam.neck": 1.8300171941518784,
+      "cam.depthnet": 0.33312104642391205,
+      "cam.downsample": 1.4434289187192917,
+      "cam": 40.68342037498951,
+      "ldr.backbone3d": 9.299693629145622,
+      "ldr.backbone2d": 4.113096743822098,
+      "ldr": 22.96227402985096,
+      "rdr": 14.590540900826454,
+      "fuser": 11.061765253543854,
+      "head": 2.585332840681076
+    },
+    {
+      "cam.backbone": 29.477158561348915,
+      "cam.neck": 1.7962679266929626,
+      "cam.depthnet": 0.3253854811191559,
+      "cam.downsample": 1.4019664376974106,
+      "cam": 39.574867114424706,
+      "ldr.backbone3d": 9.256945922970772,
+      "ldr.backbone2d": 4.213087260723114,
+      "ldr": 23.94034154713154,
+      "rdr": 14.423133805394173,
+      "fuser": 11.070296168327332,
+      "head": 2.680271863937378
+    },
+    {
+      "cam.backbone": 30.461741611361504,
+      "cam.neck": 1.769697293639183,
+      "cam.depthnet": 0.32899342477321625,
+      "cam.downsample": 1.3969913125038147,
+      "cam": 40.55841825902462,
+      "ldr.backbone3d": 9.023923426866531,
+      "ldr.backbone2d": 4.1922107338905334,
+      "ldr": 17.490435391664505,
+      "rdr": 15.865245833992958,
+      "fuser": 11.24684326350689,
+      "head": 3.1602010130882263
+    },
+    {
+      "cam.backbone": 29.476147145032883,
+      "cam.neck": 1.7044413834810257,
+      "cam.depthnet": 0.3231465816497803,
+      "cam.downsample": 1.3908520340919495,
+      "cam": 39.47257064282894,
+      "ldr.backbone3d": 8.957553654909134,
+      "ldr.backbone2d": 4.011785611510277,
+      "ldr": 22.2398079931736,
+      "rdr": 14.58662934601307,
+      "fuser": 11.073168367147446,
+      "head": 2.769865095615387
+    },
+    {
+      "cam.backbone": 29.776394367218018,
+      "cam.neck": 2.0205434411764145,
+      "cam.depthnet": 0.33130496740341187,
+      "cam.downsample": 1.3916213065385818,
+      "cam": 40.09009525179863,
+      "ldr.backbone3d": 8.787162601947784,
+      "ldr.backbone2d": 4.074105992913246,
+      "ldr": 19.503358751535416,
+      "rdr": 13.826150447130203,
+      "fuser": 11.008268222212791,
+      "head": 2.5791581720113754
+    },
+    {
+      "cam.backbone": 29.432272538542747,
+      "cam.neck": 2.007758244872093,
+      "cam.depthnet": 0.31366944313049316,
+      "cam.downsample": 1.4065206050872803,
+      "cam": 39.69424404203892,
+      "ldr.backbone3d": 8.626427501440048,
+      "ldr.backbone2d": 4.022521898150444,
+      "ldr": 16.923151910305023,
+      "rdr": 14.241490513086319,
+      "fuser": 11.003132909536362,
+      "head": 2.833547070622444
+    },
+    {
+      "cam.backbone": 29.840251430869102,
+      "cam.neck": 2.065638080239296,
+      "cam.depthnet": 0.3312453627586365,
+      "cam.downsample": 1.4147423207759857,
+      "cam": 40.261996909976006,
+      "ldr.backbone3d": 8.560923859477043,
+      "ldr.backbone2d": 4.095509648323059,
+      "ldr": 17.393292859196663,
+      "rdr": 13.610903173685074,
+      "fuser": 11.046620085835457,
+      "head": 2.9812082648277283
+    },
+    {
+      "cam.backbone": 29.30711954832077,
+      "cam.neck": 1.6963798552751541,
+      "cam.depthnet": 0.32121501863002777,
+      "cam.downsample": 1.3908743858337402,
+      "cam": 39.24478217959404,
+      "ldr.backbone3d": 8.645789697766304,
+      "ldr.backbone2d": 4.000281915068626,
+      "ldr": 19.01465468108654,
+      "rdr": 13.452872633934021,
+      "fuser": 10.987954214215279,
+      "head": 2.5414172559976578
+    },
+    {
+      "cam.backbone": 29.472343623638153,
+      "cam.neck": 1.6667097806930542,
+      "cam.depthnet": 0.3169160336256027,
+      "cam.downsample": 1.3923197984695435,
+      "cam": 39.37525302171707,
+      "ldr.backbone3d": 8.448973298072815,
+      "ldr.backbone2d": 3.923840820789337,
+      "ldr": 16.7945958673954,
+      "rdr": 13.359710574150085,
+      "fuser": 10.99351979792118,
+      "head": 2.6103630661964417
+    },
+    {
+      "cam.backbone": 29.458966106176376,
+      "cam.neck": 1.7662141472101212,
+      "cam.depthnet": 0.32072700560092926,
+      "cam.downsample": 1.3930033892393112,
+      "cam": 39.49579782783985,
+      "ldr.backbone3d": 8.852848783135414,
+      "ldr.backbone2d": 4.02357243001461,
+      "ldr": 18.67692917585373,
+      "rdr": 13.92720453441143,
+      "fuser": 11.027809232473373,
+      "head": 2.5831852108240128
+    },
+    {
+      "cam.backbone": 29.422471299767494,
+      "cam.neck": 1.9663162529468536,
+      "cam.depthnet": 0.32574497163295746,
+      "cam.downsample": 1.3944152742624283,
+      "cam": 39.63991068303585,
+      "ldr.backbone3d": 8.414402604103088,
+      "ldr.backbone2d": 3.9805807173252106,
+      "ldr": 15.063613653182983,
+      "rdr": 13.255182653665543,
+      "fuser": 10.967470705509186,
+      "head": 2.9084011912345886
+    }
+  ],
+  "summary": {
+    "load_ms": {
+      "mean": 664.0400812029839,
+      "median": 615.3664663434029,
+      "p95": 905.5474231019616,
+      "min": 542.2235317528248,
+      "max": 1011.6843041032553,
+      "std": 128.06851098121692
+    },
+    "forward_wall_ms": {
+      "mean": 87.37560734152794,
+      "median": 86.71217411756516,
+      "p95": 91.99979342520237,
+      "min": 82.07924850285053,
+      "max": 92.1430941671133,
+      "std": 3.092401850952436
+    },
+    "forward_cuda_ms": {
+      "mean": 87.31412996564593,
+      "median": 86.64731216430664,
+      "p95": 91.93935546875,
+      "min": 82.01958465576172,
+      "max": 92.07936096191406,
+      "std": 3.091270381819768
+    }
+  },
+  "stage_summary": {
+    "cam.backbone": {
+      "mean": 29.830102143543108,
+      "median": 29.474245384335518,
+      "p95": 31.1408338136971,
+      "min": 29.30711954832077,
+      "max": 32.402005046606064,
+      "std": 0.7885968277607941
+    },
+    "cam.neck": {
+      "mean": 1.8170483942542757,
+      "median": 1.767955720424652,
+      "p95": 2.036326564848423,
+      "min": 1.6667097806930542,
+      "max": 2.065638080239296,
+      "std": 0.13370193029458965
+    },
+    "cam.depthnet": {
+      "mean": 0.3244468410100256,
+      "median": 0.3242660313844681,
+      "p95": 0.33194059506058693,
+      "min": 0.31366944313049316,
+      "max": 0.33312104642391205,
+      "std": 0.00564113534975143
+    },
+    "cam.downsample": {
+      "mean": 1.399255623774869,
+      "median": 1.3926615938544273,
+      "p95": 1.4247826300561428,
+      "min": 1.3900566846132278,
+      "max": 1.4434289187192917,
+      "std": 0.014081413220192433
+    },
+    "cam": {
+      "mean": 39.947562717965674,
+      "median": 39.60738889873028,
+      "p95": 41.3081550039351,
+      "min": 39.24478217959404,
+      "max": 42.46837645769119,
+      "std": 0.8306029222392912
+    },
+    "ldr.backbone3d": {
+      "mean": 8.841994883758682,
+      "median": 8.893908932805061,
+      "p95": 9.27190762013197,
+      "min": 8.414402604103088,
+      "max": 9.299693629145622,
+      "std": 0.26555243905164677
+    },
+    "ldr.backbone2d": {
+      "mean": 4.0534439363649915,
+      "median": 4.02582623064518,
+      "p95": 4.199517518281937,
+      "min": 3.923840820789337,
+      "max": 4.213087260723114,
+      "std": 0.07610042507002897
+    },
+    "ldr": {
+      "mean": 19.301132299005985,
+      "median": 19.259006716310978,
+      "p95": 23.304597660899162,
+      "min": 15.063613653182983,
+      "max": 23.94034154713154,
+      "std": 2.4460694770035563
+    },
+    "rdr": {
+      "mean": 14.06375558248588,
+      "median": 14.071684330701828,
+      "p95": 15.03668762743473,
+      "min": 13.255182653665543,
+      "max": 15.865245833992958,
+      "std": 0.6743070044957963
+    },
+    "fuser": {
+      "mean": 11.033152762268271,
+      "median": 11.006182059645653,
+      "p95": 11.133954580873251,
+      "min": 10.967470705509186,
+      "max": 11.24684326350689,
+      "std": 0.06778484252821099
+    },
+    "head": {
+      "mean": 2.7849506586790085,
+      "median": 2.7472972869873047,
+      "p95": 3.1544948928058147,
+      "min": 2.5414172559976578,
+      "max": 3.1602010130882263,
+      "std": 0.2013906925865015
+    }
+  },
+  "peak_allocated_gib": 0.9820370674133301,
+  "peak_reserved_gib": 1.47265625,
+  "completed": true
+}

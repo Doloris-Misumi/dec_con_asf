@@ -1,0 +1,12 @@
+Make a minimal wiring correction ONLY within panel (c)'s Input features / Object-guided decoupling area. Keep every other pixel/layout/blank real-data rectangle unchanged. Current drawing is scientifically incorrect: it shows inputs being merged, and Shared --> Modality-specific in series. Those arrows must disappear.
+
+Replace the entire three-row input/decoupling drawing with a SINGLE PER-MODALITY example:
+Left: ONE rectangular BLUE token tile labeled 'Input token t_m'. Underneath in small text 'm = Camera, LiDAR, Radar'. This represents one input token for each modality, not merged sensors.
+One arrow leads from this token to a small fork junction.
+From that ONE junction, TWO distinct arrows fork: diagonally upward to an upper box labeled 'Shared projection', diagonally downward to a lower box labeled 'Specific projection'.
+The upper projection has an arrow to ONE amber output tile labeled 'c_m'.
+The lower projection has an arrow to ONE blue output tile labeled 'u_m'.
+There must be NO arrow between c_m and u_m, and NO arrow from Shared projection to Specific projection. They are two independent mappings of t_m.
+Group both projections and output tiles inside the existing large box 'Object-guided decoupling'. From the two output tiles, distinct thin arrows continue right to the existing Object-guided fusion block.
+Retain the original-input bypass from the actual t_m token, before the fork, routed under the decoupling box and into the existing fusion block. Retain training-loss dashed connections and the output placeholder. No photo, point cloud, car, or box visualization may be generated; all six data insert rectangles stay blank.
+The panel should immediately read t_m -> { shared projection -> c_m ; specific projection -> u_m }, independent parallel branches, with original t_m retained. Do not add extra words, equations or legends. Keep the figure's serif type, colors, headings, proportions and positions.

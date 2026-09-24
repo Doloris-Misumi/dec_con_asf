@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "time": "2026-09-15T21:21:27.502327+08:00",
+  "num_samples": 13727,
+  "failure_count": 0,
+  "report": "/home/hongsheng/dec_con_asf/results/taskdec_v2_l4dr_aligned_evaluation_260915.md",
+  "csv": "/home/hongsheng/dec_con_asf/results/paper_kradar_v2_l4dr_asf_strong_aligned_260915.csv",
+  "asf_archive_sha256": "6edf8b1f787e2082a7b6daf2f94ade068c92bf960fd0e735f57175c8aefe8cb6",
+  "intro": "\u672c\u6b21\u5df2\u5b8c\u6210 L4DR \u53cc\u7c7b\u522b\u5b98\u65b9\u6743\u91cd\u5728 **v2.0\u300113,727 \u5e27\u3001\u4e0e Strong \u5b8c\u5168\u76f8\u540c GT \u548c revised evaluator** \u4e0b\u7684\u5168\u91cf\u8bc4\u6d4b\u3002\u4e24\u7c7b\u5e73\u5747 AP3D@0.3 / @0.5\uff1aL4DR \u4e3a 69.48 / 48.23\uff0cStrong \u4e3a 66.91 / 43.05\uff1bStrong \u76f8\u5bf9 L4DR \u7684\u5dee\u503c\u4e3a **-2.57 / -5.18 AP \u70b9**\u3002"
+}

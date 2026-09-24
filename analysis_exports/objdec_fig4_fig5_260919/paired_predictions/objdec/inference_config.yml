@@ -1,0 +1,12 @@
+_BASE_CONFIG_: '/home/hongsheng/dec_con_asf/logs/exp_260810_221258_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/config.yml'
+GENERAL:
+  LOGGING:
+    IS_LOGGING: False
+  RESUME:
+    IS_RESUME: False
+VAL:
+  IS_VALIDATE: False
+OPTIMIZER:
+  NUM_WORKERS: 0
+DATASET:
+  portion: ["7", "9", "13", "20", "22", "24", "25", "39", "42", "43", "45", "50", "51", "52", "55", "57", "58"]

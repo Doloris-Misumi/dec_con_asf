@@ -1,0 +1,49 @@
+{
+  "status": "complete",
+  "pid": 3990038,
+  "started_at": "2026-09-17T00:53:36.883607+08:00",
+  "gpu": 1,
+  "predecessor_pid": 3877510,
+  "predecessor_identity": {
+    "pid": 3877510,
+    "state": "R",
+    "start_ticks": 845402723,
+    "command": "/home/hongsheng/dec_con_asf/v2x_taskdec/.venv/bin/python -u -m v2x_taskdec.train --variant concat "
+  },
+  "preserved_gpu1_pid": 140935,
+  "request": "User authorized native L4DR after GPU1 Concat completes, with automatic evaluation.",
+  "predecessor_status": "complete",
+  "predecessor_alive": false,
+  "resource_snapshot": {
+    "at": "2026-09-17T01:18:17.692530+08:00",
+    "free_mib": 40051,
+    "utilization": 0,
+    "apps": [
+      {
+        "pid": 140935,
+        "memory_mib": 8486
+      }
+    ]
+  },
+  "readiness_samples": 2,
+  "updated_at": "2026-09-19T01:13:15.945329+08:00",
+  "child": {
+    "pid": 3995315,
+    "gpu": 1,
+    "command": [
+      "nice",
+      "-n",
+      "10",
+      "/home/hongsheng/dec_con_asf/v2x_taskdec/.venv/bin/python",
+      "-u",
+      "/home/hongsheng/dec_con_asf/analysis_exports/v2x_l4dr_260917/run.py",
+      "train"
+    ],
+    "started_at": "2026-09-17T01:21:51.096325+08:00",
+    "controller_pid": 3990038,
+    "exit_code": 0,
+    "finished_at": "2026-09-19T01:13:15.928346+08:00"
+  },
+  "log": "/home/hongsheng/dec_con_asf/analysis_exports/v2x_l4dr_260917/matched_80ep/l4dr/train.log",
+  "finished_at": "2026-09-19T01:13:15.945279+08:00"
+}

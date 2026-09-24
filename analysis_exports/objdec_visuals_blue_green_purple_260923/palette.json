@@ -1,0 +1,20 @@
+{
+  "reference": "/home/hongsheng/dec_con_asf/ChatGPT Image 2026年9月15日 23_53_07.png",
+  "note": "Flat print colors interpreted from the blue/green/purple reference; not gradient pixel averages.",
+  "modality_colors": {
+    "Camera": "#4A9EEB",
+    "LiDAR": "#58B77A",
+    "4D Radar": "#9672D0"
+  },
+  "modality_label_colors": {
+    "Camera": "#267FC3",
+    "LiDAR": "#2E8B52",
+    "4D Radar": "#7650B2"
+  },
+  "representation_colors": {
+    "Input": "#8994A5",
+    "Shared": "#DE7777",
+    "Specific": "#E6AD55"
+  },
+  "continuous_scales": "Cosine, centroid distance, and gate retain their original quantitative color scales."
+}

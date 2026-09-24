@@ -1,0 +1,26 @@
+{
+  "train": {
+    "frames": 128,
+    "gt_counts": [
+      526,
+      306,
+      306
+    ],
+    "max_center_roundtrip_m": 3.792562381063083e-06,
+    "max_lift_roundtrip_m": 4.263256414560601e-14,
+    "max_augmented_lift_roundtrip_m": 6.875231832736972e-06,
+    "missing_files": []
+  },
+  "val": {
+    "frames": 128,
+    "gt_counts": [
+      478,
+      293,
+      283
+    ],
+    "max_center_roundtrip_m": 3.732240160110453e-06,
+    "max_lift_roundtrip_m": 4.263256414560601e-14,
+    "max_augmented_lift_roundtrip_m": 7.284106217753106e-06,
+    "missing_files": []
+  }
+}

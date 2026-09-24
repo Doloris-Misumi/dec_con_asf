@@ -1,0 +1,2134 @@
+{
+  "model": "objdec",
+  "checkpoint": "/home/hongsheng/dec_con_asf/logs/exp_260810_221258_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/models/model_0.pt",
+  "checkpoint_sha256": "99eb07e8a0b01ec397d3f2ac890091fe539194149a2c542cf41c465c9f02a2d3",
+  "config": "/home/hongsheng/dec_con_asf/logs/exp_260810_221258_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/config.yml",
+  "config_sha256": "e82a6d31b648d11d32bb5d867e52974f451a8745dbf2b5d4d256baa713f2fb20",
+  "mode": "eval, FP32, standard eager, R+L+C, batch 1",
+  "score_display_threshold": 0.3,
+  "strict_checkpoint_loading": true,
+  "frames": [
+    {
+      "id": "seq20_rdr00628",
+      "dataset_index_within_portion": 855,
+      "seed": 260919,
+      "num_gt": 1,
+      "num_predictions_above_03": 1,
+      "input_tensors": {
+        "ldr64": {
+          "shape": [
+            100593,
+            9
+          ],
+          "sha256": "8827d2163cbc3fe2ebf2b287890912a9445dd4db9acb3de29034fa17050aa3d2"
+        },
+        "rdr_sparse": {
+          "shape": [
+            150000,
+            4
+          ],
+          "sha256": "fe248d81dd5d5bcf40a15716b42d263810555d519309be35d913bdf4365d451c"
+        },
+        "gt_boxes": {
+          "shape": [
+            1,
+            1,
+            8
+          ],
+          "sha256": "ad751fd84732d2e0afa26b6db0746f80a6cd7f874ce23faff8482dfaec3819d2"
+        },
+        "radar_aug_matrix": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+        },
+        "camera_imgs": {
+          "shape": [
+            1,
+            1,
+            3,
+            256,
+            704
+          ],
+          "sha256": "56424561db57b90c6edf23805fdd1169ba94e94630d2981563c49091377f47ac"
+        },
+        "camera_intrinsics": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "024feb2bb89d6609dd869c3fee57dfd705d349f99c2951fecfbee6799d8dfc7a"
+        },
+        "camera2radar": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "bc420d0c6a9f0cb5df8e0f6f0103654a496975cb318da4dd2e9c132d429f3d32"
+        },
+        "radar2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "8902a3593378d08a7c53672420a47add27b536638fdcb8e6aa7e9e0b7b15c881"
+        },
+        "img_aug_matrix": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "b351add268698611c8c3861a678ef3064ce7b3a45c9b6efa37ae45de85e12025"
+        },
+        "batch_indices_ldr64": {
+          "shape": [
+            100593
+          ],
+          "sha256": "a7be0c568b1a8309a7cffa36446cd9a87dbe40c66ac46327ab58f97d5ad5361d"
+        },
+        "batch_indices_rdr_sparse": {
+          "shape": [
+            150000
+          ],
+          "sha256": "61fff2faaf6ddcfa769eb8b37aeca30342bfa713f535114c6217d14b000aecb3"
+        },
+        "sensor2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "8037036ee98092bda772ce1053ed3c5866abe3ecb3784fc7d762ce7729a4a844"
+        }
+      }
+    },
+    {
+      "id": "seq9_rdr00347",
+      "dataset_index_within_portion": 285,
+      "seed": 260920,
+      "num_gt": 3,
+      "num_predictions_above_03": 3,
+      "input_tensors": {
+        "ldr64": {
+          "shape": [
+            82132,
+            9
+          ],
+          "sha256": "6f91c27322e8a4a5c4a6b01e694b0e1389822010ba887a99471d7677e9d5fe1e"
+        },
+        "rdr_sparse": {
+          "shape": [
+            150000,
+            4
+          ],
+          "sha256": "1fac0c9fb8f513c6dae6e9bacfde499082b67e230c689a05341ef5f9e9a7a515"
+        },
+        "gt_boxes": {
+          "shape": [
+            1,
+            3,
+            8
+          ],
+          "sha256": "6b66f2ca01c6e4d638c13a852c629e06c7a13fd565e14a20867c3fe8e522cb12"
+        },
+        "radar_aug_matrix": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+        },
+        "camera_imgs": {
+          "shape": [
+            1,
+            1,
+            3,
+            256,
+            704
+          ],
+          "sha256": "2aced59a189ed7087aec1cee5ea53502a1fc1d356c57f6e4f827b07302d7e9d4"
+        },
+        "camera_intrinsics": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "024feb2bb89d6609dd869c3fee57dfd705d349f99c2951fecfbee6799d8dfc7a"
+        },
+        "camera2radar": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "bc420d0c6a9f0cb5df8e0f6f0103654a496975cb318da4dd2e9c132d429f3d32"
+        },
+        "radar2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "8902a3593378d08a7c53672420a47add27b536638fdcb8e6aa7e9e0b7b15c881"
+        },
+        "img_aug_matrix": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "b351add268698611c8c3861a678ef3064ce7b3a45c9b6efa37ae45de85e12025"
+        },
+        "batch_indices_ldr64": {
+          "shape": [
+            82132
+          ],
+          "sha256": "2ed31e663a34ba4a81de50ac78bf5337f14531041ed49a66f8e078fd3e78a4f9"
+        },
+        "batch_indices_rdr_sparse": {
+          "shape": [
+            150000
+          ],
+          "sha256": "61fff2faaf6ddcfa769eb8b37aeca30342bfa713f535114c6217d14b000aecb3"
+        },
+        "sensor2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "8037036ee98092bda772ce1053ed3c5866abe3ecb3784fc7d762ce7729a4a844"
+        }
+      }
+    },
+    {
+      "id": "seq7_rdr00272",
+      "dataset_index_within_portion": 90,
+      "seed": 260921,
+      "num_gt": 2,
+      "num_predictions_above_03": 1,
+      "input_tensors": {
+        "ldr64": {
+          "shape": [
+            101943,
+            9
+          ],
+          "sha256": "1ece4af27a9ea8b88acf19b41e77501420f65e2482532aec89edd692ffa581fc"
+        },
+        "rdr_sparse": {
+          "shape": [
+            150000,
+            4
+          ],
+          "sha256": "693c72d7e2f4af434f94a0663093ea1382f2cadb5ad739ccba19bd0d5867b03c"
+        },
+        "gt_boxes": {
+          "shape": [
+            1,
+            2,
+            8
+          ],
+          "sha256": "74ff5341d8ab054bf55f52530858c802dd9df1e57aa79d5f3f5848f37a317c14"
+        },
+        "radar_aug_matrix": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+        },
+        "camera_imgs": {
+          "shape": [
+            1,
+            1,
+            3,
+            256,
+            704
+          ],
+          "sha256": "faa20669dc9830c55cea3029372d80c5034c71c96825c439c07e91c47bd63eef"
+        },
+        "camera_intrinsics": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "024feb2bb89d6609dd869c3fee57dfd705d349f99c2951fecfbee6799d8dfc7a"
+        },
+        "camera2radar": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "0b8a6dc2db6e5c82229aa9b2d1d8df14c7b6b2664a337e9fb9c0dc09dc2bb37c"
+        },
+        "radar2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "db27b92ecccbced797bf578b82c87e6c4f2b3d885e782fcc17cc97f684898071"
+        },
+        "img_aug_matrix": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "b351add268698611c8c3861a678ef3064ce7b3a45c9b6efa37ae45de85e12025"
+        },
+        "batch_indices_ldr64": {
+          "shape": [
+            101943
+          ],
+          "sha256": "3088a9f4118ee84dc18030d6ce695c6fd74009efd459aef144f117520de763fe"
+        },
+        "batch_indices_rdr_sparse": {
+          "shape": [
+            150000
+          ],
+          "sha256": "61fff2faaf6ddcfa769eb8b37aeca30342bfa713f535114c6217d14b000aecb3"
+        },
+        "sensor2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "55463e764ae0d3302f4a9aae3a43e7971677a2e3ac9362dd3ba6edeb00627e5a"
+        }
+      }
+    },
+    {
+      "id": "seq13_rdr00146",
+      "dataset_index_within_portion": 637,
+      "seed": 260922,
+      "num_gt": 2,
+      "num_predictions_above_03": 2,
+      "input_tensors": {
+        "ldr64": {
+          "shape": [
+            104915,
+            9
+          ],
+          "sha256": "60b783a40b021f8aef4ef5f6987675bf69628ac23c7db2fbeebc971887769f51"
+        },
+        "rdr_sparse": {
+          "shape": [
+            150000,
+            4
+          ],
+          "sha256": "2b9ca9a5a1fe497c235d5e39f07c7f0a17c6e42ff617a55a23df949330ece4ac"
+        },
+        "gt_boxes": {
+          "shape": [
+            1,
+            2,
+            8
+          ],
+          "sha256": "8675588211feda48ef35e5b5a7e90a497aefc2848189486e77a280fb3ee8d9c5"
+        },
+        "radar_aug_matrix": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+        },
+        "camera_imgs": {
+          "shape": [
+            1,
+            1,
+            3,
+            256,
+            704
+          ],
+          "sha256": "df0bbe13033a6cdfafc282e3f22075640f72a4767484656e6ae47993804e3027"
+        },
+        "camera_intrinsics": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "024feb2bb89d6609dd869c3fee57dfd705d349f99c2951fecfbee6799d8dfc7a"
+        },
+        "camera2radar": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "7bfcfaf10069d5f591a3e22f30aca8a6023c51f53a3798d503a28ce7efb8bec1"
+        },
+        "radar2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "81e3cb4af6b646f58c14663f2c8e7ab013b601c44e955d6f3dd65c61ac6e8bbe"
+        },
+        "img_aug_matrix": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "b351add268698611c8c3861a678ef3064ce7b3a45c9b6efa37ae45de85e12025"
+        },
+        "batch_indices_ldr64": {
+          "shape": [
+            104915
+          ],
+          "sha256": "b35d7e0a8a528f5951eec338d0b7cbc7d4d13313907bdf2ff0e4d889119a2352"
+        },
+        "batch_indices_rdr_sparse": {
+          "shape": [
+            150000
+          ],
+          "sha256": "61fff2faaf6ddcfa769eb8b37aeca30342bfa713f535114c6217d14b000aecb3"
+        },
+        "sensor2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "df00a703be3e3d56225789762b7457188d6b9f5bbde4e8b31c12b864a247e49b"
+        }
+      }
+    },
+    {
+      "id": "seq22_rdr00484",
+      "dataset_index_within_portion": 1039,
+      "seed": 260923,
+      "num_gt": 4,
+      "num_predictions_above_03": 4,
+      "input_tensors": {
+        "ldr64": {
+          "shape": [
+            93441,
+            9
+          ],
+          "sha256": "241f8f0008ab3129b5c4fa7088d2924bd143610483d83ec5c8d198bdfa327d00"
+        },
+        "rdr_sparse": {
+          "shape": [
+            150000,
+            4
+          ],
+          "sha256": "362c745926d30f3683865e92b658ffee0a894872caa775604aba8bd4c296a4ad"
+        },
+        "gt_boxes": {
+          "shape": [
+            1,
+            4,
+            8
+          ],
+          "sha256": "a20b0386aa6e03a15a5679670ea6173019ee7b19d48e2380f8b6c18eb153a7cf"
+        },
+        "radar_aug_matrix": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+        },
+        "camera_imgs": {
+          "shape": [
+            1,
+            1,
+            3,
+            256,
+            704
+          ],
+          "sha256": "611257763db5756dd4d009f46d92667d1e5bfa6c615040d60acb4e3f49b3866b"
+        },
+        "camera_intrinsics": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "024feb2bb89d6609dd869c3fee57dfd705d349f99c2951fecfbee6799d8dfc7a"
+        },
+        "camera2radar": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "9c6c4fd4f6169c94ed87fe7c6a29e0bad8673a0b85c4b92cf86dd5e44e71b0b9"
+        },
+        "radar2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "c1826c64f290709d39dd56d634f81a12741fae76b8834834f7c8dac8146cc056"
+        },
+        "img_aug_matrix": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "b351add268698611c8c3861a678ef3064ce7b3a45c9b6efa37ae45de85e12025"
+        },
+        "batch_indices_ldr64": {
+          "shape": [
+            93441
+          ],
+          "sha256": "e22964fbeefba5b181e372938ca8f5954be170b360bd79b77e31181a0eb00d22"
+        },
+        "batch_indices_rdr_sparse": {
+          "shape": [
+            150000
+          ],
+          "sha256": "61fff2faaf6ddcfa769eb8b37aeca30342bfa713f535114c6217d14b000aecb3"
+        },
+        "sensor2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "e518cd22e010a9d1aacfa24f2acda721e20351ec44024d503b03aef9545d439d"
+        }
+      }
+    },
+    {
+      "id": "seq22_rdr00218",
+      "dataset_index_within_portion": 922,
+      "seed": 260924,
+      "num_gt": 2,
+      "num_predictions_above_03": 2,
+      "input_tensors": {
+        "ldr64": {
+          "shape": [
+            76900,
+            9
+          ],
+          "sha256": "46285ab205ee17c2df500271a3888885be88775bc966e34b1a2275fd37d4f1c1"
+        },
+        "rdr_sparse": {
+          "shape": [
+            150000,
+            4
+          ],
+          "sha256": "aeccbdc0f213b3482511ba5297343d7dc2783afe873cc9fc79095454fd2fea2a"
+        },
+        "gt_boxes": {
+          "shape": [
+            1,
+            2,
+            8
+          ],
+          "sha256": "9ffe6860167a0f34e7f5f551b9077f676346defe609f0d5580a7233b85f9c961"
+        },
+        "radar_aug_matrix": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+        },
+        "camera_imgs": {
+          "shape": [
+            1,
+            1,
+            3,
+            256,
+            704
+          ],
+          "sha256": "bd0065ed3ead52976dbeaa9e56ddb094a18c946492c96c42ef1c6706c708639a"
+        },
+        "camera_intrinsics": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "024feb2bb89d6609dd869c3fee57dfd705d349f99c2951fecfbee6799d8dfc7a"
+        },
+        "camera2radar": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "9c6c4fd4f6169c94ed87fe7c6a29e0bad8673a0b85c4b92cf86dd5e44e71b0b9"
+        },
+        "radar2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "c1826c64f290709d39dd56d634f81a12741fae76b8834834f7c8dac8146cc056"
+        },
+        "img_aug_matrix": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "b351add268698611c8c3861a678ef3064ce7b3a45c9b6efa37ae45de85e12025"
+        },
+        "batch_indices_ldr64": {
+          "shape": [
+            76900
+          ],
+          "sha256": "2bd39715e101da7a18d7ed52fbc7e5c2c2c20d48339fe1175b7e1177151e889f"
+        },
+        "batch_indices_rdr_sparse": {
+          "shape": [
+            150000
+          ],
+          "sha256": "61fff2faaf6ddcfa769eb8b37aeca30342bfa713f535114c6217d14b000aecb3"
+        },
+        "sensor2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "e518cd22e010a9d1aacfa24f2acda721e20351ec44024d503b03aef9545d439d"
+        }
+      }
+    },
+    {
+      "id": "seq45_rdr00613",
+      "dataset_index_within_portion": 2875,
+      "seed": 260925,
+      "num_gt": 1,
+      "num_predictions_above_03": 1,
+      "input_tensors": {
+        "ldr64": {
+          "shape": [
+            74374,
+            9
+          ],
+          "sha256": "086d5f5fd7afee5cccac5aad858770d0e61c58017f29e80010f06b755cfcd352"
+        },
+        "rdr_sparse": {
+          "shape": [
+            150000,
+            4
+          ],
+          "sha256": "61144c35427e57baac8a35ff97f3d1a7167926706631cbd5ad2cd955688f1845"
+        },
+        "gt_boxes": {
+          "shape": [
+            1,
+            1,
+            8
+          ],
+          "sha256": "ef097446e23b25070aa9ecda1cac2f03d92aa5c127335cb01c6d20e297fc91e0"
+        },
+        "radar_aug_matrix": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+        },
+        "camera_imgs": {
+          "shape": [
+            1,
+            1,
+            3,
+            256,
+            704
+          ],
+          "sha256": "c810a528061fbc4d640e932a4a2ef35dc66937080f0eed1ae28383c19cfb213d"
+        },
+        "camera_intrinsics": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "024feb2bb89d6609dd869c3fee57dfd705d349f99c2951fecfbee6799d8dfc7a"
+        },
+        "camera2radar": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "bc420d0c6a9f0cb5df8e0f6f0103654a496975cb318da4dd2e9c132d429f3d32"
+        },
+        "radar2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "8902a3593378d08a7c53672420a47add27b536638fdcb8e6aa7e9e0b7b15c881"
+        },
+        "img_aug_matrix": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "b351add268698611c8c3861a678ef3064ce7b3a45c9b6efa37ae45de85e12025"
+        },
+        "batch_indices_ldr64": {
+          "shape": [
+            74374
+          ],
+          "sha256": "847c67a581808a6b3aa9d5cae1f1627429abfcd0057aa76ac87eceb4471d8cfb"
+        },
+        "batch_indices_rdr_sparse": {
+          "shape": [
+            150000
+          ],
+          "sha256": "61fff2faaf6ddcfa769eb8b37aeca30342bfa713f535114c6217d14b000aecb3"
+        },
+        "sensor2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "8037036ee98092bda772ce1053ed3c5866abe3ecb3784fc7d762ce7729a4a844"
+        }
+      }
+    },
+    {
+      "id": "seq39_rdr00582",
+      "dataset_index_within_portion": 2000,
+      "seed": 260926,
+      "num_gt": 1,
+      "num_predictions_above_03": 1,
+      "input_tensors": {
+        "ldr64": {
+          "shape": [
+            83616,
+            9
+          ],
+          "sha256": "b8be283dabf14dac40a15b344415150843f9474dfbde3e53035a0614d89acded"
+        },
+        "rdr_sparse": {
+          "shape": [
+            150000,
+            4
+          ],
+          "sha256": "f17c2b309c4d51826cfb06dc8cfcddf20caa2a5fbd138e6c24aabef07f6c4b12"
+        },
+        "gt_boxes": {
+          "shape": [
+            1,
+            1,
+            8
+          ],
+          "sha256": "bab9356b13739985e6bc3e31dc3ac5ee6cc7c335cf68ae20a6ad425bf6143064"
+        },
+        "radar_aug_matrix": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+        },
+        "camera_imgs": {
+          "shape": [
+            1,
+            1,
+            3,
+            256,
+            704
+          ],
+          "sha256": "bf88a1c6d218a8b0370b5e0d9c9ea33fb2b1dad8f97a8eb428e413651589f5c7"
+        },
+        "camera_intrinsics": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "024feb2bb89d6609dd869c3fee57dfd705d349f99c2951fecfbee6799d8dfc7a"
+        },
+        "camera2radar": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "bfdade9db24495b62d9f6ed5f33bbab11e533fa9f34e6d93bb45626c381acba2"
+        },
+        "radar2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "486cbdf42dcaf07547f1080ee2653a448a1a0d542a3ad60be2b313cd7c804a22"
+        },
+        "img_aug_matrix": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "b351add268698611c8c3861a678ef3064ce7b3a45c9b6efa37ae45de85e12025"
+        },
+        "batch_indices_ldr64": {
+          "shape": [
+            83616
+          ],
+          "sha256": "336c43ae06393b2ee1bb34b6158c62f8afbf0dc038f0521ddac2b4fb28648f8e"
+        },
+        "batch_indices_rdr_sparse": {
+          "shape": [
+            150000
+          ],
+          "sha256": "61fff2faaf6ddcfa769eb8b37aeca30342bfa713f535114c6217d14b000aecb3"
+        },
+        "sensor2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "324e57bf674fa8d29baf5de360c5d1da9cf42e51eee8c7ef7978b8988604cf20"
+        }
+      }
+    },
+    {
+      "id": "seq39_rdr00491",
+      "dataset_index_within_portion": 1909,
+      "seed": 260927,
+      "num_gt": 1,
+      "num_predictions_above_03": 1,
+      "input_tensors": {
+        "ldr64": {
+          "shape": [
+            44974,
+            9
+          ],
+          "sha256": "78266d4f8721f60ec690c4b1f710f62124110494859d894844bcad86cc4547ae"
+        },
+        "rdr_sparse": {
+          "shape": [
+            150000,
+            4
+          ],
+          "sha256": "98425cc4750a6f5bbd9da398b5f2418fea6088e9b28ca37a73e26fa3cd71edf1"
+        },
+        "gt_boxes": {
+          "shape": [
+            1,
+            1,
+            8
+          ],
+          "sha256": "149ddb8a89b7aa235ffd9bf927fdca40aed8ad840fca19913d3fac5302853276"
+        },
+        "radar_aug_matrix": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+        },
+        "camera_imgs": {
+          "shape": [
+            1,
+            1,
+            3,
+            256,
+            704
+          ],
+          "sha256": "12701c2ae8d224b2b4a81e99f44a77fcbb4149d0f279f47d42261c9a18e47f02"
+        },
+        "camera_intrinsics": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "024feb2bb89d6609dd869c3fee57dfd705d349f99c2951fecfbee6799d8dfc7a"
+        },
+        "camera2radar": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "bfdade9db24495b62d9f6ed5f33bbab11e533fa9f34e6d93bb45626c381acba2"
+        },
+        "radar2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "486cbdf42dcaf07547f1080ee2653a448a1a0d542a3ad60be2b313cd7c804a22"
+        },
+        "img_aug_matrix": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "b351add268698611c8c3861a678ef3064ce7b3a45c9b6efa37ae45de85e12025"
+        },
+        "batch_indices_ldr64": {
+          "shape": [
+            44974
+          ],
+          "sha256": "3d75d85983ebc29a42554f739450dfa35984e23d6d1a5097821f3238e059e1c8"
+        },
+        "batch_indices_rdr_sparse": {
+          "shape": [
+            150000
+          ],
+          "sha256": "61fff2faaf6ddcfa769eb8b37aeca30342bfa713f535114c6217d14b000aecb3"
+        },
+        "sensor2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "324e57bf674fa8d29baf5de360c5d1da9cf42e51eee8c7ef7978b8988604cf20"
+        }
+      }
+    },
+    {
+      "id": "seq25_rdr00154",
+      "dataset_index_within_portion": 1460,
+      "seed": 260928,
+      "num_gt": 4,
+      "num_predictions_above_03": 4,
+      "input_tensors": {
+        "ldr64": {
+          "shape": [
+            54426,
+            9
+          ],
+          "sha256": "864082e40385bdf23b17f93081f726e73c1c9e71daea1a85d43aa51cc2c8f63e"
+        },
+        "rdr_sparse": {
+          "shape": [
+            150000,
+            4
+          ],
+          "sha256": "9e6f96cbf3af84a83267c3cee74b0ee322e0108f3edb1a2d39b8c7f9f21bf70d"
+        },
+        "gt_boxes": {
+          "shape": [
+            1,
+            4,
+            8
+          ],
+          "sha256": "7e4ae25afdb765284e9444d14cbfd8b3b2cb3e5ef6ce9e0e07c4f9363708f236"
+        },
+        "radar_aug_matrix": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+        },
+        "camera_imgs": {
+          "shape": [
+            1,
+            1,
+            3,
+            256,
+            704
+          ],
+          "sha256": "ced826fbbb66fcf469ac450083fa8d341db830dc7726d7f4ffc964e358ce5c60"
+        },
+        "camera_intrinsics": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "024feb2bb89d6609dd869c3fee57dfd705d349f99c2951fecfbee6799d8dfc7a"
+        },
+        "camera2radar": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "80d82edb4652fe4e5e050e6e5748be025cb6970ae48858d9e3c73eed844bdc67"
+        },
+        "radar2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "c00f70272bea154cdab1847ea10f185c51e839d5f9bb20f3a477d63dbd958904"
+        },
+        "img_aug_matrix": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "b351add268698611c8c3861a678ef3064ce7b3a45c9b6efa37ae45de85e12025"
+        },
+        "batch_indices_ldr64": {
+          "shape": [
+            54426
+          ],
+          "sha256": "6e376f82369cee20c6f777ee5c4255b2649498d02a58cfff3e896e2b36c36142"
+        },
+        "batch_indices_rdr_sparse": {
+          "shape": [
+            150000
+          ],
+          "sha256": "61fff2faaf6ddcfa769eb8b37aeca30342bfa713f535114c6217d14b000aecb3"
+        },
+        "sensor2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "c9633867ce0c3f50c8f88d9e2a95069238c35fc1da9d57cc458cf0f91d12f40b"
+        }
+      }
+    },
+    {
+      "id": "seq24_rdr00286",
+      "dataset_index_within_portion": 1289,
+      "seed": 260929,
+      "num_gt": 3,
+      "num_predictions_above_03": 3,
+      "input_tensors": {
+        "ldr64": {
+          "shape": [
+            62449,
+            9
+          ],
+          "sha256": "fb483065490eb0da33f9e96cfdc3922b73a2a1605381fa57dfd450e23896f8f6"
+        },
+        "rdr_sparse": {
+          "shape": [
+            150000,
+            4
+          ],
+          "sha256": "cba6c4d1e2a66187e9f7e2f6eb11282cffa8b6a902c6b4929f0c43a3bb5f1648"
+        },
+        "gt_boxes": {
+          "shape": [
+            1,
+            3,
+            8
+          ],
+          "sha256": "9bc7ed58d06a2780de6f802d357178501a322f1a068eb4d2bbcb83fc3ce0fc70"
+        },
+        "radar_aug_matrix": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+        },
+        "camera_imgs": {
+          "shape": [
+            1,
+            1,
+            3,
+            256,
+            704
+          ],
+          "sha256": "5b775034438674c5c7c4792710ac6b3bbac8db075ea9999c141e3b0a2bcb4a34"
+        },
+        "camera_intrinsics": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "024feb2bb89d6609dd869c3fee57dfd705d349f99c2951fecfbee6799d8dfc7a"
+        },
+        "camera2radar": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "9c6c4fd4f6169c94ed87fe7c6a29e0bad8673a0b85c4b92cf86dd5e44e71b0b9"
+        },
+        "radar2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "c1826c64f290709d39dd56d634f81a12741fae76b8834834f7c8dac8146cc056"
+        },
+        "img_aug_matrix": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "b351add268698611c8c3861a678ef3064ce7b3a45c9b6efa37ae45de85e12025"
+        },
+        "batch_indices_ldr64": {
+          "shape": [
+            62449
+          ],
+          "sha256": "3eb1ac627aaa7a22af9830b5015bbfac94d8c70d4a02d7c54220360628dc434e"
+        },
+        "batch_indices_rdr_sparse": {
+          "shape": [
+            150000
+          ],
+          "sha256": "61fff2faaf6ddcfa769eb8b37aeca30342bfa713f535114c6217d14b000aecb3"
+        },
+        "sensor2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "e518cd22e010a9d1aacfa24f2acda721e20351ec44024d503b03aef9545d439d"
+        }
+      }
+    },
+    {
+      "id": "seq25_rdr00475",
+      "dataset_index_within_portion": 1632,
+      "seed": 260930,
+      "num_gt": 3,
+      "num_predictions_above_03": 3,
+      "input_tensors": {
+        "ldr64": {
+          "shape": [
+            38014,
+            9
+          ],
+          "sha256": "cd88cd90691db865ae9aab65c79fb75fc3acab8dcf5eda08dc6b4dd761961790"
+        },
+        "rdr_sparse": {
+          "shape": [
+            150000,
+            4
+          ],
+          "sha256": "5bc20b77cb36625cca4a9c18ebc08639593860a5842207b776c78064351d359d"
+        },
+        "gt_boxes": {
+          "shape": [
+            1,
+            3,
+            8
+          ],
+          "sha256": "c81fc0b1359619a9689da0b39442e5d440b42cbbcb49c9ee6072dd173fd16138"
+        },
+        "radar_aug_matrix": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+        },
+        "camera_imgs": {
+          "shape": [
+            1,
+            1,
+            3,
+            256,
+            704
+          ],
+          "sha256": "f38c7f22286fd06023f22a083d7b81d6836fecd7538ca2c46fbb9800fd7694e3"
+        },
+        "camera_intrinsics": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "024feb2bb89d6609dd869c3fee57dfd705d349f99c2951fecfbee6799d8dfc7a"
+        },
+        "camera2radar": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "80d82edb4652fe4e5e050e6e5748be025cb6970ae48858d9e3c73eed844bdc67"
+        },
+        "radar2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "c00f70272bea154cdab1847ea10f185c51e839d5f9bb20f3a477d63dbd958904"
+        },
+        "img_aug_matrix": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "b351add268698611c8c3861a678ef3064ce7b3a45c9b6efa37ae45de85e12025"
+        },
+        "batch_indices_ldr64": {
+          "shape": [
+            38014
+          ],
+          "sha256": "787a54bdff824d02747b9255257821b7d6ffa3c8d84292669ab4bc7618f5cef1"
+        },
+        "batch_indices_rdr_sparse": {
+          "shape": [
+            150000
+          ],
+          "sha256": "61fff2faaf6ddcfa769eb8b37aeca30342bfa713f535114c6217d14b000aecb3"
+        },
+        "sensor2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "c9633867ce0c3f50c8f88d9e2a95069238c35fc1da9d57cc458cf0f91d12f40b"
+        }
+      }
+    },
+    {
+      "id": "seq43_rdr00169",
+      "dataset_index_within_portion": 2337,
+      "seed": 260931,
+      "num_gt": 1,
+      "num_predictions_above_03": 4,
+      "input_tensors": {
+        "ldr64": {
+          "shape": [
+            52594,
+            9
+          ],
+          "sha256": "428fd8601d84a381de3b0f9bc106c28012d546b062a8c4d06f5bd1d37e47128d"
+        },
+        "rdr_sparse": {
+          "shape": [
+            150000,
+            4
+          ],
+          "sha256": "06568ce5614d27666c82de2c287b944471d1b4e59a950acc86a913604f182395"
+        },
+        "gt_boxes": {
+          "shape": [
+            1,
+            1,
+            8
+          ],
+          "sha256": "f14bc7d510c73d556d08972380895cc138d9af5336226c562a4a1eeeedb7f484"
+        },
+        "radar_aug_matrix": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+        },
+        "camera_imgs": {
+          "shape": [
+            1,
+            1,
+            3,
+            256,
+            704
+          ],
+          "sha256": "f51a05a0c61325933165ec75cdff33be931c5c094ca2655109ef62260bb30880"
+        },
+        "camera_intrinsics": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "024feb2bb89d6609dd869c3fee57dfd705d349f99c2951fecfbee6799d8dfc7a"
+        },
+        "camera2radar": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "bc420d0c6a9f0cb5df8e0f6f0103654a496975cb318da4dd2e9c132d429f3d32"
+        },
+        "radar2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "8902a3593378d08a7c53672420a47add27b536638fdcb8e6aa7e9e0b7b15c881"
+        },
+        "img_aug_matrix": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "b351add268698611c8c3861a678ef3064ce7b3a45c9b6efa37ae45de85e12025"
+        },
+        "batch_indices_ldr64": {
+          "shape": [
+            52594
+          ],
+          "sha256": "381c7627e3eda7b9fbc2973d502563f309d4f03c4778e6ceb72193177f4a7d80"
+        },
+        "batch_indices_rdr_sparse": {
+          "shape": [
+            150000
+          ],
+          "sha256": "61fff2faaf6ddcfa769eb8b37aeca30342bfa713f535114c6217d14b000aecb3"
+        },
+        "sensor2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "8037036ee98092bda772ce1053ed3c5866abe3ecb3784fc7d762ce7729a4a844"
+        }
+      }
+    },
+    {
+      "id": "seq42_rdr00264",
+      "dataset_index_within_portion": 2128,
+      "seed": 260932,
+      "num_gt": 1,
+      "num_predictions_above_03": 1,
+      "input_tensors": {
+        "ldr64": {
+          "shape": [
+            83656,
+            9
+          ],
+          "sha256": "238db51f36f2d6f661fb57e6544b3f581ae2d03171deac0be40e9c8c477dddba"
+        },
+        "rdr_sparse": {
+          "shape": [
+            150000,
+            4
+          ],
+          "sha256": "2a9b19d470b600c7ba7a16a4663998ddd3a4a155a168bd660893e5f9c259ae40"
+        },
+        "gt_boxes": {
+          "shape": [
+            1,
+            1,
+            8
+          ],
+          "sha256": "991ef461c6925e165d407d163de576dac870bced273e250d98f81a01fb13a4f3"
+        },
+        "radar_aug_matrix": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+        },
+        "camera_imgs": {
+          "shape": [
+            1,
+            1,
+            3,
+            256,
+            704
+          ],
+          "sha256": "afb88763a62850467df3b4466a46453918147ed4ecdbc8b1f567aa6d0398e01b"
+        },
+        "camera_intrinsics": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "024feb2bb89d6609dd869c3fee57dfd705d349f99c2951fecfbee6799d8dfc7a"
+        },
+        "camera2radar": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "bc420d0c6a9f0cb5df8e0f6f0103654a496975cb318da4dd2e9c132d429f3d32"
+        },
+        "radar2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "8902a3593378d08a7c53672420a47add27b536638fdcb8e6aa7e9e0b7b15c881"
+        },
+        "img_aug_matrix": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "b351add268698611c8c3861a678ef3064ce7b3a45c9b6efa37ae45de85e12025"
+        },
+        "batch_indices_ldr64": {
+          "shape": [
+            83656
+          ],
+          "sha256": "2af61ec6ec17e75091da9f6542b2b8bae21d4515fe9aacd5ceff65758c570e1f"
+        },
+        "batch_indices_rdr_sparse": {
+          "shape": [
+            150000
+          ],
+          "sha256": "61fff2faaf6ddcfa769eb8b37aeca30342bfa713f535114c6217d14b000aecb3"
+        },
+        "sensor2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "8037036ee98092bda772ce1053ed3c5866abe3ecb3784fc7d762ce7729a4a844"
+        }
+      }
+    },
+    {
+      "id": "seq58_rdr00258",
+      "dataset_index_within_portion": 3782,
+      "seed": 260933,
+      "num_gt": 1,
+      "num_predictions_above_03": 2,
+      "input_tensors": {
+        "ldr64": {
+          "shape": [
+            33049,
+            9
+          ],
+          "sha256": "5615c9bc7c0a1204a44d96d0dc3dc2abc04b867fe12a9680ab1a6519eb76bc6e"
+        },
+        "rdr_sparse": {
+          "shape": [
+            150000,
+            4
+          ],
+          "sha256": "d90a2212111a4ff37b6678f91c194530f69731ce146c52c8246eb69f0ba31943"
+        },
+        "gt_boxes": {
+          "shape": [
+            1,
+            1,
+            8
+          ],
+          "sha256": "a409c0f84f70fdb50e9794b5a315cc56202da824bdcce862a84f87317f87aef4"
+        },
+        "radar_aug_matrix": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+        },
+        "camera_imgs": {
+          "shape": [
+            1,
+            1,
+            3,
+            256,
+            704
+          ],
+          "sha256": "529b112a10b6b492a7c137bb7859e0412b681ee7a8344dd3b88f89f4d675b208"
+        },
+        "camera_intrinsics": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "024feb2bb89d6609dd869c3fee57dfd705d349f99c2951fecfbee6799d8dfc7a"
+        },
+        "camera2radar": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "2c650b5e39dce803024db899062126071de440e46d4bc53d5c7d4447eee8d915"
+        },
+        "radar2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "c140804e3a74b1f6e0479c0cb6a19e3c420563546136c749864eed6014c78b2b"
+        },
+        "img_aug_matrix": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "b351add268698611c8c3861a678ef3064ce7b3a45c9b6efa37ae45de85e12025"
+        },
+        "batch_indices_ldr64": {
+          "shape": [
+            33049
+          ],
+          "sha256": "81458cffc51b9166c4a906487ae7fe20057afeab77a0f5cc1eedb51d32cc7e6c"
+        },
+        "batch_indices_rdr_sparse": {
+          "shape": [
+            150000
+          ],
+          "sha256": "61fff2faaf6ddcfa769eb8b37aeca30342bfa713f535114c6217d14b000aecb3"
+        },
+        "sensor2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "48e14011704716b82177a5c8cba04b484440af0d86fe395f65f9c7f40bb5da52"
+        }
+      }
+    },
+    {
+      "id": "seq55_rdr00385",
+      "dataset_index_within_portion": 3613,
+      "seed": 260934,
+      "num_gt": 1,
+      "num_predictions_above_03": 1,
+      "input_tensors": {
+        "ldr64": {
+          "shape": [
+            67500,
+            9
+          ],
+          "sha256": "723981e85034d09e2d0d7093ff6a0be89c1c5282df9e7f66b7cdaa2dff17a958"
+        },
+        "rdr_sparse": {
+          "shape": [
+            150000,
+            4
+          ],
+          "sha256": "6ae95cb27d33522f01781f66dfa1083cf86b2643b25ca8a827c7619256cf799a"
+        },
+        "gt_boxes": {
+          "shape": [
+            1,
+            1,
+            8
+          ],
+          "sha256": "6ee1e94c642ff1ea68a6e1826260424d7e5696d4d03aa04ad4b4e196dacbb174"
+        },
+        "radar_aug_matrix": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+        },
+        "camera_imgs": {
+          "shape": [
+            1,
+            1,
+            3,
+            256,
+            704
+          ],
+          "sha256": "9f35d875cb9da5252e04a5335293b715ede790d1c71779373250d416d33e935b"
+        },
+        "camera_intrinsics": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "024feb2bb89d6609dd869c3fee57dfd705d349f99c2951fecfbee6799d8dfc7a"
+        },
+        "camera2radar": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "2c650b5e39dce803024db899062126071de440e46d4bc53d5c7d4447eee8d915"
+        },
+        "radar2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "c140804e3a74b1f6e0479c0cb6a19e3c420563546136c749864eed6014c78b2b"
+        },
+        "img_aug_matrix": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "b351add268698611c8c3861a678ef3064ce7b3a45c9b6efa37ae45de85e12025"
+        },
+        "batch_indices_ldr64": {
+          "shape": [
+            67500
+          ],
+          "sha256": "3bb57dc784c3e87827de1e6ebc7b6e8c6eed500801d81b16e075a6955f1b0664"
+        },
+        "batch_indices_rdr_sparse": {
+          "shape": [
+            150000
+          ],
+          "sha256": "61fff2faaf6ddcfa769eb8b37aeca30342bfa713f535114c6217d14b000aecb3"
+        },
+        "sensor2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "48e14011704716b82177a5c8cba04b484440af0d86fe395f65f9c7f40bb5da52"
+        }
+      }
+    },
+    {
+      "id": "seq57_rdr00279",
+      "dataset_index_within_portion": 3734,
+      "seed": 260935,
+      "num_gt": 1,
+      "num_predictions_above_03": 1,
+      "input_tensors": {
+        "ldr64": {
+          "shape": [
+            30980,
+            9
+          ],
+          "sha256": "5e997e5780c7dcd783c3898a1ecf33675fd81531b439c09e5c7322df565e4334"
+        },
+        "rdr_sparse": {
+          "shape": [
+            150000,
+            4
+          ],
+          "sha256": "58f04e8cf3db02c2f4deb576349c4fba3749b4c22e74514f173c0852e70da18f"
+        },
+        "gt_boxes": {
+          "shape": [
+            1,
+            1,
+            8
+          ],
+          "sha256": "356f96a0c0f27404aa3200076829ff798ddfb9cc512f6ea492142e4375a2158f"
+        },
+        "radar_aug_matrix": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+        },
+        "camera_imgs": {
+          "shape": [
+            1,
+            1,
+            3,
+            256,
+            704
+          ],
+          "sha256": "d8ae1d8b6f936f1477c0d176e390cbee1318c84895dab0056336e1d71a4d834a"
+        },
+        "camera_intrinsics": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "024feb2bb89d6609dd869c3fee57dfd705d349f99c2951fecfbee6799d8dfc7a"
+        },
+        "camera2radar": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "2c650b5e39dce803024db899062126071de440e46d4bc53d5c7d4447eee8d915"
+        },
+        "radar2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "c140804e3a74b1f6e0479c0cb6a19e3c420563546136c749864eed6014c78b2b"
+        },
+        "img_aug_matrix": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "b351add268698611c8c3861a678ef3064ce7b3a45c9b6efa37ae45de85e12025"
+        },
+        "batch_indices_ldr64": {
+          "shape": [
+            30980
+          ],
+          "sha256": "2e4357d2aeae28bcc5cdf4f84935c17ee01f667d56e25760763a534281960f08"
+        },
+        "batch_indices_rdr_sparse": {
+          "shape": [
+            150000
+          ],
+          "sha256": "61fff2faaf6ddcfa769eb8b37aeca30342bfa713f535114c6217d14b000aecb3"
+        },
+        "sensor2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "48e14011704716b82177a5c8cba04b484440af0d86fe395f65f9c7f40bb5da52"
+        }
+      }
+    },
+    {
+      "id": "seq51_rdr00237",
+      "dataset_index_within_portion": 3140,
+      "seed": 260936,
+      "num_gt": 1,
+      "num_predictions_above_03": 1,
+      "input_tensors": {
+        "ldr64": {
+          "shape": [
+            69554,
+            9
+          ],
+          "sha256": "a3ba0e6adbaab03c2b877feb6f8692f844e734e8d785ffc51238f561a7b61c45"
+        },
+        "rdr_sparse": {
+          "shape": [
+            150000,
+            4
+          ],
+          "sha256": "30a9e4f37e7cf15f5adb7d874dd861b3e16de19f71196749de9820eda82fc5f2"
+        },
+        "gt_boxes": {
+          "shape": [
+            1,
+            1,
+            8
+          ],
+          "sha256": "3f94c54d8dcee8d02467cae6c37508b90ac70290ba6c72751b9c87911752426c"
+        },
+        "radar_aug_matrix": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+        },
+        "camera_imgs": {
+          "shape": [
+            1,
+            1,
+            3,
+            256,
+            704
+          ],
+          "sha256": "dba90fdfd41064e5b5cf181ae204763c1c26114b323b57880f70f6fbf1c3c74d"
+        },
+        "camera_intrinsics": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "024feb2bb89d6609dd869c3fee57dfd705d349f99c2951fecfbee6799d8dfc7a"
+        },
+        "camera2radar": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "bc420d0c6a9f0cb5df8e0f6f0103654a496975cb318da4dd2e9c132d429f3d32"
+        },
+        "radar2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "8902a3593378d08a7c53672420a47add27b536638fdcb8e6aa7e9e0b7b15c881"
+        },
+        "img_aug_matrix": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "b351add268698611c8c3861a678ef3064ce7b3a45c9b6efa37ae45de85e12025"
+        },
+        "batch_indices_ldr64": {
+          "shape": [
+            69554
+          ],
+          "sha256": "ae39d7cddbe404a90c71028e94fb829d71cf8e80baa4c20eba1d4e2018e44ffd"
+        },
+        "batch_indices_rdr_sparse": {
+          "shape": [
+            150000
+          ],
+          "sha256": "61fff2faaf6ddcfa769eb8b37aeca30342bfa713f535114c6217d14b000aecb3"
+        },
+        "sensor2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "8037036ee98092bda772ce1053ed3c5866abe3ecb3784fc7d762ce7729a4a844"
+        }
+      }
+    },
+    {
+      "id": "seq52_rdr00550",
+      "dataset_index_within_portion": 3429,
+      "seed": 260937,
+      "num_gt": 1,
+      "num_predictions_above_03": 1,
+      "input_tensors": {
+        "ldr64": {
+          "shape": [
+            65141,
+            9
+          ],
+          "sha256": "9b163849fafb62fdf19a1e6c938e00df7c017e3d80f6b5a4b495967ec86ee5a6"
+        },
+        "rdr_sparse": {
+          "shape": [
+            150000,
+            4
+          ],
+          "sha256": "c7dc49e3b65c45768ebd21c987a4832ecf0341b38d354fdacdbcb03b33556343"
+        },
+        "gt_boxes": {
+          "shape": [
+            1,
+            1,
+            8
+          ],
+          "sha256": "ad5d7d1e58abfa29e8b2dc1a5bdc093e536026843ca7fbeb54178d2119519ac1"
+        },
+        "radar_aug_matrix": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+        },
+        "camera_imgs": {
+          "shape": [
+            1,
+            1,
+            3,
+            256,
+            704
+          ],
+          "sha256": "0800f94199c410b8af8ac7392fd2e2ad948b5e1e87bfaf61cda26ed6d9240a94"
+        },
+        "camera_intrinsics": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "024feb2bb89d6609dd869c3fee57dfd705d349f99c2951fecfbee6799d8dfc7a"
+        },
+        "camera2radar": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "bc420d0c6a9f0cb5df8e0f6f0103654a496975cb318da4dd2e9c132d429f3d32"
+        },
+        "radar2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "8902a3593378d08a7c53672420a47add27b536638fdcb8e6aa7e9e0b7b15c881"
+        },
+        "img_aug_matrix": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "b351add268698611c8c3861a678ef3064ce7b3a45c9b6efa37ae45de85e12025"
+        },
+        "batch_indices_ldr64": {
+          "shape": [
+            65141
+          ],
+          "sha256": "c59eeeea07cfcce27e7fae390fb2309bd354374849d1ab6ad5cef8e500ef3e19"
+        },
+        "batch_indices_rdr_sparse": {
+          "shape": [
+            150000
+          ],
+          "sha256": "61fff2faaf6ddcfa769eb8b37aeca30342bfa713f535114c6217d14b000aecb3"
+        },
+        "sensor2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "8037036ee98092bda772ce1053ed3c5866abe3ecb3784fc7d762ce7729a4a844"
+        }
+      }
+    },
+    {
+      "id": "seq50_rdr00456",
+      "dataset_index_within_portion": 2996,
+      "seed": 260938,
+      "num_gt": 2,
+      "num_predictions_above_03": 2,
+      "input_tensors": {
+        "ldr64": {
+          "shape": [
+            101715,
+            9
+          ],
+          "sha256": "e65f218ec737ffe3d023ba2ae2ea9818861c762039e07554918bed0a80f25c16"
+        },
+        "rdr_sparse": {
+          "shape": [
+            150000,
+            4
+          ],
+          "sha256": "2e662e2730404db64abd8f7d2e8e0d027f52e840bab1da978b9e16e03c4f653d"
+        },
+        "gt_boxes": {
+          "shape": [
+            1,
+            2,
+            8
+          ],
+          "sha256": "fa0b728c0868c31623fd8eabf8ec4b6dd83c54f84b870733f265ce9fe627364c"
+        },
+        "radar_aug_matrix": {
+          "shape": [
+            1,
+            4,
+            4
+          ],
+          "sha256": "5998e9d1dd9bf48af6af87a1ef8c7783b818ac8329637ada08cc5fb329042376"
+        },
+        "camera_imgs": {
+          "shape": [
+            1,
+            1,
+            3,
+            256,
+            704
+          ],
+          "sha256": "2810837634b497fb386e433493df70a69ea56ed6ae87217d9425ec3d706675ec"
+        },
+        "camera_intrinsics": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "024feb2bb89d6609dd869c3fee57dfd705d349f99c2951fecfbee6799d8dfc7a"
+        },
+        "camera2radar": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "bc420d0c6a9f0cb5df8e0f6f0103654a496975cb318da4dd2e9c132d429f3d32"
+        },
+        "radar2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "8902a3593378d08a7c53672420a47add27b536638fdcb8e6aa7e9e0b7b15c881"
+        },
+        "img_aug_matrix": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "b351add268698611c8c3861a678ef3064ce7b3a45c9b6efa37ae45de85e12025"
+        },
+        "batch_indices_ldr64": {
+          "shape": [
+            101715
+          ],
+          "sha256": "857a52dfb6612222d0ba9929890a5be6d58e376f4f1e59f93d98bd30924cf629"
+        },
+        "batch_indices_rdr_sparse": {
+          "shape": [
+            150000
+          ],
+          "sha256": "61fff2faaf6ddcfa769eb8b37aeca30342bfa713f535114c6217d14b000aecb3"
+        },
+        "sensor2image": {
+          "shape": [
+            1,
+            1,
+            4,
+            4
+          ],
+          "sha256": "8037036ee98092bda772ce1053ed3c5866abe3ecb3784fc7d762ce7729a4a844"
+        }
+      }
+    }
+  ],
+  "complete": true,
+  "peak_allocated_mib": 1005.6083984375
+}

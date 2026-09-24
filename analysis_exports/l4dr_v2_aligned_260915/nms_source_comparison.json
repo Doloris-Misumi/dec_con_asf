@@ -1,0 +1,50 @@
+[
+  {
+    "file": "ops/iou3d_nms/__init__.py",
+    "same": true,
+    "taskdec_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "l4dr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "ops/iou3d_nms/iou3d_nms_utils.py",
+    "same": true,
+    "taskdec_sha256": "e14b953bd1d4f53ca2e9febb8ce97a3746d8fe1fccfc40d49ca5eed07fbde4e5",
+    "l4dr_sha256": "e14b953bd1d4f53ca2e9febb8ce97a3746d8fe1fccfc40d49ca5eed07fbde4e5"
+  },
+  {
+    "file": "ops/iou3d_nms/src/iou3d_cpu.cpp",
+    "same": true,
+    "taskdec_sha256": "fbda2e4e6c2508e0f59132d680c13c66528387b2b022c660257116359fa8b13e",
+    "l4dr_sha256": "fbda2e4e6c2508e0f59132d680c13c66528387b2b022c660257116359fa8b13e"
+  },
+  {
+    "file": "ops/iou3d_nms/src/iou3d_cpu.h",
+    "same": true,
+    "taskdec_sha256": "82d65c0d3c22e30345fa13bfc6af74b0ee0f7c27834db1391b9dc885724e457d",
+    "l4dr_sha256": "82d65c0d3c22e30345fa13bfc6af74b0ee0f7c27834db1391b9dc885724e457d"
+  },
+  {
+    "file": "ops/iou3d_nms/src/iou3d_nms.cpp",
+    "same": true,
+    "taskdec_sha256": "f657ce7a01118fa453185fd7551c1e2f6b9e8c1dfd49170d7b2ffbbe5b0b46eb",
+    "l4dr_sha256": "f657ce7a01118fa453185fd7551c1e2f6b9e8c1dfd49170d7b2ffbbe5b0b46eb"
+  },
+  {
+    "file": "ops/iou3d_nms/src/iou3d_nms.h",
+    "same": true,
+    "taskdec_sha256": "d5a96c67224fe83de9af5c7c43ecbe707d873dba86468cb715c4669fc821bdb6",
+    "l4dr_sha256": "d5a96c67224fe83de9af5c7c43ecbe707d873dba86468cb715c4669fc821bdb6"
+  },
+  {
+    "file": "ops/iou3d_nms/src/iou3d_nms_api.cpp",
+    "same": true,
+    "taskdec_sha256": "94711bd241e5602d31ebad6cbd39ac7e917680c3079f64e8f150cbb2a09185b3",
+    "l4dr_sha256": "94711bd241e5602d31ebad6cbd39ac7e917680c3079f64e8f150cbb2a09185b3"
+  },
+  {
+    "file": "ops/iou3d_nms/src/iou3d_nms_kernel.cu",
+    "same": true,
+    "taskdec_sha256": "8f4370c412736c44eb34d728c636fcb38977c6b2e44864f02ddbfbf3e965e8b3",
+    "l4dr_sha256": "8f4370c412736c44eb34d728c636fcb38977c6b2e44864f02ddbfbf3e965e8b3"
+  }
+]

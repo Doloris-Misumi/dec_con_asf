@@ -1,0 +1,170 @@
+[
+  {
+    "weather": "normal",
+    "seq": "20",
+    "radar_id": "00628",
+    "sampled_gap": 0.19345641539682534,
+    "shortlist_rank": 1,
+    "weather_pool_size": 24
+  },
+  {
+    "weather": "normal",
+    "seq": "9",
+    "radar_id": "00347",
+    "sampled_gap": 0.13081703916666665,
+    "shortlist_rank": 13,
+    "weather_pool_size": 24
+  },
+  {
+    "weather": "normal",
+    "seq": "7",
+    "radar_id": "00272",
+    "sampled_gap": 0.10422007611111107,
+    "shortlist_rank": 18,
+    "weather_pool_size": 24
+  },
+  {
+    "weather": "overcast",
+    "seq": "13",
+    "radar_id": "00146",
+    "sampled_gap": 0.2339563866666667,
+    "shortlist_rank": 1,
+    "weather_pool_size": 24
+  },
+  {
+    "weather": "overcast",
+    "seq": "22",
+    "radar_id": "00484",
+    "sampled_gap": 0.1237269652777778,
+    "shortlist_rank": 13,
+    "weather_pool_size": 24
+  },
+  {
+    "weather": "overcast",
+    "seq": "22",
+    "radar_id": "00218",
+    "sampled_gap": 0.10108813777777777,
+    "shortlist_rank": 18,
+    "weather_pool_size": 24
+  },
+  {
+    "weather": "fog",
+    "seq": "45",
+    "radar_id": "00613",
+    "sampled_gap": 0.2859032941269841,
+    "shortlist_rank": 1,
+    "weather_pool_size": 24
+  },
+  {
+    "weather": "fog",
+    "seq": "39",
+    "radar_id": "00582",
+    "sampled_gap": 0.19541360749999998,
+    "shortlist_rank": 13,
+    "weather_pool_size": 24
+  },
+  {
+    "weather": "fog",
+    "seq": "39",
+    "radar_id": "00491",
+    "sampled_gap": 0.17547793468253975,
+    "shortlist_rank": 18,
+    "weather_pool_size": 24
+  },
+  {
+    "weather": "rain",
+    "seq": "25",
+    "radar_id": "00154",
+    "sampled_gap": 0.2121483683333334,
+    "shortlist_rank": 1,
+    "weather_pool_size": 24
+  },
+  {
+    "weather": "rain",
+    "seq": "24",
+    "radar_id": "00286",
+    "sampled_gap": 0.13548796916666667,
+    "shortlist_rank": 13,
+    "weather_pool_size": 24
+  },
+  {
+    "weather": "rain",
+    "seq": "25",
+    "radar_id": "00475",
+    "sampled_gap": 0.1066052211111111,
+    "shortlist_rank": 18,
+    "weather_pool_size": 24
+  },
+  {
+    "weather": "lightsnow",
+    "seq": "43",
+    "radar_id": "00169",
+    "sampled_gap": 0.25617126746031754,
+    "shortlist_rank": 1,
+    "weather_pool_size": 24
+  },
+  {
+    "weather": "lightsnow",
+    "seq": "49",
+    "radar_id": "00593",
+    "sampled_gap": 0.18212352071895427,
+    "shortlist_rank": 13,
+    "weather_pool_size": 24
+  },
+  {
+    "weather": "lightsnow",
+    "seq": "42",
+    "radar_id": "00264",
+    "sampled_gap": 0.1333898769047619,
+    "shortlist_rank": 18,
+    "weather_pool_size": 24
+  },
+  {
+    "weather": "heavysnow",
+    "seq": "58",
+    "radar_id": "00258",
+    "sampled_gap": 0.30781485539682535,
+    "shortlist_rank": 1,
+    "weather_pool_size": 24
+  },
+  {
+    "weather": "heavysnow",
+    "seq": "55",
+    "radar_id": "00385",
+    "sampled_gap": 0.1577120357301588,
+    "shortlist_rank": 13,
+    "weather_pool_size": 24
+  },
+  {
+    "weather": "heavysnow",
+    "seq": "57",
+    "radar_id": "00279",
+    "sampled_gap": 0.13393750166666663,
+    "shortlist_rank": 18,
+    "weather_pool_size": 24
+  },
+  {
+    "weather": "sleet",
+    "seq": "51",
+    "radar_id": "00237",
+    "sampled_gap": 0.29710955125,
+    "shortlist_rank": 1,
+    "weather_pool_size": 24
+  },
+  {
+    "weather": "sleet",
+    "seq": "52",
+    "radar_id": "00550",
+    "sampled_gap": 0.16360115454545454,
+    "shortlist_rank": 13,
+    "weather_pool_size": 24
+  },
+  {
+    "weather": "sleet",
+    "seq": "50",
+    "radar_id": "00456",
+    "sampled_gap": 0.1390257975,
+    "shortlist_rank": 18,
+    "weather_pool_size": 24
+  }
+]

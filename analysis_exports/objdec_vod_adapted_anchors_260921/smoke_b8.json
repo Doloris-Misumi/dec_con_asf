@@ -1,0 +1,17 @@
+{
+  "batch_size": 8,
+  "accumulation": 2,
+  "losses": [
+    2.8411301374435425,
+    53.2442626953125,
+    13.580895900726318
+  ],
+  "no_gt_inference": true,
+  "prediction_conversion": true,
+  "train_frames": 5139,
+  "val_frames": 1296,
+  "peak_allocated_gib": 20.606438636779785,
+  "peak_reserved_gib": 22.177734375,
+  "seconds": 6.750627992674708,
+  "parameters": 18605583
+}

@@ -1,0 +1,25 @@
+{
+  "draft": "/home/hongsheng/dec_con_asf/analysis_exports/vod_v2x_transfer_feasibility_260920/ObjDec_VoD_Patch2_Mild_DRAFT.yaml",
+  "source": "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/tools/cfgs/VoD_models/TaskDec_PP_MildS05AuxHalf.yaml",
+  "source_sha256": "40c59ae69edb88a4249a197ca6defebcfd73b36ecc99b24d70e3748c8b2b94ac",
+  "model_changes": {
+    "PATCH_SIZE": [
+      [
+        4,
+        4
+      ],
+      [
+        2,
+        2
+      ]
+    ],
+    "N_QUERY": [
+      16,
+      4
+    ]
+  },
+  "status": "CPU fuser check passed; full model/GPU memory not checked; not launched",
+  "recommended_initialization": "from scratch for the controlled comparison; do not silently reuse historical Concat epoch80 pretraining",
+  "selection_metric": "VoD official EAA mAP; DC and KITTI AP_R40 reported from the same checkpoint",
+  "batch_size_note": "historical CLI batch=16 overrides YAML=24; use explicit effective batch, memory smoke required"
+}

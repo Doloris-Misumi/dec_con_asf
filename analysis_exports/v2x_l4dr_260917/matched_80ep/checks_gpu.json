@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "at": "2026-09-17T01:21:33.436876+08:00",
+  "native_mme_max_error": {
+    "lidar_pillar_features": 0.0,
+    "radar_pillar_features": 0.0
+  },
+  "native_mme_gradients_equivalent": true,
+  "native_scatter_exact": true,
+  "inference_without_gt_and_with_corrupted_gt_exact": true,
+  "empty_cases": [
+    {
+      "empty": "lidar",
+      "prediction_counts": [
+        880,
+        885
+      ],
+      "counts": {
+        "valid_radar_points": 4096,
+        "kept_radar_points": 1244,
+        "radar_voxels": 748,
+        "lidar_voxels": 0
+      }
+    },
+    {
+      "empty": "radar",
+      "prediction_counts": [
+        1129,
+        1135
+      ],
+      "counts": {
+        "valid_radar_points": 0,
+        "kept_radar_points": 0,
+        "radar_voxels": 0,
+        "lidar_voxels": 17455
+      }
+    },
+    {
+      "empty": "both",
+      "prediction_counts": [
+        877,
+        877
+      ],
+      "counts": {
+        "valid_radar_points": 0,
+        "kept_radar_points": 0,
+        "radar_voxels": 0,
+        "lidar_voxels": 0
+      }
+    }
+  ],
+  "all_empty_train_loss": 3.1027517318725586,
+  "empty_backward_finite": true,
+  "peak_allocated_gib": 11.778777122497559,
+  "peak_reserved_gib": 13.4921875
+}

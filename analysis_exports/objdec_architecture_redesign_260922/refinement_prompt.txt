@@ -1,0 +1,63 @@
+Edit the provided first architecture draft into a technically correct and substantially less crowded final research-figure draft. Preserve its clean white scientific style, serif section headers and orange Camera #D55E00 / blue LiDAR #0072B2 / purple Radar #8B3FAA identity colors. Method ObjDec. Make a wide horizontal composition with an aspect ratio approximately 2.1:1. Render the largest crisp diagram possible. This is an architecture schematic, not data visualization.
+
+THE MOST IMPORTANT LAYOUT CHANGE: the entire input zone must occupy ONLY THE LEFT 16% of the figure width. The decomposition/control zone occupies the next 43%; attention zone next 30%; detector final 11%. Main contribution occupies 73%. The old draft wastes 28% on input. Do NOT preserve those old proportions.
+
+A: header "1. Patch tokens". Just THREE VERY COMPACT ROWS in the 16% width:
+"Camera" orange -> small "Encoder" box -> tiny orange token strip.
+"LiDAR" blue -> small "Encoder" box -> tiny blue token strip.
+"4D Radar" purple -> small "Encoder" box -> tiny purple token strip.
+Under the three rows, ONE small "Projection + patchify" label with a simple icon of three overlapping outlined BEV grids, each with its spatially corresponding patch highlighted in its sensor color. Route the three encoder features through this projection/patchification icon and then show the three final colored patch tokens exiting toward zone B. No BEV inputs before encoders, no duplicate patchify blocks or duplicate token strips, no large vertical projection tower. No images or dimensions.
+
+B: header "2. Object-guided decoupling".
+TOP HALF: three orange/blue/purple input token glyphs, labelled "Per modality". ONE compact parallel fork: the same t_m independently enters a "Shared projection" and a "Specific projection"; each projection symbolizes separate parameters per modality. They output c_m and u_m. Keep output token color identity orange/blue/purple in both rows, with same-pattern rectangles for shared, differently patterned diamonds for specific. No arrow between c_m and u_m. There is a separate clearly marked original token tap t_m.
+Representations feed a small "Pool + concat" descriptor. It goes to "Foreground gate" with output g and to "Object context", whose two small internal nodes read "Objectness" then "Projection", with final output z.
+A "Modality contribution" head receives t_m, c_m, u_m and a small labelled "shared deviation" input; do not connect pooled descriptor directly to this head. Show three bars in Camera orange / LiDAR blue / Radar purple order, output alpha.
+A small "Bounded scale" block receives TWO input arrows labelled g and alpha and produces w_m. Put this next to the heads, not on a misleading return line.
+
+BOTTOM HALF of B: a large sparse operation circuit titled "Token modulation".
+Use labelled signal connector pills to avoid long crossing wires; identical labels refer to the outputs above. Only symbols t_m, c_m, u_m, g and w_m, plus addition and multiplication circles; no equations.
+Draw the circuit exactly:
+  c_m -> ADD-1
+  u_m -> ADD-1
+  ADD-1 -> MULTIPLY-1, receiving g on its second input and a tiny lambda gain triangle if space permits
+  MULTIPLY-1 -> ADD-2
+  t_m -> ADD-2 via a CLEAR, separate bypass from below
+  ADD-2 -> MULTIPLY-2, receiving w_m on its second input
+  MULTIPLY-2 -> "Controlled tokens" -> zone C's K,V input.
+The raw t_m bypass MUST STOP at ADD-2. It MUST NOT continue to K,V or the attention box.
+The multiplier for g must be fed by the labelled g connector, NOT from the specific-token wire.
+All t_m/c_m/u_m glyphs in this per-modality circuit can be neutral-gray outline vectors to avoid implying c_m is Camera while u_m is Radar. Colors distinguish modalities only in the stacked token groups.
+"Bounded scale" feeds only the w_m connector at MULTIPLY-2, not the residual addition.
+Do not draw any auxiliary score/control wire entering the residual addition.
+Remove the old draft's erroneous bypass across the bottom.
+
+C: header "3. Object-guided interaction".
+Put "Learned queries" Q at top-left. Put g and z connector pills at top-right, entering one circled multiplication node titled "Gated context". The context then forks to TWO additions with small beta and gamma labels on the two control wires.
+Draw a strictly serial VERTICAL main fusion chain so there can be no shortcuts:
+  Learned queries -> QUERY ADD -> Q input on top of "Cross-modal attention"
+  Controlled tokens from B -> K,V input on left side of attention
+  Cross-modal attention -> OUTPUT ADD directly underneath it
+  OUTPUT ADD -> "PFT + reassemble" directly below
+  PFT + reassemble -> small "Fused BEV" tile below
+  Fused BEV -> exit toward 3D head.
+First context fork -> QUERY ADD. Second context fork -> OUTPUT ADD.
+No formula c = g x z; only the single multiply symbol and small output wires.
+Do not send OUTPUT ADD directly to the detector. Do not generate context after PFT. No feedback loops. The only entry to the detector is from Fused BEV AFTER PFT.
+
+D: header "4. Detection". Small "3D head" box and simple schematic bounding-box output labelled "3D boxes". Plain gray BEV and dark outlined boxes; no arbitrary green fourth modality. Connect Fused BEV -> 3D head -> 3D boxes and nothing else.
+
+TRAINING STRIP, at most bottom 14% height:
+Keep this compact and legible, with four small loss nodes labelled L_dec, L_gate, L_ctx, L_det. No long prose, no SCL block.
+Instead of tall ambiguous dashed lines beginning at empty container borders, use EXPLICIT NAMED PREDICTION CONNECTORS immediately above each loss:
+"c_m, u_m" -> dashed arrow INTO L_dec; label "FG only"
+"g" -> dashed arrow INTO L_gate
+"Objectness" -> dashed arrow INTO L_ctx
+"3D boxes" -> dashed arrow INTO L_det
+GT box icon at far left has TWO distinct target branches:
+  "GT boxes" -> "Patch labels" -> shared dashed target bus into L_dec, L_gate, L_ctx.
+  "GT boxes" -> separate dashed target bus into L_det DIRECTLY, without passing through Patch labels.
+Targets and predictions enter each loss, never outputs from one loss to another. No GT enters forward computation.
+The local named connectors refer to same-named outputs in the forward diagram and keep the layout clean. Tiny legend: "Repeated labels denote the same signal".
+Other tiny footer: "Solid: forward   Dashed: training only   No GT at inference".
+Avoid duplicated descriptor-to-contribution arrow, incorrect modality coloring, formulas, redundant token towers, big explanations, and inaccurate arrow shortcuts.
+Keep central computation spacious. Render ONE revised figure.

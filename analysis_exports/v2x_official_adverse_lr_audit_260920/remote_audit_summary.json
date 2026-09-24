@@ -1,0 +1,314 @@
+{
+  "at": "2026-09-20T22:55:40.962781+08:00",
+  "results": [
+    {
+      "name": "github_tree",
+      "url": "https://api.github.com/repos/yanglei18/V2X-Radar/git/trees/main?recursive=1",
+      "bytes": 120731,
+      "result": {
+        "sha": "1624751e31260c68d544e60599079d2104ee8a73",
+        "truncated": false,
+        "file_count": 448,
+        "matches": [
+          "CodeBase/BEVHeight/README.md",
+          "CodeBase/BEVHeight/exps/v2x-radar-v",
+          "CodeBase/BEVHeight/exps/v2x-radar-v/bev_depth_lss_r101_864_1536_256x256.py",
+          "CodeBase/BEVHeight/exps/v2x-radar-v/bev_height_lss_r101_864_1536_256x256.py",
+          "CodeBase/BEVHeight/exps/v2x-radar-v/bev_height_plus_lss_r101_864_1536_256x256.py",
+          "CodeBase/BEVHeight/scripts/data_converter/gen_kitti/gen_ImageSets_from_split_data.py",
+          "CodeBase/BEVHeight/scripts/gen_info_v2x_radar_v.py",
+          "CodeBase/OpenCOOD/README.md",
+          "CodeBase/OpenCOOD/dist_train.sh",
+          "CodeBase/OpenCOOD/opencood/models/sub_modules/split_attn.py",
+          "CodeBase/OpenCOOD/opencood/tools/profiler/traintp_calc.py",
+          "CodeBase/OpenCOOD/opencood/tools/train.py",
+          "CodeBase/OpenCOOD/opencood/tools/train_ddp.py",
+          "CodeBase/OpenCOOD/opencood/tools/train_utils.py",
+          "CodeBase/OpenCOOD/opencood/visualization/ap_vs_traincost_scatter_plot.py",
+          "CodeBase/OpenCOOD/packages/pypcd/README.md",
+          "README.md"
+        ]
+      }
+    },
+    {
+      "name": "github_issues",
+      "url": "https://api.github.com/repos/yanglei18/V2X-Radar/issues?state=all&per_page=100",
+      "bytes": 144657,
+      "result": [
+        {
+          "number": 39,
+          "title": "Unable to Reproduce Radar‑Based Cooperative Detection Results & Some questions",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/39",
+          "comments": 2
+        },
+        {
+          "number": 38,
+          "title": "Reproducing the LiDAR \"No Fusion\" baseline in Table 5 (AP@IoU=0.5 = 29.09) / AP numbers reported with BEV IoU or 3D IoU?",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/38",
+          "comments": 0
+        },
+        {
+          "number": 37,
+          "title": "Request for BEVHeight / BEVHeight++ weights",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/37",
+          "comments": 1
+        },
+        {
+          "number": 36,
+          "title": "Results are not reproducable",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/36",
+          "comments": 1
+        },
+        {
+          "number": 35,
+          "title": "4D Radar Point Clouds - Points registered with signifcant negative Z values (height), essentialy piercing throught the floor",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/35",
+          "comments": 1
+        },
+        {
+          "number": 34,
+          "title": "V2X-Radar I - Visualisation tool - Issues with car and truck bounding boxes",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/34",
+          "comments": 0
+        },
+        {
+          "number": 33,
+          "title": "Inquiry About Invalid Project Link and Source of Radar Test Models",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/33",
+          "comments": 1
+        },
+        {
+          "number": 32,
+          "title": "\"ImageSets\" folder missing from V2X-Radar-V sub-dataset.",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/32",
+          "comments": 1
+        },
+        {
+          "number": 31,
+          "title": "标签的标定参数问题",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/31",
+          "comments": 1
+        },
+        {
+          "number": 30,
+          "title": "复现结果",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/30",
+          "comments": 1
+        },
+        {
+          "number": 29,
+          "title": "Can you provide the raw radar ADC measurement data?",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/29",
+          "comments": 1
+        },
+        {
+          "number": 28,
+          "title": "Cooperative 3D object detection issues",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/28",
+          "comments": 1
+        },
+        {
+          "number": 27,
+          "title": "Unreasonable Radar Intensity",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/27",
+          "comments": 1
+        },
+        {
+          "number": 26,
+          "title": "复现结果",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/26",
+          "comments": 1
+        },
+        {
+          "number": 25,
+          "title": "Ego Speed",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/25",
+          "comments": 0
+        },
+        {
+          "number": 24,
+          "title": "Codebase restructuring ",
+          "url": "https://github.com/yanglei18/V2X-Radar/pull/24",
+          "comments": 0
+        },
+        {
+          "number": 23,
+          "title": "train 3d detection model based on v2x-radar-i lidar data",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/23",
+          "comments": 4
+        },
+        {
+          "number": 22,
+          "title": "V2X-Radar-C和V2X-Radar-I中雷达点云的差异",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/22",
+          "comments": 2
+        },
+        {
+          "number": 21,
+          "title": "[Data Issue] Doppler Bias in RSU Radar",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/21",
+          "comments": 1
+        },
+        {
+          "number": 20,
+          "title": "开放数据集",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/20",
+          "comments": 1
+        },
+        {
+          "number": 19,
+          "title": "如何训练能复现您的论文结果",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/19",
+          "comments": 1
+        },
+        {
+          "number": 18,
+          "title": "Configuration files for the V2X-Radar-I dataset",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/18",
+          "comments": 0
+        },
+        {
+          "number": 17,
+          "title": "Does the V2X-radar roadside dataset only have labels in image_2?",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/17",
+          "comments": 1
+        },
+        {
+          "number": 16,
+          "title": "Is the roadside 3d object detection benchmarks in this code?",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/16",
+          "comments": 5
+        },
+        {
+          "number": 15,
+          "title": "There is confusion regarding the terminology used in the calibration files for the dataset.",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/15",
+          "comments": 1
+        },
+        {
+          "number": 14,
+          "title": "数据集不完整",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/14",
+          "comments": 1
+        },
+        {
+          "number": 13,
+          "title": "no issue",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/13",
+          "comments": 0
+        },
+        {
+          "number": 12,
+          "title": "Why are the scene names different in the extracted v2x-radar-C file and in the v2x_radar_4modality.json file?",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/12",
+          "comments": 3
+        },
+        {
+          "number": 11,
+          "title": "no train.txt and test.txt in V2X-Radar-V full dataset",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/11",
+          "comments": 2
+        },
+        {
+          "number": 10,
+          "title": "no radar only configs?",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/10",
+          "comments": 1
+        },
+        {
+          "number": 9,
+          "title": "Which one is the Cooperative Perception codebase?",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/9",
+          "comments": 1
+        },
+        {
+          "number": 8,
+          "title": "Doppler Velocity in radar.pcd",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/8",
+          "comments": 3
+        },
+        {
+          "number": 7,
+          "title": "Inquiry on Data Release Schedule",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/7",
+          "comments": 1
+        },
+        {
+          "number": 6,
+          "title": "请问可以提供BEVDepth / BEVHeight / BEVHeight++ 的ckpt文件吗？",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/6",
+          "comments": 0
+        },
+        {
+          "number": 5,
+          "title": "Extreme Value in Radar bin file?",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/5",
+          "comments": 5
+        },
+        {
+          "number": 4,
+          "title": "Dataset download",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/4",
+          "comments": 1
+        },
+        {
+          "number": 3,
+          "title": "能否公开完整数据集",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/3",
+          "comments": 1
+        },
+        {
+          "number": 2,
+          "title": "Release V2X-Radar dataset on Hugging Face",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/2",
+          "comments": 0
+        },
+        {
+          "number": 1,
+          "title": "数据集链接内没有内容的问题",
+          "url": "https://github.com/yanglei18/V2X-Radar/issues/1",
+          "comments": 0
+        }
+      ],
+      "note": "Metadata fetch succeeded; null body fields handled during summary generation."
+    },
+    {
+      "name": "github_releases",
+      "url": "https://api.github.com/repos/yanglei18/V2X-Radar/releases",
+      "bytes": 2,
+      "result": []
+    },
+    {
+      "name": "hf_dataset",
+      "url": "https://huggingface.co/api/datasets/yanglei18/V2X-Radar",
+      "bytes": 2070,
+      "result": {
+        "sha": "c38cce27cd84fdbd5671a797dd6df2bbe3dcc907",
+        "siblings": [
+          ".gitattributes",
+          "README.md",
+          "V2X-Radar-C/test.tar.gz",
+          "V2X-Radar-C/train.tar.gz",
+          "V2X-Radar-C/validate.tar.gz",
+          "V2X-Radar-I/V2X-Radar-I.tar.gz",
+          "V2X-Radar-V/ImageSets.zip",
+          "V2X-Radar-V/V2X-Radar-V.zip",
+          "assets/teaser-v2.jpg"
+        ]
+      }
+    },
+    {
+      "name": "m2_new_tree",
+      "url": "https://api.github.com/repos/adept-thu/M2-Fusion-new-/git/trees/main?recursive=1",
+      "bytes": 413,
+      "result": {
+        "sha": "a6171856f52e2aa32a90369c96e807ae8f78a5c8",
+        "truncated": false,
+        "file_count": 1,
+        "matches": [
+          "README.md"
+        ]
+      }
+    }
+  ]
+}

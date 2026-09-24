@@ -1,0 +1,560 @@
+{
+  "vfe.l_pfn_layers.0.norm": {
+    "mean_absmax": 0.8307238221168518,
+    "var_min": 0.34448549151420593,
+    "var_max": 93.54576110839844,
+    "batches": 200
+  },
+  "vfe.r_pfn_layers.0.norm": {
+    "mean_absmax": 1.6284877061843872,
+    "var_min": 0.20755033195018768,
+    "var_max": 24.348106384277344,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.0.mlps.0.1": {
+    "mean_absmax": 0.08065789937973022,
+    "var_min": 0.024293111637234688,
+    "var_max": 0.41385918855667114,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.0.mlps.0.4": {
+    "mean_absmax": 0.1594972461462021,
+    "var_min": 0.0005454004858620465,
+    "var_max": 1.0664169788360596,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.0.mlps.0.7": {
+    "mean_absmax": 0.16832342743873596,
+    "var_min": 0.0021446130704134703,
+    "var_max": 0.48938319087028503,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.0.mlps.1.1": {
+    "mean_absmax": 0.08057443797588348,
+    "var_min": 0.003994720987975597,
+    "var_max": 0.4081401526927948,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.0.mlps.1.4": {
+    "mean_absmax": 0.32733285427093506,
+    "var_min": 0.008552143350243568,
+    "var_max": 0.5778194665908813,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.0.mlps.1.7": {
+    "mean_absmax": 0.3294784128665924,
+    "var_min": 0.03249272704124451,
+    "var_max": 0.6907941699028015,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.1.mlps.0.1": {
+    "mean_absmax": 0.6016651391983032,
+    "var_min": 0.04513363167643547,
+    "var_max": 1.0017682313919067,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.1.mlps.0.4": {
+    "mean_absmax": 0.5517206788063049,
+    "var_min": 0.019978977739810944,
+    "var_max": 0.5642197728157043,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.1.mlps.0.7": {
+    "mean_absmax": 0.5223491787910461,
+    "var_min": 0.03300958499312401,
+    "var_max": 0.559787392616272,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.1.mlps.1.1": {
+    "mean_absmax": 0.6047928333282471,
+    "var_min": 0.045646000653505325,
+    "var_max": 0.7344672083854675,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.1.mlps.1.4": {
+    "mean_absmax": 0.584053635597229,
+    "var_min": 0.01908995769917965,
+    "var_max": 0.473882257938385,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.1.mlps.1.7": {
+    "mean_absmax": 0.5789728164672852,
+    "var_min": 0.030566832050681114,
+    "var_max": 0.6532215476036072,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.2.mlps.0.1": {
+    "mean_absmax": 0.7583693861961365,
+    "var_min": 0.06913244724273682,
+    "var_max": 1.0894434452056885,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.2.mlps.0.4": {
+    "mean_absmax": 0.7432653307914734,
+    "var_min": 0.03597584739327431,
+    "var_max": 0.7696614265441895,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.2.mlps.0.7": {
+    "mean_absmax": 0.5447463393211365,
+    "var_min": 0.0500749908387661,
+    "var_max": 0.6451945900917053,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.2.mlps.1.1": {
+    "mean_absmax": 1.077617883682251,
+    "var_min": 0.06848299503326416,
+    "var_max": 1.4239203929901123,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.2.mlps.1.4": {
+    "mean_absmax": 0.5769954919815063,
+    "var_min": 0.03601936623454094,
+    "var_max": 0.6814984083175659,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.2.mlps.1.7": {
+    "mean_absmax": 0.5426070094108582,
+    "var_min": 0.04693784937262535,
+    "var_max": 0.9935437440872192,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.3.mlps.0.1": {
+    "mean_absmax": 1.305235505104065,
+    "var_min": 0.07587714493274689,
+    "var_max": 3.4213151931762695,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.3.mlps.0.4": {
+    "mean_absmax": 0.7070057392120361,
+    "var_min": 0.041913267225027084,
+    "var_max": 0.9540164470672607,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.3.mlps.0.7": {
+    "mean_absmax": 0.6838890314102173,
+    "var_min": 0.04415595531463623,
+    "var_max": 1.4542648792266846,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.3.mlps.1.1": {
+    "mean_absmax": 1.3464226722717285,
+    "var_min": 0.09487695246934891,
+    "var_max": 3.386580467224121,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.3.mlps.1.4": {
+    "mean_absmax": 0.6094126105308533,
+    "var_min": 0.043570853769779205,
+    "var_max": 0.9542847275733948,
+    "batches": 200
+  },
+  "backbone_3d.SA_modules.3.mlps.1.7": {
+    "mean_absmax": 0.6071951389312744,
+    "var_min": 0.047225866466760635,
+    "var_max": 1.3922920227050781,
+    "batches": 200
+  },
+  "backbone_3d.FP_modules.0.mlp.1": {
+    "mean_absmax": 0.7642817497253418,
+    "var_min": 0.07482108473777771,
+    "var_max": 1.3350944519042969,
+    "batches": 200
+  },
+  "backbone_3d.FP_modules.0.mlp.4": {
+    "mean_absmax": 0.5452306270599365,
+    "var_min": 0.03271006792783737,
+    "var_max": 0.8943912982940674,
+    "batches": 200
+  },
+  "backbone_3d.FP_modules.1.mlp.1": {
+    "mean_absmax": 0.9691796898841858,
+    "var_min": 0.13713239133358002,
+    "var_max": 3.6643285751342773,
+    "batches": 200
+  },
+  "backbone_3d.FP_modules.1.mlp.4": {
+    "mean_absmax": 0.6958246827125549,
+    "var_min": 0.06096401438117027,
+    "var_max": 1.2774516344070435,
+    "batches": 200
+  },
+  "backbone_3d.FP_modules.2.mlp.1": {
+    "mean_absmax": 1.3980357646942139,
+    "var_min": 0.08868152648210526,
+    "var_max": 4.039016246795654,
+    "batches": 200
+  },
+  "backbone_3d.FP_modules.2.mlp.4": {
+    "mean_absmax": 0.7936220169067383,
+    "var_min": 0.04011964425444603,
+    "var_max": 3.2128124237060547,
+    "batches": 200
+  },
+  "backbone_3d.FP_modules.3.mlp.1": {
+    "mean_absmax": 4.910333633422852,
+    "var_min": 0.35643109679222107,
+    "var_max": 26.517431259155273,
+    "batches": 200
+  },
+  "backbone_3d.FP_modules.3.mlp.4": {
+    "mean_absmax": 0.850246012210846,
+    "var_min": 0.0358077771961689,
+    "var_max": 2.7658920288085938,
+    "batches": 200
+  },
+  "point_head.cls_layers.1": {
+    "mean_absmax": 0.5369538068771362,
+    "var_min": 0.0333951897919178,
+    "var_max": 0.9421459436416626,
+    "batches": 200
+  },
+  "point_head.cls_layers.4": {
+    "mean_absmax": 0.6729665398597717,
+    "var_min": 0.019495785236358643,
+    "var_max": 1.6961045265197754,
+    "batches": 200
+  },
+  "backbone_2d.blocks.0.2": {
+    "mean_absmax": 0.18143001198768616,
+    "var_min": 0.2665288746356964,
+    "var_max": 1.1532032489776611,
+    "batches": 200
+  },
+  "backbone_2d.blocks.0.5": {
+    "mean_absmax": 0.6345383524894714,
+    "var_min": 0.37343746423721313,
+    "var_max": 4.1197662353515625,
+    "batches": 200
+  },
+  "backbone_2d.blocks.0.8": {
+    "mean_absmax": 0.7635692954063416,
+    "var_min": 0.39221590757369995,
+    "var_max": 5.322707176208496,
+    "batches": 200
+  },
+  "backbone_2d.blocks.0.11": {
+    "mean_absmax": 0.6057189106941223,
+    "var_min": 0.5672006607055664,
+    "var_max": 5.534771919250488,
+    "batches": 200
+  },
+  "backbone_2d.blocks.1.2": {
+    "mean_absmax": 0.5584930777549744,
+    "var_min": 0.22540366649627686,
+    "var_max": 5.45111083984375,
+    "batches": 200
+  },
+  "backbone_2d.blocks.1.5": {
+    "mean_absmax": 0.81651771068573,
+    "var_min": 0.4772995412349701,
+    "var_max": 13.24833869934082,
+    "batches": 200
+  },
+  "backbone_2d.blocks.1.8": {
+    "mean_absmax": 0.880078911781311,
+    "var_min": 0.5691840648651123,
+    "var_max": 21.415164947509766,
+    "batches": 200
+  },
+  "backbone_2d.blocks.1.11": {
+    "mean_absmax": 1.0900957584381104,
+    "var_min": 0.8606155514717102,
+    "var_max": 32.786624908447266,
+    "batches": 200
+  },
+  "backbone_2d.blocks.1.14": {
+    "mean_absmax": 0.9821597337722778,
+    "var_min": 0.7724270224571228,
+    "var_max": 30.858688354492188,
+    "batches": 200
+  },
+  "backbone_2d.blocks.1.17": {
+    "mean_absmax": 0.9327976107597351,
+    "var_min": 0.8678610920906067,
+    "var_max": 17.609661102294922,
+    "batches": 200
+  },
+  "backbone_2d.blocks.2.2": {
+    "mean_absmax": 0.8580419421195984,
+    "var_min": 0.423832505941391,
+    "var_max": 20.411026000976562,
+    "batches": 200
+  },
+  "backbone_2d.blocks.2.5": {
+    "mean_absmax": 1.6963459253311157,
+    "var_min": 1.171528935432434,
+    "var_max": 34.29004669189453,
+    "batches": 200
+  },
+  "backbone_2d.blocks.2.8": {
+    "mean_absmax": 2.0496068000793457,
+    "var_min": 1.529843807220459,
+    "var_max": 48.21991729736328,
+    "batches": 200
+  },
+  "backbone_2d.blocks.2.11": {
+    "mean_absmax": 2.369246006011963,
+    "var_min": 1.549190878868103,
+    "var_max": 71.61579132080078,
+    "batches": 200
+  },
+  "backbone_2d.blocks.2.14": {
+    "mean_absmax": 2.483640193939209,
+    "var_min": 3.012747049331665,
+    "var_max": 78.57357788085938,
+    "batches": 200
+  },
+  "backbone_2d.blocks.2.17": {
+    "mean_absmax": 2.205772876739502,
+    "var_min": 2.106607675552368,
+    "var_max": 89.83927917480469,
+    "batches": 200
+  },
+  "backbone_2d.deblocks.0.1": {
+    "mean_absmax": 0.19218699634075165,
+    "var_min": 0.2039366364479065,
+    "var_max": 1.052781343460083,
+    "batches": 200
+  },
+  "backbone_2d.deblocks.1.1": {
+    "mean_absmax": 0.2398621290922165,
+    "var_min": 0.28923943638801575,
+    "var_max": 1.466494083404541,
+    "batches": 200
+  },
+  "backbone_2d.deblocks.2.1": {
+    "mean_absmax": 0.2778136730194092,
+    "var_min": 1.4472136497497559,
+    "var_max": 5.021831512451172,
+    "batches": 200
+  },
+  "backbone_2d.L_blocks.0.2": {
+    "mean_absmax": 0.1742321252822876,
+    "var_min": 0.2859072685241699,
+    "var_max": 1.7728639841079712,
+    "batches": 200
+  },
+  "backbone_2d.L_blocks.0.5": {
+    "mean_absmax": 0.5260000824928284,
+    "var_min": 0.43745309114456177,
+    "var_max": 4.3240885734558105,
+    "batches": 200
+  },
+  "backbone_2d.L_blocks.0.8": {
+    "mean_absmax": 0.6509768962860107,
+    "var_min": 0.5743561387062073,
+    "var_max": 7.265843391418457,
+    "batches": 200
+  },
+  "backbone_2d.L_blocks.0.11": {
+    "mean_absmax": 0.7574349641799927,
+    "var_min": 0.38039180636405945,
+    "var_max": 10.723474502563477,
+    "batches": 200
+  },
+  "backbone_2d.L_blocks.1.2": {
+    "mean_absmax": 0.27697306871414185,
+    "var_min": 0.1762516349554062,
+    "var_max": 2.1785824298858643,
+    "batches": 200
+  },
+  "backbone_2d.L_blocks.1.5": {
+    "mean_absmax": 0.9447686076164246,
+    "var_min": 0.536094605922699,
+    "var_max": 17.077899932861328,
+    "batches": 200
+  },
+  "backbone_2d.L_blocks.1.8": {
+    "mean_absmax": 0.9417386054992676,
+    "var_min": 0.5640029907226562,
+    "var_max": 17.837751388549805,
+    "batches": 200
+  },
+  "backbone_2d.L_blocks.1.11": {
+    "mean_absmax": 0.9936169981956482,
+    "var_min": 0.6481562256813049,
+    "var_max": 22.879594802856445,
+    "batches": 200
+  },
+  "backbone_2d.L_blocks.1.14": {
+    "mean_absmax": 1.0818239450454712,
+    "var_min": 0.9843508005142212,
+    "var_max": 17.791133880615234,
+    "batches": 200
+  },
+  "backbone_2d.L_blocks.1.17": {
+    "mean_absmax": 0.915132462978363,
+    "var_min": 0.42919036746025085,
+    "var_max": 42.10403060913086,
+    "batches": 200
+  },
+  "backbone_2d.L_blocks.2.2": {
+    "mean_absmax": 0.4511374831199646,
+    "var_min": 0.2795628607273102,
+    "var_max": 7.768322467803955,
+    "batches": 200
+  },
+  "backbone_2d.L_blocks.2.5": {
+    "mean_absmax": 1.985281229019165,
+    "var_min": 1.422694444656372,
+    "var_max": 43.00358581542969,
+    "batches": 200
+  },
+  "backbone_2d.L_blocks.2.8": {
+    "mean_absmax": 2.2944247722625732,
+    "var_min": 1.2951366901397705,
+    "var_max": 60.42350769042969,
+    "batches": 200
+  },
+  "backbone_2d.L_blocks.2.11": {
+    "mean_absmax": 2.900463581085205,
+    "var_min": 0.8736105561256409,
+    "var_max": 71.7706298828125,
+    "batches": 200
+  },
+  "backbone_2d.L_blocks.2.14": {
+    "mean_absmax": 2.6908020973205566,
+    "var_min": 1.0321455001831055,
+    "var_max": 114.3542251586914,
+    "batches": 200
+  },
+  "backbone_2d.L_blocks.2.17": {
+    "mean_absmax": 3.056328773498535,
+    "var_min": 1.184438943862915,
+    "var_max": 98.18352508544922,
+    "batches": 200
+  },
+  "backbone_2d.L_deblocks.0.1": {
+    "mean_absmax": 0.08503837883472443,
+    "var_min": 0.20743286609649658,
+    "var_max": 0.8952300548553467,
+    "batches": 200
+  },
+  "backbone_2d.L_deblocks.1.1": {
+    "mean_absmax": 0.10293687134981155,
+    "var_min": 0.27203142642974854,
+    "var_max": 2.082731008529663,
+    "batches": 200
+  },
+  "backbone_2d.L_deblocks.2.1": {
+    "mean_absmax": 0.2042100727558136,
+    "var_min": 0.9560230374336243,
+    "var_max": 3.123952865600586,
+    "batches": 200
+  },
+  "backbone_2d.R_blocks.0.2": {
+    "mean_absmax": 0.06565197557210922,
+    "var_min": 0.15650075674057007,
+    "var_max": 0.2351672649383545,
+    "batches": 200
+  },
+  "backbone_2d.R_blocks.0.5": {
+    "mean_absmax": 1.018485188484192,
+    "var_min": 0.3974897265434265,
+    "var_max": 5.583281993865967,
+    "batches": 200
+  },
+  "backbone_2d.R_blocks.0.8": {
+    "mean_absmax": 1.4984301328659058,
+    "var_min": 0.3694065809249878,
+    "var_max": 8.269755363464355,
+    "batches": 200
+  },
+  "backbone_2d.R_blocks.0.11": {
+    "mean_absmax": 1.6936914920806885,
+    "var_min": 0.38100770115852356,
+    "var_max": 7.612095832824707,
+    "batches": 200
+  },
+  "backbone_2d.R_blocks.1.2": {
+    "mean_absmax": 0.706312358379364,
+    "var_min": 0.19044068455696106,
+    "var_max": 2.100830554962158,
+    "batches": 200
+  },
+  "backbone_2d.R_blocks.1.5": {
+    "mean_absmax": 1.7903521060943604,
+    "var_min": 0.3679772913455963,
+    "var_max": 12.794200897216797,
+    "batches": 200
+  },
+  "backbone_2d.R_blocks.1.8": {
+    "mean_absmax": 1.5440247058868408,
+    "var_min": 0.38628312945365906,
+    "var_max": 16.63113021850586,
+    "batches": 200
+  },
+  "backbone_2d.R_blocks.1.11": {
+    "mean_absmax": 1.355000376701355,
+    "var_min": 0.4867737591266632,
+    "var_max": 20.839914321899414,
+    "batches": 200
+  },
+  "backbone_2d.R_blocks.1.14": {
+    "mean_absmax": 1.178199052810669,
+    "var_min": 0.6081245541572571,
+    "var_max": 26.38368034362793,
+    "batches": 200
+  },
+  "backbone_2d.R_blocks.1.17": {
+    "mean_absmax": 1.0493866205215454,
+    "var_min": 1.0709320306777954,
+    "var_max": 28.92853355407715,
+    "batches": 200
+  },
+  "backbone_2d.R_blocks.2.2": {
+    "mean_absmax": 0.5098630785942078,
+    "var_min": 0.24997512996196747,
+    "var_max": 10.437385559082031,
+    "batches": 200
+  },
+  "backbone_2d.R_blocks.2.5": {
+    "mean_absmax": 1.8261990547180176,
+    "var_min": 0.7645611763000488,
+    "var_max": 49.694732666015625,
+    "batches": 200
+  },
+  "backbone_2d.R_blocks.2.8": {
+    "mean_absmax": 2.2052414417266846,
+    "var_min": 1.3796429634094238,
+    "var_max": 67.3741226196289,
+    "batches": 200
+  },
+  "backbone_2d.R_blocks.2.11": {
+    "mean_absmax": 2.292725086212158,
+    "var_min": 1.551241159439087,
+    "var_max": 66.78752899169922,
+    "batches": 200
+  },
+  "backbone_2d.R_blocks.2.14": {
+    "mean_absmax": 2.47465443611145,
+    "var_min": 1.3800698518753052,
+    "var_max": 57.840572357177734,
+    "batches": 200
+  },
+  "backbone_2d.R_blocks.2.17": {
+    "mean_absmax": 2.536804437637329,
+    "var_min": 1.5829107761383057,
+    "var_max": 127.32695770263672,
+    "batches": 200
+  },
+  "backbone_2d.R_deblocks.0.1": {
+    "mean_absmax": 0.20862650871276855,
+    "var_min": 0.21160270273685455,
+    "var_max": 1.0016816854476929,
+    "batches": 200
+  },
+  "backbone_2d.R_deblocks.1.1": {
+    "mean_absmax": 0.12744438648223877,
+    "var_min": 0.29356980323791504,
+    "var_max": 1.4528799057006836,
+    "batches": 200
+  },
+  "backbone_2d.R_deblocks.2.1": {
+    "mean_absmax": 0.18257954716682434,
+    "var_min": 0.8325536847114563,
+    "var_max": 2.8119444847106934,
+    "batches": 200
+  }
+}

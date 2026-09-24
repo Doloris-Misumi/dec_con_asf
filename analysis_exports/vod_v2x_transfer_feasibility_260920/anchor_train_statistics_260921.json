@@ -1,0 +1,68 @@
+{
+  "source": "/home/hongsheng/vod/view_of_delft_PUBLIC/rlfusion_5f/vod_infos_train.pkl",
+  "sha256": "b1af5aaeab454782b424375e231f0732f21361aeba0f48cd40a3a7947290db01",
+  "frames": 5139,
+  "note": "CPU statistics on training metadata before augmentation; ROI selection below uses box centers, not the full training corner-filter/FOV pipeline. These are diagnostic priors, not finalized anchors.",
+  "classes": {
+    "Car": {
+      "all_train": {
+        "n": 15608,
+        "median_lwh": [
+          4.165499383562139,
+          1.81483051955828,
+          1.520532948472981
+        ],
+        "median_bottom_z": -1.6523604218561814
+      },
+      "centers_in_roi": {
+        "n": 15264,
+        "median_lwh": [
+          4.193787792486223,
+          1.81483051955828,
+          1.5220200767082113
+        ],
+        "median_bottom_z": -1.6488485177920706
+      }
+    },
+    "Pedestrian": {
+      "all_train": {
+        "n": 16143,
+        "median_lwh": [
+          0.643523023899765,
+          0.6278047400509165,
+          1.6881599040593533
+        ],
+        "median_bottom_z": -1.62868930581592
+      },
+      "centers_in_roi": {
+        "n": 15441,
+        "median_lwh": [
+          0.6457169171824813,
+          0.6291552575990301,
+          1.6888294571802265
+        ],
+        "median_bottom_z": -1.619870918583295
+      }
+    },
+    "Cyclist": {
+      "all_train": {
+        "n": 6685,
+        "median_lwh": [
+          1.935553830999428,
+          0.7761598132492267,
+          1.756572340587969
+        ],
+        "median_bottom_z": -1.6805012474163543
+      },
+      "centers_in_roi": {
+        "n": 6450,
+        "median_lwh": [
+          1.9369806486623902,
+          0.7761598132492267,
+          1.756572340587969
+        ],
+        "median_bottom_z": -1.6755945547188824
+      }
+    }
+  }
+}

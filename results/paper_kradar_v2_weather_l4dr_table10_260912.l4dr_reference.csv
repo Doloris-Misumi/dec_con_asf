@@ -1,0 +1,17 @@
+condition,class,metric,iou,l4dr_paper_ap,decstrong_ap,numerical_delta_pp,aligned_evaluator,source
+all,sed,3D,0.3,75.8,74.58434943531094,-1.2156505646890565,False,https://arxiv.org/html/2408.03677v6
+normal,sed,3D,0.3,74.6,73.51458739880525,-1.0854126011947471,False,https://arxiv.org/html/2408.03677v6
+lightsnow,sed,3D,0.3,87.5,89.55544896711352,2.05544896711352,False,https://arxiv.org/html/2408.03677v6
+heavysnow,sed,3D,0.3,58.4,63.573542852068464,5.173542852068465,False,https://arxiv.org/html/2408.03677v6
+rain,sed,3D,0.3,77.8,68.10965295372804,-9.690347046271953,False,https://arxiv.org/html/2408.03677v6
+sleet,sed,3D,0.3,61.4,72.51657044466288,11.116570444662877,False,https://arxiv.org/html/2408.03677v6
+overcast,sed,3D,0.3,79.2,84.30388440437787,5.103884404377865,False,https://arxiv.org/html/2408.03677v6
+fog,sed,3D,0.3,89.3,94.45576829875584,5.155768298755845,False,https://arxiv.org/html/2408.03677v6
+all,bus,3D,0.3,59.7,59.24418568817133,-0.45581431182867505,False,https://arxiv.org/html/2408.03677v6
+normal,bus,3D,0.3,59.4,51.630890403287545,-7.769109596712454,False,https://arxiv.org/html/2408.03677v6
+lightsnow,bus,3D,0.3,84.4,89.56350131502805,5.163501315028043,False,https://arxiv.org/html/2408.03677v6
+heavysnow,bus,3D,0.3,51.9,72.34123850166718,20.44123850166718,False,https://arxiv.org/html/2408.03677v6
+rain,bus,3D,0.3,8.1,10.083134717177533,1.983134717177533,False,https://arxiv.org/html/2408.03677v6
+sleet,bus,3D,0.3,66.1,57.4718623927167,-8.628137607283293,False,https://arxiv.org/html/2408.03677v6
+overcast,bus,3D,0.3,86.4,73.82130508299801,-12.578694917001997,False,https://arxiv.org/html/2408.03677v6
+fog,bus,3D,0.3,,0.0,,False,https://arxiv.org/html/2408.03677v6

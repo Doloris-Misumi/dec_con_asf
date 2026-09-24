@@ -1,0 +1,13 @@
+{
+  "status": "cpu_constructor_passed",
+  "parameters": 24685413,
+  "image_pretrained": "/home/hongsheng/.cache/torch/hub/checkpoints/resnet50-11ad3fa6.pth",
+  "sha256": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+  "grid": [
+    256,
+    256,
+    1
+  ],
+  "depth_bins": 101,
+  "note": "No real images, pooling or GPU forward tested yet"
+}

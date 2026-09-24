@@ -1,0 +1,19 @@
+Surgical final edit of the supplied research architecture figure. Change ONLY the three sensor INPUT WIRES crossing from panel 1 to the three stacked colored t tokens in panel 2. Preserve all modules, labels, mathematical glyphs, colors, attention connections, training loss connections and image dimensions exactly as they are.
+
+At 1818 x 865 reference resolution, the three destination input tokens in panel 2 are centered around x=334:
+orange token at y=177, blue token at y=211, purple token at y=250.
+The three source token strips in panel 1 end at x=270, around y=162, y=325, y=497 respectively.
+
+ERASE ONLY the old grey connection wires in the narrow strip x=273..318, y=152..510. This includes the floating radar arrow into the Token modulation box and the existing camera/LiDAR shared bus. Do NOT erase any module or token.
+
+Draw exactly THREE separate directed connector lines in this strip:
+1. Orange source near (270,162) -> (308,162) -> (308,177) -> arrow into orange destination token at (321,177).
+2. Blue source near (270,325) -> (296,325) -> (296,211) -> arrow into blue destination token at (321,211).
+3. Purple source near (270,497) -> (284,497) -> (284,250) -> arrow into purple destination token at (321,250).
+Use thin clean neutral navy or each sensor's matching color. These three routing columns x=308/296/284 remain separate; lines may geometrically cross but crossings have NO junction dots. This is three distinct modalities, not fusion. No input arrow ends at the lower Token modulation box.
+
+Connect the three destination tokens on their RIGHT through short lines to the existing repeated-per-modality fork into Shared projection and Specific projection. This fork is labelled per modality already; preserve it.
+
+One cosmetic correction allowed: the two small Object-context output z glyphs near (1110,209) should BOTH be muted teal, not orange plus teal, because z is a control vector, not two sensor tokens.
+
+No new text. No other edits. Do not alter the lower token-modulation circuit, bounded scale, correct attention K,V wire, sequential PFT path, or losses. Output the precisely repaired scientific figure.

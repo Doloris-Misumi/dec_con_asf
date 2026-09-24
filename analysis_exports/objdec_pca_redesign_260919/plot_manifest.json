@@ -1,0 +1,203 @@
+{
+  "source": "/home/hongsheng/dec_con_asf/analysis_exports/taskdec_patch_pca_weather_260909/taskdec_patch_states_pca.npz",
+  "seed": 20260919,
+  "sampled_patches_per_modality": {
+    "normal": 144,
+    "heavysnow": 144
+  },
+  "pca": "Original exported PCA coordinates; separate basis per representation, shared across all weather. Original fitting included foreground and sampled background.",
+  "density": "Approximate 80% KDE mass contour when covariance is nonsingular; not a confidence interval.",
+  "centers": "Equal-weight average of per-frame means of exported foreground patches.",
+  "limitations": "168 sampled frames only. This is not the full-test mean analysis. Cross-column distances use different feature scales.",
+  "full_dimensional_metrics": [
+    {
+      "weather": "normal",
+      "feature": "raw",
+      "frames": 24,
+      "cosine_CL": -0.03053335987223206,
+      "cosine_CR": -0.373139421666501,
+      "cosine_LR": 0.4123169569359481,
+      "cosine_mean": 0.00288139179907169
+    },
+    {
+      "weather": "overcast",
+      "feature": "raw",
+      "frames": 24,
+      "cosine_CL": -0.021194992415347513,
+      "cosine_CR": -0.3732720839137998,
+      "cosine_LR": 0.41319405295026906,
+      "cosine_mean": 0.0062423255403739235
+    },
+    {
+      "weather": "fog",
+      "feature": "raw",
+      "frames": 24,
+      "cosine_CL": -0.025316345355297875,
+      "cosine_CR": -0.3811689902430901,
+      "cosine_LR": 0.40594368201233005,
+      "cosine_mean": -0.00018055119535263323
+    },
+    {
+      "weather": "rain",
+      "feature": "raw",
+      "frames": 24,
+      "cosine_CL": -0.031224290224825105,
+      "cosine_CR": -0.375538303188887,
+      "cosine_LR": 0.4124296037115476,
+      "cosine_mean": 0.0018890034326118355
+    },
+    {
+      "weather": "sleet",
+      "feature": "raw",
+      "frames": 24,
+      "cosine_CL": -0.011333275805881733,
+      "cosine_CR": -0.3760332430321034,
+      "cosine_LR": 0.396399475845793,
+      "cosine_mean": 0.0030109856692692913
+    },
+    {
+      "weather": "lightsnow",
+      "feature": "raw",
+      "frames": 24,
+      "cosine_CL": -0.024885296984430316,
+      "cosine_CR": -0.3875959333928884,
+      "cosine_LR": 0.39098164245613815,
+      "cosine_mean": -0.007166529307060188
+    },
+    {
+      "weather": "heavysnow",
+      "feature": "raw",
+      "frames": 24,
+      "cosine_CL": -0.02712693326608559,
+      "cosine_CR": -0.3809641286812849,
+      "cosine_LR": 0.412868085571458,
+      "cosine_mean": 0.0015923412080291837
+    },
+    {
+      "weather": "normal",
+      "feature": "common",
+      "frames": 24,
+      "cosine_CL": 0.9484379075927148,
+      "cosine_CR": 0.9564663181629373,
+      "cosine_LR": 0.9623661334726162,
+      "cosine_mean": 0.9557567864094229
+    },
+    {
+      "weather": "overcast",
+      "feature": "common",
+      "frames": 24,
+      "cosine_CL": 0.9532772151601748,
+      "cosine_CR": 0.9566438254255059,
+      "cosine_LR": 0.9684308641960584,
+      "cosine_mean": 0.9594506349272464
+    },
+    {
+      "weather": "fog",
+      "feature": "common",
+      "frames": 24,
+      "cosine_CL": 0.9349014660441745,
+      "cosine_CR": 0.9495594502837704,
+      "cosine_LR": 0.9638590098504006,
+      "cosine_mean": 0.9494399753927819
+    },
+    {
+      "weather": "rain",
+      "feature": "common",
+      "frames": 24,
+      "cosine_CL": 0.948132342200087,
+      "cosine_CR": 0.9559074145313664,
+      "cosine_LR": 0.9614169041318199,
+      "cosine_mean": 0.9551522202877578
+    },
+    {
+      "weather": "sleet",
+      "feature": "common",
+      "frames": 24,
+      "cosine_CL": 0.9574317590793656,
+      "cosine_CR": 0.9473497137137388,
+      "cosine_LR": 0.960705920786033,
+      "cosine_mean": 0.9551624645263792
+    },
+    {
+      "weather": "lightsnow",
+      "feature": "common",
+      "frames": 24,
+      "cosine_CL": 0.9460484306209752,
+      "cosine_CR": 0.9571317412302838,
+      "cosine_LR": 0.9603009890949096,
+      "cosine_mean": 0.9544937203153895
+    },
+    {
+      "weather": "heavysnow",
+      "feature": "common",
+      "frames": 24,
+      "cosine_CL": 0.9506225886236347,
+      "cosine_CR": 0.9433765456429222,
+      "cosine_LR": 0.9569809236830883,
+      "cosine_mean": 0.9503266859832151
+    },
+    {
+      "weather": "normal",
+      "feature": "unique",
+      "frames": 24,
+      "cosine_CL": 0.35660210078882254,
+      "cosine_CR": 0.6521258463025384,
+      "cosine_LR": 0.3513305322778652,
+      "cosine_mean": 0.4533528264564088
+    },
+    {
+      "weather": "overcast",
+      "feature": "unique",
+      "frames": 24,
+      "cosine_CL": 0.42640429864177637,
+      "cosine_CR": 0.6466927899717968,
+      "cosine_LR": 0.41464939105556864,
+      "cosine_mean": 0.49591549322304723
+    },
+    {
+      "weather": "fog",
+      "feature": "unique",
+      "frames": 24,
+      "cosine_CL": 0.4601371950187098,
+      "cosine_CR": 0.6641206656442902,
+      "cosine_LR": 0.4538852600591852,
+      "cosine_mean": 0.5260477069073951
+    },
+    {
+      "weather": "rain",
+      "feature": "unique",
+      "frames": 24,
+      "cosine_CL": 0.39248358606515726,
+      "cosine_CR": 0.6462191842017609,
+      "cosine_LR": 0.3811082043961385,
+      "cosine_mean": 0.47327032488768556
+    },
+    {
+      "weather": "sleet",
+      "feature": "unique",
+      "frames": 24,
+      "cosine_CL": 0.5106221799355755,
+      "cosine_CR": 0.6494375888158148,
+      "cosine_LR": 0.48427345984360853,
+      "cosine_mean": 0.5481110761983329
+    },
+    {
+      "weather": "lightsnow",
+      "feature": "unique",
+      "frames": 24,
+      "cosine_CL": 0.4738106875982276,
+      "cosine_CR": 0.6572916954801223,
+      "cosine_LR": 0.45976542315659247,
+      "cosine_mean": 0.5302892687449808
+    },
+    {
+      "weather": "heavysnow",
+      "feature": "unique",
+      "frames": 24,
+      "cosine_CL": 0.4778385641776309,
+      "cosine_CR": 0.6444882744692642,
+      "cosine_LR": 0.4526273631047257,
+      "cosine_mean": 0.5249847339172069
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+{
+  "/home/hongsheng/dec_con_asf/analysis_exports/v2x_taskdec_260916/controlled_80ep/config.json": "196cc8eeebedbe3e626ce73ac9454c601c470e4b12992062e30c0263c4d6cc3b",
+  "/home/hongsheng/dec_con_asf/analysis_exports/v2x_taskdec_260916/controlled_80ep/val_deduplicated.txt": "019faed5506cd8dfbd51f6d324330fa77febb276f66f9bb5b244302c5cc688d4",
+  "/home/hongsheng/dec_con_asf/analysis_exports/v2x_taskdec_260916/controlled_80ep/test_deduplicated.txt": "8fd75584b2f933401d3354fe4eb20d31e956936bc8fc8f7ddfda05615ce156ce",
+  "/home/hongsheng/dec_con_asf/analysis_exports/v2x_taskdec_260916/point_schema_manifest.json": "44205d4ede2718335a14850770a452bc80a7dbd93f5aadb572d4971581e877fe",
+  "/home/hongsheng/dec_con_asf/analysis_exports/v2x_taskdec_260916/archive_verification.json": "aaaea8f5c7153ca19e4b6ec54f01a2dc441067dcc8b9e2066a79661c82b9e31f",
+  "/home/hongsheng/.cache/torch/hub/checkpoints/resnet50-11ad3fa6.pth": "11ad3fa62ca79e40addfd354a8ec4b7c75143b3038b8d2a807fbc68deab379ca",
+  "/home/hongsheng/datasets/V2X-Radar-V/extracted_260916/ImageSets/train.txt": "5f35bc42b37eb7c19e9bfa63e878c3ef0c384eac10fd22dda1423533aa99d797",
+  "/home/hongsheng/datasets/V2X-Radar-V/extracted_260916/ImageSets/val.txt": "fe6f74149ec40e2f88bf88b0ce0e9e80092c8f33f5edb3928cf98702900f77a7",
+  "/home/hongsheng/datasets/V2X-Radar-V/extracted_260916/ImageSets/test.txt": "1b936c240851fe1f72c29a72ea41a59202464ac42e57e40a1303ba864d3a24a9",
+  "/home/hongsheng/dec_con_asf/analysis_exports/v2x_l4dr_260917/matched_80ep/config.json": "a5fc21f80d3ef74abc5aff8dad62516f108da2ff571ac459f0c8d651deee203d",
+  "/home/hongsheng/dec_con_asf/analysis_exports/v2x_l4dr_260917/matched_80ep/val_deduplicated.txt": "019faed5506cd8dfbd51f6d324330fa77febb276f66f9bb5b244302c5cc688d4",
+  "/home/hongsheng/dec_con_asf/analysis_exports/v2x_l4dr_260917/matched_80ep/test_deduplicated.txt": "8fd75584b2f933401d3354fe4eb20d31e956936bc8fc8f7ddfda05615ce156ce"
+}

@@ -1,0 +1,23 @@
+Make a precise local wiring repair on the supplied architecture diagram. Preserve EVERYTHING else including layout, typography, panel widths, projection branches, attention vertical flow, detector, and training strip. Do not redesign the figure.
+
+Coordinate guide: original displayed canvas is approximately 1818 by 865 pixels. Coordinates below refer to it.
+
+REMOVE these erroneous lines completely, restoring the pale background beneath:
+A. The line from about (374,211) down to (374,400), right along y=400 to (899,400), and down to the PLUS at (898,538). Delete this ENTIRE extraneous long input bypass. Keep the short fork into Shared and Specific projection boxes at y=210; only delete the downward extension beyond that fork.
+B. Also remove the horizontal line segment from (899,400) to (946,400). This incorrectly connects raw input to Bounded scale.
+C. Remove the incorrect attention K,V input arrow from (1177,414) to (1262,414). That floating wire is not attached to Controlled tokens.
+D. Remove the UPWARD arrowhead at about (1026,340) between Modality contribution and Bounded scale. Keep the DOWNWARD arrow only, alpha goes from contribution DOWN into scale.
+
+ADD these exact replacement lines:
+E. A short grey input connector pill labelled "g" immediately left of Bounded scale, around (912,397), with a right-pointing arrow into the scale box. This g pill is unconnected to the token input or to the residual plus.
+F. From the RIGHT EDGE of the Controlled tokens output box near (1160,552), draw ONE orthogonal arrow right to (1225,552), then up to (1225,412), then right to attention's LEFT K,V port (1262,412). Place K,V beside this arrow. This is the ONLY connection into attention's K,V input.
+G. The residual PLUS centered near (898,538) must have exactly TWO incoming lines: from the gated shared/specific sum on its LEFT, and from the bottom original t connector on its BOTTOM. No line enters it from above.
+H. Connect the Radar output arrow at about (275,500) into the existing left input bus at x=299; extend that bus to the per-modality token input at y=210. Camera, LiDAR, Radar inputs must ALL reach the same repeated per-modality projection structure; no radar path enters Token modulation directly.
+I. Ensure the correct remaining chain: c/u sum -> multiply by g -> residual plus with bottom t -> multiply by w -> Controlled tokens -> attention K,V. All arrows point forward.
+
+Two color refinements only:
+- In the small Gated context box, color the g scalar glyph neutral GREY and the z glyph muted TEAL, rather than orange and blue, because these are control signals not sensor identities.
+- Likewise object-context output z glyphs use muted teal, not orange/blue.
+Keep Camera orange, LiDAR blue, Radar purple everywhere their identities are shown.
+
+This is a surgical correction, not a new layout. The serial post-attention plus -> PFT -> Fused BEV -> head is already correct, preserve it exactly. Do not add any other arrows, boxes, equations, or shortcuts. Render a crisp corrected image.

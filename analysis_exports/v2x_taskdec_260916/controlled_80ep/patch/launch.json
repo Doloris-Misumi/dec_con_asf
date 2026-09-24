@@ -1,0 +1,23 @@
+{
+  "command": [
+    "nice",
+    "-n",
+    "10",
+    "/home/hongsheng/dec_con_asf/v2x_taskdec/.venv/bin/python",
+    "-u",
+    "-m",
+    "v2x_taskdec.train",
+    "--variant",
+    "patch"
+  ],
+  "pid": 3955975,
+  "gpu": 2,
+  "started_at": "2026-09-16T21:36:06.291216+08:00",
+  "resource_snapshot": {
+    "at": "2026-09-16T21:36:05.561736+08:00",
+    "free_mib": 48545,
+    "utilization": 0
+  },
+  "controller_pid": 3955866,
+  "scheduling_change": "Moved from pending GPU1 queue to GPU2 by explicit user request"
+}

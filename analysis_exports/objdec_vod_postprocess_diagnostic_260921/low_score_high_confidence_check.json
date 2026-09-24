@@ -1,0 +1,10 @@
+{
+  "frames": 1296,
+  "mismatch_frames": [],
+  "fields": [
+    "name",
+    "boxes_lidar",
+    "score"
+  ],
+  "comparison": "score001 predictions filtered to score >= 0.1 vs baseline"
+}

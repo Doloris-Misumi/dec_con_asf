@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "modalities": [
+    "camera",
+    "lidar",
+    "radar"
+  ],
+  "camera_in_batch": true,
+  "camera_encoder": true,
+  "uncluttered_main_path": true,
+  "scl": false,
+  "at": "2026-09-19T12:05:19.133440+08:00"
+}

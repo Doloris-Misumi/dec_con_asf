@@ -1,0 +1,14 @@
+{
+  "created_at": "2026-09-19T12:04:00.497431+08:00",
+  "case": "asf_clr",
+  "gpu": "0",
+  "base_config": "/home/hongsheng/dec_con_asf/analysis_exports/v2x_grid016_260918/matched_80ep/config.json",
+  "init_source": "/home/hongsheng/dec_con_asf/analysis_exports/v2x_grid016_260918/matched_80ep/taskdec_initial.pt",
+  "architecture": "ASF canonical projection + patch attention + PFT; no ObjDec branches",
+  "alignment": "0.16m; 2x2 patches; 4 queries; same ROI, encoders where present, neck/head, train split, augmentations, seed, 80 epochs and effective batch 8",
+  "scl": false,
+  "selection": "maximum deduplicated val strict moderate mean 3D AP_R40; earliest epoch breaks ties",
+  "storage": "initial + rolling best/last + lightweight metrics/final predictions only",
+  "gpu_memory_fraction": 0.6,
+  "shared_initial_tensors_exact": true
+}

@@ -1,0 +1,84 @@
+{
+  "verified_at": "2026-09-16T21:37:50.132466+08:00",
+  "patch_status": {
+    "status": "training",
+    "variant": "patch",
+    "pid": 3955975,
+    "gpu": "2",
+    "started_at": "2026-09-16T21:36:36.004205+08:00",
+    "config_sha256": "196cc8eeebedbe3e626ce73ac9454c601c470e4b12992062e30c0263c4d6cc3b",
+    "initial_sha256": "8db5bad401a953e07611b2f488d17c274a6360d378dd5242b1bcb3c221c6eef0",
+    "completed_epochs": 0,
+    "optimizer_updates": 100,
+    "best_metric": -1.0,
+    "best_epoch": null,
+    "train_seconds": 0.0,
+    "validation_seconds": 0.0,
+    "checkpoint_seconds": 0.0,
+    "failure_count": 0,
+    "epochs": 80,
+    "steps_per_epoch": 4196,
+    "updates_per_epoch": 1049,
+    "parameters": 33478957,
+    "precision": "fp32",
+    "batch_size": 2,
+    "effective_batch_size": 8,
+    "epoch": 1,
+    "step": 400,
+    "loss": 3.052138520479202,
+    "lr": 0.00018579599618684462,
+    "epoch_elapsed_seconds": 73.81572988629341,
+    "peak_allocated_gib": 3.5125069618225098,
+    "peak_reserved_gib": 5.884765625,
+    "updated_at": "2026-09-16T21:37:50.132466+08:00"
+  },
+  "controller": {
+    "pid": 3955866,
+    "started_at": "2026-09-16T08:11:10.838816+08:00",
+    "schedule": {
+      "0": [],
+      "1": [],
+      "2": []
+    },
+    "status": "running",
+    "gpu0": {
+      "free_mib": 39923,
+      "utilization": 0
+    },
+    "gpu1": {
+      "free_mib": 40051,
+      "utilization": 0
+    },
+    "updated_at": "2026-09-16T21:37:06.357172+08:00",
+    "active": {
+      "0": {
+        "pid": 3877508,
+        "variant": "taskdec"
+      },
+      "1": {
+        "pid": 3877510,
+        "variant": "concat"
+      },
+      "2": {
+        "pid": 3955975,
+        "variant": "patch"
+      }
+    },
+    "ended": {},
+    "command_match": "/home/hongsheng/dec_con_asf/analysis_exports/v2x_taskdec_260916/launch_patch_gpu2.py",
+    "handoff_at": "2026-09-16T21:36:06.275857+08:00",
+    "previous_controller_pid": 3877430,
+    "assignment": {
+      "taskdec": 0,
+      "concat": 1,
+      "patch": 2
+    }
+  },
+  "checks": {
+    "patch_gpu2_training": true,
+    "first_100_batches_completed": true,
+    "old_patch_queue_cancelled": true,
+    "existing_training_pids_unchanged": true,
+    "same_frozen_configuration_hash": true
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "checkpoint": "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/output/VoD_models/ObjDec_PP_Patch2_Local_Mild_260920/objdec_p2_local_mild_b8a2_fp32_ep80_260920_gpu2/ckpt/best_eaa.pth",
+  "epoch": 75,
+  "checkpoint_sha256": "ed6cd2108926387a9423f58a6e6a510181b0d954248e6f02110271669f993171",
+  "source_sha256": {
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/tools/cfgs/VoD_models/ObjDec_PP_Patch2_Local_Mild_260920.yaml": "c4bb947c7391e04fa10e591096b62670aa3940f72df2a0e7e5132868a0f330de",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/tools/cfgs/dataset_configs/Vod_fusion.yaml": "14d5b7ede0023bd2bcc039ccca9dcfcd2d2f0f004bb5e5ee5814dc867b8bebaa",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/pcdet/models/backbones_2d/base_bev_backbone_taskdec.py": "28a60ed098acb37d5491241bd078b32d5a8b963ee47c47e9b55a0105c30ae3cc",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/pcdet/models/model_utils/taskdec_fuser/a2_fusion.py": "6a918e943e61fc920949d95e811d1cd25dc859428df78649db7eba38fe4bce38",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/pcdet/models/model_utils/taskdec_fuser/patch_dec_a2_fusion.py": "32e6f3b83fff74df563b66bd102914d59a072d75057b5b6ed5ed6ec5ce3acad2",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/pcdet/datasets/vod_evaluation/kitti_official_evaluate.py": "1dd11f40f197f828589d0424bf977dd651913593b78fc2bf3f7ee6ad7b67bd2e",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/pcdet/datasets/vod_evaluation/rotate_iou_cpu.py": "aa4fd2ef5ec755482acc949293ea7298a5d6ec8a00910c9cce1c9a2fbf1db7e1",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/pcdet/datasets/vod/vod_dataset.py": "449f93906fafb036c3907ee0141975553e494028f2adda0eafecdfc8c99e9927",
+    "/home/hongsheng/vod/view_of_delft_PUBLIC/rlfusion_5f/vod_infos_val.pkl": "352951f9cf2d403f225fc06e0b0e70cd923be180760fbff2e830ee07aeb245e0"
+  },
+  "variants": {
+    "baseline": {
+      "score": 0.1,
+      "nms": 0.01
+    },
+    "score001": {
+      "score": 0.01,
+      "nms": 0.01
+    },
+    "nms010": {
+      "score": 0.1,
+      "nms": 0.1
+    }
+  },
+  "frames": 1296,
+  "batch_size": 4,
+  "precision": "FP32",
+  "gt_used_in_network": false,
+  "shared_network_forward": true,
+  "evaluator": "unchanged native VoD EAA/DC",
+  "diagnostic_iou": [
+    0.5,
+    0.25,
+    0.25
+  ]
+}

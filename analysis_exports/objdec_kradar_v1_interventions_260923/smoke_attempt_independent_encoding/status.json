@@ -1,0 +1,7 @@
+{
+  "phase": "failed",
+  "pid": 633123,
+  "gpu": 2,
+  "updated_at": "2026-09-23T21:15:56.594951+08:00",
+  "traceback": "Traceback (most recent call last):\n  File \"/home/hongsheng/dec_con_asf/analysis_exports/objdec_kradar_v1_interventions_260923/run.py\", line 295, in main\n    record,audit=frame_record(pipe,raw,index,control,check=args.smoke)\n  File \"/home/hongsheng/dec_con_asf/analysis_exports/objdec_kradar_v1_interventions_260923/run.py\", line 146, in frame_record\n    audit['native_equivalence']=assert_predictions(native,baseline)\n  File \"/home/hongsheng/dec_con_asf/analysis_exports/objdec_kradar_v1_interventions_260923/run.py\", line 124, in assert_predictions\n    assert torch.allclose(a[k],b[k],atol=1e-5,rtol=1e-5),(k,delta)\nAssertionError: ('pred_boxes', 0.006923496723175049)\n"
+}

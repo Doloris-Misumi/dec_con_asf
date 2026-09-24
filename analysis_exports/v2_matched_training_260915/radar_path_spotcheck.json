@@ -1,0 +1,71 @@
+{
+  "samples": 8,
+  "all_equal": true,
+  "scope": "Spot check only; training reads exactly the same Strong path for both models",
+  "items": [
+    {
+      "index": 0,
+      "strong_path": "/home/hongsheng/k_radar_dataset/1/sprdr_00182.npy",
+      "restored_path": "/home/hongsheng/k_radar_dataset/sparse_radar_tensor_wide_range/rtnh_wider_1p_1/1/sprdr_00182.npy",
+      "strong_sha256": "a9ce38634df1af5c161aa74114337386ed76cbc7b8af441aa75a8c7a24204066",
+      "restored_sha256": "a9ce38634df1af5c161aa74114337386ed76cbc7b8af441aa75a8c7a24204066",
+      "equal": true
+    },
+    {
+      "index": 2000,
+      "strong_path": "/home/hongsheng/k_radar_dataset/10/sprdr_00398.npy",
+      "restored_path": "/home/hongsheng/k_radar_dataset/sparse_radar_tensor_wide_range/rtnh_wider_1p_1/10/sprdr_00398.npy",
+      "strong_sha256": "35bf1c76a35830e2e074c0885f03dd15927c0b088342a5c2940a9a663d8eca10",
+      "restored_sha256": "35bf1c76a35830e2e074c0885f03dd15927c0b088342a5c2940a9a663d8eca10",
+      "equal": true
+    },
+    {
+      "index": 4000,
+      "strong_path": "/home/hongsheng/k_radar_dataset/15/sprdr_00528.npy",
+      "restored_path": "/home/hongsheng/k_radar_dataset/sparse_radar_tensor_wide_range/rtnh_wider_1p_1/15/sprdr_00528.npy",
+      "strong_sha256": "ab4437d039820f2d7ee76f8c95e11ce8b68db6617d99442e4fafdd8f7744cfe3",
+      "restored_sha256": "ab4437d039820f2d7ee76f8c95e11ce8b68db6617d99442e4fafdd8f7744cfe3",
+      "equal": true
+    },
+    {
+      "index": 6000,
+      "strong_path": "/home/hongsheng/k_radar_dataset/22/sprdr_00507.npy",
+      "restored_path": "/home/hongsheng/k_radar_dataset/sparse_radar_tensor_wide_range/rtnh_wider_1p_1/22/sprdr_00507.npy",
+      "strong_sha256": "f5e18b03113f63217d84bf2621ea32f04fb558d551e13c039ab8b7b427f9c4b1",
+      "restored_sha256": "f5e18b03113f63217d84bf2621ea32f04fb558d551e13c039ab8b7b427f9c4b1",
+      "equal": true
+    },
+    {
+      "index": 8000,
+      "strong_path": "/home/hongsheng/k_radar_dataset/30/sprdr_00413.npy",
+      "restored_path": "/home/hongsheng/k_radar_dataset/sparse_radar_tensor_wide_range/rtnh_wider_1p_1/30/sprdr_00413.npy",
+      "strong_sha256": "1231e2b6fbf7105858fe13b8880feab9421df3f2e90071c51b5d01af0b44c68b",
+      "restored_sha256": "1231e2b6fbf7105858fe13b8880feab9421df3f2e90071c51b5d01af0b44c68b",
+      "equal": true
+    },
+    {
+      "index": 10000,
+      "strong_path": "/home/hongsheng/k_radar_dataset/43/sprdr_00547.npy",
+      "restored_path": "/home/hongsheng/k_radar_dataset/sparse_radar_tensor_wide_range/rtnh_wider_1p_1/43/sprdr_00547.npy",
+      "strong_sha256": "1ef162ff45aa56ead1525753670a37a2c1a55a9c208e60e4ffb8927e0436ab83",
+      "restored_sha256": "1ef162ff45aa56ead1525753670a37a2c1a55a9c208e60e4ffb8927e0436ab83",
+      "equal": true
+    },
+    {
+      "index": 12000,
+      "strong_path": "/home/hongsheng/k_radar_dataset/52/sprdr_00460.npy",
+      "restored_path": "/home/hongsheng/k_radar_dataset/sparse_radar_tensor_wide_range/rtnh_wider_1p_1/52/sprdr_00460.npy",
+      "strong_sha256": "5e947fc2ee367f0731c21ae5533a67113e63c2f8e60e35dd32c65488810db6ae",
+      "restored_sha256": "5e947fc2ee367f0731c21ae5533a67113e63c2f8e60e35dd32c65488810db6ae",
+      "equal": true
+    },
+    {
+      "index": 13726,
+      "strong_path": "/home/hongsheng/k_radar_dataset/58/sprdr_00603.npy",
+      "restored_path": "/home/hongsheng/k_radar_dataset/sparse_radar_tensor_wide_range/rtnh_wider_1p_1/58/sprdr_00603.npy",
+      "strong_sha256": "a9c0a3421682e9fcab50640c28c2d936b2182e65f40626e30659f7ab639d0437",
+      "restored_sha256": "a9c0a3421682e9fcab50640c28c2d936b2182e65f40626e30659f7ab639d0437",
+      "equal": true
+    }
+  ]
+}

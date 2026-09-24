@@ -1,0 +1,12 @@
+[
+  {
+    "file": "v2x_taskdec/evaluation/eval.py",
+    "source_sha256": "3fa68ba324eea830a825f8035aafb7cef556470fe7af625441ffbb083ba4e20d",
+    "adapted_sha256": "99cee422b58fe9059e40a4ce0b017a4438bd2c22525da95415ea08249c8699ee"
+  },
+  {
+    "file": "v2x_taskdec/evaluation/rotate_iou.py",
+    "source_sha256": "135ae2c1322ac191fc58ff7169b9380bc518d646e684330c2f649df62cc65f43",
+    "adapted_sha256": "c881d001870a0ef4fd9fac2ccd9d7014ae9d5197bbf8cf7ba1db0bf6f0c65746"
+  }
+]

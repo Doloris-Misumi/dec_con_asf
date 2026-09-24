@@ -1,0 +1,43 @@
+{
+  "complete_frames": 21,
+  "patches_per_frame": 1440,
+  "total_full_patches": 30240,
+  "all_finite_float32": true,
+  "gate_equals_probability": true,
+  "overlap_patches_with_earlier_export": 1066,
+  "max_abs_difference_to_earlier_sampled_gate": 0.00464455437927247,
+  "peak_gpu_allocated_mib": 1005.60693359375,
+  "camera_lidar_radar_ids_match_label_header": true,
+  "all_gt_masks_match_oriented_box_geometry": true,
+  "independent_repeat": {
+    "seq25_rdr00154": {
+      "patches": 1440,
+      "max_abs_difference": 0.0,
+      "mean_abs_difference": 0.0,
+      "fg_mean_difference": 0.0
+    },
+    "seq49_rdr00593": {
+      "patches": 1440,
+      "max_abs_difference": 0.03665745258331299,
+      "mean_abs_difference": 0.0011665632482618093,
+      "fg_mean_difference": 0.0015860795974731445
+    },
+    "seq13_rdr00146": {
+      "patches": 1440,
+      "max_abs_difference": 0.0,
+      "mean_abs_difference": 0.0,
+      "fg_mean_difference": 0.0
+    }
+  },
+  "main_selected_repeat_tolerance": 0.001,
+  "main_selected_repeat_within_tolerance": true,
+  "runtime": {
+    "export_exit_code": 134,
+    "repeat_export_exit_code": 134,
+    "all_frames_saved_before_exit": true,
+    "stderr_at_shutdown": "free(): invalid pointer",
+    "render_exit_code": 0,
+    "historical_same_error_reference": "results/paper_availability_missing_modalities_260902.md",
+    "resolution": "Recorded, not suppressed or fixed. Original full-grid artifacts retained after independent integrity and selected-frame repeat checks."
+  }
+}

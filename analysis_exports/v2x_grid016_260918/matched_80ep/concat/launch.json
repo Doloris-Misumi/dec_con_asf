@@ -1,0 +1,18 @@
+{
+  "pid": 4180854,
+  "gpu": 2,
+  "started_at": "2026-09-18T13:51:51.323935+08:00",
+  "command": [
+    "/home/hongsheng/dec_con_asf/v2x_taskdec/.venv/bin/python",
+    "-u",
+    "/home/hongsheng/dec_con_asf/analysis_exports/v2x_grid016_260918/run.py",
+    "train",
+    "--variant",
+    "concat"
+  ],
+  "resource_snapshot": {
+    "used_mib": 26,
+    "free_mib": 48545,
+    "utilization": 0
+  }
+}

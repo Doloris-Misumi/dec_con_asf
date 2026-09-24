@@ -1,0 +1,5 @@
+{
+  "frames_checked": 493,
+  "prediction_bytes_identical": true,
+  "note": "Memory-retention fix changes no predictions on overlapping completed frames."
+}

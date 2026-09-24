@@ -1,0 +1,23 @@
+{
+  "source": "/home/hongsheng/dec_con_asf/analysis_exports/taskdec_patch_pca_weather_260909/taskdec_patch_states_pca.npz",
+  "source_sha256": "2408da05a66a51d55e9a32b0f1717ca179edc70b6392d7897e5e3f8d30733ee1",
+  "statistical_unit": "Selected foreground patch, not one physical token in the forward graph.",
+  "scope": "24 sampled frames per weather from the existing 168-frame export; not full-test frame-mean PCA.",
+  "coordinates": "Existing exported PCA coordinates. Separate PCA basis for each representation; no refit or per-modality shifts.",
+  "selection": "Same fixed frame/patch IDs as the recolored patch-PCA figures; up to 6 patches per frame and modality.",
+  "display": "Independent axis limits by representation, all foreground points included in limits; no quantitative cross-panel distance ratio.",
+  "intended_use": "Visualization insets attached with dashed lines to c/u; solid arrows continue to carry high-dimensional c/u.",
+  "files": [
+    "architecture_common_pca_normal",
+    "architecture_unique_pca_normal",
+    "architecture_shared_specific_pca_normal",
+    "architecture_common_pca_heavysnow",
+    "architecture_unique_pca_heavysnow",
+    "architecture_shared_specific_pca_heavysnow"
+  ],
+  "colors": {
+    "Camera": "#4A9EEB",
+    "LiDAR": "#58B77A",
+    "4D Radar": "#9672D0"
+  }
+}

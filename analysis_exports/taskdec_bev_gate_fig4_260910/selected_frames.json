@@ -1,0 +1,21 @@
+{
+  "frames": [
+    "seq13_rdr00146",
+    "seq25_rdr00154"
+  ],
+  "shared_gate_color_range": [
+    0,
+    1
+  ],
+  "interpolation": "nearest",
+  "view": "full x/y model ROI, x-forward to right; camera shows original front0 field of view",
+  "caption": "Spatial foreground gating on K-Radar v1.0 test scenes. Each column shows the front camera, calibrated LiDAR BEV, and the predicted TaskDec foreground gate. Green outlines denote Sedan ground truth and are used only for reference. Gate values are read from the R+L+C model forward pass with GT boxes withheld from the fuser, displayed on the complete 0.8 m patch grid with a shared [0, 1] scale and no smoothing. Camera views provide scene context and cover a wider field of view than the BEV evaluation ROI. These selected scenes illustrate spatial responses; they are not an aggregate performance comparison.",
+  "selection_rationale": {
+    "seq13_rdr00146": "Readable overcast camera scene with two localized responses at distinct ranges.",
+    "seq25_rdr00154": "Rainy night scene with recognizable vehicles and multiple nearby responses; weaker response near 27 m is retained."
+  },
+  "temporarily_excluded_candidate": {
+    "id": "seq49_rdr00593",
+    "reason": "Independent inference repeat max patch difference 0.03666; cause unresolved, do not use as main figure evidence."
+  }
+}

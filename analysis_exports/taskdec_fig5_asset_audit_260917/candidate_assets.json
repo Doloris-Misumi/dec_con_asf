@@ -1,0 +1,2040 @@
+{
+  "status": "Asset audit only; no ASF predictions generated and no model inference performed. GT signatures are candidate lookup, not a substitute for verifying the historical dataset index mapping.",
+  "taskdec_prediction_files": 10065,
+  "taskdec_prediction_root": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred",
+  "official_asf_v1_extracted_archive": "/home/hongsheng/K-Radar-main/official_downloads/asf_v1_official_logs_min/exp_250303_200024_A2F_v1_0/test_kitti/none/0.3",
+  "official_archive_has_per_frame_predictions": false,
+  "frames": [
+    {
+      "id": "seq20_rdr00628",
+      "weather": "normal",
+      "camera_path": "/home/hongsheng/k_radar_dataset/20/cam-front/cam-front_01783.png",
+      "lidar_path": "/home/hongsheng/k_radar_dataset/20/os2-64/os2-64_00595.pcd",
+      "label_path": "/home/hongsheng/k_radar_dataset/20/info_label/00628_00595.txt",
+      "num_gt": 1,
+      "gt_signature_matches": [
+        {
+          "evaluation_id": "004391",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/004391.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/004391.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "urban",
+            "normal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seq9_rdr00347",
+      "weather": "normal",
+      "camera_path": "/home/hongsheng/k_radar_dataset/9/cam-front/cam-front_00969.png",
+      "lidar_path": "/home/hongsheng/k_radar_dataset/9/os2-64/os2-64_00324.pcd",
+      "label_path": "/home/hongsheng/k_radar_dataset/9/info_label/00347_00324.txt",
+      "num_gt": 3,
+      "gt_signature_matches": []
+    },
+    {
+      "id": "seq7_rdr00272",
+      "weather": "normal",
+      "camera_path": "/home/hongsheng/k_radar_dataset/7/cam-front/cam-front_00718.png",
+      "lidar_path": "/home/hongsheng/k_radar_dataset/7/os2-64/os2-64_00239.pcd",
+      "label_path": "/home/hongsheng/k_radar_dataset/7/info_label/00272_00239.txt",
+      "num_gt": 2,
+      "gt_signature_matches": [
+        {
+          "evaluation_id": "000749",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/000749.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/000749.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "night",
+            "alleyway",
+            "normal"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seq13_rdr00146",
+      "weather": "overcast",
+      "camera_path": "/home/hongsheng/k_radar_dataset/13/cam-front/cam-front_00321.png",
+      "lidar_path": "/home/hongsheng/k_radar_dataset/13/os2-64/os2-64_00107.pcd",
+      "label_path": "/home/hongsheng/k_radar_dataset/13/info_label/00146_00107.txt",
+      "num_gt": 2,
+      "gt_signature_matches": [
+        {
+          "evaluation_id": "002700",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/002700.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/002700.txt",
+          "prediction_count": 2,
+          "conditions": [
+            "day",
+            "highway",
+            "overcast"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seq22_rdr00484",
+      "weather": "overcast",
+      "camera_path": "/home/hongsheng/k_radar_dataset/22/cam-front/cam-front_01445.png",
+      "lidar_path": "/home/hongsheng/k_radar_dataset/22/os2-64/os2-64_00482.pcd",
+      "label_path": "/home/hongsheng/k_radar_dataset/22/info_label/00484_00482.txt",
+      "num_gt": 4,
+      "gt_signature_matches": [
+        {
+          "evaluation_id": "004829",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/004829.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/004829.txt",
+          "prediction_count": 4,
+          "conditions": [
+            "night",
+            "urban",
+            "overcast"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seq22_rdr00218",
+      "weather": "overcast",
+      "camera_path": "/home/hongsheng/k_radar_dataset/22/cam-front/cam-front_00647.png",
+      "lidar_path": "/home/hongsheng/k_radar_dataset/22/os2-64/os2-64_00216.pcd",
+      "label_path": "/home/hongsheng/k_radar_dataset/22/info_label/00218_00216.txt",
+      "num_gt": 2,
+      "gt_signature_matches": []
+    },
+    {
+      "id": "seq45_rdr00613",
+      "weather": "fog",
+      "camera_path": "/home/hongsheng/k_radar_dataset/45/cam-front/cam-front_01727.png",
+      "lidar_path": "/home/hongsheng/k_radar_dataset/45/os2-64/os2-64_00592.pcd",
+      "label_path": "/home/hongsheng/k_radar_dataset/45/info_label/00613_00592.txt",
+      "num_gt": 1,
+      "gt_signature_matches": [
+        {
+          "evaluation_id": "007795",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007795.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007795.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007834",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007834.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007834.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007799",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007799.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007799.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007876",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007876.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007876.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007864",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007864.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007864.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007749",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007749.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007749.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007758",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007758.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007758.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007789",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007789.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007789.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007819",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007819.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007819.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007817",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007817.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007817.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007823",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007823.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007823.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007766",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007766.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007766.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007813",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007813.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007813.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007829",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007829.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007829.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007791",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007791.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007791.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007830",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007830.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007830.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007824",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007824.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007824.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007740",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007740.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007740.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007742",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007742.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007742.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007857",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007857.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007857.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007849",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007849.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007849.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007747",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007747.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007747.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007853",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007853.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007853.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007765",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007765.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007765.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007778",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007778.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007778.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007868",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007868.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007868.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007776",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007776.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007776.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007809",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007809.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007809.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007866",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007866.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007866.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007772",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007772.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007772.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007782",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007782.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007782.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007805",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007805.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007805.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007750",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007750.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007750.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007835",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007835.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007835.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007773",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007773.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007773.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007856",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007856.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007856.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007802",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007802.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007802.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007788",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007788.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007788.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007815",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007815.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007815.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007814",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007814.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007814.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007775",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007775.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007775.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007873",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007873.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007873.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007811",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007811.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007811.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007826",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007826.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007826.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007781",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007781.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007781.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007761",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007761.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007761.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007756",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007756.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007756.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007770",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007770.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007770.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007732",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007732.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007732.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007843",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007843.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007843.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007839",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007839.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007839.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007739",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007739.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007739.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007874",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007874.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007874.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007862",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007862.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007862.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007797",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007797.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007797.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007871",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007871.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007871.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007854",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007854.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007854.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007803",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007803.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007803.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007733",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007733.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007733.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007820",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007820.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007820.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007863",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007863.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007863.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007877",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007877.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007877.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007838",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007838.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007838.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007846",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007846.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007846.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007865",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007865.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007865.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007759",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007759.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007759.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007785",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007785.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007785.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007810",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007810.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007810.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007851",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007851.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007851.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007748",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007748.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007748.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007812",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007812.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007812.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007790",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007790.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007790.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007738",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007738.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007738.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007783",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007783.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007783.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007822",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007822.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007822.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007736",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007736.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007736.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007806",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007806.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007806.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007755",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007755.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007755.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007798",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007798.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007798.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007837",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007837.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007837.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007731",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007731.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007731.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007850",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007850.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007850.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007867",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007867.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007867.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007818",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007818.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007818.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007792",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007792.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007792.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007872",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007872.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007872.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007847",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007847.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007847.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007768",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007768.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007768.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007796",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007796.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007796.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007786",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007786.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007786.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007763",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007763.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007763.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007859",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007859.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007859.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007745",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007745.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007745.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007764",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007764.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007764.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007735",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007735.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007735.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007825",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007825.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007825.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007744",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007744.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007744.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007746",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007746.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007746.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007757",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007757.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007757.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007804",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007804.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007804.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007777",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007777.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007777.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007800",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007800.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007800.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007869",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007869.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007869.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007784",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007784.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007784.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007861",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007861.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007861.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007875",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007875.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007875.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007754",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007754.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007754.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007831",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007831.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007831.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007821",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007821.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007821.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007779",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007779.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007779.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007841",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007841.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007841.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007774",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007774.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007774.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007828",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007828.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007828.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007852",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007852.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007852.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007787",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007787.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007787.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007833",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007833.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007833.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007832",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007832.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007832.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007752",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007752.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007752.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007780",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007780.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007780.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007855",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007855.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007855.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007816",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007816.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007816.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007858",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007858.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007858.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007743",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007743.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007743.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007836",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007836.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007836.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007737",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007737.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007737.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007840",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007840.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007840.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007793",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007793.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007793.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007801",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007801.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007801.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007769",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007769.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007769.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007844",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007844.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007844.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007767",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007767.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007767.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007827",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007827.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007827.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007807",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007807.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007807.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007860",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007860.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007860.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007848",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007848.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007848.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007753",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007753.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007753.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007741",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007741.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007741.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007842",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007842.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007842.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007845",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007845.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007845.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007878",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007878.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007878.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007760",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007760.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007760.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007734",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007734.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007734.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007751",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007751.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007751.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007762",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007762.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007762.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007794",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007794.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007794.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007808",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007808.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007808.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007870",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007870.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007870.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        },
+        {
+          "evaluation_id": "007771",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007771.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007771.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "shoulder",
+            "fog"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seq39_rdr00582",
+      "weather": "fog",
+      "camera_path": "/home/hongsheng/k_radar_dataset/39/cam-front/cam-front_01721.png",
+      "lidar_path": "/home/hongsheng/k_radar_dataset/39/os2-64/os2-64_00575.pcd",
+      "label_path": "/home/hongsheng/k_radar_dataset/39/info_label/00582_00575.txt",
+      "num_gt": 1,
+      "gt_signature_matches": [
+        {
+          "evaluation_id": "006683",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/006683.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/006683.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "mountain",
+            "fog"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seq39_rdr00491",
+      "weather": "fog",
+      "camera_path": "/home/hongsheng/k_radar_dataset/39/cam-front/cam-front_01449.png",
+      "lidar_path": "/home/hongsheng/k_radar_dataset/39/os2-64/os2-64_00484.pcd",
+      "label_path": "/home/hongsheng/k_radar_dataset/39/info_label/00491_00484.txt",
+      "num_gt": 1,
+      "gt_signature_matches": [
+        {
+          "evaluation_id": "006592",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/006592.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/006592.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "mountain",
+            "fog"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seq25_rdr00154",
+      "weather": "rain",
+      "camera_path": "/home/hongsheng/k_radar_dataset/25/cam-front/cam-front_00464.png",
+      "lidar_path": "/home/hongsheng/k_radar_dataset/25/os2-64/os2-64_00155.pcd",
+      "label_path": "/home/hongsheng/k_radar_dataset/25/info_label/00154_00155.txt",
+      "num_gt": 4,
+      "gt_signature_matches": []
+    },
+    {
+      "id": "seq24_rdr00286",
+      "weather": "rain",
+      "camera_path": "/home/hongsheng/k_radar_dataset/24/cam-front/cam-front_00849.png",
+      "lidar_path": "/home/hongsheng/k_radar_dataset/24/os2-64/os2-64_00283.pcd",
+      "label_path": "/home/hongsheng/k_radar_dataset/24/info_label/00286_00283.txt",
+      "num_gt": 3,
+      "gt_signature_matches": [
+        {
+          "evaluation_id": "005379",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/005379.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/005379.txt",
+          "prediction_count": 3,
+          "conditions": [
+            "night",
+            "urban",
+            "rain"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seq25_rdr00475",
+      "weather": "rain",
+      "camera_path": "/home/hongsheng/k_radar_dataset/25/cam-front/cam-front_01427.png",
+      "lidar_path": "/home/hongsheng/k_radar_dataset/25/os2-64/os2-64_00476.pcd",
+      "label_path": "/home/hongsheng/k_radar_dataset/25/info_label/00475_00476.txt",
+      "num_gt": 3,
+      "gt_signature_matches": [
+        {
+          "evaluation_id": "005722",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/005722.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/005722.txt",
+          "prediction_count": 3,
+          "conditions": [
+            "night",
+            "urban",
+            "rain"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seq43_rdr00169",
+      "weather": "lightsnow",
+      "camera_path": "/home/hongsheng/k_radar_dataset/43/cam-front/cam-front_00489.png",
+      "lidar_path": "/home/hongsheng/k_radar_dataset/43/os2-64/os2-64_00164.pcd",
+      "label_path": "/home/hongsheng/k_radar_dataset/43/info_label/00169_00164.txt",
+      "num_gt": 1,
+      "gt_signature_matches": []
+    },
+    {
+      "id": "seq49_rdr00593",
+      "weather": "lightsnow",
+      "camera_path": "/home/hongsheng/k_radar_dataset/49/cam-front/cam-front_01697.png",
+      "lidar_path": "/home/hongsheng/k_radar_dataset/49/os2-64/os2-64_00587.pcd",
+      "label_path": "/home/hongsheng/k_radar_dataset/49/info_label/00593_00587.txt",
+      "num_gt": 1,
+      "gt_signature_matches": [
+        {
+          "evaluation_id": "008310",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/008310.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/008310.txt",
+          "prediction_count": 0,
+          "conditions": [
+            "night",
+            "highway",
+            "lightsnow"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seq42_rdr00264",
+      "weather": "lightsnow",
+      "camera_path": "/home/hongsheng/k_radar_dataset/42/cam-front/cam-front_00735.png",
+      "lidar_path": "/home/hongsheng/k_radar_dataset/42/os2-64/os2-64_00255.pcd",
+      "label_path": "/home/hongsheng/k_radar_dataset/42/info_label/00264_00255.txt",
+      "num_gt": 1,
+      "gt_signature_matches": [
+        {
+          "evaluation_id": "007057",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007057.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007057.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "urban",
+            "lightsnow"
+          ]
+        },
+        {
+          "evaluation_id": "007056",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/007056.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/007056.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "urban",
+            "lightsnow"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seq58_rdr00258",
+      "weather": "heavysnow",
+      "camera_path": "/home/hongsheng/k_radar_dataset/58/cam-front/cam-front_00731.png",
+      "lidar_path": "/home/hongsheng/k_radar_dataset/58/os2-64/os2-64_00253.pcd",
+      "label_path": "/home/hongsheng/k_radar_dataset/58/info_label/00258_00253.txt",
+      "num_gt": 1,
+      "gt_signature_matches": [
+        {
+          "evaluation_id": "009920",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/009920.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/009920.txt",
+          "prediction_count": 3,
+          "conditions": [
+            "day",
+            "urban",
+            "heavysnow"
+          ]
+        },
+        {
+          "evaluation_id": "009921",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/009921.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/009921.txt",
+          "prediction_count": 2,
+          "conditions": [
+            "day",
+            "urban",
+            "heavysnow"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seq55_rdr00385",
+      "weather": "heavysnow",
+      "camera_path": "/home/hongsheng/k_radar_dataset/55/cam-front/cam-front_01082.png",
+      "lidar_path": "/home/hongsheng/k_radar_dataset/55/os2-64/os2-64_00380.pcd",
+      "label_path": "/home/hongsheng/k_radar_dataset/55/info_label/00385_00380.txt",
+      "num_gt": 1,
+      "gt_signature_matches": [
+        {
+          "evaluation_id": "009587",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/009587.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/009587.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "urban",
+            "heavysnow"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seq57_rdr00279",
+      "weather": "heavysnow",
+      "camera_path": "/home/hongsheng/k_radar_dataset/57/cam-front/cam-front_00795.png",
+      "lidar_path": "/home/hongsheng/k_radar_dataset/57/os2-64/os2-64_00274.pcd",
+      "label_path": "/home/hongsheng/k_radar_dataset/57/info_label/00279_00274.txt",
+      "num_gt": 1,
+      "gt_signature_matches": [
+        {
+          "evaluation_id": "009873",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/009873.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/009873.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "day",
+            "urban",
+            "heavysnow"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seq51_rdr00237",
+      "weather": "sleet",
+      "camera_path": "/home/hongsheng/k_radar_dataset/51/cam-front/cam-front_00679.png",
+      "lidar_path": "/home/hongsheng/k_radar_dataset/51/os2-64/os2-64_00231.pcd",
+      "label_path": "/home/hongsheng/k_radar_dataset/51/info_label/00237_00231.txt",
+      "num_gt": 1,
+      "gt_signature_matches": [
+        {
+          "evaluation_id": "008575",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/008575.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/008575.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "night",
+            "highway",
+            "sleet"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seq52_rdr00550",
+      "weather": "sleet",
+      "camera_path": "/home/hongsheng/k_radar_dataset/52/cam-front/cam-front_01620.png",
+      "lidar_path": "/home/hongsheng/k_radar_dataset/52/os2-64/os2-64_00548.pcd",
+      "label_path": "/home/hongsheng/k_radar_dataset/52/info_label/00550_00548.txt",
+      "num_gt": 1,
+      "gt_signature_matches": [
+        {
+          "evaluation_id": "008865",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/008865.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/008865.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "night",
+            "highway",
+            "sleet"
+          ]
+        },
+        {
+          "evaluation_id": "008864",
+          "gt_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/gt/008864.txt",
+          "prediction_path": "/home/hongsheng/dec_con_asf/logs/exp_260812_232650_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_0_total/0.3/pred/008864.txt",
+          "prediction_count": 1,
+          "conditions": [
+            "night",
+            "highway",
+            "sleet"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seq50_rdr00456",
+      "weather": "sleet",
+      "camera_path": "/home/hongsheng/k_radar_dataset/50/cam-front/cam-front_01331.png",
+      "lidar_path": "/home/hongsheng/k_radar_dataset/50/os2-64/os2-64_00449.pcd",
+      "label_path": "/home/hongsheng/k_radar_dataset/50/info_label/00456_00449.txt",
+      "num_gt": 2,
+      "gt_signature_matches": []
+    }
+  ]
+}

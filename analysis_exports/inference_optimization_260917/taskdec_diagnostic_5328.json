@@ -1,0 +1,2567 @@
+{
+  "model": "taskdec",
+  "checkpoint": "/home/hongsheng/dec_con_asf/logs/exp_260810_221258_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/models/model_0.pt",
+  "checkpoint_sha256": "99eb07e8a0b01ec397d3f2ac890091fe539194149a2c542cf41c465c9f02a2d3",
+  "config": "/home/hongsheng/dec_con_asf/logs/exp_260810_221258_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/config.yml",
+  "config_sha256": "e82a6d31b648d11d32bb5d867e52974f451a8745dbf2b5d4d256baa713f2fb20",
+  "script_sha256": "2a27a1915ed66128a44bb0745280f85a74ad95d6e4bb6cca9ecdd5bc1fd6705d",
+  "optimization": "graph_both",
+  "optimization_info": {
+    "name": "graph_both",
+    "weights_changed": false,
+    "operators_removed": false,
+    "precision_changed": false,
+    "gt_recall_preserved": true,
+    "dynamic_inputs": "New images and BEV features copied and recomputed per frame",
+    "preparation": "Three side-stream warmups and one capture per selected module; outside measurement",
+    "fallback": "Unseen shape or modality subset uses original eager execution",
+    "concurrency": "Single in-flight frame per model instance"
+  },
+  "gpu": "2",
+  "gpu_name": "NVIDIA RTX A6000",
+  "torch_version": "1.10.1+cu113",
+  "cuda_version": "11.3",
+  "torch_threads": 4,
+  "cudnn_benchmark": false,
+  "cudnn_deterministic": true,
+  "matmul_tf32": true,
+  "cudnn_tf32": true,
+  "precision": "FP32, no autocast; TF32 flags above",
+  "batch_size": 1,
+  "params_m": 79.468971,
+  "dataset_size": 10065,
+  "indices": [
+    5328,
+    5328,
+    5328,
+    5328,
+    5328,
+    5328,
+    5328,
+    5328,
+    5328,
+    5328,
+    5328,
+    5328,
+    5328,
+    5328
+  ],
+  "warmup": 4,
+  "measured": 10,
+  "profile": false,
+  "paired_verification": true,
+  "only_index": 5328,
+  "check_adapters": true,
+  "optimization_source_sha256": "2ae536489f59a4486faf5d179b0a6c448b88fe604ffe4857919197f839f27c5a",
+  "timing_scope": "network(batch), including camera/H2D/point preprocessing, fusion, head decoding/NMS and (unless explicitly disabled) GT recall diagnostics; excludes synchronous data loading, initialization, optimization preparation and output comparison",
+  "source_sha256": {
+    "models/skeletons/fusion_base_integrated.py": "669ffc0bb26bfd6be1f8a1e18b32729136bcb638b0ab5bf44926f46361cfcd1c",
+    "models/fuser/a2_fusion.py": "6a918e943e61fc920949d95e811d1cd25dc859428df78649db7eba38fe4bce38",
+    "models/fuser/patch_dec_a2_fusion.py": "04bf1f4a1bf0a3874b36d3d5e70a2a052c95f09e24dde0fadbf929025bc67f51",
+    "models/head/anchor_head_integrated.py": "af55905967f64635eb67f2ea860a11db5633e917853b5e5c654c65d119a5ff0c"
+  },
+  "rows": [
+    {
+      "index": 5328,
+      "seq": "24",
+      "radar_id": "00235",
+      "weather": "rain",
+      "load_ms": 621.0145633667707,
+      "forward_wall_ms": 62.58544139564037,
+      "forward_cuda_ms": 62.51388931274414,
+      "prediction_count": 3,
+      "reference_wall_ms": 89.01883661746979,
+      "reference_cuda_ms": 88.9454116821289,
+      "execution_order": [
+        "eager",
+        "optimized"
+      ]
+    },
+    {
+      "index": 5328,
+      "seq": "24",
+      "radar_id": "00235",
+      "weather": "rain",
+      "load_ms": 779.5770354568958,
+      "forward_wall_ms": 65.86947850883007,
+      "forward_cuda_ms": 65.78288269042969,
+      "prediction_count": 3,
+      "reference_wall_ms": 107.63303935527802,
+      "reference_cuda_ms": 107.54940795898438,
+      "execution_order": [
+        "optimized",
+        "eager"
+      ]
+    },
+    {
+      "index": 5328,
+      "seq": "24",
+      "radar_id": "00235",
+      "weather": "rain",
+      "load_ms": 681.6706247627735,
+      "forward_wall_ms": 65.14264456927776,
+      "forward_cuda_ms": 65.06339263916016,
+      "prediction_count": 3,
+      "reference_wall_ms": 118.45754273235798,
+      "reference_cuda_ms": 118.29017639160156,
+      "execution_order": [
+        "eager",
+        "optimized"
+      ]
+    },
+    {
+      "index": 5328,
+      "seq": "24",
+      "radar_id": "00235",
+      "weather": "rain",
+      "load_ms": 672.6771295070648,
+      "forward_wall_ms": 63.68890590965748,
+      "forward_cuda_ms": 63.60979080200195,
+      "prediction_count": 3,
+      "reference_wall_ms": 97.4088404327631,
+      "reference_cuda_ms": 97.33539581298828,
+      "execution_order": [
+        "optimized",
+        "eager"
+      ]
+    },
+    {
+      "index": 5328,
+      "seq": "24",
+      "radar_id": "00235",
+      "weather": "rain",
+      "load_ms": 685.5759788304567,
+      "forward_wall_ms": 68.7499139457941,
+      "forward_cuda_ms": 68.64470672607422,
+      "prediction_count": 3,
+      "reference_wall_ms": 106.21134005486965,
+      "reference_cuda_ms": 106.09532928466797,
+      "execution_order": [
+        "eager",
+        "optimized"
+      ]
+    },
+    {
+      "index": 5328,
+      "seq": "24",
+      "radar_id": "00235",
+      "weather": "rain",
+      "load_ms": 625.6082132458687,
+      "forward_wall_ms": 63.09979036450386,
+      "forward_cuda_ms": 63.02751922607422,
+      "prediction_count": 3,
+      "reference_wall_ms": 98.83932210505009,
+      "reference_cuda_ms": 98.76790618896484,
+      "execution_order": [
+        "optimized",
+        "eager"
+      ]
+    },
+    {
+      "index": 5328,
+      "seq": "24",
+      "radar_id": "00235",
+      "weather": "rain",
+      "load_ms": 574.1338972002268,
+      "forward_wall_ms": 63.53418342769146,
+      "forward_cuda_ms": 63.46284866333008,
+      "prediction_count": 3,
+      "reference_wall_ms": 97.35174849629402,
+      "reference_cuda_ms": 97.27545928955078,
+      "execution_order": [
+        "eager",
+        "optimized"
+      ]
+    },
+    {
+      "index": 5328,
+      "seq": "24",
+      "radar_id": "00235",
+      "weather": "rain",
+      "load_ms": 618.9052257686853,
+      "forward_wall_ms": 65.34995883703232,
+      "forward_cuda_ms": 65.25462341308594,
+      "prediction_count": 3,
+      "reference_wall_ms": 99.19402375817299,
+      "reference_cuda_ms": 99.08185577392578,
+      "execution_order": [
+        "optimized",
+        "eager"
+      ]
+    },
+    {
+      "index": 5328,
+      "seq": "24",
+      "radar_id": "00235",
+      "weather": "rain",
+      "load_ms": 576.9431535154581,
+      "forward_wall_ms": 63.262371346354485,
+      "forward_cuda_ms": 63.18921661376953,
+      "prediction_count": 3,
+      "reference_wall_ms": 97.47858718037605,
+      "reference_cuda_ms": 97.36450958251953,
+      "execution_order": [
+        "eager",
+        "optimized"
+      ]
+    },
+    {
+      "index": 5328,
+      "seq": "24",
+      "radar_id": "00235",
+      "weather": "rain",
+      "load_ms": 560.0601695477962,
+      "forward_wall_ms": 63.29960189759731,
+      "forward_cuda_ms": 63.226688385009766,
+      "prediction_count": 3,
+      "reference_wall_ms": 97.20340371131897,
+      "reference_cuda_ms": 97.13433837890625,
+      "execution_order": [
+        "optimized",
+        "eager"
+      ]
+    }
+  ],
+  "stages": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "verification": [
+    {
+      "index": 5328,
+      "tensors": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.7924833297729492,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.11342871189117432,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.4230785369873047,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 6.273884296417236,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.018851518630981445,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.003956198692321777,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "eager_repeat": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.9241156578063965,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.1235397458076477,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.4383544921875,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 3.145242214202881,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.01651477813720703,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0021871328353881836,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "adapters": {
+        "cam.backbone": {
+          "output.0": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.1": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.2": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        },
+        "fuser": {
+          "output._dec_control_query_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output._dec_control_fused_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.fused_feat": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        }
+      }
+    },
+    {
+      "index": 5328,
+      "tensors": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.40094709396362305,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.09116673469543457,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.18613052368164062,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 3.1439871788024902,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.009336769580841064,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0006537437438964844,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "eager_repeat": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.7853717803955078,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.17494475841522217,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.4969348907470703,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 3.144163131713867,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.03918731212615967,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.001259148120880127,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "adapters": {
+        "cam.backbone": {
+          "output.0": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.1": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.2": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        },
+        "fuser": {
+          "output._dec_control_query_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output._dec_control_fused_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.fused_feat": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        }
+      }
+    },
+    {
+      "index": 5328,
+      "tensors": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.7395014762878418,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.1251521110534668,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.380767822265625,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 3.1462554931640625,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.01422119140625,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0007755160331726074,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "eager_repeat": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.6210331916809082,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.12808096408843994,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.3627471923828125,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 3.1435561180114746,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0072917938232421875,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0008723735809326172,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "adapters": {
+        "cam.backbone": {
+          "output.0": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.1": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.2": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        },
+        "fuser": {
+          "output._dec_control_query_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output._dec_control_fused_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.fused_feat": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        }
+      }
+    },
+    {
+      "index": 5328,
+      "tensors": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.7157249450683594,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.10868334770202637,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.3523445129394531,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 3.1438136100769043,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.012724161148071289,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0037750601768493652,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "eager_repeat": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.6817076206207275,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.09819447994232178,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.2607746124267578,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 3.143840789794922,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.010627269744873047,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0016894340515136719,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "adapters": {
+        "cam.backbone": {
+          "output.0": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.1": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.2": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        },
+        "fuser": {
+          "output._dec_control_query_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output._dec_control_fused_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.fused_feat": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        }
+      }
+    },
+    {
+      "index": 5328,
+      "tensors": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.7130367755889893,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.11081740260124207,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.3933124542236328,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 6.275979995727539,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.011970996856689453,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0006232261657714844,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "eager_repeat": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.8877248764038086,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.10285711288452148,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.3865823745727539,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 6.278524398803711,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.019025087356567383,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0023348331451416016,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "adapters": {
+        "cam.backbone": {
+          "output.0": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.1": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.2": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        },
+        "fuser": {
+          "output._dec_control_query_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output._dec_control_fused_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.fused_feat": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        }
+      }
+    },
+    {
+      "index": 5328,
+      "tensors": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.5341482162475586,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.10685276985168457,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.3162860870361328,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 3.146024703979492,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.020901799201965332,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.002795398235321045,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "eager_repeat": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.4641542434692383,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.12739574909210205,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.37073707580566406,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 3.143904209136963,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.018147587776184082,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0035352706909179688,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "adapters": {
+        "cam.backbone": {
+          "output.0": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.1": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.2": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        },
+        "fuser": {
+          "output._dec_control_query_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output._dec_control_fused_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.fused_feat": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        }
+      }
+    },
+    {
+      "index": 5328,
+      "tensors": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.8249454498291016,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.11136108636856079,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.3989391326904297,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 3.144012451171875,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.017659783363342285,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.003525257110595703,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "eager_repeat": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.5967998504638672,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.12827789783477783,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.3607969284057617,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 3.144644260406494,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.020102262496948242,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0033472776412963867,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "adapters": {
+        "cam.backbone": {
+          "output.0": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.1": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.2": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        },
+        "fuser": {
+          "output._dec_control_query_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output._dec_control_fused_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.fused_feat": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        }
+      }
+    },
+    {
+      "index": 5328,
+      "tensors": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.7312593460083008,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.1347809135913849,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.3802356719970703,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 3.1532325744628906,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.01188194751739502,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0006902217864990234,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "eager_repeat": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.5335886478424072,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.15158510208129883,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.39992332458496094,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 3.147472381591797,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.004083037376403809,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.002250969409942627,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "adapters": {
+        "cam.backbone": {
+          "output.0": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.1": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.2": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        },
+        "fuser": {
+          "output._dec_control_query_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output._dec_control_fused_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.fused_feat": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        }
+      }
+    },
+    {
+      "index": 5328,
+      "tensors": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.48151302337646484,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.08141040802001953,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.26728248596191406,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 3.144804000854492,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.00934743881225586,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0007749199867248535,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "eager_repeat": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.5877680778503418,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.11677974462509155,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.2956571578979492,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 3.146181106567383,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.020821571350097656,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0025349855422973633,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "adapters": {
+        "cam.backbone": {
+          "output.0": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.1": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.2": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        },
+        "fuser": {
+          "output._dec_control_query_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output._dec_control_fused_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.fused_feat": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        }
+      }
+    },
+    {
+      "index": 5328,
+      "tensors": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.5123286247253418,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.08173435926437378,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.27648162841796875,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 6.276578426361084,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.016497373580932617,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.002355813980102539,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "eager_repeat": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.7276630401611328,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.18245506286621094,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.5273704528808594,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 3.1459903717041016,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0058746337890625,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0019432306289672852,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "adapters": {
+        "cam.backbone": {
+          "output.0": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.1": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.2": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        },
+        "fuser": {
+          "output._dec_control_query_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output._dec_control_fused_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.fused_feat": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        }
+      }
+    },
+    {
+      "index": 5328,
+      "tensors": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.7975668907165527,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.17509448528289795,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.37654781341552734,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 3.1440296173095703,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.007659912109375,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0008692741394042969,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "eager_repeat": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.7702121734619141,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.16214165091514587,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.3819851875305176,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 3.1487245559692383,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.008529186248779297,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0014664530754089355,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "adapters": {
+        "cam.backbone": {
+          "output.0": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.1": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.2": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        },
+        "fuser": {
+          "output._dec_control_query_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output._dec_control_fused_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.fused_feat": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        }
+      }
+    },
+    {
+      "index": 5328,
+      "tensors": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.8075580596923828,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.14194059371948242,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.41121578216552734,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 3.143268585205078,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0086212158203125,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.001085519790649414,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "eager_repeat": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.6653189659118652,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.08782434463500977,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.2869110107421875,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 6.270907402038574,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.00720977783203125,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.00042057037353515625,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "adapters": {
+        "cam.backbone": {
+          "output.0": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.1": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.2": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        },
+        "fuser": {
+          "output._dec_control_query_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output._dec_control_fused_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.fused_feat": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        }
+      }
+    },
+    {
+      "index": 5328,
+      "tensors": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.4440174102783203,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.11511433124542236,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.28438234329223633,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 3.1466169357299805,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.005211353302001953,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0019446015357971191,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "eager_repeat": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.4816608428955078,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.13193655014038086,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.43304443359375,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 3.1483287811279297,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.008823394775390625,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0009680986404418945,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "adapters": {
+        "cam.backbone": {
+          "output.0": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.1": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.2": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        },
+        "fuser": {
+          "output._dec_control_query_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output._dec_control_fused_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.fused_feat": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        }
+      }
+    },
+    {
+      "index": 5328,
+      "tensors": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.7162094116210938,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.11514294147491455,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.40491199493408203,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 6.279702663421631,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0172121524810791,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0013414621353149414,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "eager_repeat": {
+        "cam_bev_feat": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "spatial_features_2d": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "bev_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.7059478759765625,
+          "finite": true
+        },
+        "fused_feat": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.08871865272521973,
+          "finite": true
+        },
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.25076866149902344,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 6.282577991485596,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.006579399108886719,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.000861823558807373,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      },
+      "adapters": {
+        "cam.backbone": {
+          "output.0": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.1": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.2": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        },
+        "fuser": {
+          "output._dec_control_query_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output._dec_control_fused_delta": {
+            "exact": true,
+            "max_abs": 0.0
+          },
+          "output.fused_feat": {
+            "exact": true,
+            "max_abs": 0.0
+          }
+        }
+      }
+    }
+  ],
+  "summary": {
+    "load_ms": {
+      "mean": 639.6165991201997,
+      "median": 623.3113883063197,
+      "p95": 737.2765599749981,
+      "min": 560.0601695477962,
+      "max": 779.5770354568958,
+      "std": 63.3080801961473
+    },
+    "forward_wall_ms": {
+      "mean": 64.45822902023792,
+      "median": 63.61154466867447,
+      "p95": 67.45371799916029,
+      "min": 62.58544139564037,
+      "max": 68.7499139457941,
+      "std": 1.7676167878967948
+    },
+    "forward_cuda_ms": {
+      "mean": 64.37755584716797,
+      "median": 63.536319732666016,
+      "p95": 67.35688591003418,
+      "min": 62.51388931274414,
+      "max": 68.64470672607422,
+      "std": 1.7573215430260665
+    },
+    "reference_wall_ms": {
+      "mean": 100.87966844439507,
+      "median": 98.15895464271307,
+      "p95": 113.58651621267198,
+      "min": 89.01883661746979,
+      "max": 118.45754273235798,
+      "std": 7.617580262283147
+    },
+    "reference_cuda_ms": {
+      "mean": 100.78397903442382,
+      "median": 98.06620788574219,
+      "p95": 113.45683059692382,
+      "min": 88.9454116821289,
+      "max": 118.29017639160156,
+      "std": 7.594583276728874
+    }
+  },
+  "stage_summary": {},
+  "peak_allocated_gib": 1.1277360916137695,
+  "peak_reserved_gib": 1.556640625,
+  "completed": true
+}

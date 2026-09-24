@@ -1,0 +1,115 @@
+{
+  "taskdec": {
+    "file": "taskdec_initial.pt",
+    "sha256": "b26d6f2d3fb5bd456d4b45dd81dcb6b7255e4471ad27895addbe7e488e698174",
+    "parameters": 33654069,
+    "copied_tensors": 605,
+    "fresh_shape_changed_tensors": [
+      {
+        "name": "fuser.aware_query",
+        "before": [
+          1,
+          16,
+          128
+        ],
+        "after": [
+          1,
+          4,
+          128
+        ]
+      },
+      {
+        "name": "fuser.to_patch_embed_camera.0.weight",
+        "before": [
+          1024
+        ],
+        "after": [
+          256
+        ]
+      },
+      {
+        "name": "fuser.to_patch_embed_camera.0.bias",
+        "before": [
+          1024
+        ],
+        "after": [
+          256
+        ]
+      },
+      {
+        "name": "fuser.to_patch_embed_camera.1.weight",
+        "before": [
+          128,
+          1024
+        ],
+        "after": [
+          128,
+          256
+        ]
+      },
+      {
+        "name": "fuser.to_patch_embed_lidar.0.weight",
+        "before": [
+          1024
+        ],
+        "after": [
+          256
+        ]
+      },
+      {
+        "name": "fuser.to_patch_embed_lidar.0.bias",
+        "before": [
+          1024
+        ],
+        "after": [
+          256
+        ]
+      },
+      {
+        "name": "fuser.to_patch_embed_lidar.1.weight",
+        "before": [
+          128,
+          1024
+        ],
+        "after": [
+          128,
+          256
+        ]
+      },
+      {
+        "name": "fuser.to_patch_embed_radar.0.weight",
+        "before": [
+          1024
+        ],
+        "after": [
+          256
+        ]
+      },
+      {
+        "name": "fuser.to_patch_embed_radar.0.bias",
+        "before": [
+          1024
+        ],
+        "after": [
+          256
+        ]
+      },
+      {
+        "name": "fuser.to_patch_embed_radar.1.weight",
+        "before": [
+          128,
+          1024
+        ],
+        "after": [
+          128,
+          256
+        ]
+      }
+    ],
+    "shared_backbone_head_hash": "76f7e84abaec58108d27cc485ff43698131bd84e317f19d0bcabd3bf1ad346f9",
+    "copied_from": "/home/hongsheng/dec_con_asf/analysis_exports/v2x_taskdec_260916/controlled_80ep/taskdec_initial.pt",
+    "copied_from_sha256": "4dc2dfbc54e98f02844ee70cc30b10d1a84838d7afffa8799cfef9d4c58d2e8f",
+    "seed": 260916,
+    "trained_checkpoint_used": false
+  }
+}

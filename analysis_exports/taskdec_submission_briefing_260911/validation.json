@@ -1,0 +1,18 @@
+{
+  "slides": 24,
+  "main": 18,
+  "backup": 6,
+  "pptx_zip_integrity": "pass",
+  "speaker_notes": 24,
+  "all_shapes_inside_slide": "pass (generator check)",
+  "editable_full_main_table_matches_source": "pass",
+  "editable_ablation_table_matches_source": "pass",
+  "pdf_pages": 24,
+  "key_numbers_present_in_pdf": "pass",
+  "local_source_and_document_links": "pass",
+  "visual_review": "All 24 pages reviewed in overview; slides 4, 13, 17 rechecked individually after overflow fixes.",
+  "render_engine": "LibreOffice Impress 6.4",
+  "new_training_or_inference": false,
+  "pptx_bytes": 1474923,
+  "pdf_bytes": 1233344
+}

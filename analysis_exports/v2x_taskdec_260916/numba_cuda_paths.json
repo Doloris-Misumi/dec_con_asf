@@ -1,0 +1,16 @@
+{
+  "nvvm": {
+    "by": "CUDA_HOME",
+    "info": "/usr/local/cuda-11.3/nvvm/lib64/libnvvm.so.4.0.0"
+  },
+  "libdevice": {
+    "by": "CUDA_HOME",
+    "info": {
+      "null": "/usr/local/cuda-11.3/nvvm/libdevice/libdevice.10.bc"
+    }
+  },
+  "cudalib_dir": {
+    "by": "CUDA_HOME",
+    "info": "/usr/local/cuda-11.3/lib64"
+  }
+}

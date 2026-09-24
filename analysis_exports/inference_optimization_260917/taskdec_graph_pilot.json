@@ -1,0 +1,973 @@
+{
+  "model": "taskdec",
+  "checkpoint": "/home/hongsheng/dec_con_asf/logs/exp_260810_221258_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/models/model_0.pt",
+  "checkpoint_sha256": "99eb07e8a0b01ec397d3f2ac890091fe539194149a2c542cf41c465c9f02a2d3",
+  "config": "/home/hongsheng/dec_con_asf/logs/exp_260810_221258_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/config.yml",
+  "config_sha256": "e82a6d31b648d11d32bb5d867e52974f451a8745dbf2b5d4d256baa713f2fb20",
+  "script_sha256": "3fe55690867ddeb48ab27191da44d2bd5baccfb13b36e5cdb052a7a2e5d06939",
+  "optimization": "graph_both",
+  "optimization_info": {
+    "name": "graph_both",
+    "weights_changed": false,
+    "operators_removed": false,
+    "precision_changed": false,
+    "gt_recall_preserved": true,
+    "dynamic_inputs": "New images and BEV features copied and recomputed per frame",
+    "preparation": "Three side-stream warmups and one capture per selected module; outside measurement",
+    "fallback": "Unseen shape or modality subset uses original eager execution",
+    "concurrency": "Single in-flight frame per model instance"
+  },
+  "gpu": "2",
+  "gpu_name": "NVIDIA RTX A6000",
+  "torch_version": "1.10.1+cu113",
+  "cuda_version": "11.3",
+  "torch_threads": 4,
+  "cudnn_benchmark": false,
+  "cudnn_deterministic": true,
+  "matmul_tf32": true,
+  "cudnn_tf32": true,
+  "precision": "FP32, no autocast; TF32 flags above",
+  "batch_size": 1,
+  "params_m": 79.468971,
+  "dataset_size": 10065,
+  "indices": [
+    0,
+    592,
+    1184,
+    1776,
+    2368,
+    2960,
+    3552,
+    4144,
+    4736,
+    5328,
+    5920,
+    6512,
+    7104,
+    7696,
+    8288,
+    8880,
+    9472,
+    10064
+  ],
+  "warmup": 4,
+  "measured": 14,
+  "profile": false,
+  "timing_scope": "network(batch), including camera/H2D/point preprocessing, fusion, head decoding/NMS and (unless explicitly disabled) GT recall diagnostics; excludes synchronous data loading, initialization, optimization preparation and output comparison",
+  "source_sha256": {
+    "models/skeletons/fusion_base_integrated.py": "669ffc0bb26bfd6be1f8a1e18b32729136bcb638b0ab5bf44926f46361cfcd1c",
+    "models/fuser/a2_fusion.py": "6a918e943e61fc920949d95e811d1cd25dc859428df78649db7eba38fe4bce38",
+    "models/fuser/patch_dec_a2_fusion.py": "04bf1f4a1bf0a3874b36d3d5e70a2a052c95f09e24dde0fadbf929025bc67f51",
+    "models/head/anchor_head_integrated.py": "af55905967f64635eb67f2ea860a11db5633e917853b5e5c654c65d119a5ff0c"
+  },
+  "rows": [
+    {
+      "index": 2368,
+      "seq": "12",
+      "radar_id": "00346",
+      "weather": "normal",
+      "load_ms": 603.0941214412451,
+      "forward_wall_ms": 61.033573001623154,
+      "forward_cuda_ms": 60.960289001464844,
+      "prediction_count": 2
+    },
+    {
+      "index": 2960,
+      "seq": "15",
+      "radar_id": "00275",
+      "weather": "normal",
+      "load_ms": 594.8191583156586,
+      "forward_wall_ms": 62.11305037140846,
+      "forward_cuda_ms": 62.034400939941406,
+      "prediction_count": 5
+    },
+    {
+      "index": 3552,
+      "seq": "17",
+      "radar_id": "00305",
+      "weather": "normal",
+      "load_ms": 631.2942020595074,
+      "forward_wall_ms": 72.1120610833168,
+      "forward_cuda_ms": 72.03472137451172,
+      "prediction_count": 1
+    },
+    {
+      "index": 4144,
+      "seq": "19",
+      "radar_id": "00568",
+      "weather": "normal",
+      "load_ms": 674.5072193443775,
+      "forward_wall_ms": 64.90966118872166,
+      "forward_cuda_ms": 64.81455993652344,
+      "prediction_count": 1
+    },
+    {
+      "index": 4736,
+      "seq": "22",
+      "radar_id": "00242",
+      "weather": "overcast",
+      "load_ms": 606.9799270480871,
+      "forward_wall_ms": 63.040463253855705,
+      "forward_cuda_ms": 62.97004699707031,
+      "prediction_count": 1
+    },
+    {
+      "index": 5328,
+      "seq": "24",
+      "radar_id": "00235",
+      "weather": "rain",
+      "load_ms": 565.1854481548071,
+      "forward_wall_ms": 59.45291742682457,
+      "forward_cuda_ms": 59.383392333984375,
+      "prediction_count": 3
+    },
+    {
+      "index": 5920,
+      "seq": "30",
+      "radar_id": "00133",
+      "weather": "sleet",
+      "load_ms": 573.7992618232965,
+      "forward_wall_ms": 64.23740833997726,
+      "forward_cuda_ms": 64.16639709472656,
+      "prediction_count": 1
+    },
+    {
+      "index": 6512,
+      "seq": "39",
+      "radar_id": "00231",
+      "weather": "fog",
+      "load_ms": 587.0737191289663,
+      "forward_wall_ms": 59.70330722630024,
+      "forward_cuda_ms": 59.62966537475586,
+      "prediction_count": 1
+    },
+    {
+      "index": 7104,
+      "seq": "42",
+      "radar_id": "00461",
+      "weather": "lightsnow",
+      "load_ms": 565.0548990815878,
+      "forward_wall_ms": 58.0108892172575,
+      "forward_cuda_ms": 57.93929672241211,
+      "prediction_count": 5
+    },
+    {
+      "index": 7696,
+      "seq": "45",
+      "radar_id": "00283",
+      "weather": "fog",
+      "load_ms": 590.5640125274658,
+      "forward_wall_ms": 57.40278959274292,
+      "forward_cuda_ms": 57.33180618286133,
+      "prediction_count": 2
+    },
+    {
+      "index": 8288,
+      "seq": "49",
+      "radar_id": "00157",
+      "weather": "lightsnow",
+      "load_ms": 583.6532060056925,
+      "forward_wall_ms": 59.189323335886,
+      "forward_cuda_ms": 59.11884689331055,
+      "prediction_count": 1
+    },
+    {
+      "index": 8880,
+      "seq": "52",
+      "radar_id": "00566",
+      "weather": "sleet",
+      "load_ms": 579.9351762980223,
+      "forward_wall_ms": 57.43206664919853,
+      "forward_cuda_ms": 57.36262512207031,
+      "prediction_count": 3
+    },
+    {
+      "index": 9472,
+      "seq": "55",
+      "radar_id": "00147",
+      "weather": "heavysnow",
+      "load_ms": 602.5394722819328,
+      "forward_wall_ms": 62.4753013253212,
+      "forward_cuda_ms": 62.4015998840332,
+      "prediction_count": 1
+    },
+    {
+      "index": 10064,
+      "seq": "58",
+      "radar_id": "00562",
+      "weather": "heavysnow",
+      "load_ms": 586.0085394233465,
+      "forward_wall_ms": 55.897181853652,
+      "forward_cuda_ms": 55.81622314453125,
+      "prediction_count": 1
+    }
+  ],
+  "stages": [
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {},
+    {}
+  ],
+  "verification": [
+    {
+      "index": 0,
+      "tensors": {
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      }
+    },
+    {
+      "index": 592,
+      "tensors": {
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      }
+    },
+    {
+      "index": 1184,
+      "tensors": {
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      }
+    },
+    {
+      "index": 1776,
+      "tensors": {
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      }
+    },
+    {
+      "index": 2368,
+      "tensors": {
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      }
+    },
+    {
+      "index": 2960,
+      "tensors": {
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      }
+    },
+    {
+      "index": 3552,
+      "tensors": {
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      }
+    },
+    {
+      "index": 4144,
+      "tensors": {
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      }
+    },
+    {
+      "index": 4736,
+      "tensors": {
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      }
+    },
+    {
+      "index": 5328,
+      "tensors": {
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.2667999267578125,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 3.1430954933166504,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.007141053676605225,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": false,
+          "allclose": false,
+          "max_abs": 0.0009728670120239258,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      }
+    },
+    {
+      "index": 5920,
+      "tensors": {
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      }
+    },
+    {
+      "index": 6512,
+      "tensors": {
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      }
+    },
+    {
+      "index": 7104,
+      "tensors": {
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      }
+    },
+    {
+      "index": 7696,
+      "tensors": {
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      }
+    },
+    {
+      "index": 8288,
+      "tensors": {
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      }
+    },
+    {
+      "index": 8880,
+      "tensors": {
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      }
+    },
+    {
+      "index": 9472,
+      "tensors": {
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      }
+    },
+    {
+      "index": 10064,
+      "tensors": {
+        "batch_cls_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "batch_box_preds": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_boxes": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_scores": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        },
+        "pred_labels": {
+          "shape_equal": true,
+          "exact": true,
+          "allclose": true,
+          "max_abs": 0.0,
+          "finite": true
+        }
+      }
+    }
+  ],
+  "summary": {
+    "load_ms": {
+      "mean": 596.0363116381424,
+      "median": 588.8188658282161,
+      "p95": 646.4187581092119,
+      "min": 565.0548990815878,
+      "max": 674.5072193443775,
+      "std": 27.572862485922784
+    },
+    "forward_wall_ms": {
+      "mean": 61.21499956186329,
+      "median": 60.3684401139617,
+      "p95": 67.43050115182996,
+      "min": 55.897181853652,
+      "max": 72.1120610833168,
+      "std": 4.001553842209804
+    },
+    "forward_cuda_ms": {
+      "mean": 61.14027650015695,
+      "median": 60.29497718811035,
+      "p95": 67.34161643981933,
+      "min": 55.81622314453125,
+      "max": 72.03472137451172,
+      "std": 3.9994573013250747
+    }
+  },
+  "stage_summary": {},
+  "peak_allocated_gib": 1.156893253326416,
+  "peak_reserved_gib": 1.77734375,
+  "completed": true
+}

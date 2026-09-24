@@ -1,0 +1,12 @@
+{
+  "pid": 3990038,
+  "command": [
+    "/usr/bin/python3",
+    "-u",
+    "/home/hongsheng/dec_con_asf/analysis_exports/v2x_l4dr_260917/launch_when_gpu1_free.py"
+  ],
+  "started_at": "2026-09-17T00:53:36.838933+08:00",
+  "gpu": 1,
+  "wait_for": "Concat complete + both final reports + original process exit",
+  "terminal_independent": true
+}

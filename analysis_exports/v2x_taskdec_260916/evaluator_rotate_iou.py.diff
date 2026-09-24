@@ -1,0 +1,70 @@
+--- analysis_exports/v2x_taskdec_260916/official_sources/CodeBase__BEVHeight__evaluators__kitti_utils__rotate_iou.py
++++ v2x_taskdec/evaluation/rotate_iou.py
+@@ -238,19 +238,54 @@
+     Returns:
+         float: Intersection of two rotated boxes.
+     """
+-    corners1 = cuda.local.array((8, ), dtype=numba.float32)
+-    corners2 = cuda.local.array((8, ), dtype=numba.float32)
+-    intersection_corners = cuda.local.array((16, ), dtype=numba.float32)
+-
+-    rbbox_to_corners(corners1, rbbox1)
+-    rbbox_to_corners(corners2, rbbox2)
+-
+-    num_intersection = quadrilateral_intersection(corners1, corners2,
+-                                                  intersection_corners)
+-    sort_vertex_in_convex_polygon(intersection_corners, num_intersection)
+-    # print(intersection_corners.reshape([-1, 2])[:num_intersection])
+-
+-    return area(intersection_corners, num_intersection)
++    # Local adaptation: clip convex polygons in a translated float64 frame.
++    # The inherited float32 corner inclusion test loses coincident vertices
++    # (even self IoU could be zero). AP matching/thresholds remain unchanged.
++    poly = cuda.local.array((16, 2), dtype=numba.float64)
++    tmp = cuda.local.array((16, 2), dtype=numba.float64)
++    clip = cuda.local.array((4, 2), dtype=numba.float64)
++    for k in range(2):
++        box = rbbox1 if k == 0 else rbbox2
++        co = math.cos(numba.float64(box[4]))
++        si = math.sin(numba.float64(box[4]))
++        for i in range(4):
++            x = numba.float64(box[2]) * (-0.5 if i < 2 else 0.5)
++            y = numba.float64(box[3]) * (0.5 if i == 1 or i == 2 else -0.5)
++            px = co * x + si * y + numba.float64(box[0]) - numba.float64(rbbox1[0])
++            py = -si * x + co * y + numba.float64(box[1]) - numba.float64(rbbox1[1])
++            if k == 0:
++                poly[i, 0], poly[i, 1] = px, py
++            else:
++                clip[i, 0], clip[i, 1] = px, py
++    n = 4
++    for edge in range(4):
++        if n == 0:
++            return 0.0
++        ax, ay = clip[edge, 0], clip[edge, 1]
++        ex = clip[(edge + 1) % 4, 0] - ax
++        ey = clip[(edge + 1) % 4, 1] - ay
++        count = 0
++        sx, sy = poly[n - 1, 0], poly[n - 1, 1]
++        ds = ex * (sy - ay) - ey * (sx - ax)
++        for i in range(n):
++            px, py = poly[i, 0], poly[i, 1]
++            dp = ex * (py - ay) - ey * (px - ax)
++            if (ds <= 0) != (dp <= 0):
++                t = ds / (ds - dp)
++                tmp[count, 0], tmp[count, 1] = sx + t * (px - sx), sy + t * (py - sy)
++                count += 1
++            if dp <= 0:
++                tmp[count, 0], tmp[count, 1] = px, py
++                count += 1
++            sx, sy, ds = px, py, dp
++        n = count
++        for i in range(n):
++            poly[i, 0], poly[i, 1] = tmp[i, 0], tmp[i, 1]
++    result = 0.0
++    for i in range(1, n - 1):
++        result += ((poly[i, 0] - poly[0, 0]) * (poly[i + 1, 1] - poly[0, 1]) -
++                   (poly[i, 1] - poly[0, 1]) * (poly[i + 1, 0] - poly[0, 0]))
++    return abs(result) * 0.5
+ 
+ 
+ @cuda.jit('(float32[:], float32[:], int32)', device=True, inline=True)

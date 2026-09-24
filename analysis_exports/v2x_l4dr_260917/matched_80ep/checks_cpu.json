@@ -1,0 +1,238 @@
+{
+  "passed": true,
+  "at": "2026-09-17T00:52:11.286877+08:00",
+  "matched_protocol_fields": true,
+  "exact_coordinate_join": true,
+  "sampler_cases": 5,
+  "matched_gt_and_deterministic_eval": [
+    {
+      "frame": "000009",
+      "gt": 8,
+      "points": [
+        63989,
+        4365
+      ],
+      "lidar_voxels": 8728,
+      "sampled_valid": 2048
+    },
+    {
+      "frame": "000010",
+      "gt": 8,
+      "points": [
+        63972,
+        3400
+      ],
+      "lidar_voxels": 8727,
+      "sampled_valid": 2048
+    },
+    {
+      "frame": "000011",
+      "gt": 7,
+      "points": [
+        64064,
+        6699
+      ],
+      "lidar_voxels": 8606,
+      "sampled_valid": 2048
+    },
+    {
+      "frame": "000039",
+      "gt": 12,
+      "points": [
+        62566,
+        6586
+      ],
+      "lidar_voxels": 12706,
+      "sampled_valid": 2048
+    },
+    {
+      "frame": "000040",
+      "gt": 11,
+      "points": [
+        62822,
+        4708
+      ],
+      "lidar_voxels": 12865,
+      "sampled_valid": 2048
+    },
+    {
+      "frame": "000041",
+      "gt": 10,
+      "points": [
+        63060,
+        4768
+      ],
+      "lidar_voxels": 13329,
+      "sampled_valid": 2048
+    },
+    {
+      "frame": "000096",
+      "gt": 9,
+      "points": [
+        63587,
+        6582
+      ],
+      "lidar_voxels": 15024,
+      "sampled_valid": 2048
+    },
+    {
+      "frame": "000097",
+      "gt": 9,
+      "points": [
+        63531,
+        5858
+      ],
+      "lidar_voxels": 14977,
+      "sampled_valid": 2048
+    },
+    {
+      "frame": "000996",
+      "gt": 2,
+      "points": [
+        65827,
+        10412
+      ],
+      "lidar_voxels": 12171,
+      "sampled_valid": 2048
+    },
+    {
+      "frame": "002049",
+      "gt": 8,
+      "points": [
+        63332,
+        16575
+      ],
+      "lidar_voxels": 16070,
+      "sampled_valid": 2048
+    },
+    {
+      "frame": "003018",
+      "gt": 3,
+      "points": [
+        41851,
+        544
+      ],
+      "lidar_voxels": 10464,
+      "sampled_valid": 2048
+    },
+    {
+      "frame": "003846",
+      "gt": 14,
+      "points": [
+        54087,
+        2323
+      ],
+      "lidar_voxels": 19173,
+      "sampled_valid": 2048
+    },
+    {
+      "frame": "004674",
+      "gt": 18,
+      "points": [
+        56929,
+        5026
+      ],
+      "lidar_voxels": 16538,
+      "sampled_valid": 2048
+    },
+    {
+      "frame": "005805",
+      "gt": 18,
+      "points": [
+        58439,
+        7457
+      ],
+      "lidar_voxels": 15554,
+      "sampled_valid": 2048
+    },
+    {
+      "frame": "006873",
+      "gt": 11,
+      "points": [
+        58776,
+        10953
+      ],
+      "lidar_voxels": 15723,
+      "sampled_valid": 2048
+    },
+    {
+      "frame": "009294",
+      "gt": 11,
+      "points": [
+        59811,
+        12588
+      ],
+      "lidar_voxels": 19745,
+      "sampled_valid": 2048
+    },
+    {
+      "frame": "010331",
+      "gt": 3,
+      "points": [
+        56518,
+        5987
+      ],
+      "lidar_voxels": 14695,
+      "sampled_valid": 2048
+    },
+    {
+      "frame": "011073",
+      "gt": 3,
+      "points": [
+        65151,
+        14259
+      ],
+      "lidar_voxels": 6454,
+      "sampled_valid": 2048
+    },
+    {
+      "frame": "012126",
+      "gt": 10,
+      "points": [
+        55919,
+        8013
+      ],
+      "lidar_voxels": 15532,
+      "sampled_valid": 2048
+    },
+    {
+      "frame": "012978",
+      "gt": 7,
+      "points": [
+        65612,
+        8449
+      ],
+      "lidar_voxels": 11292,
+      "sampled_valid": 2048
+    },
+    {
+      "frame": "009013",
+      "gt": 3,
+      "points": [
+        0,
+        12292
+      ],
+      "lidar_voxels": 0,
+      "sampled_valid": 2048
+    },
+    {
+      "frame": "010128",
+      "gt": 10,
+      "points": [
+        52064,
+        0
+      ],
+      "lidar_voxels": 20201,
+      "sampled_valid": 0
+    }
+  ],
+  "radar_feature_semantics": [
+    "ego_x",
+    "ego_y",
+    "ego_z",
+    "normalized_intensity",
+    "normalized_optional_scalar",
+    "optional_scalar_available",
+    "single_sweep_time_zero"
+  ]
+}

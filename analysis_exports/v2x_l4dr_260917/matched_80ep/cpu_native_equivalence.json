@@ -1,0 +1,48 @@
+{
+  "passed": true,
+  "at": "2026-09-17T00:55:07.286144+08:00",
+  "native_forward_bitwise_equal": true,
+  "native_parameter_gradients_bitwise_equal": true,
+  "empty_cases": [
+    {
+      "case": "lidar",
+      "shapes": {
+        "lidar_pillar_features": [
+          0,
+          64
+        ],
+        "radar_pillar_features": [
+          6,
+          64
+        ]
+      }
+    },
+    {
+      "case": "radar",
+      "shapes": {
+        "lidar_pillar_features": [
+          6,
+          64
+        ],
+        "radar_pillar_features": [
+          0,
+          64
+        ]
+      }
+    },
+    {
+      "case": "both",
+      "shapes": {
+        "lidar_pillar_features": [
+          0,
+          64
+        ],
+        "radar_pillar_features": [
+          0,
+          64
+        ]
+      }
+    }
+  ],
+  "scope": "CPU arithmetic check: Tensor.cuda redirected only within this disposable process. Separate real CUDA checks are required before formal training."
+}

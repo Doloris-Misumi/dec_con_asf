@@ -1,0 +1,16 @@
+{
+  "status": "complete",
+  "pid": 447847,
+  "gpu": 2,
+  "started": "2026-09-21T22:25:35.883910+08:00",
+  "frames": 1296,
+  "seconds": 48.469711385667324,
+  "peak_allocated_gib": 2.0377979278564453,
+  "variant": "nms010",
+  "scoring_pid": 448522,
+  "scoring_device": "CPU",
+  "overlap_partition": "one frame per part; official rules unchanged",
+  "scoring_seconds": 149.3980014063418,
+  "baseline_ap_reproduced": true,
+  "completed_at": "2026-09-21T22:32:46.759698+08:00"
+}

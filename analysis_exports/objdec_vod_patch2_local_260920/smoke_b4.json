@@ -1,0 +1,16 @@
+{
+  "batch_size": 4,
+  "losses": [
+    3.0967822074890137,
+    34.640995025634766,
+    12.027583122253418
+  ],
+  "no_gt_inference": true,
+  "prediction_conversion": true,
+  "train_frames": 5139,
+  "val_frames": 1296,
+  "peak_allocated_gib": 10.45079755783081,
+  "peak_reserved_gib": 11.376953125,
+  "seconds": 6.526599615812302,
+  "parameters": 18605583
+}

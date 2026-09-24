@@ -1,0 +1,12 @@
+Edit the supplied ObjDec motivation figure. Keep panels (a) and (b) EXACTLY unchanged: same visual contents, labels, colors, typography, arrangement. Preserve full image size and white scientific-paper style. Only correct the arrow logic and layout inside panel (c), which currently misleadingly connects "Input features" from the modality-specific branch and uses a training arrow into inference.
+
+REDRAW PANEL (c) as this clean, modestly sized conceptual data flow:
+1. A clearly separate "Input features" origin at the top of panel (c), showing three small blue/teal/purple tokens.
+2. Two explicit thin solid arrows from this input origin into TWO learned branches beneath: "Shared" at left and "Modality-specific" at right. Retain the existing three warm shared circles and three modality-colored unique symbols as their visual metaphors.
+3. From BOTH learned branches, thin arrows lead DOWN into ONE integrated "Object-guided fusion" region below. Preserve the three intuitive visual contents: amber foreground-relevance map with light retained background; three modality contribution bars; object-context tokens. Use labels "Foreground relevance", "Modality contribution", "Object context"; a small line "Controls predicted from features" inside the fusion region.
+4. A separate, thin, clearly connected bypass starts at the ORIGINAL "Input features" origin and runs along the outer edge of the branches to enter the same fusion region. It must never originate from Shared or Modality-specific. The bypass represents original input features used for fusion.
+5. The fusion region outputs to a small "Fused BEV" tile and then a box "3D detection", arranged compactly along the bottom. All solid-arrow flow is feed-forward; no loops.
+6. REMOVE the entire old dashed training bracket and all dashed supervision arrows. Instead add the text-only footnote "GT boxes supervise training only." under panel (c). This is only a footnote, not a node and not connected to anything.
+7. Keep the small overall "Conceptual illustration" footer.
+
+Use consistent fine arrowheads, no dangling lines, no arrows from output to input. Keep the number of words minimal. Do not add equations, more modules, fake quantitative results, background removal, weather, confidence claims, ground-truth input, or new text outside these corrections. Panel (c) should read as one integrated representation-guided fusion architecture, not a preliminary detector or a separate plug-in. Preserve panels (a) and (b) pixel-for-pixel as much as possible.

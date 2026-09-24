@@ -1,0 +1,14 @@
+{
+  "at": "2026-09-17T01:21:50.910947+08:00",
+  "removed": {
+    "best.pt": {
+      "bytes": 248656073,
+      "sha256": "4718e107f66de5381af982fa917d4dab5c76eb4aae6535fef8b923eed4d9d001"
+    },
+    "last.pt": {
+      "bytes": 745356691,
+      "sha256": "3276115e3751f66f41f1654e6c579bd3234c03e71d342287e3572931ed713054"
+    }
+  },
+  "reason": "Smoke restore and GPU checks passed; formal model resets to initial weights."
+}

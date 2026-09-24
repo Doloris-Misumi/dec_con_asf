@@ -1,0 +1,27 @@
+Correct ONLY the computational wiring of this existing scientific figure; keep its overall four-panel layout, relative widths, serif typography, orange Camera / blue LiDAR / purple Radar palette, token-glyph style, and training strip. Make the exact graph changes below. There are several erroneous arrows in the current draft, so erase those arrows before redrawing. This is ObjDec's main architecture. Add "ObjDec" in small text beside panel 2's header.
+
+1. Completely replace the INSIDE of narrow panel 1 with THREE SIMPLE ROWS:
+Camera label, then Encoder -> small "Project + patchify" box -> orange patch token strip.
+LiDAR label, then Encoder -> small "Project + patchify" box -> blue patch token strip.
+4D Radar label, then Encoder -> small "Project + patchify" box -> purple patch token strip.
+The three token strips leave to the per-modality input in panel 2. All three follow the same chain. Remove the huge bottom grids, the single bottom Project box, and ALL old bypass wires. Keep small footer "Aligned BEV patches". No input may skip projection. No photographs.
+
+2. Inside panel 2, remove the arrow from "Pool + concat" to "Modality contribution". Pool feeds only Foreground gate and Object context. Feed Modality contribution from a short local connector labelled "t, c, u, shared deviation". The three colored bars remain.
+
+3. Replace the wiring immediately around "Bounded scale": a local grey g connector enters it from the left, the alpha output of Modality contribution points DOWN INTO Bounded scale, then Bounded scale points RIGHT to w. No arrow ever points from Bounded scale up to Modality contribution. Show exactly these two inputs and one output.
+
+4. In panel 2's token-modulation circuit, delete the long top bypass marked "original tokens" which runs from decomposition input into the second plus. Keep ONLY the lower t connector and its bypass to that plus. The second plus must have EXACTLY TWO incoming arrows: the gated c+u residual from the left, and original t from below. Nothing else enters. Keep c and u -> first plus -> multiplication by g (lambda) -> second plus -> multiplication by w -> controlled tokens.
+Keep the foreground gate shown as a small grayscale heatmap, not as three colored modality tokens. Gate g is one predicted scalar for a patch.
+
+5. Most crucial: REDRAW PANEL 3's MAIN PATH in a strict vertical column:
+Learned queries -> plus -> Cross-modal attention -> plus -> PFT + reassemble -> Fused BEV.
+Put the attention-output plus BELOW attention, not to its right. The context gamma wire runs down the right margin then enters this BELOW-attention plus. The context beta wire still enters the BEFORE-attention query plus.
+Controlled tokens enter attention's left K,V port.
+Fused BEV must be a FEATURE GRID with small filled cells, with NO 3D bounding boxes drawn on it.
+ERASE the old line from the post-attention plus to the 3D head. ERASЕ the old arrow from Fused BEV directly to the final 3D boxes.
+
+6. In panel 4 move the 3D head DOWN so it is horizontally aligned with the Fused BEV tile. Draw ONE arrow Fused BEV -> 3D head, then 3D head -> 3D boxes below it. These are the ONLY detector connections. Never link an attention addition directly to the head. The rightmost panel can have white space above the head, which makes the feature-flow order clear.
+
+7. Keep training loss prediction labels and target branches. The target from Patch labels must go to L_dec, L_gate, L_ctx, while raw GT goes to L_det. Keep the inference-no-GT footer. No SCL diagram.
+
+No extra text, equations, or nodes beyond these corrections. Avoid introducing new bypasses. The final diagram must show the exact serial order of token modulation and attention + PFT + detection. High resolution, crisp typesetting, same clean style.

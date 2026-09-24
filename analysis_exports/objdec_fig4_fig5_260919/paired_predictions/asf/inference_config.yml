@@ -1,0 +1,12 @@
+_BASE_CONFIG_: '/home/hongsheng/K-Radar-main/configs/v1_0/cfg_A2F_scl_final_local.yml'
+GENERAL:
+  LOGGING:
+    IS_LOGGING: False
+  RESUME:
+    IS_RESUME: False
+VAL:
+  IS_VALIDATE: False
+OPTIMIZER:
+  NUM_WORKERS: 0
+DATASET:
+  portion: ["7", "9", "13", "20", "22", "24", "25", "39", "42", "43", "45", "50", "51", "52", "55", "57", "58"]

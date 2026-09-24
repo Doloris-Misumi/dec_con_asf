@@ -1,0 +1,22 @@
+{
+  "pid": 3981576,
+  "gpu": 3,
+  "command": [
+    "nice",
+    "-n",
+    "10",
+    "/home/hongsheng/dec_con_asf/v2x_taskdec/.venv/bin/python",
+    "-u",
+    "/home/hongsheng/dec_con_asf/analysis_exports/v2x_taskdec_260916/taskdec_patch2_experiment.py",
+    "run"
+  ],
+  "started_at": "2026-09-17T00:01:51.222271+08:00",
+  "resource_check": {
+    "free_mib": 48545,
+    "utilization": 0
+  },
+  "smoke_passed": true,
+  "initialization": "fresh matching original initialization; no smoke or trained checkpoint reused",
+  "authorization": "User requested independent 2x2 TaskDec experiment on GPU3",
+  "automatic_evaluation": "Full val at epoch1,5,10,...80; final best/last val and test"
+}

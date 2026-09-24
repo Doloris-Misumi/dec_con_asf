@@ -1,0 +1,8 @@
+{
+  "reason": "After successful 8-step pipeline smoke: final-step status refresh and full child-process cost accounting; optimizer first-step math unchanged; no protocol or initial-weight changes; no formal runs started",
+  "changed_files": [
+    "v2x_taskdec/launch_controlled.py",
+    "v2x_taskdec/report.py",
+    "v2x_taskdec/train.py"
+  ]
+}

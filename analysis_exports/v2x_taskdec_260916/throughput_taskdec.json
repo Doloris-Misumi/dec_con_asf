@@ -1,0 +1,18 @@
+{
+  "status": "passed",
+  "variant": "taskdec",
+  "batch_size": 2,
+  "measured_steps": 220,
+  "warmup_excluded": 20,
+  "stable_steps": 200,
+  "mean_seconds": 0.24054723298177122,
+  "median_seconds": 0.23895538691431284,
+  "p95_seconds": 0.26567059932276604,
+  "loader_batches": 4196,
+  "train_frames": 8391,
+  "peak_allocated_gib": 3.758498191833496,
+  "peak_reserved_gib": 6.474609375,
+  "device": "0",
+  "parameters": 33955125,
+  "note": "Fresh initialization, augmented real loader, all-encoder FP32 training; includes I/O and optimizer updates, no validation"
+}

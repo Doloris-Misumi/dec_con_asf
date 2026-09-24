@@ -1,0 +1,35 @@
+{
+  "frames": [
+    "seq57_rdr00279",
+    "seq43_rdr00169"
+  ],
+  "projection_checks": [
+    {
+      "id": "seq57_rdr00279",
+      "camera_K_matches_rectified_T_params": true,
+      "raw_image_distortion_model_applied": true,
+      "zoom_xy": [
+        46.796199798583984,
+        58.796199798583984,
+        -3.3862000107765198,
+        2.6137999892234802
+      ],
+      "zoom_gt_index": 0
+    },
+    {
+      "id": "seq43_rdr00169",
+      "camera_K_matches_rectified_T_params": true,
+      "raw_image_distortion_model_applied": true,
+      "zoom_xy": [
+        24.485000610351562,
+        36.48500061035156,
+        0.3900001049041748,
+        6.390000104904175
+      ],
+      "zoom_gt_index": 0
+    }
+  ],
+  "GT_color": "green dashed",
+  "prediction_color": "orange",
+  "selection_note": "Illustrative selected cases from the fixed gate candidate pool; best 3D IoU is descriptive geometry, not AP. Full candidate contact sheet retained."
+}

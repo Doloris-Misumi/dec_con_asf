@@ -1,0 +1,18 @@
+{
+  "pid": 153142,
+  "case": "objdec_lr",
+  "gpu": "1",
+  "variant": "taskdec",
+  "started_at": "2026-09-19T12:12:01.072320+08:00",
+  "command": [
+    "/home/hongsheng/dec_con_asf/v2x_taskdec/.venv/bin/python",
+    "-u",
+    "/home/hongsheng/dec_con_asf/analysis_exports/v2x_grid016_controls_260919/run.py",
+    "train",
+    "--case",
+    "objdec_lr"
+  ],
+  "log": "/home/hongsheng/dec_con_asf/analysis_exports/v2x_grid016_controls_260919/objdec_lr_80ep/taskdec/train.log",
+  "gpu_memory_before_mib": 8519,
+  "detached": true
+}

@@ -1,0 +1,1 @@
+{"epoch": 1, "samples": 200, "loss": 3.20052952170372, "det_loss": 3.135835392475128, "aux_loss": 0.5391178128123283, "train_seconds": 88.93607329204679, "optimizer_updates": 25, "val_selection_metric": 0.0}

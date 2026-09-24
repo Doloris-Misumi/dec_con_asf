@@ -1,0 +1,290 @@
+{
+  "started": "2026-09-21T22:48:26.144341+08:00",
+  "pid": 450891,
+  "gpu": 2,
+  "gpu_uuid": "GPU-a669257e-8165-eea0-ffa3-c7016159e401",
+  "command": [
+    "/home/hongsheng/miniconda3/envs/rl_3dod/bin/python",
+    "-u",
+    "/home/hongsheng/dec_con_asf/scripts/run_objdec_vod_adapted_anchors_260921.py",
+    "--cfg_file",
+    "cfgs/VoD_models/ObjDec_PP_Patch2_Local_Anchors_260921.yaml",
+    "--extra_tag",
+    "objdec_p2_local_anchors_b8a2_fp32_ep80_260921_gpu2",
+    "--batch_size",
+    "8",
+    "--epochs",
+    "80",
+    "--workers",
+    "4",
+    "--fix_random_seed",
+    "--ckpt_save_interval",
+    "5",
+    "--max_ckpt_save_num",
+    "16",
+    "--ckpt_save_time_interval",
+    "900",
+    "--logger_iter_interval",
+    "20",
+    "--wo_gpu_stat"
+  ],
+  "log": "/home/hongsheng/dec_con_asf/vod_taskdec_native/logs/objdec_vod_adapted_anchors_gpu2_260921.log",
+  "output": "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/output/VoD_models/ObjDec_PP_Patch2_Local_Anchors_260921/objdec_p2_local_anchors_b8a2_fp32_ep80_260921_gpu2",
+  "initialized_from": "scratch",
+  "epochs": 80,
+  "seed": 666,
+  "batch": 8,
+  "accumulation": 2,
+  "effective_batch": 16,
+  "bn_microbatch": 8,
+  "precision": "FP32",
+  "selection_metric": "VoD EAA mAP",
+  "evaluation_interval": 5,
+  "train_frames": 5139,
+  "val_frames": 1296,
+  "model_changes": [
+    "training-derived per-class anchor sizes and bottom heights"
+  ],
+  "preserved": [
+    "0.16m grid",
+    "patch2/query4",
+    "two stride1 local convolutions per modality",
+    "token LayerNorm",
+    "mild losses",
+    "L+R / radar5",
+    "ROI",
+    "augmentations",
+    "anchor count and rotations",
+    "target assignment thresholds",
+    "optimizer and schedule",
+    "score0.1/NMS0.01"
+  ],
+  "source_sha256": {
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/tools/cfgs/VoD_models/ObjDec_PP_Patch2_Local_Mild_260920.yaml": "c4bb947c7391e04fa10e591096b62670aa3940f72df2a0e7e5132868a0f330de",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/tools/cfgs/dataset_configs/Vod_fusion.yaml": "14d5b7ede0023bd2bcc039ccca9dcfcd2d2f0f004bb5e5ee5814dc867b8bebaa",
+    "/home/hongsheng/dec_con_asf/scripts/run_objdec_vod_patch2_local_260920.py": "41dd396970eb183fa18dc7df2c8bdb52b2b0dec4e573c81860d1c8b5bcfbb64d",
+    "/home/hongsheng/dec_con_asf/scripts/launch_objdec_vod_patch2_local_260920.py": "b40b9f81c86ee8708118822f374968b2fef337effb392422314874de94e3133c",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/tools/train.py": "6c3bc59338b16287073f9c5c90165eff08e70657f80fffc56c723bc582505e56",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/tools/train_utils/train_utils.py": "63dd534f702f3e4f4d3f9520d48f8cc910fcbc6f6c815b682113c41ca37e57e0",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/pcdet/models/backbones_2d/base_bev_backbone_taskdec.py": "28a60ed098acb37d5491241bd078b32d5a8b963ee47c47e9b55a0105c30ae3cc",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/pcdet/models/model_utils/taskdec_fuser/a2_fusion.py": "6a918e943e61fc920949d95e811d1cd25dc859428df78649db7eba38fe4bce38",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/pcdet/models/model_utils/taskdec_fuser/patch_dec_a2_fusion.py": "32e6f3b83fff74df563b66bd102914d59a072d75057b5b6ed5ed6ec5ce3acad2",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/pcdet/datasets/vod_evaluation/kitti_official_evaluate.py": "1dd11f40f197f828589d0424bf977dd651913593b78fc2bf3f7ee6ad7b67bd2e",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/pcdet/datasets/vod_evaluation/rotate_iou_cpu.py": "aa4fd2ef5ec755482acc949293ea7298a5d6ec8a00910c9cce1c9a2fbf1db7e1",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/pcdet/datasets/vod/vod_dataset.py": "449f93906fafb036c3907ee0141975553e494028f2adda0eafecdfc8c99e9927",
+    "/home/hongsheng/vod/view_of_delft_PUBLIC/rlfusion_5f/ImageSets/train.txt": "016f860b82f91a6c32d72a7fc7d00c0af3edc5b59ee112379c2046f67d6c1baa",
+    "/home/hongsheng/vod/view_of_delft_PUBLIC/rlfusion_5f/ImageSets/val.txt": "12aa11983ebf881e65e6a1c6e3c6d2a6c6049805f3aa4c0cbfb866c01bf09dd8",
+    "/home/hongsheng/vod/view_of_delft_PUBLIC/rlfusion_5f/vod_infos_train.pkl": "b1af5aaeab454782b424375e231f0732f21361aeba0f48cd40a3a7947290db01",
+    "/home/hongsheng/vod/view_of_delft_PUBLIC/rlfusion_5f/vod_infos_val.pkl": "352951f9cf2d403f225fc06e0b0e70cd923be180760fbff2e830ee07aeb245e0",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/tools/cfgs/VoD_models/ObjDec_PP_Patch2_Local_Anchors_260921.yaml": "82651ac71fb5d4dd0c641141256da874baac0dfb2f8a73cfc640b53f81e1d642",
+    "/home/hongsheng/dec_con_asf/scripts/run_objdec_vod_adapted_anchors_260921.py": "a179d0f6f95939648c965141a16720a9e2dec06a2725441763032448346c0461",
+    "/home/hongsheng/dec_con_asf/scripts/launch_objdec_vod_adapted_anchors_260921.py": "820d5dd5a6c65642e8aa25ba20e7fbb0767421e371f18c02ad3db6c91bd63840",
+    "/home/hongsheng/dec_con_asf/scripts/prepare_objdec_vod_anchors_260921.py": "21bed2745b52c24c094feb70470cafc39324bffaff834f95102b7301ed42e414",
+    "/home/hongsheng/dec_con_asf/analysis_exports/objdec_vod_adapted_anchors_260921/anchor_statistics.json": "3215a278f1fb8fcc2a6ec1c1f11c52d872fa4ea0f72e767e27e5e10129d4ff5b",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/pcdet/datasets/processor/data_processor.py": "7575c864ade566fdfa2299d4935381e1874de438ff74ff6e689c5b4ccf0d73ec",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/pcdet/utils/box_utils.py": "9d4d769dbcc63619d1715a6f3ceb952ae4e4790b938b770a0ec29b33683fb73d",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/pcdet/utils/calibration_kitti.py": "d1bcc3d0707488919e29f6f91ba464bf4118eed7c6c684a0a7d535bb52e7bdda",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/pcdet/models/dense_heads/target_assigner/anchor_generator.py": "c0c6e0992a94b614533c993a1e938dceca0f007b602cf65b059d7a9e2786d6ff",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/pcdet/models/dense_heads/target_assigner/axis_aligned_target_assigner.py": "6feee25c0ef940ae38d5845afe38275a8b554564bdc95abac6075db82118dfa6",
+    "/home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/pcdet/utils/box_coder_utils.py": "279e224f8fe299a6e8998daec037b4a439e8ff335ccae16ab258255cfb77164f"
+  },
+  "smoke": {
+    "batch_size": 8,
+    "accumulation": 2,
+    "losses": [
+      2.8411301374435425,
+      53.2442626953125,
+      13.580895900726318
+    ],
+    "no_gt_inference": true,
+    "prediction_conversion": true,
+    "train_frames": 5139,
+    "val_frames": 1296,
+    "peak_allocated_gib": 20.606438636779785,
+    "peak_reserved_gib": 22.177734375,
+    "seconds": 6.750627992674708,
+    "parameters": 18605583
+  },
+  "anchor_checks": {
+    "positive_anchors_by_class": {
+      "Car": 3039,
+      "Pedestrian": 1356,
+      "Cyclist": 1483
+    },
+    "anchors": [
+      {
+        "class_name": "Car",
+        "count": 51200,
+        "size": [
+          4.19,
+          1.81,
+          1.52
+        ],
+        "bottom_z": -1.65,
+        "roundtrip_max_abs_error": 0.0
+      },
+      {
+        "class_name": "Pedestrian",
+        "count": 51200,
+        "size": [
+          0.65,
+          0.63,
+          1.69
+        ],
+        "bottom_z": -1.62,
+        "roundtrip_max_abs_error": 0.0
+      },
+      {
+        "class_name": "Cyclist",
+        "count": 51200,
+        "size": [
+          1.94,
+          0.78,
+          1.76
+        ],
+        "bottom_z": -1.68,
+        "roundtrip_max_abs_error": 0.0
+      }
+    ]
+  },
+  "anchor_priors": {
+    "Car": {
+      "before_roi": 15608,
+      "after_roi": 15264,
+      "median_lwh": [
+        4.193787574768066,
+        1.8148305416107178,
+        1.5220201015472412
+      ],
+      "median_bottom_z": -1.648848533630371,
+      "lwh_q10_q90": [
+        [
+          3.6193814277648926,
+          1.6768839359283447,
+          1.4331787824630737
+        ],
+        [
+          4.742187976837158,
+          2.0128960609436035,
+          1.8032324314117432
+        ]
+      ],
+      "bottom_z_q10_q90": [
+        -2.2617236614227294,
+        -1.0947445511817933
+      ],
+      "old_sizes": [
+        [
+          3.9,
+          1.6,
+          1.56
+        ]
+      ],
+      "old_bottom_heights": [
+        -1.78
+      ],
+      "new_sizes": [
+        [
+          4.19,
+          1.81,
+          1.52
+        ]
+      ],
+      "new_bottom_heights": [
+        -1.65
+      ]
+    },
+    "Pedestrian": {
+      "before_roi": 16143,
+      "after_roi": 15441,
+      "median_lwh": [
+        0.6457169055938721,
+        0.6291552782058716,
+        1.6888294219970703
+      ],
+      "median_bottom_z": -1.619870901107788,
+      "lwh_q10_q90": [
+        [
+          0.47151386737823486,
+          0.5320098996162415,
+          1.4046767950057983
+        ],
+        [
+          0.874971866607666,
+          0.7644049525260925,
+          1.8165228366851807
+        ]
+      ],
+      "bottom_z_q10_q90": [
+        -2.2996628284454346,
+        -1.0583444833755493
+      ],
+      "old_sizes": [
+        [
+          0.8,
+          0.6,
+          1.73
+        ]
+      ],
+      "old_bottom_heights": [
+        -0.6
+      ],
+      "new_sizes": [
+        [
+          0.65,
+          0.63,
+          1.69
+        ]
+      ],
+      "new_bottom_heights": [
+        -1.62
+      ]
+    },
+    "Cyclist": {
+      "before_roi": 6685,
+      "after_roi": 6450,
+      "median_lwh": [
+        1.9369806051254272,
+        0.7761598229408264,
+        1.7565723657608032
+      ],
+      "median_bottom_z": -1.6755945682525635,
+      "lwh_q10_q90": [
+        [
+          1.7899487018585205,
+          0.6474409699440002,
+          1.5993657112121582
+        ],
+        [
+          2.0806500911712646,
+          0.9719594120979309,
+          1.8643932342529297
+        ]
+      ],
+      "bottom_z_q10_q90": [
+        -2.2983269453048707,
+        -0.9790531516075133
+      ],
+      "old_sizes": [
+        [
+          1.76,
+          0.6,
+          1.73
+        ]
+      ],
+      "old_bottom_heights": [
+        -0.6
+      ],
+      "new_sizes": [
+        [
+          1.94,
+          0.78,
+          1.76
+        ]
+      ],
+      "new_bottom_heights": [
+        -1.68
+      ]
+    }
+  }
+}

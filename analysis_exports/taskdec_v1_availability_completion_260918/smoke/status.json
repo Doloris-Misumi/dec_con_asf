@@ -1,0 +1,28 @@
+{
+  "phase": "complete",
+  "started_at": "2026-09-18T00:20:22.797310+08:00",
+  "frames": 3,
+  "total_frames": 10065,
+  "cases": [
+    "c",
+    "l",
+    "r",
+    "c_star",
+    "c_star_lr",
+    "cl_star_r"
+  ],
+  "failure_count": 0,
+  "updated_at": "2026-09-18T00:24:30.736052+08:00",
+  "pid": 4145261,
+  "gpu": 2,
+  "dataset_index": 10064,
+  "elapsed_seconds": 3.356278346851468,
+  "frames_per_second": 0.8938471991795038,
+  "peak_allocated_gib": 1.1245837211608887,
+  "case": "cl_star_r",
+  "confidence": 0.3,
+  "condition": "all",
+  "evaluation_group_frames": 3,
+  "traceback": "Traceback (most recent call last):\n  File \"tools/analysis/run_taskdec_v1_availability_completion_260918.py\", line 314, in main\n    evaluate(out, pack, manifest['is_validation_updated'], smoke=args.smoke)\n  File \"tools/analysis/run_taskdec_v1_availability_completion_260918.py\", line 191, in evaluate\n    metrics, report = evaluator([gt[i] for i in ids], [dt[i] for i in ids], 0, is_return_with_dict=True)\n  File \"/home/hongsheng/dec_con_asf/utils/kitti_eval/eval.py\", line 790, in get_official_eval_result\n    metrics = do_eval_v3(\n  File \"/home/hongsheng/dec_con_asf/utils/kitti_eval/eval.py\", line 671, in do_eval_v3\n    ret = eval_class(\n  File \"/home/hongsheng/dec_con_asf/utils/kitti_eval/eval.py\", line 514, in eval_class\n    rets = calculate_iou_partly(\n  File \"/home/hongsheng/dec_con_asf/utils/kitti_eval/eval.py\", line 396, in calculate_iou_partly\n    gt_boxes = np.concatenate([a[\"bbox\"] for a in gt_annos_part], 0)\n  File \"<__array_function__ internals>\", line 5, in concatenate\nValueError: need at least one array to concatenate\n",
+  "completed_at": "2026-09-18T00:24:30.735930+08:00"
+}

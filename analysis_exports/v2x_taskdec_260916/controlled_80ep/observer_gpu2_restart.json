@@ -1,0 +1,5 @@
+{
+  "old_observer_pid": 3881196,
+  "new_observer_pid": 3956229,
+  "reason": "Reflect GPU2 parallel scheduling and new controller identity; no training source changes"
+}

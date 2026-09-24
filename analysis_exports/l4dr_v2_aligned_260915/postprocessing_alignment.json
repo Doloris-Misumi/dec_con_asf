@@ -1,0 +1,54 @@
+{
+  "native_config_sha256": "5b3974c0ca60f957a4f10d63fd2cc2f5745c4724304d50099b69843f09801ce4",
+  "native_effective_postprocessing": {
+    "RECALL_THRESH_LIST": [
+      0.3,
+      0.5,
+      0.7
+    ],
+    "SCORE_THRESH": 0.1,
+    "OUTPUT_RAW_SCORE": false,
+    "EVAL_METRIC": "kitti",
+    "NMS_CONFIG": {
+      "MULTI_CLASSES_NMS": false,
+      "NMS_TYPE": "nms_gpu",
+      "NMS_THRESH": 0.7,
+      "NMS_PRE_MAXSIZE": 4096,
+      "NMS_POST_MAXSIZE": 500
+    }
+  },
+  "dense_head_copy_not_used_for_final_nms": {
+    "RECALL_THRESH_LIST": [
+      0.3,
+      0.5,
+      0.7
+    ],
+    "SCORE_THRESH": 0.1,
+    "OUTPUT_RAW_SCORE": false,
+    "EVAL_METRIC": "kitti",
+    "NMS_CONFIG": {
+      "MULTI_CLASSES_NMS": false,
+      "NMS_TYPE": "nms_gpu",
+      "NMS_THRESH": 0.01,
+      "NMS_PRE_MAXSIZE": 4096,
+      "NMS_POST_MAXSIZE": 500
+    }
+  },
+  "aligned_effective_postprocessing": {
+    "RECALL_THRESH_LIST": [
+      0.3,
+      0.5,
+      0.7
+    ],
+    "SCORE_THRESH": 0.1,
+    "OUTPUT_RAW_SCORE": false,
+    "EVAL_METRIC": "kitti",
+    "NMS_CONFIG": {
+      "MULTI_CLASSES_NMS": false,
+      "NMS_TYPE": "nms_gpu",
+      "NMS_THRESH": 0.01,
+      "NMS_PRE_MAXSIZE": 4096,
+      "NMS_POST_MAXSIZE": 500
+    }
+  }
+}

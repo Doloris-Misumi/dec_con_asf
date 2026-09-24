@@ -1,0 +1,26 @@
+{
+  "updated_at": "2026-09-16T08:46:22.876451+08:00",
+  "forecast": "2026-09-19T03:16:55.426210+08:00",
+  "basis": "Completed-epoch training time plus measured validation and final evaluation estimates, with 25% allowance. Pending patch uses engineering training throughput and observed validation from other variants. No protocol changes.",
+  "runs": {
+    "taskdec": {
+      "seconds_per_training_epoch": 1004.8446246795356,
+      "measured_validation_seconds": 844.0436016935855,
+      "pending_scheduled_validations": 16,
+      "remaining_final_evaluation_seconds": 6105.55297165364
+    },
+    "concat": {
+      "seconds_per_training_epoch": 1004.3729656804353,
+      "measured_validation_seconds": 869.1965575087816,
+      "pending_scheduled_validations": 16,
+      "remaining_final_evaluation_seconds": 6305.480139642954
+    },
+    "patch": {
+      "seconds_per_training_epoch": 888.4583803165332,
+      "measured_validation_seconds": 869.1965575087816,
+      "pending_scheduled_validations": 17,
+      "remaining_final_evaluation_seconds": 6305.480139642954
+    }
+  },
+  "training_protocol_changed": false
+}

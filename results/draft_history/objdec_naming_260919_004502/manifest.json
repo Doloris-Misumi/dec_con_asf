@@ -1,0 +1,52 @@
+{
+  "changed_at": "2026-09-19T00:45:02+08:00",
+  "title": "Decoupling to Fuse: Learning Shared and Modality-Specific Representations for Multi-Sensor 3D Object Detection",
+  "name": "ObjDec",
+  "full_name": "Object-Guided Representation Decoupling",
+  "files": {
+    "taskdec_abstract_initial_draft_260917.md": {
+      "original_TaskDec_mentions": 8,
+      "original_task_aware_zh": 1,
+      "original_task_aware_en": 0,
+      "original_task_context": 1,
+      "changed_original_lines": 6,
+      "before_sha256": "771b388d2e4249015508b58504e6a1a3766da07e4c413500cfaaa497760a915d",
+      "after_sha256": "3423f84f2030303008e1e1d4e058e7ef5b478c2cec1b6fe18e74c408fe761a38"
+    },
+    "taskdec_introduction_bilingual_initial_260917.md": {
+      "original_TaskDec_mentions": 13,
+      "original_task_aware_zh": 2,
+      "original_task_aware_en": 2,
+      "original_task_context": 2,
+      "changed_original_lines": 13,
+      "before_sha256": "190373827126fe47edc93d933dc1bae02e3e8a56a437b2f933bce0441f7494af",
+      "after_sha256": "52c1ea817ea2bb1180cc13033df943a6b9510a60fd63258dc6cc76c2afd7aec9"
+    },
+    "taskdec_related_work_bilingual_initial_260917.md": {
+      "original_TaskDec_mentions": 15,
+      "original_task_aware_zh": 0,
+      "original_task_aware_en": 0,
+      "original_task_context": 0,
+      "changed_original_lines": 14,
+      "before_sha256": "35aaf701ef349364b6b162fdabea80d7074d1b2a8068ed683fbab3764f6f196a",
+      "after_sha256": "fc7857b7c8b257ba1c48f6921b9ecb52ac3a348990d14532ef47783490381d4d"
+    },
+    "taskdec_methods_bilingual_initial_260917.md": {
+      "original_TaskDec_mentions": 13,
+      "original_task_aware_zh": 1,
+      "original_task_aware_en": 1,
+      "original_task_context": 0,
+      "changed_original_lines": 16,
+      "before_sha256": "2262514d897bc3dd3c302848ce453e0c493123c85e7ed7eb3fb6ea87754e1601",
+      "after_sha256": "e58e6c4e519b2222beda18f40b763cbc51bfb4cad284b93d95fb1f1a49f0d5bb"
+    }
+  },
+  "checks": [
+    "No old method name/task-aware/task-context prose remains",
+    "All original Markdown link targets identical",
+    "All inline code identifiers identical",
+    "All math blocks and inline math identical",
+    "All original numerical tokens identical",
+    "FactorCL wording and BEVFusion publication title identical"
+  ]
+}

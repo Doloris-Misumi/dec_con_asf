@@ -1,0 +1,16 @@
+{
+  "0": {
+    "frames": 12,
+    "bitwise_identical": true
+  },
+  "1": {
+    "frames": 12,
+    "bitwise_identical": true
+  },
+  "2": {
+    "frames": 12,
+    "bitwise_identical": true
+  },
+  "baseline_full_ap_bitwise_dict_equal": true,
+  "matches_diagnostic_original_partition": true
+}

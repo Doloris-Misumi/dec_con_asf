@@ -1,0 +1,21 @@
+{
+  "at": "2026-09-17T00:51:41.518085+08:00",
+  "original_protocol": "/home/hongsheng/dec_con_asf/analysis_exports/v2x_taskdec_260916/controlled_80ep",
+  "native_yaml_sha256": "c0e44f115a3f221e502af060939cdecd13366efd781761f9981db17453d9b8a6",
+  "native_diff": "/home/hongsheng/dec_con_asf/analysis_exports/v2x_l4dr_260917/native_mme.diff",
+  "adaptations": [
+    "V2X audited ego coordinates, field normalization, ROI, class merge, train-only anchors.",
+    "Native 0.16m XY voxel resolution retained; pillar height adapted to 8m ROI.",
+    "Same six radar fields as TaskDec plus constant single-sweep relative time 0.",
+    "Native 2048-point sampling; fixed per-frame RNG in evaluation; explicit invalid mask for empty radar.",
+    "Native PointNet2, foreground head, MME and MGF parameter widths retained.",
+    "Exact coordinate join replaces quadratic equality matrix; equivalent on nonempty inputs.",
+    "Empty-safe MME/scatter and one-element radar BN fallback; no dummy detections or dropped frames.",
+    "Point-head labels computed only during training; inference never reads GT.",
+    "Shared TaskDec decode/NMS and evaluator for identical comparison protocol.",
+    "Native point foreground loss plus detection loss; no TaskDec auxiliary loss.",
+    "80-epoch AdamW/cosine/effective-batch8 matched schedule, not original VoD onecycle recipe."
+  ],
+  "selection": "maximum deduplicated val strict moderate mean 3D AP_R40; earliest epoch breaks ties",
+  "source_files": 225
+}

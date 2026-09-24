@@ -1,0 +1,32 @@
+{
+  "checkpoint": "/home/hongsheng/dec_con_asf/logs/exp_260810_221258_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/models/model_0.pt",
+  "checkpoint_sha256": "99eb07e8a0b01ec397d3f2ac890091fe539194149a2c542cf41c465c9f02a2d3",
+  "config": "/home/hongsheng/dec_con_asf/logs/exp_260810_221258_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/config.yml",
+  "config_sha256": "e82a6d31b648d11d32bb5d867e52974f451a8745dbf2b5d4d256baa713f2fb20",
+  "script_sha256": "d9f571aa249f2b3ecdeaba8bb877d9e816bb3bf8a2bc7fb5ced3692218361b27",
+  "smoke": true,
+  "dataset_size": 10065,
+  "target_frames": 7,
+  "created_at": "2026-09-19T01:11:35.292902+08:00",
+  "gpu": 0,
+  "memory_fraction": 0.28,
+  "precision": "FP32, no autocast",
+  "feature_order": [
+    "raw",
+    "common",
+    "unique"
+  ],
+  "modality_order": [
+    "Camera",
+    "LiDAR",
+    "4D Radar"
+  ],
+  "cosine_pair_order": [
+    "CL",
+    "CR",
+    "LR"
+  ],
+  "mask": "Original GT-foreground patch mask, including configured margin; all foreground patches retained in statistics.",
+  "storage": "Compressed per-frame means and scalar statistics, chunks of 100. No full patch feature dump.",
+  "weighting": "Main means: equal frame weights within weather. PCA: equal weather, frame within weather, and modality weights."
+}

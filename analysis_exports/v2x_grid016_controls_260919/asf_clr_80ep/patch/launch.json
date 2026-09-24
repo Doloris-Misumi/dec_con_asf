@@ -1,0 +1,18 @@
+{
+  "pid": 153026,
+  "case": "asf_clr",
+  "gpu": "0",
+  "variant": "patch",
+  "started_at": "2026-09-19T12:11:57.316055+08:00",
+  "command": [
+    "/home/hongsheng/dec_con_asf/v2x_taskdec/.venv/bin/python",
+    "-u",
+    "/home/hongsheng/dec_con_asf/analysis_exports/v2x_grid016_controls_260919/run.py",
+    "train",
+    "--case",
+    "asf_clr"
+  ],
+  "log": "/home/hongsheng/dec_con_asf/analysis_exports/v2x_grid016_controls_260919/asf_clr_80ep/patch/train.log",
+  "gpu_memory_before_mib": 8648,
+  "detached": true
+}

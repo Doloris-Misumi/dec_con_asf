@@ -1,0 +1,11 @@
+{
+  "phase": "complete",
+  "pid": 634157,
+  "gpu": 2,
+  "updated_at": "2026-09-24T00:08:23.221353+08:00",
+  "completed_frames": 10065,
+  "cases": 8,
+  "synthetic_metric_smoke_only": false,
+  "seconds": 9720.262092530727,
+  "output_bytes": 16751727
+}

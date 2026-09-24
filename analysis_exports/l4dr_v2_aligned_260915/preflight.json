@@ -1,0 +1,49 @@
+{
+  "status": "complete",
+  "time": "2026-09-15T20:28:56.939493+08:00",
+  "num_samples": 13727,
+  "gt_exact_match": true,
+  "all_radar_paths_verified": true,
+  "all_lidar_paths_verified": true,
+  "weather_counts": {
+    "normal": 5415,
+    "overcast": 414,
+    "rain": 1424,
+    "sleet": 2206,
+    "fog": 1445,
+    "lightsnow": 1103,
+    "heavysnow": 1720
+  },
+  "class_gt_counts": {
+    "Sedan": 29613,
+    "Bus or Truck": 5843
+  },
+  "manifest_sha256": "47e25d7d8526e10c5faef7ec3c6d3f22671f05857586df3b271abb25cb8611ee",
+  "split_sha256": "47c8c1883acf65ea2939db5b92588a5d5f66bc56471e6ba80a1c94a9961d1d2c",
+  "l4dr_config_sha256": "48ea0d4b968fccdb568d7f0b09332c3090716c110906c3839ba94740da269216",
+  "revised_evaluator_sha256": "a564cb101c5b20a2e655e6afde5e8d3aa8e8eb85a369abd93ff012d9bab8cee3",
+  "protocol": {
+    "labels": "v2_0",
+    "roi": [
+      0,
+      -16,
+      -2,
+      72,
+      16,
+      7.6
+    ],
+    "confidence": 0.3,
+    "nms": {
+      "MULTI_CLASSES_NMS": false,
+      "NMS_TYPE": "nms_gpu",
+      "NMS_THRESH": 0.01,
+      "NMS_PRE_MAXSIZE": 4096,
+      "NMS_POST_MAXSIZE": 500
+    },
+    "score_pre_filter": 0.1,
+    "z_center": 0.5,
+    "ap_samples": 41
+  },
+  "checkpoint_training_protocol": "author release v2.1; not claimed identical training protocol",
+  "strong_prediction_root": "/home/hongsheng/dec_con_asf/logs/exp_260806_000825_DecControlledASFStrong_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/none/0.3/all/preds"
+}

@@ -1,0 +1,13 @@
+{
+  "passed": true,
+  "max_tolerance_pp": 0.05,
+  "differences": {
+    "3D@0.7": 0.021246928276763555,
+    "3D@0.5": -0.01757467758264397,
+    "3D@0.3": 0.004885220493690667,
+    "BEV@0.7": 0.020978939584587408,
+    "BEV@0.5": 0.011353262077690829,
+    "BEV@0.3": -0.0019688806573725515
+  },
+  "historical_source": "/home/hongsheng/dec_con_asf/results/exp_260812_232650_TaskDecControlRobust_v1_model0_full/per_condition/all_conf0.3.json"
+}

@@ -1,0 +1,9 @@
+{
+  "source": "https://huggingface.co/hx24/L4DR_KRadar2.1/resolve/4f65460867a61a704a2290ff0ca2e8d05b463312/model_30.pt",
+  "revision": "4f65460867a61a704a2290ff0ca2e8d05b463312",
+  "path": "/home/hongsheng/L4DR/checkpoints/L4DR-KRadar-v2.1-model_30.pt",
+  "sha256": "ccdc151a0c16185be8ab1801affed1f71fd6f63ae6f3c2fbf94c30346a0d8180",
+  "bytes": 248566281,
+  "author_repository": "https://github.com/ylwhxht/L4DR",
+  "note": "model.pt and model_30.pt in this revision have identical LFS hashes; only one copy downloaded."
+}

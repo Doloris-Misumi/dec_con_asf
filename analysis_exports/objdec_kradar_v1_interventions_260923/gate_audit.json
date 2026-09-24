@@ -1,0 +1,30 @@
+{
+  "gate_mean": {
+    "frame": "1:{\"camf\": \"00449\", \"camr\": \"00451\", \"ldr128\": \"00150\", \"ldr64\": \"00150\", \"rdr\": \"00182\", \"tstamp\": \"1643292961.606203716\"}",
+    "patches": 1440,
+    "mean_preserved": true,
+    "distribution_preserved": false,
+    "changed_fraction": 1.0
+  },
+  "gate_shuffle_260923": {
+    "frame": "1:{\"camf\": \"00449\", \"camr\": \"00451\", \"ldr128\": \"00150\", \"ldr64\": \"00150\", \"rdr\": \"00182\", \"tstamp\": \"1643292961.606203716\"}",
+    "patches": 1440,
+    "mean_preserved": true,
+    "distribution_preserved": true,
+    "changed_fraction": 1.0
+  },
+  "gate_shuffle_260924": {
+    "frame": "1:{\"camf\": \"00449\", \"camr\": \"00451\", \"ldr128\": \"00150\", \"ldr64\": \"00150\", \"rdr\": \"00182\", \"tstamp\": \"1643292961.606203716\"}",
+    "patches": 1440,
+    "mean_preserved": true,
+    "distribution_preserved": true,
+    "changed_fraction": 1.0
+  },
+  "gate_shuffle_260925": {
+    "frame": "1:{\"camf\": \"00449\", \"camr\": \"00451\", \"ldr128\": \"00150\", \"ldr64\": \"00150\", \"rdr\": \"00182\", \"tstamp\": \"1643292961.606203716\"}",
+    "patches": 1440,
+    "mean_preserved": true,
+    "distribution_preserved": true,
+    "changed_fraction": 0.9986111521720886
+  }
+}

@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering
+\small
+\caption{Extension to K-Radar benchmark v2.0 with C+L+R inputs and score threshold 0.3. Strong is a Dec-family variant without task-context modulation. Mean is the arithmetic mean of the two class APs. ASF uses archived results from the released official checkpoint.}
+\label{tab:kradar_v2_decstrong}
+\begin{tabular}{lrrrrrr}
+\toprule
+& \multicolumn{3}{c}{AP$_{\rm 3D}$@0.3} & \multicolumn{3}{c}{AP$_{\rm 3D}$@0.5} \\
+Method & Sedan & Bus/Truck & Mean & Sedan & Bus/Truck & Mean \\
+\midrule
+ASF (official) & 74.98 & 58.13 & 66.55 & 52.09 & 31.06 & 41.57 \\
+DecControlled Strong (ours) & 74.58 & 59.24 & 66.91 & 52.14 & 33.97 & 43.05 \\
+\bottomrule
+\end{tabular}
+\end{table}

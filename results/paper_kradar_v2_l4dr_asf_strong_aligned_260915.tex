@@ -1,0 +1,52 @@
+\begin{table*}[t]
+\centering
+\small
+\caption{K-Radar v2.0 comparison. L4DR is evaluated locally with the same frames, ground truth, postprocessing, and revised evaluator as Strong. ASF uses archived official results.}
+\label{tab:kradar_v2_aligned}
+\begin{tabular}{llrrrrrr}
+\toprule
+Method & Input & \multicolumn{3}{c}{AP$_{3D}$@0.3} & \multicolumn{3}{c}{AP$_{3D}$@0.5} \\
+ & & Sedan & Bus/Truck & Mean & Sedan & Bus/Truck & Mean \\
+\midrule
+L4DR (local) & L+R & 76.79 & 62.17 & 69.48 & 54.68 & 41.78 & 48.23 \\
+ASF (archive) & C+L+R & 74.98 & 58.13 & 66.55 & 52.09 & 31.06 & 41.57 \\
+DecControlled Strong (ours) & C+L+R & 74.58 & 59.24 & 66.91 & 52.14 & 33.97 & 43.05 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{table*}[t]
+\centering
+\scriptsize
+\caption{Weather breakdown of AP$_{3D}$@0.3. Source definitions follow Table~\ref{tab:kradar_v2_aligned}. A dash denotes no ground-truth objects.}
+\begin{tabular}{llrrrrrrrr}
+\toprule
+Class & Method & Total & Normal & Light snow & Heavy snow & Rain & Sleet & Overcast & Fog \\
+\midrule
+Sedan & L4DR (local) & 76.79 & 75.52 & 87.71 & 58.49 & 78.25 & 67.17 & 83.57 & 93.60 \\
+Sedan & ASF (archive) & 74.98 & 74.14 & 88.24 & 63.61 & 66.37 & 70.43 & 82.35 & 92.26 \\
+Sedan & Strong (ours) & 74.58 & 73.51 & 89.56 & 63.57 & 68.11 & 72.52 & 84.30 & 94.46 \\
+Bus/Truck & L4DR (local) & 62.17 & 56.27 & 80.47 & 63.76 & 2.96 & 74.75 & 87.43 & -- \\
+Bus/Truck & ASF (archive) & 58.13 & 53.28 & 88.26 & 68.20 & 7.89 & 59.55 & 75.33 & -- \\
+Bus/Truck & Strong (ours) & 59.24 & 51.63 & 89.56 & 72.34 & 10.08 & 57.47 & 73.82 & -- \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+\begin{table*}[t]
+\centering
+\scriptsize
+\caption{Weather breakdown of AP$_{3D}$@0.5. Source definitions follow Table~\ref{tab:kradar_v2_aligned}. A dash denotes no ground-truth objects.}
+\begin{tabular}{llrrrrrrrr}
+\toprule
+Class & Method & Total & Normal & Light snow & Heavy snow & Rain & Sleet & Overcast & Fog \\
+\midrule
+Sedan & L4DR (local) & 54.68 & 50.21 & 62.32 & 53.33 & 53.03 & 47.42 & 56.53 & 83.81 \\
+Sedan & ASF (archive) & 52.09 & 49.63 & 59.25 & 49.52 & 46.85 & 44.05 & 53.38 & 80.55 \\
+Sedan & Strong (ours) & 52.14 & 49.39 & 60.75 & 50.49 & 48.30 & 49.13 & 59.62 & 80.30 \\
+Bus/Truck & L4DR (local) & 41.78 & 36.60 & 53.30 & 41.11 & 0.68 & 62.92 & 76.06 & -- \\
+Bus/Truck & ASF (archive) & 31.06 & 23.93 & 70.81 & 32.55 & 2.48 & 38.83 & 47.04 & -- \\
+Bus/Truck & Strong (ours) & 33.97 & 23.94 & 75.09 & 39.37 & 5.05 & 38.48 & 49.65 & -- \\
+\bottomrule
+\end{tabular}
+\end{table*}

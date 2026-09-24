@@ -1,0 +1,19 @@
+{
+  "phase": "complete",
+  "pid": 62013,
+  "gpu": 0,
+  "updated_at": "2026-09-19T03:39:01.556454+08:00",
+  "elapsed_seconds": 8797.6,
+  "completed": 10065,
+  "target": 10065,
+  "weather_counts": {
+    "normal": 4309,
+    "overcast": 383,
+    "rain": 1317,
+    "sleet": 1106,
+    "fog": 1049,
+    "lightsnow": 803,
+    "heavysnow": 1098
+  },
+  "output_bytes": 89637367
+}

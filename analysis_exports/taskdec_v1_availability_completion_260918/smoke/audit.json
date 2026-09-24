@@ -1,0 +1,47 @@
+[
+  {
+    "index": 0,
+    "case": "c",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 0,
+    "case": "l",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 0,
+    "case": "r",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 5000,
+    "case": "c",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 5000,
+    "case": "l",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 5000,
+    "case": "r",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 10064,
+    "case": "c",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 10064,
+    "case": "l",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 10064,
+    "case": "r",
+    "original_network_equivalent": true
+  }
+]

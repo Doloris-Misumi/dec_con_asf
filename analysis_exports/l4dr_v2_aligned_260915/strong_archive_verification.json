@@ -1,0 +1,6 @@
+{
+  "status": "complete",
+  "metrics_checked": 216,
+  "maximum_absolute_difference": 0.0,
+  "source_csv": "results/paper_kradar_v2_decstrong_asf_comparison_260912.csv"
+}

@@ -1,0 +1,49 @@
+{
+  "source_files_unchanged": true,
+  "embedded_raw_camera_sha256": "ebbc3933b3bd482b3e0b61a1b4d01ff03096acc276a15f47580436ff6d56b74a",
+  "template_sha256": "d6ddc19e0343646ed1aaffd25b7431b129b5848736f5bfd4ec05f190241f6699",
+  "model_prediction_source_sha256": "105ff487bcb0877c11d2eb21297710d0956811df92f81051de1198a57948484c",
+  "sensor_sample_ids": {
+    "sequence": 13,
+    "radar": "00146",
+    "lidar": "00107",
+    "camera": "00321"
+  },
+  "raw_camera_is_embedded_directly": true,
+  "generated_data_inserts": false,
+  "predicted_boxes_drawn_without_changes": [
+    [
+      22.206689834594727,
+      -2.374689817428589,
+      0.36395952105522156,
+      4.631627082824707,
+      2.331475257873535,
+      2.1407485008239746,
+      6.262611389160156
+    ],
+    [
+      60.93703842163086,
+      0.9238422513008118,
+      0.6685813665390015,
+      4.5831098556518555,
+      2.288506031036377,
+      2.029832363128662,
+      6.266357421875
+    ]
+  ],
+  "tokens": "Each t_m maps independently to c_m and u_m; original t_m bypass retained.",
+  "artifacts": {
+    "objdec_motivation_real_kradar_v3.svg": {
+      "bytes": 4840701,
+      "sha256": "7ca223e2f5a6eccdbb226f88506eef9ea4727a27bf99394a1ce9de8f563d842f"
+    },
+    "objdec_motivation_real_kradar_v3.png": {
+      "bytes": 2867789,
+      "sha256": "246574f353db0ea4c2ceb9e2acb99bdc69c59ff9d54755e8bb2022c7a6ff4b6c"
+    },
+    "objdec_motivation_real_kradar_v3.pdf": {
+      "bytes": 3594532,
+      "sha256": "a9609d4e4199635c9d6aa2483be01bf63db50f77127514802f06b25f9a4a0183"
+    }
+  }
+}

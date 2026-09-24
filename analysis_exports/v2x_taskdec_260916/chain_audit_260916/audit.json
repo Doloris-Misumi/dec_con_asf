@@ -1,0 +1,382 @@
+{
+  "purpose": "diagnostic, not AP or checkpoint selection",
+  "frame_ids": [
+    "000009",
+    "000248",
+    "000404",
+    "000637",
+    "000844",
+    "000957",
+    "001221",
+    "001389",
+    "001685",
+    "001811",
+    "002005",
+    "002092",
+    "002371",
+    "002454",
+    "002712",
+    "002912",
+    "003068",
+    "003313",
+    "003412",
+    "003517",
+    "003708",
+    "003852",
+    "003995",
+    "004109",
+    "004394",
+    "004558",
+    "004669",
+    "004881",
+    "005133",
+    "005337",
+    "005522",
+    "005720",
+    "005914",
+    "006100",
+    "006306",
+    "006537",
+    "006780",
+    "006893",
+    "007097",
+    "007294",
+    "007438",
+    "009146",
+    "009353",
+    "009527",
+    "009720",
+    "009912",
+    "010222",
+    "010332",
+    "010466",
+    "010559",
+    "010807",
+    "010925",
+    "011021",
+    "011229",
+    "011453",
+    "011678",
+    "011851",
+    "011988",
+    "012255",
+    "012451",
+    "012533",
+    "012708",
+    "012826",
+    "012994"
+  ],
+  "source_hash_check": "passed",
+  "runs": {
+    "taskdec_best": {
+      "epoch": 10,
+      "checkpoint_sha256": "06ca4be41516872d0f0f64b041165d06382d06386287db04acce5f2ff7b5aa04",
+      "modes": {
+        "eval": {
+          "gt_counts": [
+            239,
+            146,
+            147
+          ],
+          "hits": [
+            129,
+            75,
+            105
+          ],
+          "recall_score_01_strict": [
+            0.5397489539748954,
+            0.5136986301369864,
+            0.7142857142857143
+          ],
+          "seconds": 7.899287389591336
+        },
+        "control_off": {
+          "gt_counts": [
+            239,
+            146,
+            147
+          ],
+          "hits": [
+            111,
+            61,
+            93
+          ],
+          "recall_score_01_strict": [
+            0.46443514644351463,
+            0.4178082191780822,
+            0.6326530612244898
+          ],
+          "seconds": 8.360406232997775
+        },
+        "batch_bn": {
+          "gt_counts": [
+            239,
+            146,
+            147
+          ],
+          "hits": [
+            124,
+            74,
+            110
+          ],
+          "recall_score_01_strict": [
+            0.5188284518828452,
+            0.5068493150684932,
+            0.7482993197278912
+          ],
+          "seconds": 8.665892753750086
+        }
+      },
+      "probe": {
+        "fuser_train_eval_max_abs": 0.0,
+        "fuser_eval_changed_gt_max_abs": 0.0,
+        "logging": {
+          "patch_dec_loss_raw": 0.21485386788845062,
+          "patch_dec_decouple": 0.0017694353591650724,
+          "patch_dec_common": 0.005051759071648121,
+          "patch_dec_unique": 0.0,
+          "dec_control_gate_loss": 0.163181334733963,
+          "dec_control_class_loss": 0.6319783329963684,
+          "dec_control_entropy": 0.0,
+          "dec_control_balance": 0.0,
+          "dec_control_fg_gate_mean": 0.09098152816295624,
+          "dec_control_fg_gate_fg_mean": 0.7505024075508118,
+          "dec_control_fg_gate_bg_mean": 0.08847631514072418,
+          "dec_control_scale_mean": 0.999659538269043,
+          "dec_control_scale_min": 0.4000000059604645,
+          "dec_control_scale_max": 2.0999999046325684,
+          "dec_control_query_delta_norm": 0.019860614091157913,
+          "dec_control_fused_delta_norm": 0.007447730749845505,
+          "dec_control_schedule_factor": 1.0,
+          "patch_dec_num_patches": 31.0,
+          "patch_dec_fg_patches": 31.0,
+          "patch_dec_fg_ratio": 0.0037841796875,
+          "patch_dec_selection_code": 1.0,
+          "dec_control_cls_prob_1": 0.8847355842590332,
+          "dec_control_cls_fg_prob_1": 0.3966667950153351,
+          "dec_control_cls_prob_2": 0.03061593323945999,
+          "dec_control_cls_fg_prob_2": 0.24397079646587372,
+          "dec_control_cls_prob_3": 0.08464844524860382,
+          "dec_control_cls_fg_prob_3": 0.35936239361763,
+          "dec_control_w_camera": 2.218848567281384e-05,
+          "dec_control_w_fg_camera": 2.397746584392735e-06,
+          "dec_control_w_bg_camera": 2.2263660866883583e-05,
+          "dec_control_w_lidar": 0.9998716115951538,
+          "dec_control_w_fg_lidar": 0.9999713897705078,
+          "dec_control_w_bg_lidar": 0.9998712539672852,
+          "dec_control_w_radar": 0.00010621544788591564,
+          "dec_control_w_fg_radar": 2.623092041176278e-05,
+          "dec_control_w_bg_radar": 0.00010651928459992632
+        },
+        "within_patch_relative_rms": {
+          "camera": 0.46505942940711975,
+          "lidar": 0.6520046591758728,
+          "radar": 0.5640431046485901,
+          "fused": 0.14190921187400818
+        },
+        "foreground_mask_numpy_equal": true,
+        "gradient_probe": {
+          "det_loss": 1.0074241161346436,
+          "weighted_aux_loss": 0.02578246407210827,
+          "modalities": {
+            "camera": {
+              "det_norm": 0.0027889239136129618,
+              "aux_norm": 0.00026321274344809353,
+              "aux_over_det": 0.09437788277864456,
+              "cosine": -0.006150604225695133
+            },
+            "lidar": {
+              "det_norm": 0.12183093279600143,
+              "aux_norm": 0.005803820211440325,
+              "aux_over_det": 0.047638311982154846,
+              "cosine": 0.0356418713927269
+            },
+            "radar": {
+              "det_norm": 0.009434357285499573,
+              "aux_norm": 0.0004108078428544104,
+              "aux_over_det": 0.04354380816221237,
+              "cosine": -0.04583633691072464
+            }
+          }
+        }
+      }
+    },
+    "taskdec_last": {
+      "epoch": 22,
+      "checkpoint_sha256": "168bb7e1331179fa89af1108ce85d09d277957cef6530fd567e477e7dcb31c02",
+      "modes": {
+        "eval": {
+          "gt_counts": [
+            239,
+            146,
+            147
+          ],
+          "hits": [
+            155,
+            99,
+            117
+          ],
+          "recall_score_01_strict": [
+            0.6485355648535565,
+            0.678082191780822,
+            0.7959183673469388
+          ],
+          "seconds": 8.672974584624171
+        },
+        "control_off": {
+          "gt_counts": [
+            239,
+            146,
+            147
+          ],
+          "hits": [
+            141,
+            79,
+            106
+          ],
+          "recall_score_01_strict": [
+            0.5899581589958159,
+            0.541095890410959,
+            0.7210884353741497
+          ],
+          "seconds": 8.456669671460986
+        },
+        "batch_bn": {
+          "gt_counts": [
+            239,
+            146,
+            147
+          ],
+          "hits": [
+            157,
+            95,
+            122
+          ],
+          "recall_score_01_strict": [
+            0.6569037656903766,
+            0.6506849315068494,
+            0.8299319727891157
+          ],
+          "seconds": 8.60506720840931
+        }
+      },
+      "probe": {
+        "fuser_train_eval_max_abs": 0.0,
+        "fuser_eval_changed_gt_max_abs": 0.0,
+        "logging": {
+          "patch_dec_loss_raw": 0.20390887558460236,
+          "patch_dec_decouple": 0.0011784745147451758,
+          "patch_dec_common": 0.005016408395022154,
+          "patch_dec_unique": 0.0002649826346896589,
+          "dec_control_gate_loss": 0.1190529316663742,
+          "dec_control_class_loss": 0.6177571415901184,
+          "dec_control_entropy": 0.0,
+          "dec_control_balance": 0.0,
+          "dec_control_fg_gate_mean": 0.053313758224248886,
+          "dec_control_fg_gate_fg_mean": 0.7182429432868958,
+          "dec_control_fg_gate_bg_mean": 0.050787992775440216,
+          "dec_control_scale_mean": 0.9998494982719421,
+          "dec_control_scale_min": 0.4000000059604645,
+          "dec_control_scale_max": 2.0999999046325684,
+          "dec_control_query_delta_norm": 0.014962573535740376,
+          "dec_control_fused_delta_norm": 0.005610965192317963,
+          "dec_control_schedule_factor": 1.0,
+          "patch_dec_num_patches": 31.0,
+          "patch_dec_fg_patches": 31.0,
+          "patch_dec_fg_ratio": 0.0037841796875,
+          "patch_dec_selection_code": 1.0,
+          "dec_control_cls_prob_1": 0.8995402455329895,
+          "dec_control_cls_fg_prob_1": 0.4356480836868286,
+          "dec_control_cls_prob_2": 0.04189661517739296,
+          "dec_control_cls_fg_prob_2": 0.25295290350914,
+          "dec_control_cls_prob_3": 0.05856313928961754,
+          "dec_control_cls_fg_prob_3": 0.31139901280403137,
+          "dec_control_w_camera": 8.154045438857338e-09,
+          "dec_control_w_fg_camera": 9.316601309872219e-12,
+          "dec_control_w_bg_camera": 8.184984245929172e-09,
+          "dec_control_w_lidar": 0.9999998807907104,
+          "dec_control_w_fg_lidar": 0.9999983310699463,
+          "dec_control_w_bg_lidar": 1.0,
+          "dec_control_w_radar": 1.1876359451434837e-07,
+          "dec_control_w_fg_radar": 1.6434465806014487e-06,
+          "dec_control_w_bg_radar": 1.1297200330773194e-07
+        },
+        "within_patch_relative_rms": {
+          "camera": 0.4530729651451111,
+          "lidar": 0.6401003003120422,
+          "radar": 0.5464465022087097,
+          "fused": 0.15356005728244781
+        },
+        "foreground_mask_numpy_equal": true,
+        "gradient_probe": {
+          "det_loss": 0.5933349132537842,
+          "weighted_aux_loss": 0.02446906454861164,
+          "modalities": {
+            "camera": {
+              "det_norm": 0.006722858175635338,
+              "aux_norm": 0.0007835114956833422,
+              "aux_over_det": 0.11654440313577652,
+              "cosine": 0.033728308975696564
+            },
+            "lidar": {
+              "det_norm": 0.11957836151123047,
+              "aux_norm": 0.008664059452712536,
+              "aux_over_det": 0.07245507836341858,
+              "cosine": 0.11547795683145523
+            },
+            "radar": {
+              "det_norm": 0.018845057114958763,
+              "aux_norm": 0.0013683669967576861,
+              "aux_over_det": 0.07261145114898682,
+              "cosine": -0.005697631277143955
+            }
+          }
+        }
+      }
+    },
+    "concat_best": {
+      "epoch": 30,
+      "checkpoint_sha256": "5161ec1deeb76e6c5214b85014418ff07c6bd383c8ad748f6c553e6f23512edc",
+      "modes": {
+        "eval": {
+          "gt_counts": [
+            239,
+            146,
+            147
+          ],
+          "hits": [
+            169,
+            107,
+            128
+          ],
+          "recall_score_01_strict": [
+            0.7071129707112971,
+            0.7328767123287672,
+            0.8707482993197279
+          ],
+          "seconds": 7.578325470909476
+        },
+        "batch_bn": {
+          "gt_counts": [
+            239,
+            146,
+            147
+          ],
+          "hits": [
+            173,
+            107,
+            129
+          ],
+          "recall_score_01_strict": [
+            0.7238493723849372,
+            0.7328767123287672,
+            0.8775510204081632
+          ],
+          "seconds": 7.759723272174597
+        }
+      }
+    }
+  },
+  "status": "complete",
+  "peak_cuda_allocated_gib": 2.6699986457824707
+}

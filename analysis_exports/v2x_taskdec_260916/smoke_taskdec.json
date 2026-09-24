@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "variant": "taskdec",
+  "device": "0",
+  "batch_size": 1,
+  "cases": [
+    {
+      "frame": "000006",
+      "loss": 3.9059836864471436,
+      "detection_loss": 3.8441736698150635,
+      "auxiliary_loss": 0.5150836706161499,
+      "gradient_l1": {
+        "encoders.camera": 196803.1871483624,
+        "encoders.lidar": 6585.291920423508,
+        "encoders.radar": 6603.953807115555,
+        "neck": 92701.01986047626,
+        "head": 1737.8752934262156,
+        "fuser": 28482.90907860361
+      },
+      "step_seconds": 1.6137013509869576,
+      "peak_allocated_gib": 1.7062501907348633,
+      "peak_reserved_gib": 2.0078125,
+      "predictions": 1500
+    },
+    {
+      "frame": "009041",
+      "loss": 3.326260566711426,
+      "detection_loss": 3.264954090118408,
+      "auxiliary_loss": 0.5108878016471863,
+      "gradient_l1": {
+        "encoders.camera": 776437.3225080967,
+        "encoders.lidar": 18913.409347057343,
+        "encoders.radar": 14492.94418668747,
+        "neck": 305605.29906374216,
+        "head": 2371.544692635536,
+        "fuser": 90140.81715538268
+      },
+      "step_seconds": 0.20881723053753376,
+      "peak_allocated_gib": 2.017242431640625,
+      "peak_reserved_gib": 2.212890625,
+      "predictions": 1500
+    },
+    {
+      "frame": "009004",
+      "loss": 2.9431796073913574,
+      "detection_loss": 2.878758430480957,
+      "auxiliary_loss": 0.536842942237854,
+      "gradient_l1": {
+        "encoders.camera": 435891.5755702257,
+        "encoders.lidar": 19532.269560828805,
+        "encoders.radar": 6993.33918595314,
+        "neck": 109799.13891631365,
+        "head": 2021.3584738075733,
+        "fuser": 31451.310666688656
+      },
+      "step_seconds": 0.20439993776381016,
+      "peak_allocated_gib": 2.017242431640625,
+      "peak_reserved_gib": 2.212890625,
+      "predictions": 1500
+    }
+  ],
+  "parameters": 33955125,
+  "note": "Three debugging updates only, not a trained result or stable throughput"
+}

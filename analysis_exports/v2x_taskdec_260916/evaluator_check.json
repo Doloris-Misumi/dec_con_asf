@@ -1,0 +1,7 @@
+{
+  "status": "passed",
+  "perfect_prediction_ap": 100,
+  "empty_prediction_ap": 0,
+  "includes_empty_gt_frame": true,
+  "metrics_checked": 42
+}

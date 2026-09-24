@@ -1,0 +1,311 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="900" viewBox="0 0 1800 900">
+<defs>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+<feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#17212b" flood-opacity="0.08"/>
+</filter>
+<marker id="arrow-ink" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M2,2 L10,6 L2,10 Z" fill="#17212b"/></marker>
+<marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M2,2 L10,6 L2,10 Z" fill="#245f9e"/></marker>
+<marker id="arrow-green" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M2,2 L10,6 L2,10 Z" fill="#0f7a55"/></marker>
+<marker id="arrow-amber" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M2,2 L10,6 L2,10 Z" fill="#d99a14"/></marker>
+<marker id="arrow-rose" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M2,2 L10,6 L2,10 Z" fill="#d65f7b"/></marker>
+</defs>
+<rect x="0" y="0" width="1800" height="900" fill="#fbfbf8"/>
+<rect x="70" y="62" width="150" height="30" rx="15.0" ry="15.0" fill="#f2f4f7" stroke="#a9b4bf" stroke-width="1.5"/>
+<text x="145.0" y="77.0" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="145.0" dy="0">multi-modal input</tspan>
+</text>
+<rect x="70" y="132" width="168" height="54" rx="12" ry="12" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.3"/>
+<circle cx="95" cy="159" r="13" fill="#d9ebff" stroke="#4f86c6" stroke-width="2"/>
+<text x="122" y="151" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="122" dy="0">Camera</tspan>
+</text>
+<text x="122" y="170" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="122" dy="0">frozen</tspan>
+</text>
+<rect x="278" y="132" width="150" height="54" rx="12" ry="12" fill="#f2f4f7" stroke="#a9b4bf" stroke-width="1.2"/>
+<text x="353" y="154" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="353" dy="0">BEV feature</tspan>
+</text>
+<text x="353" y="172" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="353" dy="0">C x H x W</tspan>
+</text>
+<polyline points="238,159 278,159" fill="none" stroke="#7f8c99" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="70" y="222" width="168" height="54" rx="12" ry="12" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.3"/>
+<circle cx="95" cy="249" r="13" fill="#def5ea" stroke="#2ca878" stroke-width="2"/>
+<text x="122" y="241" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="122" dy="0">LiDAR</tspan>
+</text>
+<text x="122" y="260" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="122" dy="0">frozen</tspan>
+</text>
+<rect x="278" y="222" width="150" height="54" rx="12" ry="12" fill="#f2f4f7" stroke="#a9b4bf" stroke-width="1.2"/>
+<text x="353" y="244" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="353" dy="0">BEV feature</tspan>
+</text>
+<text x="353" y="262" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="353" dy="0">C x H x W</tspan>
+</text>
+<polyline points="238,249 278,249" fill="none" stroke="#7f8c99" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="70" y="312" width="168" height="54" rx="12" ry="12" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.3"/>
+<circle cx="95" cy="339" r="13" fill="#fff0c7" stroke="#d99a14" stroke-width="2"/>
+<text x="122" y="331" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="122" dy="0">4D Radar</tspan>
+</text>
+<text x="122" y="350" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="122" dy="0">frozen</tspan>
+</text>
+<rect x="278" y="312" width="150" height="54" rx="12" ry="12" fill="#f2f4f7" stroke="#a9b4bf" stroke-width="1.2"/>
+<text x="353" y="334" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="353" dy="0">BEV feature</tspan>
+</text>
+<text x="353" y="352" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="353" dy="0">C x H x W</tspan>
+</text>
+<polyline points="238,339 278,339" fill="none" stroke="#7f8c99" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="485" y="72" width="900" height="292" rx="22" ry="22" fill="#eaf3ff" stroke="#4f86c6" stroke-width="2.0" filter="url(#shadow)"/>
+<rect x="515" y="100" width="160" height="30" rx="15.0" ry="15.0" fill="#ffffff" stroke="#4f86c6" stroke-width="1.5"/>
+<text x="595.0" y="115.0" fill="#245f9e" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="595.0" dy="0">ASF substrate</tspan>
+</text>
+<text x="700" y="106" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="700" dy="0">canonical patch projection -&gt; patch-level attention -&gt; fused BEV</tspan>
+</text>
+<polyline points="428,159 475,159 505,157 530,157" fill="none" stroke="#7f8c99" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="530" y="135" width="14" height="14" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="549" y="135" width="14" height="14" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="568" y="135" width="14" height="14" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="587" y="135" width="14" height="14" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="606" y="135" width="14" height="14" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="530" y="154" width="14" height="14" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="549" y="154" width="14" height="14" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="568" y="154" width="14" height="14" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="587" y="154" width="14" height="14" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="606" y="154" width="14" height="14" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="530" y="173" width="14" height="14" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="549" y="173" width="14" height="14" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="568" y="173" width="14" height="14" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="587" y="173" width="14" height="14" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="606" y="173" width="14" height="14" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<polyline points="428,249 475,249 505,224 530,224" fill="none" stroke="#7f8c99" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="530" y="202" width="14" height="14" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="549" y="202" width="14" height="14" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="568" y="202" width="14" height="14" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="587" y="202" width="14" height="14" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="606" y="202" width="14" height="14" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="530" y="221" width="14" height="14" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="549" y="221" width="14" height="14" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="568" y="221" width="14" height="14" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="587" y="221" width="14" height="14" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="606" y="221" width="14" height="14" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="530" y="240" width="14" height="14" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="549" y="240" width="14" height="14" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="568" y="240" width="14" height="14" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="587" y="240" width="14" height="14" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="606" y="240" width="14" height="14" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<polyline points="428,339 475,339 505,291 530,291" fill="none" stroke="#7f8c99" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="530" y="269" width="14" height="14" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="549" y="269" width="14" height="14" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="568" y="269" width="14" height="14" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="587" y="269" width="14" height="14" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="606" y="269" width="14" height="14" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="530" y="288" width="14" height="14" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="549" y="288" width="14" height="14" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="568" y="288" width="14" height="14" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="587" y="288" width="14" height="14" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="606" y="288" width="14" height="14" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="530" y="307" width="14" height="14" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="549" y="307" width="14" height="14" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="568" y="307" width="14" height="14" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="587" y="307" width="14" height="14" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="606" y="307" width="14" height="14" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<text x="575" y="330" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="575" dy="0">canonical patches z_m,p</tspan>
+</text>
+<rect x="695" y="164" width="140" height="92" rx="15" ry="15" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.4"/>
+<text x="765" y="190" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="765" dy="0">To-Embed</tspan>
+</text>
+<text x="765" y="214" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="765" dy="0">+ UCP</tspan>
+</text>
+<text x="765" y="236" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="765" dy="0">dim 256</tspan>
+</text>
+<polyline points="628,210 695,210" fill="none" stroke="#245f9e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<rect x="915" y="146" width="160" height="125" rx="16" ry="16" fill="#ffffff" stroke="#4f86c6" stroke-width="1.7"/>
+<text x="995" y="177" fill="#245f9e" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="995" dy="0">Aware-query</tspan>
+</text>
+<text x="995" y="204" fill="#245f9e" font-family="DejaVu Sans, Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="995" dy="0">MHA</tspan>
+</text>
+<text x="995" y="232" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="995" dy="0">patch K/V</tspan>
+</text>
+<polyline points="835,210 915,208" fill="none" stroke="#245f9e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<rect x="1128" y="164" width="88" height="92" rx="14" ry="14" fill="#ffffff" stroke="#4f86c6" stroke-width="1.5"/>
+<text x="1172" y="194" fill="#245f9e" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1172" dy="0">PFT</tspan>
+</text>
+<text x="1172" y="219" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1172" dy="0">reshape</tspan>
+</text>
+<polyline points="1075,208 1128,210" fill="none" stroke="#245f9e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<rect x="1262" y="166" width="82" height="90" rx="14" ry="14" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.3"/>
+<text x="1303" y="195" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1303" dy="0">fused</tspan>
+</text>
+<text x="1303" y="218" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1303" dy="0">BEV</tspan>
+</text>
+<polyline points="1216,210 1262,211" fill="none" stroke="#245f9e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<circle cx="610" cy="346" r="5" fill="#ffffff" stroke="#d65f7b" stroke-width="2"/>
+<text x="610" y="326" fill="#d65f7b" font-family="DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="610" dy="0">patch residual</tspan>
+</text>
+<circle cx="945" cy="346" r="5" fill="#ffffff" stroke="#d99a14" stroke-width="2"/>
+<text x="945" y="326" fill="#d99a14" font-family="DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="945" dy="0">K/V scale</tspan>
+</text>
+<circle cx="1165" cy="346" r="5" fill="#ffffff" stroke="#0f7a55" stroke-width="2"/>
+<text x="1165" y="326" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1165" dy="0">query bias</tspan>
+</text>
+<circle cx="1260" cy="346" r="5" fill="#ffffff" stroke="#0f7a55" stroke-width="2"/>
+<text x="1260" y="326" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1260" dy="0">fused residual</tspan>
+</text>
+<polyline points="1344,211 1490,211 1490,312" fill="none" stroke="#245f9e" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<rect x="1488" y="312" width="242" height="90" rx="15" ry="15" fill="#f2f4f7" stroke="#a9b4bf" stroke-width="1.5"/>
+<text x="1609" y="343" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1609" dy="0">Detection head</tspan>
+</text>
+<text x="1609" y="368" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1609" dy="0">3D object boxes</tspan>
+</text>
+<polyline points="1609,402 1609,458" fill="none" stroke="#7f8c99" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="1488" y="458" width="242" height="112" rx="15" ry="15" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.3"/>
+<polyline points="1528,510 1587,492 1610,514 1550,534 1528,510" fill="none" stroke="#d99a14" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<polyline points="1604,498 1670,490 1690,512 1622,522 1604,498" fill="none" stroke="#d99a14" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="1609" y="552" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1609" dy="0">BEV / 3D AP</tspan>
+</text>
+<rect x="360" y="448" width="1035" height="330" rx="24" ry="24" fill="#eef9f3" stroke="#2ca878" stroke-width="2.6" filter="url(#shadow)"/>
+<rect x="388" y="476" width="104" height="32" rx="16.0" ry="16.0" fill="#ffffff" stroke="#2ca878" stroke-width="1.5"/>
+<text x="440.0" y="492.0" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="440.0" dy="0">Ours</tspan>
+</text>
+<text x="520" y="475" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="25" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="520" dy="0">Task-aware Decoupled Fusion Controller</tspan>
+</text>
+<text x="522" y="508" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="522" dy="0">Common/unique patch factors are converted into clean, aligned control channels.</tspan>
+</text>
+<rect x="410" y="548" width="150" height="84" rx="15" ry="15" fill="#ffffff" stroke="#2ca878" stroke-width="1.5"/>
+<text x="485" y="574" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="485" dy="0">canonical</tspan>
+</text>
+<text x="485" y="596" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="485" dy="0">patch tokens</tspan>
+</text>
+<text x="485" y="616" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="485" dy="0">z_m,p</tspan>
+</text>
+<polyline points="540,346 540,420 485,420 485,548" fill="none" stroke="#0f7a55" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 7" marker-end="url(#arrow-green)"/>
+<polyline points="560,590 610,590" fill="none" stroke="#0f7a55" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-green)"/>
+<rect x="612" y="516" width="225" height="148" rx="18" ry="18" fill="#ffffff" stroke="#2ca878" stroke-width="1.7"/>
+<text x="724" y="546" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="724" dy="0">Patch Decoupling</tspan>
+</text>
+<rect x="650" y="572" width="72" height="54" rx="12" ry="12" fill="#e2f6ec" stroke="#2ca878" stroke-width="1.2"/>
+<text x="686" y="594" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="686" dy="0">common</tspan>
+</text>
+<text x="686" y="612" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="686" dy="0">c_m,p</tspan>
+</text>
+<rect x="732" y="572" width="72" height="54" rx="12" ry="12" fill="#fff5d8" stroke="#d99a14" stroke-width="1.2"/>
+<text x="768" y="594" fill="#d99a14" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="768" dy="0">unique</tspan>
+</text>
+<text x="768" y="612" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="768" dy="0">u_m,p</tspan>
+</text>
+<text x="724" y="647" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="724" dy="0">foreground-only decoupling losses</tspan>
+</text>
+<polyline points="837,590 890,590" fill="none" stroke="#0f7a55" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-green)"/>
+<rect x="892" y="548" width="150" height="84" rx="15" ry="15" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.3"/>
+<text x="967" y="574" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="967" dy="0">task summary</tspan>
+</text>
+<text x="967" y="596" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="967" dy="0">c_bar, |u|_bar</tspan>
+</text>
+<text x="967" y="616" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="967" dy="0">per patch p</tspan>
+</text>
+<rect x="500" y="682" width="855" height="74" rx="17" ry="17" fill="#f7fbf9" stroke="#d9e1e8" stroke-width="1.1"/>
+<text x="520" y="701" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="520" dy="0">aligned control channels</tspan>
+</text>
+<rect x="535" y="709" width="150" height="38" rx="12" ry="12" fill="#fff0f3" stroke="#d65f7b" stroke-width="1.3"/>
+<text x="610" y="728" fill="#d65f7b" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="610" dy="0">Foreground gate</tspan>
+</text>
+<rect x="860" y="709" width="170" height="38" rx="12" ry="12" fill="#fff1c9" stroke="#d99a14" stroke-width="1.3"/>
+<text x="945" y="728" fill="#d99a14" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="945" dy="0">Sensor reliability</tspan>
+</text>
+<rect x="1120" y="698" width="215" height="52" rx="13" ry="13" fill="#f2efff" stroke="#7d6ad8" stroke-width="1.3"/>
+<text x="1228" y="718" fill="#7d6ad8" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1228" dy="0">Task context adapter</tspan>
+</text>
+<text x="1228" y="738" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1228" dy="0">query + fused deltas</tspan>
+</text>
+<polyline points="967,632 967,682" fill="none" stroke="#7f8c99" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<polyline points="967,682 610,709" fill="none" stroke="#7f8c99" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<polyline points="967,682 945,709" fill="none" stroke="#7f8c99" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<polyline points="967,682 1228,698" fill="none" stroke="#7f8c99" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<text x="505" y="431" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="505" dy="0">output ports</tspan>
+</text>
+<circle cx="610" cy="448" r="5" fill="#ffffff" stroke="#d65f7b" stroke-width="2"/>
+<circle cx="610" cy="346" r="5" fill="#ffffff" stroke="#d65f7b" stroke-width="2"/>
+<polyline points="610,448 610,346" fill="none" stroke="#d65f7b" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 7" marker-end="url(#arrow-rose)"/>
+<text x="620" y="418" fill="#d65f7b" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="620" dy="0">gate</tspan>
+</text>
+<circle cx="945" cy="448" r="5" fill="#ffffff" stroke="#d99a14" stroke-width="2"/>
+<circle cx="945" cy="346" r="5" fill="#ffffff" stroke="#d99a14" stroke-width="2"/>
+<polyline points="945,448 945,346" fill="none" stroke="#d99a14" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 7" marker-end="url(#arrow-amber)"/>
+<text x="955" y="418" fill="#d99a14" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="955" dy="0">reliability</tspan>
+</text>
+<circle cx="1165" cy="448" r="5" fill="#ffffff" stroke="#0f7a55" stroke-width="2"/>
+<circle cx="1165" cy="346" r="5" fill="#ffffff" stroke="#0f7a55" stroke-width="2"/>
+<polyline points="1165,448 1165,346" fill="none" stroke="#0f7a55" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 7" marker-end="url(#arrow-green)"/>
+<text x="1175" y="418" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="1175" dy="0">query</tspan>
+</text>
+<circle cx="1260" cy="448" r="5" fill="#ffffff" stroke="#0f7a55" stroke-width="2"/>
+<circle cx="1260" cy="346" r="5" fill="#ffffff" stroke="#0f7a55" stroke-width="2"/>
+<polyline points="1260,448 1260,346" fill="none" stroke="#0f7a55" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 7" marker-end="url(#arrow-green)"/>
+<text x="1270" y="418" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="1270" dy="0">fused</tspan>
+</text>
+<rect x="70" y="828" width="1660" height="1" rx="0" ry="0" fill="#d9e1e8" stroke="#d9e1e8" stroke-width="1"/>
+<text x="80" y="849" fill="#245f9e" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="80" dy="0">ASF is compact:</tspan>
+</text>
+<text x="205" y="849" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="205" dy="0">it supplies canonical patch fusion.</tspan>
+</text>
+<text x="560" y="849" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="560" dy="0">Main idea:</tspan>
+</text>
+<text x="650" y="849" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="650" dy="0">decoupled patch semantics drive sensor availability and task-aware fusion.</tspan>
+</text>
+</svg>

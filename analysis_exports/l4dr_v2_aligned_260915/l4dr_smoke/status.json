@@ -1,0 +1,46 @@
+{
+  "status": "predictions_complete",
+  "started_at": "2026-09-15T20:34:28.750487+08:00",
+  "num_samples": 14,
+  "expected_samples": 14,
+  "failure_count": 0,
+  "seed": 2023,
+  "gpu": "2",
+  "checkpoint": "/home/hongsheng/L4DR/checkpoints/L4DR-KRadar-v2.1-model_30.pt",
+  "checkpoint_sha256": "ccdc151a0c16185be8ab1801affed1f71fd6f63ae6f3c2fbf94c30346a0d8180",
+  "config_sha256": "48ea0d4b968fccdb568d7f0b09332c3090716c110906c3839ba94740da269216",
+  "manifest_sha256": "47e25d7d8526e10c5faef7ec3c6d3f22671f05857586df3b271abb25cb8611ee",
+  "nms_source_sha256": "b7abbc493666be5d5d17a7209132dce99ad537aab65e34d3949ea9f24f7a8554",
+  "serializer_source_sha256": "97ae3c5ca3246c56757145f3c723896e933e0a5727ac603b535e0d3dacf3df8d",
+  "confidence": 0.3,
+  "strict_checkpoint_load": true,
+  "checkpoint_keys": 572,
+  "excluded_keys": [],
+  "backbone": "BaseBEVBackbone_MGF",
+  "denoise_threshold": 0.1,
+  "postprocessing": {
+    "RECALL_THRESH_LIST": [
+      0.3,
+      0.5,
+      0.7
+    ],
+    "SCORE_THRESH": 0.1,
+    "OUTPUT_RAW_SCORE": false,
+    "EVAL_METRIC": "kitti",
+    "NMS_CONFIG": {
+      "MULTI_CLASSES_NMS": false,
+      "NMS_TYPE": "nms_gpu",
+      "NMS_THRESH": 0.01,
+      "NMS_PRE_MAXSIZE": 4096,
+      "NMS_POST_MAXSIZE": 500
+    }
+  },
+  "prediction_counts": {
+    "2": 5,
+    "1": 25
+  },
+  "elapsed_seconds": 4.491394627839327,
+  "last_index": 13726,
+  "last_frame": "58,00603_00598.txt",
+  "finished_at": "2026-09-15T20:34:41.734613+08:00"
+}

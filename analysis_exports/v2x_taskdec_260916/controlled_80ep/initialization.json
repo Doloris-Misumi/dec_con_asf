@@ -1,0 +1,26 @@
+{
+  "taskdec": {
+    "file": "taskdec_initial.pt",
+    "sha256": "4dc2dfbc54e98f02844ee70cc30b10d1a84838d7afffa8799cfef9d4c58d2e8f",
+    "copied_tensors": 615,
+    "parameters": 33955125,
+    "shared_backbone_head_hash": "76f7e84abaec58108d27cc485ff43698131bd84e317f19d0bcabd3bf1ad346f9",
+    "patch_shared_hash": "601a33843b1b85a38c93472f54ff9dec60912340343a522029613f9e3325549d"
+  },
+  "patch": {
+    "file": "patch_initial.pt",
+    "sha256": "8db5bad401a953e07611b2f488d17c274a6360d378dd5242b1bcb3c221c6eef0",
+    "copied_tensors": 547,
+    "parameters": 33478957,
+    "shared_backbone_head_hash": "76f7e84abaec58108d27cc485ff43698131bd84e317f19d0bcabd3bf1ad346f9",
+    "patch_shared_hash": "badf0dcbc550ab5c97abf0de166ea30410de7531b558876af12b776ecc08211d"
+  },
+  "concat": {
+    "file": "concat_initial.pt",
+    "sha256": "03a9253546708e587768bd83b8b07270e26165a7b6a0cc705c1c7d829c678747",
+    "copied_tensors": 503,
+    "parameters": 33136685,
+    "shared_backbone_head_hash": "76f7e84abaec58108d27cc485ff43698131bd84e317f19d0bcabd3bf1ad346f9",
+    "patch_shared_hash": null
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "best_eaa": 71.23,
+  "training_seconds": 48366.693759370595,
+  "validation_seconds": 3962.8266813028604,
+  "status": "complete",
+  "completed_epoch": 80,
+  "iteration": 25760,
+  "peak_allocated_gib": 22.748541355133057,
+  "peak_reserved_gib": 24.861328125,
+  "best_epoch": 75,
+  "best_dc": 84.69
+}

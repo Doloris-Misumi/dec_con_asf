@@ -1,0 +1,6 @@
+{
+  "source": "per_gt.csv",
+  "per_gt_sha256": "d66834479b85400b38605a3110315421c0bffb754e2e56840b1e1f18f8e7c888",
+  "script_sha256": "8bb5bf5b22a2fed0cfedac36ffb227a7e682987d868d937ff36eed43c0c6c49a",
+  "reason": "Pair-dependent column names require union headers; no prediction, matching or geometry changes."
+}

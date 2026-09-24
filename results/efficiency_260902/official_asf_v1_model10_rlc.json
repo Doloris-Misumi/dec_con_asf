@@ -1,0 +1,39 @@
+{
+  "tag": "official_asf_v1_model10_rlc",
+  "date": "2026-09-02 20:39:01",
+  "repo_root": "/home/hongsheng/K-Radar-main",
+  "config": "/home/hongsheng/K-Radar-main/configs/v1_0/cfg_A2F_scl_final_local.yml",
+  "model": "/home/hongsheng/K-Radar-main/pretrained/v1_0_official/A2F_v1_0_model_10.pt",
+  "gpu": "3",
+  "infer_mode": "rlc",
+  "warmup": 20,
+  "measured_iters": 100,
+  "params_m": 78.125925,
+  "trainable_params_m": 1.83298,
+  "model_allocated_gb": 0.29676008224487305,
+  "forward_ms": {
+    "mean": 79.94548965454102,
+    "median": 79.23945617675781,
+    "min": 77.68204498291016,
+    "max": 101.75647735595703,
+    "stdev": 3.050082923162719
+  },
+  "load_ms": {
+    "mean": 567.3891749605536,
+    "median": 573.3720418065786,
+    "min": 388.24836630374193,
+    "max": 720.5564184114337,
+    "stdev": 89.16954745807561
+  },
+  "total_ms": {
+    "mean": 647.4996242765337,
+    "median": 653.5493731498718,
+    "min": 466.27516113221645,
+    "max": 801.7761614173651,
+    "stdev": 89.51830315193664
+  },
+  "forward_fps": 12.50852304890722,
+  "e2e_fps": 1.5444024405687078,
+  "peak_allocated_gb": 0.9730830192565918,
+  "peak_reserved_gb": 1.236328125
+}

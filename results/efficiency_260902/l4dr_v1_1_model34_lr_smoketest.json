@@ -1,0 +1,62 @@
+{
+  "tag": "l4dr_v1_1_model34_lr_smoketest",
+  "date": "2026-09-02 21:23:16",
+  "repo_root": "/home/hongsheng/L4DR/K-Radar-main-repo",
+  "config": "/home/hongsheng/L4DR/K-Radar-main-repo/configs/cfg_PP_L4DR_v1.1.yml",
+  "model": "/home/hongsheng/L4DR/checkpoints/L4DR-KRadar-v1.1-model_34.pt",
+  "data_root": "/home/hongsheng/k_radar_dataset",
+  "gpu": "3",
+  "label_version": "v1_0",
+  "warmup": 2,
+  "measured_iters": 3,
+  "batch_size": 1,
+  "num_workers": 0,
+  "params_m": 55.831589,
+  "trainable_params_m": 55.831589,
+  "model_allocated_gb": 0.21154356002807617,
+  "forward_ms": {
+    "mean": 75.70006306966145,
+    "median": 76.06671905517578,
+    "min": 74.06784057617188,
+    "max": 76.96562957763672,
+    "stdev": 1.483281070140708
+  },
+  "load_ms": {
+    "mean": 844.1981999203563,
+    "median": 823.9335007965565,
+    "min": 689.6606422960758,
+    "max": 1019.0004566684365,
+    "stdev": 165.60245123680642
+  },
+  "transfer_ms": {
+    "mean": 1.3053501024842262,
+    "median": 1.3178987428545952,
+    "min": 1.1558858677744865,
+    "max": 1.442265696823597,
+    "stdev": 0.14360171622549664
+  },
+  "total_ms": {
+    "mean": 921.3385712355375,
+    "median": 901.5964949503541,
+    "min": 764.9971125647426,
+    "max": 1097.422106191516,
+    "stdev": 167.08951576618318
+  },
+  "forward_fps": 13.210028624147515,
+  "e2e_fps": 1.0853773316566737,
+  "peak_allocated_gb": 0.3455982208251953,
+  "peak_reserved_gb": 0.404296875,
+  "radar_source_counts": {
+    "sprdr": 5
+  },
+  "radar_source_note": "sprdr:5",
+  "missing_keys": [],
+  "unexpected_keys": [
+    "backbone_2d.Conv_LG.0.0.weight",
+    "backbone_2d.Conv_LG.1.0.weight",
+    "backbone_2d.Conv_LG.2.0.weight",
+    "backbone_2d.Conv_RG.0.0.weight",
+    "backbone_2d.Conv_RG.1.0.weight",
+    "backbone_2d.Conv_RG.2.0.weight"
+  ]
+}

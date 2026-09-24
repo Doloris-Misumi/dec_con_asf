@@ -1,0 +1,110 @@
+{
+  "frame": {
+    "weather": "overcast",
+    "seq": "13",
+    "radar_id": "00146",
+    "sampled_gap": 0.2339563866666667,
+    "shortlist_rank": 1,
+    "weather_pool_size": 24,
+    "id": "seq13_rdr00146",
+    "archive": "seq13_rdr00146.npz",
+    "camera_id": "00321",
+    "lidar_id": "00107",
+    "camera_path": "/home/hongsheng/k_radar_dataset/13/cam-front/cam-front_00321.png",
+    "lidar_path": "/home/hongsheng/k_radar_dataset/13/os2-64/os2-64_00107.pcd",
+    "label_path": "/home/hongsheng/k_radar_dataset/13/info_label/00146_00107.txt",
+    "lidar_calibration": [
+      -2.54,
+      0.3,
+      0.7
+    ],
+    "num_gt": 2,
+    "foreground_patches": 60,
+    "full_patches": 1440,
+    "gate_fg_mean": 0.2994846701622009,
+    "gate_bg_mean": 0.11117158085107803,
+    "gate_gap": 0.1883130893111229,
+    "gate_max": 0.8272957801818848,
+    "gate_p99": 0.37937153041362703
+  },
+  "camera_front0_pixels": [
+    0,
+    0,
+    1280,
+    720
+  ],
+  "common_camera_viewport_xyxy": [
+    540,
+    240,
+    820,
+    520
+  ],
+  "middle_object_crop_xyxy": [
+    665,
+    325,
+    780,
+    440
+  ],
+  "middle_background_crop_xyxy": [
+    865,
+    260,
+    1015,
+    410
+  ],
+  "radar_source": "/home/hongsheng/k_radar_dataset/13/sprdr_00146.npy",
+  "radar_resolved_source": "/home/hongsheng/k_radar_dataset/13/sparse_cube/cube_00146.npy",
+  "point_display_roi_xyz": [
+    0,
+    -20,
+    -2,
+    72,
+    20,
+    6
+  ],
+  "projected_point_counts": {
+    "lidar_input": 4354,
+    "radar_input": 31978
+  },
+  "lidar_color": "height z, turbo, fixed [-2,3] m",
+  "radar_color": "log10 power, plasma, source-frame 5th to 99.8th percentile",
+  "point_sampling": "all points inside display ROI and camera viewport; no added points",
+  "projection": "sequence-13 radar2camera; raw camera intrinsics plus distortion",
+  "prediction_npz": "/home/hongsheng/dec_con_asf/analysis_exports/objdec_fig4_fig5_260919/paired_predictions/objdec/seq13_rdr00146.npz",
+  "prediction_npz_sha256": "105ff487bcb0877c11d2eb21297710d0956811df92f81051de1198a57948484c",
+  "checkpoint": "/home/hongsheng/dec_con_asf/logs/exp_260810_221258_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/models/model_0.pt",
+  "checkpoint_sha256": "99eb07e8a0b01ec397d3f2ac890091fe539194149a2c542cf41c465c9f02a2d3",
+  "prediction_rule": "all Sedan predictions with score > 0.3, no GT overlays",
+  "displayed_boxes": [
+    [
+      22.206689834594727,
+      -2.374689817428589,
+      0.36395952105522156,
+      4.631627082824707,
+      2.331475257873535,
+      2.1407485008239746,
+      6.262611389160156
+    ],
+    [
+      60.93703842163086,
+      0.9238422513008118,
+      0.6685813665390015,
+      4.5831098556518555,
+      2.288506031036377,
+      2.029832363128662,
+      6.266357421875
+    ]
+  ],
+  "displayed_scores": [
+    0.879677414894104,
+    0.7850645780563354
+  ],
+  "all_predictions_preserved": true,
+  "source_sha256": {
+    "/home/hongsheng/k_radar_dataset/13/cam-front/cam-front_00321.png": "ebbc3933b3bd482b3e0b61a1b4d01ff03096acc276a15f47580436ff6d56b74a",
+    "/home/hongsheng/k_radar_dataset/13/os2-64/os2-64_00107.pcd": "997c050522cb239e4fe6e9443554efd4c98cd5c1dd2f4fec0d4148806ca0661a",
+    "/home/hongsheng/k_radar_dataset/13/sprdr_00146.npy": "eea3c5d0d2bada83fe3b0725678296a3a77ee5e3ec7a4325047b7af1f0a120b7",
+    "/home/hongsheng/dec_con_asf/analysis_exports/objdec_fig4_fig5_260919/paired_predictions/objdec/seq13_rdr00146.npz": "105ff487bcb0877c11d2eb21297710d0956811df92f81051de1198a57948484c"
+  },
+  "generated_images_used_as_observations_or_predictions": false,
+  "training_or_inference_launched": false
+}

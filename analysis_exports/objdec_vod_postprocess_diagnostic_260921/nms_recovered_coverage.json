@@ -1,0 +1,278 @@
+{
+  "note": "EAA valid GT coverage by any same-class valid prediction at 3D IoU .5/.25/.25; NOT one-to-one recall/AP. Suppressor evidence uses native LiDAR BEV IoU and baseline higher-score survivors.",
+  "stats": {
+    "Car": {
+      "newly_covered_gt": 5,
+      "lost_coverage_gt": 0,
+      "same_class_suppression_candidates": 1,
+      "cross_class_suppression_candidates": 4,
+      "no_higher_score_suppressor": 0
+    },
+    "Pedestrian": {
+      "newly_covered_gt": 36,
+      "lost_coverage_gt": 1,
+      "same_class_suppression_candidates": 34,
+      "cross_class_suppression_candidates": 2,
+      "no_higher_score_suppressor": 0
+    },
+    "Cyclist": {
+      "newly_covered_gt": 0,
+      "lost_coverage_gt": 0,
+      "same_class_suppression_candidates": 0,
+      "cross_class_suppression_candidates": 0,
+      "no_higher_score_suppressor": 0
+    }
+  },
+  "examples": [
+    {
+      "frame_id": "00141",
+      "gt_index": 12,
+      "class_name": "Pedestrian",
+      "score": 0.16081050038337708,
+      "iou3d": 0.48614174127578735,
+      "suppressor_class": "Pedestrian",
+      "suppressor_score": 0.7021413445472717,
+      "suppressor_bev_iou": 0.04107162728905678
+    },
+    {
+      "frame_id": "00143",
+      "gt_index": 14,
+      "class_name": "Pedestrian",
+      "score": 0.24828968942165375,
+      "iou3d": 0.4871630370616913,
+      "suppressor_class": "Pedestrian",
+      "suppressor_score": 0.5639435052871704,
+      "suppressor_bev_iou": 0.02095010131597519
+    },
+    {
+      "frame_id": "00145",
+      "gt_index": 16,
+      "class_name": "Pedestrian",
+      "score": 0.25922825932502747,
+      "iou3d": 0.4607944190502167,
+      "suppressor_class": "Pedestrian",
+      "suppressor_score": 0.48558077216148376,
+      "suppressor_bev_iou": 0.019941525533795357
+    },
+    {
+      "frame_id": "00146",
+      "gt_index": 16,
+      "class_name": "Pedestrian",
+      "score": 0.1914997398853302,
+      "iou3d": 0.4950410723686218,
+      "suppressor_class": "Pedestrian",
+      "suppressor_score": 0.4620177149772644,
+      "suppressor_bev_iou": 0.04110601544380188
+    },
+    {
+      "frame_id": "00147",
+      "gt_index": 16,
+      "class_name": "Pedestrian",
+      "score": 0.2687362730503082,
+      "iou3d": 0.33689582347869873,
+      "suppressor_class": "Pedestrian",
+      "suppressor_score": 0.8113164305686951,
+      "suppressor_bev_iou": 0.08431646972894669
+    },
+    {
+      "frame_id": "00148",
+      "gt_index": 21,
+      "class_name": "Pedestrian",
+      "score": 0.4290597438812256,
+      "iou3d": 0.4541415870189667,
+      "suppressor_class": "Pedestrian",
+      "suppressor_score": 0.7309623956680298,
+      "suppressor_bev_iou": 0.06035459786653519
+    },
+    {
+      "frame_id": "00149",
+      "gt_index": 25,
+      "class_name": "Pedestrian",
+      "score": 0.25891029834747314,
+      "iou3d": 0.5757297873497009,
+      "suppressor_class": "Pedestrian",
+      "suppressor_score": 0.836948812007904,
+      "suppressor_bev_iou": 0.06589663773775101
+    },
+    {
+      "frame_id": "00150",
+      "gt_index": 24,
+      "class_name": "Pedestrian",
+      "score": 0.13741305470466614,
+      "iou3d": 0.43041425943374634,
+      "suppressor_class": "Pedestrian",
+      "suppressor_score": 0.60942143201828,
+      "suppressor_bev_iou": 0.06423743069171906
+    },
+    {
+      "frame_id": "00153",
+      "gt_index": 27,
+      "class_name": "Pedestrian",
+      "score": 0.22186177968978882,
+      "iou3d": 0.4384903907775879,
+      "suppressor_class": "Pedestrian",
+      "suppressor_score": 0.710458517074585,
+      "suppressor_bev_iou": 0.05560421943664551
+    },
+    {
+      "frame_id": "00154",
+      "gt_index": 28,
+      "class_name": "Pedestrian",
+      "score": 0.407964825630188,
+      "iou3d": 0.5545613765716553,
+      "suppressor_class": "Pedestrian",
+      "suppressor_score": 0.6620710492134094,
+      "suppressor_bev_iou": 0.054865214973688126
+    },
+    {
+      "frame_id": "00155",
+      "gt_index": 28,
+      "class_name": "Pedestrian",
+      "score": 0.33046504855155945,
+      "iou3d": 0.33919522166252136,
+      "suppressor_class": "Pedestrian",
+      "suppressor_score": 0.6087502837181091,
+      "suppressor_bev_iou": 0.04249364137649536
+    },
+    {
+      "frame_id": "00160",
+      "gt_index": 31,
+      "class_name": "Pedestrian",
+      "score": 0.23096030950546265,
+      "iou3d": 0.6135241389274597,
+      "suppressor_class": "Pedestrian",
+      "suppressor_score": 0.5680447220802307,
+      "suppressor_bev_iou": 0.07533766329288483
+    },
+    {
+      "frame_id": "00162",
+      "gt_index": 4,
+      "class_name": "Pedestrian",
+      "score": 0.30062782764434814,
+      "iou3d": 0.5858783721923828,
+      "suppressor_class": "Pedestrian",
+      "suppressor_score": 0.6162907481193542,
+      "suppressor_bev_iou": 0.06380919367074966
+    },
+    {
+      "frame_id": "00163",
+      "gt_index": 6,
+      "class_name": "Pedestrian",
+      "score": 0.36149510741233826,
+      "iou3d": 0.6026890277862549,
+      "suppressor_class": "Pedestrian",
+      "suppressor_score": 0.6536314487457275,
+      "suppressor_bev_iou": 0.08185362070798874
+    },
+    {
+      "frame_id": "00173",
+      "gt_index": 36,
+      "class_name": "Pedestrian",
+      "score": 0.2603670358657837,
+      "iou3d": 0.5487993359565735,
+      "suppressor_class": "Pedestrian",
+      "suppressor_score": 0.7143823504447937,
+      "suppressor_bev_iou": 0.05071365088224411
+    },
+    {
+      "frame_id": "00174",
+      "gt_index": 36,
+      "class_name": "Pedestrian",
+      "score": 0.2489563524723053,
+      "iou3d": 0.6085391044616699,
+      "suppressor_class": "Pedestrian",
+      "suppressor_score": 0.3046691119670868,
+      "suppressor_bev_iou": 0.033796526491642
+    },
+    {
+      "frame_id": "00175",
+      "gt_index": 36,
+      "class_name": "Pedestrian",
+      "score": 0.18518303334712982,
+      "iou3d": 0.2726893126964569,
+      "suppressor_class": "Pedestrian",
+      "suppressor_score": 0.6896426677703857,
+      "suppressor_bev_iou": 0.07680059224367142
+    },
+    {
+      "frame_id": "00176",
+      "gt_index": 37,
+      "class_name": "Pedestrian",
+      "score": 0.46835923194885254,
+      "iou3d": 0.5412870049476624,
+      "suppressor_class": "Pedestrian",
+      "suppressor_score": 0.7444002628326416,
+      "suppressor_bev_iou": 0.0319693386554718
+    },
+    {
+      "frame_id": "00181",
+      "gt_index": 24,
+      "class_name": "Pedestrian",
+      "score": 0.4284374415874481,
+      "iou3d": 0.5588289499282837,
+      "suppressor_class": "Pedestrian",
+      "suppressor_score": 0.5065428614616394,
+      "suppressor_bev_iou": 0.09473588317632675
+    },
+    {
+      "frame_id": "00181",
+      "gt_index": 34,
+      "class_name": "Pedestrian",
+      "score": 0.1594957858324051,
+      "iou3d": 0.3746199905872345,
+      "suppressor_class": "Pedestrian",
+      "suppressor_score": 0.18807421624660492,
+      "suppressor_bev_iou": 0.07759176194667816
+    },
+    {
+      "frame_id": "00264",
+      "gt_index": 4,
+      "class_name": "Car",
+      "score": 0.252704381942749,
+      "iou3d": 0.5335598587989807,
+      "suppressor_class": "Car",
+      "suppressor_score": 0.48906323313713074,
+      "suppressor_bev_iou": 0.06807871907949448
+    },
+    {
+      "frame_id": "05022",
+      "gt_index": 9,
+      "class_name": "Car",
+      "score": 0.1421111822128296,
+      "iou3d": 0.607057511806488,
+      "suppressor_class": "Cyclist",
+      "suppressor_score": 0.2950771450996399,
+      "suppressor_bev_iou": 0.09887707978487015
+    },
+    {
+      "frame_id": "05028",
+      "gt_index": 9,
+      "class_name": "Car",
+      "score": 0.17291538417339325,
+      "iou3d": 0.6880295276641846,
+      "suppressor_class": "Cyclist",
+      "suppressor_score": 0.22550220787525177,
+      "suppressor_bev_iou": 0.09764765202999115
+    },
+    {
+      "frame_id": "05059",
+      "gt_index": 15,
+      "class_name": "Car",
+      "score": 0.10244312882423401,
+      "iou3d": 0.5053210854530334,
+      "suppressor_class": "Cyclist",
+      "suppressor_score": 0.3958265483379364,
+      "suppressor_bev_iou": 0.09351493418216705
+    },
+    {
+      "frame_id": "08382",
+      "gt_index": 0,
+      "class_name": "Car",
+      "score": 0.11438248306512833,
+      "iou3d": 0.5232514142990112,
+      "suppressor_class": "Pedestrian",
+      "suppressor_score": 0.23008286952972412,
+      "suppressor_bev_iou": 0.03689033165574074
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "status": "first_epoch_pipeline_passed",
+  "observed_at": "2026-09-16T08:44:30.920584+08:00",
+  "runs": {
+    "concat": {
+      "first_epoch": {
+        "epoch": 1,
+        "samples": 8391,
+        "loss": 1.9317626608894147,
+        "det_loss": 1.9317626608894147,
+        "aux_loss": 0.0,
+        "train_seconds": 1004.3729656804353,
+        "optimizer_updates": 1049,
+        "val_selection_metric": 2.2069707404631376
+      },
+      "validation_frames": 1487,
+      "metric_count": 42,
+      "strict_moderate_3d_ap": {
+        "Vehicle": 0.5518403691835314,
+        "Pedestrian": 0.3352394650193641,
+        "Cyclist": 5.733832387186517
+      },
+      "selection_metric": 2.2069707404631376,
+      "inference_seconds": 162.02308010682464,
+      "evaluation_seconds": 869.1965575087816,
+      "checkpoints_bytes": {
+        "best": 132976519,
+        "last": 398224282
+      },
+      "observed_epoch": 2,
+      "observed_step": 500
+    },
+    "taskdec": {
+      "first_epoch": {
+        "epoch": 1,
+        "samples": 8391,
+        "loss": 2.0994692582962498,
+        "det_loss": 2.057285651008757,
+        "aux_loss": 0.35153007786665497,
+        "train_seconds": 1004.8446246795356,
+        "optimizer_updates": 1049,
+        "val_selection_metric": 1.2394475666187483
+      },
+      "validation_frames": 1487,
+      "metric_count": 42,
+      "strict_moderate_3d_ap": {
+        "Vehicle": 2.9797748108140327,
+        "Pedestrian": 0.06970211790001107,
+        "Cyclist": 0.6688657711422009
+      },
+      "selection_metric": 1.2394475666187483,
+      "inference_seconds": 161.69896047376096,
+      "evaluation_seconds": 844.0436016935855,
+      "checkpoints_bytes": {
+        "best": 136288755,
+        "last": 408148120
+      },
+      "observed_epoch": 2,
+      "observed_step": 400
+    }
+  },
+  "scope": "Full first-epoch training, 1487-frame validation, finite complete metrics, checkpoint presence and next-epoch live logs; not completion of the 80-epoch experiments."
+}

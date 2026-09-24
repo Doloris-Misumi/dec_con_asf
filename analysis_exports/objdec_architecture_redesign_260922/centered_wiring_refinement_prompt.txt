@@ -1,0 +1,38 @@
+Perform precise correctness edits on the attached new centered ObjDec figure. PRESERVE its horizontal centerline, token-modulation main module, linked expanded inset, fonts, sensor colors and overall positioning. Do not revert to the older vertical attention chain. The source is about 1860 x 848 pixels. Correct these specific wires and the detection framing.
+
+1. LEARNED QUERY WIRE, essential:
+Erase the long vertical wire from the Learned queries Q box (around x1404,y167) down to PFT (x1404,y386). Q must NEVER connect to PFT.
+Instead draw a thin orthogonal line from that Learned queries Q box, LEFT along a clear route, into the circled query plus centered around x1183,y280. The other input of this query plus is the beta branch of gated context, already drawn.
+The output of the query plus is the existing downward arrow labelled Q' into attention; preserve it.
+Q -> query plus -> Q' -> attention. No other destination for raw Q.
+Keep labels F between attention and the output plus, and F' between that plus and PFT. The gamma gated-context wire enters the output plus. Label the original Q as "Learned queries Q"; its output remains a feature-query vector, not detector boxes.
+
+2. COMPACT DETECTION:
+Completely erase the TALL outer Detection panel and its top heading at x1535..1850, y10..650. Keep only the SMALL tight Detection card around the actual centered head/output at y325..480. Its label should appear ONCE, as "Detection", not duplicated "3. Detection".
+Keep this right-hand group on the horizontal y418 centerline.
+Insert a small Fused BEV feature-grid tile BEFORE the 3D head. Shrink the PFT rectangle slightly if needed to make room. Exact chain on one centerline:
+attention -> F -> output plus -> F' -> PFT + reassemble -> small tile labelled Fused BEV -> 3D head -> 3D boxes.
+No skip connections. Feature grid has filled cells, no boxes. Output boxes after the head are schematic. Do not add empty tall borders, additional prediction heads, or a second Detection title. Empty space above a COMPACT card is fine.
+
+3. TOP CONTROL SIGNAL ERRORS:
+The Pool + concat descriptor must point ONLY to Foreground gate and Objectness. Erase its arrow into Modality contribution.
+Modality contribution uses its named input port "t_m, c_m, u_m, shared deviation" already written inside it. Add a short arrow from a small grey connector bearing that exact input label if needed; no descriptor input.
+Foreground gate has one grey scalar output labelled g; Objectness -> Context projection -> teal z.
+Bounded scale receives g and alpha and outputs w_m. Remove the erroneous looping wire that currently connects g to the bounded-scale output. Remove any direct Modality contribution -> w output bypass.
+Make Bounded scale's inputs a short LEFT connector circle "g" and a downward "alpha" arrow from the Modality contribution head above. A RIGHT arrow goes from Bounded scale to a grey circle labelled "w_m".
+Use repeated named connector circles to avoid crossing long wires. Do NOT join g and w_m.
+
+4. TOKEN-MODULATION SOURCES:
+Keep the actual raw t_m main-path arrow entering Token modulation from the LEFT.
+Its TOP has exactly four short input-port arrows labelled c_m, u_m, g, w_m. Put these labels in explicit tiny connector pills so they mean the signals computed above, not arrows from an empty border.
+REMOVE the old direct arrow from the bottom of Specific projection into Token modulation, and REMOVE the arbitrary extra top arrow arriving from the Bounded scale area. The explicit c_m,u_m,g,w_m ports replace that ambiguous wiring.
+Add a tiny phrase "Named ports reuse signals above" next to these four ports. The grey-dashed expansion links remain unchanged.
+Connect the upstream t_m group to the fork entering both Shared projection and Specific projection: a thin line from the group to the fork. Do not leave the projection fork floating. One modality's same token feeds both projections, with separate parameters per modality.
+
+5. GROUND-TRUTH TARGET ROUTING:
+At the bottom, Patch labels must feed targets to L_dec, L_gate and L_ctx only. Keep their red dashed target bus.
+Delete the red lower target wire from the L_ctx / patch-label area to L_det, because detection supervision uses GT boxes, not the patch-label target.
+Instead put a local named target connector "GT boxes" directly BELOW L_det and point a short red dashed arrow UP into L_det. This refers to the GT boxes at far left, like the named signal ports above. Keep "Detector outputs" entering L_det from above.
+Do not connect any loss to any other loss.
+
+Keep all other content unchanged. Preserve the paired beta/gamma context routes, the c/u sum -> gated residual -> original-token addition -> bounded scaling detail, the horizontal feature centerline, and the grey callout of Token modulation. Ensure all arrows have correct directions. No long formulas. Output one clean high-resolution repaired figure.

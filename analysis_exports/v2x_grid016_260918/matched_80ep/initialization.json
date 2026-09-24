@@ -1,0 +1,26 @@
+{
+  "taskdec": {
+    "file": "taskdec_initial.pt",
+    "sha256": "bd2fc4b3e66682f245ce09621893784dc0cefd3b77b31dce5c50e6ace9631131",
+    "parameters": 33654069,
+    "shared_backbone_head_hash": "92eaf7cee4de9f7c346c34cfb5cd97c3b8124a1298c786fc5e63f1624ea12ae0",
+    "copied_from": "/home/hongsheng/dec_con_asf/analysis_exports/v2x_taskdec_260916/taskdec_patch2_80ep/taskdec_initial.pt",
+    "copied_from_sha256": "b26d6f2d3fb5bd456d4b45dd81dcb6b7255e4471ad27895addbe7e488e698174",
+    "geometry_buffers_recreated": [
+      "encoders.camera.voxel_size"
+    ],
+    "trained_checkpoint_used": false
+  },
+  "concat": {
+    "file": "concat_initial.pt",
+    "sha256": "2bb8f3da5f8e79e1ce763eaba04ceab43b7ce2bd6e413822b8e8b0d556955701",
+    "parameters": 33136685,
+    "shared_backbone_head_hash": "92eaf7cee4de9f7c346c34cfb5cd97c3b8124a1298c786fc5e63f1624ea12ae0",
+    "copied_from": "/home/hongsheng/dec_con_asf/analysis_exports/v2x_taskdec_260916/controlled_80ep/concat_initial.pt",
+    "copied_from_sha256": "03a9253546708e587768bd83b8b07270e26165a7b6a0cc705c1c7d829c678747",
+    "geometry_buffers_recreated": [
+      "encoders.camera.voxel_size"
+    ],
+    "trained_checkpoint_used": false
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "status": "passed",
+  "variant": "patch",
+  "device": "0",
+  "batch_size": 1,
+  "cases": [
+    {
+      "frame": "000006",
+      "loss": 3.9449174404144287,
+      "detection_loss": 3.9449174404144287,
+      "auxiliary_loss": 0.0,
+      "gradient_l1": {
+        "encoders.camera": 202310.39101853967,
+        "encoders.lidar": 6359.192461490631,
+        "encoders.radar": 5689.156144618988,
+        "neck": 95417.93535089493,
+        "head": 1961.7113247215748,
+        "fuser": 28145.682777911425
+      },
+      "step_seconds": 0.2813512645661831,
+      "peak_allocated_gib": 1.5224170684814453,
+      "peak_reserved_gib": 1.814453125,
+      "predictions": 1500
+    },
+    {
+      "frame": "009041",
+      "loss": 3.4850716590881348,
+      "detection_loss": 3.4850716590881348,
+      "auxiliary_loss": 0.0,
+      "gradient_l1": {
+        "encoders.camera": 708220.4693259001,
+        "encoders.lidar": 18467.462640285492,
+        "encoders.radar": 13424.255453109741,
+        "neck": 283907.4169116616,
+        "head": 2620.255682349205,
+        "fuser": 82097.97672712803
+      },
+      "step_seconds": 0.17421569675207138,
+      "peak_allocated_gib": 1.8249478340148926,
+      "peak_reserved_gib": 2.0234375,
+      "predictions": 1500
+    },
+    {
+      "frame": "009004",
+      "loss": 2.918212413787842,
+      "detection_loss": 2.918212413787842,
+      "auxiliary_loss": 0.0,
+      "gradient_l1": {
+        "encoders.camera": 386028.624104023,
+        "encoders.lidar": 13513.163726240396,
+        "encoders.radar": 6589.139391422272,
+        "neck": 101791.193249017,
+        "head": 1936.7543034031987,
+        "fuser": 27395.2651181221
+      },
+      "step_seconds": 0.1721360832452774,
+      "peak_allocated_gib": 1.8249478340148926,
+      "peak_reserved_gib": 2.0234375,
+      "predictions": 1500
+    }
+  ],
+  "parameters": 33478957,
+  "note": "Three debugging updates only, not a trained result or stable throughput"
+}

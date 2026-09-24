@@ -1,0 +1,202 @@
+{
+  "date": "2026-09-10 00:44:27",
+  "tag": "l4dr_v1_1_model34_smoke20b_260910",
+  "repo_root": "/home/hongsheng/L4DR/K-Radar-main-repo",
+  "config": "/home/hongsheng/L4DR/K-Radar-main-repo/configs/cfg_PP_L4DR_v1.1.yml",
+  "local_config": "/home/hongsheng/dec_con_asf/results/l4dr_kradar_v1_local_eval_smoke20b_260910/cfg_PP_L4DR_v1.1_local_eval.yml",
+  "model": "/home/hongsheng/L4DR/checkpoints/L4DR-KRadar-v1.1-model_34.pt",
+  "data_root": "/home/hongsheng/k_radar_dataset",
+  "gpu": "3",
+  "label_version": "v1_0",
+  "subset": true,
+  "num_subset": 20,
+  "conf_thrs": [
+    "0.3"
+  ],
+  "pipeline_log_dir": "/home/hongsheng/dec_con_asf/results/l4dr_kradar_v1_local_eval_smoke20b_260910/l4dr_logs/cfg_PP_L4DR_v1.1_local_eval/test_l4dr_v1_1_model34_smoke20b_260910",
+  "copied_files": [
+    "/home/hongsheng/dec_con_asf/results/l4dr_kradar_v1_local_eval_smoke20b_260910/raw/complete_results_none_0.3.txt"
+  ],
+  "metrics": [
+    {
+      "conf_thr": "0.3",
+      "condition": "all",
+      "cls": "sed",
+      "iou": [
+        0.7,
+        0.5,
+        0.3
+      ],
+      "bev": [
+        15.584415584415586,
+        24.45887445887446,
+        25.757575757575758
+      ],
+      "3d": [
+        0.0,
+        14.545454545454547,
+        22.727272727272727
+      ]
+    },
+    {
+      "conf_thr": "0.3",
+      "condition": "fog",
+      "cls": "sed",
+      "iou": [
+        0.7,
+        0.5,
+        0.3
+      ],
+      "bev": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "3d": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "conf_thr": "0.3",
+      "condition": "heavysnow",
+      "cls": "sed",
+      "iou": [
+        0.7,
+        0.5,
+        0.3
+      ],
+      "bev": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "3d": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "conf_thr": "0.3",
+      "condition": "lightsnow",
+      "cls": "sed",
+      "iou": [
+        0.7,
+        0.5,
+        0.3
+      ],
+      "bev": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "3d": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "conf_thr": "0.3",
+      "condition": "normal",
+      "cls": "sed",
+      "iou": [
+        0.7,
+        0.5,
+        0.3
+      ],
+      "bev": [
+        15.584415584415586,
+        24.45887445887446,
+        25.757575757575758
+      ],
+      "3d": [
+        0.0,
+        14.545454545454547,
+        22.727272727272727
+      ]
+    },
+    {
+      "conf_thr": "0.3",
+      "condition": "overcast",
+      "cls": "sed",
+      "iou": [
+        0.7,
+        0.5,
+        0.3
+      ],
+      "bev": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "3d": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "conf_thr": "0.3",
+      "condition": "rain",
+      "cls": "sed",
+      "iou": [
+        0.7,
+        0.5,
+        0.3
+      ],
+      "bev": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "3d": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "conf_thr": "0.3",
+      "condition": "sleet",
+      "cls": "sed",
+      "iou": [
+        0.7,
+        0.5,
+        0.3
+      ],
+      "bev": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "3d": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "conf_thr": "0.3",
+      "condition": "unnormal",
+      "cls": "sed",
+      "iou": [
+        0.7,
+        0.5,
+        0.3
+      ],
+      "bev": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "3d": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  ]
+}

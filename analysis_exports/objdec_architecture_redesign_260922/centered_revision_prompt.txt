@@ -1,0 +1,62 @@
+Use case: infographic-diagram, edit of an existing scientific architecture figure.
+Redesign the attached ObjDec figure to meet the author's layout request. Keep its restrained white scientific style, serif headings, clean arrows, readable English labels, and exact modality identity palette: Camera orange #D55E00, LiDAR blue #0072B2, 4D Radar purple #8B3FAA. Control signals use grey/teal. No photos or decorative objects. Landscape about 2.2:1, high resolution.
+
+CRITICAL COMPOSITION CHANGE:
+The main forward feature path must run HORIZONTALLY LEFT TO RIGHT on ONE CONSTANT CENTERLINE at 49% of the canvas height. Never put the main path at the top or bottom. The eye should follow one bold navy horizontal backbone:
+"Aligned patch tokens" -> "Token modulation" -> "Controlled tokens" -> "Cross-modal attention" -> F -> circled PLUS -> F' -> "PFT + reassemble" -> "Fused BEV" -> "3D head" -> "3D boxes".
+Auxiliary representation/control branches live ABOVE that centerline. A clearly connected detailed inset of Token modulation lives BELOW the centerline. Thin training-only band at the very bottom.
+Give input only about 14% width, ObjDec computation about 67%, compact detection about 19%.
+Do not use tall full-height empty panel borders. The Detection group is a COMPACT card wrapped tightly around its centerline BEV, head and output, not a tall vacant column. Do not leave the top half of a Detection column empty.
+Small stage headings: "Patch tokens", "ObjDec: object-guided fusion", "Detection". No giant title banner.
+
+LEFT INPUT REGION:
+Three short stacked rows centered around the main centerline, labelled Camera, LiDAR, 4D Radar with the correct orange/blue/purple:
+Encoder -> Project + patchify -> corresponding token.
+Three separate color-coded tokens feed the main centerline. Show a small label t_m, "per modality". No sensor photographs, feature dimensions, input cubes or large grids. Color is sensor identity, not shared/specific identity.
+
+ABOVE THE CENTERLINE, LEFT HALF OF CENTRAL OBJDEC REGION:
+A short branch clearly rises FROM the main incoming t_m line into two PARALLEL learned projections: "Shared" and "Specific".
+The exact same input token enters BOTH projections independently. Output labels c_m and u_m. Small token glyphs retain orange/blue/purple identities. No arrow c_m -> u_m. These projections are applied separately per modality; add small label "Per modality".
+Shared and specific outputs branch toward:
+1. "Pool + concat" -> "Foreground gate" -> g (a scalar circle, NOT a token strip).
+2. same pooled descriptor -> "Objectness" -> "Context projection" -> z (teal vector).
+3. "Modality contribution" gets local labelled inputs "t_m, c_m, u_m, shared deviation"; output alpha has three orange/blue/purple bars. It does NOT receive only the pooled descriptor.
+4. "Bounded scale" gets g and alpha, producing w_m (scalar circle).
+Use small, unambiguous labelled arrows linking these outputs to the centerline Token modulation module: c_m and u_m enter its top; g and w_m enter control ports. The main raw t_m enters its left. The token-modulation module is visibly part of the MAIN PATH from the outset, not a detached operation below another subgraph. No raw input shortcut goes directly to attention.
+
+BELOW THE CENTERLINE — EXPLICIT LINKED ZOOM:
+A wide shallow inset labelled "Token modulation — expanded" sits directly below the main Token modulation box. Draw two grey DASHED CALLOUT LINES from the actual main Token modulation box's lower corners to the inset's upper corners; these must be plainly visible. They mean a magnified detail of THAT module, not a second computation. Do not confuse these GREY dashed callouts with RED dashed supervision.
+Inside inset draw:
+c_m and u_m -> ADD-1 -> MULTIPLY by scalar g (tiny lambda label) -> ADD-2 -> MULTIPLY by scalar w_m -> controlled token labelled t-tilde_m.
+Original input t_m follows a direct lower residual bypass into ADD-2 ONLY. ADD-2 has two incoming signals: gated c/u update and original t_m. No extra inputs.
+The source names c_m,u_m,g,w_m match the actual upstream branches. Draw vector strips only for t_m,c_m,u_m and output, CIRCLES for scalar g,w_m. Use + and multiply symbols instead of an equation.
+A tiny note "Same signals as above" may appear inside the inset.
+The inset should consume at most 18% of total image height and must not displace the main centerline.
+
+ABOVE THE CENTERLINE, ATTENTION CONTROL:
+At the right of the control heads, one "Gated context" multiplier receives g and z, then FORKS to two control wires, labelled beta and gamma.
+"Learned queries Q" with grey query glyphs feeds a circled plus above the attention module. Beta gated-context wire enters this plus. The line FROM that plus DOWN to attention's Q port MUST BE LABELLED "Q'".
+Attention lies ON THE CENTERLINE and has two separate inputs: "K,V" from the controlled tokens on its LEFT; "Q'" from ABOVE.
+Attention output on its RIGHT is labelled "F" with small subtitle "Fused tokens".
+F -> a circled plus ON THE CENTERLINE, receiving gamma gated context from above -> output labelled "F'".
+F' -> PFT + reassemble. No context is generated after PFT.
+Thus exact ordered labels: Q (before query addition), Q' (after query addition), F (after attention), F' (after output addition). Use legible primes. Never label attention output Q.
+Context is predicted once. No feedback loops. Do not print the long attention formula.
+
+COMPACT DETECTION ON THE SAME CENTERLINE:
+Immediately after F', place the small PFT + reassemble block, then fused BEV feature-grid icon, then 3D head, then three simple outlined 3D boxes. This right group may wrap only the fused BEV/head/output in a compact pale-blue card labelled Detection. Keep all their centers on the main centerline.
+No tall empty Detection panel. Do not artificially fill space with invented subheads, pseudo-results or unnecessary text. Fused BEV is a feature grid, not an image with detection boxes. Boxes are only AFTER the head.
+There must be NO shortcut attention -> head or Fused BEV -> final boxes bypassing head.
+
+BOTTOM TRAINING BAND:
+A thin separate light-blush strip "Training only".
+Four badges L_dec, L_gate, L_ctx, L_det with named source connectors above each:
+"c_m, u_m (FG only)" -> L_dec; "g" -> L_gate; "Objectness" -> L_ctx; "Detector outputs" -> L_det.
+Red dashed arrows end at losses, never feed the forward architecture.
+GT boxes -> Patch labels -> targets for L_dec, L_gate,L_ctx.
+GT boxes separately -> target for L_det.
+No loss-to-loss arrows. No SCL block.
+Compact legend: "Solid: forward | Grey dashed: expanded view | Red dashed: training only".
+"No GT at inference" in small footer.
+
+Preserve the actual computation. The purpose of this redesign is to make the main chain centered, show how token modulation belongs to it and where its inputs come from, distinguish Q/Q'/F/F', and remove wasted detector space. Prefer fewer words, clear arrows, and good spacing. Render one polished revised figure.

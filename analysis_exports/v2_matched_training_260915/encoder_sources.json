@@ -1,0 +1,20 @@
+{
+  "CAMERA": {
+    "CFG": "./configs/cfg_CAMERA_MODEL_Base.yml",
+    "PRETRAINED": "./pretrained/CAMERA_MODEL_10.pt",
+    "KEY": "cam_bev_feat",
+    "CHANNEL": 256
+  },
+  "LIDAR": {
+    "CFG": "./configs/cfg_SECOND_local.yml",
+    "PRETRAINED": "./pretrained/SECOND_10.pt",
+    "KEY": "spatial_features_2d",
+    "CHANNEL": 512
+  },
+  "RADAR": {
+    "CFG": "./configs/cfg_RTNH_wide.yml",
+    "PRETRAINED": "./pretrained/RTNH_wide_10.pt",
+    "KEY": "bev_feat",
+    "CHANNEL": 768
+  }
+}

@@ -1,0 +1,308 @@
+--- before/taskdec_abstract_initial_draft_260917.md
++++ after/taskdec_abstract_initial_draft_260917.md
+@@ -1,12 +1,14 @@
+-# TaskDec 摘要初稿
++# ObjDec 摘要初稿
+ 
+ 日期：2026-09-17。按作者指定顺序组织：应用背景 → 问题 → 架构 → 方法 → 效果 → 开源。当前为中文讨论稿，依据已完成实验撰写。
+ 
+-工作标题：**TaskDec: Task-Aware Decoupled Fusion for Multi-Sensor 3D Object Detection**
++命名更新（2026-09-19）：方法名统一为 **ObjDec**，全称 **Object-Guided Representation Decoupling（目标引导的表征解耦）**。
++
++论文标题（已确定）：**Decoupling to Fuse: Learning Shared and Modality-Specific Representations for Multi-Sensor 3D Object Detection**
+ 
+ ## 中文摘要
+ 
+-融合相机、LiDAR 与四维雷达的互补观测，是提升自动驾驶三维目标检测能力的重要途径。然而，空间对齐后的多模态特征仍混合着共同信息、模态特有线索和背景响应，如何在利用跨模态一致性的同时保留有益差异，并使二者的融合受到目标相关性引导，仍是一个关键问题。为此，本文提出 TaskDec，一种将表征解耦与目标相关交互联合建模的任务感知融合架构。具体而言，TaskDec 在对齐的局部空间中学习共享与模态特有表征，并通过目标区域内的表征约束组织跨模态一致性与差异性。在此基础上，架构结合前景门控、模态控制与目标上下文，调制传感器输入特征、跨模态注意力查询及融合输出，使解耦表征直接参与检测表示的构建。K-Radar 实验表明，在 v1 的相同置信度过滤设置（conf=0.3）下，TaskDec 相对官方 ASF 权重对应结果的 AP3D@0.3 和 APBEV@0.5 分别提高 8.04 和 7.77 个百分点，参数量仅增加约 1.7%。组件消融与表征、空间门控分析进一步支持该设计的有效性；其解耦控制变体在 v2 宽域双类别设置下，也取得了相对同训练日程 ASF 的检测收益。代码与模型将公开发布。
++融合相机、LiDAR 与四维雷达的互补观测，是提升自动驾驶三维目标检测能力的重要途径。然而，空间对齐后的多模态特征仍混合着共同信息、模态特有线索和背景响应，如何在利用跨模态一致性的同时保留有益差异，并使二者的融合受到目标相关性引导，仍是一个关键问题。为此，本文提出 ObjDec，一种将表征解耦与目标相关交互联合建模的目标引导融合架构。具体而言，ObjDec 在对齐的局部空间中学习共享与模态特有表征，并通过目标区域内的表征约束组织跨模态一致性与差异性。在此基础上，架构结合前景门控、模态控制与目标上下文，调制传感器输入特征、跨模态注意力查询及融合输出，使解耦表征直接参与检测表示的构建。K-Radar 实验表明，在 v1 的相同置信度过滤设置（conf=0.3）下，ObjDec 相对官方 ASF 权重对应结果的 AP3D@0.3 和 APBEV@0.5 分别提高 8.04 和 7.77 个百分点，参数量仅增加约 1.7%。组件消融与表征、空间门控分析进一步支持该设计的有效性；其解耦控制变体在 v2 宽域双类别设置下，也取得了相对同训练日程 ASF 的检测收益。代码与模型将公开发布。
+ 
+ ## 结构对应
+ 
+@@ -14,7 +16,7 @@
+ |---|---|
+ | 第一句 | 交代三模态互补与自动驾驶检测背景 |
+ | 第二句 | 从对齐后的信息组织引出研究问题，不将天气作为唯一动机 |
+-| 第三句 | 给出 TaskDec 名称与架构定位 |
++| 第三句 | 给出 ObjDec 名称与架构定位 |
+ | 第四、五句 | 先表征组织，再目标相关交互，明确 token/query/output 的计算联系 |
+ | 第六句 | 给出带协议限定的主结果与参数开销 |
+ | 第七句 | 用消融、机制分析和方法家族扩展补充证据 |
+@@ -31,6 +33,6 @@
+ 
+ - v1 数值、差值和参数量来自[全文证据总稿](taskdec_full_paper_evidence_motivation_contributions_260917.md)及其中原始 JSON。8.04 按原始精度相减，未沿用旧稿舍入后得到的 8.05。
+ - `conf=0.3` 保留在当前定量句中，因为对官方 ASF 的大幅差值依赖置信度过滤设置。该句不声称全面超过 ASF 官方论文值或本地重训 ASF。
+-- v2 使用 DecControlled Strong，缺少 task-context 分支，所以写“其解耦控制变体”，不写成完整 TaskDec 在另一数据集上的收益。具体增益见[v2 报告策略](taskdec_v2_reporting_strategy_260916.md)。
++- v2 使用 DecControlled Strong，缺少目标上下文（object context）分支，所以写“其解耦控制变体”，不写成完整 ObjDec 在另一数据集上的收益。具体增益见[v2 报告策略](taskdec_v2_reporting_strategy_260916.md)。
+ - V2X 2×2 尚未完成，当前完成的 4×4 低于 Concat；摘要暂不作多数据集一致领先的结论。最终跨数据集结论应依据完整结果更新。
+-- “代码与模型将公开发布”是拟用的未来发布声明，不表示已经开源；尚无已核验的 TaskDec 投稿代码链接，不虚构仓库地址。投稿时可替换为“代码与模型将在［待补代码链接］公开”。
++- “代码与模型将公开发布”是拟用的未来发布声明，不表示已经开源；尚无已核验的 ObjDec 投稿代码链接，不虚构仓库地址。投稿时可替换为“代码与模型将在［待补代码链接］公开”。
+--- before/taskdec_introduction_bilingual_initial_260917.md
++++ after/taskdec_introduction_bilingual_initial_260917.md
+@@ -1,10 +1,12 @@
+-# TaskDec Introduction：中英文初稿
++# ObjDec Introduction：中英文初稿
+ 
+ 日期：2026-09-17。依据当前实现与已归档结果撰写；本轮补充 2025–2026 年相关文献，保留原有动机、架构与结果叙述。修改前版本见 [备份](draft_history/before_recent_literature_taskdec_introduction_bilingual_initial_260917.md)。
+ 
+-建议标题：**TaskDec: Task-Aware Decoupled Fusion for Multi-Sensor 3D Object Detection**
++命名更新（2026-09-19）：方法名统一为 **ObjDec**，全称 **Object-Guided Representation Decoupling（目标引导的表征解耦）**。
+ 
+-逻辑：多传感器检测 → 已有空间交互与自适应融合 → 局部信息组织和目标相关性 → TaskDec 架构 → 实验证据 → 三点贡献。中文与英文按段对应。正文中的链接可在 LaTeX 稿中替换为正式引用。
++论文标题（已确定）：**Decoupling to Fuse: Learning Shared and Modality-Specific Representations for Multi-Sensor 3D Object Detection**
++
++逻辑：多传感器检测 → 已有空间交互与自适应融合 → 局部信息组织和目标相关性 → ObjDec 架构 → 实验证据 → 三点贡献。中文与英文按段对应。正文中的链接可在 LaTeX 稿中替换为正式引用。
+ 
+ ## 中文
+ 
+@@ -14,14 +16,14 @@
+ 
+ 我们关注空间对齐之后的信息组织问题。在同一个局部区域中，跨模态共同响应可能来自目标，也可能来自背景；模态之间的差异则可能反映有用的观测特性，也可能包含噪声。因此，跨模态一致性并不自动等同于目标相关性，而模态差异也不应被一概消除。[FactorCL](https://papers.neurips.cc/paper_files/paper/2023/hash/6818dcc65fdf3cbd4b05770fb957803e-Abstract-Conference.html)、[特征因果分解（Liu 等，2025）](https://proceedings.nips.cc/paper_files/paper/2025/hash/55123f38c9f4acf417335cff41be6e27-Abstract-Conference.html) 对于检测任务，需要同时考虑哪些信息可以共享、哪些差异值得保留，以及这些信息与局部目标的关系。由此，我们提出如下研究问题：**如何学习共享与模态特有表征，并依据目标相关信息引导二者参与局部融合？** 这一问题同样存在于正常驾驶场景中，光照变化、遮挡和恶劣天气则提供了考察其表现的不同条件。
+ 
+-为此，我们提出 **TaskDec**，一种学习共享与模态特有表征，并利用目标相关信息引导其融合的任务感知架构。在 ASF 的统一空间投影与局部跨传感器交互基础上，TaskDec 为各模态的对应 patch 构建共享与特有表征，并在训练时利用目标区域内的约束促进共享表示的一致性、保留特有表示之间的差异，以及限制同一模态两类表示的相似性。在此基础上，架构预测前景门控、模态贡献权重和目标上下文：前两者共同调节输入 token 的特征更新与缩放，目标上下文则通过门控残差调制注意力查询和融合输出。这样，表征学习与融合控制形成直接的计算联系，共同参与检测特征的构建。目标框仅用于训练监督，推理时的控制信号由输入特征预测，无需目标框或天气标签。
++为此，我们提出 **ObjDec**，一种学习共享与模态特有表征，并利用目标相关信息引导其融合的多传感器融合架构。在 ASF 的统一空间投影与局部跨传感器交互基础上，ObjDec 为各模态的对应 patch 构建共享与特有表征，并在训练时利用目标区域内的约束促进共享表示的一致性、保留特有表示之间的差异，以及限制同一模态两类表示的相似性。在此基础上，架构预测前景门控、模态贡献权重和目标上下文：前两者共同调节输入 token 的特征更新与缩放，目标上下文则通过门控残差调制注意力查询和融合输出。这样，表征学习与融合控制形成直接的计算联系，共同参与检测特征的构建。目标框仅用于训练监督，推理时的控制信号由输入特征预测，无需目标框或天气标签。
+ 
+-我们以 K-Radar 为主要实验平台评估 TaskDec。在 v1 的统一置信度过滤设置（conf=0.3）下，TaskDec 的 AP3D@0.3 和 APBEV@0.5 分别达到 **88.36** 和 **88.10**；相对官方 ASF 权重对应的评测结果，分别提高 **8.04** 和 **7.77** 个百分点，参数量增加约 **1.7%**。组件消融检验各项设计对检测性能的贡献，表征可视化与空间门控分析则描述模型学习到的局部表示和控制行为。此外，我们考察解耦控制变体在 K-Radar v2 扩大空间范围和类别设置下的表现，以及完整架构在 V2X-Radar-V 上的迁移结果，并分别报告模型变体、评测设置及适用边界。
++我们以 K-Radar 为主要实验平台评估 ObjDec。在 v1 的统一置信度过滤设置（conf=0.3）下，ObjDec 的 AP3D@0.3 和 APBEV@0.5 分别达到 **88.36** 和 **88.10**；相对官方 ASF 权重对应的评测结果，分别提高 **8.04** 和 **7.77** 个百分点，参数量增加约 **1.7%**。组件消融检验各项设计对检测性能的贡献，表征可视化与空间门控分析则描述模型学习到的局部表示和控制行为。此外，我们考察解耦控制变体在 K-Radar v2 扩大空间范围和类别设置下的表现，以及完整架构在 V2X-Radar-V 上的迁移结果，并分别报告模型变体、评测设置及适用边界。
+ 
+ 本文的主要贡献如下：
+ 
+ 1. **面向目标检测的局部表征学习。** 在空间对应的多传感器特征中显式组织共享与模态特有表示，并通过目标区域内的表征约束，将跨模态一致性与差异性学习联系到检测任务。
+-2. **表征驱动的任务感知融合架构。** 将解耦表示与前景门控、模态贡献控制和目标上下文相结合，联合调制融合输入、注意力查询及融合输出，使学习到的表示直接参与检测特征的构建。
++2. **表征驱动的目标引导融合架构。** 将解耦表示与前景门控、模态贡献控制和目标上下文相结合，联合调制融合输入、注意力查询及融合输出，使学习到的表示直接参与检测特征的构建。
+ 3. **检测性能与机制的联合评估。** 通过 K-Radar 主结果、组件消融、表征与空间门控分析，以及扩展设置下的比较，评估该设计的收益、内部行为和适用范围。
+ 
+ ## English
+@@ -32,33 +34,33 @@
+ 
+ We focus on how information is organized after spatial alignment. Within the same local region, responses shared across modalities may originate from either objects or background, while differences between modalities may reflect useful sensing characteristics or noise. Cross-modal consistency therefore does not automatically imply object relevance, and modality differences should not be removed indiscriminately. [FactorCL](https://papers.neurips.cc/paper_files/paper/2023/hash/6818dcc65fdf3cbd4b05770fb957803e-Abstract-Conference.html), [Liu et al. (2025)](https://proceedings.nips.cc/paper_files/paper/2025/hash/55123f38c9f4acf417335cff41be6e27-Abstract-Conference.html) Detection requires considering which information can be shared, which differences should be retained, and how both relate to local objects. This motivates our research question: **How can shared and modality-specific representations be learned and incorporated into local fusion under the guidance of object-related information?** This question also arises in ordinary driving scenes; changes in illumination, occlusion, and adverse weather provide different conditions under which to examine it.
+ 
+-We introduce **TaskDec**, a task-aware architecture that learns shared and modality-specific representations and uses object-related information to guide their fusion. Building on ASF's unified projection and local cross-sensor interaction, TaskDec constructs shared and modality-specific representations for corresponding sensor patches. During training, constraints within object regions encourage consistency among shared representations, maintain differences among modality-specific representations, and limit similarity between the two representations of each modality. The architecture then predicts foreground gates, modality contribution weights, and object context. The gates and weights jointly regulate updates to and scaling of input tokens, while object context modulates attention queries and fused outputs through gated residuals. This connects representation learning directly to fusion control, allowing both to shape the features used for detection. Ground-truth boxes are used only for training supervision; at inference, control signals are predicted from input features without ground-truth boxes or weather labels.
++We introduce **ObjDec**, a multi-sensor fusion architecture that learns shared and modality-specific representations and uses object-related information to guide their fusion. Building on ASF's unified projection and local cross-sensor interaction, ObjDec constructs shared and modality-specific representations for corresponding sensor patches. During training, constraints within object regions encourage consistency among shared representations, maintain differences among modality-specific representations, and limit similarity between the two representations of each modality. The architecture then predicts foreground gates, modality contribution weights, and object context. The gates and weights jointly regulate updates to and scaling of input tokens, while object context modulates attention queries and fused outputs through gated residuals. This connects representation learning directly to fusion control, allowing both to shape the features used for detection. Ground-truth boxes are used only for training supervision; at inference, control signals are predicted from input features without ground-truth boxes or weather labels.
+ 
+-We evaluate TaskDec primarily on K-Radar. Under a common confidence-filtering setting of 0.3 on v1, TaskDec achieves **88.36 AP3D@0.3** and **88.10 APBEV@0.5**, improving over the corresponding evaluation of the released ASF checkpoint by **8.04** and **7.77** percentage points, respectively, with approximately **1.7%** more parameters. Component ablations assess the contribution of each design to detection performance, while representation visualizations and spatial gate analyses characterize the learned local representations and control behavior. We further examine a decoupled-control variant under the wider spatial coverage and expanded category setting of K-Radar v2, as well as the transfer of the full architecture to V2X-Radar-V, reporting the model variants, evaluation settings, and limitations separately.
++We evaluate ObjDec primarily on K-Radar. Under a common confidence-filtering setting of 0.3 on v1, ObjDec achieves **88.36 AP3D@0.3** and **88.10 APBEV@0.5**, improving over the corresponding evaluation of the released ASF checkpoint by **8.04** and **7.77** percentage points, respectively, with approximately **1.7%** more parameters. Component ablations assess the contribution of each design to detection performance, while representation visualizations and spatial gate analyses characterize the learned local representations and control behavior. We further examine a decoupled-control variant under the wider spatial coverage and expanded category setting of K-Radar v2, as well as the transfer of the full architecture to V2X-Radar-V, reporting the model variants, evaluation settings, and limitations separately.
+ 
+ Our main contributions are as follows:
+ 
+ 1. **Local representation learning for object detection.** We explicitly organize spatially corresponding multi-sensor features into shared and modality-specific representations, using constraints within object regions to connect the learning of cross-modal consistency and differences to detection.
+-2. **A task-aware fusion architecture driven by learned representations.** We combine decoupled representations with foreground gating, modality contribution control, and object context to jointly modulate fusion inputs, attention queries, and fused outputs, allowing the learned representations to directly shape detection features.
++2. **An object-guided fusion architecture driven by learned representations.** We combine decoupled representations with foreground gating, modality contribution control, and object context to jointly modulate fusion inputs, attention queries, and fused outputs, allowing the learned representations to directly shape detection features.
+ 3. **Evaluation of detection performance and model behavior.** Through main results on K-Radar, component ablations, representation and spatial gate analyses, and comparisons under extended settings, we assess the benefits, internal behavior, and scope of the design.
+ 
+ ## 使用说明与核查依据（不进入 Introduction 正文）
+ 
+ - 当前英文约 700 词量级，五个段落加三条贡献；正式排版时可压缩第二段的逐方法介绍和贡献复述。该版本优先供讨论逻辑，不代表已经满足最终占页要求。
+ - 不使用 entangled、disentangled factors、statistical independence、causal、first 等超出现有证据或用户偏好的表述。这里的 decoupled 指有约束的共享/特有分支组织，不承诺严格独立或可辨识分解。
+-- 当前 K-Radar v1 主模型的 task context 是二元 objectness 派生上下文，不是分类/回归任务分解，也不是多类别语义上下文；主图与方法节应明确。
++- 当前 K-Radar v1 主模型的目标上下文（object context）是二元 objectness 派生上下文，不是分类/回归任务分解，也不是多类别语义上下文；主图与方法节应明确。
+ - 模态贡献权重不是已校准的传感器可靠性概率；前景 gate 主要控制更新幅度，不等于把全部背景 token 清零。
+ - 数值和变体身份见[全文证据总稿](taskdec_full_paper_evidence_motivation_contributions_260917.md)、[置信度协议核查](asf_v1_conf_protocol_audit_260828.md)、[v2 同训练日程结果](taskdec_v2_matched_training_260915.md)。差值按归档原始精度计算，显示值先四舍五入再相减可能差 0.01。
+ - v1 的大幅 ASF 增益依赖所述置信度过滤口径；conf=0.0 与本地重训 ASF 对照必须保留在实验部分，不能将本段改写为所有协议全面领先。
+-- K-Radar v2 的 DecControlled Strong 不含 task-context 分支；v1/v2 是同一数据集的不同设置。目标数据集上训练的 V2X 结果是架构迁移验证，不是零样本泛化；当前不写多数据集一致领先。
++- K-Radar v2 的 DecControlled Strong 不含目标上下文（object context）分支；v1/v2 是同一数据集的不同设置。目标数据集上训练的 V2X 结果是架构迁移验证，不是零样本泛化；当前不写多数据集一致领先。
+ - 当前完整 V2X 4×4 结果尚未超过 Concat，2×2 和 L4DR 的最终比较需随实验归档更新。该句只交代验证范围，不预先宣称有益迁移或最终排名。
+ - 这里没有写“更快于 ASF”，也没有把目前抽样测速和未重测全量 AP 的优化实现混为已完成的精度—效率主结论。
+ - 参考 WCBR 引言的“问题—结构—学习目标—证据”组织方式，不沿用其天气条件路由动机。正式相关工作应交代共享/特有表征的既有研究；DecAlign 是本稿已核验的一项概念近邻，不能把分支拆分本身写为首次提出。
+-- 图 1 动机应对应第三段，图 2 架构对应第四段；图 3–5 分别承担表征、空间控制和实际预测分析。图 5 尚未形成完成的 ASF–TaskDec 正文对比图，本稿不声称其已完成。
++- 图 1 动机应对应第三段，图 2 架构对应第四段；图 3–5 分别承担表征、空间控制和实际预测分析。图 5 尚未形成完成的 ASF–ObjDec 正文对比图，本稿不声称其已完成。
+ 
+ ## 本轮文献补充说明（不进入 Introduction 正文）
+ 
+ - 引言正文由 4 篇方法引用扩展至 12 篇，其中 9 篇为 2025–2026 年发表/公开版本；详细来源见 [近期文献核查表](taskdec_recent_literature_and_comparability_260917.md)。
+ - 第一段补充 BEVFusion、MoME、RobuRCDet 作为融合路线与模态贡献的背景；第二段补充 DLRFusion、RAF、SPFD；第三段以 FactorCL 和 Liu 等（2025）支持共同信息、特有信息及噪声需要区别对待的研究背景。
+-- SPFD 已把 shared/private 学习用于检测，Liu 等已研究从模态特有信息中排除冗余。这里没有将“表征解耦用于检测”或“区分差异与噪声”本身称为首次提出。TaskDec 的具体定位仍是对应 BEV 区域中的目标监督和表征驱动的融合控制。
++- SPFD 已把 shared/private 学习用于检测，Liu 等已研究从模态特有信息中排除冗余。这里没有将“表征解耦用于检测”或“区分差异与噪声”本身称为首次提出。ObjDec 的具体定位仍是对应 BEV 区域中的目标监督和表征驱动的融合控制。
+ - 新文献的发表年份、传感器配置与 AP 可比性已单独登记；增加引用不等于建立新的统一协议 SOTA 排名。
+--- before/taskdec_related_work_bilingual_initial_260917.md
++++ after/taskdec_related_work_bilingual_initial_260917.md
+@@ -1,15 +1,17 @@
+-# TaskDec Related Work：结构安排与中英文初稿（近期文献补充版）
++# ObjDec Related Work：结构安排与中英文初稿（近期文献补充版）
+ 
+ 日期：2026-09-17。已补充 2025–2026 年相关文献，与 [Introduction 初稿](taskdec_introduction_bilingual_initial_260917.md) 配套。修改前版本保存在 [draft_history](draft_history/before_recent_literature_taskdec_related_work_bilingual_initial_260917.md)。中文、英文分别构成完整版本；链接在正式稿中替换为文献引用。
+ 
++命名更新（2026-09-19）：方法名统一为 **ObjDec**，全称 **Object-Guided Representation Decoupling（目标引导的表征解耦）**。
++
+ ## 一、建议结构
+ 
+-保留两个小节，每节三段。第一节介绍空间融合、近期的模态贡献控制、K-Radar 直接近邻；第二节介绍共享/特有学习基础、近期分解与使用方式，以及 TaskDec 的具体联系。不单独增加恶劣天气小节。
++保留两个小节，每节三段。第一节介绍空间融合、近期的模态贡献控制、K-Radar 直接近邻；第二节介绍共享/特有学习基础、近期分解与使用方式，以及 ObjDec 的具体联系。不单独增加恶劣天气小节。
+ 
+ | 正式小节 | 段落安排 | 收束点 |
+ | --- | --- | --- |
+ | **2.1 Multi-Sensor Fusion for 3D Object Detection** | 公共空间/查询交互 → 输入质量与模态贡献 → LiDAR–radar 和三传感器融合 | 在 ASF 的局部融合基础上联系表征组织与目标相关控制 |
+-| **2.2 Shared and Modality-Specific Representation Learning** | 基础思想 → 近期的筛选/对齐/检测使用及事后分析 → TaskDec | 对应 BEV 区域、目标区域训练约束、输入/query/output 控制 |
++| **2.2 Shared and Modality-Specific Representation Learning** | 基础思想 → 近期的筛选/对齐/检测使用及事后分析 → ObjDec | 对应 BEV 区域、目标区域训练约束、输入/query/output 控制 |
+ 
+ 当前英文正文约 440 词，23 篇方法文献，其中 14 篇来自 2025–2026 年。通过合并方法介绍控制篇幅；正式占页以模板排版为准。shared / modality-specific 是本文统一术语，介绍他人方法时保留其 common / unique / private 用语。
+ 
+@@ -21,7 +23,7 @@
+ 
+ 近期研究进一步关注模态贡献与输入质量变化。[MoME（2025）](https://arxiv.org/abs/2503.19776) 为相机、LiDAR 及联合特征设置专家解码器，并根据查询选择专家；[CCF（2026）](https://arxiv.org/abs/2603.23276) 结合独立查询监督、几何先验和互补遮蔽，缓解跨域检测中的模态失衡。[RobuRCDet（2025）](https://proceedings.iclr.cc/paper_files/paper/2025/hash/21dabaacda3edba8bb281da45d7cbc17-Abstract-Conference.html) 则利用雷达高斯扩展和图像置信度引导的融合，处理相机与雷达受到不同扰动的情况。
+ 
+-在 K-Radar 相关研究中，[3D-LRF](https://openaccess.thecvf.com/content/CVPR2024/papers/Chae_Towards_Robust_3D_Object_Detection_with_LiDAR_and_4D_Radar_CVPR_2024_paper.pdf) 与 [L4DR](https://arxiv.org/abs/2408.03677) 分别研究三维空间交互、前景去噪及门控融合；[DLRFusion（2025）](https://openaccess.thecvf.com/content/ICCV2025/html/Chae_Doppler-Aware_LiDAR-RADAR_Fusion_for_Weather-Robust_3D_Detection_ICCV_2025_paper.html) 将 Doppler、雷达功率和 LiDAR 特征分开编码并迭代交互。[WCBR](https://arxiv.org/abs/2604.05405) 根据环境条件调节分支贡献，[SRF（2026）](https://ave.kaist.ac.kr/2026/02/12/srf-stereo-radar-fusion-for-3d-object-detection-in-adverse-weather-conditions/) 在三维体素空间融合双目图像与雷达。对于三传感器融合，[ASF](https://arxiv.org/abs/2503.07029) 采用统一空间投影与对应 patch 内的跨传感器注意力，[RAF（2026）](https://arxiv.org/abs/2607.04587) 则利用显式监督的图像可靠性图调制相机特征。TaskDec 沿用 ASF 的投影和局部交互机制，进一步将共享/特有表征学习与目标相关融合控制联系起来。
++在 K-Radar 相关研究中，[3D-LRF](https://openaccess.thecvf.com/content/CVPR2024/papers/Chae_Towards_Robust_3D_Object_Detection_with_LiDAR_and_4D_Radar_CVPR_2024_paper.pdf) 与 [L4DR](https://arxiv.org/abs/2408.03677) 分别研究三维空间交互、前景去噪及门控融合；[DLRFusion（2025）](https://openaccess.thecvf.com/content/ICCV2025/html/Chae_Doppler-Aware_LiDAR-RADAR_Fusion_for_Weather-Robust_3D_Detection_ICCV_2025_paper.html) 将 Doppler、雷达功率和 LiDAR 特征分开编码并迭代交互。[WCBR](https://arxiv.org/abs/2604.05405) 根据环境条件调节分支贡献，[SRF（2026）](https://ave.kaist.ac.kr/2026/02/12/srf-stereo-radar-fusion-for-3d-object-detection-in-adverse-weather-conditions/) 在三维体素空间融合双目图像与雷达。对于三传感器融合，[ASF](https://arxiv.org/abs/2503.07029) 采用统一空间投影与对应 patch 内的跨传感器注意力，[RAF（2026）](https://arxiv.org/abs/2607.04587) 则利用显式监督的图像可靠性图调制相机特征。ObjDec 沿用 ASF 的投影和局部交互机制，进一步将共享/特有表征学习与目标相关融合控制联系起来。
+ 
+ ### 2.2 共享与模态特有表征学习
+ 
+@@ -29,7 +31,7 @@
+ 
+ 近期工作进一步研究两类信息的筛选、对齐与使用。[Liu 等（2025）](https://proceedings.nips.cc/paper_files/paper/2025/hash/55123f38c9f4acf417335cff41be6e27-Abstract-Conference.html) 从因果建模角度将模态特有部分进一步区分为独有与冗余信息；[MultiLoReFT（2026）](https://arxiv.org/abs/2607.16789) 通过低秩表示微调学习共享及模态特有子空间。[DecAlign（2026）](https://proceedings.iclr.cc/paper_files/paper/2026/file/f7f5f501282771c96bb3fedcc96bedfe-Paper-Conference.pdf) 分别利用原型引导的最优传输和分布匹配处理特有与共同表示。面向检测，[SPFD（2026）](https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Beyond_Duality_A_Hybrid_Framework_of_Leveraging_Shared_and_Private_CVPR_2026_paper.html) 基于频域一致性分离 RGB–Event 的共享/私有特征，并在编码器和解码器中分别使用；[LMD（2025）](https://proceedings.neurips.cc/paper_files/paper/2025/hash/d3e0aaa57c0d639f32a520cda39aec6d-Abstract-Conference.html) 则对已训练的融合网络进行事后模态贡献分解。
+ 
+-TaskDec 关注相机、LiDAR 与四维雷达在对应 BEV 区域中的表征学习和融合计算。在训练时，目标区域约束用于组织共享与特有表示的一致性和差异性；在前向计算中，这些表示参与前景门控、模态贡献权重和目标上下文的预测，进而调节融合输入、注意力查询及融合输出。其具体设计在于将局部目标监督与三处融合控制相结合。
++ObjDec 关注相机、LiDAR 与四维雷达在对应 BEV 区域中的表征学习和融合计算。在训练时，目标区域约束用于组织共享与特有表示的一致性和差异性；在前向计算中，这些表示参与前景门控、模态贡献权重和目标上下文的预测，进而调节融合输入、注意力查询及融合输出。其具体设计在于将局部目标监督与三处融合控制相结合。
+ 
+ ## 三、English draft
+ 
+@@ -39,7 +41,7 @@
+ 
+ Recent studies further address modality contributions and varying input quality. [MoME (2025)](https://arxiv.org/abs/2503.19776) routes queries among camera, LiDAR, and joint expert decoders. [CCF (2026)](https://arxiv.org/abs/2603.23276) combines separate query supervision, geometric priors, and complementary masking to address modality imbalance in cross-domain detection. [RobuRCDet (2025)](https://proceedings.iclr.cc/paper_files/paper/2025/hash/21dabaacda3edba8bb281da45d7cbc17-Abstract-Conference.html) uses Gaussian expansion of radar points and camera-confidence-guided fusion to accommodate different sensor disturbances.
+ 
+-On K-Radar, [3D-LRF](https://openaccess.thecvf.com/content/CVPR2024/papers/Chae_Towards_Robust_3D_Object_Detection_with_LiDAR_and_4D_Radar_CVPR_2024_paper.pdf) and [L4DR](https://arxiv.org/abs/2408.03677) investigate spatial interaction, foreground denoising, and gated fusion. [DLRFusion (2025)](https://openaccess.thecvf.com/content/ICCV2025/html/Chae_Doppler-Aware_LiDAR-RADAR_Fusion_for_Weather-Robust_3D_Detection_ICCV_2025_paper.html) separately encodes Doppler, radar power, and LiDAR features for iterative interaction. [WCBR](https://arxiv.org/abs/2604.05405) adjusts branch contributions according to environmental conditions, while [SRF (2026)](https://ave.kaist.ac.kr/2026/02/12/srf-stereo-radar-fusion-for-3d-object-detection-in-adverse-weather-conditions/) fuses stereo images and radar in 3D voxel space. For three-sensor fusion, [ASF](https://arxiv.org/abs/2503.07029) uses unified canonical projection and cross-sensor attention within corresponding patches, whereas [RAF (2026)](https://arxiv.org/abs/2607.04587) modulates camera features using explicitly supervised image reliability maps. Building on ASF's projection and local interaction mechanisms, TaskDec connects shared and modality-specific representation learning with object-related fusion control.
++On K-Radar, [3D-LRF](https://openaccess.thecvf.com/content/CVPR2024/papers/Chae_Towards_Robust_3D_Object_Detection_with_LiDAR_and_4D_Radar_CVPR_2024_paper.pdf) and [L4DR](https://arxiv.org/abs/2408.03677) investigate spatial interaction, foreground denoising, and gated fusion. [DLRFusion (2025)](https://openaccess.thecvf.com/content/ICCV2025/html/Chae_Doppler-Aware_LiDAR-RADAR_Fusion_for_Weather-Robust_3D_Detection_ICCV_2025_paper.html) separately encodes Doppler, radar power, and LiDAR features for iterative interaction. [WCBR](https://arxiv.org/abs/2604.05405) adjusts branch contributions according to environmental conditions, while [SRF (2026)](https://ave.kaist.ac.kr/2026/02/12/srf-stereo-radar-fusion-for-3d-object-detection-in-adverse-weather-conditions/) fuses stereo images and radar in 3D voxel space. For three-sensor fusion, [ASF](https://arxiv.org/abs/2503.07029) uses unified canonical projection and cross-sensor attention within corresponding patches, whereas [RAF (2026)](https://arxiv.org/abs/2607.04587) modulates camera features using explicitly supervised image reliability maps. Building on ASF's projection and local interaction mechanisms, ObjDec connects shared and modality-specific representation learning with object-related fusion control.
+ 
+ ### 2.2 Shared and Modality-Specific Representation Learning
+ 
+@@ -47,15 +49,15 @@
+ 
+ Recent work further explores how these representations are selected, aligned, and used. [Liu et al. (2025)](https://proceedings.nips.cc/paper_files/paper/2025/hash/55123f38c9f4acf417335cff41be6e27-Abstract-Conference.html) use a causal formulation to further separate modality-specific information into unique and redundant components. [MultiLoReFT (2026)](https://arxiv.org/abs/2607.16789) learns shared and modality-specific subspaces through low-rank representation fine-tuning. [DecAlign (2026)](https://proceedings.iclr.cc/paper_files/paper/2026/file/f7f5f501282771c96bb3fedcc96bedfe-Paper-Conference.pdf) uses prototype-guided optimal transport and distribution matching for modality-specific and common representations, respectively. For detection, [SPFD (2026)](https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Beyond_Duality_A_Hybrid_Framework_of_Leveraging_Shared_and_Private_CVPR_2026_paper.html) separates RGB–event shared and private features through frequency-domain coherence and uses them in both its encoder and decoder. [LMD (2025)](https://proceedings.neurips.cc/paper_files/paper/2025/hash/d3e0aaa57c0d639f32a520cda39aec6d-Abstract-Conference.html) instead provides post-hoc decomposition of modality contributions in pretrained fusion networks.
+ 
+-TaskDec studies representation learning and fusion computation within corresponding BEV regions of camera, LiDAR, and 4D radar features. During training, constraints within object regions organize consistency and differences between shared and modality-specific representations. In the forward computation, these representations help predict foreground gates, modality contribution weights, and object context, which regulate fusion inputs, attention queries, and fused outputs. The design connects local object supervision to control at these three fusion stages.
++ObjDec studies representation learning and fusion computation within corresponding BEV regions of camera, LiDAR, and 4D radar features. During training, constraints within object regions organize consistency and differences between shared and modality-specific representations. In the forward computation, these representations help predict foreground gates, modality contribution weights, and object context, which regulate fusion inputs, attention queries, and fused outputs. The design connects local object supervision to control at these three fusion stages.
+ 
+ ## 四、参考组织方式与引用核查（不进入正文）
+ 
+ ### 4.1 借鉴什么，不照搬什么
+ 
+-- **ASF §2** 按 deeply coupled fusion 和 sensor-wise cross-attention fusion 展开。本文借鉴其“融合方式—具体架构—近邻关系”的顺序，但不沿用其二分法作为一级标题，因为 TaskDec 的另一条主线是表征学习。也不把拼接、空间投影或注意力方法笼统写成无法适应环境变化。
++- **ASF §2** 按 deeply coupled fusion 和 sensor-wise cross-attention fusion 展开。本文借鉴其“融合方式—具体架构—近邻关系”的顺序，但不沿用其二分法作为一级标题，因为 ObjDec 的另一条主线是表征学习。也不把拼接、空间投影或注意力方法笼统写成无法适应环境变化。
+ - **L4DR Related Work** 分别讨论 LiDAR 检测、恶劣天气检测、LiDAR–radar 融合。本文保留最后一条中的直接相关方法，把天气适应作为部分方法的特点，不扩展成全文主问题。
+-- **DecAlign §2 与 Appendix A** 按 multimodal representation learning 和 cross-modal alignment 组织。本文借鉴“共享/特有学习—不同对齐机制”的联系，但不展开与 TaskDec 关系较远的模态翻译和蒸馏分支。
++- **DecAlign §2 与 Appendix A** 按 multimodal representation learning 和 cross-modal alignment 组织。本文借鉴“共享/特有学习—不同对齐机制”的联系，但不展开与 ObjDec 关系较远的模态翻译和蒸馏分支。
+ - 逐方法描述以各论文原文核查。特别是 MISA 的相似性项采用 central moment discrepancy，不能因其他 Related Work 的概括而写成使用 InfoNCE 对比损失；3D-LRF 已考虑天气条件门控，不能写为不考虑恶劣天气。
+ 
+ 对应原文：[ASF §2](https://arxiv.org/html/2503.07029v2#S2)、[L4DR](https://arxiv.org/html/2408.03677v6)、[DecAlign 全文](https://proceedings.iclr.cc/paper_files/paper/2026/file/f7f5f501282771c96bb3fedcc96bedfe-Paper-Conference.pdf)、[MISA 原文](https://arxiv.org/pdf/2005.03545v1)。
+@@ -71,7 +73,7 @@
+ | Towards Robust 3D Object Detection with LiDAR and 4D Radar Fusion in Various Weather Conditions | CVPR 2024 | 3D-LRF；三维交互及天气条件适应 |
+ | L4DR: LiDAR-4DRadar Fusion for Weather-Robust 3D Object Detection | AAAI 2025 | 前景去噪、多模态编码、多尺度门控的直接近邻 |
+ | Weather-Conditioned Branch Routing for Robust LiDAR-Radar 3D Object Detection | arXiv:2604.05405，2026 | 本稿仅概括公开 v1 的条件路由；不混入尚未公开的 ICRA 修订细节 |
+-| Availability-aware Sensor Fusion via Unified Canonical Space | NeurIPS 2025 | 明确 TaskDec 的空间投影和 patch 交互来源 |
++| Availability-aware Sensor Fusion via Unified Canonical Space | NeurIPS 2025 | 明确 ObjDec 的空间投影和 patch 交互来源 |
+ | Domain Separation Networks | NeurIPS 2016 | 共享/私有表示的相关早期思路；其对象是域，不直接等同于模态 |
+ | MISA: Modality-Invariant and -Specific Representations for Multimodal Sentiment Analysis | ACM MM 2020 | 共享/特有学习约束及融合预测的直接概念近邻 |
+ | Factorized Contrastive Learning: Going Beyond Multi-view Redundancy | NeurIPS 2023 | 已明确研究任务相关的 shared/unique 信息，需要在新颖性定位中交代 |
+@@ -80,11 +82,11 @@
+ 
+ ### 4.3 后续修改时保留的区别
+ 
+-1. **不将 common/unique 分支本身写成首次提出。** FactorCL 也已明确联系任务相关信息，SPFD 已在检测架构中使用共享/私有表示；TaskDec 的具体定位是对应 BEV 区域、目标区域训练约束，以及表示到三处融合控制的计算联系。
++1. **不将 common/unique 分支本身写成首次提出。** FactorCL 也已明确联系任务相关信息，SPFD 已在检测架构中使用共享/私有表示；ObjDec 的具体定位是对应 BEV 区域、目标区域训练约束，以及表示到三处融合控制的计算联系。
+ 2. **不把既有方法概括为“只做辅助损失”或“只做全局对齐”。** MISA 和 DecAlign 的表示会进入下游预测；DecAlign 还包含局部 token / 原型层面的交互，DeCUR 也考虑空间信息选择。
+ 3. **明确 ASF 的继承关系。** 架构创新需要通过新增的表征组织和计算路径说明，不把已有 UCP、patch attention 或传感器组合训练改称原创。
+ 4. **方法引用与结果表选项分开。** L4DR 是方法上直接相关的工作，应在 Related Work 中交代；某个新数据集上的对比是否进入主表，是实验设置和证据报告的问题。
+-5. **本文不单列天气小节。** 天气适应出现在近邻方法的介绍中；TaskDec 的主问题是局部信息组织和目标相关融合，正常场景同样存在。
++5. **本文不单列天气小节。** 天气适应出现在近邻方法的介绍中；ObjDec 的主问题是局部信息组织和目标相关融合，正常场景同样存在。
+ 
+ 若后续篇幅不足，先删 DSN 的历史引入，再合并 TransFusion/CMT 的介绍；保留 ASF、L4DR、DLRFusion、RAF，以及 FactorCL、DecAlign、SPFD 的直接关系；其余新文献可用合并句保留引用。无需在 Related Work 中重复 Introduction 的贡献列表和数值结果。
+ 
+@@ -101,9 +103,9 @@
+ | CCF | CVPR 2026 | §2.1：跨域模态失衡和独立查询监督 |
+ | SRF | IV 2026，作者实验室页面确认 | §2.1：K-Radar 上的双目–雷达三维体融合 |
+ | RAF | 2026，作者 arXiv 标注 ECCV 2026 | §2.1：三模态融合中的图像可靠性监督 |
+-| Plug-and-play Feature Causality Decomposition | NeurIPS 2025 | §2.2：区分有用特有信息与冗余；不将 TaskDec 称为因果方法 |
++| Plug-and-play Feature Causality Decomposition | NeurIPS 2025 | §2.2：区分有用特有信息与冗余；不将 ObjDec 称为因果方法 |
+ | MultiLoReFT | arXiv 2026；本轮未确认正式会议接收 | §2.2：共享/特有子空间与低秩微调 |
+ | SPFD / Beyond Duality | CVPR 2026 | §2.2：shared/private 表示参与检测编码与解码 |
+ | LMD | NeurIPS 2025 | §2.2：自动驾驶融合网络的事后模态贡献分析 |
+ 
+-相关工作中的方法介绍不构成同协议性能排名。新文献中公开的 K-Radar 数字与本地 TaskDec 数字分别保留来源；没有因性能高低删除相关方法。SPFD 和特征因果分解的存在进一步要求把创新描述限定到 TaskDec 的具体学习约束与计算连接。
++相关工作中的方法介绍不构成同协议性能排名。新文献中公开的 K-Radar 数字与本地 ObjDec 数字分别保留来源；没有因性能高低删除相关方法。SPFD 和特征因果分解的存在进一步要求把创新描述限定到 ObjDec 的具体学习约束与计算连接。
+--- before/taskdec_methods_bilingual_initial_260917.md
++++ after/taskdec_methods_bilingual_initial_260917.md
+@@ -1,16 +1,18 @@
+-# TaskDec Methods：中英文初稿
++# ObjDec Methods：中英文初稿
+ 
+ 日期：2026-09-17。版本：供讨论和后续 LaTeX 排版使用的初稿。
+ 
+-正文按 Overview → Object-Guided Representation Decoupling → Representation-Driven Fusion → Training Objectives and Inference 组织，中英文段落及公式对应。以 K-Radar v1 完整 TaskDec 为主要定义，数据集适配及变体差异列于文末。公式编号为本章临时编号；`[ASF]` 为正式引用占位。
++命名更新（2026-09-19）：方法名统一为 **ObjDec**，全称 **Object-Guided Representation Decoupling（目标引导的表征解耦）**。
++
++正文按 Overview → Object-Guided Representation Decoupling → Representation-Driven Fusion → Training Objectives and Inference 组织，中英文段落及公式对应。以 K-Radar v1 完整 ObjDec 为主要定义，数据集适配及变体差异列于文末。公式编号为本章临时编号；`[ASF]` 为正式引用占位。
+ 
+ ## 中文正文
+ 
+ ### 3.1 总体架构
+ 
+-我们提出 TaskDec，一种学习共享与模态特有表征，并利用目标相关信息引导其融合的任务感知架构。如图 2 所示，给定相机、LiDAR 和四维雷达观测，各模态编码器首先生成空间对应的鸟瞰图（BEV）特征。我们采用 ASF 的统一空间投影，将不同通道数的特征映射为对应局部区域的 patch token，并保留其局部跨传感器注意力与后续特征变换作为交互基础 [ASF]。记参与融合的模态集合为 \(\mathcal M\)，模态数为 \(M=|\mathcal M|\)；\(t_m^p\in\mathbb R^d\) 表示模态 \(m\) 在 patch \(p\) 的输入 token。为简化记号，下文省略 batch 维。
+-
+-TaskDec 在每个对应 patch 内学习共享与模态特有表征，并由这些表征预测前景门控、模态贡献权重和目标上下文。门控与模态权重调节输入 token 的更新和缩放，目标上下文则进一步调制注意力查询与融合输出。经局部交互、特征变换和空间重组后，融合 BEV 特征被送入三维检测头。训练时，目标框为表征约束和目标相关预测提供监督；推理时，所有控制信号均由输入特征生成。
++我们提出 ObjDec，一种学习共享与模态特有表征，并利用目标相关信息引导其融合的多传感器融合架构。如图 2 所示，给定相机、LiDAR 和四维雷达观测，各模态编码器首先生成空间对应的鸟瞰图（BEV）特征。我们采用 ASF 的统一空间投影，将不同通道数的特征映射为对应局部区域的 patch token，并保留其局部跨传感器注意力与后续特征变换作为交互基础 [ASF]。记参与融合的模态集合为 \(\mathcal M\)，模态数为 \(M=|\mathcal M|\)；\(t_m^p\in\mathbb R^d\) 表示模态 \(m\) 在 patch \(p\) 的输入 token。为简化记号，下文省略 batch 维。
++
++ObjDec 在每个对应 patch 内学习共享与模态特有表征，并由这些表征预测前景门控、模态贡献权重和目标上下文。门控与模态权重调节输入 token 的更新和缩放，目标上下文则进一步调制注意力查询与融合输出。经局部交互、特征变换和空间重组后，融合 BEV 特征被送入三维检测头。训练时，目标框为表征约束和目标相关预测提供监督；推理时，所有控制信号均由输入特征生成。
+ 
+ > **图 2 插入位置。** 展示完整前向路径，并将目标框监督以虚线连接到对应训练目标。建议使用本文件后附的中英文图注；现有主图需要按照已核查的 token 缩放公式和箭头顺序修订后再插入。
+ 
+@@ -125,9 +127,9 @@
+ 
+ ### 3.1 Overview
+ 
+-We introduce TaskDec, a task-aware architecture that learns shared and modality-specific representations and uses object-related information to guide their fusion. As illustrated in Figure 2, modality-specific encoders first transform camera, LiDAR, and 4D radar observations into spatially corresponding bird's-eye-view (BEV) features. We adopt ASF's unified projection to map features with different channel dimensions into patch tokens for corresponding local regions, and retain its local cross-sensor attention and subsequent feature transformation as the interaction backbone [ASF]. Let \(\mathcal M\) denote the participating modalities, with \(M=|\mathcal M|\), and let \(t_m^p\in\mathbb R^d\) be the input token of modality \(m\) at patch \(p\). We omit the batch dimension for clarity.
+-
+-Within each corresponding patch, TaskDec learns shared and modality-specific representations and uses them to predict a foreground gate, modality contribution weights, and object context. The gate and modality weights regulate input-token updates and scaling, while object context further modulates attention queries and fused outputs. Local interaction is followed by feature transformation and spatial reassembly to produce fused BEV features for the 3D detection head. Ground-truth boxes provide supervision for representation constraints and object-related predictions during training; all control signals are generated from input features at inference.
++We introduce ObjDec, a multi-sensor fusion architecture that learns shared and modality-specific representations and uses object-related information to guide their fusion. As illustrated in Figure 2, modality-specific encoders first transform camera, LiDAR, and 4D radar observations into spatially corresponding bird's-eye-view (BEV) features. We adopt ASF's unified projection to map features with different channel dimensions into patch tokens for corresponding local regions, and retain its local cross-sensor attention and subsequent feature transformation as the interaction backbone [ASF]. Let \(\mathcal M\) denote the participating modalities, with \(M=|\mathcal M|\), and let \(t_m^p\in\mathbb R^d\) be the input token of modality \(m\) at patch \(p\). We omit the batch dimension for clarity.
++
++Within each corresponding patch, ObjDec learns shared and modality-specific representations and uses them to predict a foreground gate, modality contribution weights, and object context. The gate and modality weights regulate input-token updates and scaling, while object context further modulates attention queries and fused outputs. Local interaction is followed by feature transformation and spatial reassembly to produce fused BEV features for the 3D detection head. Ground-truth boxes provide supervision for representation constraints and object-related predictions during training; all control signals are generated from input features at inference.
+ 
+ > **Figure 2 placement.** Show the complete forward path, with dashed connections from ground-truth boxes to the corresponding training objectives. A suggested bilingual caption is provided below. The existing figure draft should be revised to match the verified token-scaling equations and operation order before insertion.
+ 
+@@ -240,9 +242,9 @@
+ 
+ ## 图 2 图注建议 / Suggested Figure 2 caption
+ 
+-**中文。** TaskDec 总体架构。各模态 BEV 特征经统一投影形成空间对应的 patch token，随后映射为共享与模态特有表征。由这些表征预测的前景门控与模态贡献共同调节输入 token，目标上下文进一步调制注意力查询与融合输出。输出经特征变换及空间重组后送入三维检测头。虚线表示仅在训练时使用的目标框监督；推理时，控制信号均由输入特征生成。统一投影、局部跨传感器注意力及后续特征变换沿用 ASF [ASF]。
+-
+-**English.** Overview of TaskDec. Modality-specific BEV features are projected into spatially corresponding patch tokens and mapped to shared and modality-specific representations. Foreground gates and modality contributions predicted from these representations jointly regulate input tokens, while object context modulates attention queries and fused outputs. Feature transformation and spatial reassembly produce BEV features for the 3D detection head. Dashed connections indicate ground-truth supervision used only during training; control signals are predicted from input features at inference. Unified projection, local cross-sensor attention, and subsequent feature transformation follow ASF [ASF].
++**中文。** ObjDec 总体架构。各模态 BEV 特征经统一投影形成空间对应的 patch token，随后映射为共享与模态特有表征。由这些表征预测的前景门控与模态贡献共同调节输入 token，目标上下文进一步调制注意力查询与融合输出。输出经特征变换及空间重组后送入三维检测头。虚线表示仅在训练时使用的目标框监督；推理时，控制信号均由输入特征生成。统一投影、局部跨传感器注意力及后续特征变换沿用 ASF [ASF]。
++
++**English.** Overview of ObjDec. Modality-specific BEV features are projected into spatially corresponding patch tokens and mapped to shared and modality-specific representations. Foreground gates and modality contributions predicted from these representations jointly regulate input tokens, while object context modulates attention queries and fused outputs. Feature transformation and spatial reassembly produce BEV features for the 3D detection head. Dashed connections indicate ground-truth supervision used only during training; control signals are predicted from input features at inference. Unified projection, local cross-sensor attention, and subsequent feature transformation follow ASF [ASF].
+ 
+ ## 附录安排与实现核查备注（不直接进入方法正文）
+ 
+@@ -255,7 +257,7 @@
+ | 网络与符号明细 | 编码器、输入字段、通道数、patch尺寸、query数量、MLP结构和输出尺寸 | 3.1、3.2 |
+ | 前景目标生成与辅助损失 | 旋转框投影、扩张范围、patch中心判定、重叠框及空前景处理、正样本权重 | 3.2、3.4 |
+ | 控制信号与训练配置 | 缩放边界、强度系数、初始化、主模型冻结策略及SCL分支流程 | 3.3、3.4 |
+-| 数据集适配与变体 | v1完整TaskDec、v2 DecControlled Strong、V2X类别上下文及patch/query设置 | 实验设置及3.3、3.4 |
++| 数据集适配与变体 | v1完整ObjDec、v2 DecControlled Strong、V2X类别上下文及patch/query设置 | 实验设置及3.3、3.4 |
+ 
+ ### B. 主模型配置与公式对应
+ 
+@@ -293,15 +295,15 @@
+ 
+ 主检测路径使用式（6）的query调制和输出残差，输出残差位于PFT之前。沿用的SCL路径从本次完整输入计算得到的受控token中选取单模态及双模态组合，共用已调制query，经过attention、PFT和同一个检测头后求检测损失；这些组合分支没有额外应用主路径的context输出残差，也没有针对每个子集重新预测gate、模态权重和context。
+ 
+-因此，SCL提供组合特征上的辅助检测监督，不能把它描述为“每次仅使用对应子集观测，重新独立运行完整TaskDec”。正式附录应给出这一区别；正文中的 \(\mathcal L_{\mathrm{scl}}\) 定义仅承诺对组合特征施加检测损失。
++因此，SCL提供组合特征上的辅助检测监督，不能把它描述为“每次仅使用对应子集观测，重新独立运行完整ObjDec”。正式附录应给出这一区别；正文中的 \(\mathcal L_{\mathrm{scl}}\) 定义仅承诺对组合特征施加检测损失。
+ 
+ ### D. 不同设置中的模型身份
+ 
+ | 设置 | 上下文与训练差异 | 正文中应如何交代 |
+ |---|---|---|
+-| K-Radar v1完整TaskDec | `DEC_CONTROL_NUM_CLASSES=1`，auto选择 `task_binary`；sigmoid目标存在性，前景+背景BCE；SCL启用 | 本方法章的主要实例 |
++| K-Radar v1完整ObjDec | `DEC_CONTROL_NUM_CLASSES=1`，auto选择 `task_binary`；sigmoid目标存在性，前景+背景BCE；SCL启用 | 本方法章的主要实例 |
+ | K-Radar v2 DecControlled Strong | 无object-context头、query调制或输出context残差；含解耦、gate与模态控制；控制强度和损失权重也不同 | 单独注明为DecControlled变体，不能将其结果作为完整式（5）—（6）的验证 |
+-| V2X完整TaskDec | Vehicle/Pedestrian/Cyclist三类；softmax类别概率投影为context；只在前景patch上施加类别加权交叉熵；SCL关闭 | 是完整架构的数据集适配，显式说明context监督改变及编码器/检测头配置 |
++| V2X完整ObjDec | Vehicle/Pedestrian/Cyclist三类；softmax类别概率投影为context；只在前景patch上施加类别加权交叉熵；SCL关闭 | 是完整架构的数据集适配，显式说明context监督改变及编码器/检测头配置 |
+ | V2X 4×4与2×2 | token维度128；query数分别16和4；融合输出通道均128 | 与K-Radar的2×2/32-query设置区分；空间粒度实验同时改变patch和query数 |
+ 
+ 多类别上下文将式（5）的标量 \(r^p\) 替换为 \(K\) 维softmax概率，使用 \(d\times K\) 的无bias映射 \(W_z\)，其余context进入query/output的方式保持不变。类别交叉熵只对前景计算，类别权重按当前batch前景目标计数的倒频率确定并裁剪到配置上限；独立gate继续以目标前景/背景监督。V2X冻结配置启用三类模式，不能把正文单类别BCE直接抄入其实现细节。
+@@ -318,7 +320,7 @@
+ 
+ ### F. 核查来源
+ 
+-- [TaskDec融合实现](../models/fuser/patch_dec_a2_fusion.py)：分支、前景目标、三项表征约束、控制预测、context与完整前向顺序。
++- [ObjDec融合实现](../models/fuser/patch_dec_a2_fusion.py)：分支、前景目标、三项表征约束、控制预测、context与完整前向顺序。
+ - [ASF融合实现](../models/fuser/a2_fusion.py)：投影、learned query、MHA、PFT及空间重组。
+ - [损失组合实现](../models/skeletons/fusion_base_integrated.py)：主检测、SCL求和、外层辅助损失权重。
+ - [v1主模型配置](../configs/ASF_task_dec_controlled_robust_v1_0.yml)及[ASF基配置](../configs/v1_0/cfg_A2F_scl_final.yml)。

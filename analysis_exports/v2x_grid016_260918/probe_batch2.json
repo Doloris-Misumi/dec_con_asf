@@ -1,0 +1,21 @@
+{
+  "status": "passed",
+  "batch_size": 2,
+  "steps": 8,
+  "losses": [
+    4.836766719818115,
+    2.846026659011841,
+    2.5350341796875,
+    5.287768840789795,
+    3.584501266479492,
+    3.221809148788452,
+    3.181553840637207,
+    2.7560875415802
+  ],
+  "seconds": 10.712921012192965,
+  "peak_allocated_gib": 25.333600521087646,
+  "peak_reserved_gib": 27.552734375,
+  "initial": "/home/hongsheng/dec_con_asf/analysis_exports/v2x_taskdec_260916/taskdec_patch2_80ep/taskdec_initial.pt",
+  "no_checkpoint_saved": true,
+  "at": "2026-09-18T08:13:49.266308+08:00"
+}

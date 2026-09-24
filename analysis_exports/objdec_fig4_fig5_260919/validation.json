@@ -1,0 +1,723 @@
+{
+  "model_protocols": {
+    "asf": {
+      "dataset": {
+        "NAME": "KRadarFusion_v1_0",
+        "NUM": null,
+        "path_data": {
+          "list_dir_kradar": [
+            "/home/hongsheng/k_radar_dataset"
+          ],
+          "split": [
+            "./resources/split/train.txt",
+            "./resources/split/test.txt"
+          ],
+          "revised_label_v1_1": "./tools/revise_label/kradar_revised_label_v1_1",
+          "revised_label_v2_0": "./tools/revise_label/kradar_revised_label_v2_0/KRadar_refined_label_by_UWIPL",
+          "revised_label_v2_1": "./tools/revise_label/kradar_revised_label_v2_1/KRadar_revised_visibility"
+        },
+        "label_version": "v1_0",
+        "item": {
+          "calib": true,
+          "ldr64": true,
+          "ldr128": false,
+          "rdr": false,
+          "rdr_sparse": true,
+          "cam": true
+        },
+        "cam": {
+          "front0": true,
+          "front1": false,
+          "left0": false,
+          "left1": false,
+          "right0": false,
+          "right1": false,
+          "rear0": false,
+          "rear1": false
+        },
+        "cam_dir": {
+          "load": "ori",
+          "undistorted": "/home/hongsheng/k_radar_dataset",
+          "cropped": "/home/hongsheng/k_radar_dataset"
+        },
+        "cam_process": {
+          "ori_shape": [
+            1280,
+            720
+          ],
+          "resize": 0.7,
+          "crop": [
+            96,
+            170,
+            800,
+            426
+          ],
+          "mean": [
+            0.303,
+            0.303,
+            0.307
+          ],
+          "std": [
+            0.113,
+            0.119,
+            0.107
+          ],
+          "is_use_imgnet_mean_std": true
+        },
+        "cam_calib": {
+          "load": false,
+          "dir": "./resources/cam_calib/calib_seq"
+        },
+        "t_params": {
+          "load": true,
+          "dir": "./resources/cam_calib/T_params_seq",
+          "ref_sensor": "radar"
+        },
+        "calib": {
+          "z_offset": 0.7
+        },
+        "ldr64": {
+          "processed": false,
+          "dir": "/home/hongsheng/k_radar_dataset",
+          "skip_line": 13,
+          "n_attr": 9,
+          "n_used": 5,
+          "inside_ldr64": true,
+          "calib": true
+        },
+        "rdr": {
+          "cube": false
+        },
+        "rdr_sparse": {
+          "processed": true,
+          "dir": "/home/hongsheng/k_radar_dataset"
+        },
+        "roi": {
+          "filter": true,
+          "xyz": [
+            0.0,
+            -6.4,
+            -2.0,
+            72.0,
+            6.4,
+            6.0
+          ],
+          "keys": [],
+          "check_azimuth_for_rdr": false,
+          "azimuth_deg": [
+            -55,
+            55
+          ],
+          "grid_size": 0.4,
+          "voxel_size": [
+            0.4,
+            0.4,
+            0.4
+          ]
+        },
+        "depth_labels": {
+          "load": false,
+          "dir": "/media/donghee/HDD_0/kradar_depth_labels/cropped",
+          "stride": 8,
+          "img_size": [
+            704,
+            256
+          ],
+          "margin": 1,
+          "d_minmax": [
+            2.0,
+            80.0
+          ]
+        },
+        "obj_mask": {
+          "load": false,
+          "dir": "/media/donghee/HDD_0/kradar_obj_mask_1_5_expand"
+        },
+        "label": {
+          "calib": true,
+          "onlyR": false,
+          "consider_cls": true,
+          "consider_roi": true,
+          "remove_0_obj": true,
+          "Sedan": [
+            true,
+            1,
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              255,
+              0
+            ]
+          ],
+          "Bus or Truck": [
+            false,
+            -1,
+            [
+              1,
+              0.2,
+              0
+            ],
+            [
+              0,
+              50,
+              255
+            ]
+          ],
+          "Motorcycle": [
+            false,
+            -1,
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              255
+            ]
+          ],
+          "Bicycle": [
+            false,
+            -1,
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              255,
+              255
+            ]
+          ],
+          "Bicycle Group": [
+            false,
+            -1,
+            [
+              0,
+              0.5,
+              1
+            ],
+            [
+              0,
+              128,
+              255
+            ]
+          ],
+          "Pedestrian": [
+            false,
+            -1,
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              255,
+              0,
+              0
+            ]
+          ],
+          "Pedestrian Group": [
+            false,
+            -1,
+            [
+              0.4,
+              0,
+              1
+            ],
+            [
+              255,
+              0,
+              100
+            ]
+          ],
+          "Label": [
+            false,
+            -1,
+            [
+              0.5,
+              0.5,
+              0.5
+            ],
+            [
+              128,
+              128,
+              128
+            ]
+          ]
+        },
+        "collate_fn": "v2_1"
+      },
+      "head": {
+        "NAME": "AnchorHeadSingleIntegrated",
+        "INPUT_CHANNELS": 2048,
+        "KEY_FEATURES": "fused_feat",
+        "CLASS_AGNOSTIC": false,
+        "USE_DIRECTION_CLASSIFIER": true,
+        "DIR_OFFSET": 0.78539,
+        "DIR_LIMIT_OFFSET": 0.0,
+        "NUM_DIR_BINS": 2,
+        "ANCHOR_GENERATOR_CONFIG": [
+          {
+            "class_name": "Sedan",
+            "anchor_sizes": [
+              [
+                4.2,
+                2.1,
+                2.0
+              ]
+            ],
+            "anchor_rotations": [
+              0,
+              1.57
+            ],
+            "anchor_bottom_heights": [
+              -1.08
+            ],
+            "align_center": false,
+            "feature_map_stride": 1,
+            "matched_threshold": 0.6,
+            "unmatched_threshold": 0.45
+          }
+        ],
+        "TARGET_ASSIGNER_CONFIG": {
+          "NAME": "AxisAlignedTargetAssigner",
+          "POS_FRACTION": -1.0,
+          "SAMPLE_SIZE": 512,
+          "NORM_BY_NUM_EXAMPLES": false,
+          "MATCH_HEIGHT": false,
+          "BOX_CODER": "ResidualCoder"
+        },
+        "LOSS_CONFIG": {
+          "LOSS_WEIGHTS": {
+            "cls_weight": 1.0,
+            "loc_weight": 2.0,
+            "dir_weight": 0.2,
+            "code_weights": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "POST_PROCESSING": {
+          "RECALL_THRESH_LIST": [
+            0.3,
+            0.5,
+            0.7
+          ],
+          "SCORE_THRESH": 0.1,
+          "OUTPUT_RAW_SCORE": false,
+          "EVAL_METRIC": "kitti",
+          "NMS_CONFIG": {
+            "MULTI_CLASSES_NMS": false,
+            "NMS_TYPE": "nms_gpu",
+            "NMS_THRESH": 0.01,
+            "NMS_PRE_MAXSIZE": 4096,
+            "NMS_POST_MAXSIZE": 500
+          }
+        }
+      },
+      "label_version": "v1_0",
+      "checkpoint_sha256": "3e6d3e44118c17f7aa663c1338927ed597fb9a5bc6022a6755ab55c6d5809753"
+    },
+    "objdec": {
+      "dataset": {
+        "NAME": "KRadarFusion_v1_0",
+        "NUM": null,
+        "path_data": {
+          "list_dir_kradar": [
+            "/home/hongsheng/k_radar_dataset"
+          ],
+          "split": [
+            "./resources/split/train.txt",
+            "./resources/split/test.txt"
+          ],
+          "revised_label_v1_1": "./tools/revise_label/kradar_revised_label_v1_1",
+          "revised_label_v2_0": "./tools/revise_label/kradar_revised_label_v2_0/KRadar_refined_label_by_UWIPL",
+          "revised_label_v2_1": "./tools/revise_label/kradar_revised_label_v2_1/KRadar_revised_visibility"
+        },
+        "label_version": "v1_0",
+        "item": {
+          "calib": true,
+          "ldr64": true,
+          "ldr128": false,
+          "rdr": false,
+          "rdr_sparse": true,
+          "cam": true
+        },
+        "cam": {
+          "front0": true,
+          "front1": false,
+          "left0": false,
+          "left1": false,
+          "right0": false,
+          "right1": false,
+          "rear0": false,
+          "rear1": false
+        },
+        "cam_dir": {
+          "load": "ori",
+          "undistorted": "/home/hongsheng/k_radar_dataset",
+          "cropped": "/home/hongsheng/k_radar_dataset"
+        },
+        "cam_process": {
+          "ori_shape": [
+            1280,
+            720
+          ],
+          "resize": 0.7,
+          "crop": [
+            96,
+            170,
+            800,
+            426
+          ],
+          "mean": [
+            0.303,
+            0.303,
+            0.307
+          ],
+          "std": [
+            0.113,
+            0.119,
+            0.107
+          ],
+          "is_use_imgnet_mean_std": true
+        },
+        "cam_calib": {
+          "load": false,
+          "dir": "./resources/cam_calib/calib_seq"
+        },
+        "t_params": {
+          "load": true,
+          "dir": "./resources/cam_calib/T_params_seq",
+          "ref_sensor": "radar"
+        },
+        "calib": {
+          "z_offset": 0.7
+        },
+        "ldr64": {
+          "processed": false,
+          "dir": "/home/hongsheng/k_radar_dataset",
+          "skip_line": 13,
+          "n_attr": 9,
+          "n_used": 5,
+          "inside_ldr64": true,
+          "calib": true
+        },
+        "rdr": {
+          "cube": false
+        },
+        "rdr_sparse": {
+          "processed": true,
+          "dir": "/home/hongsheng/k_radar_dataset"
+        },
+        "roi": {
+          "filter": true,
+          "xyz": [
+            0.0,
+            -6.4,
+            -2.0,
+            72.0,
+            6.4,
+            6.0
+          ],
+          "keys": [],
+          "check_azimuth_for_rdr": false,
+          "azimuth_deg": [
+            -55,
+            55
+          ],
+          "grid_size": 0.4,
+          "voxel_size": [
+            0.4,
+            0.4,
+            0.4
+          ]
+        },
+        "depth_labels": {
+          "load": false,
+          "dir": "/media/donghee/HDD_0/kradar_depth_labels/cropped",
+          "stride": 8,
+          "img_size": [
+            704,
+            256
+          ],
+          "margin": 1,
+          "d_minmax": [
+            2.0,
+            80.0
+          ]
+        },
+        "obj_mask": {
+          "load": false,
+          "dir": "/media/donghee/HDD_0/kradar_obj_mask_1_5_expand"
+        },
+        "label": {
+          "calib": true,
+          "onlyR": false,
+          "consider_cls": true,
+          "consider_roi": true,
+          "remove_0_obj": true,
+          "Sedan": [
+            true,
+            1,
+            [
+              0,
+              1,
+              0
+            ],
+            [
+              0,
+              255,
+              0
+            ]
+          ],
+          "Bus or Truck": [
+            false,
+            -1,
+            [
+              1,
+              0.2,
+              0
+            ],
+            [
+              0,
+              50,
+              255
+            ]
+          ],
+          "Motorcycle": [
+            false,
+            -1,
+            [
+              1,
+              0,
+              0
+            ],
+            [
+              0,
+              0,
+              255
+            ]
+          ],
+          "Bicycle": [
+            false,
+            -1,
+            [
+              1,
+              1,
+              0
+            ],
+            [
+              0,
+              255,
+              255
+            ]
+          ],
+          "Bicycle Group": [
+            false,
+            -1,
+            [
+              0,
+              0.5,
+              1
+            ],
+            [
+              0,
+              128,
+              255
+            ]
+          ],
+          "Pedestrian": [
+            false,
+            -1,
+            [
+              0,
+              0,
+              1
+            ],
+            [
+              255,
+              0,
+              0
+            ]
+          ],
+          "Pedestrian Group": [
+            false,
+            -1,
+            [
+              0.4,
+              0,
+              1
+            ],
+            [
+              255,
+              0,
+              100
+            ]
+          ],
+          "Label": [
+            false,
+            -1,
+            [
+              0.5,
+              0.5,
+              0.5
+            ],
+            [
+              128,
+              128,
+              128
+            ]
+          ]
+        },
+        "collate_fn": "v2_1"
+      },
+      "head": {
+        "NAME": "AnchorHeadSingleIntegrated",
+        "INPUT_CHANNELS": 2048,
+        "KEY_FEATURES": "fused_feat",
+        "CLASS_AGNOSTIC": false,
+        "USE_DIRECTION_CLASSIFIER": true,
+        "DIR_OFFSET": 0.78539,
+        "DIR_LIMIT_OFFSET": 0.0,
+        "NUM_DIR_BINS": 2,
+        "ANCHOR_GENERATOR_CONFIG": [
+          {
+            "class_name": "Sedan",
+            "anchor_sizes": [
+              [
+                4.2,
+                2.1,
+                2.0
+              ]
+            ],
+            "anchor_rotations": [
+              0,
+              1.57
+            ],
+            "anchor_bottom_heights": [
+              -1.08
+            ],
+            "align_center": false,
+            "feature_map_stride": 1,
+            "matched_threshold": 0.6,
+            "unmatched_threshold": 0.45
+          }
+        ],
+        "TARGET_ASSIGNER_CONFIG": {
+          "NAME": "AxisAlignedTargetAssigner",
+          "POS_FRACTION": -1.0,
+          "SAMPLE_SIZE": 512,
+          "NORM_BY_NUM_EXAMPLES": false,
+          "MATCH_HEIGHT": false,
+          "BOX_CODER": "ResidualCoder"
+        },
+        "LOSS_CONFIG": {
+          "LOSS_WEIGHTS": {
+            "cls_weight": 1.0,
+            "loc_weight": 2.0,
+            "dir_weight": 0.2,
+            "code_weights": [
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0,
+              1.0
+            ]
+          }
+        },
+        "POST_PROCESSING": {
+          "RECALL_THRESH_LIST": [
+            0.3,
+            0.5,
+            0.7
+          ],
+          "SCORE_THRESH": 0.1,
+          "OUTPUT_RAW_SCORE": false,
+          "EVAL_METRIC": "kitti",
+          "NMS_CONFIG": {
+            "MULTI_CLASSES_NMS": false,
+            "NMS_TYPE": "nms_gpu",
+            "NMS_THRESH": 0.01,
+            "NMS_PRE_MAXSIZE": 4096,
+            "NMS_POST_MAXSIZE": 500
+          }
+        }
+      },
+      "label_version": "v1_0",
+      "checkpoint_sha256": "99eb07e8a0b01ec397d3f2ac890091fe539194149a2c542cf41c465c9f02a2d3"
+    }
+  },
+  "head_configs_identical": true,
+  "objdec_checkpoint_matches_fig4": true,
+  "all_40_prediction_archives_finite": true,
+  "input_tensor_hashes_matched_for_20_frames": true,
+  "native_exit_status": {
+    "asf": 134,
+    "objdec": 134
+  },
+  "native_exit_note": "Both processes wrote COMPLETE and all 20 archives before free(): invalid pointer during teardown. Files validated independently in CPU-only process; not a clean process exit.",
+  "new_gpu_peak_allocated_MiB": {
+    "asf": 1000.4814453125,
+    "objdec": 1005.6083984375
+  },
+  "files_sha256": {
+    "paired_predictions/asf/seq20_rdr00628.npz": "d3f46e4e585f39330a41c0afe8e54af07cdc837d487f91121d1966df64a12e51",
+    "paired_predictions/asf/seq9_rdr00347.npz": "4bdd461ba27a39b3cee6b1b379194769fa8822b00d2d16b409963f5626a53932",
+    "paired_predictions/asf/seq7_rdr00272.npz": "cd72a9d9c71a4d7547f399801c288037ab3b70e9eddb7f17f86ff6165bbb1bbe",
+    "paired_predictions/asf/seq13_rdr00146.npz": "4262d0bef1053d3556fa596124e50fde093c7167dc3968a02c450fc42da6d9cd",
+    "paired_predictions/asf/seq22_rdr00484.npz": "9935e8f6037873b9810bb3d7a7266d4318c877537b5fe1586b83eaa06b56dd9e",
+    "paired_predictions/asf/seq22_rdr00218.npz": "640ceb0d8a1ad912321b1b94c88da4562528948d60fb5fb771033c0919d5c462",
+    "paired_predictions/asf/seq45_rdr00613.npz": "ad6bb002ba204ca57f11ddbfdfa7c5aac079fd7a3c5b59a7c13e0960570af08b",
+    "paired_predictions/asf/seq39_rdr00582.npz": "e23b9d88b3ed5aa1f550dd5d2349e5ed68d70a204466c61a41b4c5b23f557fb0",
+    "paired_predictions/asf/seq39_rdr00491.npz": "7335fa55af99b53a846c9b0ffa05966cb67927cfe31151a1ce2612e5c1c108b7",
+    "paired_predictions/asf/seq25_rdr00154.npz": "cd57466fdad759da7084166145455f1fd900606b1bcb235354cb91fbc4f6897a",
+    "paired_predictions/asf/seq24_rdr00286.npz": "d94538f501ee929b55d6d4c7624d074e91d95de1e816636fb3f0ec6c830ed0f7",
+    "paired_predictions/asf/seq25_rdr00475.npz": "e42ead2e5c8b883d25b0c8a45e6353a86545ccf6c1832e354f6ef1e81c390b89",
+    "paired_predictions/asf/seq43_rdr00169.npz": "d10a6b8328e3c7c5a0a863e66ec88ab21d3a0da5a4d153e9e2b00bf1c6e63ed4",
+    "paired_predictions/asf/seq42_rdr00264.npz": "1f3751a77c465adb73c2906e205d16f1dfc9171cf3faad2092b4e3530b354617",
+    "paired_predictions/asf/seq58_rdr00258.npz": "dfd360d29ef18c223abb2e5bc2b60c866dd39b5ccab10d0f335b3ae405b58c29",
+    "paired_predictions/asf/seq55_rdr00385.npz": "632eea7937832418f06f9232ba5916f21d510edbc1de2df4c76920e3a3642e9b",
+    "paired_predictions/asf/seq57_rdr00279.npz": "58b7cc44ebf430addfa7adb2b84ad15eea6c38e9be2f10c4ae16916a74d7f150",
+    "paired_predictions/asf/seq51_rdr00237.npz": "74c7d6d4997b7484251c6d57547f5baed8076d7fcf4b9a61397955817d0c349c",
+    "paired_predictions/asf/seq52_rdr00550.npz": "b4d07171293ca2ffb2c2a770e1888800c3aa4388b36cffba9921d6e19e743783",
+    "paired_predictions/asf/seq50_rdr00456.npz": "9d50dfff4e8b0f8e25b4587132e036370ba5677a0356c6d4ae2ab38fbb479a87",
+    "paired_predictions/objdec/seq20_rdr00628.npz": "4b099eb762469ed63f829327483c7030ddde5eb6e0b32a903eed982d264a8a9d",
+    "paired_predictions/objdec/seq9_rdr00347.npz": "3a2a0b6c39fe188c1a3a925398543ebd0162a3097cf823664dcb26e9ec8e9bd2",
+    "paired_predictions/objdec/seq7_rdr00272.npz": "3305e7bd485a60316d0982aeca26c8c3ce316d55c75aad0f884b3fbc972b2639",
+    "paired_predictions/objdec/seq13_rdr00146.npz": "105ff487bcb0877c11d2eb21297710d0956811df92f81051de1198a57948484c",
+    "paired_predictions/objdec/seq22_rdr00484.npz": "9ee1c8be9c3571557f7fd7c1eb7564ce6973ad76918dcc8c5d42edb248b3cbd2",
+    "paired_predictions/objdec/seq22_rdr00218.npz": "c614e2582253a55009d6466fc4cfddd9a63b5fe94e1160990fb31f19cbd2f609",
+    "paired_predictions/objdec/seq45_rdr00613.npz": "17a696b3e7250f214232f033877b750e85fb19b64d2103924f6168d5666b5438",
+    "paired_predictions/objdec/seq39_rdr00582.npz": "9118c7d6fd4ee4cb63f4ea0fc4c92bfedfe264b0dd6ba00994d3048fc5ee19e0",
+    "paired_predictions/objdec/seq39_rdr00491.npz": "6581aeb02c0e343bd845f356b134abb6e4b88c01e13d613c23a33ccdff805f38",
+    "paired_predictions/objdec/seq25_rdr00154.npz": "4ad049c70372eb4fa77715e8a158ad2c27a6f02be2a68483a3b48cffa3899e61",
+    "paired_predictions/objdec/seq24_rdr00286.npz": "cb973284a84640f47a1c402b7c7b3691318ac07b13c68ba3c5297753404c20a4",
+    "paired_predictions/objdec/seq25_rdr00475.npz": "9c6debf17d52b493dc09817f3896df2c9e9d2b61659002cdcf5af3082ee508b3",
+    "paired_predictions/objdec/seq43_rdr00169.npz": "b949c5f0c397e8200075af9263146c6d6c3a23667eb4189611a3e9c39c1509eb",
+    "paired_predictions/objdec/seq42_rdr00264.npz": "335df1ae1d7fa6cf500048f46b32bfd67e844d87ffaa7213fb45b15c37055697",
+    "paired_predictions/objdec/seq58_rdr00258.npz": "31b5e05750c35c2d1b66b27859f2c705d664e6ba77f426c174ea5c6e5104b858",
+    "paired_predictions/objdec/seq55_rdr00385.npz": "0c7c2c0e68dcc12c17edf907b5aa6589c51d6d5cbecd297f713b09410b8db687",
+    "paired_predictions/objdec/seq57_rdr00279.npz": "1b5fe76365690081d83ce960bdd7de8c0bfc21df40b4ace456d16a34773a476f",
+    "paired_predictions/objdec/seq51_rdr00237.npz": "61a9ced816cefe668e6a9c3a4454dd190fa7273fb77a5379c44c953e251ecb1f",
+    "paired_predictions/objdec/seq52_rdr00550.npz": "ce10f1939790ce5967c7fce4cb205aa09fcfc4192bebfed824b8f1557f8e3c6a",
+    "paired_predictions/objdec/seq50_rdr00456.npz": "4c0c1edeffd7736e4ff9039fc00b6720ba8e4516d896b3e1366f370e2a1a9862"
+  },
+  "script_sha256": "b621a9836a2ecb185ead230ada2168eb46811a3824caff353b95ec2f95b0fe40",
+  "dataset_configs_identical": true
+}

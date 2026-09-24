@@ -1,0 +1,22 @@
+weather,feature,mean_pair_distance,max_pair_distance,Camera-LiDAR,Camera-4D Radar,LiDAR-4D Radar
+normal,raw,14.48054,14.48054,,,14.48054
+overcast,raw,14.66187,14.66187,,,14.66187
+fog,raw,14.47401,14.47401,,,14.47401
+rain,raw,14.50304,14.50304,,,14.50304
+sleet,raw,14.644,14.644,,,14.644
+lightsnow,raw,14.74376,14.74376,,,14.74376
+heavysnow,raw,14.3931,14.3931,,,14.3931
+normal,common,3.323766,3.323766,,,3.323766
+overcast,common,3.369214,3.369214,,,3.369214
+fog,common,3.202009,3.202009,,,3.202009
+rain,common,3.551804,3.551804,,,3.551804
+sleet,common,2.542878,2.542878,,,2.542878
+lightsnow,common,3.255117,3.255117,,,3.255117
+heavysnow,common,2.564149,2.564149,,,2.564149
+normal,unique,20.44362,20.44362,,,20.44362
+overcast,unique,19.29941,19.29941,,,19.29941
+fog,unique,17.13527,17.13527,,,17.13527
+rain,unique,19.27329,19.27329,,,19.27329
+sleet,unique,15.28921,15.28921,,,15.28921
+lightsnow,unique,16.96771,16.96771,,,16.96771
+heavysnow,unique,16.51339,16.51339,,,16.51339

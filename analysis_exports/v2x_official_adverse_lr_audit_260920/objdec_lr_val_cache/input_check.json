@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "camera_input": false,
+  "camera_encoder": false,
+  "prediction_gt_input": false,
+  "matches_existing_eval_path": true,
+  "frames": [
+    "000009",
+    "000010"
+  ]
+}

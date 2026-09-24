@@ -1,0 +1,34 @@
+{
+  "pid": 3955866,
+  "started_at": "2026-09-16T08:11:10.838816+08:00",
+  "schedule": {
+    "0": [],
+    "1": [],
+    "2": []
+  },
+  "status": "complete",
+  "gpu0": {
+    "free_mib": 39923,
+    "utilization": 0
+  },
+  "gpu1": {
+    "free_mib": 40051,
+    "utilization": 0
+  },
+  "updated_at": "2026-09-17T19:40:28.043962+08:00",
+  "active": {},
+  "ended": {
+    "concat": 0,
+    "taskdec": 0,
+    "patch": 0
+  },
+  "command_match": "/home/hongsheng/dec_con_asf/analysis_exports/v2x_taskdec_260916/launch_patch_gpu2.py",
+  "handoff_at": "2026-09-16T21:36:06.275857+08:00",
+  "previous_controller_pid": 3877430,
+  "assignment": {
+    "taskdec": 0,
+    "concat": 1,
+    "patch": 2
+  },
+  "finished_at": "2026-09-17T19:40:28.064303+08:00"
+}

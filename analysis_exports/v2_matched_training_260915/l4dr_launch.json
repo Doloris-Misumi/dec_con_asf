@@ -1,0 +1,26 @@
+{
+  "pid": 3798840,
+  "gpu": 3,
+  "command": [
+    "/home/hongsheng/miniconda3/envs/rl_3dod/bin/python",
+    "-u",
+    "/home/hongsheng/dec_con_asf/analysis_exports/v2_matched_training_260915/train.py",
+    "--model",
+    "l4dr"
+  ],
+  "started_at": "2026-09-15T22:19:48.775351+08:00",
+  "source_sha256": {
+    "common.py": "eb9cb6cf4f21b774ba3e845933261e14f4c9b0a6b55710246357edaa2399eefd",
+    "evaluate.py": "bd4aa3beee966783de8ff4bd4e9a38a6eec1a139b4e8b3742f220cce4c3e4f05",
+    "launch.py": "98e53dfe4da41555840808661e852853dcb0633b5c9d00c228d3dd99ab77496b",
+    "prepare.py": "1ced7858f3ff04d74b1d6a4b5fe8ee177f7359f17991da566f73eb4feca97b96",
+    "report.py": "b5e2dfac0f85497083fa2d53182bf5c9aed7d01657ed34eeefaad1b843702c39",
+    "train.py": "ca86edd5b48ab2b48e9977d3916d57e9be5ffb57907910d3a791c7c0ddc1c5bf"
+  },
+  "environment": {
+    "CUDA_VISIBLE_DEVICES": "3",
+    "OPENBLAS_NUM_THREADS": "1",
+    "OMP_NUM_THREADS": "4",
+    "NUMBA_NUM_THREADS": "4"
+  }
+}

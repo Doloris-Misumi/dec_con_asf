@@ -1,0 +1,11 @@
+{
+  "l4dr": {
+    "file": "l4dr_initial.pt",
+    "sha256": "c6733740f1944dda0da13290ec6d0945fa9224e77806dded019cdd575cd591eb",
+    "parameters": 62065641,
+    "state_hash": "4ccb618d1628afbdfdf57879cb7801ead9a3fc6cca861f7456f8dca4836f23e6",
+    "pretrained": false,
+    "seed": 260916,
+    "at": "2026-09-17T01:18:33.393521+08:00"
+  }
+}

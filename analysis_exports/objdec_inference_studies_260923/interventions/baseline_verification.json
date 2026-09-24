@@ -1,0 +1,35 @@
+{
+  "passed": true,
+  "differences": {
+    "Vehicle_3D": -9.998064982141841e-06,
+    "Pedestrian_3D": -3.0818675611499202e-06,
+    "Cyclist_3D": -7.429550521464989e-07,
+    "mean_3D": -4.607629207953323e-06,
+    "Vehicle_BEV": -1.0704610588163632e-05,
+    "Pedestrian_BEV": -2.320177969750148e-07,
+    "Cyclist_BEV": -7.625561266877412e-07,
+    "mean_BEV": -3.899728156397941e-06
+  },
+  "expected": {
+    "case": "baseline",
+    "Vehicle_3D": 84.06295500222427,
+    "Pedestrian_3D": 75.93915673608306,
+    "Cyclist_3D": 84.12965247015039,
+    "mean_3D": 81.37725473615258,
+    "Vehicle_BEV": 90.91434251952505,
+    "Pedestrian_BEV": 80.8769727281702,
+    "Cyclist_BEV": 87.01602400214018,
+    "mean_BEV": 86.26911308327847
+  },
+  "reproduced": {
+    "case": "baseline",
+    "Vehicle_3D": 84.06294500415929,
+    "Pedestrian_3D": 75.9391536542155,
+    "Cyclist_3D": 84.12965172719534,
+    "mean_3D": 81.37725012852337,
+    "Vehicle_BEV": 90.91433181491446,
+    "Pedestrian_BEV": 80.8769724961524,
+    "Cyclist_BEV": 87.01602323958406,
+    "mean_BEV": 86.26910918355031
+  }
+}

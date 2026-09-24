@@ -1,0 +1,84 @@
+{
+  "sources": [
+    {
+      "name": "ASF official RLC",
+      "raw": "/home/hongsheng/K-Radar-main/results/official_asf_v2_RLC/raw/complete_results_none_0.3.txt",
+      "sha256": "2018c09f1496e803d5383a79b30087ad83644ac2c821bae5917ded28aa493926"
+    },
+    {
+      "name": "DecControlled Gentle 08-06",
+      "raw": "/home/hongsheng/dec_con_asf/logs/exp_260806_000821_DecControlledASFGentle_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/none/0.3/complete_results.txt",
+      "config": "/home/hongsheng/dec_con_asf/logs/exp_260806_000821_DecControlledASFGentle_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/config.yml",
+      "has_task_context": false,
+      "prediction_files": 13727,
+      "sha256": "cf347fa6c369759cec4ffb3be2dcfd5fca9abee7a3e42b0e15b75e36d1ff619a"
+    },
+    {
+      "name": "DecControlled Strong 08-06",
+      "raw": "/home/hongsheng/dec_con_asf/logs/exp_260806_000825_DecControlledASFStrong_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/none/0.3/complete_results.txt",
+      "config": "/home/hongsheng/dec_con_asf/logs/exp_260806_000825_DecControlledASFStrong_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/config.yml",
+      "has_task_context": false,
+      "prediction_files": 13727,
+      "sha256": "637db0745953b429ca210035570a6d270560204478b033d7655b3d2000987373"
+    },
+    {
+      "name": "TaskDec Balanced 08-08",
+      "raw": "/home/hongsheng/dec_con_asf/logs/exp_260808_131759_TaskDecControlBalanced_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/none/0.3/complete_results.txt",
+      "config": "/home/hongsheng/dec_con_asf/logs/exp_260808_131759_TaskDecControlBalanced_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/config.yml",
+      "has_task_context": true,
+      "prediction_files": 13727,
+      "sha256": "14cc7c14093147bc9c5250417ce2d1207aec3e36313e90921dbada048fa687e0"
+    },
+    {
+      "name": "TaskDec Robust 08-08",
+      "raw": "/home/hongsheng/dec_con_asf/logs/exp_260808_131759_TaskDecControlRobust_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/none/0.3/complete_results.txt",
+      "config": "/home/hongsheng/dec_con_asf/logs/exp_260808_131759_TaskDecControlRobust_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/config.yml",
+      "has_task_context": true,
+      "prediction_files": 13727,
+      "sha256": "3e2f83b9a8bc5203a58b00ddf1044a8fa84a96e7364d9db0200873c13b77dcde"
+    },
+    {
+      "name": "TaskDec Robust 08-21 final",
+      "raw": "/home/hongsheng/dec_con_asf/logs/exp_260821_002150_TaskDecControlRobust_v2_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/none/0.3/complete_results.txt",
+      "config": "/home/hongsheng/dec_con_asf/logs/exp_260821_002150_TaskDecControlRobust_v2_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/config.yml",
+      "has_task_context": true,
+      "prediction_files": 13727,
+      "sha256": "2d81c9139ba407e2c6c51235c3e0c7b71fb8209163feda4bb8eb5e1586b72ce3"
+    },
+    {
+      "name": "TaskDec Robust model_6",
+      "raw": "/home/hongsheng/dec_con_asf/logs/exp_260824_221613_TaskDecControlRobust_v2_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_6_total/0.3/complete_results.txt",
+      "config": "/home/hongsheng/dec_con_asf/logs/exp_260824_221613_TaskDecControlRobust_v2_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/config.yml",
+      "has_task_context": true,
+      "prediction_files": 13727,
+      "sha256": "371573db531e6b7b74e398038443dc970e26a6056fd20a7014da8f72b4017251"
+    },
+    {
+      "name": "TaskDec Robust model_8",
+      "raw": "/home/hongsheng/dec_con_asf/logs/exp_260824_221632_TaskDecControlRobust_v2_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_8_total/0.3/complete_results.txt",
+      "config": "/home/hongsheng/dec_con_asf/logs/exp_260824_221632_TaskDecControlRobust_v2_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/config.yml",
+      "has_task_context": true,
+      "prediction_files": 13727,
+      "sha256": "a72a025201a27664153ba2694ebf249f4ce6b3caf66830834a3fbc6e72ecaad2"
+    },
+    {
+      "name": "DecControlled Strong resume model_16",
+      "raw": "/home/hongsheng/dec_con_asf/logs/exp_260827_212019_DecControlledASFStrong_v2_0_resume20_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/test_kitti/epoch_16_total/0.3/complete_results.txt",
+      "config": "/home/hongsheng/dec_con_asf/logs/exp_260827_212019_DecControlledASFStrong_v2_0_resume20_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/config.yml",
+      "has_task_context": false,
+      "prediction_files": 13727,
+      "sha256": "d0142ee4978134ca1bed5bf81c6021f29e0a7e0b2d2cdedd9811b23c3688c4f4"
+    }
+  ],
+  "summary_values_checked": 1296,
+  "weather_frame_counts": {
+    "normal": 5415,
+    "overcast": 414,
+    "fog": 1445,
+    "rain": 1424,
+    "sleet": 2206,
+    "lightsnow": 1103,
+    "heavysnow": 1720
+  },
+  "csv_rows": 1944
+}

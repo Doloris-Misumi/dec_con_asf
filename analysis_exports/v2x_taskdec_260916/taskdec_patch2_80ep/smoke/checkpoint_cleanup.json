@@ -1,0 +1,14 @@
+{
+  "reason": "Smoke checkpoint restore passed; formal run starts from initial weights.",
+  "verified_and_removed": {
+    "best.pt": {
+      "sha256": "e38a21be64b41ebd3257db55c85d529e68da5392268da19084bb8fe257928f83",
+      "bytes": 135084531
+    },
+    "last.pt": {
+      "sha256": "95ac3666a695d7a83058852e13bef2b6f1649a025c2bf2d868c3c03b9d3a87f3",
+      "bytes": 404535064
+    }
+  },
+  "at": "2026-09-17T00:01:05.886604+08:00"
+}

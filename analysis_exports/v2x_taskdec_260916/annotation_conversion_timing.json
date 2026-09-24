@@ -1,0 +1,7 @@
+{
+  "input_boxes": 1500,
+  "output_boxes": 1500,
+  "seconds": 0.521261028945446,
+  "estimated_seconds_for_1487_max_density_frames": 775.1151500418782,
+  "scope": "Synthetic train-frame annotations only; no GPU, learned predictions, or AP tuning"
+}

@@ -1,0 +1,59 @@
+{
+  "epoch": 60,
+  "frames": 1296,
+  "official": {
+    "entire_area": {
+      "Car_3d_all": "62.21",
+      "Pedestrian_3d_all": "63.02",
+      "Cyclist_3d_all": "82.56",
+      "3d_all": "69.26"
+    },
+    "roi": {
+      "Car_3d_all": "90.0",
+      "Pedestrian_3d_all": "70.74",
+      "Cyclist_3d_all": "89.05",
+      "3d_all": "83.26"
+    }
+  },
+  "kitti": {
+    "Car_aos/easy_R40": 55.622281133609164,
+    "Car_aos/moderate_R40": 59.56035407738587,
+    "Car_aos/hard_R40": 52.72423937195631,
+    "Car_3d/easy_R40": 40.138830461796566,
+    "Car_3d/moderate_R40": 40.38146463774502,
+    "Car_3d/hard_R40": 35.44380966560624,
+    "Car_bev/easy_R40": 78.87921498227155,
+    "Car_bev/moderate_R40": 69.9945181201514,
+    "Car_bev/hard_R40": 62.19272359565553,
+    "Car_image/easy_R40": 61.05479681164696,
+    "Car_image/moderate_R40": 62.31673456203468,
+    "Car_image/hard_R40": 55.200405090374275,
+    "Pedestrian_aos/easy_R40": 64.02824301572936,
+    "Pedestrian_aos/moderate_R40": 61.08879416120244,
+    "Pedestrian_aos/hard_R40": 56.03468594461781,
+    "Pedestrian_3d/easy_R40": 47.20020243100444,
+    "Pedestrian_3d/moderate_R40": 43.56759886162786,
+    "Pedestrian_3d/hard_R40": 38.87434835504963,
+    "Pedestrian_bev/easy_R40": 61.501233509281924,
+    "Pedestrian_bev/moderate_R40": 58.19501311256723,
+    "Pedestrian_bev/hard_R40": 52.40910901566957,
+    "Pedestrian_image/easy_R40": 66.28055294318604,
+    "Pedestrian_image/moderate_R40": 64.56711528629752,
+    "Pedestrian_image/hard_R40": 59.52821717928597,
+    "Cyclist_aos/easy_R40": 92.00670216622075,
+    "Cyclist_aos/moderate_R40": 88.57502236166484,
+    "Cyclist_aos/hard_R40": 81.31690219176868,
+    "Cyclist_3d/easy_R40": 84.8733831209936,
+    "Cyclist_3d/moderate_R40": 79.079377531725,
+    "Cyclist_3d/hard_R40": 71.67692189292399,
+    "Cyclist_bev/easy_R40": 92.14073224731507,
+    "Cyclist_bev/moderate_R40": 88.63976181742889,
+    "Cyclist_bev/hard_R40": 81.14127393896784,
+    "Cyclist_image/easy_R40": 92.18164869093245,
+    "Cyclist_image/moderate_R40": 88.78551442622754,
+    "Cyclist_image/hard_R40": 81.54372551472046
+  },
+  "validation_seconds": 199.81911210343242,
+  "gt_used_in_network": false,
+  "selection_metric": "official.entire_area.3d_all"
+}

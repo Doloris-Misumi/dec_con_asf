@@ -1,0 +1,397 @@
+{
+  "weather_class_counts": {
+    "ASF_local": {
+      "0.3": {
+        "positive": 12,
+        "valid": 13,
+        "negative_cells": [
+          {
+            "weather": "lightsnow",
+            "cls": "sed",
+            "delta": -0.21891693462001172
+          }
+        ]
+      },
+      "0.5": {
+        "positive": 12,
+        "valid": 13,
+        "negative_cells": [
+          {
+            "weather": "heavysnow",
+            "cls": "sed",
+            "delta": -0.7586989593955735
+          }
+        ]
+      },
+      "0.7": {
+        "positive": 10,
+        "valid": 13,
+        "negative_cells": [
+          {
+            "weather": "normal",
+            "cls": "bus",
+            "delta": -2.267422296179031
+          },
+          {
+            "weather": "lightsnow",
+            "cls": "sed",
+            "delta": -0.899835460693085
+          },
+          {
+            "weather": "overcast",
+            "cls": "bus",
+            "delta": -2.7628964110386915
+          }
+        ]
+      }
+    },
+    "L4DR_local": {
+      "0.3": {
+        "positive": 9,
+        "valid": 13,
+        "negative_cells": [
+          {
+            "weather": "normal",
+            "cls": "bus",
+            "delta": -2.965570187992185
+          },
+          {
+            "weather": "rain",
+            "cls": "sed",
+            "delta": -8.16286882886375
+          },
+          {
+            "weather": "sleet",
+            "cls": "bus",
+            "delta": -2.423047546264222
+          },
+          {
+            "weather": "overcast",
+            "cls": "bus",
+            "delta": -8.251442725263416
+          }
+        ]
+      },
+      "0.5": {
+        "positive": 6,
+        "valid": 13,
+        "negative_cells": [
+          {
+            "weather": "normal",
+            "cls": "sed",
+            "delta": -2.936098081363106
+          },
+          {
+            "weather": "normal",
+            "cls": "bus",
+            "delta": -8.242897682959025
+          },
+          {
+            "weather": "rain",
+            "cls": "sed",
+            "delta": -6.648161135880386
+          },
+          {
+            "weather": "rain",
+            "cls": "bus",
+            "delta": -1.5441902259811124
+          },
+          {
+            "weather": "sleet",
+            "cls": "bus",
+            "delta": -4.570894496426369
+          },
+          {
+            "weather": "overcast",
+            "cls": "bus",
+            "delta": -6.238941836795753
+          },
+          {
+            "weather": "fog",
+            "cls": "sed",
+            "delta": -3.141088323076147
+          }
+        ]
+      },
+      "0.7": {
+        "positive": 6,
+        "valid": 13,
+        "negative_cells": [
+          {
+            "weather": "normal",
+            "cls": "sed",
+            "delta": -3.32085907151904
+          },
+          {
+            "weather": "normal",
+            "cls": "bus",
+            "delta": -3.6219422261622873
+          },
+          {
+            "weather": "lightsnow",
+            "cls": "sed",
+            "delta": -4.74937378898524
+          },
+          {
+            "weather": "rain",
+            "cls": "bus",
+            "delta": -0.15428320306369092
+          },
+          {
+            "weather": "sleet",
+            "cls": "sed",
+            "delta": -7.752838751405455
+          },
+          {
+            "weather": "overcast",
+            "cls": "bus",
+            "delta": -2.807929831279707
+          },
+          {
+            "weather": "fog",
+            "cls": "sed",
+            "delta": -6.315342265389326
+          }
+        ]
+      }
+    },
+    "L4DR_official": {
+      "0.3": {
+        "positive": 8,
+        "valid": 13,
+        "negative_cells": [
+          {
+            "weather": "normal",
+            "cls": "sed",
+            "delta": -2.0019915955771523
+          },
+          {
+            "weather": "normal",
+            "cls": "bus",
+            "delta": -4.638371741208303
+          },
+          {
+            "weather": "rain",
+            "cls": "sed",
+            "delta": -10.145270177123834
+          },
+          {
+            "weather": "sleet",
+            "cls": "bus",
+            "delta": -17.277357750958217
+          },
+          {
+            "weather": "overcast",
+            "cls": "bus",
+            "delta": -13.60833844420641
+          }
+        ]
+      },
+      "0.5": {
+        "positive": 4,
+        "valid": 13,
+        "negative_cells": [
+          {
+            "weather": "normal",
+            "cls": "sed",
+            "delta": -0.8224502468322612
+          },
+          {
+            "weather": "normal",
+            "cls": "bus",
+            "delta": -12.6593760024127
+          },
+          {
+            "weather": "lightsnow",
+            "cls": "sed",
+            "delta": -1.5764353527858788
+          },
+          {
+            "weather": "heavysnow",
+            "cls": "sed",
+            "delta": -2.8493604443538203
+          },
+          {
+            "weather": "heavysnow",
+            "cls": "bus",
+            "delta": -1.7386228240944774
+          },
+          {
+            "weather": "rain",
+            "cls": "sed",
+            "delta": -4.735351620113207
+          },
+          {
+            "weather": "sleet",
+            "cls": "bus",
+            "delta": -24.43631485120897
+          },
+          {
+            "weather": "overcast",
+            "cls": "bus",
+            "delta": -26.409410397608163
+          },
+          {
+            "weather": "fog",
+            "cls": "sed",
+            "delta": -3.509598961523608
+          }
+        ]
+      },
+      "0.7": {
+        "positive": 5,
+        "valid": 13,
+        "negative_cells": [
+          {
+            "weather": "normal",
+            "cls": "sed",
+            "delta": -1.3716786895983564
+          },
+          {
+            "weather": "normal",
+            "cls": "bus",
+            "delta": -5.257077187658211
+          },
+          {
+            "weather": "lightsnow",
+            "cls": "sed",
+            "delta": -10.472145888346779
+          },
+          {
+            "weather": "heavysnow",
+            "cls": "bus",
+            "delta": -1.9515751736340619
+          },
+          {
+            "weather": "sleet",
+            "cls": "sed",
+            "delta": -2.7072482559761673
+          },
+          {
+            "weather": "sleet",
+            "cls": "bus",
+            "delta": -1.8858950213765233
+          },
+          {
+            "weather": "overcast",
+            "cls": "sed",
+            "delta": -2.4017050121579064
+          },
+          {
+            "weather": "overcast",
+            "cls": "bus",
+            "delta": -9.239830587758568
+          }
+        ]
+      }
+    },
+    "ASF_official": {
+      "0.3": {
+        "positive": 8,
+        "valid": 13,
+        "negative_cells": [
+          {
+            "weather": "normal",
+            "cls": "sed",
+            "delta": -0.6238764559453642
+          },
+          {
+            "weather": "normal",
+            "cls": "bus",
+            "delta": -1.6530765142841446
+          },
+          {
+            "weather": "heavysnow",
+            "cls": "sed",
+            "delta": -0.03442735898418903
+          },
+          {
+            "weather": "sleet",
+            "cls": "bus",
+            "delta": -2.0776864261853945
+          },
+          {
+            "weather": "overcast",
+            "cls": "bus",
+            "delta": -1.5045228491325275
+          }
+        ]
+      },
+      "0.5": {
+        "positive": 10,
+        "valid": 13,
+        "negative_cells": [
+          {
+            "weather": "normal",
+            "cls": "sed",
+            "delta": -0.23878505426785068
+          },
+          {
+            "weather": "sleet",
+            "cls": "bus",
+            "delta": -0.35322007411731704
+          },
+          {
+            "weather": "fog",
+            "cls": "sed",
+            "delta": -0.2484130941969056
+          }
+        ]
+      },
+      "0.7": {
+        "positive": 8,
+        "valid": 13,
+        "negative_cells": [
+          {
+            "weather": "normal",
+            "cls": "sed",
+            "delta": -1.8648559593726564
+          },
+          {
+            "weather": "normal",
+            "cls": "bus",
+            "delta": -3.2455901735820123
+          },
+          {
+            "weather": "lightsnow",
+            "cls": "sed",
+            "delta": -0.18232348428493772
+          },
+          {
+            "weather": "sleet",
+            "cls": "sed",
+            "delta": -1.0118034421707227
+          },
+          {
+            "weather": "overcast",
+            "cls": "bus",
+            "delta": -2.9261193937274994
+          }
+        ]
+      }
+    }
+  },
+  "metric_rows": 1080,
+  "sources": {
+    "Strong": {
+      "path": "/home/hongsheng/dec_con_asf/analysis_exports/l4dr_v2_aligned_260915/strong_evaluation.json",
+      "sha256": "0ade36f5563a00ed8eed19056f192b654169d469454e1d2708836e8b6c5c1734"
+    },
+    "ASF_local": {
+      "path": "/home/hongsheng/dec_con_asf/analysis_exports/v2_matched_training_260915/asf/evaluation.json",
+      "sha256": "6eba465bfe8d7625b96c51d162ba81fd68cccf2c5799a84aba520316921f72ac"
+    },
+    "L4DR_local": {
+      "path": "/home/hongsheng/dec_con_asf/analysis_exports/v2_matched_training_260915/l4dr/evaluation.json",
+      "sha256": "763de0cc54c33b32d7fe7c5c8a036243cdb2ad2d1a05bfac1e81b8f98109f924"
+    },
+    "L4DR_official": {
+      "path": "/home/hongsheng/dec_con_asf/analysis_exports/l4dr_v2_aligned_260915/l4dr_evaluation.json",
+      "sha256": "3e71b1098e6c741b9639612ae49d30a44f5d5db16844c6e3a8af70bb6a7e85ca"
+    },
+    "ASF_official": {
+      "path": "/home/hongsheng/dec_con_asf/results/paper_kradar_v2_l4dr_asf_strong_aligned_260915.csv",
+      "sha256": "8e878edb11f06b9ad8811719a4708e959877f77b2d9221228d48dad53b48ba38"
+    }
+  }
+}

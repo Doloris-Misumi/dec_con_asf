@@ -1,0 +1,26 @@
+{
+  "gate_mean": {
+    "mean_preserved": true,
+    "distribution_preserved": false,
+    "changed_fraction": 1.0,
+    "patches_per_frame": 102400
+  },
+  "gate_shuffle_260923": {
+    "mean_preserved": true,
+    "distribution_preserved": true,
+    "changed_fraction": 0.5863427519798279,
+    "patches_per_frame": 102400
+  },
+  "gate_shuffle_260924": {
+    "mean_preserved": true,
+    "distribution_preserved": true,
+    "changed_fraction": 0.5856103301048279,
+    "patches_per_frame": 102400
+  },
+  "gate_shuffle_260925": {
+    "mean_preserved": true,
+    "distribution_preserved": true,
+    "changed_fraction": 0.5860497951507568,
+    "patches_per_frame": 102400
+  }
+}

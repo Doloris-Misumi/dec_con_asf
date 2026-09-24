@@ -1,0 +1,39 @@
+{
+  "tag": "taskdec_robust_v1_model0_rlc",
+  "date": "2026-09-02 20:40:44",
+  "repo_root": "/home/hongsheng/dec_con_asf",
+  "config": "/home/hongsheng/dec_con_asf/logs/exp_260810_221258_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/config.yml",
+  "model": "/home/hongsheng/dec_con_asf/logs/exp_260810_221258_TaskDecControlRobust_v1_0_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/models/model_0.pt",
+  "gpu": "3",
+  "infer_mode": "rlc",
+  "warmup": 20,
+  "measured_iters": 100,
+  "params_m": 79.468971,
+  "trainable_params_m": 3.176025,
+  "model_allocated_gb": 0.30176687240600586,
+  "forward_ms": {
+    "mean": 86.4476471710205,
+    "median": 85.54150390625,
+    "min": 80.9343032836914,
+    "max": 110.00908660888672,
+    "stdev": 5.052995465014831
+  },
+  "load_ms": {
+    "mean": 600.9103369992226,
+    "median": 585.4858653619885,
+    "min": 389.3593354150653,
+    "max": 913.2434260100126,
+    "stdev": 111.5636948270805
+  },
+  "total_ms": {
+    "mean": 687.5614495947957,
+    "median": 670.295883435756,
+    "min": 473.9131098613143,
+    "max": 1015.3607912361622,
+    "stdev": 113.40609332369247
+  },
+  "forward_fps": 11.567694815588062,
+  "e2e_fps": 1.4544154571047219,
+  "peak_allocated_gb": 0.9780898094177246,
+  "peak_reserved_gb": 1.24609375
+}

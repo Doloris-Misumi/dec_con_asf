@@ -1,0 +1,100 @@
+{
+  "request": "User authorized pending patch on freed GPU2",
+  "at": "2026-09-16T21:36:06.174003+08:00",
+  "old_controller": {
+    "pid": 3877430,
+    "command": "/home/hongsheng/dec_con_asf/v2x_taskdec/.venv/bin/python -u -m v2x_taskdec.launch_controlled",
+    "state": "S",
+    "start_ticks": 845398502
+  },
+  "previous_status": {
+    "pid": 3955866,
+    "started_at": "2026-09-16T08:11:10.838816+08:00",
+    "schedule": {
+      "0": [],
+      "1": [],
+      "2": []
+    },
+    "status": "running",
+    "gpu0": {
+      "free_mib": 39923,
+      "utilization": 0
+    },
+    "gpu1": {
+      "free_mib": 40051,
+      "utilization": 0
+    },
+    "updated_at": "2026-09-16T21:36:06.291877+08:00",
+    "active": {
+      "0": {
+        "pid": 3877508,
+        "variant": "taskdec"
+      },
+      "1": {
+        "pid": 3877510,
+        "variant": "concat"
+      },
+      "2": {
+        "pid": 3955975,
+        "variant": "patch"
+      }
+    },
+    "ended": {},
+    "command_match": "/home/hongsheng/dec_con_asf/analysis_exports/v2x_taskdec_260916/launch_patch_gpu2.py",
+    "handoff_at": "2026-09-16T21:36:06.275857+08:00",
+    "previous_controller_pid": 3877430,
+    "assignment": {
+      "taskdec": 0,
+      "concat": 1,
+      "patch": 2
+    }
+  },
+  "preserved_training": {
+    "taskdec": {
+      "pid": 3877508,
+      "command": "/home/hongsheng/dec_con_asf/v2x_taskdec/.venv/bin/python -u -m v2x_taskdec.train --variant taskdec",
+      "state": "R",
+      "start_ticks": 845402712,
+      "gpu": 0,
+      "started_at": "2026-09-16T08:11:51.316891+08:00"
+    },
+    "concat": {
+      "pid": 3877510,
+      "command": "/home/hongsheng/dec_con_asf/v2x_taskdec/.venv/bin/python -u -m v2x_taskdec.train --variant concat",
+      "state": "S",
+      "start_ticks": 845402723,
+      "gpu": 1,
+      "started_at": "2026-09-16T08:11:51.427403+08:00"
+    }
+  },
+  "new_assignment": {
+    "taskdec": 0,
+    "concat": 1,
+    "patch": 2
+  },
+  "script_sha256": "beb617d42372c2bcd3d34073dd0a79d7af79890e7b967495732cd345c8f04346",
+  "resource_checks": [
+    {
+      "at": "2026-09-16T21:35:25.348199+08:00",
+      "free_mib": 48545,
+      "utilization": 0
+    },
+    {
+      "at": "2026-09-16T21:35:45.445374+08:00",
+      "free_mib": 48545,
+      "utilization": 0
+    },
+    {
+      "at": "2026-09-16T21:36:05.561736+08:00",
+      "free_mib": 48545,
+      "utilization": 0
+    }
+  ],
+  "frozen_sources_verified": true,
+  "frozen_configuration_unchanged": true,
+  "status": "handed_off",
+  "new_controller_pid": 3955866,
+  "patch_pid": 3955975,
+  "old_queue_cancelled": true,
+  "existing_training_pids_unchanged": true
+}

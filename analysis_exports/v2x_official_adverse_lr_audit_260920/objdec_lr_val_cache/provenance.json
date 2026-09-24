@@ -1,0 +1,26 @@
+{
+  "checkpoint_source": "/home/hongsheng/dec_con_asf/analysis_exports/v2x_grid016_controls_260919/objdec_lr_80ep/taskdec/best.pt",
+  "epoch": 30,
+  "checkpoint_sha256": "ac2da48ade80732f2bc35a127441e607de4f0a6a87bb332672fc439b474c442b",
+  "config_sha256": "dd3d6f61a709fff220cd184ede4a8ca089dd20a077a8f9cd602f3d66fe31468e",
+  "split_sha256": "019faed5506cd8dfbd51f6d324330fa77febb276f66f9bb5b244302c5cc688d4",
+  "frames": 1487,
+  "source_manifest": "/home/hongsheng/dec_con_asf/analysis_exports/v2x_grid016_controls_260919/objdec_lr_80ep/source_manifest.json",
+  "source_manifest_sha256": "d435ecad187c9d4216c3b6d7921cb120b2f5ccfc0fd80e076baab002f38b9997",
+  "cache_script_sha256": "0e5cd09359671d36a81fe91eede5cae275a06f807bbdb22c26208b9c7f0f5b51",
+  "selected_by": "existing full validation best",
+  "protocol": "Existing local ROI, decoder, thresholds and val deduplication unchanged",
+  "purpose": "Preparation for a future explicitly sourced weather subset; not Table 6 reproduction",
+  "prediction_columns": [
+    "x",
+    "y",
+    "z",
+    "dx",
+    "dy",
+    "dz",
+    "yaw",
+    "score",
+    "class_id"
+  ],
+  "created_at": "2026-09-20T23:00:43.459666+08:00"
+}

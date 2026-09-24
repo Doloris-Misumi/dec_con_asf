@@ -56,3 +56,15 @@ venv/
 
 # Keep compact summaries, skip copied raw training logs
 results/**/raw/*.log
+
+# Local experiment coordination and compressed prediction/source archives
+*.pid
+*.lock
+*.jsonl.gz
+*.tar.gz
+*.tgz
+/analysis_exports/**/chunks/
+/analysis_exports/**/predictions/
+/analysis_exports/**/preds/
+/analysis_exports/**/gts/
+/analysis_exports/**/gt/

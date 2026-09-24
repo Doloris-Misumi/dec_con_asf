@@ -1,0 +1,60 @@
+{
+  "scope": "all official train labels within locked center ROI; no validation/test labels or model predictions",
+  "frames": 8391,
+  "classes": {
+    "Vehicle": {
+      "count": 31283,
+      "difficulty_counts": [
+        15296,
+        26503,
+        27883
+      ],
+      "min_bev_iou": 0.0,
+      "min_3d_iou": 0.0,
+      "below_strict_iou": 157,
+      "max_yaw_error_radians": 0.0002207238347091689,
+      "max_location_error_m": 4.145517850228168e-06,
+      "worst_frame": "000419",
+      "min_guaranteed_3d_iou": 0.9976701664051223,
+      "guaranteed_iou_below_strict": 0,
+      "opencv_bound_violations": 237
+    },
+    "Pedestrian": {
+      "count": 18880,
+      "difficulty_counts": [
+        10870,
+        18243,
+        18413
+      ],
+      "min_bev_iou": 0.0,
+      "min_3d_iou": 0.0,
+      "below_strict_iou": 12713,
+      "max_yaw_error_radians": 0.00021956285631485883,
+      "max_location_error_m": 4.214576322291045e-06,
+      "worst_frame": "000287",
+      "min_guaranteed_3d_iou": 0.9987078221929007,
+      "guaranteed_iou_below_strict": 0,
+      "opencv_bound_violations": 15060
+    },
+    "Cyclist": {
+      "count": 19436,
+      "difficulty_counts": [
+        11471,
+        18480,
+        18662
+      ],
+      "min_bev_iou": 0.0,
+      "min_3d_iou": 0.0,
+      "below_strict_iou": 674,
+      "max_yaw_error_radians": 3.090326724830561e-05,
+      "max_location_error_m": 4.009397126450044e-06,
+      "worst_frame": "000664",
+      "min_guaranteed_3d_iou": 0.9996956269820543,
+      "guaranteed_iou_below_strict": 0,
+      "opencv_bound_violations": 1102
+    }
+  },
+  "opencv_below_strict_iou_case_count": 13544,
+  "elapsed_seconds": 19.755210826173425,
+  "note": "Use min_guaranteed_3d_iou for conclusions. The earlier min_3d_iou/min_bev_iou fields are OpenCV diagnostics, invalid where they violate the analytic lower bound. Geometric roundtrip only, not detector AP; difficulty counts overlap."
+}

@@ -1,0 +1,12 @@
+{
+  "pid": 4170533,
+  "started_at": "2026-09-18T08:20:04.047389+08:00",
+  "command": [
+    "/home/hongsheng/dec_con_asf/v2x_taskdec/.venv/bin/python",
+    "-u",
+    "/home/hongsheng/dec_con_asf/analysis_exports/v2x_grid016_260918/controller.py"
+  ],
+  "taskdec_gpu": 3,
+  "concat_gpu": 2,
+  "detached": true
+}

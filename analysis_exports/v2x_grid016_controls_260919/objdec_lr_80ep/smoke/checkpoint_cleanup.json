@@ -1,0 +1,13 @@
+{
+  "removed": {
+    "best.pt": {
+      "bytes": 35242275,
+      "sha256": "d1749fa840f5ab210a76b8542a70c124d6ec19b3da3fbd19256c12a665ce9183"
+    },
+    "last.pt": {
+      "bytes": 105587543,
+      "sha256": "b54d5ccb1497173660414796e04e6919e84ce04263a796fcb9a7bf4f05795ba8"
+    }
+  },
+  "reason": "Only disposable smoke weights; formal training starts from the saved untrained initialization."
+}

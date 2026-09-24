@@ -1,0 +1,25 @@
+{
+  "checked_at": "2026-09-20T23:03:44.384013+08:00",
+  "archives": {
+    "ImageSets.zip": {
+      "members": 4,
+      "files": 4,
+      "metadata_files": [],
+      "weather_named_files": [],
+      "all_members": [
+        "ImageSets/test.txt",
+        "ImageSets/train.txt",
+        "ImageSets/trainval.txt",
+        "ImageSets/val.txt"
+      ]
+    },
+    "V2X-Radar-V.zip": {
+      "members": 56957,
+      "files": 56950,
+      "metadata_files": [],
+      "weather_named_files": []
+    }
+  },
+  "official_weather_subset_available": false,
+  "limitation": "Filename/archive structure audit; no full weather frame mapping found. Old project website timed out."
+}

@@ -1,0 +1,17 @@
+Edit the supplied ObjDec motivation figure. Preserve the three-column composition, academic serif typography, pale gray/ivory/blue headings, all headings and scientific narrative. Two changes are mandatory.
+
+A. CORRECT THE TOKEN SEMANTICS in panels (a) and (c).
+Before the decoupling branch there is ONE ordinary token per modality at a corresponding local patch. It has NOT already been split into shared/unique pieces.
+In panel (a), replace each of the three mixed symbol strips (amber circle plus blue/green/purple shapes) with ONE compact solid-colored rectangular TOKEN tile: blue for Camera row, teal for LiDAR row, violet for 4D radar row. Each tile may have a few subtle interior same-color bars to denote vector dimensions but NO multicolor components and NO shared amber circles. All three feed Interaction / weighting. Its output Fused features should likewise be a SINGLE neutral slate-colored rectangular feature tile, not multiple semantic shapes.
+In panel (c), replace the three Input features strips with the same ONE token each, blue/top, teal/middle, violet/bottom, labeled t_C, t_L, t_R if possible. Each token is mapped by TWO learned branches to its shared and modality-specific representation. Show three rows inside Object-guided decoupling: each modality's token forks toward a Shared lane and a Modality-specific lane. Only AFTER these mappings may amber shared circles and blue/teal/violet unique tokens appear. Do not merge the three input tokens into a single token before mapping. If more readable, keep two output groups 'Shared' and 'Modality-specific', and show the three independent incoming fork arrows very simply. Retain the original-input bypass feeding fusion, collectively from all modalities. No background-deletion path.
+
+B. REPLACE ALL PHOTO AND DATA INSERTS WITH EMPTY WHITE RECTANGULAR SLOTS of exactly the same position and size as the existing inserts. These slots will be filled deterministically afterwards with authentic synchronized K-Radar observations and actual saved model predictions. DO NOT GENERATE OR APPROXIMATE ANY DATA IMAGES. Leave white blank rectangles with faint light-gray borders and NO letters inside in these six places:
+1 left panel Camera photo;
+2 left panel LiDAR pointcloud;
+3 left panel radar pointcloud;
+4 middle panel roadside background crop;
+5 middle panel car crop;
+6 far-right '3D detection' output image. Keep its 3D detection label.
+Keep the small illustrative glyphs beside the middle panel crops, but replace the little drawn car outlines there with simple colored vector bars, so no artificial vehicle pictures remain anywhere. Those glyphs are conceptual, not measured.
+Keep all surrounding labels unchanged. Change only footer 'Conceptual illustration' to 'Schematic; real data inserts'.
+Preserve existing panel footer takeaways, losses, object supervision, and fusion control labels. No additional explanatory paragraphs. Maintain overall dimensions/aspect ratio approximately 1902x826. Crucial: ordinary input token first, learned shared/specific outputs only after the fork. No photo or detection images are to be synthesized.

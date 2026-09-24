@@ -1,0 +1,32 @@
+{
+  "phase": "complete",
+  "started_at": "2026-09-18T08:00:47.550260+08:00",
+  "frames": 3,
+  "total_frames": 3,
+  "cases": [
+    "r",
+    "l",
+    "c",
+    "c_star",
+    "lr",
+    "cr",
+    "cl",
+    "clr",
+    "c_star_lr",
+    "cl_star_r"
+  ],
+  "failure_count": 0,
+  "updated_at": "2026-09-18T08:02:06.919348+08:00",
+  "pid": 4168109,
+  "gpu": 2,
+  "dataset_index": 13726,
+  "elapsed_seconds": 6.198846109211445,
+  "frames_per_second": 0.4839610384168143,
+  "peak_allocated_gib": 1.5921330451965332,
+  "case": "cl_star_r",
+  "confidence": 0.3,
+  "condition": "all",
+  "evaluation_group_frames": 3,
+  "completed_at": "2026-09-18T08:02:06.919233+08:00",
+  "traceback": null
+}

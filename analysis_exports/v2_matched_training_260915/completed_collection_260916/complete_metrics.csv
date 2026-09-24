@@ -1,0 +1,649 @@
+method,group,num_samples,class,metric,iou,ap
+Strong,all,13727,sed,3d,0.7,12.308283567481094
+Strong,all,13727,sed,3d,0.5,52.141909787425355
+Strong,all,13727,sed,3d,0.3,74.58434943531094
+Strong,all,13727,sed,bev,0.7,44.25690177529195
+Strong,all,13727,sed,bev,0.5,71.26560294241487
+Strong,all,13727,sed,bev,0.3,77.3207697820272
+Strong,all,13727,bus,3d,0.7,9.915535165457054
+Strong,all,13727,bus,3d,0.5,33.9660847108478
+Strong,all,13727,bus,3d,0.3,59.24418568817133
+Strong,all,13727,bus,bev,0.7,23.12802117047419
+Strong,all,13727,bus,bev,0.5,50.59252058686502
+Strong,all,13727,bus,bev,0.3,65.13721727861488
+Strong,normal,5415,sed,3d,0.7,5.553728758859114
+Strong,normal,5415,sed,3d,0.5,49.39058686764639
+Strong,normal,5415,sed,3d,0.3,73.51458739880525
+Strong,normal,5415,sed,bev,0.7,35.587099240835364
+Strong,normal,5415,sed,bev,0.5,70.00539861483695
+Strong,normal,5415,sed,bev,0.3,76.1296850263338
+Strong,normal,5415,bus,3d,0.7,2.48277242083018
+Strong,normal,5415,bus,3d,0.5,23.936136862373502
+Strong,normal,5415,bus,3d,0.3,51.630890403287545
+Strong,normal,5415,bus,bev,0.7,10.402571686487033
+Strong,normal,5415,bus,bev,0.5,35.13510343847124
+Strong,normal,5415,bus,bev,0.3,55.525716531272586
+Strong,overcast,414,sed,3d,0.7,8.724316215166606
+Strong,overcast,414,sed,3d,0.5,59.62361869139369
+Strong,overcast,414,sed,3d,0.3,84.30388440437787
+Strong,overcast,414,sed,bev,0.7,45.46403529227293
+Strong,overcast,414,sed,bev,0.5,82.30568257362836
+Strong,overcast,414,sed,bev,0.3,91.38712327057618
+Strong,overcast,414,bus,3d,0.7,5.251002001037798
+Strong,overcast,414,bus,3d,0.5,49.654868957211995
+Strong,overcast,414,bus,3d,0.3,73.82130508299801
+Strong,overcast,414,bus,bev,0.7,18.715816703621588
+Strong,overcast,414,bus,bev,0.5,62.30515540061342
+Strong,overcast,414,bus,bev,0.3,74.02102192981732
+Strong,fog,1445,sed,3d,0.7,43.51804264010096
+Strong,fog,1445,sed,3d,0.5,80.30148404335333
+Strong,fog,1445,sed,3d,0.3,94.45576829875584
+Strong,fog,1445,sed,bev,0.7,82.17234585430381
+Strong,fog,1445,sed,bev,0.5,94.66788330776384
+Strong,fog,1445,sed,bev,0.3,94.83924440755152
+Strong,fog,1445,bus,3d,0.7,0.0
+Strong,fog,1445,bus,3d,0.5,0.0
+Strong,fog,1445,bus,3d,0.3,0.0
+Strong,fog,1445,bus,bev,0.7,0.0
+Strong,fog,1445,bus,bev,0.5,0.0
+Strong,fog,1445,bus,bev,0.3,0.0
+Strong,rain,1424,sed,3d,0.7,17.493888348856977
+Strong,rain,1424,sed,3d,0.5,48.298848693647464
+Strong,rain,1424,sed,3d,0.3,68.10965295372804
+Strong,rain,1424,sed,bev,0.7,44.90001944102435
+Strong,rain,1424,sed,bev,0.5,64.0555777774779
+Strong,rain,1424,sed,bev,0.3,68.84273100082373
+Strong,rain,1424,bus,3d,0.7,0.9004300467715103
+Strong,rain,1424,bus,3d,0.5,5.051640209024325
+Strong,rain,1424,bus,3d,0.3,10.083134717177533
+Strong,rain,1424,bus,bev,0.7,3.6512507372584393
+Strong,rain,1424,bus,bev,0.5,8.356283824685358
+Strong,rain,1424,bus,bev,0.3,10.083134717177533
+Strong,sleet,2206,sed,3d,0.7,7.320596264524121
+Strong,sleet,2206,sed,3d,0.5,49.12897807261431
+Strong,sleet,2206,sed,3d,0.3,72.51657044466288
+Strong,sleet,2206,sed,bev,0.7,42.012900576850434
+Strong,sleet,2206,sed,bev,0.5,63.84629266975349
+Strong,sleet,2206,sed,bev,0.3,75.60991797975673
+Strong,sleet,2206,bus,3d,0.7,9.336519378624955
+Strong,sleet,2206,bus,3d,0.5,38.47873609677131
+Strong,sleet,2206,bus,3d,0.3,57.4718623927167
+Strong,sleet,2206,bus,bev,0.7,22.6760757063882
+Strong,sleet,2206,bus,bev,0.5,48.31430227803312
+Strong,sleet,2206,bus,bev,0.3,58.07812181919184
+Strong,lightsnow,1103,sed,3d,0.7,10.666389876541478
+Strong,lightsnow,1103,sed,3d,0.5,60.7450227634318
+Strong,lightsnow,1103,sed,3d,0.3,89.55544896711352
+Strong,lightsnow,1103,sed,bev,0.7,67.43740771819881
+Strong,lightsnow,1103,sed,bev,0.5,87.46913846232847
+Strong,lightsnow,1103,sed,bev,0.3,90.13030216540857
+Strong,lightsnow,1103,bus,3d,0.7,48.47579336661988
+Strong,lightsnow,1103,bus,3d,0.5,75.09186027851328
+Strong,lightsnow,1103,bus,3d,0.3,89.56350131502805
+Strong,lightsnow,1103,bus,bev,0.7,74.19409925632915
+Strong,lightsnow,1103,bus,bev,0.5,89.13724914739298
+Strong,lightsnow,1103,bus,bev,0.3,94.64121254882689
+Strong,heavysnow,1720,sed,3d,0.7,18.18523248704392
+Strong,heavysnow,1720,sed,3d,0.5,50.48532396870704
+Strong,heavysnow,1720,sed,3d,0.3,63.573542852068464
+Strong,heavysnow,1720,sed,bev,0.7,43.24680476470426
+Strong,heavysnow,1720,sed,bev,0.5,61.33387520169754
+Strong,heavysnow,1720,sed,bev,0.3,65.87382823123504
+Strong,heavysnow,1720,bus,3d,0.7,13.94172379466292
+Strong,heavysnow,1720,bus,3d,0.5,39.36839489426447
+Strong,heavysnow,1720,bus,3d,0.3,72.34123850166718
+Strong,heavysnow,1720,bus,bev,0.7,36.92555024985116
+Strong,heavysnow,1720,bus,bev,0.5,78.96456092133096
+Strong,heavysnow,1720,bus,bev,0.3,89.50402222660298
+Strong,day,9196,sed,3d,0.7,12.468997048791609
+Strong,day,9196,sed,3d,0.5,54.70953478879631
+Strong,day,9196,sed,3d,0.3,76.74069078545422
+Strong,day,9196,sed,bev,0.7,44.588677837914155
+Strong,day,9196,sed,bev,0.5,73.64132644713531
+Strong,day,9196,sed,bev,0.3,79.31169149599458
+Strong,day,9196,bus,3d,0.7,4.621357705285217
+Strong,day,9196,bus,3d,0.5,26.79560335804865
+Strong,day,9196,bus,3d,0.3,53.673969965481994
+Strong,day,9196,bus,bev,0.7,15.57784626999118
+Strong,day,9196,bus,bev,0.5,41.82002169309907
+Strong,day,9196,bus,bev,0.3,56.9836883566341
+Strong,night,4531,sed,3d,0.7,12.17135722782504
+Strong,night,4531,sed,3d,0.5,46.91352410055849
+Strong,night,4531,sed,3d,0.3,70.27500089860274
+Strong,night,4531,sed,bev,0.7,42.25791060345405
+Strong,night,4531,sed,bev,0.5,66.46646617474936
+Strong,night,4531,sed,bev,0.3,73.41996462215255
+Strong,night,4531,bus,3d,0.7,18.197058700645066
+Strong,night,4531,bus,3d,0.5,42.68707979456071
+Strong,night,4531,bus,3d,0.3,63.82832800611643
+Strong,night,4531,bus,bev,0.7,33.63925670895666
+Strong,night,4531,bus,bev,0.5,62.27428188776638
+Strong,night,4531,bus,bev,0.3,78.02941892414427
+Strong,urban,4764,sed,3d,0.7,14.85174631301916
+Strong,urban,4764,sed,3d,0.5,57.331730212966
+Strong,urban,4764,sed,3d,0.3,77.95155609097652
+Strong,urban,4764,sed,bev,0.7,50.39233290705776
+Strong,urban,4764,sed,bev,0.5,74.48011538310396
+Strong,urban,4764,sed,bev,0.3,80.78187123797323
+Strong,urban,4764,bus,3d,0.7,20.0178872625223
+Strong,urban,4764,bus,3d,0.5,47.79981724533537
+Strong,urban,4764,bus,3d,0.3,85.183778926199
+Strong,urban,4764,bus,bev,0.7,43.25812873040943
+Strong,urban,4764,bus,bev,0.5,78.70894051091598
+Strong,urban,4764,bus,bev,0.3,85.52094664106704
+Strong,highway,4308,sed,3d,0.7,5.366135673590466
+Strong,highway,4308,sed,3d,0.5,56.08302700810596
+Strong,highway,4308,sed,3d,0.3,83.05806594123516
+Strong,highway,4308,sed,bev,0.7,41.78732881732318
+Strong,highway,4308,sed,bev,0.5,79.58352323138045
+Strong,highway,4308,sed,bev,0.3,85.72716444405253
+Strong,highway,4308,bus,3d,0.7,9.706240884579746
+Strong,highway,4308,bus,3d,0.5,33.13213376954994
+Strong,highway,4308,bus,3d,0.3,57.45208274374658
+Strong,highway,4308,bus,bev,0.7,21.60614770798724
+Strong,highway,4308,bus,bev,0.5,50.83286424169474
+Strong,highway,4308,bus,bev,0.3,68.07565685696194
+Strong,countryside,441,sed,3d,0.7,8.126580202056259
+Strong,countryside,441,sed,3d,0.5,34.23701683143703
+Strong,countryside,441,sed,3d,0.3,60.01597669605143
+Strong,countryside,441,sed,bev,0.7,23.279986194122856
+Strong,countryside,441,sed,bev,0.5,55.9302485379546
+Strong,countryside,441,sed,bev,0.3,65.32674491177677
+Strong,countryside,441,bus,3d,0.7,1.5864868372921757
+Strong,countryside,441,bus,3d,0.5,12.315423023283047
+Strong,countryside,441,bus,3d,0.3,24.83445764156118
+Strong,countryside,441,bus,bev,0.7,7.624046222379041
+Strong,countryside,441,bus,bev,0.5,19.598617837423937
+Strong,countryside,441,bus,bev,0.3,27.346297537122016
+Strong,alleyway,805,sed,3d,0.7,2.7090036760373577
+Strong,alleyway,805,sed,3d,0.5,21.068004816468736
+Strong,alleyway,805,sed,3d,0.3,38.10762820311203
+Strong,alleyway,805,sed,bev,0.7,16.003937445640403
+Strong,alleyway,805,sed,bev,0.5,35.26825340008451
+Strong,alleyway,805,sed,bev,0.3,41.15283803680305
+Strong,alleyway,805,bus,3d,0.7,0.14139271827500885
+Strong,alleyway,805,bus,3d,0.5,3.230899741104333
+Strong,alleyway,805,bus,3d,0.3,22.975626765901723
+Strong,alleyway,805,bus,bev,0.7,1.6765136595465333
+Strong,alleyway,805,bus,bev,0.5,11.702928632474844
+Strong,alleyway,805,bus,bev,0.3,25.48163960602573
+Strong,parkinglots,575,sed,3d,0.7,27.428661719511965
+Strong,parkinglots,575,sed,3d,0.5,51.038719351754345
+Strong,parkinglots,575,sed,3d,0.3,75.30394383216739
+Strong,parkinglots,575,sed,bev,0.7,36.34971073197592
+Strong,parkinglots,575,sed,bev,0.5,60.98240087068544
+Strong,parkinglots,575,sed,bev,0.3,75.53350726183027
+Strong,parkinglots,575,bus,3d,0.7,9.365319522322837
+Strong,parkinglots,575,bus,3d,0.5,40.03288602075996
+Strong,parkinglots,575,bus,3d,0.3,66.7891103992397
+Strong,parkinglots,575,bus,bev,0.7,19.817677454932678
+Strong,parkinglots,575,bus,bev,0.5,51.34177197904543
+Strong,parkinglots,575,bus,bev,0.3,67.05096464086905
+Strong,shoulder,595,sed,3d,0.7,77.38051348362906
+Strong,shoulder,595,sed,3d,0.5,94.57080791966906
+Strong,shoulder,595,sed,3d,0.3,97.32176294379819
+Strong,shoulder,595,sed,bev,0.7,90.76199212452104
+Strong,shoulder,595,sed,bev,0.5,97.42481899043605
+Strong,shoulder,595,sed,bev,0.3,99.83038797897997
+Strong,shoulder,595,bus,3d,0.7,0.0
+Strong,shoulder,595,bus,3d,0.5,0.0
+Strong,shoulder,595,bus,3d,0.3,0.0
+Strong,shoulder,595,bus,bev,0.7,0.0
+Strong,shoulder,595,bus,bev,0.5,0.0
+Strong,shoulder,595,bus,bev,0.3,0.0
+Strong,mountain,1448,sed,3d,0.7,10.114399327195702
+Strong,mountain,1448,sed,3d,0.5,66.29358514248841
+Strong,mountain,1448,sed,3d,0.3,89.47650124812243
+Strong,mountain,1448,sed,bev,0.7,74.36676553071966
+Strong,mountain,1448,sed,bev,0.5,91.63194436937057
+Strong,mountain,1448,sed,bev,0.3,92.1312689546302
+Strong,mountain,1448,bus,3d,0.7,15.122482154437296
+Strong,mountain,1448,bus,3d,0.5,51.79729009014468
+Strong,mountain,1448,bus,3d,0.3,59.19952551026516
+Strong,mountain,1448,bus,bev,0.7,38.34811226094517
+Strong,mountain,1448,bus,bev,0.5,56.0950666799367
+Strong,mountain,1448,bus,bev,0.3,59.19952551026516
+Strong,university,791,sed,3d,0.7,4.998552200726408
+Strong,university,791,sed,3d,0.5,44.96284351787703
+Strong,university,791,sed,3d,0.3,69.713438137072
+Strong,university,791,sed,bev,0.7,30.40756965753455
+Strong,university,791,sed,bev,0.5,66.0374101367436
+Strong,university,791,sed,bev,0.3,72.21129353206112
+Strong,university,791,bus,3d,0.7,0.0
+Strong,university,791,bus,3d,0.5,0.0
+Strong,university,791,bus,3d,0.3,0.0
+Strong,university,791,bus,bev,0.7,0.0
+Strong,university,791,bus,bev,0.5,0.0
+Strong,university,791,bus,bev,0.3,0.0
+ASF local 11 epochs,all,13727,sed,3d,0.7,11.579220369262275
+ASF local 11 epochs,all,13727,sed,3d,0.5,51.52114677058114
+ASF local 11 epochs,all,13727,sed,3d,0.3,74.45187402974639
+ASF local 11 epochs,all,13727,sed,bev,0.7,42.22969759194281
+ASF local 11 epochs,all,13727,sed,bev,0.5,71.11499969696642
+ASF local 11 epochs,all,13727,sed,bev,0.3,77.36881467763101
+ASF local 11 epochs,all,13727,bus,3d,0.7,7.5157175195115835
+ASF local 11 epochs,all,13727,bus,3d,0.5,27.875481584672073
+ASF local 11 epochs,all,13727,bus,3d,0.3,55.091902649718996
+ASF local 11 epochs,all,13727,bus,bev,0.7,16.836022543518915
+ASF local 11 epochs,all,13727,bus,bev,0.5,46.43092729921634
+ASF local 11 epochs,all,13727,bus,bev,0.3,64.26718315879398
+ASF local 11 epochs,normal,5415,sed,3d,0.7,5.248967629947662
+ASF local 11 epochs,normal,5415,sed,3d,0.5,48.89650857937281
+ASF local 11 epochs,normal,5415,sed,3d,0.3,73.44625344793056
+ASF local 11 epochs,normal,5415,sed,bev,0.7,35.76296358845472
+ASF local 11 epochs,normal,5415,sed,bev,0.5,69.90203560568324
+ASF local 11 epochs,normal,5415,sed,bev,0.3,76.19435412903167
+ASF local 11 epochs,normal,5415,bus,3d,0.7,4.750194717009211
+ASF local 11 epochs,normal,5415,bus,3d,0.5,21.15628866865333
+ASF local 11 epochs,normal,5415,bus,3d,0.3,50.39001504832407
+ASF local 11 epochs,normal,5415,bus,bev,0.7,10.069087235844483
+ASF local 11 epochs,normal,5415,bus,bev,0.5,33.66583616324587
+ASF local 11 epochs,normal,5415,bus,bev,0.3,54.57416002087643
+ASF local 11 epochs,lightsnow,1103,sed,3d,0.7,11.566225337234563
+ASF local 11 epochs,lightsnow,1103,sed,3d,0.5,59.24974658756845
+ASF local 11 epochs,lightsnow,1103,sed,3d,0.3,89.77436590173353
+ASF local 11 epochs,lightsnow,1103,sed,bev,0.7,63.822561812205414
+ASF local 11 epochs,lightsnow,1103,sed,bev,0.5,89.73558174409678
+ASF local 11 epochs,lightsnow,1103,sed,bev,0.3,92.66930336866905
+ASF local 11 epochs,lightsnow,1103,bus,3d,0.7,36.40593203942235
+ASF local 11 epochs,lightsnow,1103,bus,3d,0.5,70.58349954940184
+ASF local 11 epochs,lightsnow,1103,bus,3d,0.3,84.74680928772707
+ASF local 11 epochs,lightsnow,1103,bus,bev,0.7,71.83981792999182
+ASF local 11 epochs,lightsnow,1103,bus,bev,0.5,88.46390878075138
+ASF local 11 epochs,lightsnow,1103,bus,bev,0.3,94.56165843126459
+ASF local 11 epochs,heavysnow,1720,sed,3d,0.7,16.955014287280218
+ASF local 11 epochs,heavysnow,1720,sed,3d,0.5,51.244022928102616
+ASF local 11 epochs,heavysnow,1720,sed,3d,0.3,63.35743396831619
+ASF local 11 epochs,heavysnow,1720,sed,bev,0.7,39.948161051466954
+ASF local 11 epochs,heavysnow,1720,sed,bev,0.5,61.098747959649224
+ASF local 11 epochs,heavysnow,1720,sed,bev,0.3,65.62889482551483
+ASF local 11 epochs,heavysnow,1720,bus,3d,0.7,7.6877267451609095
+ASF local 11 epochs,heavysnow,1720,bus,3d,0.5,32.27635498220153
+ASF local 11 epochs,heavysnow,1720,bus,3d,0.3,68.01947920696855
+ASF local 11 epochs,heavysnow,1720,bus,bev,0.7,27.32313037180729
+ASF local 11 epochs,heavysnow,1720,bus,bev,0.5,75.00049058059403
+ASF local 11 epochs,heavysnow,1720,bus,bev,0.3,87.2632736477606
+ASF local 11 epochs,rain,1424,sed,3d,0.7,15.942207950344839
+ASF local 11 epochs,rain,1424,sed,3d,0.5,45.95502883635388
+ASF local 11 epochs,rain,1424,sed,3d,0.3,65.8005703192078
+ASF local 11 epochs,rain,1424,sed,bev,0.7,42.317882238243534
+ASF local 11 epochs,rain,1424,sed,bev,0.5,61.573334333854525
+ASF local 11 epochs,rain,1424,sed,bev,0.3,68.79955911248373
+ASF local 11 epochs,rain,1424,bus,3d,0.7,0.031269543464665414
+ASF local 11 epochs,rain,1424,bus,3d,0.5,1.941019686535754
+ASF local 11 epochs,rain,1424,bus,3d,0.3,3.588462545198038
+ASF local 11 epochs,rain,1424,bus,bev,0.7,0.9480416365257365
+ASF local 11 epochs,rain,1424,bus,bev,0.5,3.588462545198038
+ASF local 11 epochs,rain,1424,bus,bev,0.3,3.588462545198038
+ASF local 11 epochs,sleet,2206,sed,3d,0.7,6.588485008792176
+ASF local 11 epochs,sleet,2206,sed,3d,0.5,44.83153308654974
+ASF local 11 epochs,sleet,2206,sed,3d,0.3,70.81368225255618
+ASF local 11 epochs,sleet,2206,sed,bev,0.7,39.37114092824035
+ASF local 11 epochs,sleet,2206,sed,bev,0.5,64.47539151771483
+ASF local 11 epochs,sleet,2206,sed,bev,0.3,76.30969218883122
+ASF local 11 epochs,sleet,2206,bus,3d,0.7,6.293690283586188
+ASF local 11 epochs,sleet,2206,bus,3d,0.5,30.287374047732424
+ASF local 11 epochs,sleet,2206,bus,3d,0.3,50.784690759432614
+ASF local 11 epochs,sleet,2206,bus,bev,0.7,14.813892344690856
+ASF local 11 epochs,sleet,2206,bus,bev,0.5,41.51519195008816
+ASF local 11 epochs,sleet,2206,bus,bev,0.3,54.52130766405651
+ASF local 11 epochs,overcast,414,sed,3d,0.7,6.956697247520031
+ASF local 11 epochs,overcast,414,sed,3d,0.5,57.16106301492404
+ASF local 11 epochs,overcast,414,sed,3d,0.3,82.1483720659337
+ASF local 11 epochs,overcast,414,sed,bev,0.7,45.22636158935172
+ASF local 11 epochs,overcast,414,sed,bev,0.5,81.2540678739485
+ASF local 11 epochs,overcast,414,sed,bev,0.3,89.08616305110986
+ASF local 11 epochs,overcast,414,bus,3d,0.7,8.01389841207649
+ASF local 11 epochs,overcast,414,bus,3d,0.5,46.68320778018338
+ASF local 11 epochs,overcast,414,bus,3d,0.3,65.31096258962509
+ASF local 11 epochs,overcast,414,bus,bev,0.7,18.148728117385467
+ASF local 11 epochs,overcast,414,bus,bev,0.5,54.10993867829092
+ASF local 11 epochs,overcast,414,bus,bev,0.3,69.13183672643086
+ASF local 11 epochs,fog,1445,sed,3d,0.7,39.419604300186684
+ASF local 11 epochs,fog,1445,sed,3d,0.5,79.8858922870524
+ASF local 11 epochs,fog,1445,sed,3d,0.3,92.0877228434696
+ASF local 11 epochs,fog,1445,sed,bev,0.7,78.26395764080128
+ASF local 11 epochs,fog,1445,sed,bev,0.5,94.68919825113366
+ASF local 11 epochs,fog,1445,sed,bev,0.3,94.83753967819452
+ASF local 11 epochs,fog,1445,bus,3d,0.7,0.0
+ASF local 11 epochs,fog,1445,bus,3d,0.5,0.0
+ASF local 11 epochs,fog,1445,bus,3d,0.3,0.0
+ASF local 11 epochs,fog,1445,bus,bev,0.7,0.0
+ASF local 11 epochs,fog,1445,bus,bev,0.5,0.0
+ASF local 11 epochs,fog,1445,bus,bev,0.3,0.0
+ASF local 11 epochs,day,9196,sed,3d,0.7,11.683249449190162
+ASF local 11 epochs,day,9196,sed,3d,0.5,54.156333431763095
+ASF local 11 epochs,day,9196,sed,3d,0.3,76.68171495258453
+ASF local 11 epochs,day,9196,sed,bev,0.7,44.038728220365925
+ASF local 11 epochs,day,9196,sed,bev,0.5,73.6229633856763
+ASF local 11 epochs,day,9196,sed,bev,0.3,79.35671389389049
+ASF local 11 epochs,day,9196,bus,3d,0.7,5.893109498984347
+ASF local 11 epochs,day,9196,bus,3d,0.5,24.604520907511894
+ASF local 11 epochs,day,9196,bus,3d,0.3,53.03166568140073
+ASF local 11 epochs,day,9196,bus,bev,0.7,13.659844767462587
+ASF local 11 epochs,day,9196,bus,bev,0.5,40.94117900908485
+ASF local 11 epochs,day,9196,bus,bev,0.3,56.91523497710723
+ASF local 11 epochs,night,4531,sed,3d,0.7,10.22372164072132
+ASF local 11 epochs,night,4531,sed,3d,0.5,46.13820932721902
+ASF local 11 epochs,night,4531,sed,3d,0.3,69.99736529648956
+ASF local 11 epochs,night,4531,sed,bev,0.7,39.61404633304071
+ASF local 11 epochs,night,4531,sed,bev,0.5,64.07458915365082
+ASF local 11 epochs,night,4531,sed,bev,0.3,73.45215062824795
+ASF local 11 epochs,night,4531,bus,3d,0.7,10.135766555929466
+ASF local 11 epochs,night,4531,bus,3d,0.5,32.12352034011734
+ASF local 11 epochs,night,4531,bus,3d,0.3,57.510570573812636
+ASF local 11 epochs,night,4531,bus,bev,0.7,22.114299216932285
+ASF local 11 epochs,night,4531,bus,bev,0.5,56.25698641757757
+ASF local 11 epochs,night,4531,bus,bev,0.3,74.7162932138389
+ASF local 11 epochs,urban,4764,sed,3d,0.7,14.082322548249405
+ASF local 11 epochs,urban,4764,sed,3d,0.5,54.734124094475746
+ASF local 11 epochs,urban,4764,sed,3d,0.3,77.49162474567606
+ASF local 11 epochs,urban,4764,sed,bev,0.7,47.899502070110515
+ASF local 11 epochs,urban,4764,sed,bev,0.5,73.86459168297692
+ASF local 11 epochs,urban,4764,sed,bev,0.3,80.62121802102948
+ASF local 11 epochs,urban,4764,bus,3d,0.7,16.961427195749202
+ASF local 11 epochs,urban,4764,bus,3d,0.5,44.44745584705285
+ASF local 11 epochs,urban,4764,bus,3d,0.3,87.37512776250581
+ASF local 11 epochs,urban,4764,bus,bev,0.7,42.13975962850432
+ASF local 11 epochs,urban,4764,bus,bev,0.5,83.39543660308485
+ASF local 11 epochs,urban,4764,bus,bev,0.3,88.32550384702215
+ASF local 11 epochs,highway,4308,sed,3d,0.7,5.239894193047869
+ASF local 11 epochs,highway,4308,sed,3d,0.5,56.0233096248977
+ASF local 11 epochs,highway,4308,sed,3d,0.3,83.2245241802804
+ASF local 11 epochs,highway,4308,sed,bev,0.7,41.53378393688206
+ASF local 11 epochs,highway,4308,sed,bev,0.5,79.71028730945888
+ASF local 11 epochs,highway,4308,sed,bev,0.3,85.97118907446226
+ASF local 11 epochs,highway,4308,bus,3d,0.7,6.88979231289055
+ASF local 11 epochs,highway,4308,bus,3d,0.5,26.473632520138334
+ASF local 11 epochs,highway,4308,bus,3d,0.3,52.093761724423125
+ASF local 11 epochs,highway,4308,bus,bev,0.7,15.618913971382392
+ASF local 11 epochs,highway,4308,bus,bev,0.5,45.8853837837409
+ASF local 11 epochs,highway,4308,bus,bev,0.3,64.78477420515686
+ASF local 11 epochs,countryside,441,sed,3d,0.7,9.699165434528869
+ASF local 11 epochs,countryside,441,sed,3d,0.5,37.997980819941986
+ASF local 11 epochs,countryside,441,sed,3d,0.3,64.27475193039355
+ASF local 11 epochs,countryside,441,sed,bev,0.7,24.534564935207904
+ASF local 11 epochs,countryside,441,sed,bev,0.5,57.98658455308355
+ASF local 11 epochs,countryside,441,sed,bev,0.3,66.9959380629474
+ASF local 11 epochs,countryside,441,bus,3d,0.7,2.011566507417651
+ASF local 11 epochs,countryside,441,bus,3d,0.5,20.361657449407712
+ASF local 11 epochs,countryside,441,bus,3d,0.3,32.50861943292939
+ASF local 11 epochs,countryside,441,bus,bev,0.7,13.255992797820927
+ASF local 11 epochs,countryside,441,bus,bev,0.5,23.576870120682376
+ASF local 11 epochs,countryside,441,bus,bev,0.3,33.01707283339061
+ASF local 11 epochs,alleyway,805,sed,3d,0.7,1.808018135380053
+ASF local 11 epochs,alleyway,805,sed,3d,0.5,19.22413538419607
+ASF local 11 epochs,alleyway,805,sed,3d,0.3,38.1990779740102
+ASF local 11 epochs,alleyway,805,sed,bev,0.7,16.265594976022683
+ASF local 11 epochs,alleyway,805,sed,bev,0.5,35.27587655918054
+ASF local 11 epochs,alleyway,805,sed,bev,0.3,41.343735902534625
+ASF local 11 epochs,alleyway,805,bus,3d,0.7,0.023679848448969924
+ASF local 11 epochs,alleyway,805,bus,3d,0.5,3.10207980909744
+ASF local 11 epochs,alleyway,805,bus,3d,0.3,18.363956274120792
+ASF local 11 epochs,alleyway,805,bus,bev,0.7,0.6728343145500421
+ASF local 11 epochs,alleyway,805,bus,bev,0.5,6.908397422761549
+ASF local 11 epochs,alleyway,805,bus,bev,0.3,19.757097647850603
+ASF local 11 epochs,parkinglots,575,sed,3d,0.7,22.728419545505176
+ASF local 11 epochs,parkinglots,575,sed,3d,0.5,48.57289942069273
+ASF local 11 epochs,parkinglots,575,sed,3d,0.3,70.71748883982923
+ASF local 11 epochs,parkinglots,575,sed,bev,0.7,34.78249372511799
+ASF local 11 epochs,parkinglots,575,sed,bev,0.5,60.370435274530344
+ASF local 11 epochs,parkinglots,575,sed,bev,0.3,71.31646138925004
+ASF local 11 epochs,parkinglots,575,bus,3d,0.7,3.5381312449627873
+ASF local 11 epochs,parkinglots,575,bus,3d,0.5,26.486392891548416
+ASF local 11 epochs,parkinglots,575,bus,3d,0.3,63.315859104525764
+ASF local 11 epochs,parkinglots,575,bus,bev,0.7,7.193893329689599
+ASF local 11 epochs,parkinglots,575,bus,bev,0.5,47.09925638145299
+ASF local 11 epochs,parkinglots,575,bus,bev,0.3,66.62418303589587
+ASF local 11 epochs,shoulder,595,sed,3d,0.7,71.95045897512752
+ASF local 11 epochs,shoulder,595,sed,3d,0.5,94.59314777997628
+ASF local 11 epochs,shoulder,595,sed,3d,0.3,97.30201037802394
+ASF local 11 epochs,shoulder,595,sed,bev,0.7,87.4812745139135
+ASF local 11 epochs,shoulder,595,sed,bev,0.5,99.82566019618734
+ASF local 11 epochs,shoulder,595,sed,bev,0.3,99.88009006765303
+ASF local 11 epochs,shoulder,595,bus,3d,0.7,0.0
+ASF local 11 epochs,shoulder,595,bus,3d,0.5,0.0
+ASF local 11 epochs,shoulder,595,bus,3d,0.3,0.0
+ASF local 11 epochs,shoulder,595,bus,bev,0.7,0.0
+ASF local 11 epochs,shoulder,595,bus,bev,0.5,0.0
+ASF local 11 epochs,shoulder,595,bus,bev,0.3,0.0
+ASF local 11 epochs,mountain,1448,sed,3d,0.7,8.621638503897344
+ASF local 11 epochs,mountain,1448,sed,3d,0.5,63.28234250539742
+ASF local 11 epochs,mountain,1448,sed,3d,0.3,89.24786112714821
+ASF local 11 epochs,mountain,1448,sed,bev,0.7,67.11239014723725
+ASF local 11 epochs,mountain,1448,sed,bev,0.5,91.7227997199281
+ASF local 11 epochs,mountain,1448,sed,bev,0.3,92.13533383367546
+ASF local 11 epochs,mountain,1448,bus,3d,0.7,13.429728848406786
+ASF local 11 epochs,mountain,1448,bus,3d,0.5,47.65124446772682
+ASF local 11 epochs,mountain,1448,bus,3d,0.3,50.790486243689294
+ASF local 11 epochs,mountain,1448,bus,bev,0.7,31.331530507974865
+ASF local 11 epochs,mountain,1448,bus,bev,0.5,50.61392872476051
+ASF local 11 epochs,mountain,1448,bus,bev,0.3,50.87350398120121
+ASF local 11 epochs,university,791,sed,3d,0.7,3.479724880995625
+ASF local 11 epochs,university,791,sed,3d,0.5,43.62345955829633
+ASF local 11 epochs,university,791,sed,3d,0.3,69.69785957918569
+ASF local 11 epochs,university,791,sed,bev,0.7,30.235893842865035
+ASF local 11 epochs,university,791,sed,bev,0.5,66.13734842942696
+ASF local 11 epochs,university,791,sed,bev,0.3,72.30177187820402
+ASF local 11 epochs,university,791,bus,3d,0.7,0.0
+ASF local 11 epochs,university,791,bus,3d,0.5,0.0
+ASF local 11 epochs,university,791,bus,3d,0.3,0.0
+ASF local 11 epochs,university,791,bus,bev,0.7,0.0
+ASF local 11 epochs,university,791,bus,bev,0.5,0.0
+ASF local 11 epochs,university,791,bus,bev,0.3,0.0
+L4DR local 11 epochs,all,13727,sed,3d,0.7,14.083791026916881
+L4DR local 11 epochs,all,13727,sed,3d,0.5,54.28201785796007
+L4DR local 11 epochs,all,13727,sed,3d,0.3,74.4926299849588
+L4DR local 11 epochs,all,13727,sed,bev,0.7,48.20491777751108
+L4DR local 11 epochs,all,13727,sed,bev,0.5,71.59321040467985
+L4DR local 11 epochs,all,13727,sed,bev,0.3,75.13326712463147
+L4DR local 11 epochs,all,13727,bus,3d,0.7,5.562772229084613
+L4DR local 11 epochs,all,13727,bus,3d,0.5,33.39276759664026
+L4DR local 11 epochs,all,13727,bus,3d,0.3,56.57709027556811
+L4DR local 11 epochs,all,13727,bus,bev,0.7,22.49574303214039
+L4DR local 11 epochs,all,13727,bus,bev,0.5,49.860226011649125
+L4DR local 11 epochs,all,13727,bus,bev,0.3,61.45708699672701
+L4DR local 11 epochs,normal,5415,sed,3d,0.7,8.874587830378154
+L4DR local 11 epochs,normal,5415,sed,3d,0.5,52.3266849490095
+L4DR local 11 epochs,normal,5415,sed,3d,0.3,73.12315995788099
+L4DR local 11 epochs,normal,5415,sed,bev,0.7,42.7314813235624
+L4DR local 11 epochs,normal,5415,sed,bev,0.5,69.96275088104876
+L4DR local 11 epochs,normal,5415,sed,bev,0.3,75.8362702694867
+L4DR local 11 epochs,normal,5415,bus,3d,0.7,6.104714646992467
+L4DR local 11 epochs,normal,5415,bus,3d,0.5,32.17903454533253
+L4DR local 11 epochs,normal,5415,bus,3d,0.3,54.59646059127973
+L4DR local 11 epochs,normal,5415,bus,bev,0.7,18.077941643106723
+L4DR local 11 epochs,normal,5415,bus,bev,0.5,44.80816875781525
+L4DR local 11 epochs,normal,5415,bus,bev,0.3,57.94219723371421
+L4DR local 11 epochs,lightsnow,1103,sed,3d,0.7,15.415763665526718
+L4DR local 11 epochs,lightsnow,1103,sed,3d,0.5,59.27579199388789
+L4DR local 11 epochs,lightsnow,1103,sed,3d,0.3,82.73938534475536
+L4DR local 11 epochs,lightsnow,1103,sed,bev,0.7,67.68102746473178
+L4DR local 11 epochs,lightsnow,1103,sed,bev,0.5,82.62442192729492
+L4DR local 11 epochs,lightsnow,1103,sed,bev,0.3,85.0964196722095
+L4DR local 11 epochs,lightsnow,1103,bus,3d,0.7,28.04082078858911
+L4DR local 11 epochs,lightsnow,1103,bus,3d,0.5,68.99576694644297
+L4DR local 11 epochs,lightsnow,1103,bus,3d,0.3,89.15913842222015
+L4DR local 11 epochs,lightsnow,1103,bus,bev,0.7,64.61417881830343
+L4DR local 11 epochs,lightsnow,1103,bus,bev,0.5,87.76838295297625
+L4DR local 11 epochs,lightsnow,1103,bus,bev,0.3,95.70135896788796
+L4DR local 11 epochs,heavysnow,1720,sed,3d,0.7,17.28571733726018
+L4DR local 11 epochs,heavysnow,1720,sed,3d,0.5,38.72302069347808
+L4DR local 11 epochs,heavysnow,1720,sed,3d,0.3,51.99042949053023
+L4DR local 11 epochs,heavysnow,1720,sed,bev,0.7,38.085639780898624
+L4DR local 11 epochs,heavysnow,1720,sed,bev,0.5,52.003138302104304
+L4DR local 11 epochs,heavysnow,1720,sed,bev,0.3,52.35296904316539
+L4DR local 11 epochs,heavysnow,1720,bus,3d,0.7,1.8864612347709833
+L4DR local 11 epochs,heavysnow,1720,bus,3d,0.5,17.000840583682763
+L4DR local 11 epochs,heavysnow,1720,bus,3d,0.3,54.27280033156452
+L4DR local 11 epochs,heavysnow,1720,bus,bev,0.7,25.072203422001433
+L4DR local 11 epochs,heavysnow,1720,bus,bev,0.5,52.30297493968371
+L4DR local 11 epochs,heavysnow,1720,bus,bev,0.3,65.18123997663696
+L4DR local 11 epochs,rain,1424,sed,3d,0.7,14.377185917800517
+L4DR local 11 epochs,rain,1424,sed,3d,0.5,54.94700982952785
+L4DR local 11 epochs,rain,1424,sed,3d,0.3,76.2725217825918
+L4DR local 11 epochs,rain,1424,sed,bev,0.7,53.565065218535935
+L4DR local 11 epochs,rain,1424,sed,bev,0.5,75.2722769677742
+L4DR local 11 epochs,rain,1424,sed,bev,0.3,79.26236810818811
+L4DR local 11 epochs,rain,1424,bus,3d,0.7,1.0547132498352012
+L4DR local 11 epochs,rain,1424,bus,3d,0.5,6.595830435005437
+L4DR local 11 epochs,rain,1424,bus,3d,0.3,7.811864609171068
+L4DR local 11 epochs,rain,1424,bus,bev,0.7,5.303529693773596
+L4DR local 11 epochs,rain,1424,bus,bev,0.5,7.240821024209645
+L4DR local 11 epochs,rain,1424,bus,bev,0.3,7.811864609171068
+L4DR local 11 epochs,sleet,2206,sed,3d,0.7,15.073435015929576
+L4DR local 11 epochs,sleet,2206,sed,3d,0.5,41.21649070082017
+L4DR local 11 epochs,sleet,2206,sed,3d,0.3,54.548834754770034
+L4DR local 11 epochs,sleet,2206,sed,bev,0.7,39.17986269856119
+L4DR local 11 epochs,sleet,2206,sed,bev,0.5,49.80125366036895
+L4DR local 11 epochs,sleet,2206,sed,bev,0.3,57.275950157910984
+L4DR local 11 epochs,sleet,2206,bus,3d,0.7,5.773106047232323
+L4DR local 11 epochs,sleet,2206,bus,3d,0.5,43.049630593197676
+L4DR local 11 epochs,sleet,2206,bus,3d,0.3,59.89490993898092
+L4DR local 11 epochs,sleet,2206,bus,bev,0.7,18.424051733984246
+L4DR local 11 epochs,sleet,2206,bus,bev,0.5,51.76346644203698
+L4DR local 11 epochs,sleet,2206,bus,bev,0.3,60.43302398023369
+L4DR local 11 epochs,overcast,414,sed,3d,0.7,4.617385161737026
+L4DR local 11 epochs,overcast,414,sed,3d,0.5,49.236472250222455
+L4DR local 11 epochs,overcast,414,sed,3d,0.3,80.0632799170914
+L4DR local 11 epochs,overcast,414,sed,bev,0.7,41.183642588885114
+L4DR local 11 epochs,overcast,414,sed,bev,0.5,80.55801330058159
+L4DR local 11 epochs,overcast,414,sed,bev,0.3,86.50954292151835
+L4DR local 11 epochs,overcast,414,bus,3d,0.7,8.058931832317505
+L4DR local 11 epochs,overcast,414,bus,3d,0.5,55.89381079400775
+L4DR local 11 epochs,overcast,414,bus,3d,0.3,82.07274780826143
+L4DR local 11 epochs,overcast,414,bus,bev,0.7,36.281601760788405
+L4DR local 11 epochs,overcast,414,bus,bev,0.5,73.9380446242843
+L4DR local 11 epochs,overcast,414,bus,bev,0.3,84.61165001874691
+L4DR local 11 epochs,fog,1445,sed,3d,0.7,49.833384905490284
+L4DR local 11 epochs,fog,1445,sed,3d,0.5,83.44257236642947
+L4DR local 11 epochs,fog,1445,sed,3d,0.3,92.32634323970717
+L4DR local 11 epochs,fog,1445,sed,bev,0.7,82.55275220382406
+L4DR local 11 epochs,fog,1445,sed,bev,0.5,92.44281728758358
+L4DR local 11 epochs,fog,1445,sed,bev,0.3,92.52211032075056
+L4DR local 11 epochs,fog,1445,bus,3d,0.7,0.0
+L4DR local 11 epochs,fog,1445,bus,3d,0.5,0.0
+L4DR local 11 epochs,fog,1445,bus,3d,0.3,0.0
+L4DR local 11 epochs,fog,1445,bus,bev,0.7,0.0
+L4DR local 11 epochs,fog,1445,bus,bev,0.5,0.0
+L4DR local 11 epochs,fog,1445,bus,bev,0.3,0.0
+L4DR local 11 epochs,day,9196,sed,3d,0.7,14.59648406086918
+L4DR local 11 epochs,day,9196,sed,3d,0.5,55.008187486584184
+L4DR local 11 epochs,day,9196,sed,3d,0.3,73.90206216982824
+L4DR local 11 epochs,day,9196,sed,bev,0.7,48.050828421599526
+L4DR local 11 epochs,day,9196,sed,bev,0.5,71.21552155129812
+L4DR local 11 epochs,day,9196,sed,bev,0.3,74.371358275246
+L4DR local 11 epochs,day,9196,bus,3d,0.7,3.767286989140608
+L4DR local 11 epochs,day,9196,bus,3d,0.5,28.830189865864703
+L4DR local 11 epochs,day,9196,bus,3d,0.3,51.37393714839187
+L4DR local 11 epochs,day,9196,bus,bev,0.7,16.505176522419422
+L4DR local 11 epochs,day,9196,bus,bev,0.5,44.132273930334335
+L4DR local 11 epochs,day,9196,bus,bev,0.3,54.56664972856908
+L4DR local 11 epochs,night,4531,sed,3d,0.7,12.921517038964
+L4DR local 11 epochs,night,4531,sed,3d,0.5,51.103219291560976
+L4DR local 11 epochs,night,4531,sed,3d,0.3,73.54740076958667
+L4DR local 11 epochs,night,4531,sed,bev,0.7,48.55707061357159
+L4DR local 11 epochs,night,4531,sed,bev,0.5,72.36208640343168
+L4DR local 11 epochs,night,4531,sed,bev,0.3,76.65083716163494
+L4DR local 11 epochs,night,4531,bus,3d,0.7,9.105375111716404
+L4DR local 11 epochs,night,4531,bus,3d,0.5,40.896147445022244
+L4DR local 11 epochs,night,4531,bus,3d,0.3,66.42497647228977
+L4DR local 11 epochs,night,4531,bus,bev,0.7,34.144530668595245
+L4DR local 11 epochs,night,4531,bus,bev,0.5,60.607124429483285
+L4DR local 11 epochs,night,4531,bus,bev,0.3,75.80662124710533
+L4DR local 11 epochs,urban,4764,sed,3d,0.7,13.575711335876875
+L4DR local 11 epochs,urban,4764,sed,3d,0.5,54.944593000040655
+L4DR local 11 epochs,urban,4764,sed,3d,0.3,73.37291723956844
+L4DR local 11 epochs,urban,4764,sed,bev,0.7,51.21900562757716
+L4DR local 11 epochs,urban,4764,sed,bev,0.5,72.41973411427102
+L4DR local 11 epochs,urban,4764,sed,bev,0.3,76.35341201493203
+L4DR local 11 epochs,urban,4764,bus,3d,0.7,2.391949394738722
+L4DR local 11 epochs,urban,4764,bus,3d,0.5,17.915561236107077
+L4DR local 11 epochs,urban,4764,bus,3d,0.3,53.13020136960941
+L4DR local 11 epochs,urban,4764,bus,bev,0.7,25.89745020004327
+L4DR local 11 epochs,urban,4764,bus,bev,0.5,52.816232879799244
+L4DR local 11 epochs,urban,4764,bus,bev,0.3,53.75078022342178
+L4DR local 11 epochs,highway,4308,sed,3d,0.7,8.737698535080469
+L4DR local 11 epochs,highway,4308,sed,3d,0.5,55.199594845878096
+L4DR local 11 epochs,highway,4308,sed,3d,0.3,79.19167693327492
+L4DR local 11 epochs,highway,4308,sed,bev,0.7,46.21852179975108
+L4DR local 11 epochs,highway,4308,sed,bev,0.5,78.26596654647172
+L4DR local 11 epochs,highway,4308,sed,bev,0.3,81.90972562155882
+L4DR local 11 epochs,highway,4308,bus,3d,0.7,6.9939607164802045
+L4DR local 11 epochs,highway,4308,bus,3d,0.5,34.87562103389155
+L4DR local 11 epochs,highway,4308,bus,3d,0.3,61.38047184648086
+L4DR local 11 epochs,highway,4308,bus,bev,0.7,24.41113229140233
+L4DR local 11 epochs,highway,4308,bus,bev,0.5,54.40056670584742
+L4DR local 11 epochs,highway,4308,bus,bev,0.3,66.94816736028653
+L4DR local 11 epochs,countryside,441,sed,3d,0.7,8.260200702723973
+L4DR local 11 epochs,countryside,441,sed,3d,0.5,31.737569404067788
+L4DR local 11 epochs,countryside,441,sed,3d,0.3,63.50714954121784
+L4DR local 11 epochs,countryside,441,sed,bev,0.7,26.23905831272338
+L4DR local 11 epochs,countryside,441,sed,bev,0.5,59.24396340246236
+L4DR local 11 epochs,countryside,441,sed,bev,0.3,69.51423365905698
+L4DR local 11 epochs,countryside,441,bus,3d,0.7,0.17115960633290542
+L4DR local 11 epochs,countryside,441,bus,3d,0.5,5.130361648444072
+L4DR local 11 epochs,countryside,441,bus,3d,0.3,15.008410428931873
+L4DR local 11 epochs,countryside,441,bus,bev,0.7,2.22507488232777
+L4DR local 11 epochs,countryside,441,bus,bev,0.5,9.918994289761407
+L4DR local 11 epochs,countryside,441,bus,bev,0.3,17.25820016820858
+L4DR local 11 epochs,alleyway,805,sed,3d,0.7,9.11346083651206
+L4DR local 11 epochs,alleyway,805,sed,3d,0.5,38.67960428362571
+L4DR local 11 epochs,alleyway,805,sed,3d,0.3,60.253071714042264
+L4DR local 11 epochs,alleyway,805,sed,bev,0.7,35.022778143480906
+L4DR local 11 epochs,alleyway,805,sed,bev,0.5,57.65137928108486
+L4DR local 11 epochs,alleyway,805,sed,bev,0.3,60.89032502887104
+L4DR local 11 epochs,alleyway,805,bus,3d,0.7,1.1657101865136297
+L4DR local 11 epochs,alleyway,805,bus,3d,0.5,9.631228807704586
+L4DR local 11 epochs,alleyway,805,bus,3d,0.3,18.340154150194802
+L4DR local 11 epochs,alleyway,805,bus,bev,0.7,5.968436154949785
+L4DR local 11 epochs,alleyway,805,bus,bev,0.5,14.542611434115063
+L4DR local 11 epochs,alleyway,805,bus,bev,0.3,19.99685162480126
+L4DR local 11 epochs,parkinglots,575,sed,3d,0.7,29.748762155827723
+L4DR local 11 epochs,parkinglots,575,sed,3d,0.5,46.2986912336508
+L4DR local 11 epochs,parkinglots,575,sed,3d,0.3,59.88226869434968
+L4DR local 11 epochs,parkinglots,575,sed,bev,0.7,37.36283643689253
+L4DR local 11 epochs,parkinglots,575,sed,bev,0.5,51.46869590662414
+L4DR local 11 epochs,parkinglots,575,sed,bev,0.3,59.88226869434968
+L4DR local 11 epochs,parkinglots,575,bus,3d,0.7,1.7799424303489342
+L4DR local 11 epochs,parkinglots,575,bus,3d,0.5,39.684275835438896
+L4DR local 11 epochs,parkinglots,575,bus,3d,0.3,53.78764567098222
+L4DR local 11 epochs,parkinglots,575,bus,bev,0.7,13.288026388431751
+L4DR local 11 epochs,parkinglots,575,bus,bev,0.5,46.85267240521762
+L4DR local 11 epochs,parkinglots,575,bus,bev,0.3,54.07378039343919
+L4DR local 11 epochs,shoulder,595,sed,3d,0.7,74.7177802709271
+L4DR local 11 epochs,shoulder,595,sed,3d,0.5,92.21923416683705
+L4DR local 11 epochs,shoulder,595,sed,3d,0.3,94.96771118792948
+L4DR local 11 epochs,shoulder,595,sed,bev,0.7,88.17036626108975
+L4DR local 11 epochs,shoulder,595,sed,bev,0.5,97.42956655852068
+L4DR local 11 epochs,shoulder,595,sed,bev,0.3,97.51637998775358
+L4DR local 11 epochs,shoulder,595,bus,3d,0.7,0.0
+L4DR local 11 epochs,shoulder,595,bus,3d,0.5,0.0
+L4DR local 11 epochs,shoulder,595,bus,3d,0.3,0.0
+L4DR local 11 epochs,shoulder,595,bus,bev,0.7,0.0
+L4DR local 11 epochs,shoulder,595,bus,bev,0.5,0.0
+L4DR local 11 epochs,shoulder,595,bus,bev,0.3,0.0
+L4DR local 11 epochs,mountain,1448,sed,3d,0.7,22.247782502140684
+L4DR local 11 epochs,mountain,1448,sed,3d,0.5,73.02254597936822
+L4DR local 11 epochs,mountain,1448,sed,3d,0.3,89.28781765399768
+L4DR local 11 epochs,mountain,1448,sed,bev,0.7,76.53030544287601
+L4DR local 11 epochs,mountain,1448,sed,bev,0.5,89.4897975915223
+L4DR local 11 epochs,mountain,1448,sed,bev,0.3,89.56710674243814
+L4DR local 11 epochs,mountain,1448,bus,3d,0.7,12.927004057489237
+L4DR local 11 epochs,mountain,1448,bus,3d,0.5,59.68341683296412
+L4DR local 11 epochs,mountain,1448,bus,3d,0.3,72.73876920960983
+L4DR local 11 epochs,mountain,1448,bus,bev,0.7,30.410033823015496
+L4DR local 11 epochs,mountain,1448,bus,bev,0.5,68.35944412795823
+L4DR local 11 epochs,mountain,1448,bus,bev,0.3,72.73876920960983
+L4DR local 11 epochs,university,791,sed,3d,0.7,7.027117376047583
+L4DR local 11 epochs,university,791,sed,3d,0.5,47.77432846427903
+L4DR local 11 epochs,university,791,sed,3d,0.3,68.99106677100548
+L4DR local 11 epochs,university,791,sed,bev,0.7,40.01550400535423
+L4DR local 11 epochs,university,791,sed,bev,0.5,67.94861107237455
+L4DR local 11 epochs,university,791,sed,bev,0.3,71.49038188585124
+L4DR local 11 epochs,university,791,bus,3d,0.7,0.0
+L4DR local 11 epochs,university,791,bus,3d,0.5,0.0
+L4DR local 11 epochs,university,791,bus,3d,0.3,0.0
+L4DR local 11 epochs,university,791,bus,bev,0.7,0.0
+L4DR local 11 epochs,university,791,bus,bev,0.5,0.0
+L4DR local 11 epochs,university,791,bus,bev,0.3,0.0

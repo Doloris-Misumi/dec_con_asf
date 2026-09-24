@@ -1,0 +1,37 @@
+Use case: infographic-diagram.
+Create ONE new polished publication-quality motivation figure for the computer-vision paper "Decoupling to Fuse", method name ObjDec. Redesign the two reference drafts substantially, retaining their real-driving sensory imagery and left-to-right scientific story, NOT their exact layout, excessive text, clip-art icons, or TaskDec name.
+
+Reference image 1 (01_25_09): reference for the photographic driving and point-cloud aesthetic only. Its weather-centered argument is WRONG for this paper; replace rainy road with a normal clear-day urban road.
+Reference image 2 (01_33_00): rough reference for the representation-decoupling idea only. Replace its slide-deck graphics, toy-like icons, and colorful glossy blocks with sober, precise scientific figure design.
+
+CORE SCIENTIFIC MESSAGE:
+Spatially aligned camera, LiDAR and 4D radar observations still mix shared responses, modality-specific cues, and background responses. Cross-modal consistency alone does not tell us whether a response concerns an object: a road/background can also be consistently observed. Conversely, differences may carry useful sensing information. ObjDec learns shared and modality-specific representations in corresponding local BEV regions, with object-region training constraints, and uses their predicted object relevance to guide fusion. These representations affect fusion itself, not only an auxiliary training loss.
+
+CANVAS AND STYLE:
+Very wide landscape, approximately 2.25:1, high resolution. Pure white background, three carefully aligned panels (a), (b), (c) with subtle thin gray vertical rules. Panel widths approximately 27%, 32%, 41%. Serious ICLR/CVPR paper figure, elegant dark navy serif panel headings, simple highly legible sans-serif annotations. Fine consistent line weights, precise alignment, generous whitespace, thin arrowheads. Photographic image inserts and accurate-looking sparse point-cloud inserts; all other elements flat, restrained, vector-like raster illustration. No enormous overall title. No giant numbered circles, thick rounded cards, glossy 3D boxes, mascots, emoji, trophies, ticks/crosses, alarm symbols, gradients behind panels, or rainbow heatmap. Use camera blue, LiDAR teal green, radar muted purple consistently. Use warm ochre for shared-response symbols, gray for surrounding context. Typography readable at paper width. Keep text to the exact short labels below.
+
+PANEL (a): "Aligned observations"
+Three stacked rectangular sensory inserts showing the SAME clear-day driving scene and same lead car: natural camera street photograph; LiDAR point-cloud view with geometric car outline; sparse 4D-radar returns around the car and road, NOT a dense LiDAR clone or a rendered car pasted on a radar map. Labels "Camera", "LiDAR", "4D radar". Each image has two small corresponding region markers: a solid warm-orange outline on the lead vehicle and a dashed charcoal outline on a road-side background region. These are region pointers, not claimed detections. Beside each image a very small flat BEV grid highlights the two corresponding locations. At the bottom the single caption "Same scene, different cues". Use realistic road/car imagery but no weather icons, fog, rain, snow, velocity arrows, or camera intrinsics.
+
+PANEL (b): "The representation problem"
+This panel must make the reasoning visually clear, not be another method diagram. Two adjacent enlarged local-region examples: "Object region" and "Background region". Under each, three aligned thin rows of feature symbols colored/outlined by camera, LiDAR, and radar. The object-region rows each include a recurring ochre shared-response circle AND a distinct modality-colored detail symbol (blue triangle, teal square, purple diamond) among subtle gray context marks. The background-region rows ALSO contain recurring shared-response circles across the three modalities, showing that shared information can originate in background. Do not suggest that all shared features already encode objects. Use a tiny common legend with "Shared response" and "Modality-specific cue".
+Below the examples, two prominent concise statements on separate lines, exactly:
+"Shared ≠ object-relevant"
+"Different ≠ irrelevant"
+Keep the useful modality-specific symbols visible and distinct rather than crossed out. Avoid blanket claims that every existing attention method uses uniform weights, is task-agnostic, or necessarily fails. No named competitor, no baseline AP, no inaccurate-versus-perfect bounding-box comparison.
+
+PANEL (c): "ObjDec"
+A compact conceptual forward path, taking corresponding features from the left. Two learned representation groups at upper left of this panel:
+"Shared": three nearby ochre token circles, one blue outlined, one teal outlined, one purple outlined, linked with subtle alignment strokes, similar but not literally identical.
+"Modality-specific": three distinct blue/teal/purple tokens, separated with different internal patterns.
+Both groups have clear arrows into ONE integrated region labeled "Object-guided fusion". Within that region show three minimal small visual cues, not detailed equations or MLP blocks:
+1. a small BEV grid with smoothly varying orange/amber relevance at a few object locations, pale nonzero background retained, label "Foreground relevance";
+2. three restrained blue/teal/purple bars labeled "Modality contribution";
+3. a short row of small feature tokens labeled "Object context".
+These are feature-predicted controls that guide local fusion. They are not a preliminary object detector and they are not calibrated sensor reliability. Show a thin subtle input-feature bypass connecting to fusion so original context remains available; no background-removal branch.
+One outgoing arrow to a simple flat fused BEV representation, and then a minimal detection-head box labeled "3D detection". Label the BEV "Fused BEV". Do not draw purported measured detection results or numerical performance.
+Under the learned groups and relevance/context area, a minimal gray dashed bracket/arrow labeled "Object supervision (training only)" indicates training guidance; it must NOT feed any input image, the detector during inference, or a segmentation preprocessor. A second small note "Controls predicted from features" may appear within the integrated fusion area.
+At the bottom right, one discreet footer "Conceptual illustration".
+
+ACCURACY CONSTRAINTS:
+Method name ObjDec everywhere, never TaskDec. Exactly TWO representation branches: shared and modality-specific, not a learned third background branch. Background is retained, not removed or hard-masked. Ground truth only supplies training losses; feature-based gates remain at inference. Do not label contribution weights as reliability probabilities. Do not imply radar Doppler input in this K-Radar main configuration. This is a MOTIVATION figure with a concise idea sketch, not a complete architecture chart. No loss equations, no parameter sizes, no long bullet lists. No invented results or empirical heatmap colorbar. Correct English spelling, clean symbol ≠, arrow paths that end at appropriate boxes, no overlapping text. Produce a visually refined figure that looks manually typeset for a serious research paper, considerably less busy than both references.

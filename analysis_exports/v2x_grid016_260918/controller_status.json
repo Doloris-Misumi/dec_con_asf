@@ -1,0 +1,35 @@
+{
+  "pid": 4170533,
+  "started_at": "2026-09-18T08:20:04.090534+08:00",
+  "status": "complete",
+  "prerequisite": "/home/hongsheng/dec_con_asf/analysis_exports/taskdec_v2_availability_completion_260918/status.json",
+  "gpu3": {
+    "used_mib": 25,
+    "free_mib": 48545,
+    "utilization": 0
+  },
+  "v2_phase": "complete",
+  "updated_at": "2026-09-22T23:28:00.320281+08:00",
+  "queued": {},
+  "ended": {
+    "concat": {
+      "exit_code": 0,
+      "status": "complete",
+      "seconds": 121696.82791602053,
+      "finished_at": "2026-09-19T23:40:08.151766+08:00"
+    },
+    "taskdec": {
+      "exit_code": 0,
+      "status": "complete",
+      "seconds": 400046.0295722969,
+      "finished_at": "2026-09-22T23:28:00.320090+08:00"
+    }
+  },
+  "active": {},
+  "gpu2": {
+    "used_mib": 26,
+    "free_mib": 48545,
+    "utilization": 0
+  },
+  "finished_at": "2026-09-22T23:28:00.321061+08:00"
+}

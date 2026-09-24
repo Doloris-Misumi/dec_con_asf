@@ -1,0 +1,27 @@
+{
+  "observed_at": "2026-09-16T08:35:04.414713+08:00",
+  "milestone": "first_full_training_epoch_completed; full validation still running",
+  "runs": {
+    "taskdec": {
+      "pid": 3877508,
+      "status": "validating",
+      "completed_epochs": 1,
+      "train_seconds": 1004.8446246795356,
+      "steps_per_epoch": 4196,
+      "optimizer_updates": 1049,
+      "failure_count": 0
+    },
+    "concat": {
+      "pid": 3877510,
+      "status": "validating",
+      "completed_epochs": 1,
+      "train_seconds": 1004.3729656804353,
+      "steps_per_epoch": 4196,
+      "optimizer_updates": 1049,
+      "failure_count": 0
+    }
+  },
+  "previous_goal_turn_classification": "progress: full train-label geometric audit completed",
+  "current_classification": "progress and verified wait: first complete training-epoch timing measured; specific live training processes inspected",
+  "protocol_changed": false
+}

@@ -1,0 +1,272 @@
+{
+  "data_root": "/home/hongsheng/datasets/V2X-Radar-V/extracted_260916/V2X-Radar-V",
+  "split_root": "/home/hongsheng/datasets/V2X-Radar-V/extracted_260916/ImageSets",
+  "point_schema_manifest": "/home/hongsheng/dec_con_asf/analysis_exports/v2x_taskdec_260916/point_schema_manifest.json",
+  "modalities": [
+    "camera",
+    "lidar",
+    "radar"
+  ],
+  "class_names": [
+    "Vehicle",
+    "Pedestrian",
+    "Cyclist"
+  ],
+  "label_map": {
+    "Car": "Vehicle",
+    "Truck": "Vehicle",
+    "Bus": "Vehicle",
+    "Pedestrian": "Pedestrian",
+    "Cyclist": "Cyclist"
+  },
+  "point_cloud_range": [
+    0.0,
+    -51.2,
+    -5.0,
+    102.4,
+    51.2,
+    3.0
+  ],
+  "voxel_size": [
+    0.16,
+    0.16,
+    8.0
+  ],
+  "point_features": {
+    "lidar": 4,
+    "radar": 6
+  },
+  "max_voxels": 32000,
+  "max_points_per_voxel": 32,
+  "image_size": [
+    288,
+    512
+  ],
+  "depth_bound": [
+    1.0,
+    102.0,
+    1.0
+  ],
+  "image_pretrained": "/home/hongsheng/.cache/torch/hub/checkpoints/resnet50-11ad3fa6.pth",
+  "augmentation": {
+    "rotation": [
+      -0.392699,
+      0.392699
+    ],
+    "scale": [
+      0.95,
+      1.05
+    ],
+    "flip_probability": 0.5
+  },
+  "patch_dec_weight": 0.0,
+  "score_threshold": 0.001,
+  "nms_threshold": 0.1,
+  "max_detections": 500,
+  "seed": 260916,
+  "precision": "fp32",
+  "budget_status": "locked",
+  "head": {
+    "NAME": "AnchorHeadSingle",
+    "CLASS_AGNOSTIC": false,
+    "USE_DIRECTION_CLASSIFIER": true,
+    "DIR_OFFSET": 0.78539,
+    "DIR_LIMIT_OFFSET": 0.0,
+    "NUM_DIR_BINS": 2,
+    "ANCHOR_GENERATOR_CONFIG": [
+      {
+        "class_name": "Vehicle",
+        "anchor_sizes": [
+          [
+            4.268571853637695,
+            1.8146756887435913,
+            1.600000023841858
+          ]
+        ],
+        "anchor_rotations": [
+          0,
+          1.57
+        ],
+        "anchor_bottom_heights": [
+          -2.163006007671356
+        ],
+        "align_center": false,
+        "feature_map_stride": 2,
+        "matched_threshold": 0.6,
+        "unmatched_threshold": 0.45
+      },
+      {
+        "class_name": "Pedestrian",
+        "anchor_sizes": [
+          [
+            0.642685055732727,
+            0.6729589700698853,
+            1.7000000476837158
+          ]
+        ],
+        "anchor_rotations": [
+          0,
+          1.57
+        ],
+        "anchor_bottom_heights": [
+          -2.070372998714447
+        ],
+        "align_center": false,
+        "feature_map_stride": 2,
+        "matched_threshold": 0.5,
+        "unmatched_threshold": 0.35
+      },
+      {
+        "class_name": "Cyclist",
+        "anchor_sizes": [
+          [
+            1.6066410541534424,
+            0.7596567869186401,
+            1.600000023841858
+          ]
+        ],
+        "anchor_rotations": [
+          0,
+          1.57
+        ],
+        "anchor_bottom_heights": [
+          -2.2096642553806305
+        ],
+        "align_center": false,
+        "feature_map_stride": 2,
+        "matched_threshold": 0.5,
+        "unmatched_threshold": 0.35
+      }
+    ],
+    "TARGET_ASSIGNER_CONFIG": {
+      "NAME": "AxisAlignedTargetAssigner",
+      "POS_FRACTION": -1.0,
+      "SAMPLE_SIZE": 512,
+      "NORM_BY_NUM_EXAMPLES": false,
+      "MATCH_HEIGHT": false,
+      "BOX_CODER": "ResidualCoder"
+    },
+    "LOSS_CONFIG": {
+      "LOSS_WEIGHTS": {
+        "cls_weight": 1.0,
+        "loc_weight": 2.0,
+        "dir_weight": 0.2,
+        "code_weights": [
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0,
+          1.0
+        ]
+      }
+    }
+  },
+  "anchor_statistics": {
+    "Vehicle": {
+      "count": 31283,
+      "median_dimensions": [
+        4.268571853637695,
+        1.8146756887435913,
+        1.600000023841858
+      ],
+      "median_bottom": -2.163006007671356
+    },
+    "Pedestrian": {
+      "count": 18880,
+      "median_dimensions": [
+        0.642685055732727,
+        0.6729589700698853,
+        1.7000000476837158
+      ],
+      "median_bottom": -2.070372998714447
+    },
+    "Cyclist": {
+      "count": 19436,
+      "median_dimensions": [
+        1.6066410541534424,
+        0.7596567869186401,
+        1.600000023841858
+      ],
+      "median_bottom": -2.2096642553806305
+    }
+  },
+  "epochs": 80,
+  "batch_size": 2,
+  "accumulation": 4,
+  "effective_batch_size": 8,
+  "learning_rate": 0.001,
+  "min_learning_rate": 1e-05,
+  "warmup_epochs": 1,
+  "weight_decay": 0.01,
+  "gradient_clip": 10.0,
+  "optimizer": "AdamW",
+  "schedule": "linear warmup then cosine by optimizer update",
+  "val_epochs": [
+    1,
+    5,
+    10,
+    15,
+    20,
+    25,
+    30,
+    35,
+    40,
+    45,
+    50,
+    55,
+    60,
+    65,
+    70,
+    75,
+    80
+  ],
+  "workers": 4,
+  "selection": "maximum deduplicated val strict moderate mean 3D AP_R40; earliest epoch breaks ties",
+  "initialization": "ImageNet ResNet50; all other parameters fresh. Shared tensors copied exactly from one TaskDec initialization; no target-domain warm-start.",
+  "memory_fraction": 0.6,
+  "created_at": "2026-09-19T12:02:20.242615+08:00",
+  "resolved_fuser": {
+    "NAME": "A2Fusion",
+    "KEY_FEATS": [
+      "camera",
+      "lidar",
+      "radar"
+    ],
+    "DIM_FEATS": [
+      64,
+      64,
+      64
+    ],
+    "TO_EMBED": {
+      "METHOD": "Linear1",
+      "ACTIVATION": "Identity",
+      "N_LAYER": 1,
+      "LAYER_NORM": true,
+      "DIM_COMMON": 64
+    },
+    "UCP": {
+      "METHOD": "LinearN",
+      "ACTIVATION": "GELU",
+      "N_LAYER": 2,
+      "LAYER_NORM": true,
+      "N_QUERY": 4,
+      "PATCH_SIZE": [
+        2,
+        2
+      ],
+      "DIM_PATCH": 128
+    },
+    "N_HEADS_MHA": 8,
+    "PFT": {
+      "METHOD": "LinearN",
+      "ACTIVATION": "GELU",
+      "N_LAYER": 2,
+      "LAYER_NORM": true
+    },
+    "POST_CHANNEL": true
+  },
+  "variant": "patch",
+  "smoke_steps": 0
+}

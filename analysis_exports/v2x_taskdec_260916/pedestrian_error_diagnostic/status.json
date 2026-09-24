@@ -1,0 +1,10 @@
+{
+  "status": "complete",
+  "frames": 512,
+  "inference_seconds": 34.245523888617754,
+  "finished_at": "2026-09-16T23:41:23.966819+08:00",
+  "peak_allocated_gib": 0.7077012062072754,
+  "peak_reserved_gib": 1.98828125,
+  "gt_pedestrians": 1079,
+  "moderate_pedestrians": 1052
+}

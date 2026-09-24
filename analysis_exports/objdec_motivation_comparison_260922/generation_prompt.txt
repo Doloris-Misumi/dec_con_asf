@@ -1,0 +1,44 @@
+Create a publication-quality academic motivation figure for a multi-sensor 3D detection paper named ObjDec. This is a substantial redesign using the supplied reference images. Reference 1 (previous ObjDec figure) supplies the restrained serif typography, fine linework, believable normal-weather camera/LiDAR/radar imagery and feature symbols. Reference 2 (the author's WCBR slide) supplies ONLY the three-part argumentative composition: existing paradigm, why an explicit design is needed, proposed approach. Do NOT reproduce the slide's navy frame, weather emphasis, cartoons, emoji, title, or text.
+
+The new figure must visibly compare existing fusion's REPRESENTATION TREATMENT with ObjDec, not just describe ObjDec. No full competing network architectures. It is a conceptual motivation diagram, NOT experimental evidence.
+
+Canvas: very wide landscape approx 2.3:1, high-resolution, pure white background, fine slate outlines, dark navy Times-like academic serif typography. Three contiguous panels with delicate vertical separators and lightly tinted heading strips: left neutral gray, middle ivory, right muted pale blue. Approximate widths 34%, 25%, 41%. No giant overall title. Modality colors are blue camera, teal LiDAR, violet 4D radar; shared factors use amber. Crisp vector-like schematic objects, small realistic sensor thumbnails. No glossy gradients, drop shadows, clip-art aesthetic, app UI panels, rain, snow, umbrellas, giant arrows or decorative texture. Highly legible at printed paper width. Sparing labels, around 75 words total. Keep substantial whitespace.
+
+HEADINGS, exact:
+(a) Existing fusion
+(b) Why decouple?
+(c) ObjDec (ours)
+
+PANEL A:
+Three small vertically stacked aligned observation thumbnails of the SAME normal daylight road and same car: a clear camera image, a plausible LiDAR point cloud, a sparser radar point cloud. Labels Camera, LiDAR, 4D radar. No claims radar is always clearer; no velocity arrow.
+Next to each thumbnail show a narrow mixed-feature strip: interleaved amber circles, modality-colored triangle/square/diamond, and faint gray small squares. These are abstract mixed feature components, NOT object detections.
+The three mixed-feature strips converge by thin arrows into ONE simple neutral outlined block labeled 'Interaction / weighting'. This represents a family of adaptive fusion operations, not one particular architecture; don't name ASF or L4DR on it.
+The block outputs a compact fused feature strip still containing the interleaved shapes. Label 'Fused features'. Do not label it inaccurate or bad, do not add wrong detection boxes or fake heatmaps.
+At the bottom, a restrained gray takeaway strip with exact two-line text: 'Shared / specific roles' then 'remain implicit'.
+The visual must convey that adaptive fusion exists, but shared and modality-specific representation roles are not explicitly organized in this generic paradigm.
+
+PANEL B:
+Two concrete small illustrated examples stacked vertically, BOTH illustrating a representational ambiguity.
+Top: small crop of a stationary roadside wall/road surface with three corresponding tiny sensor feature glyphs. The glyphs share an amber response even though this is background. Label 'Background can agree'.
+Bottom: small car crop next to three distinct complementary cue glyphs: blue appearance patch, teal geometric outline, violet sparse returns. These all refer to the same car. Label 'Object cues can differ'.
+Use thin gray correspondence connectors, no complex network.
+Bottom centered short takeaway: 'Agreement alone is insufficient'.
+No assertion all difference is useful, no red crosses deleting background, no exact equality between sharedness and foregroundness.
+
+PANEL C:
+This panel is an integrated compact conceptual architecture of our method. It must visibly contrast mixed feature handling on the left with explicit representation organization and its actual use in fusion.
+Start with three short mixed input-feature strips colored by modality, labeled collectively 'Input features'.
+Thin arrows lead from these strips into a large light outlined region labeled 'Object-guided decoupling'.
+Inside it show TWO separate horizontal lanes:
+'Shared': three amber circles connected by light dashed correspondence links, indicating cross-modal alignment.
+'Modality-specific': blue triangle, teal square, violet diamond, preserving distinct cues.
+Both lanes flow into the SAME adjacent block labeled 'Object-guided fusion'. Inside this block show three small restrained schematic symbols arranged vertically: a tiny foreground relevance grid, three modality contribution bars, a small object context token. One short collective annotation 'Learned fusion control' is sufficient; do NOT label the contribution bars calibrated reliability.
+Also draw a thin bottom bypass from the ACTUAL 'Input features' strips to the fusion block, clearly originating BEFORE the two representation lanes. This bypass means original features remain part of the forward path. It must not originate from the modality-specific lane. Keep it unobtrusive and noncrossing.
+From the fusion block lead a short right arrow to a compact BEV plane with a car cuboid, label '3D detection'. It is a conceptual output, not a measured result or perfect prediction against GT.
+Below the decoupling and fusion region show a small training annotation 'Object supervision (training only)' and two light dashed leader lines terminating at a small loss/supervision marker UNDER the decoupling and control regions, distinct from all solid inference arrows. No ground-truth box or pre-detection input to the inference pathway; controls are learned from features. This training annotation must not look like a runtime input.
+At the bottom, a restrained blue takeaway strip with exact two-line text: 'Explicit representation roles' then 'guide fusion'.
+
+Scientific correctness: ObjDec is object-supervised shared/modality-specific representation learning WITH representation-driven feature updates and adaptive local fusion, not merely an auxiliary loss attached to fusion. Background is retained through the original feature path; there is no third background branch and no background deletion. Shared and modality-specific branches are learned at every local patch; training foreground labels only set supervision. Do not imply existing methods lack attention, foreground awareness, or adaptive weights. Do not repeat TaskDec, task-aware, robust-weather, or SOTA. Don't include equations or AP numbers. Do not render legends longer than necessary.
+
+Small unobtrusive footer at far bottom right: 'Conceptual illustration'.
+Prioritize a coherent left-to-right argument, readable compact labels, exact spelling, and clearly routed arrows. The final image should look like a carefully drawn CVPR/ICLR paper figure with realistic sensor insets and precise vector schematics, not a presentation slide.

@@ -1,0 +1,13 @@
+{
+  "pid": 634157,
+  "at": "2026-09-23T21:26:21.938245+08:00",
+  "gpu": 2,
+  "command": [
+    "/home/hongsheng/miniconda3/envs/rl_3dod/bin/python",
+    "-u",
+    "/home/hongsheng/dec_con_asf/analysis_exports/objdec_kradar_v1_interventions_260923/run.py"
+  ],
+  "log": "/home/hongsheng/dec_con_asf/analysis_exports/objdec_kradar_v1_interventions_260923/run.log",
+  "gpu_memory_before_mib": 26,
+  "detached": true
+}

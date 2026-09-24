@@ -1,0 +1,19 @@
+{
+  "frames": 11390,
+  "counts": {
+    "lidar_w4_div255.0": 7460,
+    "radar_w5_div255.0": 7460,
+    "lidar_w4_div1.0": 3482,
+    "radar_w4_div1.0": 3712,
+    "lidar_w0_div1.0": 232,
+    "lidar_w6_div1.0": 216,
+    "radar_w0_div1.0": 32,
+    "radar_w5_div1.0": 186
+  },
+  "nonfinite_rows": {
+    "lidar": 234232452,
+    "radar": 2
+  },
+  "errors": [],
+  "scope": "Binary format and input validity audit; no model predictions used"
+}

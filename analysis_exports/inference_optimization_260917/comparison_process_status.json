@@ -1,0 +1,282 @@
+[
+  {
+    "model": "taskdec",
+    "repeat": 1,
+    "returncode": -6,
+    "elapsed_s": 189.85691118240356,
+    "command": [
+      "/home/hongsheng/miniconda3/envs/rl_3dod/bin/python",
+      "-u",
+      "/home/hongsheng/dec_con_asf/tools/analysis/benchmark_taskdec_inference_260917.py",
+      "--gpu",
+      "2",
+      "--model",
+      "taskdec",
+      "--optimization",
+      "graph_both",
+      "--verify",
+      "--check-adapters",
+      "--warmup",
+      "20",
+      "--samples",
+      "100",
+      "--output",
+      "/home/hongsheng/dec_con_asf/analysis_exports/inference_optimization_260917/taskdec_paired_r1.json"
+    ],
+    "result": "/home/hongsheng/dec_con_asf/analysis_exports/inference_optimization_260917/taskdec_paired_r1.json",
+    "log": "/home/hongsheng/dec_con_asf/analysis_exports/inference_optimization_260917/taskdec_paired_r1.log",
+    "complete_result": true,
+    "summary": {
+      "load_ms": {
+        "mean": 652.5591291859746,
+        "median": 652.1387230604887,
+        "p95": 881.2922541983426,
+        "min": 371.3948354125023,
+        "max": 1270.7413043826818,
+        "std": 140.6585013266201
+      },
+      "forward_wall_ms": {
+        "mean": 59.49051667004824,
+        "median": 59.11515187472105,
+        "p95": 65.92638557776809,
+        "min": 54.40395511686802,
+        "max": 73.00359942018986,
+        "std": 3.1172337853416745
+      },
+      "forward_cuda_ms": {
+        "mean": 59.42149444580078,
+        "median": 59.046865463256836,
+        "p95": 65.85789260864257,
+        "min": 54.33756637573242,
+        "max": 72.93321228027344,
+        "std": 3.1158161369522537
+      },
+      "reference_wall_ms": {
+        "mean": 84.50711125507951,
+        "median": 84.25185177475214,
+        "p95": 89.98503452166915,
+        "min": 79.15267534554005,
+        "max": 93.60451065003872,
+        "std": 3.0669832368156307
+      },
+      "reference_cuda_ms": {
+        "mean": 84.4394288635254,
+        "median": 84.18795394897461,
+        "p95": 89.91901626586915,
+        "min": 79.08338928222656,
+        "max": 93.53388977050781,
+        "std": 3.0655880573533296
+      }
+    }
+  },
+  {
+    "model": "asf",
+    "repeat": 1,
+    "returncode": -6,
+    "elapsed_s": 179.4761025905609,
+    "command": [
+      "/home/hongsheng/miniconda3/envs/rl_3dod/bin/python",
+      "-u",
+      "/home/hongsheng/dec_con_asf/tools/analysis/benchmark_taskdec_inference_260917.py",
+      "--gpu",
+      "2",
+      "--model",
+      "asf",
+      "--optimization",
+      "graph_both",
+      "--verify",
+      "--check-adapters",
+      "--warmup",
+      "20",
+      "--samples",
+      "100",
+      "--output",
+      "/home/hongsheng/dec_con_asf/analysis_exports/inference_optimization_260917/asf_paired_r1.json"
+    ],
+    "result": "/home/hongsheng/dec_con_asf/analysis_exports/inference_optimization_260917/asf_paired_r1.json",
+    "log": "/home/hongsheng/dec_con_asf/analysis_exports/inference_optimization_260917/asf_paired_r1.log",
+    "complete_result": true,
+    "summary": {
+      "load_ms": {
+        "mean": 579.8652571812272,
+        "median": 586.1144997179508,
+        "p95": 742.4276673234999,
+        "min": 367.4465958029032,
+        "max": 771.7838007956743,
+        "std": 95.34176607591013
+      },
+      "forward_wall_ms": {
+        "mean": 58.691269028931856,
+        "median": 58.740317821502686,
+        "p95": 64.82329526916146,
+        "min": 53.237972781062126,
+        "max": 66.86519086360931,
+        "std": 2.82520118039919
+      },
+      "forward_cuda_ms": {
+        "mean": 58.62036952972412,
+        "median": 58.66793632507324,
+        "p95": 64.75524787902832,
+        "min": 53.1703987121582,
+        "max": 66.79379272460938,
+        "std": 2.8248103155695996
+      },
+      "reference_wall_ms": {
+        "mean": 81.50923028588295,
+        "median": 81.46211877465248,
+        "p95": 86.94664612412453,
+        "min": 75.5079947412014,
+        "max": 90.52213840186596,
+        "std": 3.123388953818864
+      },
+      "reference_cuda_ms": {
+        "mean": 81.44086158752441,
+        "median": 81.39535903930664,
+        "p95": 86.87987403869629,
+        "min": 75.44290924072266,
+        "max": 90.43484497070312,
+        "std": 3.1221433576803808
+      }
+    }
+  },
+  {
+    "model": "asf",
+    "repeat": 2,
+    "returncode": -6,
+    "elapsed_s": 178.93240451812744,
+    "command": [
+      "/home/hongsheng/miniconda3/envs/rl_3dod/bin/python",
+      "-u",
+      "/home/hongsheng/dec_con_asf/tools/analysis/benchmark_taskdec_inference_260917.py",
+      "--gpu",
+      "2",
+      "--model",
+      "asf",
+      "--optimization",
+      "graph_both",
+      "--verify",
+      "--check-adapters",
+      "--warmup",
+      "20",
+      "--samples",
+      "100",
+      "--output",
+      "/home/hongsheng/dec_con_asf/analysis_exports/inference_optimization_260917/asf_paired_r2.json"
+    ],
+    "result": "/home/hongsheng/dec_con_asf/analysis_exports/inference_optimization_260917/asf_paired_r2.json",
+    "log": "/home/hongsheng/dec_con_asf/analysis_exports/inference_optimization_260917/asf_paired_r2.log",
+    "complete_result": true,
+    "summary": {
+      "load_ms": {
+        "mean": 577.0845911465585,
+        "median": 585.3500310331583,
+        "p95": 721.8601690605283,
+        "min": 370.0973577797413,
+        "max": 780.9811886399984,
+        "std": 91.43224773505455
+      },
+      "forward_wall_ms": {
+        "mean": 59.90878639742732,
+        "median": 59.54011436551809,
+        "p95": 64.70648627728224,
+        "min": 54.61840517818928,
+        "max": 69.13385167717934,
+        "std": 2.6937336007063495
+      },
+      "forward_cuda_ms": {
+        "mean": 59.83680896759033,
+        "median": 59.47028732299805,
+        "p95": 64.6343505859375,
+        "min": 54.55094528198242,
+        "max": 69.06454467773438,
+        "std": 2.692911197873545
+      },
+      "reference_wall_ms": {
+        "mean": 86.48173404857516,
+        "median": 84.61178466677666,
+        "p95": 94.89935068413615,
+        "min": 76.48044265806675,
+        "max": 106.7418958991766,
+        "std": 5.8999478353429256
+      },
+      "reference_cuda_ms": {
+        "mean": 86.40971580505371,
+        "median": 84.54404830932617,
+        "p95": 94.82629852294922,
+        "min": 76.41532897949219,
+        "max": 106.6638412475586,
+        "std": 5.897030149732948
+      }
+    }
+  },
+  {
+    "model": "taskdec",
+    "repeat": 2,
+    "returncode": -6,
+    "elapsed_s": 186.33898735046387,
+    "command": [
+      "/home/hongsheng/miniconda3/envs/rl_3dod/bin/python",
+      "-u",
+      "/home/hongsheng/dec_con_asf/tools/analysis/benchmark_taskdec_inference_260917.py",
+      "--gpu",
+      "2",
+      "--model",
+      "taskdec",
+      "--optimization",
+      "graph_both",
+      "--verify",
+      "--check-adapters",
+      "--warmup",
+      "20",
+      "--samples",
+      "100",
+      "--output",
+      "/home/hongsheng/dec_con_asf/analysis_exports/inference_optimization_260917/taskdec_paired_r2.json"
+    ],
+    "result": "/home/hongsheng/dec_con_asf/analysis_exports/inference_optimization_260917/taskdec_paired_r2.json",
+    "log": "/home/hongsheng/dec_con_asf/analysis_exports/inference_optimization_260917/taskdec_paired_r2.log",
+    "complete_result": true,
+    "summary": {
+      "load_ms": {
+        "mean": 580.318512711674,
+        "median": 589.0800431370735,
+        "p95": 741.6789779439569,
+        "min": 364.87008444964886,
+        "max": 777.9531385749578,
+        "std": 99.66774490605076
+      },
+      "forward_wall_ms": {
+        "mean": 59.65298583731055,
+        "median": 59.4213530421257,
+        "p95": 64.9349451996386,
+        "min": 54.652418941259384,
+        "max": 69.62801516056061,
+        "std": 2.7084615107888945
+      },
+      "forward_cuda_ms": {
+        "mean": 59.58337825775146,
+        "median": 59.35319900512695,
+        "p95": 64.86529579162597,
+        "min": 54.58185577392578,
+        "max": 69.55363464355469,
+        "std": 2.7077946354258517
+      },
+      "reference_wall_ms": {
+        "mean": 84.87421343103051,
+        "median": 84.76699329912663,
+        "p95": 88.87586370110512,
+        "min": 78.71724851429462,
+        "max": 101.92190669476986,
+        "std": 2.934278554963717
+      },
+      "reference_cuda_ms": {
+        "mean": 84.80637825012207,
+        "median": 84.69462203979492,
+        "p95": 88.8071891784668,
+        "min": 78.64844512939453,
+        "max": 101.846435546875,
+        "std": 2.933466919957847
+      }
+    }
+  }
+]

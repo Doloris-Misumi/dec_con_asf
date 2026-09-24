@@ -1,0 +1,600 @@
+{
+  "observed_at": "2026-09-17T19:41:58.983893+08:00",
+  "status": "automated_checks_passed_requires_final_review",
+  "checks": [
+    {
+      "check": "frozen C+L+R, three classes, 80 epochs, FP32, effective batch 8",
+      "passed": true
+    },
+    {
+      "check": "all frozen sources unchanged",
+      "passed": true
+    },
+    {
+      "check": "all frozen protocol/split/input manifests unchanged",
+      "passed": true
+    },
+    {
+      "check": "shared initialization hashes match",
+      "passed": true
+    },
+    {
+      "check": "official split and modality counts",
+      "passed": true
+    },
+    {
+      "check": "metric and independent geometry engineering checks",
+      "passed": true
+    },
+    {
+      "check": "deduplicated split sizes and uniqueness",
+      "passed": true
+    },
+    {
+      "check": "concat final budget",
+      "passed": true
+    },
+    {
+      "check": "concat initial checkpoint provenance",
+      "passed": true
+    },
+    {
+      "check": "concat complete epoch coverage",
+      "passed": true
+    },
+    {
+      "check": "concat matched samples and updates",
+      "passed": true
+    },
+    {
+      "check": "concat finite recorded loss",
+      "passed": true
+    },
+    {
+      "check": "concat fixed validation schedule",
+      "passed": true
+    },
+    {
+      "check": "concat validation-only best selection",
+      "passed": true
+    },
+    {
+      "check": "concat best checkpoint epoch",
+      "passed": true
+    },
+    {
+      "check": "concat best finite state",
+      "passed": true
+    },
+    {
+      "check": "concat best evaluated checkpoint hash",
+      "passed": true
+    },
+    {
+      "check": "concat best complete split results",
+      "passed": true
+    },
+    {
+      "check": "concat best val prediction frame coverage",
+      "passed": true
+    },
+    {
+      "check": "concat best val finite prediction arrays",
+      "passed": true
+    },
+    {
+      "check": "concat best test prediction frame coverage",
+      "passed": true
+    },
+    {
+      "check": "concat best test finite prediction arrays",
+      "passed": true
+    },
+    {
+      "check": "concat best val full finite AP",
+      "passed": true
+    },
+    {
+      "check": "concat best val mean AP",
+      "passed": true
+    },
+    {
+      "check": "concat best val_deduplicated full finite AP",
+      "passed": true
+    },
+    {
+      "check": "concat best val_deduplicated mean AP",
+      "passed": true
+    },
+    {
+      "check": "concat best test full finite AP",
+      "passed": true
+    },
+    {
+      "check": "concat best test mean AP",
+      "passed": true
+    },
+    {
+      "check": "concat best test_deduplicated full finite AP",
+      "passed": true
+    },
+    {
+      "check": "concat best test_deduplicated mean AP",
+      "passed": true
+    },
+    {
+      "check": "concat last checkpoint epoch",
+      "passed": true
+    },
+    {
+      "check": "concat last finite state",
+      "passed": true
+    },
+    {
+      "check": "concat recoverable optimizer",
+      "passed": true
+    },
+    {
+      "check": "concat last evaluated checkpoint hash",
+      "passed": true
+    },
+    {
+      "check": "concat last complete split results",
+      "passed": true
+    },
+    {
+      "check": "concat last val prediction frame coverage",
+      "passed": true
+    },
+    {
+      "check": "concat last val finite prediction arrays",
+      "passed": true
+    },
+    {
+      "check": "concat last test prediction frame coverage",
+      "passed": true
+    },
+    {
+      "check": "concat last test finite prediction arrays",
+      "passed": true
+    },
+    {
+      "check": "concat last val full finite AP",
+      "passed": true
+    },
+    {
+      "check": "concat last val mean AP",
+      "passed": true
+    },
+    {
+      "check": "concat last val_deduplicated full finite AP",
+      "passed": true
+    },
+    {
+      "check": "concat last val_deduplicated mean AP",
+      "passed": true
+    },
+    {
+      "check": "concat last test full finite AP",
+      "passed": true
+    },
+    {
+      "check": "concat last test mean AP",
+      "passed": true
+    },
+    {
+      "check": "concat last test_deduplicated full finite AP",
+      "passed": true
+    },
+    {
+      "check": "concat last test_deduplicated mean AP",
+      "passed": true
+    },
+    {
+      "check": "concat process-exit accounting",
+      "passed": true
+    },
+    {
+      "check": "patch final budget",
+      "passed": true
+    },
+    {
+      "check": "patch initial checkpoint provenance",
+      "passed": true
+    },
+    {
+      "check": "patch complete epoch coverage",
+      "passed": true
+    },
+    {
+      "check": "patch matched samples and updates",
+      "passed": true
+    },
+    {
+      "check": "patch finite recorded loss",
+      "passed": true
+    },
+    {
+      "check": "patch fixed validation schedule",
+      "passed": true
+    },
+    {
+      "check": "patch validation-only best selection",
+      "passed": true
+    },
+    {
+      "check": "patch best checkpoint epoch",
+      "passed": true
+    },
+    {
+      "check": "patch best finite state",
+      "passed": true
+    },
+    {
+      "check": "patch best evaluated checkpoint hash",
+      "passed": true
+    },
+    {
+      "check": "patch best complete split results",
+      "passed": true
+    },
+    {
+      "check": "patch best val prediction frame coverage",
+      "passed": true
+    },
+    {
+      "check": "patch best val finite prediction arrays",
+      "passed": true
+    },
+    {
+      "check": "patch best test prediction frame coverage",
+      "passed": true
+    },
+    {
+      "check": "patch best test finite prediction arrays",
+      "passed": true
+    },
+    {
+      "check": "patch best val full finite AP",
+      "passed": true
+    },
+    {
+      "check": "patch best val mean AP",
+      "passed": true
+    },
+    {
+      "check": "patch best val_deduplicated full finite AP",
+      "passed": true
+    },
+    {
+      "check": "patch best val_deduplicated mean AP",
+      "passed": true
+    },
+    {
+      "check": "patch best test full finite AP",
+      "passed": true
+    },
+    {
+      "check": "patch best test mean AP",
+      "passed": true
+    },
+    {
+      "check": "patch best test_deduplicated full finite AP",
+      "passed": true
+    },
+    {
+      "check": "patch best test_deduplicated mean AP",
+      "passed": true
+    },
+    {
+      "check": "patch last checkpoint epoch",
+      "passed": true
+    },
+    {
+      "check": "patch last finite state",
+      "passed": true
+    },
+    {
+      "check": "patch recoverable optimizer",
+      "passed": true
+    },
+    {
+      "check": "patch last evaluated checkpoint hash",
+      "passed": true
+    },
+    {
+      "check": "patch last complete split results",
+      "passed": true
+    },
+    {
+      "check": "patch last val prediction frame coverage",
+      "passed": true
+    },
+    {
+      "check": "patch last val finite prediction arrays",
+      "passed": true
+    },
+    {
+      "check": "patch last test prediction frame coverage",
+      "passed": true
+    },
+    {
+      "check": "patch last test finite prediction arrays",
+      "passed": true
+    },
+    {
+      "check": "patch last val full finite AP",
+      "passed": true
+    },
+    {
+      "check": "patch last val mean AP",
+      "passed": true
+    },
+    {
+      "check": "patch last val_deduplicated full finite AP",
+      "passed": true
+    },
+    {
+      "check": "patch last val_deduplicated mean AP",
+      "passed": true
+    },
+    {
+      "check": "patch last test full finite AP",
+      "passed": true
+    },
+    {
+      "check": "patch last test mean AP",
+      "passed": true
+    },
+    {
+      "check": "patch last test_deduplicated full finite AP",
+      "passed": true
+    },
+    {
+      "check": "patch last test_deduplicated mean AP",
+      "passed": true
+    },
+    {
+      "check": "patch process-exit accounting",
+      "passed": true
+    },
+    {
+      "check": "taskdec final budget",
+      "passed": true
+    },
+    {
+      "check": "taskdec initial checkpoint provenance",
+      "passed": true
+    },
+    {
+      "check": "taskdec complete epoch coverage",
+      "passed": true
+    },
+    {
+      "check": "taskdec matched samples and updates",
+      "passed": true
+    },
+    {
+      "check": "taskdec finite recorded loss",
+      "passed": true
+    },
+    {
+      "check": "taskdec fixed validation schedule",
+      "passed": true
+    },
+    {
+      "check": "taskdec validation-only best selection",
+      "passed": true
+    },
+    {
+      "check": "taskdec best checkpoint epoch",
+      "passed": true
+    },
+    {
+      "check": "taskdec best finite state",
+      "passed": true
+    },
+    {
+      "check": "taskdec best evaluated checkpoint hash",
+      "passed": true
+    },
+    {
+      "check": "taskdec best complete split results",
+      "passed": true
+    },
+    {
+      "check": "taskdec best val prediction frame coverage",
+      "passed": true
+    },
+    {
+      "check": "taskdec best val finite prediction arrays",
+      "passed": true
+    },
+    {
+      "check": "taskdec best test prediction frame coverage",
+      "passed": true
+    },
+    {
+      "check": "taskdec best test finite prediction arrays",
+      "passed": true
+    },
+    {
+      "check": "taskdec best val full finite AP",
+      "passed": true
+    },
+    {
+      "check": "taskdec best val mean AP",
+      "passed": true
+    },
+    {
+      "check": "taskdec best val_deduplicated full finite AP",
+      "passed": true
+    },
+    {
+      "check": "taskdec best val_deduplicated mean AP",
+      "passed": true
+    },
+    {
+      "check": "taskdec best test full finite AP",
+      "passed": true
+    },
+    {
+      "check": "taskdec best test mean AP",
+      "passed": true
+    },
+    {
+      "check": "taskdec best test_deduplicated full finite AP",
+      "passed": true
+    },
+    {
+      "check": "taskdec best test_deduplicated mean AP",
+      "passed": true
+    },
+    {
+      "check": "taskdec last checkpoint epoch",
+      "passed": true
+    },
+    {
+      "check": "taskdec last finite state",
+      "passed": true
+    },
+    {
+      "check": "taskdec recoverable optimizer",
+      "passed": true
+    },
+    {
+      "check": "taskdec last evaluated checkpoint hash",
+      "passed": true
+    },
+    {
+      "check": "taskdec last complete split results",
+      "passed": true
+    },
+    {
+      "check": "taskdec last val prediction frame coverage",
+      "passed": true
+    },
+    {
+      "check": "taskdec last val finite prediction arrays",
+      "passed": true
+    },
+    {
+      "check": "taskdec last test prediction frame coverage",
+      "passed": true
+    },
+    {
+      "check": "taskdec last test finite prediction arrays",
+      "passed": true
+    },
+    {
+      "check": "taskdec last val full finite AP",
+      "passed": true
+    },
+    {
+      "check": "taskdec last val mean AP",
+      "passed": true
+    },
+    {
+      "check": "taskdec last val_deduplicated full finite AP",
+      "passed": true
+    },
+    {
+      "check": "taskdec last val_deduplicated mean AP",
+      "passed": true
+    },
+    {
+      "check": "taskdec last test full finite AP",
+      "passed": true
+    },
+    {
+      "check": "taskdec last test mean AP",
+      "passed": true
+    },
+    {
+      "check": "taskdec last test_deduplicated full finite AP",
+      "passed": true
+    },
+    {
+      "check": "taskdec last test_deduplicated mean AP",
+      "passed": true
+    },
+    {
+      "check": "taskdec process-exit accounting",
+      "passed": true
+    },
+    {
+      "check": "paper CSV complete, unique, exact source values",
+      "passed": true
+    },
+    {
+      "check": "paper LaTeX includes all three methods",
+      "passed": true
+    }
+  ],
+  "pending": [],
+  "summaries": {
+    "concat": {
+      "best": {
+        "epoch": 75,
+        "test_deduplicated_strict_moderate_3d_ap": 75.77158353671356
+      },
+      "last": {
+        "epoch": 80,
+        "test_deduplicated_strict_moderate_3d_ap": 75.76613741795752
+      }
+    },
+    "patch": {
+      "best": {
+        "epoch": 75,
+        "test_deduplicated_strict_moderate_3d_ap": 72.1726248492694
+      },
+      "last": {
+        "epoch": 80,
+        "test_deduplicated_strict_moderate_3d_ap": 72.21840229482768
+      }
+    },
+    "taskdec": {
+      "best": {
+        "epoch": 80,
+        "test_deduplicated_strict_moderate_3d_ap": 72.2206328040251
+      },
+      "last": {
+        "epoch": 80,
+        "test_deduplicated_strict_moderate_3d_ap": 72.2206328040251
+      }
+    }
+  },
+  "compute": {
+    "concat": {
+      "train_gpu_hours": 11.904369556734132,
+      "validation_gpu_hours": 3.53924117929923,
+      "process_gpu_hours_interval": [
+        17.095573224444443,
+        17.107480084722223
+      ],
+      "attempts": 1,
+      "definition": "Wall time with a GPU process resident, including I/O/CPU evaluation. Last attempt lower bound ends at final status; raw exit observation is an upper bound. Not utilization-integrated compute."
+    },
+    "patch": {
+      "train_gpu_hours": 16.932426513252366,
+      "validation_gpu_hours": 3.540843858523812,
+      "process_gpu_hours_interval": [
+        22.065734354999996,
+        22.07271280413442
+      ],
+      "attempts": 1,
+      "definition": "Wall time with a GPU process resident, including I/O/CPU evaluation. Last attempt lower bound ends at final status; raw exit observation is an upper bound. Not utilization-integrated compute."
+    },
+    "taskdec": {
+      "train_gpu_hours": 19.669289603440298,
+      "validation_gpu_hours": 3.6543163868091586,
+      "process_gpu_hours_interval": [
+        24.99484260583333,
+        24.998809882777778
+      ],
+      "attempts": 1,
+      "definition": "Wall time with a GPU process resident, including I/O/CPU evaluation. Last attempt lower bound ends at final status; raw exit observation is an upper bound. Not utilization-integrated compute."
+    }
+  },
+  "limitation": "This audit checks artifacts and budget consistency. Final human-facing review must also interpret the architecture provenance, data limitations and positive/negative findings. It does not mark the active goal complete."
+}

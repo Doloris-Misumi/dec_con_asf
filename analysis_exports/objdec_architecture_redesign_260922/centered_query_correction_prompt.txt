@@ -1,0 +1,27 @@
+Surgical diagram correction. Preserve the centered horizontal backbone, lower linked inset, compact Detection card, loss strip, fonts, colors and all other elements. Do not redesign or add formulas. The image is about 1860 x 848 pixels.
+
+Fix the QUERY / GATED-CONTEXT circuit in the UPPER RIGHT:
+The original Q and gated context are erroneously mixed BEFORE the beta/gamma fork. They must be separate.
+
+ERASE the existing Learned queries box near x1355..1513,y68..167 and its wires.
+CHANGE the circle at (1246,184), immediately below g and z inside Gated context, from PLUS to MULTIPLICATION (×). Only g and z enter this multiplication; NO query wire enters it.
+Keep this product splitting into beta and gamma:
+- Gamma: from this product RIGHT to x1313, DOWN to the top input of the OUTPUT plus at (1313,419). No other signal enters this gamma wire.
+- Beta: from this product to a clean bent wire entering the RIGHT side of the QUERY plus at (1183,280).
+REMOVE the existing old beta wire into the TOP of the query plus, to make room for Q.
+Create a SMALL Learned queries Q box at roughly x1125..1225,y213..255, centered above the QUERY plus. Two-line label "Learned queries" and "Q", with tiny grey query glyphs if they fit. Its bottom output goes STRAIGHT DOWN into the TOP of the query plus at (1183,280).
+The beta context wire routes to the RIGHT of this small Q box, around x1263, then left into the RIGHT side of the query plus. It must not touch or pass through the Q box.
+Thus query plus has TWO inputs only: Q from above, beta-scaled gated context from right.
+Query-plus output continues DOWN, labelled Q', into attention's Q port, preserving the existing attention box.
+Gamma must NEVER carry Q; it carries only gated context. No line from Q reaches PFT or the output plus.
+Preserve F, output plus, F', PFT -> Fused BEV -> detector on the centered main path.
+
+Also erase FOUR known extraneous connections elsewhere:
+1. Erase the arrow from Pool + concat into Modality contribution. Descriptor is for Foreground gate and Objectness only. Preserve those two arrows. Modality contribution already has its named input labels t_m,c_m,u_m,shared deviation.
+2. Erase the vertical line from Specific projection's bottom (about x507,y270) down into Token modulation (about x507,y377). The explicit c_m/u_m/g/w_m ports already supply those inputs.
+3. Erase the long wire that starts right of the top g label around (1092,94), runs to (1129,94) and down toward y302. g is already supplied using the named g connector LEFT of Bounded scale. Preserve that short named g connector.
+4. Erase the direct downward bypass from Modality contribution's far-right bottom near (1100,270) to the w_m output circle near (1100,315). Alpha must enter Bounded scale; only Bounded scale produces w_m. Keep the correct center downward arrow from contribution to Bounded scale.
+
+Finally connect the upstream t_m token group to the projection fork: a short line from its RIGHT edge near (393,281) goes right to x415, up to y184, then right to the existing fork at x429. This connects the same per-modality input to BOTH parallel Shared/Specific projections. Keep the main t_m residual path into Token modulation unchanged.
+
+Do not change the centered backbone, compact detection, token-modulation expansion callout, or bottom supervision. No new dashed prediction wires. Exact graph topology is the priority. Render only this corrected image.

@@ -1,0 +1,21 @@
+{
+  "time": "2026-09-15T20:45:14.373377+08:00",
+  "python": "3.8.20",
+  "torch": "1.10.1+cu113",
+  "cuda_build": "11.3",
+  "numpy": "1.20.3",
+  "numba": "0.53.0",
+  "l4dr_git_commit": "fcf2d7f0b7c632f9c23f75f720fe691be519d732",
+  "sources": {
+    "/home/hongsheng/L4DR/K-Radar-main-repo/models/skeletons/pp_rlf.py": "22f105b8ae04f01368be33a631adf10b921d55fff01b5b3f0bbd993582d4a279",
+    "/home/hongsheng/L4DR/K-Radar-main-repo/datasets/kradar_detection_v2_0.py": "6314154008260729fb4fbdee9602531bb12336d38c98abbc811355befbe0c0ec",
+    "/home/hongsheng/L4DR/K-Radar-main-repo/models/model_utils/model_nms_utils.py": "b7abbc493666be5d5d17a7209132dce99ad537aab65e34d3949ea9f24f7a8554",
+    "/home/hongsheng/dec_con_asf/analysis_exports/l4dr_v2_aligned_260915/download_checkpoint.py": "58ba4b61c7fb0db7d0deebd7e40b4ead4f2cbb0e8cb0ed42e78500c164db904f",
+    "/home/hongsheng/dec_con_asf/analysis_exports/l4dr_v2_aligned_260915/make_report.py": "f99a3fb9666e72e7ceeb925e428c089b1396a15afcb6aa0fdd3febddbfb8ee5d",
+    "/home/hongsheng/dec_con_asf/analysis_exports/l4dr_v2_aligned_260915/evaluate.py": "6c1aaabdf9f5167e47627879f2569a141e69ab436ddaeef59858935d60e059a3",
+    "/home/hongsheng/dec_con_asf/analysis_exports/l4dr_v2_aligned_260915/protocol_diagnostic.py": "0b759e04abdd7510e64e65fcffad539589c11cf1f1057840b0e309f6a4768d4f",
+    "/home/hongsheng/dec_con_asf/analysis_exports/l4dr_v2_aligned_260915/run_l4dr.py": "167c674b309f90a5eb7a469d5c5ec944dfd4b44e85ab3fd228d1ff12bc2c6cf2",
+    "/home/hongsheng/dec_con_asf/analysis_exports/l4dr_v2_aligned_260915/common.py": "2491df3135e75419e10f5948af334db06c78e8e9a51625eb44a0f54ebc73280a",
+    "/home/hongsheng/dec_con_asf/analysis_exports/l4dr_v2_aligned_260915/prepare.py": "009f0bcf49b898c17d0f38a1aaeef8cbdeb21f43c731927a5e41361807f3bcde"
+  }
+}

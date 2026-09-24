@@ -1,0 +1,27 @@
+{
+  "verified_at": "2026-09-15T22:21:11.375973+08:00",
+  "runs": {
+    "asf": {
+      "pid": 3796685,
+      "gpu": "2",
+      "status": "training",
+      "global_step": 300,
+      "last_loss": 9.694389343261719,
+      "current_epoch_elapsed_seconds": 266.7728937435895,
+      "peak_cuda_allocated_gib": 17.758182525634766,
+      "finite_gradient_parameter_tensors": 50,
+      "frozen_encoder_gradients_absent": true
+    },
+    "l4dr": {
+      "pid": 3798840,
+      "gpu": "3",
+      "status": "training",
+      "global_step": 100,
+      "last_loss": 10.485833168029785,
+      "current_epoch_elapsed_seconds": 41.57652040012181,
+      "peak_cuda_allocated_gib": 8.371572971343994,
+      "finite_gradient_parameter_tensors": 293,
+      "frozen_encoder_gradients_absent": null
+    }
+  }
+}

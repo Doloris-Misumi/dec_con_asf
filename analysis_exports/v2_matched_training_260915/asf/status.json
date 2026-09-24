@@ -1,0 +1,73 @@
+{
+  "status": "complete",
+  "model": "asf",
+  "mode": "full_training",
+  "started_at": "2026-09-15T22:16:24.884156+08:00",
+  "pid": 3796685,
+  "gpu": "2",
+  "gpu_name": "NVIDIA RTX A6000",
+  "seed": 20250215,
+  "precision": "FP32",
+  "batch_size": 2,
+  "epochs": 11,
+  "steps_per_epoch": 7193,
+  "target_steps": 79123,
+  "global_step": 79123,
+  "completed_epochs": 11,
+  "training_wall_seconds": 68972.18917673454,
+  "step_wall_seconds": 60151.664544770494,
+  "failure_count": 0,
+  "config_sha256": "549a38268a133d0a02eadca7f7f7c790faa5b57d384436e16213d65c8090684d",
+  "train_manifest_sha256": "48c797518f6695ba238a671c80872c5aafc93182d55b016ca3678d4861c58190",
+  "test_manifest_sha256": "2573ea5cc1ec02f115bf18175de362ffc853915a48af67b8af681243d5803d40",
+  "checkpoint_selection": "fixed final epoch",
+  "initialization": "Same pretrained sensor encoders as Strong; new A2Fusion and detection head; freeze=True, freeze_bn=False",
+  "initialization_checks": {
+    "cam": {
+      "path": "/home/hongsheng/K-Radar-main/pretrained/CAMERA_MODEL_10.pt",
+      "sha256": "4fb56d519366352d66a5d9576c3f6b91988fc29ebfb560ba1c85e536fdca5e04",
+      "strict_load": true,
+      "retained_keys": 397,
+      "discarded_detection_head_keys": 6,
+      "fixed_nonstat_tensors_equal_to_strong": 376
+    },
+    "ldr": {
+      "path": "/home/hongsheng/K-Radar-main/pretrained/SECOND_10.pt",
+      "sha256": "6ccc9e543dada5436d563c13d5879ce50ec5fac2b1739972a6821d43371776fb",
+      "strict_load": true,
+      "retained_keys": 156,
+      "discarded_detection_head_keys": 6,
+      "fixed_nonstat_tensors_equal_to_strong": 78
+    },
+    "rdr": {
+      "path": "/home/hongsheng/K-Radar-main/pretrained/RTNH_wide_10.pt",
+      "sha256": "9dcbabda8cc01731306fe10ed51a39db3aa153571456e89c151946b6c801b1dd",
+      "strict_load": true,
+      "retained_keys": 108,
+      "discarded_detection_head_keys": 6,
+      "fixed_nonstat_tensors_equal_to_strong": 63
+    }
+  },
+  "total_parameters": 78437245,
+  "trainable_parameters": 1882156,
+  "finite_gradient_parameter_tensors": 50,
+  "frozen_encoder_gradients_absent": true,
+  "epoch_index": 10,
+  "step_in_epoch": 7193,
+  "last_loss": 4.835756778717041,
+  "lr": 0.0001,
+  "peak_cuda_allocated_gib": 17.770203113555908,
+  "current_epoch_elapsed_seconds": 6161.19196825847,
+  "gpu_hours_training": 19.158941437981817,
+  "epoch_mean_loss": 4.448883003540867,
+  "epoch_min_loss": 1.0542817115783691,
+  "epoch_max_loss": 19.705286026000977,
+  "probe_parameter_changes": {
+    "head.conv_cls.weight": 1.5464293956756592,
+    "fuser.aware_query": 1.6172707080841064
+  },
+  "training_finished_at": "2026-09-16T17:26:16.910804+08:00",
+  "evaluation_samples": 13727,
+  "inference_wall_seconds": 3285.0960966795683,
+  "finished_at": "2026-09-16T18:24:15.397816+08:00"
+}

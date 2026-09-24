@@ -1,0 +1,47 @@
+{
+  "duplicate_image_crc_size_groups": 54,
+  "cross_split_groups": 22,
+  "examples": [
+    [
+      "012939",
+      "011442"
+    ],
+    [
+      "012930",
+      "009620"
+    ],
+    [
+      "012422",
+      "011259"
+    ],
+    [
+      "009844",
+      "010486"
+    ],
+    [
+      "011100",
+      "010477"
+    ],
+    [
+      "011973",
+      "010762"
+    ],
+    [
+      "010081",
+      "010340"
+    ],
+    [
+      "010996",
+      "011537"
+    ],
+    [
+      "011386",
+      "009669"
+    ],
+    [
+      "012689",
+      "012012"
+    ]
+  ],
+  "note": "CRC+size screening; any matches require SHA confirmation before claiming exact duplicates"
+}

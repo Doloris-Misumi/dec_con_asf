@@ -1,0 +1,22 @@
+Precise local wire edit, preserving this entire image except the few lines described. Do NOT move any box or symbol. Reference canvas approximately 1860 x848.
+
+Within the UPPER-RIGHT circuit, there is a multiply circle centered (1245,185), a Learned queries Q box (1137,219)-(1254,287), a query-add circle (1194,325), and an output-add circle (1314,418).
+
+The ONLY correct arrows are:
+g,z -> multiply (1245,185)
+Q box -> query-add (1194,325)
+multiply -> beta -> query-add RIGHT input
+multiply -> gamma -> output-add TOP input
+query-add -> Q' -> attention.
+The Q box itself must have NO incoming arrows.
+
+MAKE THESE FOUR EXACT PIXEL-REGION CHANGES:
+1. ERASE the beta arrow from near (1215,186) DOWN INTO the TOP edge of the Q box at (1215,219). Remove that beta label too. No line may enter Q box from above.
+2. ERASE the short L-shaped wire starting at the Q box's lower-right edge near (1245,287), down to (1245,325), then left into query-add. It currently implies two copies of Q enter the plus. Keep the CORRECT vertical arrow from the Q box's center bottom (1194,287) into the query-add TOP (1194,306).
+3. Draw a NEW beta wire from the RIGHT side of the multiply (1264,185) RIGHT to x1282, DOWN along x1282 to y325, then LEFT to the RIGHT input of the query-add at (1213,325). Arrowhead points LEFT INTO the plus. This route stays OUTSIDE and to the RIGHT of the Q box. Label beta beside x1282,y295. No part of this beta line touches the Q box.
+4. The existing gamma branch from the multiply right to x1314 and down to output-add is nearly correct but has an erroneous LEFT-POINTING arrowhead back into multiply near (1266,185). Erase that left-pointing arrowhead. Keep the gamma wire with its arrow pointing DOWN INTO the output-add. Beta and gamma branch from the same multiply OUTPUT. There is no feedback arrow into the multiplier from the right.
+
+ONE small missing upstream connection:
+Connect t_m token group RIGHT edge around (394,281) -> (412,281) -> (412,184) -> existing Shared/Specific fork at (428,184), with arrowhead pointing right. This simply attaches the same t_m to the two projections. Do not alter other nearby arrows.
+
+Preserve Q', F and F', all forward main-line modules, detection compact card, token-modulation expanded view and loss strip exactly. Make no other edits. The main change is that beta bypasses the Learned queries BOX and joins Q at the PLUS below it.

@@ -1,0 +1,49 @@
+{
+  "created_at": "2026-09-18T08:01:52.207193+08:00",
+  "checkpoint": "/home/hongsheng/dec_con_asf/logs/exp_260806_000825_DecControlledASFStrong_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/models/model_10.pt",
+  "checkpoint_sha256": "8190ccb1ad2bb1b31bba959f8e24cd6cce3c13966d7e25830cff15062b94ae99",
+  "config": "/home/hongsheng/dec_con_asf/logs/exp_260806_000825_DecControlledASFStrong_A2FUSION_rlc_l1d256_l2p2t32d256g_l2g_scl_mha16/config.yml",
+  "config_sha256": "59ec9e910a115d814ded9ffee31a4e4d6c7a1d7ee9f446974a43202758779fb0",
+  "script_sha256": "089b14de62152a607b746380a4750f75f9784fecf6fcf9452e11f4feba71e5e6",
+  "source_sha256": {
+    "models/fuser/patch_dec_a2_fusion.py": "04bf1f4a1bf0a3874b36d3d5e70a2a052c95f09e24dde0fadbf929025bc67f51",
+    "models/skeletons/fusion_base_integrated.py": "669ffc0bb26bfd6be1f8a1e18b32729136bcb638b0ab5bf44926f46361cfcd1c",
+    "utils/util_pipeline.py": "97ae3c5ca3246c56757145f3c723896e933e0a5727ac603b535e0d3dacf3df8d",
+    "utils/kitti_eval/eval.py": "93bb7df14856572d3671a88da81f76672e5130a1f35b2f1ede7bb904f13b2365",
+    "utils/kitti_eval/eval_revised.py": "a564cb101c5b20a2e655e6afde5e8d3aa8e8eb85a369abd93ff012d9bab8cee3"
+  },
+  "cases": {
+    "r": "r",
+    "l": "l",
+    "c": "c",
+    "c_star": "c",
+    "lr": "lr",
+    "cr": "cr",
+    "cl": "cl",
+    "clr": "clr",
+    "c_star_lr": "clr",
+    "cl_star_r": "clr"
+  },
+  "dataset_size": 13727,
+  "gpu": 2,
+  "gpu_name": "NVIDIA RTX A6000",
+  "precision": "FP32, no autocast",
+  "memory_fraction": 0.3,
+  "confs": [
+    0.3,
+    0.0
+  ],
+  "detector_score_prefilter": 0.1,
+  "nms_threshold": 0.01,
+  "selected_variant": "Strong 08-06 model_10; best among archived full Strong runs; no new checkpoint search.",
+  "variant_boundary": "DecControlledA2Fusion: no task-context branch.",
+  "protocol_reference": "https://arxiv.org/html/2503.07029v2#S4.T3",
+  "archive": "/home/hongsheng/dec_con_asf/results/exp_260806_000825_DecControlledASFStrong_final/summary_conf0.3.json",
+  "archive_sha256": "711a500520598cf7a93060b140755eef424fb698e883d33978195c27282f007c",
+  "is_validation_updated": true,
+  "camera_corruption": "Raw RGB black frame (0,0,0), with original normalization and calibration; camera branch retained.",
+  "lidar_corruption": "No LiDAR returns in evaluation ROI: zero height-compressed sparse tensor followed by original learned dense LiDAR backbone; LiDAR fusion token retained. Explicit empty-input convention avoids unsupported empty sparse kernels.",
+  "corruption_provenance": "Local deterministic input-loss protocol; ASF exact corruption-generation implementation not found in inspected public/local sources.",
+  "reuse": "Within-frame encoders only; fuser/head recomputed per case, checked against original network in smoke.",
+  "storage": "Compressed final KITTI prediction/GT strings and frame identities only; no features or raw sensor copies."
+}

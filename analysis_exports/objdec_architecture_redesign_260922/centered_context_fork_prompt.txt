@@ -1,0 +1,13 @@
+Make ONLY one tiny correction to the upper-right gated-context output wire of this diagram. Keep the entire image exactly unchanged otherwise. Canvas approximately 1860 x848.
+
+The multiply circle is centered (1244,185). It receives g and z FROM ABOVE. Its output must flow AWAY toward beta and gamma, but there is an incorrect arrow pointing LEFT INTO its right edge.
+
+Erase the complete small horizontal wire and left-pointing arrowhead immediately RIGHT of this multiply circle, in rectangle x1262..1318, y176..211. Erase only navy connector ink there, not text, background or circle. The long vertical beta and gamma wires below y212 stay.
+
+Now draw a new OUTPUT from the BOTTOM edge of the multiply circle (1244,205), vertically DOWN to (1244,212). From there draw a thin horizontal wire RIGHT to (1313,212). Join this horizontal output to:
+- the existing beta vertical wire at x1278 which continues down to the query-add circle;
+- the existing gamma vertical wire at x1313 which continues down to the output-add circle.
+A small solid junction dot may mark the fork at (1278,212).
+DO NOT put any arrow pointing back into the multiply circle. The downstream arrowheads already point into the two addition circles. No extra arrowhead at the fork is necessary.
+
+This changes a mistaken feedback-looking connection into one outward product-output fork. No line enters the Learned queries Q box. Preserve Q, Q', F, F', centered main path, linked modulation inset, Detection card and training band. No other edits.

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "frames": [
+    "000419",
+    "000287",
+    "000664",
+    "009004"
+  ],
+  "boxes": 29,
+  "minimum_actual_evaluator_3d_iou": 0.9999560117721558,
+  "note": "Train-only cases exposing near-coincident OpenCV errors; fixed official evaluator geometry remains correct. No model predictions or protocol changes."
+}

@@ -1,0 +1,15 @@
+{
+  "pid": 62013,
+  "gpu": 0,
+  "started_at": "2026-09-19T01:12:09.892801+08:00",
+  "command": [
+    "/home/hongsheng/miniconda3/envs/rl_3dod/bin/python",
+    "-u",
+    "/home/hongsheng/dec_con_asf/tools/analysis/export_objdec_full_weather_means_260919.py",
+    "--gpu",
+    "0"
+  ],
+  "log": "/home/hongsheng/dec_con_asf/analysis_exports/objdec_fulltest_weather_260919/run.log",
+  "memory_before_mib": 8648,
+  "detached_session": true
+}

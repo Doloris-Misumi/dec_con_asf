@@ -1,0 +1,57 @@
+{
+  "models/skeletons/cam_base.py": {
+    "identical": true,
+    "local_sha256": "9ede4c08ff56a5972fbfd2ae38de172ac91ead795ae7525125f92824e9dddbeb",
+    "asf_sha256": "9ede4c08ff56a5972fbfd2ae38de172ac91ead795ae7525125f92824e9dddbeb"
+  },
+  "models/skeletons/second_net.py": {
+    "identical": true,
+    "local_sha256": "8349be4472b965098384dc3e10569d8e2cf694f1c9a03316a9113874fceb414e",
+    "asf_sha256": "8349be4472b965098384dc3e10569d8e2cf694f1c9a03316a9113874fceb414e"
+  },
+  "models/skeletons/rdr_base.py": {
+    "identical": true,
+    "local_sha256": "a4f55a5e147a9d4c9dd4758e9eecbecb4b9494be749662e87b914cf193194747",
+    "asf_sha256": "a4f55a5e147a9d4c9dd4758e9eecbecb4b9494be749662e87b914cf193194747"
+  },
+  "models/backbone_2d/swin_compat.py": {
+    "identical": true,
+    "local_sha256": "b8ae15b1a07fd7614879c39fce50435d731a5eb3a7f5f005d0719c7fd6158af8",
+    "asf_sha256": "b8ae15b1a07fd7614879c39fce50435d731a5eb3a7f5f005d0719c7fd6158af8"
+  },
+  "models/backbone_2d/image_backbone.py": {
+    "identical": true,
+    "local_sha256": "e7d0c9422acff0d3a12c9f20739a7efa4d96a7d83fb7ae6afd8d95cac97f6ab1",
+    "asf_sha256": "e7d0c9422acff0d3a12c9f20739a7efa4d96a7d83fb7ae6afd8d95cac97f6ab1"
+  },
+  "models/head/anchor_head_integrated.py": {
+    "identical": true,
+    "local_sha256": "af55905967f64635eb67f2ea860a11db5633e917853b5e5c654c65d119a5ff0c",
+    "asf_sha256": "af55905967f64635eb67f2ea860a11db5633e917853b5e5c654c65d119a5ff0c"
+  },
+  "models/fuser/a2_fusion.py": {
+    "identical": true,
+    "local_sha256": "6a918e943e61fc920949d95e811d1cd25dc859428df78649db7eba38fe4bce38",
+    "asf_sha256": "6a918e943e61fc920949d95e811d1cd25dc859428df78649db7eba38fe4bce38"
+  },
+  "datasets/kradar_fusion_v1_0.py": {
+    "identical": true,
+    "local_sha256": "aab3af4acb418110f775a582f4513a459ac65f93369eeed97cf55ba6827c9f59",
+    "asf_sha256": "aab3af4acb418110f775a582f4513a459ac65f93369eeed97cf55ba6827c9f59"
+  },
+  "configs/v1_0/cfg_CAMERA_MODEL_Base.yml": {
+    "identical": true,
+    "local_sha256": "3beea603011bcdfa896110f375a033f08be7e4652b1403f354cc4ca1edab7e7b",
+    "asf_sha256": "3beea603011bcdfa896110f375a033f08be7e4652b1403f354cc4ca1edab7e7b"
+  },
+  "configs/v1_0/cfg_SECOND.yml": {
+    "identical": true,
+    "local_sha256": "6ae54d261cbe5a164cfc09d2223fb5728413552cd3d5129c35dae907e5378d78",
+    "asf_sha256": "6ae54d261cbe5a164cfc09d2223fb5728413552cd3d5129c35dae907e5378d78"
+  },
+  "configs/v1_0/cfg_RTNH.yml": {
+    "identical": true,
+    "local_sha256": "75744e36f0341852b6351ebcbc1fe9cc2a706c79113139c0b345e6fda3ee9009",
+    "asf_sha256": "75744e36f0341852b6351ebcbc1fe9cc2a706c79113139c0b345e6fda3ee9009"
+  }
+}

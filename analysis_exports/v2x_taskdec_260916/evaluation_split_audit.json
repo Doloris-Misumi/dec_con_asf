@@ -1,0 +1,124 @@
+{
+  "rule": "Freeze duplicate-aware evaluation IDs before formal training/model selection.\n\nKeep the official train split unchanged. Val excludes byte-identical camera\nobservations from train; test excludes train and official val. Within each eval\nsplit retain the first identical observation. Original splits remain untouched.\n",
+  "official_counts": {
+    "train": 8391,
+    "val": 1498,
+    "test": 1501
+  },
+  "excluded": {
+    "val": [
+      {
+        "frame": "009620",
+        "reason": "duplicate_of_earlier_split"
+      },
+      {
+        "frame": "010081",
+        "reason": "duplicate_of_earlier_split"
+      },
+      {
+        "frame": "010127",
+        "reason": "duplicate_of_earlier_split"
+      },
+      {
+        "frame": "010418",
+        "reason": "duplicate_within_split"
+      },
+      {
+        "frame": "010486",
+        "reason": "duplicate_of_earlier_split"
+      },
+      {
+        "frame": "011259",
+        "reason": "duplicate_of_earlier_split"
+      },
+      {
+        "frame": "011260",
+        "reason": "duplicate_of_earlier_split"
+      },
+      {
+        "frame": "011442",
+        "reason": "duplicate_of_earlier_split"
+      },
+      {
+        "frame": "012282",
+        "reason": "duplicate_of_earlier_split"
+      },
+      {
+        "frame": "012766",
+        "reason": "duplicate_within_split"
+      },
+      {
+        "frame": "012928",
+        "reason": "duplicate_of_earlier_split"
+      }
+    ],
+    "test": [
+      {
+        "frame": "009669",
+        "reason": "duplicate_of_earlier_split"
+      },
+      {
+        "frame": "009850",
+        "reason": "duplicate_of_earlier_split"
+      },
+      {
+        "frame": "010022",
+        "reason": "duplicate_of_earlier_split"
+      },
+      {
+        "frame": "010160",
+        "reason": "duplicate_of_earlier_split"
+      },
+      {
+        "frame": "010894",
+        "reason": "duplicate_of_earlier_split"
+      },
+      {
+        "frame": "010996",
+        "reason": "duplicate_of_earlier_split"
+      },
+      {
+        "frame": "011028",
+        "reason": "duplicate_of_earlier_split"
+      },
+      {
+        "frame": "011100",
+        "reason": "duplicate_of_earlier_split"
+      },
+      {
+        "frame": "011107",
+        "reason": "duplicate_of_earlier_split"
+      },
+      {
+        "frame": "011152",
+        "reason": "duplicate_of_earlier_split"
+      },
+      {
+        "frame": "011668",
+        "reason": "duplicate_of_earlier_split"
+      },
+      {
+        "frame": "011973",
+        "reason": "duplicate_of_earlier_split"
+      },
+      {
+        "frame": "012012",
+        "reason": "duplicate_of_earlier_split"
+      },
+      {
+        "frame": "012643",
+        "reason": "duplicate_within_split"
+      },
+      {
+        "frame": "012852",
+        "reason": "duplicate_within_split"
+      }
+    ]
+  },
+  "clean_counts": {
+    "val": 1487,
+    "test": 1486
+  },
+  "val_sha256": "019faed5506cd8dfbd51f6d324330fa77febb276f66f9bb5b244302c5cc688d4",
+  "test_sha256": "8fd75584b2f933401d3354fe4eb20d31e956936bc8fc8f7ddfda05615ce156ce"
+}

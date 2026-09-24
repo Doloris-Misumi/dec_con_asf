@@ -1,0 +1,1620 @@
+{
+  "created_at": "2026-09-18T08:02:53.323824+08:00",
+  "scope": "CPU-only; fixed 32 uniformly spaced TRAIN frames, no augmentation, no GPU or training. Counts unique in-ROI XY pillars before truncation; not a full training/augmentation coverage guarantee.",
+  "frame_ids": [
+    "000006",
+    "000339",
+    "000670",
+    "001042",
+    "001385",
+    "001731",
+    "002088",
+    "002452",
+    "002798",
+    "003167",
+    "003588",
+    "003967",
+    "004348",
+    "004718",
+    "005079",
+    "005418",
+    "005812",
+    "006193",
+    "006530",
+    "006909",
+    "007263",
+    "009160",
+    "009532",
+    "009896",
+    "010272",
+    "010694",
+    "011080",
+    "011445",
+    "011842",
+    "012193",
+    "012613",
+    "012999"
+  ],
+  "summary": {
+    "lidar_0.4": {
+      "median": 6402.5,
+      "p95": 8649.35,
+      "maximum": 9114,
+      "frames_over_32000": 0,
+      "frames": 32
+    },
+    "lidar_0.2": {
+      "median": 12795.5,
+      "p95": 16532.0,
+      "maximum": 17418,
+      "frames_over_32000": 0,
+      "frames": 32
+    },
+    "lidar_0.16": {
+      "median": 15523.5,
+      "p95": 20048.45,
+      "maximum": 20897,
+      "frames_over_32000": 0,
+      "frames": 32
+    },
+    "radar_0.4": {
+      "median": 1588.0,
+      "p95": 2554.8999999999996,
+      "maximum": 3435,
+      "frames_over_32000": 0,
+      "frames": 32
+    },
+    "radar_0.2": {
+      "median": 2626.0,
+      "p95": 4069.3999999999996,
+      "maximum": 5326,
+      "frames_over_32000": 0,
+      "frames": 32
+    },
+    "radar_0.16": {
+      "median": 3019.5,
+      "p95": 4630.05,
+      "maximum": 5981,
+      "frames_over_32000": 0,
+      "frames": 32
+    }
+  },
+  "rows": [
+    {
+      "frame": "000006",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 63737,
+      "occupied_pillars": 3580,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "000006",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 63737,
+      "occupied_pillars": 7051,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "000006",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 63737,
+      "occupied_pillars": 8545,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "000006",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 4327,
+      "occupied_pillars": 1378,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "000006",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 4327,
+      "occupied_pillars": 1963,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "000006",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 4327,
+      "occupied_pillars": 2123,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "000339",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 63734,
+      "occupied_pillars": 6184,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "000339",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 63734,
+      "occupied_pillars": 12250,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "000339",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 63734,
+      "occupied_pillars": 14712,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "000339",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 5803,
+      "occupied_pillars": 1227,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "000339",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 5803,
+      "occupied_pillars": 1892,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "000339",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 5803,
+      "occupied_pillars": 2119,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "000670",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 64982,
+      "occupied_pillars": 3733,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "000670",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 64982,
+      "occupied_pillars": 7483,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "000670",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 64982,
+      "occupied_pillars": 9087,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "000670",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 7959,
+      "occupied_pillars": 1757,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "000670",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 7959,
+      "occupied_pillars": 2709,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "000670",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 7959,
+      "occupied_pillars": 2984,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "001042",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 66797,
+      "occupied_pillars": 3664,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "001042",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 66797,
+      "occupied_pillars": 7577,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "001042",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 66797,
+      "occupied_pillars": 9379,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "001042",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 9825,
+      "occupied_pillars": 2455,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "001042",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 9825,
+      "occupied_pillars": 3560,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "001042",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 9825,
+      "occupied_pillars": 3905,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "001385",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 57249,
+      "occupied_pillars": 6485,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "001385",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 57249,
+      "occupied_pillars": 12964,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "001385",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 57249,
+      "occupied_pillars": 15783,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "001385",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 8881,
+      "occupied_pillars": 1876,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "001385",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 8881,
+      "occupied_pillars": 2847,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "001385",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 8881,
+      "occupied_pillars": 3176,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "001731",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 63834,
+      "occupied_pillars": 4585,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "001731",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 63834,
+      "occupied_pillars": 9425,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "001731",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 63834,
+      "occupied_pillars": 11661,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "001731",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 11074,
+      "occupied_pillars": 2245,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "001731",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 11074,
+      "occupied_pillars": 3645,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "001731",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 11074,
+      "occupied_pillars": 4135,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "002088",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 60691,
+      "occupied_pillars": 9114,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "002088",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 60691,
+      "occupied_pillars": 17418,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "002088",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 60691,
+      "occupied_pillars": 20897,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "002088",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 8759,
+      "occupied_pillars": 1680,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "002088",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 8759,
+      "occupied_pillars": 2645,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "002088",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 8759,
+      "occupied_pillars": 3055,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "002452",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 62512,
+      "occupied_pillars": 5152,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "002452",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 62512,
+      "occupied_pillars": 10375,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "002452",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 62512,
+      "occupied_pillars": 12707,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "002452",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 8577,
+      "occupied_pillars": 2060,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "002452",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 8577,
+      "occupied_pillars": 3050,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "002452",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 8577,
+      "occupied_pillars": 3399,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "002798",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 63080,
+      "occupied_pillars": 3909,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "002798",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 63080,
+      "occupied_pillars": 7972,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "002798",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 63080,
+      "occupied_pillars": 9785,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "002798",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 17293,
+      "occupied_pillars": 2677,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "002798",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 17293,
+      "occupied_pillars": 4197,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "002798",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 17293,
+      "occupied_pillars": 4723,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "003167",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 59083,
+      "occupied_pillars": 6398,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "003167",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 59083,
+      "occupied_pillars": 12292,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "003167",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 59083,
+      "occupied_pillars": 14665,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "003167",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 7284,
+      "occupied_pillars": 1491,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "003167",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 7284,
+      "occupied_pillars": 2348,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "003167",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 7284,
+      "occupied_pillars": 2702,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "003588",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 57590,
+      "occupied_pillars": 7187,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "003588",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 57590,
+      "occupied_pillars": 14217,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "003588",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 57590,
+      "occupied_pillars": 17274,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "003588",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 1123,
+      "occupied_pillars": 362,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "003588",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 1123,
+      "occupied_pillars": 544,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "003588",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 1123,
+      "occupied_pillars": 604,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "003967",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 54307,
+      "occupied_pillars": 6704,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "003967",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 54307,
+      "occupied_pillars": 13035,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "003967",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 54307,
+      "occupied_pillars": 15776,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "003967",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 4942,
+      "occupied_pillars": 1017,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "003967",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 4942,
+      "occupied_pillars": 1586,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "003967",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 4942,
+      "occupied_pillars": 1781,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "004348",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 58068,
+      "occupied_pillars": 7680,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "004348",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 58068,
+      "occupied_pillars": 15183,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "004348",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 58068,
+      "occupied_pillars": 18498,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "004348",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 10709,
+      "occupied_pillars": 2423,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "004348",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 10709,
+      "occupied_pillars": 3586,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "004348",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 10709,
+      "occupied_pillars": 3964,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "004718",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 54310,
+      "occupied_pillars": 8594,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "004718",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 54310,
+      "occupied_pillars": 16565,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "004718",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 54310,
+      "occupied_pillars": 20048,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "004718",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 10472,
+      "occupied_pillars": 2010,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "004718",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 10472,
+      "occupied_pillars": 3241,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "004718",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 10472,
+      "occupied_pillars": 3667,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "005079",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 56628,
+      "occupied_pillars": 7263,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "005079",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 56628,
+      "occupied_pillars": 14165,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "005079",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 56628,
+      "occupied_pillars": 17044,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "005079",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 3750,
+      "occupied_pillars": 777,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "005079",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 3750,
+      "occupied_pillars": 1227,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "005079",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 3750,
+      "occupied_pillars": 1368,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "005418",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 54263,
+      "occupied_pillars": 4182,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "005418",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 54263,
+      "occupied_pillars": 8564,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "005418",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 54263,
+      "occupied_pillars": 10696,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "005418",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 6526,
+      "occupied_pillars": 1425,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "005418",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 6526,
+      "occupied_pillars": 2184,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "005418",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 6526,
+      "occupied_pillars": 2457,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "005812",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 58515,
+      "occupied_pillars": 6201,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "005812",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 58515,
+      "occupied_pillars": 12254,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "005812",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 58515,
+      "occupied_pillars": 15171,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "005812",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 7411,
+      "occupied_pillars": 1453,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "005812",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 7411,
+      "occupied_pillars": 2288,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "005812",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 7411,
+      "occupied_pillars": 2582,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "006193",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 62863,
+      "occupied_pillars": 7470,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "006193",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 62863,
+      "occupied_pillars": 14982,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "006193",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 62863,
+      "occupied_pillars": 18325,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "006193",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 5065,
+      "occupied_pillars": 1070,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "006193",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 5065,
+      "occupied_pillars": 1572,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "006193",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 5065,
+      "occupied_pillars": 1759,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "006530",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 59863,
+      "occupied_pillars": 7678,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "006530",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 59863,
+      "occupied_pillars": 15206,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "006530",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 59863,
+      "occupied_pillars": 18570,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "006530",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 8847,
+      "occupied_pillars": 1790,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "006530",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 8847,
+      "occupied_pillars": 2879,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "006530",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 8847,
+      "occupied_pillars": 3256,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "006909",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 58017,
+      "occupied_pillars": 5099,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "006909",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 58017,
+      "occupied_pillars": 10018,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "006909",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 58017,
+      "occupied_pillars": 12237,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "006909",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 7102,
+      "occupied_pillars": 1234,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "006909",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 7102,
+      "occupied_pillars": 2115,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "006909",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 7102,
+      "occupied_pillars": 2411,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "007263",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 57501,
+      "occupied_pillars": 3946,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "007263",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 57501,
+      "occupied_pillars": 8088,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "007263",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 57501,
+      "occupied_pillars": 9869,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "007263",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 6365,
+      "occupied_pillars": 1274,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "007263",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 6365,
+      "occupied_pillars": 2077,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "007263",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 6365,
+      "occupied_pillars": 2322,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "009160",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 58367,
+      "occupied_pillars": 8717,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "009160",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 58367,
+      "occupied_pillars": 16294,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "009160",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 58367,
+      "occupied_pillars": 19467,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "009160",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 15010,
+      "occupied_pillars": 3435,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "009160",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 15010,
+      "occupied_pillars": 5326,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "009160",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 15010,
+      "occupied_pillars": 5981,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "009532",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 54283,
+      "occupied_pillars": 4186,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "009532",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 54283,
+      "occupied_pillars": 8974,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "009532",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 54283,
+      "occupied_pillars": 11065,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "009532",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 20061,
+      "occupied_pillars": 1274,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "009532",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 20061,
+      "occupied_pillars": 2291,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "009532",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 20061,
+      "occupied_pillars": 2696,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "009896",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 59844,
+      "occupied_pillars": 6558,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "009896",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 59844,
+      "occupied_pillars": 13938,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "009896",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 59844,
+      "occupied_pillars": 17274,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "009896",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 8644,
+      "occupied_pillars": 2100,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "009896",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 8644,
+      "occupied_pillars": 3147,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "009896",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 8644,
+      "occupied_pillars": 3509,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "010272",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 60318,
+      "occupied_pillars": 8090,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "010272",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 60318,
+      "occupied_pillars": 15895,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "010272",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 60318,
+      "occupied_pillars": 19272,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "010272",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 12052,
+      "occupied_pillars": 2262,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "010272",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 12052,
+      "occupied_pillars": 3965,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "010272",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 12052,
+      "occupied_pillars": 4554,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "010694",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 55000,
+      "occupied_pillars": 5954,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "010694",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 55000,
+      "occupied_pillars": 11972,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "010694",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 55000,
+      "occupied_pillars": 14801,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "010694",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 5887,
+      "occupied_pillars": 1379,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "010694",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 5887,
+      "occupied_pillars": 2153,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "010694",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 5887,
+      "occupied_pillars": 2418,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "011080",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 43697,
+      "occupied_pillars": 6432,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "011080",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 43697,
+      "occupied_pillars": 12986,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "011080",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 43697,
+      "occupied_pillars": 15936,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "011080",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 8695,
+      "occupied_pillars": 1496,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "011080",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 8695,
+      "occupied_pillars": 2607,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "011080",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 8695,
+      "occupied_pillars": 3067,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "011445",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 58861,
+      "occupied_pillars": 8513,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "011445",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 58861,
+      "occupied_pillars": 16505,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "011445",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 58861,
+      "occupied_pillars": 20049,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "011445",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 10586,
+      "occupied_pillars": 1989,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "011445",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 10586,
+      "occupied_pillars": 3356,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "011445",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 10586,
+      "occupied_pillars": 3775,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "011842",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 62339,
+      "occupied_pillars": 6407,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "011842",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 62339,
+      "occupied_pillars": 12627,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "011842",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 62339,
+      "occupied_pillars": 15271,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "011842",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 9903,
+      "occupied_pillars": 2005,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "011842",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 9903,
+      "occupied_pillars": 3383,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "011842",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 9903,
+      "occupied_pillars": 3877,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "012193",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 56793,
+      "occupied_pillars": 6981,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "012193",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 56793,
+      "occupied_pillars": 14099,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "012193",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 56793,
+      "occupied_pillars": 17110,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "012193",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 2437,
+      "occupied_pillars": 722,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "012193",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 2437,
+      "occupied_pillars": 972,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "012193",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 2437,
+      "occupied_pillars": 1047,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "012613",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 59204,
+      "occupied_pillars": 6089,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "012613",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 59204,
+      "occupied_pillars": 13408,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "012613",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 59204,
+      "occupied_pillars": 16892,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "012613",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 9063,
+      "occupied_pillars": 1684,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "012613",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 9063,
+      "occupied_pillars": 2804,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "012613",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 9063,
+      "occupied_pillars": 3265,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "012999",
+      "sensor": "lidar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 53664,
+      "occupied_pillars": 6210,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "012999",
+      "sensor": "lidar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 53664,
+      "occupied_pillars": 12120,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "012999",
+      "sensor": "lidar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 53664,
+      "occupied_pillars": 14602,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "012999",
+      "sensor": "radar",
+      "voxel_xy": 0.4,
+      "points_in_roi": 1918,
+      "occupied_pillars": 345,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "012999",
+      "sensor": "radar",
+      "voxel_xy": 0.2,
+      "points_in_roi": 1918,
+      "occupied_pillars": 510,
+      "exceeds_cap": false
+    },
+    {
+      "frame": "012999",
+      "sensor": "radar",
+      "voxel_xy": 0.16,
+      "points_in_roi": 1918,
+      "occupied_pillars": 557,
+      "exceeds_cap": false
+    }
+  ]
+}

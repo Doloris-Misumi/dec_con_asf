@@ -1,0 +1,14 @@
+{
+  "pid": 317950,
+  "gpu": 2,
+  "gpu_uuid": "GPU-a669257e-8165-eea0-ffa3-c7016159e401",
+  "detached": true,
+  "command": [
+    "/home/hongsheng/dec_con_asf/v2x_taskdec/.venv/bin/python",
+    "-u",
+    "/home/hongsheng/dec_con_asf/analysis_exports/v2x_official_adverse_lr_audit_260920/cache_objdec_lr.py"
+  ],
+  "started_at": "2026-09-20T23:00:37.143920+08:00",
+  "gpu_memory_before_mib": 26,
+  "purpose": "Prediction cache, official subset pending"
+}

@@ -1,0 +1,242 @@
+[
+  {
+    "id": "seq20_rdr00628",
+    "camera_K_matches_rectified_T_params": true,
+    "raw_image_distortion_model_applied": true,
+    "zoom_xy": [
+      47.345001220703125,
+      59.345001220703125,
+      -3.8700000047683716,
+      2.1299999952316284
+    ],
+    "zoom_gt_index": 0
+  },
+  {
+    "id": "seq9_rdr00347",
+    "camera_K_matches_rectified_T_params": true,
+    "raw_image_distortion_model_applied": true,
+    "zoom_xy": [
+      1.5875000953674316,
+      13.587500095367432,
+      -6.4,
+      -3.2674999237060547
+    ],
+    "zoom_gt_index": 2
+  },
+  {
+    "id": "seq7_rdr00272",
+    "camera_K_matches_rectified_T_params": true,
+    "raw_image_distortion_model_applied": true,
+    "zoom_xy": [
+      6.821200370788574,
+      18.821200370788574,
+      0.576200008392334,
+      6.4
+    ],
+    "zoom_gt_index": 0
+  },
+  {
+    "id": "seq13_rdr00146",
+    "camera_K_matches_rectified_T_params": true,
+    "raw_image_distortion_model_applied": true,
+    "zoom_xy": [
+      54.4275016784668,
+      66.4275016784668,
+      -2.1575000286102295,
+      3.8424999713897705
+    ],
+    "zoom_gt_index": 1
+  },
+  {
+    "id": "seq22_rdr00484",
+    "camera_K_matches_rectified_T_params": true,
+    "raw_image_distortion_model_applied": true,
+    "zoom_xy": [
+      15.895000457763672,
+      27.895000457763672,
+      0.9525001049041748,
+      6.4
+    ],
+    "zoom_gt_index": 0
+  },
+  {
+    "id": "seq22_rdr00218",
+    "camera_K_matches_rectified_T_params": true,
+    "raw_image_distortion_model_applied": true,
+    "zoom_xy": [
+      59.80500030517578,
+      71.80500030517578,
+      1.927499771118164,
+      6.4
+    ],
+    "zoom_gt_index": 1
+  },
+  {
+    "id": "seq45_rdr00613",
+    "camera_K_matches_rectified_T_params": true,
+    "raw_image_distortion_model_applied": true,
+    "zoom_xy": [
+      6.060000419616699,
+      18.0600004196167,
+      3.1999998092651367,
+      6.4
+    ],
+    "zoom_gt_index": 0
+  },
+  {
+    "id": "seq39_rdr00582",
+    "camera_K_matches_rectified_T_params": true,
+    "raw_image_distortion_model_applied": true,
+    "zoom_xy": [
+      31.487499237060547,
+      43.48749923706055,
+      -3.522499978542328,
+      2.477500021457672
+    ],
+    "zoom_gt_index": 0
+  },
+  {
+    "id": "seq39_rdr00491",
+    "camera_K_matches_rectified_T_params": true,
+    "raw_image_distortion_model_applied": true,
+    "zoom_xy": [
+      40.967498779296875,
+      52.967498779296875,
+      2.117499828338623,
+      6.4
+    ],
+    "zoom_gt_index": 0
+  },
+  {
+    "id": "seq25_rdr00154",
+    "camera_K_matches_rectified_T_params": true,
+    "raw_image_distortion_model_applied": true,
+    "zoom_xy": [
+      21.280000686645508,
+      33.28000068664551,
+      -6.4,
+      -0.5425000190734863
+    ],
+    "zoom_gt_index": 3
+  },
+  {
+    "id": "seq24_rdr00286",
+    "camera_K_matches_rectified_T_params": true,
+    "raw_image_distortion_model_applied": true,
+    "zoom_xy": [
+      33.099998474121094,
+      45.099998474121094,
+      -2.9450000002980232,
+      3.0549999997019768
+    ],
+    "zoom_gt_index": 0
+  },
+  {
+    "id": "seq25_rdr00475",
+    "camera_K_matches_rectified_T_params": true,
+    "raw_image_distortion_model_applied": true,
+    "zoom_xy": [
+      38.400001525878906,
+      50.400001525878906,
+      0.5875000953674316,
+      6.4
+    ],
+    "zoom_gt_index": 0
+  },
+  {
+    "id": "seq43_rdr00169",
+    "camera_K_matches_rectified_T_params": true,
+    "raw_image_distortion_model_applied": true,
+    "zoom_xy": [
+      24.485000610351562,
+      36.48500061035156,
+      0.3900001049041748,
+      6.390000104904175
+    ],
+    "zoom_gt_index": 0
+  },
+  {
+    "id": "seq42_rdr00264",
+    "camera_K_matches_rectified_T_params": true,
+    "raw_image_distortion_model_applied": true,
+    "zoom_xy": [
+      44.900001525878906,
+      56.900001525878906,
+      0.31999993324279785,
+      6.319999933242798
+    ],
+    "zoom_gt_index": 0
+  },
+  {
+    "id": "seq58_rdr00258",
+    "camera_K_matches_rectified_T_params": true,
+    "raw_image_distortion_model_applied": true,
+    "zoom_xy": [
+      59.894996643066406,
+      71.8949966430664,
+      -1.850000023841858,
+      4.149999976158142
+    ],
+    "zoom_gt_index": 0
+  },
+  {
+    "id": "seq55_rdr00385",
+    "camera_K_matches_rectified_T_params": true,
+    "raw_image_distortion_model_applied": true,
+    "zoom_xy": [
+      35.290000915527344,
+      47.290000915527344,
+      -1.6449999809265137,
+      4.355000019073486
+    ],
+    "zoom_gt_index": 0
+  },
+  {
+    "id": "seq57_rdr00279",
+    "camera_K_matches_rectified_T_params": true,
+    "raw_image_distortion_model_applied": true,
+    "zoom_xy": [
+      46.796199798583984,
+      58.796199798583984,
+      -3.3862000107765198,
+      2.6137999892234802
+    ],
+    "zoom_gt_index": 0
+  },
+  {
+    "id": "seq51_rdr00237",
+    "camera_K_matches_rectified_T_params": true,
+    "raw_image_distortion_model_applied": true,
+    "zoom_xy": [
+      48.220001220703125,
+      60.220001220703125,
+      -4.610000014305115,
+      1.3899999856948853
+    ],
+    "zoom_gt_index": 0
+  },
+  {
+    "id": "seq52_rdr00550",
+    "camera_K_matches_rectified_T_params": true,
+    "raw_image_distortion_model_applied": true,
+    "zoom_xy": [
+      31.950000762939453,
+      43.95000076293945,
+      -6.039999961853027,
+      -0.039999961853027344
+    ],
+    "zoom_gt_index": 0
+  },
+  {
+    "id": "seq50_rdr00456",
+    "camera_K_matches_rectified_T_params": true,
+    "raw_image_distortion_model_applied": true,
+    "zoom_xy": [
+      37.44499969482422,
+      49.44499969482422,
+      -6.4,
+      -0.4249999523162842
+    ],
+    "zoom_gt_index": 1
+  }
+]

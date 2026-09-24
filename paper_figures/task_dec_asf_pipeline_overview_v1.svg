@@ -1,0 +1,442 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="980" viewBox="0 0 1800 980">
+<defs>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+<feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#17212b" flood-opacity="0.08"/>
+</filter>
+<marker id="arrow-ink" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M2,2 L10,6 L2,10 Z" fill="#17212b"/></marker>
+<marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M2,2 L10,6 L2,10 Z" fill="#245f9e"/></marker>
+<marker id="arrow-green" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M2,2 L10,6 L2,10 Z" fill="#0f7a55"/></marker>
+<marker id="arrow-amber" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M2,2 L10,6 L2,10 Z" fill="#d99a14"/></marker>
+<marker id="arrow-rose" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M2,2 L10,6 L2,10 Z" fill="#d65f7b"/></marker>
+</defs>
+<rect x="0" y="0" width="1800" height="980" fill="#fbfbf8"/>
+<text x="70" y="42" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="34" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="70" dy="0">Task-aware Decoupled Control for ASF Sensor Fusion</tspan>
+</text>
+<text x="72" y="86" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="72" dy="0">Shared target cues and modality-specific cues dynamically steer canonical patch-level fusion.</tspan>
+</text>
+<rect x="1395" y="48" width="250" height="36" rx="18.0" ry="18.0" fill="#ffffff" stroke="#a9b4bf" stroke-width="1.5"/>
+<text x="1520.0" y="66.0" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1520.0" dy="0">Pipeline overview</tspan>
+</text>
+<rect x="1660" y="48" width="78" height="36" rx="18.0" ry="18.0" fill="#ffffff" stroke="#a9b4bf" stroke-width="1.5"/>
+<text x="1699.0" y="66.0" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1699.0" dy="0">ICLR</tspan>
+</text>
+<rect x="70" y="128" width="250" height="34" rx="17.0" ry="17.0" fill="#f2f4f7" stroke="#a9b4bf" stroke-width="1.5"/>
+<text x="195.0" y="145.0" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="195.0" dy="0">1 Frozen sensor encoders</tspan>
+</text>
+<rect x="620" y="128" width="270" height="34" rx="17.0" ry="17.0" fill="#eaf3ff" stroke="#4f86c6" stroke-width="1.5"/>
+<text x="755.0" y="145.0" fill="#245f9e" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="755.0" dy="0">2 ASF canonical patch space</tspan>
+</text>
+<rect x="610" y="628" width="332" height="34" rx="17.0" ry="17.0" fill="#eef9f3" stroke="#2ca878" stroke-width="1.5"/>
+<text x="776.0" y="645.0" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="776.0" dy="0">3 Ours: decoupled fusion control</tspan>
+</text>
+<rect x="1420" y="128" width="190" height="34" rx="17.0" ry="17.0" fill="#f2f4f7" stroke="#a9b4bf" stroke-width="1.5"/>
+<text x="1515.0" y="145.0" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1515.0" dy="0">4 3D detection</tspan>
+</text>
+<rect x="70" y="190" width="230" height="94" rx="12" ry="12" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.5"/>
+<rect x="86" y="204" width="198" height="64" fill="#dceeff"/>
+<polygon points="86,268 284,268 212.6,235 157.4,235" fill="#5f6974"/>
+<line x1="185.0" y1="235" x2="185.0" y2="268" stroke="#f7d05c" stroke-width="4"/>
+<rect x="240" y="229" width="38" height="27" fill="none" stroke="#d99a14" stroke-width="3"/>
+<text x="185" y="172" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="185" dy="0">Camera</tspan>
+</text>
+<polyline points="304,237 345,237" fill="none" stroke="#7f8c99" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="352" y="198" width="205" height="78" rx="14" ry="14" fill="#f2f4f7" stroke="#a9b4bf" stroke-width="1.8"/>
+<text x="454" y="225" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="454" dy="0">Frozen Camera</tspan>
+</text>
+<text x="454" y="248" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="454" dy="0">backbone</tspan>
+</text>
+<rect x="70" y="330" width="230" height="94" rx="12" ry="12" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.5"/>
+<circle cx="197.0" cy="377.0" r="2.4" fill="#d99a14" stroke="#d99a14" stroke-width="1"/>
+<circle cx="200.99611852808312" cy="382.63915490926996" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="195.85745710291732" cy="389.9934589944571" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="180.42110034657154" cy="394.97443149543426" r="2.4" fill="#d99a14" stroke="#d99a14" stroke-width="1"/>
+<circle cx="158.9508135788982" cy="393.6953755799803" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="139.98399983500477" cy="384.4313066190548" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="133.07930466474386" cy="368.8377072914032" r="2.4" fill="#d99a14" stroke="#d99a14" stroke-width="1"/>
+<circle cx="144.6680908957323" cy="351.8298395878862" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="174.67760962211182" cy="340.0334191774765" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="215.41834549822704" cy="339.2950057977988" r="2.4" fill="#d99a14" stroke="#d99a14" stroke-width="1"/>
+<circle cx="253.44644835681106" cy="352.1640820288465" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="198.998783051353" cy="376.89847607647187" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="202.82779882443504" cy="383.10399874634084" r="2.4" fill="#d99a14" stroke="#d99a14" stroke-width="1"/>
+<circle cx="197.02707713806362" cy="390.90694783887926" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="180.6010218864939" cy="396.0973511238067" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="158.07097478055678" cy="394.726966723639" r="2.4" fill="#d99a14" stroke="#d99a14" stroke-width="1"/>
+<circle cx="138.25823330993182" cy="385.08719309303905" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="130.95807791428476" cy="368.9265946572931" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="142.72617663982902" cy="351.30891268941303" r="2.4" fill="#d99a14" stroke="#d99a14" stroke-width="1"/>
+<circle cx="173.46268458322075" cy="339.0265312122456" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="215.29879670878748" cy="338.06643693810094" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="254.4998763082184" cy="351.0520795452591" r="2.4" fill="#d99a14" stroke="#d99a14" stroke-width="1"/>
+<circle cx="200.99443704797514" cy="376.76796548898085" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="204.68425188832856" cy="383.5431562604023" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="198.24223277884718" cy="391.80555941147867" r="2.4" fill="#d99a14" stroke="#d99a14" stroke-width="1"/>
+<circle cx="180.83402967254816" cy="397.22059640805173" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="157.2362900952475" cy="395.77407427087246" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="136.55641903388886" cy="385.7693436249186" r="2.4" fill="#d99a14" stroke="#d99a14" stroke-width="1"/>
+<circle cx="128.8324220240002" cy="369.0448781748002" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="140.75250806519398" cy="350.8119161470817" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="172.19774687913542" cy="338.03102579876696" r="2.4" fill="#d99a14" stroke="#d99a14" stroke-width="1"/>
+<circle cx="215.12549536826043" cy="336.8332227460664" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="255.51160082011984" cy="349.9205884423298" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="202.98591979769154" cy="376.60849849057803" r="2.4" fill="#d99a14" stroke="#d99a14" stroke-width="1"/>
+<circle cx="206.56456222446616" cy="383.956351123995" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="199.5024099430278" cy="392.6887931982649" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="181.12016604585062" cy="398.3435923351176" r="2.4" fill="#d99a14" stroke="#d99a14" stroke-width="1"/>
+<circle cx="156.44734696251612" cy="396.8362210707489" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="134.87951481322096" cy="386.47752245073383" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="126.70337879538846" cy="369.1926350970301" r="2.4" fill="#d99a14" stroke="#d99a14" stroke-width="1"/>
+<circle cx="138.74789829449446" cy="350.33921823976965" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="170.8831355506066" cy="337.0474528123609" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="214.89820219826254" cy="335.5959302078066" r="2.4" fill="#d99a14" stroke="#d99a14" stroke-width="1"/>
+<circle cx="195.5596744566705" cy="372.82966238786776" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="204.97219007525626" cy="376.4201154094604" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="208.4678054474538" cy="384.3433158391042" r="2.4" fill="#d99a14" stroke="#d99a14" stroke-width="1"/>
+<circle cx="200.80707849416893" cy="393.5561535846178" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="181.45945500063993" cy="399.4657633675115" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="155.70471775671194" cy="397.9129241757709" r="2.4" fill="#d99a14" stroke="#d99a14" stroke-width="1"/>
+<circle cx="133.22847125720347" cy="387.2114844914548" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="124.57199290531918" cy="369.3699326696304" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="136.7131725459649" cy="349.8911795892309" r="2.4" fill="#d99a14" stroke="#d99a14" stroke-width="1"/>
+<circle cx="169.51920729681729" cy="336.07635915723614" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="214.61669578284312" cy="334.35512894146325" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="197.06782626090154" cy="372.1001337034211" r="2.4" fill="#d99a14" stroke="#d99a14" stroke-width="1"/>
+<circle cx="206.95220792419585" cy="376.20286663976833" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="210.3930485463796" cy="384.70379181768084" r="2.4" fill="#69a98d" stroke="#69a98d" stroke-width="1"/>
+<circle cx="202.1556923878788" cy="394.4071500009184" r="2.4" fill="#d99a14" stroke="#d99a14" stroke-width="1"/>
+<line x1="94" y1="404" x2="276" y2="404" stroke="#8aa1b2" stroke-width="2"/>
+<text x="185" y="312" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="185" dy="0">LiDAR</tspan>
+</text>
+<polyline points="304,377 345,377" fill="none" stroke="#7f8c99" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="352" y="338" width="205" height="78" rx="14" ry="14" fill="#f2f4f7" stroke="#a9b4bf" stroke-width="1.8"/>
+<text x="454" y="365" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="454" dy="0">Frozen LiDAR</tspan>
+</text>
+<text x="454" y="388" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="454" dy="0">backbone</tspan>
+</text>
+<rect x="70" y="470" width="230" height="94" rx="12" ry="12" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.5"/>
+<path d="M 158.4,554.8 A 28,13.4 0 0 1 211.6,554.8" fill="none" stroke="#1f9bd1" stroke-width="3"/>
+<path d="M 150.8,553.7 A 36,17.3 0 0 1 219.2,553.7" fill="none" stroke="#174f89" stroke-width="3"/>
+<path d="M 143.2,552.5 A 44,21.1 0 0 1 226.8,552.5" fill="none" stroke="#1f9bd1" stroke-width="3"/>
+<path d="M 135.5,551.3 A 52,25.0 0 0 1 234.5,551.3" fill="none" stroke="#174f89" stroke-width="3"/>
+<path d="M 127.9,550.1 A 60,28.8 0 0 1 242.1,550.1" fill="none" stroke="#1f9bd1" stroke-width="3"/>
+<path d="M 120.3,548.9 A 68,32.6 0 0 1 249.7,548.9" fill="none" stroke="#174f89" stroke-width="3"/>
+<path d="M 112.7,547.7 A 76,36.5 0 0 1 257.3,547.7" fill="none" stroke="#1f9bd1" stroke-width="3"/>
+<path d="M 105.1,546.5 A 84,40.3 0 0 1 264.9,546.5" fill="none" stroke="#174f89" stroke-width="3"/>
+<rect x="130" y="502" width="48" height="24" fill="none" stroke="#ffd34d" stroke-width="3"/>
+<rect x="225" y="511" width="34" height="18" fill="none" stroke="#f06275" stroke-width="3"/>
+<text x="185" y="452" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="185" dy="0">4D Radar</tspan>
+</text>
+<polyline points="304,517 345,517" fill="none" stroke="#7f8c99" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="352" y="478" width="205" height="78" rx="14" ry="14" fill="#f2f4f7" stroke="#a9b4bf" stroke-width="1.8"/>
+<text x="454" y="505" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="454" dy="0">Frozen 4D Radar</tspan>
+</text>
+<text x="454" y="528" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="454" dy="0">backbone</tspan>
+</text>
+<rect x="620" y="170" width="735" height="425" rx="22" ry="22" fill="#eaf3ff" stroke="#4f86c6" stroke-width="2.2" filter="url(#shadow)"/>
+<text x="650" y="197" fill="#245f9e" font-family="DejaVu Sans, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="650" dy="0">ASF Canonical Patch Fusion</tspan>
+</text>
+<text x="650" y="226" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="650" dy="0">To-Embed -&gt; unified canonical projection -&gt; aware-query MHA -&gt; PFT</tspan>
+</text>
+<rect x="1136" y="190" width="170" height="34" rx="17.0" ry="17.0" fill="#ffffff" stroke="#4f86c6" stroke-width="1.5"/>
+<text x="1221.0" y="207.0" fill="#245f9e" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1221.0" dy="0">ASF baseline path</tspan>
+</text>
+<polyline points="558,237 600,237 705,288 740,288" fill="none" stroke="#7f8c99" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="740" y="260" width="104" height="56" rx="12" ry="12" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.6"/>
+<text x="792" y="280" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="792" dy="0">To-Embed</tspan>
+</text>
+<text x="792" y="299" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="792" dy="0">dim 256</tspan>
+</text>
+<polyline points="844,288 873,288" fill="none" stroke="#7f8c99" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="875" y="260" width="88" height="56" rx="12" ry="12" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.6"/>
+<text x="919" y="280" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="919" dy="0">UCP</tspan>
+</text>
+<text x="919" y="299" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="919" dy="0">2x2</tspan>
+</text>
+<polyline points="963,288 996,288" fill="none" stroke="#7f8c99" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="1002" y="257" width="17" height="17" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="1024" y="257" width="17" height="17" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="1046" y="257" width="17" height="17" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="1068" y="257" width="17" height="17" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="1090" y="257" width="17" height="17" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="1002" y="279" width="17" height="17" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="1024" y="279" width="17" height="17" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="1046" y="279" width="17" height="17" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="1068" y="279" width="17" height="17" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="1090" y="279" width="17" height="17" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="1002" y="301" width="17" height="17" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="1024" y="301" width="17" height="17" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="1046" y="301" width="17" height="17" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="1068" y="301" width="17" height="17" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="1090" y="301" width="17" height="17" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<text x="1058" y="324" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1058" dy="0">cam patches</tspan>
+</text>
+<polyline points="1117,285 1158,372" fill="none" stroke="#245f9e" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="558,377 600,377 705,393 740,393" fill="none" stroke="#7f8c99" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="740" y="365" width="104" height="56" rx="12" ry="12" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.6"/>
+<text x="792" y="385" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="792" dy="0">To-Embed</tspan>
+</text>
+<text x="792" y="404" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="792" dy="0">dim 256</tspan>
+</text>
+<polyline points="844,393 873,393" fill="none" stroke="#7f8c99" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="875" y="365" width="88" height="56" rx="12" ry="12" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.6"/>
+<text x="919" y="385" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="919" dy="0">UCP</tspan>
+</text>
+<text x="919" y="404" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="919" dy="0">2x2</tspan>
+</text>
+<polyline points="963,393 996,393" fill="none" stroke="#7f8c99" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="1002" y="362" width="17" height="17" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="1024" y="362" width="17" height="17" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="1046" y="362" width="17" height="17" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="1068" y="362" width="17" height="17" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="1090" y="362" width="17" height="17" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="1002" y="384" width="17" height="17" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="1024" y="384" width="17" height="17" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="1046" y="384" width="17" height="17" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="1068" y="384" width="17" height="17" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="1090" y="384" width="17" height="17" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="1002" y="406" width="17" height="17" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="1024" y="406" width="17" height="17" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="1046" y="406" width="17" height="17" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="1068" y="406" width="17" height="17" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="1090" y="406" width="17" height="17" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<text x="1058" y="429" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1058" dy="0">lidar patches</tspan>
+</text>
+<polyline points="1117,390 1158,372" fill="none" stroke="#245f9e" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<polyline points="558,517 600,517 705,498 740,498" fill="none" stroke="#7f8c99" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="740" y="470" width="104" height="56" rx="12" ry="12" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.6"/>
+<text x="792" y="490" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="792" dy="0">To-Embed</tspan>
+</text>
+<text x="792" y="509" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="792" dy="0">dim 256</tspan>
+</text>
+<polyline points="844,498 873,498" fill="none" stroke="#7f8c99" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="875" y="470" width="88" height="56" rx="12" ry="12" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.6"/>
+<text x="919" y="490" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="919" dy="0">UCP</tspan>
+</text>
+<text x="919" y="509" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="919" dy="0">2x2</tspan>
+</text>
+<polyline points="963,498 996,498" fill="none" stroke="#7f8c99" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="1002" y="467" width="17" height="17" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="1024" y="467" width="17" height="17" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="1046" y="467" width="17" height="17" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="1068" y="467" width="17" height="17" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="1090" y="467" width="17" height="17" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="1002" y="489" width="17" height="17" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="1024" y="489" width="17" height="17" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="1046" y="489" width="17" height="17" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="1068" y="489" width="17" height="17" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="1090" y="489" width="17" height="17" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="1002" y="511" width="17" height="17" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="1024" y="511" width="17" height="17" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="1046" y="511" width="17" height="17" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="1068" y="511" width="17" height="17" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="1090" y="511" width="17" height="17" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<text x="1058" y="534" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1058" dy="0">radar patches</tspan>
+</text>
+<polyline points="1117,495 1158,372" fill="none" stroke="#245f9e" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<rect x="1030" y="528" width="208" height="44" rx="22" ry="22" fill="#ffffff" stroke="#4f86c6" stroke-width="1.7"/>
+<text x="1134" y="550" fill="#245f9e" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1134" dy="0">learned aware query q_p</tspan>
+</text>
+<polyline points="1134,528 1165,430" fill="none" stroke="#245f9e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<rect x="1160" y="328" width="112" height="86" rx="15" ry="15" fill="#ffffff" stroke="#4f86c6" stroke-width="2"/>
+<text x="1216" y="359" fill="#245f9e" font-family="DejaVu Sans, Arial, sans-serif" font-size="20" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1216" dy="0">MHA</tspan>
+</text>
+<text x="1216" y="386" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1216" dy="0">patch K/V</tspan>
+</text>
+<polyline points="1272,371 1306,371" fill="none" stroke="#245f9e" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<rect x="1308" y="333" width="58" height="76" rx="12" ry="12" fill="#ffffff" stroke="#4f86c6" stroke-width="1.7"/>
+<text x="1337" y="359" fill="#245f9e" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1337" dy="0">PFT</tspan>
+</text>
+<text x="1337" y="384" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1337" dy="0">reshape</tspan>
+</text>
+<polyline points="1366,371 1420,315" fill="none" stroke="#245f9e" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<rect x="1420" y="240" width="280" height="130" rx="16" ry="16" fill="#ffffff" stroke="#a9b4bf" stroke-width="1.8" filter="url(#shadow)"/>
+<text x="1560" y="266" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1560" dy="0">Fused BEV feature</tspan>
+</text>
+<line x1="1447" y1="294" x2="1490" y2="342" stroke="#4f86c6" stroke-opacity="0.37" stroke-width="2"/>
+<line x1="1483" y1="294" x2="1513" y2="342" stroke="#4f86c6" stroke-opacity="0.37" stroke-width="2"/>
+<line x1="1519" y1="294" x2="1536" y2="342" stroke="#4f86c6" stroke-opacity="0.37" stroke-width="2"/>
+<line x1="1555" y1="294" x2="1559" y2="342" stroke="#4f86c6" stroke-opacity="0.37" stroke-width="2"/>
+<line x1="1591" y1="294" x2="1582" y2="342" stroke="#4f86c6" stroke-opacity="0.37" stroke-width="2"/>
+<line x1="1627" y1="294" x2="1605" y2="342" stroke="#4f86c6" stroke-opacity="0.37" stroke-width="2"/>
+<polyline points="1560,370 1560,423" fill="none" stroke="#7f8c99" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="1420" y="424" width="280" height="100" rx="16" ry="16" fill="#f2f4f7" stroke="#a9b4bf" stroke-width="1.8"/>
+<text x="1560" y="454" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1560" dy="0">Detection head</tspan>
+</text>
+<text x="1560" y="482" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1560" dy="0">classification + 3D boxes</tspan>
+</text>
+<polyline points="1560,524 1560,578" fill="none" stroke="#7f8c99" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="1435" y="580" width="250" height="112" rx="12" ry="12" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.5"/>
+<line x1="1457" y1="598" x2="1457" y2="671" stroke="#d9e1e8" stroke-width="1"/>
+<line x1="1485" y1="598" x2="1485" y2="671" stroke="#d9e1e8" stroke-width="1"/>
+<line x1="1513" y1="598" x2="1513" y2="671" stroke="#d9e1e8" stroke-width="1"/>
+<line x1="1541" y1="598" x2="1541" y2="671" stroke="#d9e1e8" stroke-width="1"/>
+<line x1="1569" y1="598" x2="1569" y2="671" stroke="#d9e1e8" stroke-width="1"/>
+<line x1="1597" y1="598" x2="1597" y2="671" stroke="#d9e1e8" stroke-width="1"/>
+<line x1="1625" y1="598" x2="1625" y2="671" stroke="#d9e1e8" stroke-width="1"/>
+<line x1="1453" y1="602" x2="1667" y2="602" stroke="#d9e1e8" stroke-width="1"/>
+<line x1="1453" y1="620" x2="1667" y2="620" stroke="#d9e1e8" stroke-width="1"/>
+<line x1="1453" y1="638" x2="1667" y2="638" stroke="#d9e1e8" stroke-width="1"/>
+<line x1="1453" y1="656" x2="1667" y2="656" stroke="#d9e1e8" stroke-width="1"/>
+<polyline points="1517,634 1567,624 1583,644 1533,655 1517,634" fill="none" stroke="#d99a14" stroke-width="3"/>
+<polyline points="1591,610 1635,617 1628,638 1584,631 1591,610" fill="none" stroke="#d99a14" stroke-width="3"/>
+<polyline points="1477,654 1513,646 1523,662 1487,671 1477,654" fill="none" stroke="#d99a14" stroke-width="3"/>
+<text x="1560" y="680" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1560" dy="0">3D boxes</tspan>
+</text>
+<rect x="610" y="670" width="795" height="235" rx="22" ry="22" fill="#eef9f3" stroke="#2ca878" stroke-width="2.4" filter="url(#shadow)"/>
+<text x="640" y="699" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="22" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="640" dy="0">Task-aware Decoupled Controller</tspan>
+</text>
+<text x="640" y="728" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="640" dy="0">Common target information and modality-specific evidence are used as control signals.</tspan>
+</text>
+<rect x="645" y="770" width="150" height="64" rx="14" ry="14" fill="#ffffff" stroke="#2ca878" stroke-width="1.6"/>
+<text x="720" y="792" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="720" dy="0">canonical patch</tspan>
+</text>
+<text x="720" y="813" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="720" dy="0">tokens z_m,p</tspan>
+</text>
+<polyline points="720,595 720,770" fill="none" stroke="#0f7a55" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 7" marker-end="url(#arrow-green)"/>
+<polyline points="795,802 835,802" fill="none" stroke="#0f7a55" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-green)"/>
+<rect x="838" y="742" width="180" height="120" rx="16" ry="16" fill="#ffffff" stroke="#2ca878" stroke-width="1.8"/>
+<text x="928" y="768" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="17" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="928" dy="0">Decouple</tspan>
+</text>
+<rect x="860" y="790" width="64" height="44" rx="11" ry="11" fill="#e2f6ec" stroke="#2ca878" stroke-width="1.3"/>
+<text x="892" y="807" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="892" dy="0">common</tspan>
+</text>
+<text x="892" y="824" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="892" dy="0">c_m,p</tspan>
+</text>
+<rect x="934" y="790" width="64" height="44" rx="11" ry="11" fill="#fff5d8" stroke="#d99a14" stroke-width="1.3"/>
+<text x="966" y="807" fill="#d99a14" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="966" dy="0">unique</tspan>
+</text>
+<text x="966" y="824" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="966" dy="0">u_m,p</tspan>
+</text>
+<polyline points="1018,802 1062,770" fill="none" stroke="#0f7a55" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-green)"/>
+<rect x="1062" y="742" width="150" height="56" rx="14" ry="14" fill="#fff0f3" stroke="#d65f7b" stroke-width="1.6"/>
+<text x="1137" y="762" fill="#d65f7b" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1137" dy="0">Foreground gate</tspan>
+</text>
+<text x="1137" y="782" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1137" dy="0">g_p</tspan>
+</text>
+<polyline points="1018,802 1062,840" fill="none" stroke="#0f7a55" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-green)"/>
+<rect x="1062" y="812" width="150" height="56" rx="14" ry="14" fill="#fff1c9" stroke="#d99a14" stroke-width="1.6"/>
+<text x="1137" y="832" fill="#d99a14" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1137" dy="0">Sensor reliability</tspan>
+</text>
+<text x="1137" y="852" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1137" dy="0">alpha_m,p</tspan>
+</text>
+<polyline points="1018,802 1240,805" fill="none" stroke="#0f7a55" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-green)"/>
+<rect x="1240" y="777" width="150" height="56" rx="14" ry="14" fill="#f2efff" stroke="#7d6ad8" stroke-width="1.6"/>
+<text x="1315" y="797" fill="#7d6ad8" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1315" dy="0">Class context</tspan>
+</text>
+<text x="1315" y="817" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1315" dy="0">t_p</tspan>
+</text>
+<rect x="1240" y="840" width="128" height="38" rx="12" ry="12" fill="#ffffff" stroke="#2ca878" stroke-width="1.2"/>
+<text x="1304" y="859" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1304" dy="0">train-only GT loss</tspan>
+</text>
+<polyline points="1304,840 1304,812" fill="none" stroke="#7f8c99" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="6 5" marker-end="url(#arrow-ink)"/>
+<polyline points="1137,812 1137,635 1173,421" fill="none" stroke="#d99a14" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 7" marker-end="url(#arrow-amber)"/>
+<text x="1122" y="625" fill="#d99a14" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="end" dominant-baseline="middle">
+<tspan x="1122" dy="0">scale K/V tokens</tspan>
+</text>
+<polyline points="1137,742 1088,620 1006,486" fill="none" stroke="#d65f7b" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="8 7" marker-end="url(#arrow-rose)"/>
+<text x="1000" y="620" fill="#d65f7b" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1000" dy="0">gate residual</tspan>
+</text>
+<polyline points="1315,777 1315,630 1162,528" fill="none" stroke="#0f7a55" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 7" marker-end="url(#arrow-green)"/>
+<text x="1330" y="627" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="1330" dy="0">query delta</tspan>
+</text>
+<polyline points="1315,833 1376,803 1376,392 1366,392" fill="none" stroke="#0f7a55" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 7" marker-end="url(#arrow-green)"/>
+<text x="1385" y="793" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="1385" dy="0">fused delta</tspan>
+</text>
+<rect x="72" y="690" width="445" height="190" rx="18" ry="18" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.5"/>
+<text x="98" y="720" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="98" dy="0">Core idea</tspan>
+</text>
+<text x="98" y="754" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="98" dy="0">Decompose each modality patch token,</tspan>
+<tspan x="98" dy="20">then predict task-conditioned controls</tspan>
+<tspan x="98" dy="20">that modulate ASF instead of replacing it.</tspan>
+</text>
+<text x="98" y="842" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="98" dy="0">z&#x27;_m,p = scale(g_p, alpha_m,p) * (z_m,p + Delta(c_m,p, u_m,p))</tspan>
+</text>
+<text x="98" y="866" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="98" dy="0">q&#x27;_p = q_p + Delta q(t_p)</tspan>
+</text>
+<rect x="72" y="906" width="1565" height="1" rx="0" ry="0" fill="#d9e1e8" stroke="#d9e1e8" stroke-width="0"/>
+<rect x="84" y="925" width="112" height="28" rx="14.0" ry="14.0" fill="#eaf3ff" stroke="#4f86c6" stroke-width="1.5"/>
+<text x="140.0" y="939.0" fill="#245f9e" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="140.0" dy="0">ASF</tspan>
+</text>
+<text x="208" y="930" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="208" dy="0">frozen encoders and canonical patch fusion are inherited from ASF</tspan>
+</text>
+<rect x="610" y="925" width="112" height="28" rx="14.0" ry="14.0" fill="#eef9f3" stroke="#2ca878" stroke-width="1.5"/>
+<text x="666.0" y="939.0" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="666.0" dy="0">Ours</tspan>
+</text>
+<text x="734" y="930" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="734" dy="0">decoupled controller provides patch-wise gate, reliability, and task context</tspan>
+</text>
+<polyline points="1230,940 1320,940" fill="none" stroke="#0f7a55" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="9 7" marker-end="url(#arrow-green)"/>
+<text x="1332" y="930" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="1332" dy="0">control signal</tspan>
+</text>
+</svg>

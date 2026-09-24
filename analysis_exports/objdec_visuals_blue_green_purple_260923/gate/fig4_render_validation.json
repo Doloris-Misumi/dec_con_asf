@@ -1,0 +1,26 @@
+{
+  "scope": "CPU-only Fig.4 clarification; no inference or Fig.5 changes",
+  "script_sha256": "add72416a9f25c251e76cafde0689b767c98ac1ba4dba116dbfafd41c5226dd9",
+  "source_npz_sha256": {
+    "seq20_rdr00628.npz": "3dc507232c949982278e28a0c06397326238e5c41ddcc69997ff9a65038606dc",
+    "seq13_rdr00146.npz": "be10ea01b74f965d0fcdba6b3122ec84ec7581298a0b13d623b30f378b4d6357",
+    "seq39_rdr00582.npz": "71589eee1a56fd55cd92605fef9a6b55b0a20bcfd571225da5e5eee77d085fdc",
+    "seq25_rdr00154.npz": "2e7343e3b4f2905cf4a71f542d474cccc6454a7cdb80b0d3758f2e6c18894171",
+    "seq50_rdr00456.npz": "b572e063a12d3c0a60a621d0efd8f4735b21342a930b14bfc193545e1dadd295",
+    "seq43_rdr00169.npz": "02af7aca03505740ae77937af46c9e3e243a82d3df13dcd31b44c289ec77ebe2",
+    "seq55_rdr00385.npz": "e977cce88fd162dc8672b0abbb960563cc435d433c2e23bc408c28375d160fd9"
+  },
+  "raw_and_overlay_gate_arrays_identical": true,
+  "gate_color_range": [
+    0,
+    1
+  ],
+  "gt_overlay_style": "green dashed",
+  "GT_reaches_loss_not_gate_in_schematic": true,
+  "modality_colors": {
+    "Camera": "#4A9EEB",
+    "LiDAR": "#58B77A",
+    "4D Radar": "#9672D0"
+  },
+  "gate_colormap": "magma; scalar gate magnitude, not modality identity"
+}

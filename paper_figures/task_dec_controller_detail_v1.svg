@@ -1,0 +1,255 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1700" height="850" viewBox="0 0 1700 850">
+<defs>
+<filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+<feDropShadow dx="0" dy="3" stdDeviation="4" flood-color="#17212b" flood-opacity="0.08"/>
+</filter>
+<marker id="arrow-ink" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M2,2 L10,6 L2,10 Z" fill="#17212b"/></marker>
+<marker id="arrow-blue" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M2,2 L10,6 L2,10 Z" fill="#245f9e"/></marker>
+<marker id="arrow-green" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M2,2 L10,6 L2,10 Z" fill="#0f7a55"/></marker>
+<marker id="arrow-amber" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M2,2 L10,6 L2,10 Z" fill="#d99a14"/></marker>
+<marker id="arrow-rose" markerWidth="12" markerHeight="12" refX="10" refY="6" orient="auto" markerUnits="strokeWidth"><path d="M2,2 L10,6 L2,10 Z" fill="#d65f7b"/></marker>
+</defs>
+<rect x="0" y="0" width="1700" height="850" fill="#fbfbf8"/>
+<text x="72" y="56" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="28" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="72" dy="0">Task-aware Decoupled Controller</tspan>
+</text>
+<text x="74" y="92" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="74" dy="0">A DecAlign-inspired common/unique split adapted from representation alignment to patch-level fusion control.</tspan>
+</text>
+<rect x="70" y="170" width="250" height="470" rx="18" ry="18" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.5"/>
+<text x="95" y="205" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="95" dy="0">Canonical patch tokens</tspan>
+</text>
+<rect x="100" y="250" width="15" height="15" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="120" y="250" width="15" height="15" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="140" y="250" width="15" height="15" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="160" y="250" width="15" height="15" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="180" y="250" width="15" height="15" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="100" y="270" width="15" height="15" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="120" y="270" width="15" height="15" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="140" y="270" width="15" height="15" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="160" y="270" width="15" height="15" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="180" y="270" width="15" height="15" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="100" y="290" width="15" height="15" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="120" y="290" width="15" height="15" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="140" y="290" width="15" height="15" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="160" y="290" width="15" height="15" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<rect x="180" y="290" width="15" height="15" rx="4" ry="4" fill="#d9ebff" stroke="#4f86c6" stroke-width="1"/>
+<text x="148" y="320" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="148" dy="0">Camera z_m,p</tspan>
+</text>
+<polyline points="195,275 320,405" fill="none" stroke="#7f8c99" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="100" y="365" width="15" height="15" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="120" y="365" width="15" height="15" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="140" y="365" width="15" height="15" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="160" y="365" width="15" height="15" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="180" y="365" width="15" height="15" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="100" y="385" width="15" height="15" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="120" y="385" width="15" height="15" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="140" y="385" width="15" height="15" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="160" y="385" width="15" height="15" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="180" y="385" width="15" height="15" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="100" y="405" width="15" height="15" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="120" y="405" width="15" height="15" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="140" y="405" width="15" height="15" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="160" y="405" width="15" height="15" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<rect x="180" y="405" width="15" height="15" rx="4" ry="4" fill="#def5ea" stroke="#2ca878" stroke-width="1"/>
+<text x="148" y="435" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="148" dy="0">LiDAR z_m,p</tspan>
+</text>
+<polyline points="195,390 320,405" fill="none" stroke="#7f8c99" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="100" y="480" width="15" height="15" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="120" y="480" width="15" height="15" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="140" y="480" width="15" height="15" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="160" y="480" width="15" height="15" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="180" y="480" width="15" height="15" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="100" y="500" width="15" height="15" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="120" y="500" width="15" height="15" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="140" y="500" width="15" height="15" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="160" y="500" width="15" height="15" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="180" y="500" width="15" height="15" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="100" y="520" width="15" height="15" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="120" y="520" width="15" height="15" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="140" y="520" width="15" height="15" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="160" y="520" width="15" height="15" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<rect x="180" y="520" width="15" height="15" rx="4" ry="4" fill="#fff0c7" stroke="#d99a14" stroke-width="1"/>
+<text x="148" y="550" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="148" dy="0">4D Radar z_m,p</tspan>
+</text>
+<polyline points="195,505 320,405" fill="none" stroke="#7f8c99" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="360" y="300" width="190" height="210" rx="18" ry="18" fill="#eef9f3" stroke="#2ca878" stroke-width="2.0"/>
+<text x="455" y="336" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="455" dy="0">Modality-wise</tspan>
+</text>
+<text x="455" y="361" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="19" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="455" dy="0">Patch Decoupling</tspan>
+</text>
+<rect x="395" y="390" width="56" height="58" rx="12" ry="12" fill="#e2f6ec" stroke="#2ca878" stroke-width="1.2"/>
+<text x="423" y="414" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="423" dy="0">E_com</tspan>
+</text>
+<rect x="460" y="390" width="56" height="58" rx="12" ry="12" fill="#fff5d8" stroke="#d99a14" stroke-width="1.2"/>
+<text x="488" y="414" fill="#d99a14" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="488" dy="0">E_uni</tspan>
+</text>
+<rect x="610" y="150" width="650" height="245" rx="20" ry="20" fill="#eef9f3" stroke="#2ca878" stroke-width="1.9"/>
+<rect x="635" y="178" width="160" height="30" rx="15.0" ry="15.0" fill="#ffffff" stroke="#2ca878" stroke-width="1.5"/>
+<text x="715.0" y="193.0" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="715.0" dy="0">Common stream</tspan>
+</text>
+<text x="820" y="184" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="820" dy="0">shared target semantics across modalities</tspan>
+</text>
+<rect x="650" y="235" width="120" height="34" rx="9" ry="9" fill="#e2f6ec" stroke="#2ca878" stroke-width="1.1"/>
+<text x="710" y="252" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="710" dy="0">c_1,p</tspan>
+</text>
+<polyline points="550,388 650,252" fill="none" stroke="#0f7a55" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-green)"/>
+<rect x="650" y="285" width="120" height="34" rx="9" ry="9" fill="#e2f6ec" stroke="#2ca878" stroke-width="1.1"/>
+<text x="710" y="302" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="710" dy="0">c_2,p</tspan>
+</text>
+<polyline points="550,388 650,302" fill="none" stroke="#0f7a55" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-green)"/>
+<rect x="650" y="335" width="120" height="34" rx="9" ry="9" fill="#e2f6ec" stroke="#2ca878" stroke-width="1.1"/>
+<text x="710" y="352" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="710" dy="0">c_3,p</tspan>
+</text>
+<polyline points="550,388 650,352" fill="none" stroke="#0f7a55" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-green)"/>
+<rect x="845" y="250" width="145" height="82" rx="14" ry="14" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.4"/>
+<text x="918" y="276" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="918" dy="0">aggregate</tspan>
+</text>
+<text x="918" y="300" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="918" dy="0">mean(c_m,p)</tspan>
+</text>
+<polyline points="770,252 845,291" fill="none" stroke="#7f8c99" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<polyline points="770,302 845,291" fill="none" stroke="#7f8c99" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<polyline points="770,352 845,291" fill="none" stroke="#7f8c99" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="1055" y="223" width="160" height="60" rx="13" ry="13" fill="#ffffff" stroke="#2ca878" stroke-width="1.3"/>
+<text x="1135" y="246" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1135" dy="0">common align</tspan>
+</text>
+<text x="1135" y="266" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1135" dy="0">cross-modal</tspan>
+</text>
+<rect x="1055" y="305" width="160" height="60" rx="13" ry="13" fill="#ffffff" stroke="#d65f7b" stroke-width="1.3"/>
+<text x="1135" y="328" fill="#d65f7b" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1135" dy="0">orthogonality</tspan>
+</text>
+<text x="1135" y="348" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1135" dy="0">common vs unique</tspan>
+</text>
+<polyline points="990,291 1055,253" fill="none" stroke="#0f7a55" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-green)"/>
+<polyline points="990,291 1055,335" fill="none" stroke="#d65f7b" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-rose)"/>
+<rect x="610" y="455" width="650" height="245" rx="20" ry="20" fill="#fff1c9" stroke="#d99a14" stroke-width="1.9"/>
+<rect x="635" y="483" width="155" height="30" rx="15.0" ry="15.0" fill="#ffffff" stroke="#d99a14" stroke-width="1.5"/>
+<text x="712.5" y="498.0" fill="#d99a14" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="712.5" dy="0">Unique stream</tspan>
+</text>
+<text x="815" y="489" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="815" dy="0">sensor-specific evidence and reliability cues</tspan>
+</text>
+<rect x="650" y="540" width="120" height="34" rx="9" ry="9" fill="#fff8e4" stroke="#d99a14" stroke-width="1.1"/>
+<text x="710" y="557" fill="#d99a14" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="710" dy="0">u_1,p</tspan>
+</text>
+<polyline points="550,428 650,557" fill="none" stroke="#d99a14" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-amber)"/>
+<rect x="650" y="590" width="120" height="34" rx="9" ry="9" fill="#fff8e4" stroke="#d99a14" stroke-width="1.1"/>
+<text x="710" y="607" fill="#d99a14" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="710" dy="0">u_2,p</tspan>
+</text>
+<polyline points="550,428 650,607" fill="none" stroke="#d99a14" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-amber)"/>
+<rect x="650" y="640" width="120" height="34" rx="9" ry="9" fill="#fff8e4" stroke="#d99a14" stroke-width="1.1"/>
+<text x="710" y="657" fill="#d99a14" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="710" dy="0">u_3,p</tspan>
+</text>
+<polyline points="550,428 650,657" fill="none" stroke="#d99a14" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-amber)"/>
+<rect x="845" y="555" width="145" height="82" rx="14" ry="14" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.4"/>
+<text x="918" y="581" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="918" dy="0">aggregate</tspan>
+</text>
+<text x="918" y="605" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="918" dy="0">mean(|u_m,p|)</tspan>
+</text>
+<polyline points="770,557 845,596" fill="none" stroke="#7f8c99" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<polyline points="770,607 845,596" fill="none" stroke="#7f8c99" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<polyline points="770,657 845,596" fill="none" stroke="#7f8c99" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="1055" y="545" width="160" height="60" rx="13" ry="13" fill="#ffffff" stroke="#d99a14" stroke-width="1.3"/>
+<text x="1135" y="568" fill="#d99a14" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1135" dy="0">unique separate</tspan>
+</text>
+<text x="1135" y="588" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1135" dy="0">margin loss</tspan>
+</text>
+<rect x="1055" y="625" width="160" height="60" rx="13" ry="13" fill="#ffffff" stroke="#a9b4bf" stroke-width="1.3"/>
+<text x="1135" y="648" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1135" dy="0">sensor evidence</tspan>
+</text>
+<text x="1135" y="668" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1135" dy="0">|c_m,p - c_bar|</tspan>
+</text>
+<polyline points="990,596 1055,575" fill="none" stroke="#d99a14" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-amber)"/>
+<polyline points="990,596 1055,655" fill="none" stroke="#7f8c99" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="1320" y="235" width="285" height="385" rx="20" ry="20" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.6" filter="url(#shadow)"/>
+<text x="1345" y="270" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="18" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="1345" dy="0">Patch-wise control heads</tspan>
+</text>
+<rect x="1350" y="315" width="220" height="72" rx="14" ry="14" fill="#fff0f3" stroke="#d65f7b" stroke-width="1.5"/>
+<text x="1460" y="336" fill="#d65f7b" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1460" dy="0">Foreground gate</tspan>
+</text>
+<text x="1460" y="358" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1460" dy="0">from [c_bar, |u|_bar]</tspan>
+</text>
+<text x="1460" y="376" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1460" dy="0">g_p</tspan>
+</text>
+<rect x="1350" y="415" width="220" height="72" rx="14" ry="14" fill="#fff1c9" stroke="#d99a14" stroke-width="1.5"/>
+<text x="1460" y="436" fill="#d99a14" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1460" dy="0">Sensor reliability</tspan>
+</text>
+<text x="1460" y="458" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1460" dy="0">from [z, c, u, |c-c_bar|]</tspan>
+</text>
+<text x="1460" y="476" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1460" dy="0">alpha_m,p</tspan>
+</text>
+<rect x="1350" y="515" width="220" height="72" rx="14" ry="14" fill="#f2efff" stroke="#7d6ad8" stroke-width="1.5"/>
+<text x="1460" y="536" fill="#7d6ad8" font-family="DejaVu Sans, Arial, sans-serif" font-size="14" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1460" dy="0">Class context</tspan>
+</text>
+<text x="1460" y="558" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="10" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1460" dy="0">from [c_bar, |u|_bar]</tspan>
+</text>
+<text x="1460" y="576" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1460" dy="0">t_p</tspan>
+</text>
+<rect x="1035" y="398" width="190" height="46" rx="13" ry="13" fill="#ffffff" stroke="#d9e1e8" stroke-width="1.3"/>
+<text x="1130" y="416" fill="#17212b" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="700" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1130" dy="0">task summary</tspan>
+</text>
+<text x="1130" y="434" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="11" font-weight="400" text-anchor="middle" dominant-baseline="middle">
+<tspan x="1130" dy="0">[c_bar, |u|_bar]</tspan>
+</text>
+<polyline points="990,291 1035,421" fill="none" stroke="#0f7a55" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-green)"/>
+<polyline points="990,596 1035,421" fill="none" stroke="#d99a14" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-amber)"/>
+<polyline points="1225,421 1320,350" fill="none" stroke="#7f8c99" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<polyline points="1225,421 1320,450" fill="none" stroke="#7f8c99" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<polyline points="1225,421 1320,550" fill="none" stroke="#7f8c99" stroke-width="2.0" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-ink)"/>
+<rect x="1320" y="675" width="285" height="92" rx="16" ry="16" fill="#eaf3ff" stroke="#4f86c6" stroke-width="1.5"/>
+<text x="1345" y="704" fill="#245f9e" font-family="DejaVu Sans, Arial, sans-serif" font-size="15" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="1345" dy="0">Modulate ASF patch fusion</tspan>
+</text>
+<text x="1345" y="728" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="12" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="1345" dy="0">K/V token scale, query delta,</tspan>
+<tspan x="1345" dy="15">and fused-token residual</tspan>
+</text>
+<polyline points="1460,587 1460,675" fill="none" stroke="#245f9e" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" marker-end="url(#arrow-blue)"/>
+<rect x="74" y="740" width="1130" height="1" rx="0" ry="0" fill="#d9e1e8" stroke="#d9e1e8" stroke-width="1"/>
+<text x="78" y="764" fill="#0f7a55" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="700" text-anchor="start" dominant-baseline="hanging">
+<tspan x="78" dy="0">Difference from DecAlign:</tspan>
+</text>
+<text x="276" y="764" fill="#607080" font-family="DejaVu Sans, Arial, sans-serif" font-size="13" font-weight="400" text-anchor="start" dominant-baseline="hanging">
+<tspan x="276" dy="0">we do not use decoupling only for final representation fusion; we use it to control availability-aware patch fusion.</tspan>
+</text>
+</svg>

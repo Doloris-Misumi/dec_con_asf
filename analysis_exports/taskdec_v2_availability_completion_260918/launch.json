@@ -1,0 +1,13 @@
+{
+  "pid": 4168534,
+  "started_at": "2026-09-18T08:04:25.083169+08:00",
+  "gpu": 2,
+  "command": [
+    "/home/hongsheng/miniconda3/envs/rl_3dod/bin/python",
+    "-u",
+    "/home/hongsheng/dec_con_asf/tools/analysis/run_taskdec_v2_availability_completion_260918.py"
+  ],
+  "log": "/home/hongsheng/dec_con_asf/analysis_exports/taskdec_v2_availability_completion_260918/run.log",
+  "gpu_memory_before_mib": 26,
+  "detached_session": true
+}

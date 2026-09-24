@@ -1,0 +1,68 @@
+Use case: infographic-diagram.
+Asset: new draft of Figure 2, the main architecture diagram for the research paper "Decoupling to Fuse". Method name exactly "ObjDec".
+Reference image: attached old five-column architecture diagram is a STRUCTURAL EDIT TARGET, not an accurate final diagram. Redesign its layout thoroughly, replacing its incorrect routing, colors and obsolete labels. Do not preserve photographic inputs or giant encoders. Create ONE clear high-resolution landscape scientific figure, ideally 3840 x 2160 equivalent or larger, roughly 2:1 aspect ratio. Render English text cleanly and accurately.
+
+VISUAL STYLE:
+Publication-quality scientific architecture diagram, white background, restrained pale fills, dark navy text, consistent thin vector-like orthogonal arrows, small neatly drawn feature-token glyphs, clean serif headers and simple legible labels. Avoid slide-deck title banners, numbered giant circles, heavy shadows, decorative stickers, gradients, excessive prose or large equations. A thin pale mint frame visually groups the two central sections as the ObjDec fusion architecture. Font sizes must remain readable when scaled to page width. Use whitespace carefully. No weather illustrations. No photorealistic data or invented detections.
+
+EXACT MODALITY PALETTE throughout:
+Camera orange #D55E00, LiDAR blue #0072B2, 4D Radar purple #8B3FAA.
+Use those exact hues for their labels, encoder accents, token strips, and three modality-contribution bars in that order. Do not use blue for camera or green for LiDAR.
+Generic operations are slate gray. Control nodes have a muted teal accent #287D73. Training loss nodes are very pale blush with muted red dashed edges. Shared and modality-specific are distinguished by BRANCH LABELS and token shapes/patterns, preserving their modality colors, not by changing sensor identity.
+
+OVERALL COMPOSITION:
+Four aligned zones occupying about 18%, 44%, 29%, 9% of the width:
+(a) "Aligned patch tokens"
+(b) "Object-guided decoupling"
+(c) "Representation-driven fusion"
+(d) "3D detection"
+Below them, a shallow training-only strip occupying at most 15% of the canvas height. Zones b and c dominate. No huge page title, only these compact panel headers.
+
+ZONE A — COMPACT INPUTS:
+Three small horizontal rows labeled Camera, LiDAR, 4D Radar. In each row show a small "Encoder" rectangle with a modality-colored edge, a tiny BEV grid tile, and a compact single-color token strip. A small shared box "Projection + patchify" brings the three rows into aligned spatial patch grids, with the same outlined patch in each grid. Arrows leave as three SEPARATE modality tokens. Never merge them into one fused token here. No image thumbnails, no point-cloud photos, no big pyramidal encoders, no dimensions, no snowflakes, no pretrained/frozen text. The local patch is a spatial correspondence, not an information-fusion node.
+
+ZONE B — MAKE THE COMPUTATION VISUAL:
+Upper left: three single-color input-token glyphs, one per modality, under small label "Per modality". Each input independently forks to two distinct learned projection boxes labeled "Shared" and "Modality-specific", producing corresponding shared and specific tokens. Repeated operations can be shown compactly with a small "per modality" brace. The same token feeds both branches. There MUST NOT be a Shared-to-Specific arrow. Inputs MUST NOT be pre-divided into shared/specific pieces. Shared outputs are three similarly patterned small rounded token strips in orange/blue/purple; specific outputs are three differently patterned diamond/strip glyphs retaining the same modality colors.
+
+From these learned representations, build a small "Pool + concat" descriptor node feeding TWO prediction heads: "Foreground gate" (tiny patch heatmap icon, output label g) and "Object context" (inside, a tiny "Objectness" node followed by "Projection", output z).
+A third compact head labeled "Modality contribution" gets arrows from the original tokens AND both learned representation streams, produces a three-bar glyph in orange/blue/purple and label alpha. Do not imply the contribution head sees only pooled features. A small inconspicuous annotation "shared deviation" at its additional incoming link is allowed.
+One object context predictor only. No task-context label, no sensor-reliability claim.
+
+In the lower part of B, show the actual token-modulation path using a clean small-operation circuit:
+- shared and specific tokens feed a circled plus;
+- this sum goes through a circled multiplication with a downward control wire from g (small lambda beside the wire is allowed);
+- the ORIGINAL input token follows a clearly visible long bypass to a second circled plus, where the gated representation update is added;
+- the result goes through a final circled multiply, controlled by a small box "Bounded scale". This Bounded scale receives BOTH the gate g and modality contribution alpha;
+- output three colored strips labelled "Controlled tokens", entering zone C as K,V.
+Keep all arrows directed along the actual computational flow. Label this lower lane "Token modulation" in small type.
+The input bypass is essential: a small gate reduces residual/scaling effects while preserving the original token. Do not draw a discarded-background branch or any red delete/X symbol. Do not multiply raw tokens directly by alpha as if alpha were the actual scale.
+
+ZONE C — BOTH CONTEXT INJECTIONS CLEARLY VISIBLE:
+A compact row of gray learned query glyphs labelled "Learned queries" feeds a circled plus before the Q input of a prominent box "Cross-modal attention". Controlled tokens from B enter the same attention box through a separate K,V port.
+Take g and z from zone B into a small circled multiplication labelled "Gated context". The output FORKS into two clean wires, with tiny beta and gamma gain labels if helpful:
+  first wire enters the query circled plus BEFORE attention;
+  second wire enters a different circled plus AFTER the attention output.
+Thus the flow is learned queries -> addition -> attention; controlled tokens -> K,V attention; attention -> output addition -> "PFT + reassemble" -> small fused BEV tile.
+The output residual addition MUST precede PFT. No arrow from PFT back to context. No duplicated context head. Only use small single-letter tensor labels and + / multiplication symbols; do not print any long equation.
+Keep wires nonoverlapping and unambiguous. A visible single z path branching to two additions is more important than decorative detail.
+
+ZONE D — SMALL DETECTION OUTPUT:
+One compact "3D head" box receiving the fused BEV. Below it a sparse simple BEV box-outline icon labelled "3D boxes". This is schematic, no synthetic road photo. Avoid the duplicate fused BEV map present in the old diagram.
+
+TRAINING-ONLY STRIP, CORRECT LOSS ROUTING:
+Label "Training only" at the left, with a small GT-box icon and text "GT boxes".
+Use four small local loss badges aligned directly under their supervised structures:
+"L_dec" beneath shared/specific representations; small "Foreground only" tag.
+"L_gate" beneath foreground gate.
+"L_ctx" beneath the Objectness prediction in object context (NOT from projection output alone).
+"L_det" beneath the detector.
+Show thin dashed RED arrows from the appropriate predicted representations / gate / objectness / detection outputs DOWN INTO their respective loss badges.
+From GT boxes, a dashed target route through a tiny "Patch labels" node feeds L_dec, L_gate, L_ctx; another GT target route goes to L_det.
+Both model outputs and GT-derived targets enter losses. No dashed GT arrow enters encoders, representations, gate predictor, context predictor, attention or forward feature nodes. No loss-to-loss arrows. Do not connect losses sequentially.
+To avoid spaghetti, prefer short labelled dashed target stubs into each badge with a shared legend stating they come from GT/patch labels.
+Do not show a large SCL block: inherited sensor-combination training is documented in the caption, not expanded in this overview.
+One small footer legend: "Solid: forward computation   Dashed: training supervision" and "No GT at inference".
+The labels used are concise; avoid paragraphs.
+
+ACCURACY CHECK BEFORE RENDERING:
+Method spelling ObjDec; modality colors consistent; one input per modality branches in parallel; context generated once; g controls token update, bounded scale and both context residuals; original-input bypass retained; learned queries and controlled K,V enter different attention ports; post-attention addition before PFT; all losses connected to correct predictions and targets. The deliverable should look like a carefully typeset ML paper figure, centered on the new architecture rather than on sensors, equations or a giant loss gallery.

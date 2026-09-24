@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "frames": 4,
+  "gt": 30,
+  "geometry_checks": true,
+  "prediction_filter_count_checks": true
+}

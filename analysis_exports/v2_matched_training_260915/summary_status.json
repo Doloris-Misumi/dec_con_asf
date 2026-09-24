@@ -1,0 +1,8 @@
+{
+  "status": "complete",
+  "runs": {
+    "asf": "complete",
+    "l4dr": "complete"
+  },
+  "report": "/home/hongsheng/dec_con_asf/results/taskdec_v2_matched_training_260915.md"
+}

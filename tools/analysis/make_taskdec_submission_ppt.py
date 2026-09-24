@@ -109,6 +109,8 @@ def box(s, x, y, w, h, fill=WHITE, line=None, radius=False):
         sh.line.width = Pt(.8)
     else:
         sh.line.fill.background()
+    # Suppress the theme's default shadow for a clean flat presentation style.
+    sh._element.spPr.append(OxmlElement('a:effectLst'))
     return sh
 
 
@@ -136,7 +138,7 @@ def text(s, x, y, w, h, content, size=20, fill=INK, bold=False,
     for i, line in enumerate(str(content).split("\n")):
         p = tf.paragraphs[0] if i == 0 else tf.add_paragraph()
         p.alignment = align
-        p.space_after = Pt(5)
+        p.space_after = Pt(0)
         p.line_spacing = 1.13
         run = p.add_run()
         run.text = line
@@ -262,7 +264,7 @@ def draw_delta_chart(s,x,y,w,h,title,values):
         bx=zero if v>=0 else zero+v*scale
         box(s,bx,yy+.035,max(abs(v)*scale,.015),.22,TEAL if v>=0 else RED)
         if v>=0:tx=zero+v*scale+.06
-        else:tx=zero+v*scale-.70
+        else:tx=zero+.10
         text(s,tx,yy-.025,.69,.34,f"{v:+.2f}",13,TEAL if v>=0 else RED,True)
 
 
@@ -370,15 +372,15 @@ def build():
     for y,label,c in [(2.65,'Camera',BLUE),(3.51,'LiDAR',TEAL),(4.37,'4D Radar',ORANGE)]:
         box(s,.58,y,1.40,.62,c,radius=True);text(s,.62,y+.15,1.32,.28,label,16,WHITE,True,PP_ALIGN.CENTER)
     box(s,2.28,3.08,1.72,1.48,WHITE,LINE,True)
-    text(s,2.43,3.28,1.42,1.1,'Encoder +\ncanonical\npatch token x',17,INK,True,PP_ALIGN.CENTER)
+    text(s,2.43,3.28,1.42,1.1,'Encoder\nCanonical\npatch x',17,INK,True,PP_ALIGN.CENTER)
     for yy in [2.96,3.82,4.68]:arrow(s,[(1.98,yy),(2.12,yy),(2.12,3.82),(2.28,3.82)])
     box(s,4.32,3.08,1.69,1.48,WHITE,LINE,True)
-    text(s,4.42,3.33,1.49,1.0,'Common c\nUnique u\n每模态独立 MLP',17,TEAL,True,PP_ALIGN.CENTER)
+    text(s,4.42,3.33,1.49,1.0,'Common c\nUnique u\n模态 MLP',17,TEAL,True,PP_ALIGN.CENTER)
     arrow(s,[(4.0,3.82),(4.32,3.82)])
     box(s,6.31,3.08,1.98,1.48,PALE,TEAL,True)
-    text(s,6.43,3.32,1.74,1.03,'解耦状态控制器\ngate / reliability\ntask context',17,TEAL,True,PP_ALIGN.CENTER)
+    text(s,6.43,3.32,1.74,1.03,'状态控制器\ngate · reliability\ntask context',15,TEAL,True,PP_ALIGN.CENTER)
     arrow(s,[(6.01,3.82),(6.31,3.82)],TEAL)
-    for y,lab in [(2.25,'受控 K/V：x′'),(3.62,'调制 query：q′'),(5.0,'输出 context 残差')]:
+    for y,lab in [(2.25,'受控 K/V：x′'),(3.62,'调制 query：q′'),(5.0,'输出残差：g·h')]:
         box(s,8.67,y,1.92,.7,WHITE,LINE,True)
         text(s,8.75,y+.17,1.76,.37,lab,15,INK,True,PP_ALIGN.CENTER)
         arrow(s,[(8.29,3.82),(8.48,3.82),(8.48,y+.35),(8.67,y+.35)],TEAL)
@@ -461,7 +463,7 @@ def build():
             'PCA 使用已有投影坐标，不重新训练或拟合；按表征分别采用覆盖全部前景点的轴范围，同一表征两天气共用轴范围。二维图不能证明统计独立或物理语义。高维前景 common 跨模态 cosine 均值约 0.948–0.962。功能作用主要由消融和检测结果支持。',
             ['pca','analysis_exports/taskdec_patch_pca_weather_260909/taskdec_patch_states_pca.csv'])
     picture(s,ASSETS/'pca_normal_rain.png',.58,2.04,9.65,4.60)
-    card(s,10.42,2.18,2.32,3.98,'诊断读法','结构可观察\n\ncommon\ncosine 均值\n0.948–0.962\n\n不能直接解释\n为“纯目标 / 噪声”',body_size=17)
+    card(s,10.42,2.18,2.32,3.98,'诊断读法','二维结构线索\n\ncommon cosine\n0.948–0.962\n\n不等于\n纯目标 / 噪声',body_size=16)
 
     s=slide('空间 gate：真实场景与完整 patch 输出','10 / 控制可视化',
             source='依据：Fig.4 完整 gate 导出；16×90 / 帧；统一 [0,1]；GT 仅作参照',
@@ -491,14 +493,14 @@ def build():
             '依据：VoD 主表；已纳入 9 月 10 日 L4DR 本地复现，详见备份页 22',
             '按既定写作重心，先讲方法可用于原生 PointPillars 风格 LiDAR–4D radar 特征，再讲相对强 PP-Concat 的 EAA +0.30。DC 基本持平。当前是 mild + warm start、单次选定运行；PP-Concat 用 AMP，TaskDec 用 FP32，训练差异要披露。L4DR 文献和本地复现绝对性能均更高，一句话说明并把表放备份。',
             ['vod','l4dr'])
-    card(s,.57,2.15,4.2,2.50,'从 K-Radar 到 VoD','K-Radar：C + L + R\ncanonical patch fusion\n\nVoD：L + 4DR\n原生 PP 风格融合',body_size=20)
+    card(s,.57,2.15,4.2,3.20,'从 K-Radar 到 VoD','K-Radar：C + L + R\ncanonical patch fusion\n\nVoD：L + 4DR\n原生 PP 风格融合',body_size=20)
     table(s,5.13,2.17,[3.68,1.94,1.94],['本地方法','EAA mAP','DC mAP'],[
         ['PP-Concat / ep80','69.88','83.80'],
         ['TaskDec-PP / ep79','70.18','83.79'],
     ],row_h=.73,font=20,highlight=[1])
     metric_card(s,5.13,4.70,3.67,'+0.30','EAA mAP','强 PP-Concat 上的适配收益')
     metric_card(s,9.03,4.70,3.66,'−0.01','DC mAP','保持基本相当',accent=MUTED)
-    text(s,.74,5.04,3.81,1.44,'当前配置\nmild + PP-Concat warm start\nTaskDec FP32 / 基线 AMP',16,MUTED)
+    text(s,.74,5.67,3.81,.76,'mild + PP-Concat warm start\nTaskDec FP32 / 基线 AMP',16,MUTED)
     text(s,.73,6.67,11.8,.23,'L4DR 仍更强：文献 72.70 / 87.47；本地复现 71.00 / 84.84（EAA / DC）。',13,MUTED)
 
     s=slide('v2 补充结果来自早期 DecControlled 变体','13 / 扩展材料，拟入论文附录',
@@ -551,10 +553,10 @@ def build():
             '依据：现有方法、结果、图表与协议梳理；以下是待讨论事项',
             '建议让师兄先评价机制贡献是否足以支撑目标会议，再决定最值得补的实验，而不是泛泛追加所有实验。比较协议主口径已确定使用官方 ASF checkpoint；仍需把来源和敏感性说明准备好。VoD 的强项是可适配，收益幅度小，应确认这种证据在目标投稿中是否足够。',
             ['review','layout','protocol','l4dr'])
-    card(s,.57,2.11,5.95,1.78,'1  贡献是否讲得成立？','“解耦状态 → 局部控制”能否成为核心贡献？\n与已有解耦、query 调制、可靠性融合如何区分？',body_size=19)
-    card(s,6.81,2.11,5.95,1.78,'2  最值得补哪类证据？','组件重复运行，还是更直接的受控诊断？\n优先回答哪一个潜在审稿问题？',body_size=19)
-    card(s,.57,4.34,5.95,1.78,'3  泛化材料是否足够？','VoD 的 +0.30 EAA 与 DC 持平如何定位？\nRC 退化和 v2 早期变体说明到什么程度？',body_size=19)
-    card(s,6.81,4.34,5.95,1.78,'4  正文取舍与投稿节奏？','5 图 4 表如何压缩并保留真实场景展示？\n先定稿主线，再确定补实验清单与停止条件。',body_size=19)
+    card(s,.57,2.11,5.95,1.90,'1  贡献定位是否充分？','解耦状态驱动局部控制，贡献是否充分？\n与既有解耦、query 调制方法如何区分？',body_size=18)
+    card(s,6.81,2.11,5.95,1.90,'2  最值得补哪类证据？','重复运行组件，还是补直接的受控诊断？\n哪一项最可能改变审稿人的判断？',body_size=18)
+    card(s,.57,4.34,5.95,1.90,'3  泛化材料是否足够？','VoD +0.30 EAA、DC 持平如何定位？\nRC 退化与 v2 早期变体说明到哪一步？',body_size=18)
+    card(s,6.81,4.34,5.95,1.90,'4  正文取舍与投稿节奏？','5 图 4 表如何保留真实场景并控制篇幅？\n先定主线，再确定补实验清单与停止条件。',body_size=18)
     takeaway(s,'目标：讨论结束时明确“主贡献一句话、补证据优先级、正文范围”。',size=18)
 
     s=slide('下一步先完成可直接进入论文的材料','17 / 建议行动顺序',

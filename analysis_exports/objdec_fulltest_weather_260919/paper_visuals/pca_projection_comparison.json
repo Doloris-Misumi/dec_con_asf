@@ -1,0 +1,26 @@
+{
+  "old_source": "analysis_exports/taskdec_patch_pca_weather_260909/taskdec_patch_states_pca.npz",
+  "old_source_sha256": "2408da05a66a51d55e9a32b0f1717ca179edc70b6392d7897e5e3f8d30733ee1",
+  "axis_reconstruction_max_error": 9.393040087957161e-07,
+  "rows": [
+    {
+      "weather": "normal",
+      "same_old_foreground_frame_balanced_centers": true,
+      "original_256d_distance": 4.010327815883726,
+      "projected_distance_old_basis": 2.8564207100401853,
+      "projected_distance_fulltest_mean_basis": 3.986688620379772,
+      "old_patch_cosine_LR": 0.9623661334726162,
+      "fulltest_patch_cosine_LR": 0.9620795425889552
+    },
+    {
+      "weather": "heavysnow",
+      "same_old_foreground_frame_balanced_centers": true,
+      "original_256d_distance": 3.5969907824095833,
+      "projected_distance_old_basis": 1.988199045993061,
+      "projected_distance_fulltest_mean_basis": 3.4344795701506543,
+      "old_patch_cosine_LR": 0.9569809236830883,
+      "fulltest_patch_cosine_LR": 0.9601347403013858
+    }
+  ],
+  "explanation": "Only the two-dimensional projection is changed in this distance check. The same old per-frame foreground centers are kept fixed. Centering offsets cancel in the inter-center difference."
+}

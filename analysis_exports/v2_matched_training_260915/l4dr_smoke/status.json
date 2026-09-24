@@ -1,0 +1,62 @@
+{
+  "status": "smoke_complete",
+  "model": "l4dr",
+  "mode": "smoke",
+  "started_at": "2026-09-15T22:16:52.514317+08:00",
+  "pid": 3796900,
+  "gpu": "3",
+  "gpu_name": "NVIDIA RTX A6000",
+  "seed": 20250215,
+  "precision": "FP32",
+  "batch_size": 2,
+  "epochs": 11,
+  "steps_per_epoch": 7193,
+  "target_steps": 200,
+  "global_step": 200,
+  "completed_epochs": 1,
+  "training_wall_seconds": 103.73383873514831,
+  "step_wall_seconds": 67.42009572684765,
+  "failure_count": 0,
+  "config_sha256": "c7576c5c284be8b3f3462462f2a927e00b86f561f8ce0033e0bbe815e30dd83b",
+  "train_manifest_sha256": "48c797518f6695ba238a671c80872c5aafc93182d55b016ca3678d4861c58190",
+  "test_manifest_sha256": "2573ea5cc1ec02f115bf18175de362ffc853915a48af67b8af681243d5803d40",
+  "checkpoint_selection": "fixed final epoch",
+  "initialization": "Native complete network randomly initialized; no official full-detector checkpoint loaded",
+  "initialization_checks": {
+    "full_detector_checkpoint_loaded": false,
+    "all_native_modules_present": true,
+    "backbone": "BaseBEVBackbone_MGF"
+  },
+  "total_parameters": 62043197,
+  "trainable_parameters": 62043197,
+  "finite_gradient_parameter_tensors": 293,
+  "epoch_index": 0,
+  "step_in_epoch": 200,
+  "last_loss": 3.079073429107666,
+  "lr": 0.0009982842817606084,
+  "peak_cuda_allocated_gib": 11.496365547180176,
+  "current_epoch_elapsed_seconds": 103.5905535724014,
+  "gpu_hours_training": 0.028814955204207866,
+  "epoch_mean_loss": 7.2933268737792964,
+  "epoch_min_loss": 2.208672046661377,
+  "epoch_max_loss": 430.4406433105469,
+  "probe_parameter_changes": {
+    "backbone_2d.Conv_LG.0.0.weight": 0.06654350459575653,
+    "dense_head.conv_cls.weight": 0.11983175575733185
+  },
+  "smoke_eval_frames": 4,
+  "smoke_eval_indices": [
+    0,
+    5000,
+    10000,
+    13726
+  ],
+  "smoke_eval_prediction_counts": [
+    0,
+    3,
+    0,
+    0
+  ],
+  "smoke_kitti_gt_exact_match": true,
+  "finished_at": "2026-09-15T22:18:48.255274+08:00"
+}

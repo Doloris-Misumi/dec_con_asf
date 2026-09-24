@@ -1,0 +1,60 @@
+{
+  "status": "passed",
+  "device": "cpu",
+  "scope": "Synthetic fuser contract only; no dataset or detector tested",
+  "cases": [
+    {
+      "modalities": [
+        "lidar",
+        "radar"
+      ],
+      "output_shape": [
+        2,
+        2048,
+        8,
+        8
+      ],
+      "parameters_full": 2019527,
+      "parameters_patch": 1073216,
+      "auxiliary_loss": 0.6557244658470154,
+      "gradient_l1": {
+        "patch_common": 7.872190720401704,
+        "patch_unique": 2.9500813897466287,
+        "dec_control_fg_gate": 0.21910227416083217,
+        "dec_control_score": 6.185085817378422e-05,
+        "dec_control_class_head": 1.0912764705717564,
+        "dec_control_class_context": 2.119127384503372e-05,
+        "fuser": 0.1695510220597498
+      },
+      "inference_independent_of_gt": true,
+      "disabled_control_equals_shared_patch": true
+    },
+    {
+      "modalities": [
+        "camera",
+        "lidar",
+        "radar"
+      ],
+      "output_shape": [
+        2,
+        2048,
+        8,
+        8
+      ],
+      "parameters_full": 2751976,
+      "parameters_patch": 1408096,
+      "auxiliary_loss": 0.6585353016853333,
+      "gradient_l1": {
+        "patch_common": 6.046854235231876,
+        "patch_unique": 2.938366646063514,
+        "dec_control_fg_gate": 0.2020341488532722,
+        "dec_control_score": 8.239376478513805e-05,
+        "dec_control_class_head": 0.996150029823184,
+        "dec_control_class_context": 2.4687746190465987e-05,
+        "fuser": 0.1615994549356401
+      },
+      "inference_independent_of_gt": true,
+      "disabled_control_equals_shared_patch": true
+    }
+  ]
+}

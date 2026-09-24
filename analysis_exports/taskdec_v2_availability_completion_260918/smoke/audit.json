@@ -1,0 +1,119 @@
+[
+  {
+    "index": 0,
+    "case": "r",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 0,
+    "case": "l",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 0,
+    "case": "c",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 0,
+    "case": "lr",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 0,
+    "case": "cr",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 0,
+    "case": "cl",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 0,
+    "case": "clr",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 0,
+    "clr_archived_prediction_equivalent": true
+  },
+  {
+    "index": 5000,
+    "case": "r",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 5000,
+    "case": "l",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 5000,
+    "case": "c",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 5000,
+    "case": "lr",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 5000,
+    "case": "cr",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 5000,
+    "case": "cl",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 5000,
+    "case": "clr",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 5000,
+    "clr_archived_prediction_equivalent": true
+  },
+  {
+    "index": 13726,
+    "case": "r",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 13726,
+    "case": "l",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 13726,
+    "case": "c",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 13726,
+    "case": "lr",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 13726,
+    "case": "cr",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 13726,
+    "case": "cl",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 13726,
+    "case": "clr",
+    "original_network_equivalent": true
+  },
+  {
+    "index": 13726,
+    "clr_archived_prediction_equivalent": true
+  }
+]

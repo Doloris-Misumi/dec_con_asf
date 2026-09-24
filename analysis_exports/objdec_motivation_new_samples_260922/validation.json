@@ -1,0 +1,150 @@
+[
+  {
+    "id": "seq22_rdr00484",
+    "all_sources_unchanged": true,
+    "raw_camera_embedded_without_generative_editing": true,
+    "numeric_LiDAR_and_radar_plots": true,
+    "saved_predictions_unmodified": true,
+    "displayed_prediction_count": 4,
+    "camera_crops": {
+      "background": [
+        90,
+        250,
+        345,
+        450
+      ],
+      "object": [
+        485,
+        315,
+        635,
+        436
+      ]
+    },
+    "template_sha256": "90b7b761169fbac997879a6e7f7fbafcb8f961519812eb50d75c56b7bffd32e2",
+    "artifacts": {
+      "objdec_motivation_seq22_rdr00484.png": {
+        "bytes": 3011867,
+        "sha256": "2088687f005fa5b8819cab7a10bb1ad7d1f8cd2113bf88c10d8c5fcb0e9c726c"
+      },
+      "objdec_motivation_seq22_rdr00484.pdf": {
+        "bytes": 4880040,
+        "sha256": "085071a283aebe73e15298d11a93d4344bf7515c478a61c5cd848a2de2eee13a"
+      },
+      "objdec_motivation_seq22_rdr00484.svg": {
+        "bytes": 4848539,
+        "sha256": "3bcd0c3abde65d6ef503a0bc8cc162bb42a4e992c60f03899089739b966a62f4"
+      }
+    }
+  },
+  {
+    "id": "seq20_rdr00628",
+    "all_sources_unchanged": true,
+    "raw_camera_embedded_without_generative_editing": true,
+    "numeric_LiDAR_and_radar_plots": true,
+    "saved_predictions_unmodified": true,
+    "displayed_prediction_count": 1,
+    "camera_crops": {
+      "background": [
+        810,
+        190,
+        1065,
+        390
+      ],
+      "object": [
+        382,
+        325,
+        562,
+        470
+      ]
+    },
+    "template_sha256": "90b7b761169fbac997879a6e7f7fbafcb8f961519812eb50d75c56b7bffd32e2",
+    "artifacts": {
+      "objdec_motivation_seq20_rdr00628.png": {
+        "bytes": 2956159,
+        "sha256": "9f652f5d0e570cd80cb74c11de9d00d0f76e4a34f6c3995e8d5a2310928e7767"
+      },
+      "objdec_motivation_seq20_rdr00628.pdf": {
+        "bytes": 4580919,
+        "sha256": "0a8eb3d0f67fd4565a636d1f9f59fe1c8915ff747fad20d755ac74d552337b06"
+      },
+      "objdec_motivation_seq20_rdr00628.svg": {
+        "bytes": 4680552,
+        "sha256": "ae4c726a09b04fee0531ad48d7cee9abe3943a8bc41b1c364902bc28d14690d5"
+      }
+    }
+  },
+  {
+    "id": "seq9_rdr00347",
+    "all_sources_unchanged": true,
+    "raw_camera_embedded_without_generative_editing": true,
+    "numeric_LiDAR_and_radar_plots": true,
+    "saved_predictions_unmodified": true,
+    "displayed_prediction_count": 3,
+    "camera_crops": {
+      "background": [
+        130,
+        310,
+        385,
+        510
+      ],
+      "object": [
+        625,
+        340,
+        737,
+        430
+      ]
+    },
+    "template_sha256": "90b7b761169fbac997879a6e7f7fbafcb8f961519812eb50d75c56b7bffd32e2",
+    "artifacts": {
+      "objdec_motivation_seq9_rdr00347.png": {
+        "bytes": 2780953,
+        "sha256": "0c8ecfe240ed5a43dec97dd9d81ff03ad1babcc28bb637cf0e727947af895ae5"
+      },
+      "objdec_motivation_seq9_rdr00347.pdf": {
+        "bytes": 3349111,
+        "sha256": "44279257ded48ab8d743ddc83deacf838f9567fe9e681d05a7af0441166c09e7"
+      },
+      "objdec_motivation_seq9_rdr00347.svg": {
+        "bytes": 3873521,
+        "sha256": "a3d0446b73c0516f8253a6a4fb3e38ded781ee46aea7fbd6c8f3e978d2f82201"
+      }
+    }
+  },
+  {
+    "id": "seq7_rdr00272",
+    "all_sources_unchanged": true,
+    "raw_camera_embedded_without_generative_editing": true,
+    "numeric_LiDAR_and_radar_plots": true,
+    "saved_predictions_unmodified": true,
+    "displayed_prediction_count": 1,
+    "camera_crops": {
+      "background": [
+        820,
+        180,
+        1075,
+        380
+      ],
+      "object": [
+        424,
+        305,
+        624,
+        466
+      ]
+    },
+    "template_sha256": "90b7b761169fbac997879a6e7f7fbafcb8f961519812eb50d75c56b7bffd32e2",
+    "artifacts": {
+      "objdec_motivation_seq7_rdr00272.png": {
+        "bytes": 3090822,
+        "sha256": "0f9d98f38ffb8c25dc8f224280b64db0fc0dcfd7d630af49d92f8fe2e41024fa"
+      },
+      "objdec_motivation_seq7_rdr00272.pdf": {
+        "bytes": 6079167,
+        "sha256": "3bb9d6d1fc4c3b88078b20ef6b732d556a6b96a287d04affafad052cec05d912"
+      },
+      "objdec_motivation_seq7_rdr00272.svg": {
+        "bytes": 5444518,
+        "sha256": "f6fa4c3932503435c4212433933e8f4ac5ac04bae4848af1d8103d97567ded5a"
+      }
+    }
+  }
+]

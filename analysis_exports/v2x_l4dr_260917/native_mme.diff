@@ -1,0 +1,55 @@
+--- /home/hongsheng/dec_con_asf/vod_taskdec_native/L4DR_taskdec/pcdet/models/backbones_3d/vfe/pillar_vfe.py
++++ native_mme.py (class body)
+@@ -91,10 +91,8 @@
+         radar_f_center[:, :, 1] = radar_voxel_features[:, :, 1] - (radar_coords[:, 2].to(radar_voxel_features.dtype).unsqueeze(1) * self.voxel_y + self.y_offset)
+         radar_f_center[:, :, 2] = radar_voxel_features[:, :, 2] - (radar_coords[:, 1].to(radar_voxel_features.dtype).unsqueeze(1) * self.voxel_z + self.z_offset)
+ 
+-        dist_matrix = torch.sum((L_coords.unsqueeze(1) - R_coords)**2, dim=2)  
+-
+-        # 找到距离为0的点,即A和B中相同的点  
+-        common_L, common_R = torch.where(dist_matrix==0)
++        # Exact coordinate equality join, without an O(N_lidar*N_radar) matrix.
++        common_L, common_R = match_coords(L_coords, R_coords)
+ 
+         # mask = torch.ones(len(L_coords)).bool() 
+         # mask[common_L] = False
+@@ -152,7 +150,7 @@
+             com_features[:, i, now_feature_idx : now_feature_idx + radar_voxel_features.shape[-1] - 3] = radar_voxel_features[:, i, 3:]
+             now_feature_idx += radartolidar_f_cluster.shape[-1]
+         
+-        len_lidar = int(lidar_voxel_num_points.max())
++        len_lidar = int(lidar_voxel_num_points.max()) if len(lidar_voxel_num_points) else 0
+         l_ex_features = torch.zeros((len(lidar_voxel_num_points), 32, self.num_point_features_l)).cuda()
+         now_feature_idx = 0
+         l_ex_features[:, :, now_feature_idx : now_feature_idx + lidar_voxel_features.shape[-1]] = lidar_voxel_features #4
+@@ -196,18 +194,24 @@
+         mask = self.get_paddings_indicator(lidar_voxel_num_points, final_voxel_count, axis=0)
+         mask = torch.unsqueeze(mask, -1).type_as(lidar_features)
+         lidar_features *= mask
+-        for pfn in self.l_pfn_layers:
+-            lidar_features = pfn(lidar_features)
+-        lidar_features = lidar_features.squeeze()
++        if len(lidar_voxel_num_points):
++            for pfn in self.l_pfn_layers:
++                lidar_features = pfn(lidar_features)
++            lidar_features = lidar_features.reshape(-1, self.num_filters[-1])
++        else:
++            lidar_features = lidar_features.new_zeros((0, self.num_filters[-1]))
+ 
+         radar_features = com_features
+         final_voxel_count = radar_features.shape[1]
+         mask = self.get_paddings_indicator(radar_voxel_num_points, final_voxel_count, axis=0)
+         mask = torch.unsqueeze(mask, -1).type_as(radar_features)
+         radar_features *= mask
+-        for pfn in self.r_pfn_layers:
+-            radar_features = pfn(radar_features)
+-        radar_features = radar_features.squeeze()
++        if len(radar_voxel_num_points):
++            for pfn in self.r_pfn_layers:
++                radar_features = pfn(radar_features)
++            radar_features = radar_features.reshape(-1, self.num_filters[-1])
++        else:
++            radar_features = radar_features.new_zeros((0, self.num_filters[-1]))
+         # T = 10
+         # LR_pillar_weight = F.softmax(torch.cat([lidar_voxel_num_points[common_L, None], radar_voxel_num_points[common_R, None]],dim = 1) / T)
+         # min_pillar_num = torch.min(lidar_voxel_num_points[common_L], radar_voxel_num_points[common_R])

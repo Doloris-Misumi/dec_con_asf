@@ -1,0 +1,20 @@
+{
+  "Strong": {
+    "path": "/home/hongsheng/dec_con_asf/analysis_exports/l4dr_v2_aligned_260915/strong_evaluation.json",
+    "sha256": "0ade36f5563a00ed8eed19056f192b654169d469454e1d2708836e8b6c5c1734",
+    "num_samples": 13727,
+    "evaluator_sha256": "a564cb101c5b20a2e655e6afde5e8d3aa8e8eb85a369abd93ff012d9bab8cee3"
+  },
+  "ASF local 11 epochs": {
+    "path": "/home/hongsheng/dec_con_asf/analysis_exports/v2_matched_training_260915/asf/evaluation.json",
+    "sha256": "6eba465bfe8d7625b96c51d162ba81fd68cccf2c5799a84aba520316921f72ac",
+    "num_samples": 13727,
+    "evaluator_sha256": "a564cb101c5b20a2e655e6afde5e8d3aa8e8eb85a369abd93ff012d9bab8cee3"
+  },
+  "L4DR local 11 epochs": {
+    "path": "/home/hongsheng/dec_con_asf/analysis_exports/v2_matched_training_260915/l4dr/evaluation.json",
+    "sha256": "763de0cc54c33b32d7fe7c5c8a036243cdb2ad2d1a05bfac1e81b8f98109f924",
+    "num_samples": 13727,
+    "evaluator_sha256": "a564cb101c5b20a2e655e6afde5e8d3aa8e8eb85a369abd93ff012d9bab8cee3"
+  }
+}

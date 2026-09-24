@@ -1,0 +1,67 @@
+{
+  "status": "complete",
+  "datasets": {
+    "train": {
+      "frames": 14386,
+      "gt_objects": {
+        "Sedan": 33358,
+        "Bus or Truck": 6276
+      },
+      "manifest_sha256": "48c797518f6695ba238a671c80872c5aafc93182d55b016ca3678d4861c58190",
+      "both_native_label_parsers_exact_match": true,
+      "all_sensor_paths_exist": true
+    },
+    "test": {
+      "frames": 13727,
+      "gt_objects": {
+        "Sedan": 29613,
+        "Bus or Truck": 5843
+      },
+      "manifest_sha256": "2573ea5cc1ec02f115bf18175de362ffc853915a48af67b8af681243d5803d40",
+      "both_native_label_parsers_exact_match": true,
+      "all_sensor_paths_exist": true
+    }
+  },
+  "budget": {
+    "epochs": 11,
+    "batch_size": 2,
+    "steps_per_epoch": 7193,
+    "total_steps": 79123,
+    "training_sample_presentations": 158246,
+    "seed": 20250215,
+    "precision": "FP32",
+    "checkpoint_selection": "last epoch only; no test-based checkpoint selection",
+    "optimizer": {
+      "NAME": "AdamW",
+      "LR": 0.001,
+      "MIN_LR": 0.0001,
+      "BETAS": [
+        0.9,
+        0.999
+      ],
+      "WEIGHT_DECAY": 0.01,
+      "MOMENTUM": 0.9,
+      "BATCH_SIZE": 2,
+      "NUM_WORKERS": 4,
+      "MAX_EPOCH": 11,
+      "SCHEDULER": "CosineAnnealingLR",
+      "TYPE_TOTAL_ITER": "every"
+    },
+    "historical_strong_training_wall_hours": 44.23777777777778
+  },
+  "test_gt_reference_sha256": "47e25d7d8526e10c5faef7ec3c6d3f22671f05857586df3b271abb25cb8611ee",
+  "radar_input_directory": "/home/hongsheng/k_radar_dataset",
+  "initialization": {
+    "asf": "Same pretrained sensor encoders as Strong; new A2Fusion and detection head; freeze=True, freeze_bn=False",
+    "l4dr": "Native complete network randomly initialized; no official full-detector checkpoint loaded"
+  },
+  "limitations": [
+    "Same fusion/detector training schedule, not identical total pretraining cost or FLOPs",
+    "L4DR native preprocessing and architecture retained; restricted-budget local training, public configuration defaults to 35 epochs"
+  ],
+  "configs": {
+    "strong_reference": "aecabba5f84280d5d7b0a7dce9ead4b3788d634d8d01f12a5d3faa64fbd447b0",
+    "asf": "549a38268a133d0a02eadca7f7f7c790faa5b57d384436e16213d65c8090684d",
+    "l4dr": "c7576c5c284be8b3f3462462f2a927e00b86f561f8ce0033e0bbe815e30dd83b"
+  }
+}

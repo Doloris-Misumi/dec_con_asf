@@ -1,0 +1,43 @@
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\caption{Weather-wise results on K-Radar benchmark v2.0. AP$_{\rm 3D}$ at IoU=0.3 is reported. ASF and DecControlled Strong use C+L+R inputs, score threshold 0.3, and the revised evaluator. Strong is a Dec-family variant without task-context modulation. Total is evaluated on the full evaluation set. A dash denotes no evaluated Bus/Truck ground truth in fog for our setting. The L4DR dash is retained as published. L4DR$^{\dagger}$ is quoted from Table 10 of the L4DR paper (arXiv:2408.03677v6), with L+R inputs. Its public code uses 11 selected precision samples and z\_center=1.0, whereas our ASF-based evaluation uses all 41 samples and z\_center=0.5. The published row is not an aligned re-evaluation.}
+\label{tab:kradar_v2_weather_03}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lllrrrrrrrr}
+\toprule
+Class & Method & Mod. & Total & Normal & Li. Snow & He. Snow & Rain & Sleet & Overcast & Fog \\
+\midrule
+Sedan & L4DR (paper)$^{\dagger}$ & LR & 75.8 & 74.6 & 87.5 & 58.4 & 77.8 & 61.4 & 79.2 & 89.3 \\
+Sedan & ASF (official) & CLR & 74.98 & 74.14 & 88.24 & 63.61 & 66.37 & 70.43 & 82.35 & 92.26 \\
+Sedan & DecControlled Strong (ours) & CLR & 74.58 & 73.51 & 89.56 & 63.57 & 68.11 & 72.52 & 84.30 & 94.46 \\
+\midrule
+Bus/Truck & L4DR (paper)$^{\dagger}$ & LR & 59.7 & 59.4 & 84.4 & 51.9 & 8.1 & 66.1 & 86.4 & -- \\
+Bus/Truck & ASF (official) & CLR & 58.13 & 53.28 & 88.26 & 68.20 & 7.89 & 59.55 & 75.33 & -- \\
+Bus/Truck & DecControlled Strong (ours) & CLR & 59.24 & 51.63 & 89.56 & 72.34 & 10.08 & 57.47 & 73.82 & -- \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
+
+\begin{table*}[t]
+\centering
+\small
+\setlength{\tabcolsep}{3pt}
+\caption{Weather-wise results on K-Radar benchmark v2.0. AP$_{\rm 3D}$ at IoU=0.5 is reported. ASF and DecControlled Strong use C+L+R inputs, score threshold 0.3, and the revised evaluator. Strong is a Dec-family variant without task-context modulation. Total is evaluated on the full evaluation set. A dash denotes no evaluated Bus/Truck ground truth in fog for our setting.}
+\label{tab:kradar_v2_weather_05}
+\resizebox{\linewidth}{!}{%
+\begin{tabular}{lllrrrrrrrr}
+\toprule
+Class & Method & Mod. & Total & Normal & Li. Snow & He. Snow & Rain & Sleet & Overcast & Fog \\
+\midrule
+Sedan & ASF (official) & CLR & 52.09 & 49.63 & 59.25 & 49.52 & 46.85 & 44.05 & 53.38 & 80.55 \\
+Sedan & DecControlled Strong (ours) & CLR & 52.14 & 49.39 & 60.75 & 50.49 & 48.30 & 49.13 & 59.62 & 80.30 \\
+\midrule
+Bus/Truck & ASF (official) & CLR & 31.06 & 23.93 & 70.81 & 32.55 & 2.48 & 38.83 & 47.04 & -- \\
+Bus/Truck & DecControlled Strong (ours) & CLR & 33.97 & 23.94 & 75.09 & 39.37 & 5.05 & 38.48 & 49.65 & -- \\
+\bottomrule
+\end{tabular}
+}
+\end{table*}
