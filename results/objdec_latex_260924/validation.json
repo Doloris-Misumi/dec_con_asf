@@ -1,0 +1,20 @@
+{
+  "pass": true,
+  "errors": [],
+  "table_blocks": 26,
+  "data_rows_checked": 228,
+  "table_cells_checked": 1519,
+  "numeric_tokens_and_missing_markers_preserved": true,
+  "bibliography_entries": 36,
+  "cited_entries": 36,
+  "missing_citations": [],
+  "cross_reference_labels": 98,
+  "missing_cross_references": [],
+  "numbered_equations": 10,
+  "main_figures": 4,
+  "appendix_e_figures": 7,
+  "candidate_atlas_preserved_as_archive": true,
+  "paired_intervention_rows_checked": 9,
+  "remaining_visible_todo_instances": 4,
+  "layout_note": "Generic article preview; remaining underfull alignment notices do not indicate clipped content. Not an ICLR submission layout."
+}

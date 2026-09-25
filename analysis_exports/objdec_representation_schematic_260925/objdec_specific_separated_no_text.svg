@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="41.7mm" height="32.0mm" viewBox="0 0 41.7 32.0">
+<g transform="translate(0 0)">
+<circle cx="7.1000" cy="7.9500" r="2.6200" fill="#4A9EEB" stroke="#FFFFFF" stroke-width="0.28" data-role="separated_cluster"/>
+<circle cx="5.2000" cy="11.0250" r="2.6200" fill="#4A9EEB" stroke="#FFFFFF" stroke-width="0.28" data-role="separated_cluster"/>
+<circle cx="9.0000" cy="11.0250" r="2.6200" fill="#4A9EEB" stroke="#FFFFFF" stroke-width="0.28" data-role="separated_cluster"/>
+<circle cx="20.8500" cy="20.9500" r="2.6200" fill="#58B77A" stroke="#FFFFFF" stroke-width="0.28" data-role="separated_cluster"/>
+<circle cx="18.9500" cy="24.0250" r="2.6200" fill="#58B77A" stroke="#FFFFFF" stroke-width="0.28" data-role="separated_cluster"/>
+<circle cx="22.7500" cy="24.0250" r="2.6200" fill="#58B77A" stroke="#FFFFFF" stroke-width="0.28" data-role="separated_cluster"/>
+<circle cx="34.6000" cy="7.9500" r="2.6200" fill="#9672D0" stroke="#FFFFFF" stroke-width="0.28" data-role="separated_cluster"/>
+<circle cx="32.7000" cy="11.0250" r="2.6200" fill="#9672D0" stroke="#FFFFFF" stroke-width="0.28" data-role="separated_cluster"/>
+<circle cx="36.5000" cy="11.0250" r="2.6200" fill="#9672D0" stroke="#FFFFFF" stroke-width="0.28" data-role="separated_cluster"/>
+</g>
+</svg>

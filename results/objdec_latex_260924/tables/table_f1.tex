@@ -1,0 +1,36 @@
+\begin{table}[tbp]
+\centering
+\caption[v1 input availability with fixed weights]{\textbf{v1 input availability with fixed weights.} The same v1 ObjDec checkpoint is evaluated on 10,065 frames. The LR/conf=0.3 row uses the audited recomputation of saved predictions, reported to two decimals in its source. NR denotes an unverified summary for LR/conf=0.0, not zero performance. Other rows are read from their JSON records.}
+\label{tab:f1}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.45455\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.90909\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.90909\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.90909\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.90909\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.90909\hsize\linewidth=\hsize\centering\arraybackslash}X@{}}
+\toprule
+\textbf{Input} & \textbf{conf} & \textbf{3D@0.3} & \textbf{3D@0.5} & \textbf{BEV@0.5} & \textbf{\(\Delta\) 3D@0.3 vs CLR} \\
+\midrule
+C+L+R & 0.3 & 88.36 & 67.50 & 88.10 & +0.00 \\
+C+L+R & 0.0 & 88.06 & 72.83 & 87.18 & +0.00 \\
+L+R & 0.3 & 88.06 & 71.68 & 85.45 & -0.30 \\
+L+R & 0.0 & NR & NR & NR & NR \\
+C+L & 0.3 & 86.77 & 72.58 & 86.35 & -1.59 \\
+C+L & 0.0 & 86.16 & 69.74 & 83.76 & -1.90 \\
+C+R & 0.3 & 57.62 & 34.59 & 55.52 & -30.74 \\
+C+R & 0.0 & 63.65 & 38.48 & 60.28 & -24.41 \\
+L & 0.3 & 79.58 & 60.05 & 77.96 & -8.77 \\
+L & 0.0 & 85.46 & 59.23 & 77.96 & -2.60 \\
+R & 0.3 & 49.81 & 26.64 & 46.80 & -38.55 \\
+R & 0.0 & 61.75 & 30.86 & 52.60 & -26.31 \\
+C & 0.3 & 0.86 & 0.16 & 0.21 & -87.49 \\
+C & 0.0 & 0.32 & 0.03 & 0.14 & -87.74 \\
+C* & 0.3 & 0.00 & 0.00 & 0.00 & -88.36 \\
+C* & 0.0 & 0.17 & 0.01 & 0.07 & -87.89 \\
+C*+L+R & 0.3 & 88.36 & 67.41 & 88.09 & +0.00 \\
+C*+L+R & 0.0 & 88.06 & 72.75 & 87.17 & +0.00 \\
+C+L*+R & 0.3 & 50.26 & 34.83 & 49.27 & -38.09 \\
+C+L*+R & 0.0 & 63.05 & 38.48 & 61.12 & -25.01 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}

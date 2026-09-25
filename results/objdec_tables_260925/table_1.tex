@@ -1,0 +1,28 @@
+\begin{table}[tbp]
+\centering
+\caption[Main K-Radar v1 results]{\textbf{Main K-Radar v1 results.} Detection results for the K-Radar Sedan narrow-region setting. C, L, and R denote camera, LiDAR, and 4D radar. The final three rows use the project's v1 labels and a confidence filter of 0.3. The released ASF result is taken from the checkpoint-associated archive, with local retraining reported separately. Other rows retain their published or public-log settings and are not uniformly reproduced under identical labels, preprocessing, and evaluators. Horizontal rules separate published references from project-protocol results.}
+\label{tab:1}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.95000\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.60000\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=1.65000\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.70000\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.70000\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.70000\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.70000\hsize\linewidth=\hsize\centering\arraybackslash}X@{}}
+\toprule
+\textbf{Method} & \textbf{Sensors} & \textbf{Source} & \shortstack{\(\mathrm{AP}_{3D}\)\\\(@0.3\)} & \shortstack{\(\mathrm{AP}_{3D}\)\\\(@0.5\)} & \shortstack{\(\mathrm{AP}_{BEV}\)\\\(@0.3\)} & \shortstack{\(\mathrm{AP}_{BEV}\)\\\(@0.5\)} \\
+\midrule
+RTNH~\citep{paek2022kradar} & R & Reported & 37.40 & 14.10 & 41.10 & 36.00 \\
+RTNH~\citep{paek2022kradar} & L & Reported & 72.70 & 37.80 & 76.50 & 66.30 \\
+3D-LRF~\citep{chae2024threedlrf} & L+R & Reported & 74.80 & 45.20 & 84.00 & 73.60 \\
+L4DR~\citep{huang2025l4dr} & L+R & Public log & 77.96 & 53.50 & 79.49 & 77.54 \\
+DLRFusion~\citep{chae2025dlrfusion} & L+R & Reported & 74.80 & 45.70 & 82.90 & 73.20 \\
+RAF on L4DR~\citep{park2026raf} & C+L+R & Reported & --- & 57.40 & --- & 82.00 \\
+AW-MoE~\citep{lin2026awmoe} & L+R & Reported & 83.90 & 61.50 & 88.20 & 84.20 \\
+AW-MoE-LRC~\citep{lin2026awmoe} & C+L+R & Reported & 84.30 & 61.80 & --- & --- \\
+\midrule
+ASF~\citep{paek2025asf} & C+L+R & Released checkpoint archive & 80.31 & 67.19 & 80.78 & 80.33 \\
+ASF~\citep{paek2025asf} & C+L+R & Local retraining & 88.57 & 67.49 & 89.01 & 80.36 \\
+ObjDec & C+L+R & Ours & 88.36 & 67.50 & 88.84 & 88.10 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}

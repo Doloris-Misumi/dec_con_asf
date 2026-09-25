@@ -1,0 +1,48 @@
+\begin{table}[tbp]
+\centering
+\caption[Published references and local fusion comparisons]{\textbf{Published references and local fusion comparisons.} Both panels use Moderate difficulty and strict class IoUs of 0.7/0.5/0.5; Mean is the arithmetic class average. Panel (a) reproduces selected results from Table~4 of the V2X-Radar paper~\citep{yang2025v2xradar}, reported by the dataset authors without local reproduction. Method citations identify the original architectures; all scores in panel (a) come from the dataset paper. Its means are calculated from published class scores; slash-separated entries in the source denote strict/loose IoUs, not 3D/BEV. Panel (b) reports local AP\(_{R40}\), comparing three-sensor fusion with common encoders and detection heads, and separately trained L+R architectures. ASF-style omits SCL. Data versions, splits, reporting sets, and ROIs differ across panels, precluding a combined ranking or cross-panel gains. Panel (b) uses validation-selected epochs 80, 70, 80, and 75, respectively. The Concat control and complete BEV/best/last results are retained in Tables~\ref{tab:g1} and~\ref{tab:g2}.}
+\label{tab:4}
+\begin{subtable}{\linewidth}
+\caption{Published validation references (different protocol)}
+\label{tab:4a}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.33333\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=1.33333\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.83333\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.83333\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.83333\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.83335\hsize\linewidth=\hsize\centering\arraybackslash}X@{}}
+\toprule
+\textbf{Method} & \textbf{Sensors} & \textbf{Vehicle 3D} & \textbf{Pedes\-trian 3D} & \textbf{Cyclist 3D} & \textbf{Mean 3D} \\
+\midrule
+PointPillars~\citep{lang2019pointpillars} & L & 68.80 & 38.16 & 65.24 & 57.40 \\
+CenterPoint~\citep{yin2021centerpoint} & L & 72.19 & 50.59 & 75.26 & 66.01 \\
+PV-RCNN~\citep{shi2020pvrcnn} & L & 79.38 & 58.83 & 78.01 & 72.07 \\
+SQDNet~\citep{mo2024sqd} & L & 79.65 & 58.79 & 79.46 & 72.63 \\
+BEVDepth~\citep{li2023bevdepth} & C & 15.47 & 8.51 & 9.46 & 11.15 \\
+RPFA-Net~\citep{xu2021rpfa} & R & 30.44 & 10.37 & 11.98 & 17.60 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{subtable}
+\par\medskip
+\begin{subtable}{\linewidth}
+\caption{Local deduplicated test; validation-selected weights}
+\label{tab:4b}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.36585\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=1.36585\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.85366\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.85366\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.85366\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.85366\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.85366\hsize\linewidth=\hsize\centering\arraybackslash}X@{}}
+\toprule
+\textbf{Method} & \textbf{Sensors} & \textbf{Vehicle 3D} & \textbf{Pedes\-trian 3D} & \textbf{Cyclist 3D} & \textbf{Mean 3D} & \textbf{Mean BEV} \\
+\midrule
+ASF-style & C+L+R & 84.54 & 76.17 & 83.18 & 81.30 & 85.72 \\
+ObjDec & C+L+R & 84.06 & 75.94 & 84.13 & 81.38 & 86.27 \\
+\midrule
+L4DR & L+R & 83.17 & 73.25 & 78.31 & 78.24 & 82.56 \\
+ObjDec-LR & L+R & 83.87 & 74.84 & 80.24 & 79.65 & 83.81 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{subtable}
+\par\medskip
+\end{table}

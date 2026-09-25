@@ -12,7 +12,7 @@ The paper method name is **ObjDec**. `TaskDec` remains the engineering name in
 classes, configuration files, scripts, and historical experiment records; these
 names are preserved to keep existing experiments reproducible.
 
-**Collaboration snapshot: 2026-09-24.** Start with the
+**Collaboration snapshot: 2026-09-26.** Start with the
 [图表与论文协作指南](docs/OBJDEC_COLLABORATION.md). This is an evolving research
 workspace with drafts and recorded experiments, rather than a finished paper
 release. Historical filenames retain their creation dates even when revised.
@@ -22,16 +22,19 @@ release. Historical filenames retain their creation dates even when revised.
 | Material | Current entry |
 | --- | --- |
 | Abstract | [Bilingual abstract draft](results/taskdec_abstract_initial_draft_260917.md) |
-| Introduction | [Bilingual introduction](results/taskdec_introduction_bilingual_initial_260917.md) |
-| Related work | [Bilingual related work](results/taskdec_related_work_bilingual_initial_260917.md) · [Recent BibTeX entries](results/taskdec_recent_references_2025_2026_260917.bib) |
-| Method | [Bilingual method](results/taskdec_methods_bilingual_initial_260917.md) |
-| Experiments | [Bilingual experiments](results/objdec_experiments_bilingual_initial_260919.md) |
+| Introduction | [LaTeX introduction](results/objdec_introduction_260924.tex) · [Bilingual introduction](results/objdec_introduction_bilingual_260924.md) |
+| Related work | [Bilingual related work](results/taskdec_related_work_bilingual_initial_260917.md) · [LaTeX related work](results/objdec_related_work_260925.tex) |
+| Method | [LaTeX method](results/objdec_methods_260925.tex) · [Bilingual method](results/taskdec_methods_bilingual_initial_260917.md) |
+| Experiments | [LaTeX experiments](results/objdec_experiments_260925.tex) · [Bilingual experiments](results/objdec_experiments_bilingual_initial_260919.md) |
 | Appendix | [Bilingual appendix](results/objdec_appendix_bilingual_initial_260920.md) · [Writing plan](results/objdec_appendix_writing_plan_260920.md) |
+| Conclusion | [LaTeX](results/objdec_conclusion_260925.tex) · [Bilingual](results/objdec_conclusion_bilingual_260925.md) |
+| Complete manuscript | [LaTeX source and usage](results/objdec_latex_260924/README.md) · [Compiled preview](results/objdec_latex_260924/preview.pdf) · [Unified BibTeX](results/objdec_introduction_references_260924.bib) |
+| Figure placement | [Four main figures and appendix inventory](results/objdec_figures_main_appendix_plan_260926.md) |
 | Architecture | [Verified signals and wiring](analysis_exports/objdec_architecture_redesign_260922/CENTERED_REVISION.md) · [Current hand-drawn reference](cb40887aca547bfc940ba77ab865ed6e.png) |
 | Motivation | [Real K-Radar sample variants](analysis_exports/objdec_motivation_new_samples_260922/README.md) |
 | PCA / gate figures | [Blue–green–purple figure collection](analysis_exports/objdec_visuals_blue_green_purple_260923/README.md) |
-| Architecture insets | [Points-only PCA assets](analysis_exports/objdec_pca_points_only_260924/README.md) · [Object-context vector example](analysis_exports/objdec_context_vector_example_260924/README.md) |
-| Detection examples | [Figure 4/5 notes](analysis_exports/objdec_fig4_fig5_260919/README.md) · [Paired detection preview](analysis_exports/objdec_fig4_fig5_260919/fig5_asf_objdec_detection_draft.png) |
+| Architecture insets | [Shared/specific schematic insets](analysis_exports/objdec_representation_schematic_260925/README.md) · [Object-context vector example](analysis_exports/objdec_context_vector_example_260924/README.md) |
+| Detection examples | [Current Fig.4 / appendix comparison notes](analysis_exports/objdec_fig4_fig5_compact_260925/README_and_captions.md) · [Main Fig.4](analysis_exports/objdec_fig4_fig5_compact_260925/objdec_fig4_compact.pdf) · [Appendix comparison](analysis_exports/objdec_fig4_fig5_compact_260925/objdec_fig5_compact.pdf) |
 
 Use the latest result records below when updating draft tables; earlier prose
 and intermediate figures can still contain superseded terminology or pending

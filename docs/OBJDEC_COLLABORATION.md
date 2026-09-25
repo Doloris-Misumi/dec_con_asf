@@ -1,6 +1,6 @@
 # ObjDec 图表与论文协作指南
 
-更新：2026-09-24。用于协作者看代码、改图及完善论文；当前材料仍为工作稿。
+更新：2026-09-26。用于协作者看代码、改图及完善论文；当前材料仍为工作稿。
 
 ## 先读这几份
 
@@ -13,29 +13,33 @@
 论文题目：**Decoupling to Fuse: Learning Shared and Modality-Specific Representations for Multi-Sensor 3D Object Detection**。
 文中方法名统一为 **ObjDec**；代码中的TaskDec、task以及历史文件名暂不批量重命名。
 
-## 六部分初稿
+## 章节初稿与LaTeX入口
 
 | 部分 | 文件 |
 | --- | --- |
 | Abstract | [中英文摘要](../results/taskdec_abstract_initial_draft_260917.md) |
-| Introduction | [中英文引言](../results/taskdec_introduction_bilingual_initial_260917.md) |
-| Related work | [中英文相关工作](../results/taskdec_related_work_bilingual_initial_260917.md) · [2025–2026 BibTeX](../results/taskdec_recent_references_2025_2026_260917.bib) |
+| Introduction | [当前中英文引言](../results/objdec_introduction_bilingual_260924.md) · [LaTeX](../results/objdec_introduction_260924.tex) |
+| Related work | [中英文相关工作](../results/taskdec_related_work_bilingual_initial_260917.md) · [LaTeX](../results/objdec_related_work_260925.tex) · [统一36条BibTeX](../results/objdec_introduction_references_260924.bib) |
 | Method | [中英文方法](../results/taskdec_methods_bilingual_initial_260917.md) |
 | Experiments | [中英文实验](../results/objdec_experiments_bilingual_initial_260919.md) |
+| Conclusion | [LaTeX](../results/objdec_conclusion_260925.tex) · [中英文](../results/objdec_conclusion_bilingual_260925.md) |
+| 完整工程 | [源码与使用说明](../results/objdec_latex_260924/README.md) · [编译预览](../results/objdec_latex_260924/preview.pdf) |
 | Appendix | [中英文附录](../results/objdec_appendix_bilingual_initial_260920.md) · [提纲](../results/objdec_appendix_writing_plan_260920.md) · [来源备注](../results/objdec_appendix_source_notes_260920.md) |
 
 `results/`中还保留选模、诊断和阶段性讨论。文件名日期是创建日期，不意味着之后未更新；正文中的“待补”与旧状态需按下面的最终结果记录核对。
 
 ## 图稿与可编辑素材
 
+当前正文四图：动机、架构、正常／大雪PCA、三场景gate。原Fig.5检测对照移入附录E.6，完整安排见[图件清单](../results/objdec_figures_main_appendix_plan_260926.md)。Method、Experiments、Conclusion的独立LaTeX和四张独立表见[粘贴使用说明](../results/objdec_methods_experiments_latex_notes_260925.md)。
+
 | 用途 | 入口 | 当前状态 |
 | --- | --- | --- |
 | 动机图 | [真实样本版本](../analysis_exports/objdec_motivation_new_samples_260922/README.md) · [设计及图注](../analysis_exports/objdec_motivation_comparison_260922/design_and_captions.md) | 多个K-Radar样本候选，含SVG及输入／输出小图 |
 | 主架构图 | [最新手工参考图](../cb40887aca547bfc940ba77ab865ed6e.png) · [接线说明](../analysis_exports/objdec_architecture_redesign_260922/CENTERED_REVISION.md) | 手工稿待补loss；早期PNG不作为实现依据 |
-| 主图Shared／Specific插图 | [纯散点素材](../analysis_exports/objdec_pca_points_only_260924/README.md) | 点面积3倍、alpha=0.95，无轴／图注，透明PNG和SVG |
+| 主图Shared／Specific插图 | [无文字表征示意图](../analysis_exports/objdec_representation_schematic_260925/README.md) | 共享聚合／特有分离的概念示意，供小尺寸主图使用；真实PCA证据见Fig.3 |
 | Object context局部图 | [完整例图SVG](../analysis_exports/objdec_context_vector_example_260924/objdec_object_context_example.svg) · [纯向量条SVG](../analysis_exports/objdec_context_vector_example_260924/objdec_context_vector_asset.svg) | 中性色向量条，可直接插入PPT |
 | PCA、直接高维相似度、全天气gate | [统一配色完整清单](../analysis_exports/objdec_visuals_blue_green_purple_260923/README.md) | PNG／PDF／SVG及统计来源 |
-| 实际检测对照 | [Fig.4/5说明](../analysis_exports/objdec_fig4_fig5_260919/README.md) · [ASF/ObjDec成对预览](../analysis_exports/objdec_fig4_fig5_260919/fig5_asf_objdec_detection_draft.png) · [雪天与反例](../analysis_exports/objdec_fig4_fig5_260919/fig5_snow_and_counterexample.png) | 当前草图及选择说明 |
+| 实际检测对照 | [当前Fig.4与附录对照图说明](../analysis_exports/objdec_fig4_fig5_compact_260925/README_and_captions.md) · [ASF/ObjDec成对预览](../analysis_exports/objdec_fig4_fig5_260919/fig5_asf_objdec_detection_draft.png) · [雪天与反例](../analysis_exports/objdec_fig4_fig5_260919/fig5_snow_and_counterexample.png) | 当前草图及选择说明 |
 
 统一传感器配色：Camera **蓝 #4A9EEB**、LiDAR **绿 #58B77A**、4D Radar **紫 #9672D0**。
 `z`来自融合描述，用中性灰蓝向量条，避免被误读成LiDAR特征。

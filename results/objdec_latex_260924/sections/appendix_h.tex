@@ -1,0 +1,25 @@
+\section{Efficiency Measurement and Scope}
+\label{app:h}
+
+\subsection{Paired timing protocol}
+\label{subsec:h1}
+
+Timing uses an RTX A6000, batch size 1, four PyTorch CPU threads, FP32 tensors, and no autocast. The original environment's matmul/cuDNN TF32 settings remain enabled; cuDNN deterministic is enabled and benchmark is disabled. The PyTorch version is 1.10.1+cu113. We sample 120 test indices uniformly, using the first 20 for warmup and the remaining 100 for timing, and repeat the same frames in two rounds.
+
+Each frame's CPU input is copied for the eager and Graph paths, alternating their order and synchronizing each measurement. Model order is ObjDec, ASF, ASF, ObjDec. Timing covers the network call, including point-cloud preprocessing, host-to-device transfer, encoding, fusion, decoding, NMS, and GT recall computation in the original evaluation path. Disk access, collation, initial graph capture, initialization, and result verification are excluded. Training on other GPUs remains active, so host load is not fully isolated. Table~\ref{tab:h1} adds median, P95, and timing standard deviation; very small mean-latency differences are not interpreted as stable architectural advantages.
+
+\subsection{Graph replay and numerical checks}
+\label{subsec:h2}
+
+CUDA Graph captures only the repeated camera-Swin and fusion computations. Each frame supplies new images and BEV features and executes the captured operators; calibration is read per frame, and predictions are not cached across frames. Inputs with different shapes, sensor sets, or visualization requirements fall back to eager execution according to the implementation conditions.
+
+The paired runs checked 240 forwards for each model. Under identical captured inputs, all capture checks were exact. Across the full paths, all checked tensors were exactly equal in 218/240 cases for each model; repeated eager checks also showed variation in the unmodified radar path. Label arrays matched in 238/240 cases for ObjDec and 235/240 for ASF. These sampled checks therefore do not establish complete numerical equivalence of the full inference pipeline.
+
+All four timing runs encountered a native exit error after their result files had been written. An independent read verified the stored timing and comparison records; the original profiling path exhibited a similar exit issue. The two visualization inference jobs likewise completed their exports before native exit errors, and their output files were checked independently. Full-test AP has not been reevaluated for the Graph path. We therefore report measured latency and sampled checks, without claiming fully validated deployment or unchanged full-set detection accuracy.
+
+\subsection{Scope of the evidence}
+\label{subsec:h3}
+
+The experiments use the current single-seed training and checkpoint-selection procedures, with part of the v1 preliminary-selection record still to be documented. Strong on v2 does not contain the complete object-context path. V2X and VoD experiments train on their target datasets and establish adaptation under the stated protocols, rather than zero-shot transfer. Sensor-availability results retain weak camera-only performance and a marked dependence on LiDAR. Finally, cosine constraints and foreground supervision organize representations but do not establish an identifiable semantic decomposition, statistical independence, or an exact reconstruction identity \(c+u=t\). These boundaries delimit what the present ablations and visualizations support.
+
+\input{tables/table_h1.tex}

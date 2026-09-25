@@ -1,0 +1,121 @@
+\section{Method}\label{sec:methods}
+
+\subsection{Overview}
+\label{subsec:31}
+
+We introduce ObjDec, a multi-sensor 3D detection architecture centered on shared and modality-specific representation decoupling. As illustrated in Figure~\ref{fig:2}, modality-specific encoders first transform camera, LiDAR, and 4D radar observations into spatially corresponding bird's-eye-view (BEV) features. We adopt ASF's unified projection to map features with different channel dimensions into patch tokens for corresponding local regions, and retain its local cross-sensor attention and subsequent feature transformation as the interaction backbone \citep{paek2025asf}. Let \(\mathcal M\) denote the participating modalities, with \(M=|\mathcal M|\), and let \(t_m^p\in\mathbb R^d\) be the input token of modality \(m\) at patch \(p\). We omit the batch dimension for clarity.
+
+Within each corresponding patch, separate mappings learn shared and modality-specific representations with distinct training constraints. Both representations contribute to fusion through residual token updates and the prediction of modality contributions and object context. Object-region supervision and predicted foreground gates give their learning and use a detection-specific focus. The gates and modality weights regulate input-token updates and scaling, while object context modulates attention queries and fused outputs. Local interaction is followed by feature transformation and spatial reassembly to produce fused BEV features for the 3D detection head. Control signals are predicted from input features during both training and inference; ground-truth (GT) boxes provide supervision targets for representation constraints and object-related predictions only during training.
+
+
+\subsection{Shared and Modality-Specific Representation Decoupling}
+\label{subsec:32}
+
+Spatially corresponding multimodal features contain both responses shared across sensors and cues specific to each modality. To explicitly organize these two components, we introduce two independent mappings for each modality:
+
+\begin{equation}
+c_m^p=\phi_m^{c}(t_m^p),\qquad
+u_m^p=\phi_m^{u}(t_m^p),
+\quad c_m^p,u_m^p\in\mathbb R^d.
+\label{eq:1}
+\end{equation}
+
+Here, \(c_m^p\) and \(u_m^p\) denote shared and modality-specific representations, respectively, and \(\phi_m^c\) and \(\phi_m^u\) are lightweight multilayer perceptrons. Their parameters are separate across modalities; correspondence between shared representations is established through training constraints.
+
+To connect representation learning to detection, we construct a foreground patch set \(\mathcal P_{\mathrm{fg}}\) for supervision from training annotations. A patch is marked as foreground when its center lies within the BEV footprint of a ground-truth 3D box expanded by a predefined margin. The representation mappings in Equation~\eqref{eq:1} operate at all spatial locations; this set only specifies where the following three training constraints are evaluated:
+
+\begin{equation}
+\begin{aligned}
+\mathcal L_c
+&=\mathbb E_{p\in\mathcal P_{\mathrm{fg}},\,m<n}
+\left[1-\operatorname{cos}(c_m^p,c_n^p)\right],\\
+\mathcal L_u
+&=\mathbb E_{p\in\mathcal P_{\mathrm{fg}},\,m<n}
+\left[\operatorname{cos}(u_m^p,u_n^p)-\delta\right]_+,\\
+\mathcal L_{\mathrm{sep}}
+&=\mathbb E_{p\in\mathcal P_{\mathrm{fg}},\,m}
+\left[\left|\operatorname{cos}(c_m^p,u_m^p)\right|\right].
+\end{aligned}
+\label{eq:2}
+\end{equation}
+
+Here, \(\operatorname{cos}(\cdot,\cdot)\) denotes cosine similarity, \([a]_+=\max(a,0)\), and \(\delta\) is a similarity margin. Each expectation denotes an arithmetic mean over the indicated foreground patches and modalities or unordered modality pairs. \(\mathcal L_c\) encourages agreement between shared representations of the same region; \(\mathcal L_u\) penalizes excessive cross-modal similarity between modality-specific representations; and \(\mathcal L_{\mathrm{sep}}\) limits similarity between the two representations of each modality. These soft constraints establish distinct roles for the two branches within object regions, alongside the detection objective. The foreground set is used only for training supervision; representations at all spatial locations are computed directly from input tokens.
+
+\subsection{Representation-Driven Fusion}
+\label{subsec:33}
+
+We use the decoupled representations to determine how local information participates in fusion. For patch \(p\), let \(\bar c^p=M^{-1}\sum_m c_m^p\) and \(\bar u_{\mathrm{abs}}^p=M^{-1}\sum_m|u_m^p|\) denote the mean shared representation and the mean magnitude of modality-specific representations. Their concatenation forms a joint descriptor \(h^p=[\bar c^p;\bar u_{\mathrm{abs}}^p]\), where absolute values are elementwise.
+
+\textbf{Input-token modulation.} The joint descriptor predicts a patch-level foreground gate. Each modality contribution score considers the original token, its two representations, and the deviation of its shared representation from the cross-modal mean:
+
+\begin{equation}
+\begin{aligned}
+g^p&=\sigma\!\left(f_g(h^p)\right),\\
+s_m^p&=f_m\!\left([t_m^p;c_m^p;u_m^p;|c_m^p-\bar c^p|]\right),\\
+\alpha_m^p&=\frac{\exp(s_m^p/\tau)}{\sum_{n\in\mathcal M}\exp(s_n^p/\tau)}.
+\end{aligned}
+\label{eq:3}
+\end{equation}
+
+Here, \(\sigma\) is the sigmoid function, \(f_g\) and \(f_m\) are learned prediction heads, and \(\tau>0\) is a temperature. The gate \(g^p\in(0,1)\) is a continuous foreground-relevance score predicted directly from multimodal representations and shared across modalities within a patch. This head neither generates bounding boxes nor requires previously detected object regions. Gates are computed at every patch through Equation~\eqref{eq:3} and directly used for continuous modulation. The weight \(\alpha_m^p\) represents the learned relative contribution of modality \(m\). We convert these contributions into bounded scaling factors centered on one and update the input tokens:
+
+\begin{equation}
+\begin{aligned}
+w_m^p
+&=\operatorname{clip}\!\left(1+\eta g^p(M\alpha_m^p-1),\,w_{\min},w_{\max}\right),\\
+\widetilde t_m^p
+&=w_m^p\left[t_m^p+\lambda g^p(c_m^p+u_m^p)\right].
+\end{aligned}
+\label{eq:4}
+\end{equation}
+
+The coefficients \(\eta\) and \(\lambda\) control modality scaling and the representation residual, respectively, and the scaling interval contains one. Uniform modality contributions yield \(w_m^p=1\). As the gate approaches zero, the representation residual diminishes and the scaling factors approach one, preserving the original token \(t_m^p\). The gate therefore regulates local update strength without removing background features through a binary mask, while modality scores determine relative feature scaling.
+
+\textbf{Object-context-guided interaction.} To guide cross-modal interaction with information related to detection targets, we also predict object context from \(h^p\). In the single-class primary setting, an objectness prediction is mapped into the token space:
+
+\begin{equation}
+r^p=\sigma\!\left(f_{\mathrm{obj}}(h^p)\right),\qquad
+z^p=\tanh(W_z r^p),\quad z^p\in\mathbb R^d.
+\label{eq:5}
+\end{equation}
+
+Here, \(f_{\mathrm{obj}}\) is a separate objectness prediction head and \(W_z\) is a learned mapping. The foreground gate controls update strength, while \(z^p\) supplies a context vector derived from predicted objectness. Multi-class settings can instead use foreground class probabilities to form the context, with the corresponding supervision specified in the appendix.
+
+Let \(Q\in\mathbb R^{N_q\times d}\) be learned queries reused across patches, and let \(\widetilde T^p\in\mathbb R^{M\times d}\) stack the controlled modality tokens. We incorporate the context into both the queries and attention outputs:
+
+\begin{equation}
+\begin{aligned}
+Q'^p&=Q+\beta g^p\mathbf 1_{N_q}(z^p)^\top,\\
+F^p&=\operatorname{MHA}(Q'^p,\widetilde T^p,\widetilde T^p),\\
+F'^p&=F^p+\gamma g^p\mathbf 1_{N_q}(z^p)^\top.
+\end{aligned}
+\label{eq:6}
+\end{equation}
+
+\(\operatorname{MHA}\) denotes multi-head attention with learned query, key, and value projections. The vector \(\mathbf 1_{N_q}\) broadcasts the local context over all query positions within the patch, and \(\beta\) and \(\gamma\) control the two residual strengths. The updated tokens \(F'^p\) undergo subsequent feature transformation and spatial reassembly to form the fused BEV representation. Shared and modality-specific representations thereby contribute to detection features through input updates, modality contribution control, and context-guided interaction.
+
+\subsection{Training Objectives and Inference}
+\label{subsec:34}
+
+In the primary setting, foreground indicators \(y^p=\mathbf{1}[p\in\mathcal P_{\mathrm{fg}}]\) supervise both the foreground gate \(g^p\) and objectness prediction \(r^p\). Their losses, \(\mathcal L_g\) and \(\mathcal L_{\mathrm{ctx}}\), use binary cross-entropy with positive-class weighting over foreground and background patches in a training batch. The three representation constraints in Equation~\eqref{eq:2} are evaluated within the foreground set. The training forward pass also uses the feature-predicted \(g^p\) and \(r^p\); labels \(y^p\) enter only the loss computation and do not replace these predictions in fusion.
+
+The overall objective is
+
+\begin{equation}
+\begin{aligned}
+\mathcal L={}&\mathcal L_{\mathrm{det}}+\lambda_{\mathrm{scl}}\mathcal L_{\mathrm{scl}}\\
+&+\lambda_{\mathrm{aux}}\bigl(
+\lambda_c\mathcal L_c+
+\lambda_u\mathcal L_u+
+\lambda_{\mathrm{sep}}\mathcal L_{\mathrm{sep}}+
+\lambda_g\mathcal L_g+
+\lambda_{\mathrm{ctx}}\mathcal L_{\mathrm{ctx}}\bigr).
+\end{aligned}
+\label{eq:7}
+\end{equation}
+
+Here, \(\mathcal L_{\mathrm{det}}\) includes detection classification, box regression, and orientation losses. \(\mathcal L_{\mathrm{scl}}\) is the sensor-combination supervision inherited from ASF: the sum of detection losses on single-modality and two-modality feature combinations \citep{paek2025asf}. It is enabled in the primary K-Radar setting, and training configurations are reported separately for each dataset. The coefficient \(\lambda_{\mathrm{aux}}\) controls the overall weight of the added supervision, while the remaining coefficients balance its components. The forward modulation is differentiable, allowing detection and auxiliary objectives to jointly optimize the representation branches and control heads.
+
+At inference, the model retains the same gate, modality contribution, and context prediction branches and forms detection features through Equations~\eqref{eq:4}--\eqref{eq:6}, without constructing GT labels or computing losses. The foreground gate provides continuous control over local fusion; the subsequent detection head predicts object classes, 3D locations, dimensions, and orientations. Network dimensions, loss weights, sensor-combination training details, and dataset-specific adaptations are provided in the appendix.
+
+\input{figures/figure_2}

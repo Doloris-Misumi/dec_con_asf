@@ -22,7 +22,7 @@
 | B 评测协议与模型选择 | Evaluation Protocols and Model Selection | 表中的结果怎样产生、哪些可直接比较？ | 实验4.1及各主表表注 |
 | C 完整 K-Radar 结果 | Complete Results on K-Radar | 换类别、IoU、阈值和天气后表现怎样？ | 实验4.2 |
 | D 组件与配置分析 | Component and Configuration Analyses | 移除了什么、保留了什么，变化体现在哪些指标？ | 实验4.3 |
-| E 表征与定性分析 | Representation and Qualitative Analyses | shared/specific、gate和最终检测各提供什么证据？ | 实验4.4、Fig.3–5 |
+| E 表征与定性分析 | Representation and Qualitative Analyses | shared/specific、gate和最终检测各提供什么证据？ | 实验4.4、Fig.3–4及附录检测对照 |
 | F 传感器可用性与损坏输入 | Sensor Availability and Corrupted Inputs | 同一权重在输入改变后保留多少性能？ | 实验4.2 |
 | G 跨数据集架构适配 | Cross-Dataset Architecture Adaptation | V2X完整适配与对照如何构造，VoD适配有哪些补充结果？ | 实验4.5、Table 4 |
 | H 计算效率与适用范围 | Computational Efficiency and Limitations | 新结构与部署优化的代价分别是什么？ | 实验4.3、结论 |
@@ -43,7 +43,7 @@
 - 多类别上下文的类别目标、重叠框赋值方式、前景类别CE与单独gate监督。
 - 低gate削弱新增残差和缩放偏离1的程度，原始token仍保留；最终检测框由后续检测头产生。
 
-建议给一段训练/推理共用伪代码：先计算所有位置的表征、预测控制信号并融合；仅在training条件下构建标签和损失。GT到loss的虚线关系已有Fig.4展示，无需再复制一张相同大图。
+建议给一段训练/推理共用伪代码：先计算所有位置的表征、预测控制信号并融合；仅在training条件下构建标签和损失。GT到loss的关系在方法与主架构图中说明，无需再复制一张相同大图。
 
 **A.3 Optimization and inherited training objectives.** 用一张配置表列训练轮数、micro-batch/有效batch、优化器、学习率、冻结策略、初始化和损失权重。特别说明外层辅助权重与各项内部权重的乘积。SCL放在本小节用一段说明，并在正文保留其启用情况和引用：K-Radar主设置启用，V2X关闭。实际SCL从已受控的完整输入token中选组合，不是每次只用子集传感器重新独立预测gate/context；主路径与SCL路径的输出context残差也有区别。
 
@@ -112,13 +112,13 @@ V2X明确“按去重val严格Moderate平均3D AP选择best，然后报告test�
 
 写清每种表征所用PCA拟合样本、是否共享投影基、归一化和显示抽样。不同表征若使用独立PCA空间，不跨图比较绝对距离；若只抽样显示，注明统计仍覆盖全量数据。连续帧不当作独立重复实验，分位范围不写成置信区间。
 
-**E.2 Shared and modality-specific structure.** 给完整七天气PCA、原始空间相似度矩阵/分布以及按模态对拆分的统计。正文Fig.3保留最直观的组合，附录展示完整天气与分布。现有common平均跨模态余弦0.951–0.959、specific为0.446–0.549，是与训练目标一致的观察；结合D的消融解释作用，不单凭高余弦证明严格语义分离或排除表征坍塌。
+**E.2 Shared and modality-specific structure.** 给完整七天气PCA、原始空间相似度矩阵/分布以及按模态对拆分的统计。正文Fig.3采用正常／大雪帧均值PCA，附录展示完整天气、原始空间分布及帧级错配／中心化对照。现有common平均跨模态余弦0.951–0.959、specific为0.446–0.549，是与训练目标一致的观察；结合D的消融解释作用，不单凭高余弦证明严格语义分离或排除表征坍塌。
 
-**E.3 Spatial gating.** Fig.4保留预测gate和后叠加GT的同一热图。附录补充选帧规则、原始16×90网格、0.8m patch、统一色标、无平滑、FG/BG统计区域。七天气样本来自21帧既有候选池，不将七张示例的FG/BG均值称作全测试集gate统计。若正文已放七天气完整版，附录只加局部放大或未展示例子；若正文选3–4帧，则在附录放完整版。
+**E.3 Spatial gating.** Fig.4采用三场景相机预测、完整BEV/gate和gate局部放大。附录补充选帧规则、原始16×90网格、0.8m patch、统一色标、无平滑、FG/BG统计区域。七天气样本来自21帧既有候选池，不将七张示例的FG/BG均值称作全测试集gate统计。七天气完整版移至附录，并加入已完成的全测试集前景／背景统计。
 
-**E.4 Detection examples and failure cases.** 在Fig.5之外选少量额外场景及至少一个定位较差案例；两模型共用阈值、视野、局部放大范围和颜色。图中选定目标的最大几何3D IoU不等于AP或官方一对一正确匹配。小雪例子存在较高gate但更差的最终框，可用于说明局部响应与完整三维定位之间的区别。20帧候选全集保留为材料索引，PDF中无需每帧都大幅重复。
+**E.4 Detection examples and failure cases.** 原Fig.5完整移至附录E，另外保留少量场景及至少一个定位较差案例；两模型共用阈值、视野、局部放大范围和颜色。图中选定目标的最大几何3D IoU不等于AP或官方一对一正确匹配。小雪例子存在较高gate但更差的最终框，可用于说明局部响应与完整三维定位之间的区别。20帧候选全集保留为材料索引，PDF中无需每帧都大幅重复。
 
-**建议图表：** Table E.1天气/模态对的样本数和表征统计；Figure E.1七天气PCA；E.2原始空间相似度；E.3额外gate（按正文取舍）；E.4额外检测与失败案例。正常/大雪质心图为可选，不必为增加图量重复相似结论。
+**建议图表：** Table E.1天气/模态对的样本数和表征统计；Figure E.1七天气PCA；E.2原始空间相似度；E.3帧级对应性对照；E.4七天气gate；E.5全量gate统计；E.6成对检测；E.7雪天及反例。正常/大雪质心图为可选，不必为增加图量重复相似结论。
 
 **来源：** [全量统计与图解](objdec_fulltest_weather_visualization_review_260919.md)、[全量PCA（蓝绿紫新版）](../analysis_exports/objdec_visuals_blue_green_purple_260923/fulltest/objdec_fulltest_frame_pca_all_weather.pdf)、[直接相似度分布（新版）](../analysis_exports/objdec_visuals_blue_green_purple_260923/fulltest/objdec_fulltest_direct_similarity_distributions.pdf)、[Fig.4/5与图注](../analysis_exports/objdec_fig4_fig5_260919/README.md)、[2026-09-23统一配色完整图稿](../analysis_exports/objdec_visuals_blue_green_purple_260923/README.md)。配色更新不改变原始数值、投影基或天气选例。
 
@@ -190,3 +190,7 @@ V2X明确“按去重val严格Moderate平均3D AP选择best，然后报告test�
 | 可选补证据 | matched/shuffled位置相似度、Graph全量AP、多种子等 | 尚未在此任务执行，按核心结论需要另定优先级 |
 
 最需要补齐的记录是：v1的1,000样本选模明细、三组V2X最终结果，以及若要把优化延迟与AP配成正式部署结果所需的全量精度复核。其余大部分工作可以直接从已有材料整理，不必先等待全部训练结束。
+
+## 2026-09-26 已采用的编排
+
+正文四图，附录E七图（PCA、余弦分布、帧级对应性控制、七天气gate、全量gate统计、成对检测、雪天及反例）。完整候选池保留归档，不在PDF铺满五页。附录D已补完整固定权重干预表D.2。见[当前编号、文件及可选材料](objdec_figures_main_appendix_plan_260926.md)。

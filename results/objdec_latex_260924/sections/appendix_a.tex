@@ -1,0 +1,46 @@
+\section{Implementation and Training Details}
+\label{app:a}
+
+\subsection{Representation dimensions and foreground targets}
+\label{subsec:a1}
+
+This section specifies tensor dimensions and supervision targets omitted from Section~\ref{sec:methods}. Network settings are listed in Table~\ref{tab:a1}. Both the shared and modality-specific branches follow LayerNorm--Linear--GELU--Linear--LayerNorm, with separate parameters for each modality. The foreground and modality-scoring heads use a hidden dimension of 128, while the single-class objectness head uses 160. The final modality-scoring layer is initialized to zero, giving equal initial modality contributions. For v1, the final foreground layer has zero weights and a bias of \(-\)1.2. Context projections have no bias and use an initial weight standard deviation of 0.015.
+
+For a BEV patch center \(p=(p_x,p_y)\) and a ground-truth box \(b=(x_b,y_b,l_b,w_b,\theta_b)\), we rotate their relative displacement into the box coordinate system and assign the foreground target according to Equation~\eqref{eq:a1}. The margin \(\epsilon\) extends each local box axis by 0.7 m on v1 and V2X, and by 0.6 m for v2 Strong. Membership is determined by the patch center rather than patch--box area overlap. Binary foreground labels form the union of valid box footprints. For multiclass context, overlapping labels are overwritten in GT iteration order, retaining the last assigned class. Padded boxes and boxes with nonpositive dimensions are ignored.
+
+\begin{equation}
+\begin{aligned}
+a_{pb}&=(p_x-x_b)\cos\theta_b+(p_y-y_b)\sin\theta_b,\\
+b_{pb}&=-(p_x-x_b)\sin\theta_b+(p_y-y_b)\cos\theta_b,\\
+y^p&=\mathbf{1}\!\left[\exists b:\ |a_{pb}|\le l_b/2+\epsilon,\quad |b_{pb}|\le w_b/2+\epsilon\right].
+\end{aligned}
+\label{eq:a1}
+\end{equation}
+
+Equation~\eqref{eq:a1} constructs training targets only. The representation branches and predicted gate are evaluated at every patch, and fusion uses the predicted values during both training and inference. GT outlines in the visualizations are added after prediction. Training labels, predicted gates, and reference overlays therefore belong to distinct processing steps.
+
+\subsection{Auxiliary-loss normalization and boundary cases}
+\label{subsec:a2}
+
+Let \(N_+\) and \(N_-\) denote foreground and background patch counts in the current batch. Foreground gating uses binary cross-entropy with positive weight \(\omega_+\) defined in Equation~\eqref{eq:a2}, averaged over all batch patches. The upper bound is \(k=30\) for the gate and \(k=4\) for single-class objectness on v1. The representation constraints in Section~\ref{sec:methods}, Equation~\eqref{eq:2}, are evaluated only at foreground locations. If a batch has no selected foreground, no valid GT, or fewer than two modalities on this training path, the implementation skips the added auxiliary-loss block while retaining the corresponding detection-training path.
+
+\begin{equation}
+\omega_+=\operatorname{clip}\!\left(\frac{N_-}{\max(N_+,1)},1,k\right).
+\label{eq:a2}
+\end{equation}
+
+On V2X, object context is obtained from three-class softmax probabilities through a bias-free linear projection and tanh. Classification cross-entropy is evaluated only on foreground patches, with inverse-frequency class weights computed from foreground counts in the current batch and clipped according to the configuration. The separate gate retains foreground/background supervision. Table~\ref{tab:a2} lists forward-control coefficients and auxiliary-loss weights; effective loss weights are the products of the outer and inner coefficients.
+
+\subsection{Optimization and sensor-combination supervision}
+\label{subsec:a3}
+
+K-Radar fusion models use pretrained single-modality encoders. Their parameters are frozen, while BatchNorm statistics follow the original training mode. The configuration uses AdamW, an initial learning rate of \(10^{-3}\), a minimum learning rate of \(10^{-4}\), weight decay of 0.01, batch size 2, and the cosine schedule of the original training entry point, with an 11-epoch limit. Checkpoint selection is described in Section~\ref{subsec:b2}. On V2X, the shared backbone initializes its camera ResNet-50 \citep{he2016resnet} from ImageNet and all other parameters from untrained initialization. All encoders are trained, using AdamW with an initial learning rate of \(10^{-3}\) and weight decay of 0.01. The 80-epoch schedule uses micro-batches of two and four accumulation steps, giving an effective batch size of eight, followed by cosine decay by optimizer update to \(10^{-5}\) after one warmup epoch.
+
+K-Radar uses ASF's sensor-combination supervision (SCL) \citep{paek2025asf}. For three-sensor inputs, detection losses from the six one- and two-sensor branches are summed without division by the number of combinations. Subsets are selected from the controlled tokens already computed using the full input and share the modulated query. Gate, modality contribution, and context are not independently recomputed for each subset. The subset branches do not receive the additional context output residual used by the main fusion path. SCL is disabled on V2X. This implementation provides detection supervision on feature combinations and differs from the fixed-weight missing-sensor inference in Section~\ref{app:f}.
+
+
+\input{tables/table_a1.tex}
+
+\input{tables/table_a2.tex}
+
+\input{tables/algorithm_a1}

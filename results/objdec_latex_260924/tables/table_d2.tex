@@ -1,0 +1,25 @@
+\begin{table}[tbp]
+\centering
+\caption{Fixed-weight inference interventions on the complete K-Radar v1 test set (10,065 frames; C+L+R; confidence filter 0.3; AP11). All settings reuse the same encoded inputs per frame. Only the indicated control signal is changed; three shuffle seeds are inference permutations, not training runs. The paired baseline differs slightly from the archived main-table evaluation (maximum difference 0.0213 percentage points across six metrics), so all intervention comparisons use this baseline. All AP values are percentages.}
+\label{tab:d2}
+\begingroup
+\scriptsize
+\setlength{\tabcolsep}{3pt}
+\begin{tabular}{@{}lrrrrrr@{}}
+\toprule
+& \multicolumn{3}{c}{3D AP} & \multicolumn{3}{c}{BEV AP} \\
+Setting & @0.3 & @0.5 & @0.7 & @0.3 & @0.5 & @0.7 \\
+\midrule
+Paired baseline & 88.3599 & 67.4838 & 22.0603 & 88.8370 & 88.1066 & 62.6532 \\
+Frame-mean gate & 53.9015 & 40.2109 & 7.9593 & 54.2623 & 53.1635 & 37.6025 \\
+Shuffled gate (260923) & 21.3775 & 17.5284 & 4.7356 & 21.5984 & 21.0439 & 16.6446 \\
+Shuffled gate (260924) & 21.2514 & 17.4692 & 6.2176 & 21.5240 & 20.9864 & 16.5998 \\
+Shuffled gate (260925) & 21.2448 & 12.9107 & 3.9612 & 21.4998 & 20.9850 & 16.6030 \\
+No query increment & 88.3492 & 67.4711 & 22.1068 & 88.8342 & 88.0989 & 62.7320 \\
+No output increment & 88.3599 & 67.4833 & 22.0565 & 88.8358 & 88.1066 & 62.6516 \\
+No query/output increments & 88.3453 & 67.4742 & 22.1096 & 88.8342 & 88.0980 & 62.7320 \\
+Mean of three shuffles & 21.2913 & 15.9694 & 4.9715 & 21.5407 & 21.0051 & 16.6158 \\
+\bottomrule
+\end{tabular}
+\endgroup
+\end{table}

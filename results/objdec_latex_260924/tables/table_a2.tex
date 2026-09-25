@@ -1,0 +1,33 @@
+\begin{table}[tbp]
+\centering
+\caption[Control and supervision coefficients]{\textbf{Control and supervision coefficients.} Coefficients follow the main-text equations. The primary configurations do not anneal control strength. Strong has no context path, rather than a trained path disabled only at inference. V2X foreground-class weights differ from v1 binary positive weights as described in Section~\ref{subsec:a2}.}
+\label{tab:a2}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.30337\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.89888\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.89888\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.89887\hsize\linewidth=\hsize\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Item} & \textbf{v1 ObjDec} & \textbf{v2 Strong} & \textbf{V2X ObjDec} \\
+\midrule
+FG margin \(\epsilon\), m & 0.7 & 0.6 & 0.7 \\
+Specific similarity margin \(\delta\) & 0.1 & 0.1 & 0.1 \\
+Modality scaling strength \(\eta\) & 0.75 & 0.65 & 0.75 \\
+Residual strength \(\lambda\) & 0.08 & 0.08 & 0.08 \\
+Temperature \(\tau\) & 1.0 & 1.0 & 1.0 \\
+Modality scale clipping interval & [0.4, 2.1] & [0.45, 2.0] & [0.4, 2.1] \\
+Gate range & [0, 1] & [0, 1] & [0, 1] \\
+Gate initial bias & \(-\)1.2 & \(-\)1.5 & \(-\)1.2 \\
+Query / output context strength, \(\beta / \gamma\) & 0.16 / 0.06 & --- & 0.16 / 0.06 \\
+Outer auxiliary weight, \(\lambda_{\rm aux}\) & 0.12 & 0.10 & 0.12 \\
+Inner common / specific / separation weights & 0.12 / 0.015 / 0.10 & 0.12 / 0.015 / 0.10 & 0.12 / 0.015 / 0.10 \\
+Inner gate / context weights & 0.15 / 0.30 & 0.12 / --- & 0.15 / 0.30 \\
+Effective common / specific / separation weights & 0.0144 / 0.0018 / 0.012 & 0.012 / 0.0015 / 0.010 & 0.0144 / 0.0018 / 0.012 \\
+Effective gate / context weights & 0.018 / 0.036 & 0.012 / --- & 0.018 / 0.036 \\
+Gate positive-weight cap & 30 & 30 & 30 \\
+Objectness / foreground-class weight cap & 4 & --- & 4 \\
+SCL coefficient & 1.0 & 1.0 & 0 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}

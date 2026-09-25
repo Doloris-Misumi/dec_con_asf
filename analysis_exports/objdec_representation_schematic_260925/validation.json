@@ -1,0 +1,26 @@
+[
+  {
+    "file": "objdec_shared_aligned_no_text",
+    "circles": 18,
+    "colors": {
+      "#4A9EEB": 6,
+      "#58B77A": 6,
+      "#9672D0": 6
+    },
+    "page": "Page size:      118.205 x 90.7087 pts",
+    "no_text": true,
+    "bounds": "pass"
+  },
+  {
+    "file": "objdec_specific_separated_no_text",
+    "circles": 9,
+    "colors": {
+      "#4A9EEB": 3,
+      "#58B77A": 3,
+      "#9672D0": 3
+    },
+    "page": "Page size:      118.205 x 90.7087 pts",
+    "no_text": true,
+    "bounds": "pass"
+  }
+]

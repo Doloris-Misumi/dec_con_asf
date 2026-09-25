@@ -1,0 +1,23 @@
+\section{Evaluation Protocols and Model Selection}
+\label{app:b}
+
+\subsection{AP computation and postprocessing}
+\label{subsec:b1}
+
+Additional evaluation settings are listed in Table~\ref{tab:b1}. K-Radar v1 uses the legacy AP aggregation, selecting every fourth value from 41 precision samples, for 11 values in total. The revised v2 implementation averages all 41 values and uses its corresponding height-center convention. Both are distinguished from the standard AP\_R40 aggregation used on V2X. K-Radar's reported confidence threshold is an additional prediction-export filter applied after the detection head's score prefilter. Thus, confidence 0.0 does not remove the head-level prefilter.
+
+For aligned v2 evaluation of L4DR, export, GT, confidence, and the effective rotated-NMS threshold are matched to Strong, with NMS set to 0.01. This differs from L4DR's native effective configuration. The resulting row therefore includes a postprocessing adaptation rather than only a change to AP aggregation. Table~\ref{tab:b2} cross-checks AP sampling and height-center conventions with predictions fixed, illustrating why identical class names and IoU thresholds alone do not establish comparability.
+
+\subsection{Result provenance and checkpoint selection}
+\label{subsec:b2}
+
+The K-Radar tables distinguish archived results associated with official weights, local evaluation of official weights, and local training. The ASF archive corresponds to the reported configuration and evaluation settings, but is not described as a simultaneous frame-by-frame reevaluation with the other models. Locally trained ASF and Strong on v2 use the same pretrained encoders; local L4DR trains its native L+R network from scratch. Training data, 11 epochs, and effective batch size are matched, while pretraining cost, sensor inputs, and architecture differ.
+
+The full v1 model and ablated variants undergo checkpoint selection using a 1,000-sample preliminary evaluation before full-set evaluation. \drafttodo{subset origin and IDs or construction rule, candidate ranges, selection metric, and tie handling.} Until these records are recovered, we do not label this subset an independent validation set. The local v2 training comparison uses final-epoch weights. Strong is identified as an existing decoupled-control variant and does not validate the complete object-context path.
+
+On V2X, the deduplicated validation set is evaluated at epoch 1 and every fifth epoch thereafter. The best checkpoint is selected by mean Moderate 3D AP at the strict class-specific IoUs, retaining the earlier epoch in a tie. After training, best and epoch-80 last checkpoints are evaluated on both raw and deduplicated validation and test sets. Test performance is not used for selection. Small numerical differences can occur between training-time validation and final independent reevaluation; their provenance is retained, and reevaluated scores are not substituted into training curves.
+
+
+\input{tables/table_b1.tex}
+
+\input{tables/table_b2.tex}

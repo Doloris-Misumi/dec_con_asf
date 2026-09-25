@@ -1,0 +1,23 @@
+\begin{table}[tbp]
+\centering
+\caption[Frame-level statistics of the seven appendix gate examples]{\textbf{Frame-level statistics of the seven appendix gate examples.} Each frame has 1,440 complete patches. Foreground regions use GT footprints expanded by 0.7 m after prediction. Values summarize seven qualitative examples, not weather-wide means.}
+\label{tab:e3}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.36585\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=1.36585\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.85366\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.85366\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.85366\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.85366\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.85366\hsize\linewidth=\hsize\centering\arraybackslash}X@{}}
+\toprule
+\textbf{Weather} & \textbf{Frame ID} & \textbf{GT objects} & \textbf{FG patches} & \textbf{FG gate mean} & \textbf{BG gate mean} & \textbf{FG \(-\) BG} \\
+\midrule
+Normal & seq20\_rdr00628 & 1 & 28 & 0.3154 & 0.1208 & 0.1946 \\
+Overcast & seq13\_rdr00146 & 2 & 60 & 0.2995 & 0.1112 & 0.1883 \\
+Fog & seq39\_rdr00582 & 1 & 40 & 0.2942 & 0.1078 & 0.1864 \\
+Rain & seq25\_rdr00154 & 4 & 142 & 0.2882 & 0.1181 & 0.1702 \\
+Sleet & seq50\_rdr00456 & 2 & 65 & 0.2913 & 0.1179 & 0.1734 \\
+Light snow & seq43\_rdr00169 & 1 & 35 & 0.3711 & 0.1103 & 0.2608 \\
+Heavy snow & seq55\_rdr00385 & 1 & 35 & 0.2817 & 0.1186 & 0.1631 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}

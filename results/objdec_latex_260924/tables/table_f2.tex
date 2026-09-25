@@ -1,0 +1,36 @@
+\begin{table}[tbp]
+\centering
+\caption[v2 input availability with fixed Strong weights]{\textbf{v2 input availability with fixed Strong weights.} Equal class means over Sedan and Bus/Truck on 13,727 frames. Deltas use the full-input result at the same confidence filter. Stars denote the locally defined corruptions in Appendix~\ref{app:f}.}
+\label{tab:f2}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.45455\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.90909\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.90909\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.90909\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.90909\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.90909\hsize\linewidth=\hsize\centering\arraybackslash}X@{}}
+\toprule
+\textbf{Input} & \textbf{conf} & \textbf{Mean 3D@0.3} & \textbf{Mean 3D@0.5} & \textbf{Mean BEV@0.5} & \textbf{\(\Delta\) mean 3D@0.3 vs CLR} \\
+\midrule
+C+L+R & 0.3 & 66.91 & 43.05 & 60.93 & +0.00 \\
+C+L+R & 0.0 & 69.41 & 43.81 & 63.23 & +0.00 \\
+L+R & 0.3 & 66.02 & 41.81 & 59.93 & -0.89 \\
+L+R & 0.0 & 68.96 & 42.77 & 62.74 & -0.46 \\
+C+L & 0.3 & 64.08 & 41.17 & 57.80 & -2.83 \\
+C+L & 0.0 & 65.13 & 41.16 & 58.53 & -4.28 \\
+C+R & 0.3 & 34.25 & 16.99 & 29.97 & -32.66 \\
+C+R & 0.0 & 34.73 & 16.82 & 29.89 & -34.68 \\
+L & 0.3 & 59.39 & 32.36 & 53.45 & -7.53 \\
+L & 0.0 & 62.33 & 33.47 & 54.75 & -7.08 \\
+R & 0.3 & 30.51 & 13.59 & 26.28 & -36.40 \\
+R & 0.0 & 31.63 & 13.45 & 26.70 & -37.79 \\
+C & 0.3 & 0.01 & 0.00 & 0.01 & -66.90 \\
+C & 0.0 & 0.01 & 0.00 & 0.01 & -69.40 \\
+C* & 0.3 & 0.01 & 0.01 & 0.01 & -66.90 \\
+C* & 0.0 & 0.01 & 0.01 & 0.00 & -69.40 \\
+C*+L+R & 0.3 & 66.93 & 42.98 & 60.91 & +0.01 \\
+C*+L+R & 0.0 & 69.40 & 43.73 & 63.19 & -0.01 \\
+C+L*+R & 0.3 & 27.99 & 14.11 & 25.01 & -38.92 \\
+C+L*+R & 0.0 & 34.70 & 15.51 & 30.76 & -34.71 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}

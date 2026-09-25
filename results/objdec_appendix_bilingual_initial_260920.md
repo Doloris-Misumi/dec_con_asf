@@ -90,6 +90,10 @@ v1的雨天3D@0.5为74.92，高于两种ASF来源；雨夹雪下该指标为57.6
 
 表D.1给出正文未列出的3D@0.7、BEV@0.3与BEV@0.7。关闭模态贡献控制后，3D@0.7由22.04降至11.08；其BEV@0.7仍为61.36，接近完整模型的62.63。这说明该干预对严格三维框匹配与水平重合的影响程度不同，不能仅根据BEV指标推断三维定位变化。四项移除在所列补充指标上均低于完整模型，但这些是当前单种子及选择程序下的观察，不提供统计显著性结论。
 
+#### D.3 固定权重空间gate与context干预
+
+固定K-Radar v1主模型权重和每帧编码特征，均值gate将3D@0.3／BEV@0.5从本次配对baseline的88.36／88.11降至53.90／53.16；三次帧内置换平均为21.29／21.01。联合关闭query／output上下文增量仅变化−0.0146／−0.0087个百分点。三种随机种子是推理置换，不是独立训练；gate共同影响token残差、模态缩放和context，不隔离解耦贡献。完整八组及置换均值见英文附表D.2和[结果记录](objdec_kradar_v1_interventions_results_260924.md)，不使用历史主表baseline计算干预差值。
+
 ### E. 表征统计与额外可视化
 
 #### E.1 统计单位与加权PCA
@@ -116,13 +120,15 @@ Input、Shared与Specific分别拟合一个PCA基。在每类表征内，三模�
 
 作为聚合敏感性检查，按序列等权重新汇总时，Specific在正常/大雪的平均跨模态余弦约为0.440/0.584，而帧等权结果为0.446/0.537。Shared保持较高一致性的观察未改变，Specific的精确组间差值则依赖汇总权重。天气与序列、场景及目标组成相关，高余弦本身也不能排除公共方向或低方差，因此这些统计与组件消融共同解释，不单独作为语义可辨识性或天气因果效应的证明。
 
+**帧级对应性对照（附图E.3）。** 对前景均值向量比较同帧配对与同天气、不同序列的错配，使用十个固定随机种子，并让同帧对照使用相同的保留样本。未中心化时Shared的C–L／C–R／L–R同帧余弦为0.979214／0.970201／0.987697，错配为0.979205／0.970225／0.987136。减去各模态的天气组均值后，L–R同帧／错配为0.148740／−0.014689，相机相关同帧值接近零。这表明原始高余弦受到共同均值方向影响；帧均值会丢失局部信息，该对照不能代替逐patch对应性检查，也不单独证明共享分支无用。
+
 #### E.3 Gate与检测图的制作协议
 
-正文Fig.4使用模型eval前向中返回的完整gate，历史导出时在融合器入口暂时移除GT字段；GT随后用于区域统计和参照叠加。热图采用16×90网格、0.8m patch及共同的[0,1]色标，不平滑、不逐帧归一化。其第三、四列使用同一数组。七天气示例从21帧完整gate候选中按道路可读性、目标分布及局部响应选择；它们是定性示例，不估计各天气总体gate均值。一个存在未解释重复推理差异的历史候选未纳入图稿。
+正文Fig.4现在采用三个场景：相机预测、完整LiDAR BEV与gate、gate局部放大。其前景／背景gate均值依次为0.213／0.128、0.259／0.115、0.288／0.118，局部窗口为14×8.4m。Gate由输入特征预测，GT在预测完成后用于参照叠加和区域统计。热图采用原始16×90网格、0.8m patch和统一[0,1]色标，不平滑；相机只显示选定目标GT，BEV与gate保留显示区域内全部GT。
 
-检测可视化采用官方ASF权重与正式ObjDec权重，各自严格加载，使用相同输入、FP32、batch size 1及score>0.3显示过滤。20个成对候选的输入张量哈希与GT已核对。相机显示原始图像，框投影使用逐序列标定、原始内参与畸变模型；两个模型共享局部放大窗口并保留完整BEV范围。图中数值是选定GT与所有保留预测之间的最大几何3D IoU，不是AP或官方一对一匹配结果。
+七天气gate选例移至附图E.4，表E.3继续对应这七个附录样本，并非正文的三个场景。七天气样本从21帧完整gate候选中选择，历史导出在融合器入口暂时移除GT；一个存在未解释重复推理差异的候选未纳入。附图E.5给出全量统计：按帧等权的前景／背景均值为0.2701／0.1176，99.06%的帧满足前景均值大于背景均值。选例统计和全测试集统计分别报告。
 
-表E.3列出正文七个gate选例的逐帧统计。附图E.3补充大雪与小雪案例：大雪所示目标的最大3D IoU由0.095变为0.728；小雪所示目标则由0.354变为0.223。后一案例同时具有局部较高gate，说明前景相关响应并不充分决定最终三维框的精度。这些额外案例补充正文Fig.5的改善样例；附图E.4保留全部20帧候选。
+原Fig.5的ASF／ObjDec检测对照移至附图E.6。两模型使用相同输入、后处理、0.3显示阈值、相机裁剪及12×6m BEV局部窗口；20帧候选均核对了输入哈希和GT。三行选定目标的最大几何3D IoU依次由0.572／0／0变为0.719／0.476／0.741，不是AP或官方一对一匹配结果，中间案例仍未达到IoU=0.5。附图E.7补充大雪改善（0.095→0.728）及小雪反例（0.354→0.223）；后者有较高gate但定位更差。全部20帧候选保留为归档图册，不在论文PDF中重复铺开。
 
 ### F. 传感器可用性与损坏输入
 
@@ -274,6 +280,14 @@ These definitions distinguish supervision changes, gating amplitude, and the for
 
 Table D.1 reports 3D@0.7, BEV@0.3, and BEV@0.7, which are omitted from the main ablation table. Disabling modality contribution control reduces 3D@0.7 from 22.04 to 11.08, while BEV@0.7 remains at 61.36, close to the full model's 62.63. This intervention affects strict 3D matching and horizontal overlap differently; BEV scores alone therefore do not characterize its effect on 3D localization. All four ablations underperform the full model on the listed supplementary metrics. These observations follow the current single-seed experiments and selection procedure and do not establish statistical significance.
 
+#### D.3 Fixed-weight spatial-gate and context interventions
+
+Table D.2 complements the retrained ablations with inference-time interventions on the final K-Radar v1 checkpoint. Each setting uses the same encoded features per frame. Replacing the gate by its frame-wise mean preserves its mean amplitude but removes spatial variation; permuting its values preserves the per-frame distribution while changing correspondence with local features. The three fixed seeds are repeated permutations, not independently trained models. GT is not used to generate the modified signals.
+
+Frame-mean gates reduce 3D@0.3/BEV@0.5 from 88.36/88.11 to 53.90/53.16, while the three permutations average 21.29/21.01. This supports the trained model's dependence on spatial correspondence. The same gate affects token residuals, modality scaling, and gated context; this experiment does not isolate those paths or attribute the entire decline to representation decoupling. Internal-signal distribution changes also distinguish these results from retraining without a gate.
+
+Jointly removing the query and output context increments changes 3D@0.3 and BEV@0.5 by \(-0.0146\) and \(-0.0087\) percentage points, respectively; all six overall AP changes have magnitudes below 0.08 points. Removing these residual increments retains cross-modal attention and the trained representations. These results do not establish independently large inference contributions for the context paths, nor do they remove their possible training-time effects. The paired baseline is evaluated in the same pass as the interventions and is kept separate from the historical main-table scores.
+
 ### E. Representation Statistics and Additional Visualizations
 
 #### E.1 Statistical units and weighted PCA
@@ -298,13 +312,17 @@ Figure E.2 and Table E.2 further show frame-level similarity distributions. The 
 
 As an aggregation-sensitivity check, equal weighting of sequences gives mean cross-modal Specific cosines of approximately 0.440/0.584 in normal/heavy-snow conditions, compared with 0.446/0.537 under equal frame weighting. Shared features retain high consistency, while the precise Specific difference depends on aggregation weights. Weather is associated with sequence, scene, and object composition. High cosine values also cannot exclude a common dominant direction or low variance. These statistics are therefore interpreted together with component ablations, rather than as independent proof of semantic identifiability or a causal weather effect.
 
+**Frame-level correspondence controls.** Figure E.3 compares cosines of foreground-mean vectors for the same frame and for different-sequence frames within the same weather group, using ten fixed permutation seeds. Matched scores use the same retained anchors. Before centering, Shared C--L, C--R, and L--R cosines are 0.979214/0.970201/0.987697 for matched pairs and 0.979205/0.970225/0.987136 for mismatches. After subtracting each modality's weather-group mean, the matched/mismatched L--R values are 0.148740/\(-0.014689\), while the camera-related matched values remain close to zero. Thus, a common mean direction can account for much of the high uncentered frame-level similarity. This check does not resolve patch-level correspondence because frame averaging discards local information; it also does not isolate the contribution of the Shared branch. It is a control on the interpretation of similarity, rather than proof of either semantic decomposition or branch redundancy.
+
 #### E.3 Construction of gate and detection visualizations
 
-Main-text Figure 4 uses the complete gate returned by model evaluation. During export, GT fields were temporarily withheld at the fusion-module input; GT was subsequently used for regional statistics and reference overlays. Heatmaps use a 16×90 grid, 0.8 m patches, and a common [0,1] color scale, without smoothing or per-frame normalization. The third and fourth columns display the same array. Seven weather examples were selected from 21 complete-gate candidates based on scene readability, object arrangement, and local responses. They are qualitative examples rather than estimates of weather-wide mean gating. One historical candidate with unexplained repeated-inference differences was excluded.
+Main-text Figure 4 presents three scenes with camera predictions, complete LiDAR BEV and gate maps, and gate detail windows. Foreground/background gate means are 0.213/0.128, 0.259/0.115, and 0.288/0.118 from top to bottom. Full maps cover forward \(x\in[0,72]\) m and lateral \(y\in[-6.4,6.4]\) m; detail windows span 14\(\times\)8.4 m. The gate uses the native 16\(\times\)90 array and a common [0,1] scale without smoothing. Camera panels show the selected target's GT, while BEV and gate panels retain all GT references within the displayed region. GT overlays and regional statistics are added after feature-based prediction; no prior detector provides the gate.
 
-Detection visualizations use strictly loaded official ASF and final ObjDec weights, identical inputs, FP32, batch size 1, and a score>0.3 display filter. Input-tensor hashes and GT were checked for all 20 paired candidates. The camera view uses the original image, and box projections use sequence-specific calibration, original intrinsics, and distortion. Both models share the same zoom window and retain the complete BEV range. Displayed scores are the maximum geometric 3D IoU between a selected GT object and all retained predictions; they are neither AP nor the official one-to-one matching outcome.
+Figure E.4 separately retains the seven-weather gate examples selected from 21 complete-gate candidates for scene readability, object arrangement, and local responses. During that export, GT fields were withheld at the fusion-module input and used only afterward. One historical candidate with unexplained repeated-inference differences was excluded. Table E.3 summarizes these seven appendix examples, not the three main-text scenes. Figure E.5 adds the full-test analysis: equally weighted frame-level foreground/background gate means are 0.2701/0.1176, and foreground means exceed background means in 99.06\% of frames. Selected examples and full-test statistics have different sampling units and are reported separately.
 
-Table E.3 lists frame-level statistics for the seven main-text gate examples. Figure E.3 adds heavy- and light-snow examples. The selected heavy-snow object's maximum 3D IoU changes from 0.095 to 0.728, while the light-snow object's changes from 0.354 to 0.223. The latter also has a locally high gate response, demonstrating that foreground-related activation is insufficient to determine final box accuracy. These examples supplement the improvements illustrated in main-text Figure 5; Figure E.4 retains all 20 candidates.
+Figure E.6 compares strictly loaded released ASF and final ObjDec checkpoints on identical test frames, using FP32, batch size 1, the same detection postprocessing, and a score\(>0.3\) filter. Input-tensor hashes and GT were checked for all 20 candidates in the paired visualization pool. Original camera images, sequence-specific calibration, intrinsics, and distortion are retained. Both methods use identical camera crops, complete BEV ranges, and 12\(\times\)6 m BEV detail windows. The selected objects' maximum geometric 3D IoUs among retained predictions change from 0.572/0.000/0.000 to 0.719/0.476/0.741 from top to bottom. These values are neither AP nor the official one-to-one matching outcome; the middle example remains below IoU 0.5.
+
+Figure E.7 adds heavy- and light-snow examples: the selected objects' maximum 3D IoUs change from 0.095 to 0.728 and from 0.354 to 0.223, respectively. The latter also has a locally high gate response, illustrating that foreground-related activation is insufficient to determine final box accuracy. The complete 20-frame candidate atlas is retained as an archival asset; it is not repeated in the manuscript. Selected qualitative cases do not estimate aggregate detection gains.
 
 ### F. Sensor Availability and Corrupted Inputs
 
@@ -636,7 +654,7 @@ Input: available sensor observations X; model variant; optional training GT
 **English.** Each observation is a frame-level mean of matched-patch cosines. Quantiles describe variation across frames, not confidence intervals.
 
 <a id="table-e3"></a>
-### Table E.3. 正文gate选例的逐帧统计 / Frame-level statistics of the main gate examples
+### Table E.3. 七个附录gate选例的逐帧统计 / Frame-level statistics of the seven appendix gate examples
 
 | Weather | Frame ID | GT objects | FG patches | FG gate mean | BG gate mean | FG − BG |
 | --- | --- | --- | --- | --- | --- | --- |
@@ -815,13 +833,15 @@ Input: available sensor observations X; model variant; optional training GT
 
 ## 四、附图及中英文图注 / Supplementary figures and captions
 
+2026-09-26：现行编排为E.1全天气PCA、E.2余弦分布、E.3帧级对照、E.4七天气gate、E.5全量gate统计、E.6检测对照、E.7雪天及反例。完整英文图注与插图以`objdec_latex_260924/figures/`为准。下方保留可复用的已有中英文图注；候选全集只作归档。
+
 ### Figure E.1. 全天气帧均值PCA / Frame-mean PCA across all weather groups
 
 图稿（2026-09-23蓝／绿／紫配色）：[PDF](../analysis_exports/objdec_visuals_blue_green_purple_260923/fulltest/objdec_fulltest_frame_pca_all_weather.pdf) · [PNG](../analysis_exports/objdec_visuals_blue_green_purple_260923/fulltest/objdec_fulltest_frame_pca_all_weather.png)。建议按4行＋3行分为续图，两页沿用相同坐标与图例。原始数据与显示样本不变。
 
-**中文图注。** K-Radar v1全测试集的帧级表征分布。各行表示天气组，各列分别为输入、共享与模态特有表征。每个点是一帧内GT前景位置的均值向量，经该列固定的加权PCA投影；橙色圆、蓝色三角与紫色方块分别表示相机、LiDAR与四维雷达。每天气最多显示400帧，阴天显示全部383帧；黑色轮廓的大标记与密度轮廓使用该组全部帧，n表示完整组大小。同一列共享投影基和坐标范围，不同列独立拟合。二维分布保留的模态差异与表E.1所示高维余弦一致性描述不同属性。
+**中文图注。** K-Radar v1全测试集的帧级表征分布。各行表示天气组，各列分别为输入、共享与模态特有表征。每个点是一帧内GT前景位置的均值向量，经该列固定的加权PCA投影；蓝色圆、绿色三角与紫色方块分别表示相机、LiDAR与四维雷达。每天气最多显示400帧，阴天显示全部383帧；黑色轮廓的大标记与密度轮廓使用该组全部帧，n表示完整组大小。同一列共享投影基和坐标范围，不同列独立拟合。二维分布保留的模态差异与表E.1所示高维余弦一致性描述不同属性。
 
-**English caption.** Frame-level representation distributions over the complete K-Radar v1 test set. Rows indicate weather groups; columns show input, shared, and modality-specific representations. Each point is a frame's mean vector over GT foreground locations, projected using the fixed weighted PCA basis for its column. Orange circles, blue triangles, and purple squares denote camera, LiDAR, and 4D radar. Up to 400 frames are displayed per group, including all 383 overcast frames. Large outlined markers and density contours use all frames, and n denotes the full group size. Each column shares its basis and axis ranges across weather; columns are fitted independently. Residual modality structure in these projections and high-dimensional cosine consistency in Table E.1 characterize different properties.
+**English caption.** Frame-level representation distributions over the complete K-Radar v1 test set. Rows indicate weather groups; columns show input, shared, and modality-specific representations. Each point is a frame's mean vector over GT foreground locations, projected using the fixed weighted PCA basis for its column. Blue circles, green triangles, and purple squares denote camera, LiDAR, and 4D radar. Up to 400 frames are displayed per group, including all 383 overcast frames. Large outlined markers and density contours use all frames, and n denotes the full group size. Each column shares its basis and axis ranges across weather; columns are fitted independently. Residual modality structure in these projections and high-dimensional cosine consistency in Table E.1 characterize different properties.
 
 ### Figure E.2. 高维余弦的逐帧分布 / Frame-level distributions of high-dimensional cosine similarity
 
@@ -831,21 +851,21 @@ Input: available sensor observations X; model variant; optional training GT
 
 **English caption.** Cosine-similarity distributions in the original 256-dimensional space for three sensor pairs under normal weather and heavy snow. Each observation is the mean matched-foreground-patch cosine within a frame, including all 4,309 and 1,098 frames. Gray, green, and yellow indicate input, shared, and modality-specific representations. Violins show empirical density, white points show medians, and thick/thin intervals span the 25th–75th/5th–95th percentiles, rather than confidence intervals for estimated means. Shared features concentrate at high similarity, while specific-feature distributions vary by modality pair and weather. Similarities are not computed from PCA coordinates.
 
-### Figure E.3. 额外雪天案例与反例 / Additional snow examples and a counterexample
+### Figure E.7. 额外雪天案例与反例 / Additional snow examples and a counterexample
 
 图稿：[PDF](../analysis_exports/objdec_fig4_fig5_260919/fig5_snow_and_counterexample.pdf) · [PNG](../analysis_exports/objdec_fig4_fig5_260919/fig5_snow_and_counterexample.png)。两行可放在同页。
 
 **中文图注。** 官方ASF权重与ObjDec的额外成对检测案例。绿色虚线为GT，橙色实线为score>0.3的预测，两模型使用相同相机投影和局部放大范围。大雪案例中所示目标的最大几何3D IoU由0.095提高至0.728；小雪案例中则由0.354降至0.223。小雪案例同时出现在正文gate图中，其局部较高gate与较差定位并存，表明前景相关响应不能代替最终框回归。所列IoU用于说明选定目标的几何重合，不是AP。
 
-**English caption.** Additional paired detections from the released ASF checkpoint and ObjDec. Green dashed boxes are GT and orange solid boxes are predictions with score>0.3; both methods use identical camera projections and detail windows. The selected heavy-snow object's maximum geometric 3D IoU increases from 0.095 to 0.728, whereas the light-snow object's decreases from 0.354 to 0.223. The latter also appears in the main gate visualization, where locally high foreground response coexists with poorer localization. Foreground-related activation does not replace final box regression. Displayed IoUs describe selected-object overlap rather than AP.
+**English caption.** Additional paired detections from the released ASF checkpoint and ObjDec. Green dashed boxes are GT and orange solid boxes are predictions with score>0.3; both methods use identical camera projections and detail windows. The selected heavy-snow object's maximum geometric 3D IoU increases from 0.095 to 0.728, whereas the light-snow object's decreases from 0.354 to 0.223. The latter also appears in the seven-weather appendix gate visualization, where locally high foreground response coexists with poorer localization. Foreground-related activation does not replace final box regression. Displayed IoUs describe selected-object overlap rather than AP.
 
-### Figure E.4. 全部成对候选 / Complete paired candidate set
+### 归档图册（不插入论文PDF）. 全部成对候选 / Complete paired candidate set
 
 图稿：[五页PDF](../analysis_exports/objdec_fig4_fig5_260919/fig5_all_candidates.pdf)。PDF附录篇幅紧张时可作为单独匿名补充图册，E节保留其索引。
 
-**中文图注。** 固定候选池的全部20帧检测对照，包含改善、相近和较差案例。两模型采用相同输入和显示阈值。该候选池来自gate可视化选例，存在选择偏差，不能用于估计总体AP或天气平均性能；完整定量结果见附录C。候选页用于核对正文Fig.5及附图E.3在同一池中的选取范围。
+**中文图注。** 固定候选池的全部20帧检测对照，包含改善、相近和较差案例。两模型采用相同输入和显示阈值。该候选池来自gate可视化选例，存在选择偏差，不能用于估计总体AP或天气平均性能；完整定量结果见附录C。候选页用于核对附图E.6及E.7在同一池中的选取范围。
 
-**English caption.** All 20 paired detection candidates from the fixed visualization pool, including improved, similar, and poorer cases. Inputs and display thresholds are identical across models. The pool originates from gate-visualization candidates and is selected rather than representative; it does not estimate overall AP or weather-specific performance. Complete quantitative results are provided in Appendix C. The contact sheets document the selection pool for main-text Figure 5 and Figure E.3.
+**English caption.** All 20 paired detection candidates from the fixed visualization pool, including improved, similar, and poorer cases. Inputs and display thresholds are identical across models. The pool originates from gate-visualization candidates and is selected rather than representative; it does not estimate overall AP or weather-specific performance. Complete quantitative results are provided in Appendix C. The contact sheets document the selection pool for Figure E.6 and Figure E.7.
 
 ### Figure G.1. 完整训练轨迹 / Complete training trajectories — 待补 / Pending
 

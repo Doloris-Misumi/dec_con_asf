@@ -1,0 +1,26 @@
+\begin{table}[tbp]
+\centering
+\caption[BEV and last-checkpoint results for completed 0.16 m runs]{\textbf{BEV and last-checkpoint results for completed 0.16 m runs.} Deduplicated test results. Best is selected by validation, whereas last is epoch 80. Reporting last does not change the selection rule. Best/last evaluations are complete for all five 0.16 m runs.}
+\label{tab:g2}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.39130\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=1.39130\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.86957\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.86957\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.86957\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.86957\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.86957\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.86955\hsize\linewidth=\hsize\centering\arraybackslash}X@{}}
+\toprule
+\textbf{Method} & \textbf{Checkpoint} & \textbf{Epoch} & \textbf{BEV Vehicle} & \textbf{BEV Pedes\-trian} & \textbf{BEV Cyclist} & \textbf{Mean BEV} & \textbf{Mean 3D} \\
+\midrule
+Concat & best & 75 & 92.12 & 80.66 & 86.64 & 86.47 & 81.90 \\
+Concat & last & 80 & 92.02 & 80.70 & 86.69 & 86.47 & 81.97 \\
+ASF-style & best & 80 & 90.95 & 80.41 & 85.80 & 85.72 & 81.30 \\
+ASF-style & last & 80 & 90.95 & 80.41 & 85.80 & 85.72 & 81.30 \\
+ObjDec 2\(\times\)2 & best & 70 & 90.91 & 80.88 & 87.02 & 86.27 & 81.38 \\
+ObjDec 2\(\times\)2 & last & 80 & 90.84 & 81.16 & 87.07 & 86.35 & 81.55 \\
+L4DR & best & 80 & 89.74 & 76.60 & 81.35 & 82.56 & 78.24 \\
+L4DR & last & 80 & 89.74 & 76.60 & 81.35 & 82.56 & 78.24 \\
+ObjDec-LR 2\(\times\)2 & best & 75 & 90.02 & 78.34 & 83.08 & 83.81 & 79.65 \\
+ObjDec-LR 2\(\times\)2 & last & 80 & 90.10 & 78.21 & 83.09 & 83.80 & 79.75 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}

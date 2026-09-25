@@ -1,0 +1,20 @@
+\begin{table}[tbp]
+\centering
+\caption[L--R similarity quantiles]{\textbf{L--R similarity quantiles.} Each observation is a frame-level mean of matched-patch cosines. Quantiles describe variation across frames, not confidence intervals.}
+\label{tab:e2}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.23077\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=1.23077\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=1.23077\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.76923\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.76923\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.76923\hsize\linewidth=\hsize\centering\arraybackslash}X@{}}
+\toprule
+\textbf{Weather} & \textbf{Branch} & \textbf{Pair} & \textbf{Median} & \textbf{5th percentile} & \textbf{95th percentile} \\
+\midrule
+normal & common & LiDAR--4D Radar & 0.9632 & 0.9433 & 0.9776 \\
+normal & unique & LiDAR--4D Radar & 0.3384 & 0.2113 & 0.4948 \\
+heavysnow & common & LiDAR--4D Radar & 0.9662 & 0.9141 & 0.9806 \\
+heavysnow & unique & LiDAR--4D Radar & 0.4538 & 0.2578 & 0.7363 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}

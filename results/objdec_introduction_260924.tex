@@ -1,0 +1,55 @@
+% Paste-ready English introduction; decoupling-first revision on 2026-09-24.
+% Flow: multi-sensor detection -> spatial/adaptive fusion -> why decouple
+% -> object guidance for detection -> ObjDec -> evidence -> three contributions.
+% Requires natbib (normally supplied by the paper template).
+% Bibliography: objdec_introduction_references_260924.bib
+% This is a section fragment, not a standalone document.
+
+\section{Introduction}
+\label{sec:introduction}
+
+Accurate 3D object detection is essential for autonomous driving.
+Cameras, LiDAR, and 4D radar observe a scene through different sensing mechanisms, providing visual appearance, geometric structure, and radar-return information.
+Combining these observations can compensate for limitations of individual sensors and provide a richer basis for detecting objects.
+Realizing this potential requires integrating features with different sensing characteristics and spatial sampling patterns into a joint representation that supports detection, motivating continued research on multi-sensor fusion~\citep{liu2023bevfusion,park2025mome,yue2025roburcdet}.
+
+Existing approaches have advanced multi-sensor detection through spatial interaction and adaptive fusion.
+Establishing correspondence in a common spatial domain allows features from different sensors to exchange information about the same regions.
+Attention and gating mechanisms further adjust their contributions, while foreground modeling and reliability estimation help account for differences in input quality.
+Together, these developments provide an effective foundation for combining sensor observations under varying scene and sensing conditions~\citep{chae2024threedlrf,huang2025l4dr,chae2025dlrfusion,paek2025asf,park2026raf}.
+
+Nevertheless, spatial correspondence and adaptive weighting do not by themselves distinguish the information that can be shared across sensors from the cues specific to each modality.
+Even within aligned local regions, these two types of information remain mixed in the input features, although they play different roles in fusion: shared information can provide cross-modal support, while modality-specific cues can preserve complementary observations.
+Learning consistency alone may suppress useful differences, whereas emphasizing differences alone may overlook evidence shared across sensors.
+This motivates approaching fusion through representation decoupling: explicitly learning shared and modality-specific representations and using both to construct the fused detection features.
+Such a formulation builds on advances in learning and retaining common and distinct information for multimodal prediction~\citep{liang2023factorcl,liu2025featurecausality,qian2026decalign,wang2026spfd}.
+
+For dense 3D detection, this decoupling also needs a clear connection to detection targets.
+Shared responses may originate from either objects or background, and modality-specific differences may reflect useful observations or noise.
+Separating the two types of information therefore does not by itself ensure their relevance to detection.
+We address this issue by grounding representation constraints in object regions and using object-related information to guide the contribution of the learned features to fusion.
+Object guidance thus gives the learning and use of decoupled representations a detection-specific focus.
+
+We introduce \textbf{ObjDec}, a multi-sensor 3D detection architecture centered on shared and modality-specific representation decoupling.
+Within spatially corresponding bird's-eye-view (BEV) patches, separate mappings construct the two representations from each sensor token, and both participate in building the fused detection features.
+Object-region supervision encourages cross-modal agreement in shared representations, preserves modality-specific differences, and limits similarity between the two branches.
+The learned representations further determine feature updates, modality contributions, and object context, allowing their information to shape fusion inputs and cross-modal interaction.
+Foreground gating and context modulation implement this connection between decoupled representations and fusion computation.
+The representation mappings operate at every patch; object regions specify where the representation constraints are applied during training.
+Ground-truth boxes provide training supervision only, while inference predicts all fusion-control signals from input features without prior detections or weather labels.
+
+We evaluate ObjDec primarily on K-Radar.
+At a confidence-filtering threshold of $0.3$ on v1, ObjDec achieves $88.36\%$ $\mathrm{AP}_{\mathrm{3D}}$ at IoU $0.3$ and $88.10\%$ $\mathrm{AP}_{\mathrm{BEV}}$ at IoU $0.5$.
+Compared with the archived results associated with the released fusion baseline under the same filtering setting, these scores improve by $8.04$ and $7.77$ percentage points, respectively, with approximately $1.7\%$ more parameters.
+Component ablations assess the contribution of each design, while representation visualizations and spatial gate analyses examine the learned feature organization and fusion behavior.
+We also evaluate a decoupled-control variant on K-Radar v2 and train and test the architecture on V2X-Radar-V, examining its applicability beyond the primary category and sensor setting under the specified dataset protocols~\citep{paek2022kradar,paek2025asf,yang2025v2xradar}.
+
+Our main contributions are as follows:
+\begin{itemize}
+    \item \textbf{A fusion architecture based on representation decoupling.}
+    We develop a multi-sensor 3D detection architecture that explicitly learns shared and modality-specific representations in corresponding local regions and uses both to construct fused detection features.
+    \item \textbf{Object-guided learning and use of decoupled representations.}
+    We supervise representation decoupling within object regions and connect the learned representations to foreground gating, modality contribution control, and object context, guiding their use in detection-oriented fusion.
+    \item \textbf{Evaluation of detection performance and model behavior.}
+    We evaluate detection performance and component contributions on K-Radar, analyze representations and spatial gating, and examine the architecture under extended categories and target-dataset training on V2X-Radar-V.
+\end{itemize}

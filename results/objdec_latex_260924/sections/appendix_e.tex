@@ -1,0 +1,50 @@
+\section{Representation Statistics and Additional Visualizations}
+\label{app:e}
+
+\subsection{Statistical units and weighted PCA}
+\label{subsec:e1}
+
+For frame \(i\), modality \(m\), and location \(p\), let \(x_{im}^p\) denote a representation and \(\mathcal P_i\) the GT foreground locations. Equation~\eqref{eq:e1} defines the frame-mean vector \(\mu_{im}\) and the mean matched-location cosine \(s_i^{mn}\). Weather-group cosines average \(s_i^{mn}\) equally over frames. This differs both from taking the cosine of frame-mean vectors and from pooling all patches with equal patch weights. All 10,065 analyzed frames contain valid foreground, totaling 642,649 foreground spatial locations. Table~\ref{tab:e1} separates modality pairs.
+
+\begin{equation}
+\mu_{im}=\frac{1}{|\mathcal P_i|}\sum_{p\in\mathcal P_i}x_{im}^p,\qquad
+s_i^{mn}=\frac{1}{|\mathcal P_i|}\sum_{p\in\mathcal P_i}\operatorname{cos}(x_{im}^p,x_{in}^p).
+\label{eq:e1}
+\end{equation}
+
+Input, Shared, and Specific each have a separately fitted PCA basis. Within each representation type, all modalities and weather groups share that basis. PCA is fitted to \(\mu_{im}\), weighting each vector by \(1/(|\mathcal W|N_wM)\), where \(N_w\) is its weather-group frame count and \(M=3\). The leading two eigenvectors of the weighted centered covariance are used, without per-vector normalization or channel standardization. Each weather group and modality therefore contributes equally to fitting. Different representation columns have different bases and scales, so absolute Euclidean distances are not compared across columns.
+
+The seven-weather scatter plot displays up to 400 frames per weather group, including all 383 overcast frames. Displayed frame indices are shared across modalities and representation panels; centroids and density contours use all frames. With the random seed and PCA bases fixed, we do not refit for visual separation, add jitter, or clip outliers. Figure~\ref{fig:e1} expands the main PCA visualization to all weather groups.
+
+\subsection{High-dimensional similarity distributions and weather variation}
+\label{subsec:e2}
+
+Table~\ref{tab:e1} shows that Specific features are not approximately orthogonal for every modality pair: C--R cosines remain around 0.65 across the seven weather groups, while pairs involving LiDAR vary more across groups. This is compatible with the relative organization encouraged by the two branches and does not require modality-specific features to contain no information in common.
+
+Figure~\ref{fig:e2} and Table~\ref{tab:e2} further show frame-level similarity distributions. The L--R Shared medians are 0.9632 in normal weather and 0.9662 in heavy snow. For Specific, the 5th--95th percentile range changes from 0.2113--0.4948 to 0.2578--0.7363. Violin width represents empirical density; thick and thin intervals show the 25th--75th and 5th--95th percentiles. These describe across-frame variability, not confidence intervals.
+
+As an aggregation-sensitivity check, equal weighting of sequences gives mean cross-modal Specific cosines of approximately 0.440/0.584 in normal/heavy-snow conditions, compared with 0.446/0.537 under equal frame weighting. Shared features retain high consistency, while the precise Specific difference depends on aggregation weights. Weather is associated with sequence, scene, and object composition. High cosine values also cannot exclude a common dominant direction or low variance. These statistics are therefore interpreted together with component ablations, rather than as independent proof of semantic identifiability or a causal weather effect.
+
+\textbf{Frame-level correspondence controls.} Figure~\ref{fig:e-correspondence} compares cosines of foreground-mean vectors for the same frame and for different-sequence frames within the same weather group, using ten fixed permutation seeds. Matched scores use the same retained anchors. Before centering, Shared C--L, C--R, and L--R cosines are 0.979214/0.970201/0.987697 for matched pairs and 0.979205/0.970225/0.987136 for mismatches. After subtracting each modality's weather-group mean, the matched/mismatched L--R values are 0.148740/\(-0.014689\), while the camera-related matched values remain close to zero. Thus, a common mean direction can account for much of the high uncentered frame-level similarity. This check does not resolve patch-level correspondence because frame averaging discards local information; it also does not isolate the contribution of the Shared branch. It is a control on the interpretation of similarity, rather than proof of either semantic decomposition or branch redundancy.
+
+\subsection{Construction of gate and detection visualizations}
+\label{subsec:e3}
+
+Main-text Figure~\ref{fig:4} presents three scenes with camera predictions, complete LiDAR BEV and gate maps, and gate detail windows. Foreground/background gate means are 0.213/0.128, 0.259/0.115, and 0.288/0.118 from top to bottom. Full maps cover forward \(x\in[0,72]\) m and lateral \(y\in[-6.4,6.4]\) m; detail windows span 14\(\times\)8.4 m. The gate uses the native 16\(\times\)90 array and a common [0,1] scale without smoothing. Camera panels show the selected target's GT, while BEV and gate panels retain all GT references within the displayed region. GT overlays and regional statistics are added after feature-based prediction; no prior detector provides the gate.
+
+Figure~\ref{fig:e-gate-examples} separately retains the seven-weather gate examples selected from 21 complete-gate candidates for scene readability, object arrangement, and local responses. During that export, GT fields were withheld at the fusion-module input and used only afterward. One historical candidate with unexplained repeated-inference differences was excluded. Table~\ref{tab:e3} summarizes these seven appendix examples, not the three main-text scenes. Figure~\ref{fig:e-gate-statistics} adds the full-test analysis: equally weighted frame-level foreground/background gate means are 0.2701/0.1176, and foreground means exceed background means in 99.06\% of frames. Selected examples and full-test statistics have different sampling units and are reported separately.
+
+Figure~\ref{fig:e-comparison} compares strictly loaded released ASF and final ObjDec checkpoints on identical test frames, using FP32, batch size 1, the same detection postprocessing, and a score\(>0.3\) filter. Input-tensor hashes and GT were checked for all 20 candidates in the paired visualization pool. Original camera images, sequence-specific calibration, intrinsics, and distortion are retained. Both methods use identical camera crops, complete BEV ranges, and 12\(\times\)6 m BEV detail windows. The selected objects' maximum geometric 3D IoUs among retained predictions change from 0.572/0.000/0.000 to 0.719/0.476/0.741 from top to bottom. These values are neither AP nor the official one-to-one matching outcome; the middle example remains below IoU 0.5.
+
+Figure~\ref{fig:e3} adds heavy- and light-snow examples: the selected objects' maximum 3D IoUs change from 0.095 to 0.728 and from 0.354 to 0.223, respectively. The latter also has a locally high gate response, illustrating that foreground-related activation is insufficient to determine final box accuracy. The complete 20-frame candidate atlas is retained as an archival asset; it is not repeated in the manuscript. Selected qualitative cases do not estimate aggregate detection gains.
+
+\input{tables/table_e1.tex}
+\input{tables/table_e2.tex}
+\input{tables/table_e3.tex}
+\input{figures/figure_e1}
+\input{figures/figure_e2}
+\input{figures/figure_e_correspondence}
+\input{figures/figure_e_gate_examples}
+\input{figures/figure_e_gate_statistics}
+\input{figures/figure_e_comparison}
+\input{figures/figure_e3}

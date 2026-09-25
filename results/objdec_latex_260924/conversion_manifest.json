@@ -1,0 +1,2530 @@
+{
+  "sources": {
+    "results/taskdec_related_work_bilingual_initial_260917.md": "d4a623af566b0c22380af1dbbe95795b94cb5dcb5c463603f34a8dc57ab9922e",
+    "results/taskdec_methods_bilingual_initial_260917.md": "fbc9aca022a469c9916e9b384d0f280f89fc77ead0df83385701633f1cd12835",
+    "results/objdec_experiments_bilingual_initial_260919.md": "9563efb067566feb66ee0a7f56aa321ab76a4b5e7711196ab0d401f63f6c3da3",
+    "results/objdec_appendix_bilingual_initial_260920.md": "71468968e8ce63a73f1183e9c33aa28ca9b0d80bfaef7cad8c3661e1af214057",
+    "results/objdec_introduction_260924.tex": "fc0c4189a6f6bd5d22b9f717a263a8333172d64a0bce42128c258ea9f16a76b1",
+    "results/objdec_conclusion_260925.tex": "49d8248317ccb9244394672c4571a623849ea218255f40d97579cc09abf9a946"
+  },
+  "assets": [
+    {
+      "source": "analysis_exports/objdec_fig4_fig5_compact_260925/objdec_fig4_compact.pdf",
+      "target": "assets/figure4.pdf",
+      "sha256": "2b3377dc450a84e3612abd9daff69d578dfbb7b3b08c607df976b277e5275007"
+    },
+    {
+      "source": "analysis_exports/objdec_fig4_fig5_compact_260925/objdec_fig5_compact.pdf",
+      "target": "assets/figure5.pdf",
+      "sha256": "e4ccafc5c0e76901578c16079670a0467ddbd076be491bdf96e6232942b7a5a7"
+    },
+    {
+      "source": "analysis_exports/objdec_visuals_blue_green_purple_260923/fulltest/objdec_fulltest_frame_pca_all_weather.pdf",
+      "target": "assets/pca_all_weather.pdf",
+      "sha256": "1408ea6c9be7bf2a18d2740763a5f80deb51224e5b4f7a51900ae3e915865076"
+    },
+    {
+      "source": "analysis_exports/objdec_fulltest_weather_260919/paper_visuals/objdec_fulltest_direct_similarity_distributions.pdf",
+      "target": "assets/similarity_distributions.pdf",
+      "sha256": "998d218ba755a154cbc2c93654795143eafdc97c1afc4f4c063dc2aa58b2e372"
+    },
+    {
+      "source": "analysis_exports/objdec_fig4_fig5_260919/fig5_snow_and_counterexample.pdf",
+      "target": "assets/snow_counterexample.pdf",
+      "sha256": "6d67f40f46ecbc68f67f9e3cafaccd8d5db8dbacfb687a9cebfbda427667623d"
+    },
+    {
+      "source": "analysis_exports/objdec_fig4_fig5_260919/fig5_all_candidates.pdf",
+      "target": "assets/all_candidates.pdf",
+      "sha256": "3fd828e765cc0926b115fd378de0fbc470f1faa945c6ef0d27e0d4a47e4c7c67"
+    },
+    {
+      "source": "analysis_exports/objdec_fig3_260925/objdec_fig3_pca_normal_heavysnow_no_footer.pdf",
+      "target": "assets/figure3.pdf",
+      "sha256": "306a4a8a414106be3353e5a5ebb932e9d1485fcb80cb522be2b01ea24106b707"
+    },
+    {
+      "source": "analysis_exports/objdec_visuals_blue_green_purple_260923/gate/fig4_objdec_all_weather.pdf",
+      "target": "assets/gate_all_weather_examples.pdf",
+      "sha256": "01adbd920cf1e903fccfcd7db993fb9de0ba3eb1397a8a89231a583e564b6c28"
+    },
+    {
+      "source": "analysis_exports/objdec_inference_studies_260923/cache_analysis/gate_all_weather.pdf",
+      "target": "assets/gate_all_weather_statistics.pdf",
+      "sha256": "64a40500b25b4efeeab1ec31c2414514f9f7a28f8dd2c0ea646de1b0fa59e49e"
+    },
+    {
+      "source": "analysis_exports/objdec_inference_studies_260923/cache_analysis/frame_correspondence.pdf",
+      "target": "assets/frame_correspondence.pdf",
+      "sha256": "f62f63e2ff758c0c722955bd53010b29603db5518c3b97b96db3016acbb45f12"
+    }
+  ],
+  "table_blocks": [
+    {
+      "source": "results/objdec_experiments_bilingual_initial_260919.md",
+      "table": "1",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Method",
+          "Sensors",
+          "Source",
+          "AP3D@0.3",
+          "AP3D@0.5",
+          "APBEV@0.3",
+          "APBEV@0.5"
+        ],
+        [
+          "RTNH",
+          "R",
+          "Reported",
+          "37.40",
+          "14.10",
+          "41.10",
+          "36.00"
+        ],
+        [
+          "RTNH",
+          "L",
+          "Reported",
+          "72.70",
+          "37.80",
+          "76.50",
+          "66.30"
+        ],
+        [
+          "3D-LRF",
+          "L+R",
+          "Reported",
+          "74.80",
+          "45.20",
+          "84.00",
+          "73.60"
+        ],
+        [
+          "L4DR",
+          "L+R",
+          "Public log",
+          "77.96",
+          "53.50",
+          "79.49",
+          "77.54"
+        ],
+        [
+          "DLRFusion",
+          "L+R",
+          "Reported",
+          "74.80",
+          "45.70",
+          "82.90",
+          "73.20"
+        ],
+        [
+          "RAF on L4DR",
+          "C+L+R",
+          "Reported",
+          "—",
+          "57.40",
+          "—",
+          "82.00"
+        ],
+        [
+          "AW-MoE",
+          "L+R",
+          "Reported",
+          "83.90",
+          "61.50",
+          "88.20",
+          "84.20"
+        ],
+        [
+          "AW-MoE-LRC",
+          "C+L+R",
+          "Reported",
+          "84.30",
+          "61.80",
+          "—",
+          "—"
+        ],
+        [
+          "ASF",
+          "C+L+R",
+          "Released checkpoint archive",
+          "80.31",
+          "67.19",
+          "80.78",
+          "80.33"
+        ],
+        [
+          "ASF",
+          "C+L+R",
+          "Local retraining",
+          "88.57",
+          "67.49",
+          "89.01",
+          "80.36"
+        ],
+        [
+          "ObjDec",
+          "C+L+R",
+          "Ours",
+          "88.36",
+          "67.50",
+          "88.84",
+          "88.10"
+        ]
+      ],
+      "rows": 11
+    },
+    {
+      "source": "results/objdec_experiments_bilingual_initial_260919.md",
+      "table": "2",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Method",
+          "Sensors",
+          "Training / source",
+          "Mean AP3D@0.3",
+          "Mean AP3D@0.5",
+          "Mean AP3D@0.7",
+          "Mean APBEV@0.5"
+        ],
+        [
+          "ASF",
+          "C+L+R",
+          "Released-result archive",
+          "66.55",
+          "41.57",
+          "9.89",
+          "62.45"
+        ],
+        [
+          "L4DR",
+          "L+R",
+          "Released checkpoint, aligned evaluation",
+          "69.48",
+          "48.23",
+          "10.86",
+          "65.23"
+        ],
+        [
+          "ASF",
+          "C+L+R",
+          "Local, 11 epochs",
+          "64.77",
+          "39.70",
+          "9.55",
+          "58.77"
+        ],
+        [
+          "L4DR",
+          "L+R",
+          "Local, 11 epochs",
+          "65.53",
+          "43.84",
+          "9.82",
+          "60.73"
+        ],
+        [
+          "DecControlled Strong",
+          "C+L+R",
+          "Ours, 11 epochs",
+          "66.91",
+          "43.05",
+          "11.11",
+          "60.93"
+        ]
+      ],
+      "rows": 5
+    },
+    {
+      "source": "results/objdec_experiments_bilingual_initial_260919.md",
+      "table": "3",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Variant",
+          "AP3D@0.3",
+          "AP3D@0.5",
+          "APBEV@0.5"
+        ],
+        [
+          "Full ObjDec",
+          "**88.36**",
+          "**67.50**",
+          "**88.10**"
+        ],
+        [
+          "w/o modality contribution control",
+          "79.62",
+          "64.38",
+          "79.91"
+        ],
+        [
+          "w/o object context",
+          "80.14",
+          "66.23",
+          "79.96"
+        ],
+        [
+          "w/o decoupling supervision",
+          "80.23",
+          "66.16",
+          "80.04"
+        ],
+        [
+          "w/o foreground gating",
+          "80.00",
+          "64.80",
+          "80.12"
+        ]
+      ],
+      "rows": 5
+    },
+    {
+      "source": "results/objdec_experiments_bilingual_initial_260919.md",
+      "table": "4",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Method",
+          "Sensors",
+          "Vehicle 3D",
+          "Pedestrian 3D",
+          "Cyclist 3D",
+          "Mean 3D"
+        ],
+        [
+          "PointPillars",
+          "L",
+          "68.80",
+          "38.16",
+          "65.24",
+          "57.40"
+        ],
+        [
+          "CenterPoint",
+          "L",
+          "72.19",
+          "50.59",
+          "75.26",
+          "66.01"
+        ],
+        [
+          "PV-RCNN",
+          "L",
+          "79.38",
+          "58.83",
+          "78.01",
+          "72.07"
+        ],
+        [
+          "SQDNet",
+          "L",
+          "79.65",
+          "58.79",
+          "79.46",
+          "72.63"
+        ],
+        [
+          "BEVDepth",
+          "C",
+          "15.47",
+          "8.51",
+          "9.46",
+          "11.15"
+        ],
+        [
+          "RPFA-Net",
+          "R",
+          "30.44",
+          "10.37",
+          "11.98",
+          "17.60"
+        ]
+      ],
+      "rows": 6
+    },
+    {
+      "source": "results/objdec_experiments_bilingual_initial_260919.md",
+      "table": "4",
+      "panel": 1,
+      "original_cells": [
+        [
+          "Method",
+          "Sensors",
+          "Vehicle 3D",
+          "Pedestrian 3D",
+          "Cyclist 3D",
+          "Mean 3D",
+          "Mean BEV"
+        ],
+        [
+          "ASF-style",
+          "C+L+R",
+          "84.54",
+          "76.17",
+          "83.18",
+          "81.30",
+          "85.72"
+        ],
+        [
+          "ObjDec",
+          "C+L+R",
+          "84.06",
+          "75.94",
+          "84.13",
+          "81.38",
+          "86.27"
+        ],
+        [
+          "L4DR",
+          "L+R",
+          "83.17",
+          "73.25",
+          "78.31",
+          "78.24",
+          "82.56"
+        ],
+        [
+          "ObjDec-LR",
+          "L+R",
+          "83.87",
+          "74.84",
+          "80.24",
+          "79.65",
+          "83.81"
+        ]
+      ],
+      "rows": 4
+    },
+    {
+      "source": "results/objdec_appendix_bilingual_initial_260920.md",
+      "table": "A.1",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Item",
+          "K-Radar v1 ObjDec",
+          "K-Radar v2 Strong",
+          "V2X ObjDec, 2×2"
+        ],
+        [
+          "Input BEV channels, C/L/R",
+          "256 / 512 / 768",
+          "256 / 512 / 768",
+          "64 / 64 / 64"
+        ],
+        [
+          "Common projection channels",
+          "256",
+          "256",
+          "64"
+        ],
+        [
+          "Token dimension",
+          "256",
+          "256",
+          "128"
+        ],
+        [
+          "Shared/specific MLP hidden dimension",
+          "256",
+          "256",
+          "128"
+        ],
+        [
+          "Patch size, BEV cells",
+          "2×2",
+          "2×2",
+          "2×2"
+        ],
+        [
+          "Queries per patch",
+          "32",
+          "32",
+          "4"
+        ],
+        [
+          "Attention heads",
+          "16",
+          "16",
+          "8"
+        ],
+        [
+          "Reassembled fusion channels",
+          "2048",
+          "2048",
+          "128"
+        ],
+        [
+          "Gate / modality-score hidden dimensions",
+          "128 / 128",
+          "128 / 128",
+          "128 / 128"
+        ],
+        [
+          "Object-context hidden dimension",
+          "160",
+          "—",
+          "160"
+        ],
+        [
+          "Context target and activation",
+          "Objectness, sigmoid",
+          "—",
+          "3 classes, softmax"
+        ],
+        [
+          "Query/output context modulation",
+          "Enabled",
+          "—",
+          "Enabled"
+        ],
+        [
+          "Sensor-combination supervision",
+          "Enabled",
+          "Enabled",
+          "Disabled"
+        ]
+      ],
+      "rows": 13
+    },
+    {
+      "source": "results/objdec_appendix_bilingual_initial_260920.md",
+      "table": "A.2",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Item",
+          "v1 ObjDec",
+          "v2 Strong",
+          "V2X ObjDec"
+        ],
+        [
+          "FG margin \\(\\epsilon\\), m",
+          "0.7",
+          "0.6",
+          "0.7"
+        ],
+        [
+          "Specific similarity margin \\(\\delta\\)",
+          "0.1",
+          "0.1",
+          "0.1"
+        ],
+        [
+          "Modality scaling strength \\(\\eta\\)",
+          "0.75",
+          "0.65",
+          "0.75"
+        ],
+        [
+          "Residual strength \\(\\lambda\\)",
+          "0.08",
+          "0.08",
+          "0.08"
+        ],
+        [
+          "Temperature \\(\\tau\\)",
+          "1.0",
+          "1.0",
+          "1.0"
+        ],
+        [
+          "Modality scale clipping interval",
+          "[0.4, 2.1]",
+          "[0.45, 2.0]",
+          "[0.4, 2.1]"
+        ],
+        [
+          "Gate range",
+          "[0, 1]",
+          "[0, 1]",
+          "[0, 1]"
+        ],
+        [
+          "Gate initial bias",
+          "−1.2",
+          "−1.5",
+          "−1.2"
+        ],
+        [
+          "Query / output context strength, \\(\\beta / \\gamma\\)",
+          "0.16 / 0.06",
+          "—",
+          "0.16 / 0.06"
+        ],
+        [
+          "Outer auxiliary weight, \\(\\lambda_{\\rm aux}\\)",
+          "0.12",
+          "0.10",
+          "0.12"
+        ],
+        [
+          "Inner common / specific / separation weights",
+          "0.12 / 0.015 / 0.10",
+          "0.12 / 0.015 / 0.10",
+          "0.12 / 0.015 / 0.10"
+        ],
+        [
+          "Inner gate / context weights",
+          "0.15 / 0.30",
+          "0.12 / —",
+          "0.15 / 0.30"
+        ],
+        [
+          "Effective common / specific / separation weights",
+          "0.0144 / 0.0018 / 0.012",
+          "0.012 / 0.0015 / 0.010",
+          "0.0144 / 0.0018 / 0.012"
+        ],
+        [
+          "Effective gate / context weights",
+          "0.018 / 0.036",
+          "0.012 / —",
+          "0.018 / 0.036"
+        ],
+        [
+          "Gate positive-weight cap",
+          "30",
+          "30",
+          "30"
+        ],
+        [
+          "Objectness / foreground-class weight cap",
+          "4",
+          "—",
+          "4"
+        ],
+        [
+          "SCL coefficient",
+          "1.0",
+          "1.0",
+          "0"
+        ]
+      ],
+      "rows": 17
+    },
+    {
+      "source": "results/objdec_appendix_bilingual_initial_260920.md",
+      "table": "B.1",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Setting",
+          "K-Radar v1",
+          "K-Radar v2",
+          "V2X-Radar-V local adaptation"
+        ],
+        [
+          "Evaluated classes",
+          "Sedan",
+          "Sedan; Bus/Truck",
+          "Vehicle; Pedestrian; Cyclist"
+        ],
+        [
+          "Test frames",
+          "10,065",
+          "13,727",
+          "1,486 deduplicated; 1,501 raw"
+        ],
+        [
+          "Validation frames",
+          "Selection subset: B.2",
+          "Final-epoch local comparison",
+          "1,487 deduplicated; 1,498 raw"
+        ],
+        [
+          "x / y / z range, m",
+          "[0,72] / [−6.4,6.4] / [−2,6]",
+          "[0,72] / [−16,16] / [−2,7.6]",
+          "[0,102.4) / [−51.2,51.2) / [−5,3)"
+        ],
+        [
+          "Reported difficulty",
+          "Project legacy class evaluation",
+          "Project revised class evaluation",
+          "Moderate"
+        ],
+        [
+          "Primary class IoUs",
+          "0.3 / 0.5 / 0.7 for Sedan",
+          "0.3 / 0.5 / 0.7 for both classes",
+          "0.7 / 0.5 / 0.5 by class"
+        ],
+        [
+          "Additional loose IoUs",
+          "—",
+          "—",
+          "0.5 / 0.25 / 0.25 by class, in raw reports"
+        ],
+        [
+          "AP aggregation",
+          "11 values from 41 precision samples",
+          "Mean of 41 precision values",
+          "AP_R40"
+        ],
+        [
+          "3D evaluator z-center parameter",
+          "1.0",
+          "0.5",
+          "Native V2X evaluation convention"
+        ],
+        [
+          "Head score prefilter",
+          "0.1",
+          "0.1",
+          "0.001"
+        ],
+        [
+          "Additional export confidence filter",
+          "0.3; 0.0 supplement",
+          "0.3; 0.0 for availability supplement",
+          "No K-Radar-style additional 0.3 filter"
+        ],
+        [
+          "Effective rotated-NMS IoU",
+          "0.01",
+          "0.01 for aligned comparison",
+          "0.1"
+        ],
+        [
+          "Max detections in local V2X postprocessing",
+          "—",
+          "—",
+          "500 per class"
+        ]
+      ],
+      "rows": 13
+    },
+    {
+      "source": "results/objdec_appendix_bilingual_initial_260920.md",
+      "table": "B.2",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Checkpoint",
+          "Precision values averaged",
+          "z-center",
+          "Mean 3D@0.3",
+          "Mean 3D@0.5"
+        ],
+        [
+          "Strong",
+          "11",
+          "1.0",
+          "62.01",
+          "39.46"
+        ],
+        [
+          "Strong",
+          "11",
+          "0.5",
+          "63.26",
+          "43.66"
+        ],
+        [
+          "Strong",
+          "41",
+          "1.0",
+          "63.93",
+          "40.04"
+        ],
+        [
+          "Strong",
+          "41",
+          "0.5",
+          "66.91",
+          "43.05"
+        ],
+        [
+          "L4DR released",
+          "11",
+          "1.0",
+          "66.44",
+          "46.37"
+        ],
+        [
+          "L4DR released",
+          "11",
+          "0.5",
+          "70.86",
+          "47.75"
+        ],
+        [
+          "L4DR released",
+          "41",
+          "1.0",
+          "67.43",
+          "45.27"
+        ],
+        [
+          "L4DR released",
+          "41",
+          "0.5",
+          "69.48",
+          "48.23"
+        ]
+      ],
+      "rows": 8
+    },
+    {
+      "source": "results/objdec_appendix_bilingual_initial_260920.md",
+      "table": "C.1",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Method",
+          "conf",
+          "3D@0.3",
+          "3D@0.5",
+          "3D@0.7",
+          "BEV@0.3",
+          "BEV@0.5",
+          "BEV@0.7"
+        ],
+        [
+          "ASF released archive",
+          "0.3",
+          "80.31",
+          "67.19",
+          "18.85",
+          "80.78",
+          "80.33",
+          "62.85"
+        ],
+        [
+          "ASF released archive",
+          "0.0",
+          "87.34",
+          "72.95",
+          "18.85",
+          "88.59",
+          "86.97",
+          "62.85"
+        ],
+        [
+          "ASF local",
+          "0.3",
+          "88.57",
+          "67.49",
+          "18.69",
+          "89.01",
+          "80.36",
+          "61.59"
+        ],
+        [
+          "ASF local",
+          "0.0",
+          "87.96",
+          "72.96",
+          "18.68",
+          "88.80",
+          "87.41",
+          "61.57"
+        ],
+        [
+          "ObjDec",
+          "0.3",
+          "88.36",
+          "67.50",
+          "22.04",
+          "88.84",
+          "88.10",
+          "62.63"
+        ],
+        [
+          "ObjDec",
+          "0.0",
+          "88.06",
+          "72.83",
+          "22.02",
+          "88.84",
+          "87.18",
+          "62.63"
+        ]
+      ],
+      "rows": 6
+    },
+    {
+      "source": "results/objdec_appendix_bilingual_initial_260920.md",
+      "table": "C.2",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Method",
+          "Class",
+          "3D@0.3",
+          "3D@0.5",
+          "3D@0.7",
+          "BEV@0.3",
+          "BEV@0.5",
+          "BEV@0.7"
+        ],
+        [
+          "ASF released archive",
+          "Sedan",
+          "74.98",
+          "52.09",
+          "11.85",
+          "77.85",
+          "71.70",
+          "43.21"
+        ],
+        [
+          "ASF released archive",
+          "Bus/Truck",
+          "58.13",
+          "31.06",
+          "7.93",
+          "67.85",
+          "53.21",
+          "20.85"
+        ],
+        [
+          "L4DR released, aligned",
+          "Sedan",
+          "76.79",
+          "54.68",
+          "11.23",
+          "79.90",
+          "73.61",
+          "49.16"
+        ],
+        [
+          "L4DR released, aligned",
+          "Bus/Truck",
+          "62.17",
+          "41.78",
+          "10.49",
+          "67.12",
+          "56.86",
+          "29.65"
+        ],
+        [
+          "ASF local",
+          "Sedan",
+          "74.45",
+          "51.52",
+          "11.58",
+          "77.37",
+          "71.11",
+          "42.23"
+        ],
+        [
+          "ASF local",
+          "Bus/Truck",
+          "55.09",
+          "27.88",
+          "7.52",
+          "64.27",
+          "46.43",
+          "16.84"
+        ],
+        [
+          "L4DR local",
+          "Sedan",
+          "74.49",
+          "54.28",
+          "14.08",
+          "75.13",
+          "71.59",
+          "48.20"
+        ],
+        [
+          "L4DR local",
+          "Bus/Truck",
+          "56.58",
+          "33.39",
+          "5.56",
+          "61.46",
+          "49.86",
+          "22.50"
+        ],
+        [
+          "DecControlled Strong",
+          "Sedan",
+          "74.58",
+          "52.14",
+          "12.31",
+          "77.32",
+          "71.27",
+          "44.26"
+        ],
+        [
+          "DecControlled Strong",
+          "Bus/Truck",
+          "59.24",
+          "33.97",
+          "9.92",
+          "65.14",
+          "50.59",
+          "23.13"
+        ]
+      ],
+      "rows": 10
+    },
+    {
+      "source": "results/objdec_appendix_bilingual_initial_260920.md",
+      "table": "C.3",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Method",
+          "IoU",
+          "Total",
+          "Normal",
+          "Overcast",
+          "Fog",
+          "Rain",
+          "Sleet",
+          "Light snow",
+          "Heavy snow"
+        ],
+        [
+          "ASF released archive",
+          "0.3",
+          "80.31",
+          "79.57",
+          "89.89",
+          "90.67",
+          "80.97",
+          "80.20",
+          "80.89",
+          "71.71"
+        ],
+        [
+          "ASF local",
+          "0.3",
+          "88.57",
+          "87.83",
+          "90.16",
+          "90.77",
+          "80.92",
+          "80.51",
+          "89.45",
+          "71.64"
+        ],
+        [
+          "ObjDec",
+          "0.3",
+          "88.36",
+          "87.66",
+          "90.39",
+          "90.57",
+          "88.90",
+          "80.42",
+          "89.28",
+          "71.41"
+        ],
+        [
+          "ASF released archive",
+          "0.5",
+          "67.19",
+          "64.56",
+          "79.71",
+          "79.57",
+          "67.33",
+          "67.28",
+          "77.63",
+          "61.61"
+        ],
+        [
+          "ASF local",
+          "0.5",
+          "67.49",
+          "64.70",
+          "80.10",
+          "79.59",
+          "68.31",
+          "66.82",
+          "78.46",
+          "61.67"
+        ],
+        [
+          "ObjDec",
+          "0.5",
+          "67.50",
+          "65.98",
+          "80.26",
+          "79.71",
+          "74.92",
+          "57.60",
+          "78.33",
+          "60.51"
+        ]
+      ],
+      "rows": 6
+    },
+    {
+      "source": "results/objdec_appendix_bilingual_initial_260920.md",
+      "table": "C.4a",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Method",
+          "Class",
+          "Total",
+          "Normal",
+          "Overcast",
+          "Fog",
+          "Rain",
+          "Sleet",
+          "Light snow",
+          "Heavy snow"
+        ],
+        [
+          "ASF released archive",
+          "Sedan",
+          "74.98",
+          "74.14",
+          "82.35",
+          "92.26",
+          "66.37",
+          "70.43",
+          "88.24",
+          "63.61"
+        ],
+        [
+          "L4DR released, aligned",
+          "Sedan",
+          "76.79",
+          "75.52",
+          "83.57",
+          "93.60",
+          "78.25",
+          "67.17",
+          "87.71",
+          "58.49"
+        ],
+        [
+          "ASF local",
+          "Sedan",
+          "74.45",
+          "73.45",
+          "82.15",
+          "92.09",
+          "65.80",
+          "70.81",
+          "89.77",
+          "63.36"
+        ],
+        [
+          "L4DR local",
+          "Sedan",
+          "74.49",
+          "73.12",
+          "80.06",
+          "92.33",
+          "76.27",
+          "54.55",
+          "82.74",
+          "51.99"
+        ],
+        [
+          "DecControlled Strong",
+          "Sedan",
+          "74.58",
+          "73.51",
+          "84.30",
+          "94.46",
+          "68.11",
+          "72.52",
+          "89.56",
+          "63.57"
+        ],
+        [
+          "ASF released archive",
+          "Bus/Truck",
+          "58.13",
+          "53.28",
+          "75.33",
+          "—",
+          "7.89",
+          "59.55",
+          "88.26",
+          "68.20"
+        ],
+        [
+          "L4DR released, aligned",
+          "Bus/Truck",
+          "62.17",
+          "56.27",
+          "87.43",
+          "—",
+          "2.96",
+          "74.75",
+          "80.47",
+          "63.76"
+        ],
+        [
+          "ASF local",
+          "Bus/Truck",
+          "55.09",
+          "50.39",
+          "65.31",
+          "—",
+          "3.59",
+          "50.78",
+          "84.75",
+          "68.02"
+        ],
+        [
+          "L4DR local",
+          "Bus/Truck",
+          "56.58",
+          "54.60",
+          "82.07",
+          "—",
+          "7.81",
+          "59.89",
+          "89.16",
+          "54.27"
+        ],
+        [
+          "DecControlled Strong",
+          "Bus/Truck",
+          "59.24",
+          "51.63",
+          "73.82",
+          "—",
+          "10.08",
+          "57.47",
+          "89.56",
+          "72.34"
+        ]
+      ],
+      "rows": 10
+    },
+    {
+      "source": "results/objdec_appendix_bilingual_initial_260920.md",
+      "table": "C.4b",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Method",
+          "Class",
+          "Total",
+          "Normal",
+          "Overcast",
+          "Fog",
+          "Rain",
+          "Sleet",
+          "Light snow",
+          "Heavy snow"
+        ],
+        [
+          "ASF released archive",
+          "Sedan",
+          "52.09",
+          "49.63",
+          "53.38",
+          "80.55",
+          "46.85",
+          "44.05",
+          "59.25",
+          "49.52"
+        ],
+        [
+          "L4DR released, aligned",
+          "Sedan",
+          "54.68",
+          "50.21",
+          "56.53",
+          "83.81",
+          "53.03",
+          "47.42",
+          "62.32",
+          "53.33"
+        ],
+        [
+          "ASF local",
+          "Sedan",
+          "51.52",
+          "48.90",
+          "57.16",
+          "79.89",
+          "45.96",
+          "44.83",
+          "59.25",
+          "51.24"
+        ],
+        [
+          "L4DR local",
+          "Sedan",
+          "54.28",
+          "52.33",
+          "49.24",
+          "83.44",
+          "54.95",
+          "41.22",
+          "59.28",
+          "38.72"
+        ],
+        [
+          "DecControlled Strong",
+          "Sedan",
+          "52.14",
+          "49.39",
+          "59.62",
+          "80.30",
+          "48.30",
+          "49.13",
+          "60.75",
+          "50.49"
+        ],
+        [
+          "ASF released archive",
+          "Bus/Truck",
+          "31.06",
+          "23.93",
+          "47.04",
+          "—",
+          "2.48",
+          "38.83",
+          "70.81",
+          "32.55"
+        ],
+        [
+          "L4DR released, aligned",
+          "Bus/Truck",
+          "41.78",
+          "36.60",
+          "76.06",
+          "—",
+          "0.68",
+          "62.92",
+          "53.30",
+          "41.11"
+        ],
+        [
+          "ASF local",
+          "Bus/Truck",
+          "27.88",
+          "21.16",
+          "46.68",
+          "—",
+          "1.94",
+          "30.29",
+          "70.58",
+          "32.28"
+        ],
+        [
+          "L4DR local",
+          "Bus/Truck",
+          "33.39",
+          "32.18",
+          "55.89",
+          "—",
+          "6.60",
+          "43.05",
+          "69.00",
+          "17.00"
+        ],
+        [
+          "DecControlled Strong",
+          "Bus/Truck",
+          "33.97",
+          "23.94",
+          "49.65",
+          "—",
+          "5.05",
+          "38.48",
+          "75.09",
+          "39.37"
+        ]
+      ],
+      "rows": 10
+    },
+    {
+      "source": "results/objdec_appendix_bilingual_initial_260920.md",
+      "table": "D.1",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Variant",
+          "3D@0.7",
+          "BEV@0.7",
+          "BEV@0.3"
+        ],
+        [
+          "Full ObjDec",
+          "22.04",
+          "62.63",
+          "88.84"
+        ],
+        [
+          "w/o modality contribution control",
+          "11.08",
+          "61.36",
+          "80.38"
+        ],
+        [
+          "w/o object context",
+          "17.10",
+          "54.91",
+          "80.68"
+        ],
+        [
+          "w/o decoupling supervision",
+          "16.49",
+          "55.71",
+          "80.65"
+        ],
+        [
+          "w/o foreground gate",
+          "19.41",
+          "55.49",
+          "80.65"
+        ]
+      ],
+      "rows": 5
+    },
+    {
+      "source": "results/objdec_appendix_bilingual_initial_260920.md",
+      "table": "E.1",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Weather",
+          "Frames",
+          "Sequences",
+          "FG patches",
+          "Shared C–L",
+          "Shared C–R",
+          "Shared L–R",
+          "Specific C–L",
+          "Specific C–R",
+          "Specific L–R"
+        ],
+        [
+          "Normal",
+          "4309",
+          "17",
+          "317581",
+          "0.9455",
+          "0.9584",
+          "0.9621",
+          "0.3429",
+          "0.6545",
+          "0.3410"
+        ],
+        [
+          "Overcast",
+          "383",
+          "2",
+          "33918",
+          "0.9520",
+          "0.9574",
+          "0.9676",
+          "0.4211",
+          "0.6501",
+          "0.4111"
+        ],
+        [
+          "Fog",
+          "1049",
+          "6",
+          "43909",
+          "0.9391",
+          "0.9505",
+          "0.9647",
+          "0.4659",
+          "0.6612",
+          "0.4572"
+        ],
+        [
+          "Rain",
+          "1317",
+          "8",
+          "125257",
+          "0.9431",
+          "0.9565",
+          "0.9586",
+          "0.3855",
+          "0.6511",
+          "0.3767"
+        ],
+        [
+          "Sleet",
+          "1106",
+          "7",
+          "41665",
+          "0.9584",
+          "0.9478",
+          "0.9638",
+          "0.5112",
+          "0.6529",
+          "0.4840"
+        ],
+        [
+          "Light snow",
+          "803",
+          "4",
+          "36196",
+          "0.9470",
+          "0.9582",
+          "0.9622",
+          "0.4787",
+          "0.6590",
+          "0.4643"
+        ],
+        [
+          "Heavy snow",
+          "1098",
+          "7",
+          "44123",
+          "0.9525",
+          "0.9481",
+          "0.9601",
+          "0.4954",
+          "0.6458",
+          "0.4693"
+        ]
+      ],
+      "rows": 7
+    },
+    {
+      "source": "results/objdec_appendix_bilingual_initial_260920.md",
+      "table": "E.2",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Weather",
+          "Branch",
+          "Pair",
+          "Median",
+          "5th percentile",
+          "95th percentile"
+        ],
+        [
+          "normal",
+          "common",
+          "LiDAR–4D Radar",
+          "0.9632",
+          "0.9433",
+          "0.9776"
+        ],
+        [
+          "normal",
+          "unique",
+          "LiDAR–4D Radar",
+          "0.3384",
+          "0.2113",
+          "0.4948"
+        ],
+        [
+          "heavysnow",
+          "common",
+          "LiDAR–4D Radar",
+          "0.9662",
+          "0.9141",
+          "0.9806"
+        ],
+        [
+          "heavysnow",
+          "unique",
+          "LiDAR–4D Radar",
+          "0.4538",
+          "0.2578",
+          "0.7363"
+        ]
+      ],
+      "rows": 4
+    },
+    {
+      "source": "results/objdec_appendix_bilingual_initial_260920.md",
+      "table": "E.3",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Weather",
+          "Frame ID",
+          "GT objects",
+          "FG patches",
+          "FG gate mean",
+          "BG gate mean",
+          "FG − BG"
+        ],
+        [
+          "Normal",
+          "seq20_rdr00628",
+          "1",
+          "28",
+          "0.3154",
+          "0.1208",
+          "0.1946"
+        ],
+        [
+          "Overcast",
+          "seq13_rdr00146",
+          "2",
+          "60",
+          "0.2995",
+          "0.1112",
+          "0.1883"
+        ],
+        [
+          "Fog",
+          "seq39_rdr00582",
+          "1",
+          "40",
+          "0.2942",
+          "0.1078",
+          "0.1864"
+        ],
+        [
+          "Rain",
+          "seq25_rdr00154",
+          "4",
+          "142",
+          "0.2882",
+          "0.1181",
+          "0.1702"
+        ],
+        [
+          "Sleet",
+          "seq50_rdr00456",
+          "2",
+          "65",
+          "0.2913",
+          "0.1179",
+          "0.1734"
+        ],
+        [
+          "Light snow",
+          "seq43_rdr00169",
+          "1",
+          "35",
+          "0.3711",
+          "0.1103",
+          "0.2608"
+        ],
+        [
+          "Heavy snow",
+          "seq55_rdr00385",
+          "1",
+          "35",
+          "0.2817",
+          "0.1186",
+          "0.1631"
+        ]
+      ],
+      "rows": 7
+    },
+    {
+      "source": "results/objdec_appendix_bilingual_initial_260920.md",
+      "table": "F.1",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Input",
+          "conf",
+          "3D@0.3",
+          "3D@0.5",
+          "BEV@0.5",
+          "Δ 3D@0.3 vs CLR"
+        ],
+        [
+          "C+L+R",
+          "0.3",
+          "88.36",
+          "67.50",
+          "88.10",
+          "+0.00"
+        ],
+        [
+          "C+L+R",
+          "0.0",
+          "88.06",
+          "72.83",
+          "87.18",
+          "+0.00"
+        ],
+        [
+          "L+R",
+          "0.3",
+          "88.06",
+          "71.68",
+          "85.45",
+          "-0.30"
+        ],
+        [
+          "L+R",
+          "0.0",
+          "NR",
+          "NR",
+          "NR",
+          "NR"
+        ],
+        [
+          "C+L",
+          "0.3",
+          "86.77",
+          "72.58",
+          "86.35",
+          "-1.59"
+        ],
+        [
+          "C+L",
+          "0.0",
+          "86.16",
+          "69.74",
+          "83.76",
+          "-1.90"
+        ],
+        [
+          "C+R",
+          "0.3",
+          "57.62",
+          "34.59",
+          "55.52",
+          "-30.74"
+        ],
+        [
+          "C+R",
+          "0.0",
+          "63.65",
+          "38.48",
+          "60.28",
+          "-24.41"
+        ],
+        [
+          "L",
+          "0.3",
+          "79.58",
+          "60.05",
+          "77.96",
+          "-8.77"
+        ],
+        [
+          "L",
+          "0.0",
+          "85.46",
+          "59.23",
+          "77.96",
+          "-2.60"
+        ],
+        [
+          "R",
+          "0.3",
+          "49.81",
+          "26.64",
+          "46.80",
+          "-38.55"
+        ],
+        [
+          "R",
+          "0.0",
+          "61.75",
+          "30.86",
+          "52.60",
+          "-26.31"
+        ],
+        [
+          "C",
+          "0.3",
+          "0.86",
+          "0.16",
+          "0.21",
+          "-87.49"
+        ],
+        [
+          "C",
+          "0.0",
+          "0.32",
+          "0.03",
+          "0.14",
+          "-87.74"
+        ],
+        [
+          "C*",
+          "0.3",
+          "0.00",
+          "0.00",
+          "0.00",
+          "-88.36"
+        ],
+        [
+          "C*",
+          "0.0",
+          "0.17",
+          "0.01",
+          "0.07",
+          "-87.89"
+        ],
+        [
+          "C*+L+R",
+          "0.3",
+          "88.36",
+          "67.41",
+          "88.09",
+          "+0.00"
+        ],
+        [
+          "C*+L+R",
+          "0.0",
+          "88.06",
+          "72.75",
+          "87.17",
+          "+0.00"
+        ],
+        [
+          "C+L*+R",
+          "0.3",
+          "50.26",
+          "34.83",
+          "49.27",
+          "-38.09"
+        ],
+        [
+          "C+L*+R",
+          "0.0",
+          "63.05",
+          "38.48",
+          "61.12",
+          "-25.01"
+        ]
+      ],
+      "rows": 20
+    },
+    {
+      "source": "results/objdec_appendix_bilingual_initial_260920.md",
+      "table": "F.2",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Input",
+          "conf",
+          "Mean 3D@0.3",
+          "Mean 3D@0.5",
+          "Mean BEV@0.5",
+          "Δ mean 3D@0.3 vs CLR"
+        ],
+        [
+          "C+L+R",
+          "0.3",
+          "66.91",
+          "43.05",
+          "60.93",
+          "+0.00"
+        ],
+        [
+          "C+L+R",
+          "0.0",
+          "69.41",
+          "43.81",
+          "63.23",
+          "+0.00"
+        ],
+        [
+          "L+R",
+          "0.3",
+          "66.02",
+          "41.81",
+          "59.93",
+          "-0.89"
+        ],
+        [
+          "L+R",
+          "0.0",
+          "68.96",
+          "42.77",
+          "62.74",
+          "-0.46"
+        ],
+        [
+          "C+L",
+          "0.3",
+          "64.08",
+          "41.17",
+          "57.80",
+          "-2.83"
+        ],
+        [
+          "C+L",
+          "0.0",
+          "65.13",
+          "41.16",
+          "58.53",
+          "-4.28"
+        ],
+        [
+          "C+R",
+          "0.3",
+          "34.25",
+          "16.99",
+          "29.97",
+          "-32.66"
+        ],
+        [
+          "C+R",
+          "0.0",
+          "34.73",
+          "16.82",
+          "29.89",
+          "-34.68"
+        ],
+        [
+          "L",
+          "0.3",
+          "59.39",
+          "32.36",
+          "53.45",
+          "-7.53"
+        ],
+        [
+          "L",
+          "0.0",
+          "62.33",
+          "33.47",
+          "54.75",
+          "-7.08"
+        ],
+        [
+          "R",
+          "0.3",
+          "30.51",
+          "13.59",
+          "26.28",
+          "-36.40"
+        ],
+        [
+          "R",
+          "0.0",
+          "31.63",
+          "13.45",
+          "26.70",
+          "-37.79"
+        ],
+        [
+          "C",
+          "0.3",
+          "0.01",
+          "0.00",
+          "0.01",
+          "-66.90"
+        ],
+        [
+          "C",
+          "0.0",
+          "0.01",
+          "0.00",
+          "0.01",
+          "-69.40"
+        ],
+        [
+          "C*",
+          "0.3",
+          "0.01",
+          "0.01",
+          "0.01",
+          "-66.90"
+        ],
+        [
+          "C*",
+          "0.0",
+          "0.01",
+          "0.01",
+          "0.00",
+          "-69.40"
+        ],
+        [
+          "C*+L+R",
+          "0.3",
+          "66.93",
+          "42.98",
+          "60.91",
+          "+0.01"
+        ],
+        [
+          "C*+L+R",
+          "0.0",
+          "69.40",
+          "43.73",
+          "63.19",
+          "-0.01"
+        ],
+        [
+          "C+L*+R",
+          "0.3",
+          "27.99",
+          "14.11",
+          "25.01",
+          "-38.92"
+        ],
+        [
+          "C+L*+R",
+          "0.0",
+          "34.70",
+          "15.51",
+          "30.76",
+          "-34.71"
+        ]
+      ],
+      "rows": 20
+    },
+    {
+      "source": "results/objdec_appendix_bilingual_initial_260920.md",
+      "table": "G.1",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Method",
+          "Sensors",
+          "Grid (m)",
+          "Best epoch",
+          "Val mean 3D",
+          "Test Vehicle",
+          "Test Pedestrian",
+          "Test Cyclist",
+          "Test mean 3D",
+          "Test mean BEV"
+        ],
+        [
+          "Concat",
+          "C+L+R",
+          "0.4",
+          "75",
+          "74.31",
+          "81.52",
+          "65.81",
+          "79.98",
+          "75.77",
+          "81.26"
+        ],
+        [
+          "ASF-style",
+          "C+L+R",
+          "0.4",
+          "75",
+          "72.76",
+          "78.57",
+          "58.93",
+          "79.02",
+          "72.17",
+          "78.21"
+        ],
+        [
+          "ObjDec 4×4",
+          "C+L+R",
+          "0.4",
+          "80",
+          "71.31",
+          "78.82",
+          "58.75",
+          "79.09",
+          "72.22",
+          "78.76"
+        ],
+        [
+          "ObjDec 2×2",
+          "C+L+R",
+          "0.4",
+          "80",
+          "74.19",
+          "80.73",
+          "62.36",
+          "78.99",
+          "74.03",
+          "80.26"
+        ],
+        [
+          "Concat",
+          "C+L+R",
+          "0.16",
+          "75",
+          "81.46",
+          "84.81",
+          "76.84",
+          "84.05",
+          "81.90",
+          "86.47"
+        ],
+        [
+          "ASF-style",
+          "C+L+R",
+          "0.16",
+          "80",
+          "81.03",
+          "84.54",
+          "76.17",
+          "83.18",
+          "81.30",
+          "85.72"
+        ],
+        [
+          "ObjDec 2×2",
+          "C+L+R",
+          "0.16",
+          "70",
+          "81.41",
+          "84.06",
+          "75.94",
+          "84.13",
+          "81.38",
+          "86.27"
+        ],
+        [
+          "L4DR",
+          "L+R",
+          "0.16",
+          "80",
+          "77.19",
+          "83.17",
+          "73.25",
+          "78.31",
+          "78.24",
+          "82.56"
+        ],
+        [
+          "ObjDec-LR 2×2",
+          "L+R",
+          "0.16",
+          "75",
+          "79.12",
+          "83.87",
+          "74.84",
+          "80.24",
+          "79.65",
+          "83.81"
+        ]
+      ],
+      "rows": 9
+    },
+    {
+      "source": "results/objdec_appendix_bilingual_initial_260920.md",
+      "table": "G.2",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Method",
+          "Checkpoint",
+          "Epoch",
+          "BEV Vehicle",
+          "BEV Pedestrian",
+          "BEV Cyclist",
+          "Mean BEV",
+          "Mean 3D"
+        ],
+        [
+          "Concat",
+          "best",
+          "75",
+          "92.12",
+          "80.66",
+          "86.64",
+          "86.47",
+          "81.90"
+        ],
+        [
+          "Concat",
+          "last",
+          "80",
+          "92.02",
+          "80.70",
+          "86.69",
+          "86.47",
+          "81.97"
+        ],
+        [
+          "ASF-style",
+          "best",
+          "80",
+          "90.95",
+          "80.41",
+          "85.80",
+          "85.72",
+          "81.30"
+        ],
+        [
+          "ASF-style",
+          "last",
+          "80",
+          "90.95",
+          "80.41",
+          "85.80",
+          "85.72",
+          "81.30"
+        ],
+        [
+          "ObjDec 2×2",
+          "best",
+          "70",
+          "90.91",
+          "80.88",
+          "87.02",
+          "86.27",
+          "81.38"
+        ],
+        [
+          "ObjDec 2×2",
+          "last",
+          "80",
+          "90.84",
+          "81.16",
+          "87.07",
+          "86.35",
+          "81.55"
+        ],
+        [
+          "L4DR",
+          "best",
+          "80",
+          "89.74",
+          "76.60",
+          "81.35",
+          "82.56",
+          "78.24"
+        ],
+        [
+          "L4DR",
+          "last",
+          "80",
+          "89.74",
+          "76.60",
+          "81.35",
+          "82.56",
+          "78.24"
+        ],
+        [
+          "ObjDec-LR 2×2",
+          "best",
+          "75",
+          "90.02",
+          "78.34",
+          "83.08",
+          "83.81",
+          "79.65"
+        ],
+        [
+          "ObjDec-LR 2×2",
+          "last",
+          "80",
+          "90.10",
+          "78.21",
+          "83.09",
+          "83.80",
+          "79.75"
+        ]
+      ],
+      "rows": 10
+    },
+    {
+      "source": "results/objdec_appendix_bilingual_initial_260920.md",
+      "table": "G.3a",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Method",
+          "Source",
+          "Epoch",
+          "Car",
+          "Pedestrian",
+          "Cyclist",
+          "Mean"
+        ],
+        [
+          "PP-Concat (historical)",
+          "Local",
+          "80",
+          "66.88",
+          "63.38",
+          "79.39",
+          "69.88"
+        ],
+        [
+          "ObjDec (warm-start, historical)",
+          "Local",
+          "79",
+          "67.50",
+          "63.66",
+          "79.38",
+          "70.18"
+        ],
+        [
+          "ObjDec (2×2 + local)",
+          "Local",
+          "75",
+          "68.72",
+          "65.59",
+          "79.38",
+          "71.23"
+        ],
+        [
+          "ObjDec (+ adapted anchors)",
+          "Local",
+          "80",
+          "66.93",
+          "65.28",
+          "83.89",
+          "72.03"
+        ],
+        [
+          "L4DR",
+          "Local",
+          "99",
+          "68.69",
+          "65.35",
+          "78.98",
+          "71.00"
+        ],
+        [
+          "InterFusion",
+          "Reported",
+          "—",
+          "66.50",
+          "64.50",
+          "78.50",
+          "69.83"
+        ],
+        [
+          "L4DR",
+          "Reported",
+          "—",
+          "69.10",
+          "66.20",
+          "82.80",
+          "72.70"
+        ]
+      ],
+      "rows": 7
+    },
+    {
+      "source": "results/objdec_appendix_bilingual_initial_260920.md",
+      "table": "G.3b",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Method",
+          "Source",
+          "Epoch",
+          "Car",
+          "Pedestrian",
+          "Cyclist",
+          "Mean"
+        ],
+        [
+          "PP-Concat (historical)",
+          "Local",
+          "80",
+          "90.77",
+          "71.09",
+          "89.53",
+          "83.80"
+        ],
+        [
+          "ObjDec (warm-start, historical)",
+          "Local",
+          "79",
+          "90.59",
+          "71.02",
+          "89.76",
+          "83.79"
+        ],
+        [
+          "ObjDec (2×2 + local)",
+          "Local",
+          "75",
+          "90.74",
+          "73.23",
+          "90.09",
+          "84.69"
+        ],
+        [
+          "ObjDec (+ adapted anchors)",
+          "Local",
+          "80",
+          "89.44",
+          "73.02",
+          "88.83",
+          "83.76"
+        ],
+        [
+          "L4DR",
+          "Local",
+          "99",
+          "90.51",
+          "75.13",
+          "88.90",
+          "84.84"
+        ],
+        [
+          "InterFusion",
+          "Reported",
+          "—",
+          "90.70",
+          "72.00",
+          "88.70",
+          "83.80"
+        ],
+        [
+          "L4DR",
+          "Reported",
+          "—",
+          "90.80",
+          "76.10",
+          "95.50",
+          "87.47"
+        ]
+      ],
+      "rows": 7
+    },
+    {
+      "source": "results/objdec_appendix_bilingual_initial_260920.md",
+      "table": "G.4",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Configuration",
+          "Epoch",
+          "Metric",
+          "Easy mean",
+          "Moderate mean",
+          "Hard mean"
+        ],
+        [
+          "ObjDec (2×2 + local)",
+          "75",
+          "3D",
+          "83.43",
+          "78.64",
+          "72.23"
+        ],
+        [
+          "ObjDec (+ adapted anchors)",
+          "80",
+          "3D",
+          "83.06",
+          "78.35",
+          "72.02"
+        ],
+        [
+          "ObjDec (2×2 + local)",
+          "75",
+          "BEV",
+          "85.47",
+          "80.55",
+          "74.56"
+        ],
+        [
+          "ObjDec (+ adapted anchors)",
+          "80",
+          "BEV",
+          "85.33",
+          "80.92",
+          "75.02"
+        ]
+      ],
+      "rows": 4
+    },
+    {
+      "source": "results/objdec_appendix_bilingual_initial_260920.md",
+      "table": "H.1",
+      "panel": 0,
+      "original_cells": [
+        [
+          "Model",
+          "Execution",
+          "Mean ms",
+          "Median ms",
+          "P95 ms",
+          "Std ms",
+          "1000 / mean ms"
+        ],
+        [
+          "ASF",
+          "Eager",
+          "84.00",
+          "82.63",
+          "93.26",
+          "5.34",
+          "11.91"
+        ],
+        [
+          "ASF",
+          "CUDA Graph",
+          "59.30",
+          "59.10",
+          "64.82",
+          "2.83",
+          "16.86"
+        ],
+        [
+          "ObjDec",
+          "Eager",
+          "84.69",
+          "84.50",
+          "89.98",
+          "3.01",
+          "11.81"
+        ],
+        [
+          "ObjDec",
+          "CUDA Graph",
+          "59.57",
+          "59.23",
+          "65.93",
+          "2.92",
+          "16.79"
+        ]
+      ],
+      "rows": 4
+    }
+  ],
+  "bibliography_entries": 36,
+  "scope": "English body and existing tables/captions. No new experiment results. No GitHub push.",
+  "introduction_revision": "2026-09-24: decoupling is the core; object guidance gives decoupling a detection-specific focus. Six paragraphs plus three contributions; grouped citations. Related Work closing paragraphs updated in English and Chinese.",
+  "method_experiment_revision": "2026-09-25: decoupling-first overview/ablation discussion; equations and all table values preserved; original-method citations added to Table 4(a); AdamW citation added; Conclusion added.",
+  "original_conversion_sources": {
+    "results/taskdec_related_work_bilingual_initial_260917.md": "d4a623af566b0c22380af1dbbe95795b94cb5dcb5c463603f34a8dc57ab9922e",
+    "results/taskdec_methods_bilingual_initial_260917.md": "fbc9aca022a469c9916e9b384d0f280f89fc77ead0df83385701633f1cd12835",
+    "results/objdec_experiments_bilingual_initial_260919.md": "1b2782f8b677d2298706f8091065f4d6fda64f2eebb5875430aff8bca0a6613b",
+    "results/objdec_appendix_bilingual_initial_260920.md": "5b928c2ce38bbb2c9fbc4c9cff4e48b689c0a6652ec82819441e1b463be764f7",
+    "results/objdec_introduction_260924.tex": "fc0c4189a6f6bd5d22b9f717a263a8333172d64a0bce42128c258ea9f16a76b1",
+    "results/objdec_conclusion_260925.tex": "49d8248317ccb9244394672c4571a623849ea218255f40d97579cc09abf9a946"
+  },
+  "original_conversion_assets": [
+    {
+      "source": "analysis_exports/objdec_visuals_blue_green_purple_260923/gate/fig4_objdec_all_weather.pdf",
+      "target": "assets/figure4.pdf",
+      "sha256": "01adbd920cf1e903fccfcd7db993fb9de0ba3eb1397a8a89231a583e564b6c28"
+    },
+    {
+      "source": "analysis_exports/objdec_fig4_fig5_260919/fig5_asf_objdec_detection_draft.pdf",
+      "target": "assets/figure5.pdf",
+      "sha256": "5a2a6a7bc507ceedaf1ad3ba80737b57d9937b15974d2c993fb707ee6bbc601f"
+    },
+    {
+      "source": "analysis_exports/objdec_visuals_blue_green_purple_260923/fulltest/objdec_fulltest_frame_pca_all_weather.pdf",
+      "target": "assets/pca_all_weather.pdf",
+      "sha256": "1408ea6c9be7bf2a18d2740763a5f80deb51224e5b4f7a51900ae3e915865076"
+    },
+    {
+      "source": "analysis_exports/objdec_fulltest_weather_260919/paper_visuals/objdec_fulltest_direct_similarity_distributions.pdf",
+      "target": "assets/similarity_distributions.pdf",
+      "sha256": "998d218ba755a154cbc2c93654795143eafdc97c1afc4f4c063dc2aa58b2e372"
+    },
+    {
+      "source": "analysis_exports/objdec_fig4_fig5_260919/fig5_snow_and_counterexample.pdf",
+      "target": "assets/snow_counterexample.pdf",
+      "sha256": "6d67f40f46ecbc68f67f9e3cafaccd8d5db8dbacfb687a9cebfbda427667623d"
+    },
+    {
+      "source": "analysis_exports/objdec_fig4_fig5_260919/fig5_all_candidates.pdf",
+      "target": "assets/all_candidates.pdf",
+      "sha256": "3fd828e765cc0926b115fd378de0fbc470f1faa945c6ef0d27e0d4a47e4c7c67"
+    }
+  ],
+  "manuscript_revision": "2026-09-26: four main figures; expanded appendix evidence; original table cells unchanged",
+  "additional_tables": [
+    {
+      "target": "tables/table_d2.tex",
+      "source": "analysis_exports/objdec_kradar_v1_interventions_260923/reporting_260924/all_conditions_metrics.csv",
+      "source_sha256": "3ab5761970ee417f841e9dbd66d5ca1b5d5c212579f76eacda1fead74e4cbdba",
+      "filter": "condition=all; eight cases plus mean of three gate-shuffle seeds"
+    }
+  ]
+}

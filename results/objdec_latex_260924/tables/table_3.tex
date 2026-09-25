@@ -1,0 +1,21 @@
+\begin{table}[tbp]
+\centering
+\caption[Component ablations]{\textbf{Component ablations.} Component ablations on K-Radar v1 with C+L+R and a confidence filter of 0.3. Each variant undergoes checkpoint selection through a preliminary 1,000-sample evaluation before full-set evaluation. Removing decoupling supervision retains the shared and modality-specific branches. Removing object context disables its supervision and both query/output injections. Removing foreground gating fixes the gate to one and disables its supervision. Selection and implementation details are provided in Appendices~\ref{app:b} and~\ref{app:d} \textbf{[TO COMPLETE: selection records]}.}
+\label{tab:3}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.91304\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.69565\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.69565\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.69566\hsize\linewidth=\hsize\centering\arraybackslash}X@{}}
+\toprule
+\textbf{Variant} & \shortstack{\(\mathrm{AP}_{3D}\)\\\(@0.3\)} & \shortstack{\(\mathrm{AP}_{3D}\)\\\(@0.5\)} & \shortstack{\(\mathrm{AP}_{BEV}\)\\\(@0.5\)} \\
+\midrule
+Full ObjDec & \textbf{88.36} & \textbf{67.50} & \textbf{88.10} \\
+w/o modality contribution control & 79.62 & 64.38 & 79.91 \\
+w/o object context & 80.14 & 66.23 & 79.96 \\
+w/o decoupling supervision & 80.23 & 66.16 & 80.04 \\
+w/o foreground gating & 80.00 & 64.80 & 80.12 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}

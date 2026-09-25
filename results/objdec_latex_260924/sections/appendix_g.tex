@@ -1,0 +1,47 @@
+\section{Cross-Dataset Architecture Adaptation}
+\label{app:g}
+
+\subsection{Data processing and the common backbone}
+\label{subsec:g1}
+
+We use 8,391 training frames from the public package. The raw validation/test sets contain 1,498/1,501 frames and become 1,487/1,486 after deduplication. Car, Truck, and Bus are merged into Vehicle; the other classes are Pedestrian and Cyclist. ROI, difficulty, and IoU settings are listed in Table~\ref{tab:b1}. Local adaptation additionally includes ROI-based GT filtering, calibrated 2D box projection for difficulty filtering, and an intersection-area numerical correction. Dataset version, reporting split, and spatial coverage differ from the published benchmark tables \citep{yang2025v2xradar}; the results here extend the local architectural comparison defined in the main text.
+
+The camera branch combines ResNet-50 multiscale features with a learned depth distribution and LSS \citep{philion2020lss} projection to BEV, using 288\(\times\)512 input images. LiDAR and radar use independent PillarVFE, scatter, and BEV convolutional stems, with four and six point fields, respectively. Each pillar contains at most 32 points, and at most 32,000 pillars are retained. Each modality outputs 64 channels. Fusion produces 128 channels before the common multiscale BEV backbone; the detection head receives 384 channels and uses anchors determined from training-set statistics.
+
+Common encoder and detection-head tensors are copied from the same untrained initialization, without warm-starting from a trained target-dataset checkpoint. Augmentations include global rotation within \(\pm\)0.392699 radians, scaling within [0.95,1.05], and flipping with probability 0.5. Camera geometry and point clouds share the same spatial transform. Other training settings are provided in Section~\ref{subsec:a3}.
+
+\subsection{Fusion structures and spatial resolution}
+\label{subsec:g2}
+
+Concat applies a 3\(\times\)3 convolution, BatchNorm, and ReLU after channel-wise BEV concatenation, learning combinations across modalities and neighboring locations. ASF-style uses common projection, local attention, and PFT. ObjDec jointly incorporates the representation, gating, modality-contribution, and context paths from Section~\ref{sec:methods} into fusion. The three-sensor group shares encoders and a detection head. ObjDec-LR is trained with only LiDAR and radar branches from the outset; comparisons with L4DR retain their native architectural differences.
+
+The 0.4 m and 0.16 m settings use BEV grids of 256\(\times\)256 and 640\(\times\)640, respectively, with detection-head stride two relative to BEV. The earlier 4\(\times\)4 patch setting uses 16 queries, and the 2\(\times\)2 setting uses four; both output 128 channels. Physical patch coverage changes from 1.6 m or 0.8 m at a 0.4 m grid to 0.32 m at a 0.16 m grid. Grid and patch changes therefore alter both computation and the size of local fusion regions relative to objects.
+
+\subsection{Supplementary results under the full training budget}
+\label{subsec:g3}
+
+The main Table~\ref{tab:4} presents published references and local fusion comparisons; this section additionally reports the Concat control on the common backbone. Table~\ref{tab:g1} retains the earlier 0.4 m group, selected epochs, and corresponding validation/test scores omitted from the main table. Table~\ref{tab:g2} adds per-class BEV and last-epoch results for completed 0.16 m runs. At 0.4 m, changing ObjDec from 4\(\times\)4 to 2\(\times\)2 patches increases test Pedestrian 3D AP from 58.75 to 62.36 and mean 3D AP from 72.22 to 74.03. This change also modifies the query count. Concat obtains mean test 3D AP of 75.77 at 0.4 m and 81.90 at 0.16 m, showing that the common detection backbone also benefits from finer grids. Gains from finer resolution cannot all be attributed to ObjDec. At 0.16 m, validation-selected ObjDec trails Concat by 0.52 and 0.20 percentage points in mean test 3D and BEV AP, respectively; these results do not establish superiority over all evaluated fusion architectures.
+
+All five 0.16 m runs have completed 80 training epochs and final best/last evaluations. Validation-selected three-sensor ObjDec at epoch 70 obtains mean test 3D/BEV AP of 81.38/86.27, compared with 81.55/86.35 at epoch 80. ObjDec-LR obtains 79.65/83.81 at its selected epoch 75 and 79.75/83.80 at epoch 80. Last-checkpoint test differences do not change the validation-based selection rule. ASF-style and L4DR both select epoch 80. Relative to L4DR, ObjDec-LR improves class-wise 3D AP by 0.71/1.58/1.93 points and BEV AP by 0.29/1.73/1.73 points. Relative to ASF-style, three-sensor ObjDec improves Cyclist 3D and BEV AP by 0.95/1.21 points, with small decreases in Vehicle 3D and BEV AP. \drafttodo{complete 80-epoch validation curves for Figure G.1; all required validation checkpoints are available.} Curves use actual validation checkpoints without combining per-class maxima from different models.
+
+\subsection{Additional architecture adaptation on VoD}
+\label{subsec:g4}
+
+\textbf{Setup.} We supplement the main V2X-Radar-V evaluation by training a LiDAR--4D-radar version within a native PointPillars \citep{lang2019pointpillars} detection backbone on VoD \citep{palffy2022vod}, using 5,139 training and 1,296 validation frames. Inputs comprise one LiDAR frame and five radar frames. Both recent ObjDec runs use a 0.16 m grid, a 320\(\times\)320 BEV, 2\(\times\)2 patches, and four queries. Each modality has two 64-channel 3\(\times\)3 Conv--BN--ReLU layers for local encoding, followed by token LayerNorm. Both models are trained from scratch for 80 epochs with seed 666, FP32, Adam OneCycle, and a peak learning rate of 0.003. A microbatch of eight with two accumulation steps gives an effective batch size of 16. Full validation is performed every five epochs; checkpoints are selected by official EAA mean AP and used unchanged for DC and other metrics. The score and NMS thresholds remain 0.1 and 0.01.
+
+\textbf{Anchor adaptation.} The second run changes only class-specific anchor dimensions and bottom heights. Priors are computed from training annotations before augmentation, transformed into LiDAR coordinates and filtered using the native training ROI's box-center rule. Dimension and bottom-height medians are rounded to 0.01 m, without fitting to validation annotations. Length/width/height values for Car, Pedestrian, and Cyclist are 4.19/1.81/1.52, 0.65/0.63/1.69, and 1.94/0.78/1.76 m, with bottom heights of \(-\)1.65, \(-\)1.62, and \(-\)1.68 m. This comparison evaluates the joint change in dimensions and heights.
+
+\textbf{Results.} Table~\ref{tab:g3} (a,b) use official VoD region/class filtering and 11-point 3D AP, with IoU thresholds of 0.5/0.25/0.25 for Car/Pedestrian/Cyclist. EAA and DC denote the Entire Annotated Area and Driving Corridor; both report 3D detection. The 2\(\times\)2-patch model with local encoding selects epoch 75 and obtains EAA/DC of 71.23/84.69. Adapted anchors select epoch 80 and yield 72.03/83.76. The 0.80-point EAA gain is primarily associated with a 4.51-point Cyclist improvement, while DC decreases by 0.93 points. Relative to the local L4DR reference, EAA is 1.03 points higher and DC is 1.08 points lower; aggregate EAA/DC remain below the published L4DR results \citep{huang2025l4dr}. Table~\ref{tab:g4} additionally reports KITTI AP\_R40 for the same checkpoints: Moderate mean 3D AP changes from 78.64 to 78.35, whereas BEV AP increases from 80.55 to 80.92, showing a tradeoff across metrics.
+
+\textbf{Comparison scope.} Historical PP-Concat uses AMP and a physical batch size of 16, and the earlier ObjDec is initialized from Concat. Local L4DR uses 100 epochs, two GPUs, and SyncBN; its epoch-99 checkpoint is the better of the evaluated late-stage candidates. These rows provide historical and external architectural references with differing training conditions. A Concat reference with the same local encoding and training settings is not yet available, so the combined gains over the historical baseline cannot be attributed entirely to representation decoupling. These results support architecture adaptation after training on VoD, without establishing zero-shot transfer or overall state-of-the-art performance on VoD.
+
+
+\input{tables/table_g1.tex}
+
+\input{tables/table_g2.tex}
+
+\input{tables/table_g3.tex}
+
+\input{tables/table_g4.tex}
+
+% Optional validation-trajectory figure is not yet prepared and is not inserted.

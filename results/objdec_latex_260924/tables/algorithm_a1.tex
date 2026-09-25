@@ -1,0 +1,24 @@
+\begin{algorithm}[tbp]
+\caption{Forward computation and training supervision}
+\label{alg:a1}
+\small
+\textbf{Input:} available sensor observations, model variant, and optional training GT.
+\begin{enumerate}[leftmargin=2.4em,label=\arabic*.,itemsep=2pt]
+\item Encode X and project BEV features into spatially corresponding patch tokens t.
+\item Compute shared c and modality-specific u for every available patch and modality.
+\item Predict foreground gate g and modality contributions from tokens and their shared/specific representations.
+\item If the variant uses object context, predict context z from its context head.
+\item Construct controlled tokens and queries using the main-text forward equations.
+\item Apply local cross-modal attention, the enabled context output residual, and PFT.
+\item Reassemble the BEV feature and obtain predictions from the detection head.
+\item If training:
+\item Compute the detector's training losses using GT.
+\item If SCL is enabled, add detection losses on the six controlled-token subsets.
+\item Construct foreground/context targets from valid GT boxes using Equation~\eqref{eq:a1}.
+\item If valid foreground exists and at least two modalities are available:
+\item Add foreground representation losses, gate loss, and enabled context loss.
+\item Return predictions and the total loss with Table~\ref{tab:a2} coefficients.
+\item Return predictions.
+\end{enumerate}
+The pseudocode specifies data dependencies rather than low-level operator scheduling. Steps 1--7 are shared by training and inference; GT enters supervision from step 9 onward. The target foreground set in step 11 does not replace the predicted gate in step 3. Step 10 follows the SCL implementation in Section~\ref{subsec:a3} and is skipped on V2X. Losses follow main-text Equation~\eqref{eq:7}.
+\end{algorithm}

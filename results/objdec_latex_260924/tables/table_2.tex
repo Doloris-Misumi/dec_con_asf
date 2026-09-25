@@ -1,0 +1,22 @@
+\begin{table}[tbp]
+\centering
+\caption[Extended K-Radar v2 evaluation]{\textbf{Extended K-Radar v2 evaluation.} Results on the two-class K-Radar v2 setting. Mean averages Sedan and Bus/Truck equally. All rows use the aligned v2.0 labels, revised evaluator, and confidence filter of 0.3. Released-model references are grouped separately from 11-epoch local runs. ASF and Strong share pretrained encoders, whereas local L4DR is trained from scratch with different modalities, architecture, and pretraining cost. Strong is a decoupled-control variant without object context. Complete class-wise and BEV results are provided in Appendix~\ref{app:c}.}
+\label{tab:2}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.95000\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.60000\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=1.65000\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.70000\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.70000\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.70000\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.70000\hsize\linewidth=\hsize\centering\arraybackslash}X@{}}
+\toprule
+\textbf{Method} & \textbf{Sensors} & \textbf{Training / source} & \shortstack{Mean\\\(\mathrm{AP}_{3D}\)\\\(@0.3\)} & \shortstack{Mean\\\(\mathrm{AP}_{3D}\)\\\(@0.5\)} & \shortstack{Mean\\\(\mathrm{AP}_{3D}\)\\\(@0.7\)} & \shortstack{Mean\\\(\mathrm{AP}_{BEV}\)\\\(@0.5\)} \\
+\midrule
+ASF & C+L+R & Released-result archive & 66.55 & 41.57 & 9.89 & 62.45 \\
+L4DR & L+R & Released checkpoint, aligned evaluation & 69.48 & 48.23 & 10.86 & 65.23 \\
+\midrule
+ASF & C+L+R & Local, 11 epochs & 64.77 & 39.70 & 9.55 & 58.77 \\
+L4DR & L+R & Local, 11 epochs & 65.53 & 43.84 & 9.82 & 60.73 \\
+DecControlled Strong & C+L+R & Ours, 11 epochs & 66.91 & 43.05 & 11.11 & 60.93 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}

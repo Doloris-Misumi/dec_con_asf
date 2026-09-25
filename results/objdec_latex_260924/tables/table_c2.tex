@@ -1,0 +1,26 @@
+\begin{table}[tbp]
+\centering
+\caption[Complete class-wise v2 metrics]{\textbf{Complete class-wise v2 metrics.} Confidence is 0.3. These class-wise results complement the class means in the main text. Strong omits object context. Local runs match the training split, 11 epochs, and effective batch size; initialization and modality differences are specified in Appendix~\ref{app:b}.}
+\label{tab:c2}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.55477\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=1.35689\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.84806\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.84806\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.84806\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.84806\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.84806\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.84804\hsize\linewidth=\hsize\centering\arraybackslash}X@{}}
+\toprule
+\textbf{Method} & \textbf{Class} & \textbf{3D@0.3} & \textbf{3D@0.5} & \textbf{3D@0.7} & \textbf{BEV@0.3} & \textbf{BEV@0.5} & \textbf{BEV@0.7} \\
+\midrule
+ASF released archive & Sedan & 74.98 & 52.09 & 11.85 & 77.85 & 71.70 & 43.21 \\
+ASF released archive & Bus/Truck & 58.13 & 31.06 & 7.93 & 67.85 & 53.21 & 20.85 \\
+L4DR released, aligned & Sedan & 76.79 & 54.68 & 11.23 & 79.90 & 73.61 & 49.16 \\
+L4DR released, aligned & Bus/Truck & 62.17 & 41.78 & 10.49 & 67.12 & 56.86 & 29.65 \\
+ASF local & Sedan & 74.45 & 51.52 & 11.58 & 77.37 & 71.11 & 42.23 \\
+ASF local & Bus/Truck & 55.09 & 27.88 & 7.52 & 64.27 & 46.43 & 16.84 \\
+L4DR local & Sedan & 74.49 & 54.28 & 14.08 & 75.13 & 71.59 & 48.20 \\
+L4DR local & Bus/Truck & 56.58 & 33.39 & 5.56 & 61.46 & 49.86 & 22.50 \\
+DecControlled Strong & Sedan & 74.58 & 52.14 & 12.31 & 77.32 & 71.27 & 44.26 \\
+DecControlled Strong & Bus/Truck & 59.24 & 33.97 & 9.92 & 65.14 & 50.59 & 23.13 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}

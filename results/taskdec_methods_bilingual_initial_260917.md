@@ -4,21 +4,23 @@
 
 命名更新（2026-09-19）：方法名统一为 **ObjDec**，全称 **Object-Guided Representation Decoupling（目标引导的表征解耦）**。
 
+定位更新（2026-09-25）：以 Dec 为架构核心、Obj 为解耦的检测指向，调整 Overview 和 3.2 标题；公式与实际机制保持不变。
+
 机制说明更新（2026-09-20）：明确区分由特征预测的连续前景门控、仅用于训练损失的 GT 前景标签，以及可视化中后叠加的 GT 参照框。
 
-正文按 Overview → Object-Guided Representation Decoupling → Representation-Driven Fusion → Training Objectives and Inference 组织，中英文段落及公式对应。以 K-Radar v1 完整 ObjDec 为主要定义，数据集适配及变体差异列于文末。公式编号为本章临时编号；`[ASF]` 为正式引用占位。
+正文按 Overview → Shared and Modality-Specific Representation Decoupling → Representation-Driven Fusion → Training Objectives and Inference 组织，中英文段落及公式对应。以 K-Radar v1 完整 ObjDec 为主要定义，数据集适配及变体差异列于文末。公式编号为本章临时编号；`[ASF]` 为正式引用占位。
 
 ## 中文正文
 
 ### 3.1 总体架构
 
-我们提出 ObjDec，一种学习共享与模态特有表征，并利用目标相关信息引导其融合的多传感器融合架构。如图 2 所示，给定相机、LiDAR 和四维雷达观测，各模态编码器首先生成空间对应的鸟瞰图（BEV）特征。我们采用 ASF 的统一空间投影，将不同通道数的特征映射为对应局部区域的 patch token，并保留其局部跨传感器注意力与后续特征变换作为交互基础 [ASF]。记参与融合的模态集合为 \(\mathcal M\)，模态数为 \(M=|\mathcal M|\)；\(t_m^p\in\mathbb R^d\) 表示模态 \(m\) 在 patch \(p\) 的输入 token。为简化记号，下文省略 batch 维。
+我们提出 ObjDec，一种以共享与模态特有表征解耦为核心的多传感器三维检测架构。如图 2 所示，给定相机、LiDAR 和四维雷达观测，各模态编码器首先生成空间对应的鸟瞰图（BEV）特征。我们采用 ASF 的统一空间投影，将不同通道数的特征映射为对应局部区域的 patch token，并保留其局部跨传感器注意力与后续特征变换作为交互基础 [ASF]。记参与融合的模态集合为 \(\mathcal M\)，模态数为 \(M=|\mathcal M|\)；\(t_m^p\in\mathbb R^d\) 表示模态 \(m\) 在 patch \(p\) 的输入 token。为简化记号，下文省略 batch 维。
 
-ObjDec 在每个对应 patch 内学习共享与模态特有表征，并由这些表征预测前景门控、模态贡献权重和目标上下文。门控与模态权重调节输入 token 的更新和缩放，目标上下文则进一步调制注意力查询与融合输出。经局部交互、特征变换和空间重组后，融合 BEV 特征被送入三维检测头。训练和推理均从输入特征预测控制信号；真实目标框（GT）仅在训练时为表征约束与目标相关预测构建监督标签。
+在每个对应 patch 内，独立映射通过不同的训练约束学习共享与模态特有表征。两类表征通过残差 token 更新，以及模态贡献和目标上下文的预测参与融合。目标区域监督与预测的前景门控，为其学习和使用提供明确的检测指向。门控与模态权重调节输入 token 的更新和缩放，目标上下文则调制注意力查询与融合输出。经局部交互、特征变换和空间重组后，融合 BEV 特征被送入三维检测头。训练和推理均从输入特征预测控制信号；真实目标框（GT）仅在训练时为表征约束与目标相关预测构建监督标签。
 
 > **图 2 插入位置。** 展示完整前向路径，并将目标框监督以虚线连接到对应训练目标。建议使用本文件后附的中英文图注；现有主图需要按照已核查的 token 缩放公式和箭头顺序修订后再插入。
 
-### 3.2 目标引导的表征解耦
+### 3.2 共享与模态特有表征解耦
 
 空间对应的多模态特征同时包含跨传感器的共同响应与各自特有的观测信息。为显式组织这两类信息，我们为每个模态设置两个独立的映射分支：
 
@@ -129,13 +131,13 @@ F'^p&=F^p+\gamma g^p\mathbf 1_{N_q}(z^p)^\top.
 
 ### 3.1 Overview
 
-We introduce ObjDec, a multi-sensor fusion architecture that learns shared and modality-specific representations and uses object-related information to guide their fusion. As illustrated in Figure 2, modality-specific encoders first transform camera, LiDAR, and 4D radar observations into spatially corresponding bird's-eye-view (BEV) features. We adopt ASF's unified projection to map features with different channel dimensions into patch tokens for corresponding local regions, and retain its local cross-sensor attention and subsequent feature transformation as the interaction backbone [ASF]. Let \(\mathcal M\) denote the participating modalities, with \(M=|\mathcal M|\), and let \(t_m^p\in\mathbb R^d\) be the input token of modality \(m\) at patch \(p\). We omit the batch dimension for clarity.
+We introduce ObjDec, a multi-sensor 3D detection architecture centered on shared and modality-specific representation decoupling. As illustrated in Figure 2, modality-specific encoders first transform camera, LiDAR, and 4D radar observations into spatially corresponding bird's-eye-view (BEV) features. We adopt ASF's unified projection to map features with different channel dimensions into patch tokens for corresponding local regions, and retain its local cross-sensor attention and subsequent feature transformation as the interaction backbone [ASF]. Let \(\mathcal M\) denote the participating modalities, with \(M=|\mathcal M|\), and let \(t_m^p\in\mathbb R^d\) be the input token of modality \(m\) at patch \(p\). We omit the batch dimension for clarity.
 
-Within each corresponding patch, ObjDec learns shared and modality-specific representations and uses them to predict a foreground gate, modality contribution weights, and object context. The gate and modality weights regulate input-token updates and scaling, while object context further modulates attention queries and fused outputs. Local interaction is followed by feature transformation and spatial reassembly to produce fused BEV features for the 3D detection head. Control signals are predicted from input features during both training and inference; ground-truth (GT) boxes provide supervision targets for representation constraints and object-related predictions only during training.
+Within each corresponding patch, separate mappings learn shared and modality-specific representations with distinct training constraints. Both representations contribute to fusion through residual token updates and the prediction of modality contributions and object context. Object-region supervision and predicted foreground gates give their learning and use a detection-specific focus. The gates and modality weights regulate input-token updates and scaling, while object context modulates attention queries and fused outputs. Local interaction is followed by feature transformation and spatial reassembly to produce fused BEV features for the 3D detection head. Control signals are predicted from input features during both training and inference; ground-truth (GT) boxes provide supervision targets for representation constraints and object-related predictions only during training.
 
 > **Figure 2 placement.** Show the complete forward path, with dashed connections from ground-truth boxes to the corresponding training objectives. A suggested bilingual caption is provided below. The existing figure draft should be revised to match the verified token-scaling equations and operation order before insertion.
 
-### 3.2 Object-Guided Representation Decoupling
+### 3.2 Shared and Modality-Specific Representation Decoupling
 
 Spatially corresponding multimodal features contain both responses shared across sensors and cues specific to each modality. To explicitly organize these two components, we introduce two independent mappings for each modality:
 

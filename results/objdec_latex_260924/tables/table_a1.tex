@@ -1,0 +1,29 @@
+\begin{table}[tbp]
+\centering
+\caption[Representation and fusion dimensions]{\textbf{Representation and fusion dimensions.} Input channels are ordered C/L/R. V2X-LR omits the camera encoder while retaining the corresponding fusion dimensions. The earlier V2X 4\(\times\)4 variant uses 16 queries and 128-dimensional tokens, also producing 128 reassembled channels. Both representation branches preserve token dimensionality.}
+\label{tab:a1}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.30337\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.89888\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.89888\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.89887\hsize\linewidth=\hsize\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Item} & \textbf{K-Radar v1 ObjDec} & \textbf{K-Radar v2 Strong} & \textbf{V2X ObjDec, 2\(\times\)2} \\
+\midrule
+Input BEV channels, C/L/R & 256 / 512 / 768 & 256 / 512 / 768 & 64 / 64 / 64 \\
+Common projection channels & 256 & 256 & 64 \\
+Token dimension & 256 & 256 & 128 \\
+Shared/specific MLP hidden dimension & 256 & 256 & 128 \\
+Patch size, BEV cells & 2\(\times\)2 & 2\(\times\)2 & 2\(\times\)2 \\
+Queries per patch & 32 & 32 & 4 \\
+Attention heads & 16 & 16 & 8 \\
+Reassembled fusion channels & 2048 & 2048 & 128 \\
+Gate / modality-score hidden dimensions & 128 / 128 & 128 / 128 & 128 / 128 \\
+Object-context hidden dimension & 160 & --- & 160 \\
+Context target and activation & Objectness, sigmoid & --- & 3 classes, softmax \\
+Query/output context modulation & Enabled & --- & Enabled \\
+Sensor-combination supervision & Enabled & Enabled & Disabled \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}

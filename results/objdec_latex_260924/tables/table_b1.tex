@@ -1,0 +1,29 @@
+\begin{table}[tbp]
+\centering
+\caption[Additional protocol details]{\textbf{Additional protocol details.} Sharing a dataset column does not imply matched initialization or training cost; provenance is specified in Section~\ref{subsec:b2}. The v1 1,000-sample set is identified only by its known selection role, pending confirmation of its split origin. Spatial ranges clarify protocol differences and do not replace essential main-table disclosures.}
+\label{tab:b1}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.30337\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.89888\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.89888\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.89887\hsize\linewidth=\hsize\raggedright\arraybackslash}X@{}}
+\toprule
+\textbf{Setting} & \textbf{K-Radar v1} & \textbf{K-Radar v2} & \textbf{V2X-Radar-V local adaptation} \\
+\midrule
+Evaluated classes & Sedan & Sedan; Bus/Truck & Vehicle; Pedestrian; Cyclist \\
+Test frames & 10,065 & 13,727 & 1,486 deduplicated; 1,501 raw \\
+Validation frames & Selection subset: B.2 & Final-epoch local comparison & 1,487 deduplicated; 1,498 raw \\
+x / y / z range, m & [0,72] / [\(-\)6.4,6.4] / [\(-\)2,6] & [0,72] / [\(-\)16,16] / [\(-\)2,7.6] & [0,102.4) / [\(-\)51.2,51.2) / [\(-\)5,3) \\
+Reported difficulty & Project legacy class evaluation & Project revised class evaluation & Moderate \\
+Primary class IoUs & 0.3 / 0.5 / 0.7 for Sedan & 0.3 / 0.5 / 0.7 for both classes & 0.7 / 0.5 / 0.5 by class \\
+Additional loose IoUs & --- & --- & 0.5 / 0.25 / 0.25 by class, in raw reports \\
+AP aggregation & 11 values from 41 precision samples & Mean of 41 precision values & AP\_R40 \\
+3D evaluator z-center parameter & 1.0 & 0.5 & Native V2X evaluation convention \\
+Head score prefilter & 0.1 & 0.1 & 0.001 \\
+Additional export confidence filter & 0.3; 0.0 supplement & 0.3; 0.0 for availability supplement & No K-Radar-style additional 0.3 filter \\
+Effective rotated-NMS IoU & 0.01 & 0.01 for aligned comparison & 0.1 \\
+Max detections in local V2X postprocessing & --- & --- & 500 per class \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}

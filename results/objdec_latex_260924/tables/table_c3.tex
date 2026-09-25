@@ -1,0 +1,22 @@
+\begin{table}[tbp]
+\centering
+\caption[Weather-wise v1 3D AP]{\textbf{Weather-wise v1 3D AP.} Sedan at confidence 0.3. Total is evaluated over the combined set and is not an average of weather APs.}
+\label{tab:c3}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.56250\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.93750\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.93750\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.93750\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.93750\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.93750\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.93750\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.93750\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.93750\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.93750\hsize\linewidth=\hsize\centering\arraybackslash}X@{}}
+\toprule
+\textbf{Method} & \textbf{IoU} & \textbf{Total} & \textbf{Normal} & \textbf{Over\-cast} & \textbf{Fog} & \textbf{Rain} & \textbf{Sleet} & \textbf{Light snow} & \textbf{Heavy snow} \\
+\midrule
+ASF released archive & 0.3 & 80.31 & 79.57 & 89.89 & 90.67 & 80.97 & 80.20 & 80.89 & 71.71 \\
+ASF local & 0.3 & 88.57 & 87.83 & 90.16 & 90.77 & 80.92 & 80.51 & 89.45 & 71.64 \\
+ObjDec & 0.3 & 88.36 & 87.66 & 90.39 & 90.57 & 88.90 & 80.42 & 89.28 & 71.41 \\
+ASF released archive & 0.5 & 67.19 & 64.56 & 79.71 & 79.57 & 67.33 & 67.28 & 77.63 & 61.61 \\
+ASF local & 0.5 & 67.49 & 64.70 & 80.10 & 79.59 & 68.31 & 66.82 & 78.46 & 61.67 \\
+ObjDec & 0.5 & 67.50 & 65.98 & 80.26 & 79.71 & 74.92 & 57.60 & 78.33 & 60.51 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}

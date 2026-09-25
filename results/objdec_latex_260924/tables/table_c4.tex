@@ -1,0 +1,57 @@
+\begin{table}[tbp]
+\centering
+\caption[Weather-wise v2 3D AP]{\textbf{Weather-wise v2 3D AP.} Confidence is 0.3. A dash indicates no GT objects of the class in that weather group and is excluded from any class--weather comparison.}
+\label{tab:c4}
+\begin{subtable}{\linewidth}
+\caption{IoU 0.3}
+\label{tab:c4a}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.60350\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=1.39942\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.87464\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.87464\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.87464\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.87464\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.87464\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.87464\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.87464\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.87460\hsize\linewidth=\hsize\centering\arraybackslash}X@{}}
+\toprule
+\textbf{Method} & \textbf{Class} & \textbf{Total} & \textbf{Normal} & \textbf{Over\-cast} & \textbf{Fog} & \textbf{Rain} & \textbf{Sleet} & \textbf{Light snow} & \textbf{Heavy snow} \\
+\midrule
+ASF released archive & Sedan & 74.98 & 74.14 & 82.35 & 92.26 & 66.37 & 70.43 & 88.24 & 63.61 \\
+L4DR released, aligned & Sedan & 76.79 & 75.52 & 83.57 & 93.60 & 78.25 & 67.17 & 87.71 & 58.49 \\
+ASF local & Sedan & 74.45 & 73.45 & 82.15 & 92.09 & 65.80 & 70.81 & 89.77 & 63.36 \\
+L4DR local & Sedan & 74.49 & 73.12 & 80.06 & 92.33 & 76.27 & 54.55 & 82.74 & 51.99 \\
+DecControlled Strong & Sedan & 74.58 & 73.51 & 84.30 & 94.46 & 68.11 & 72.52 & 89.56 & 63.57 \\
+ASF released archive & Bus/Truck & 58.13 & 53.28 & 75.33 & --- & 7.89 & 59.55 & 88.26 & 68.20 \\
+L4DR released, aligned & Bus/Truck & 62.17 & 56.27 & 87.43 & --- & 2.96 & 74.75 & 80.47 & 63.76 \\
+ASF local & Bus/Truck & 55.09 & 50.39 & 65.31 & --- & 3.59 & 50.78 & 84.75 & 68.02 \\
+L4DR local & Bus/Truck & 56.58 & 54.60 & 82.07 & --- & 7.81 & 59.89 & 89.16 & 54.27 \\
+DecControlled Strong & Bus/Truck & 59.24 & 51.63 & 73.82 & --- & 10.08 & 57.47 & 89.56 & 72.34 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{subtable}
+\par\medskip
+\begin{subtable}{\linewidth}
+\caption{IoU 0.5}
+\label{tab:c4b}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.60350\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=1.39942\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.87464\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.87464\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.87464\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.87464\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.87464\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.87464\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.87464\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.87460\hsize\linewidth=\hsize\centering\arraybackslash}X@{}}
+\toprule
+\textbf{Method} & \textbf{Class} & \textbf{Total} & \textbf{Normal} & \textbf{Over\-cast} & \textbf{Fog} & \textbf{Rain} & \textbf{Sleet} & \textbf{Light snow} & \textbf{Heavy snow} \\
+\midrule
+ASF released archive & Sedan & 52.09 & 49.63 & 53.38 & 80.55 & 46.85 & 44.05 & 59.25 & 49.52 \\
+L4DR released, aligned & Sedan & 54.68 & 50.21 & 56.53 & 83.81 & 53.03 & 47.42 & 62.32 & 53.33 \\
+ASF local & Sedan & 51.52 & 48.90 & 57.16 & 79.89 & 45.96 & 44.83 & 59.25 & 51.24 \\
+L4DR local & Sedan & 54.28 & 52.33 & 49.24 & 83.44 & 54.95 & 41.22 & 59.28 & 38.72 \\
+DecControlled Strong & Sedan & 52.14 & 49.39 & 59.62 & 80.30 & 48.30 & 49.13 & 60.75 & 50.49 \\
+ASF released archive & Bus/Truck & 31.06 & 23.93 & 47.04 & --- & 2.48 & 38.83 & 70.81 & 32.55 \\
+L4DR released, aligned & Bus/Truck & 41.78 & 36.60 & 76.06 & --- & 0.68 & 62.92 & 53.30 & 41.11 \\
+ASF local & Bus/Truck & 27.88 & 21.16 & 46.68 & --- & 1.94 & 30.29 & 70.58 & 32.28 \\
+L4DR local & Bus/Truck & 33.39 & 32.18 & 55.89 & --- & 6.60 & 43.05 & 69.00 & 17.00 \\
+DecControlled Strong & Bus/Truck & 33.97 & 23.94 & 49.65 & --- & 5.05 & 38.48 & 75.09 & 39.37 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{subtable}
+\par\medskip
+\end{table}

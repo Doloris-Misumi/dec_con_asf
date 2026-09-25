@@ -1,0 +1,22 @@
+\begin{table}[tbp]
+\centering
+\caption[Complete v1 metrics and confidence settings]{\textbf{Complete v1 metrics and confidence settings.} Each pair uses the same checkpoint and changes the export confidence filter, in addition to the detector prefilter. Released ASF results are checkpoint-associated archives. Main metrics are retained as anchors for the additional IoU and threshold results.}
+\label{tab:c1}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.53846\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.92308\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.92308\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.92308\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.92308\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.92308\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.92308\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.92306\hsize\linewidth=\hsize\centering\arraybackslash}X@{}}
+\toprule
+\textbf{Method} & \textbf{conf} & \textbf{3D@0.3} & \textbf{3D@0.5} & \textbf{3D@0.7} & \textbf{BEV@0.3} & \textbf{BEV@0.5} & \textbf{BEV@0.7} \\
+\midrule
+ASF released archive & 0.3 & 80.31 & 67.19 & 18.85 & 80.78 & 80.33 & 62.85 \\
+ASF released archive & 0.0 & 87.34 & 72.95 & 18.85 & 88.59 & 86.97 & 62.85 \\
+ASF local & 0.3 & 88.57 & 67.49 & 18.69 & 89.01 & 80.36 & 61.59 \\
+ASF local & 0.0 & 87.96 & 72.96 & 18.68 & 88.80 & 87.41 & 61.57 \\
+ObjDec & 0.3 & 88.36 & 67.50 & 22.04 & 88.84 & 88.10 & 62.63 \\
+ObjDec & 0.0 & 88.06 & 72.83 & 22.02 & 88.84 & 87.18 & 62.63 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}

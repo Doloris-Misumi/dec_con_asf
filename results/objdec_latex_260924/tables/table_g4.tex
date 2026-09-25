@@ -1,0 +1,20 @@
+\begin{table}[tbp]
+\centering
+\caption[Supplementary KITTI difficulty metrics on VoD]{\textbf{Supplementary KITTI difficulty metrics on VoD.} Equal class means for the same EAA-selected checkpoints as Table~\ref{tab:g3}, using 3D/BEV IoUs of 0.5/0.25/0.25. KITTI difficulty filtering and AP\_R40 differ from the region filtering and 11-point AP of official EAA/DC, so the two sets of scores are not interchangeable.}
+\label{tab:g4}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.67382\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.77253\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=1.23605\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.77253\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.77253\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.77254\hsize\linewidth=\hsize\centering\arraybackslash}X@{}}
+\toprule
+\textbf{Configuration} & \textbf{Epoch} & \textbf{Metric} & \textbf{Easy mean} & \textbf{Moderate mean} & \textbf{Hard mean} \\
+\midrule
+ObjDec (2\(\times\)2 + local) & 75 & 3D & 83.43 & 78.64 & 72.23 \\
+ObjDec (+ adapted anchors) & 80 & 3D & 83.06 & 78.35 & 72.02 \\
+ObjDec (2\(\times\)2 + local) & 75 & BEV & 85.47 & 80.55 & 74.56 \\
+ObjDec (+ adapted anchors) & 80 & BEV & 85.33 & 80.92 & 75.02 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}

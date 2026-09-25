@@ -1,0 +1,405 @@
+{
+  "new_inference": false,
+  "source_arrays_unchanged": true,
+  "source_sha256": {
+    "analysis_exports/objdec_scene_mechanism_260924/manifest.json": "02f623366e9a1e651958a8024afe9b48bb92b82ed04f3b8c223a717cb33be0b5",
+    "analysis_exports/objdec_scene_mechanism_260924/render.py": "aa2b23ea50112ec0f714cae7ff953068272e24d32887edcbdbe3e93e975a3be8",
+    "analysis_exports/objdec_fig4_fig5_260919/fig5_candidate_metrics.json": "8920f031d433580e3745e88f185a9ed47d976a7185d2e733989d2197ddd39a06",
+    "resources/cam_calib/calib_seq.zip": "3c341f6d6d2a2b17369a2e5bb6b58e25f9f80004a9e86be406266418a504844f",
+    "analysis_exports/objdec_scene_mechanism_260924/maps/seq17_rdr00625.npz": "d0638268aa5312f9a2c9fa8589cd7b36d75369d1d872350a189925f56a46e2a4",
+    "analysis_exports/objdec_scene_mechanism_260924/maps/seq10_rdr01127.npz": "77d4f74ee2337e715059a8598b6f08ed7cd49ac0c4dcc04f0aa77a9a688a1f64",
+    "analysis_exports/objdec_scene_mechanism_260924/maps/seq25_rdr00154.npz": "f19e216656ca72c500b635583e0cb4836724fad06254b0e8c3e7f07ec8ef4d56",
+    "analysis_exports/objdec_fig4_fig5_260919/paired_predictions/asf/seq20_rdr00628.npz": "d3f46e4e585f39330a41c0afe8e54af07cdc837d487f91121d1966df64a12e51",
+    "analysis_exports/objdec_fig4_fig5_260919/paired_predictions/asf/seq22_rdr00218.npz": "640ceb0d8a1ad912321b1b94c88da4562528948d60fb5fb771033c0919d5c462",
+    "analysis_exports/objdec_fig4_fig5_260919/paired_predictions/asf/seq25_rdr00154.npz": "cd57466fdad759da7084166145455f1fd900606b1bcb235354cb91fbc4f6897a",
+    "analysis_exports/objdec_fig4_fig5_260919/paired_predictions/objdec/seq20_rdr00628.npz": "4b099eb762469ed63f829327483c7030ddde5eb6e0b32a903eed982d264a8a9d",
+    "analysis_exports/objdec_fig4_fig5_260919/paired_predictions/objdec/seq22_rdr00218.npz": "c614e2582253a55009d6466fc4cfddd9a63b5fe94e1160990fb31f19cbd2f609",
+    "analysis_exports/objdec_fig4_fig5_260919/paired_predictions/objdec/seq25_rdr00154.npz": "4ad049c70372eb4fa77715e8a158ad2c27a6f02be2a68483a3b48cffa3899e61"
+  },
+  "colors": {
+    "prediction": "#FF9B2B",
+    "ground_truth": "#00D0A1"
+  },
+  "fig4": {
+    "rows": [
+      {
+        "id": "seq17_rdr00625",
+        "row_bounds_inches": [
+          4.02,
+          6.02
+        ],
+        "target_gt_index": 3,
+        "zoom": [
+          8.65999984741211,
+          22.65999984741211,
+          -2.0,
+          6.4
+        ],
+        "gt_count": 7,
+        "prediction_count": 5,
+        "gate_foreground_mean": 0.21325740218162537,
+        "gate_background_mean": 0.1284109205007553
+      },
+      {
+        "id": "seq10_rdr01127",
+        "row_bounds_inches": [
+          2.02,
+          4.02
+        ],
+        "target_gt_index": 0,
+        "zoom": [
+          7.632499694824219,
+          21.63249969482422,
+          -6.4,
+          2.0
+        ],
+        "gt_count": 5,
+        "prediction_count": 5,
+        "gate_foreground_mean": 0.2587518095970154,
+        "gate_background_mean": 0.11482350528240204
+      },
+      {
+        "id": "seq25_rdr00154",
+        "row_bounds_inches": [
+          0.02,
+          2.02
+        ],
+        "target_gt_index": 2,
+        "zoom": [
+          4.935000419616699,
+          18.9350004196167,
+          -6.4,
+          2.0
+        ],
+        "gt_count": 4,
+        "prediction_count": 4,
+        "gate_foreground_mean": 0.28821659088134766,
+        "gate_background_mean": 0.1180514469742775
+      }
+    ],
+    "vertical_row_gap_inches": 0,
+    "gate_scale": [
+      0,
+      1
+    ],
+    "gate_interpolation": "nearest",
+    "camera_gt": "Only selected target GT, as in the previous scene figure; all predictions retained.",
+    "full_bev_and_gate_roi": [
+      0,
+      72,
+      -6.4,
+      6.4
+    ],
+    "all_axes_and_sample_labels_removed": true,
+    "visible_text": [
+      "Camera",
+      "LiDAR BEV / Gate",
+      "Gate detail",
+      "$g$",
+      "Prediction",
+      "GT",
+      "Detail"
+    ],
+    "figure_size_inches": [
+      12.663888888888888,
+      6.659999999999999
+    ],
+    "equal_spatial_scale_checked": true
+  },
+  "fig5": {
+    "rows": [
+      {
+        "id": "seq20_rdr00628",
+        "row_bounds_inches": [
+          4.628888888888889,
+          6.933333333333334
+        ],
+        "target_gt_index": 0,
+        "zoom": [
+          47.345001220703125,
+          59.345001220703125,
+          -3.8700000047683716,
+          2.1299999952316284
+        ],
+        "camera_zoom_pixels": [
+          580.7222884042885,
+          740.7222884042885,
+          331.90063440121395,
+          421.90063440121395
+        ],
+        "prediction_counts": {
+          "asf": 1,
+          "objdec": 1
+        },
+        "gt_count": 1,
+        "selected_gt_best_iou3d": {
+          "asf": 0.5721034453945828,
+          "objdec": 0.7187342481150808
+        },
+        "camera_sha256": "1289a8d29132867faf3f8c90a92c01f3f3c475ee384d1988ae87b64626d3702a",
+        "lidar_sha256": "808c1b9c20b021605f2b1ec868501dfea36378da60903d6e51adadebc846f0e4"
+      },
+      {
+        "id": "seq22_rdr00218",
+        "row_bounds_inches": [
+          2.3244444444444445,
+          4.6288888888888895
+        ],
+        "target_gt_index": 1,
+        "zoom": [
+          59.80500030517578,
+          71.80500030517578,
+          0.4,
+          6.4
+        ],
+        "camera_zoom_pixels": [
+          529.6310448051777,
+          689.6310448051777,
+          322.9796573862518,
+          412.9796573862518
+        ],
+        "prediction_counts": {
+          "asf": 1,
+          "objdec": 2
+        },
+        "gt_count": 2,
+        "selected_gt_best_iou3d": {
+          "asf": 0.0,
+          "objdec": 0.4760307870733433
+        },
+        "camera_sha256": "891effe6bc5ac871ecf604189dd8b1fc0f354e300425d22fd1587a2bd4def821",
+        "lidar_sha256": "655adacbf292632d64a93aedfd51f8e238c6a82e7ea32f1ef73a2c6ef8b38aa0"
+      },
+      {
+        "id": "seq25_rdr00154",
+        "row_bounds_inches": [
+          0.02,
+          2.3244444444444445
+        ],
+        "target_gt_index": 3,
+        "zoom": [
+          21.280000686645508,
+          33.28000068664551,
+          -6.4,
+          -0.40000000000000036
+        ],
+        "camera_zoom_pixels": [
+          631.4376785485172,
+          806.6893363575794,
+          339.2378244001585,
+          437.81688191775595
+        ],
+        "prediction_counts": {
+          "asf": 3,
+          "objdec": 4
+        },
+        "gt_count": 4,
+        "selected_gt_best_iou3d": {
+          "asf": 0.0,
+          "objdec": 0.7406607475885929
+        },
+        "camera_sha256": "39e1d3d183d87a85506d568eef89bdee5be76418a434bff61e8f8f40316d84f2",
+        "lidar_sha256": "09065a0789208afbfeff527b745f0330a41053fc81e1cf632e2f1bc2bf1eec63"
+      }
+    ],
+    "vertical_row_gap_inches": 0,
+    "score_filter": "score > 0.3; label = Sedan",
+    "full_roi": [
+      0,
+      72,
+      -6.4,
+      6.4
+    ],
+    "detail_size_m": [
+      12,
+      6
+    ],
+    "camera_inset_fraction": 0.45,
+    "paired_predictions_exactly_match_inference_caches": true,
+    "same_camera_and_bev_crops_for_both_methods": true,
+    "visible_text": [
+      "ASF · Camera",
+      "ObjDec · Camera",
+      "ASF · BEV",
+      "ObjDec · BEV",
+      "Prediction",
+      "GT",
+      "Detail"
+    ],
+    "figure_size_inches": [
+      15.19858024691358,
+      7.573333333333333
+    ],
+    "equal_spatial_scale_checked": true
+  },
+  "fig4_source_records": [
+    {
+      "id": "seq17_rdr00625",
+      "target_gt_index": 3,
+      "target_box": [
+        15.65999984741211,
+        2.7799999713897705,
+        0.20000000298023224,
+        4.707200050354004,
+        2.6215999126434326,
+        2.0999999046325684,
+        0.026834437623620033,
+        1.0
+      ],
+      "target_rule": "min abs(x-18) + 0.5*abs(y), independent of gate and performance",
+      "target_margin_m": 0.7,
+      "target_patches": 35,
+      "zoom": [
+        8.65999984741211,
+        22.65999984741211,
+        -2.0,
+        6.4
+      ],
+      "similarity_window": [
+        7.659999847412109,
+        23.65999984741211,
+        -6.4,
+        6.4
+      ],
+      "all_gt": 7,
+      "all_predictions_over_03": 5,
+      "statistics": {
+        "input": {
+          "target_mean": -0.009388606995344162,
+          "foreground_mean": -0.00339874136261642,
+          "background_mean": -0.006323378998786211
+        },
+        "shared": {
+          "target_mean": 0.9694129824638367,
+          "foreground_mean": 0.959859311580658,
+          "background_mean": 0.9630730748176575
+        },
+        "specific": {
+          "target_mean": 0.42234665155410767,
+          "foreground_mean": 0.3809099793434143,
+          "background_mean": 0.42019879817962646
+        }
+      },
+      "gate_target_mean": 0.24293896555900574,
+      "modality_scale_target_mean": [
+        0.820114016532898,
+        1.3617244958877563,
+        0.8181615471839905
+      ],
+      "source_camera_sha256": "605ed565a0f0f827bef267fdbe5ccae870795d6bc10e44ea59cec89686638f78",
+      "source_lidar_sha256": "fca5f022cccebcc7ffd92377402b101e0ae50db0631bba5136e56095b760631d"
+    },
+    {
+      "id": "seq10_rdr01127",
+      "target_gt_index": 0,
+      "target_box": [
+        14.632499694824219,
+        -3.5625,
+        0.6000000238418579,
+        4.689000129699707,
+        2.378000020980835,
+        2.5,
+        0.010997319594025612,
+        1.0
+      ],
+      "target_rule": "min abs(x-18) + 0.5*abs(y), independent of gate and performance",
+      "target_margin_m": 0.7,
+      "target_patches": 39,
+      "zoom": [
+        7.632499694824219,
+        21.63249969482422,
+        -6.4,
+        2.0
+      ],
+      "similarity_window": [
+        6.632499694824219,
+        22.63249969482422,
+        -6.4,
+        6.4
+      ],
+      "all_gt": 5,
+      "all_predictions_over_03": 5,
+      "statistics": {
+        "input": {
+          "target_mean": -0.0018564106430858374,
+          "foreground_mean": 0.009369989857077599,
+          "background_mean": 0.005598186049610376
+        },
+        "shared": {
+          "target_mean": 0.9586356282234192,
+          "foreground_mean": 0.9518964290618896,
+          "background_mean": 0.9590243697166443
+        },
+        "specific": {
+          "target_mean": 0.3866989314556122,
+          "foreground_mean": 0.429376482963562,
+          "background_mean": 0.44389986991882324
+        }
+      },
+      "gate_target_mean": 0.2542220652103424,
+      "modality_scale_target_mean": [
+        0.81226646900177,
+        1.3762661218643188,
+        0.8098025918006897
+      ],
+      "source_camera_sha256": "6bf7d043442a5738eb2ec4b9953a5e596fa5d05c221a61af930bbc86b06c491a",
+      "source_lidar_sha256": "435f39ff70f21f8601500e2f748c093bd1a4a6dfaf634e93e87aae871d1d2dda"
+    },
+    {
+      "id": "seq25_rdr00154",
+      "target_gt_index": 2,
+      "target_box": [
+        11.9350004196167,
+        -2.880000114440918,
+        -0.8999999761581421,
+        4.660999774932861,
+        2.365000009536743,
+        2.299999952316284,
+        0.02604031190276146,
+        1.0
+      ],
+      "target_rule": "min abs(x-18) + 0.5*abs(y), independent of gate and performance",
+      "target_margin_m": 0.7,
+      "target_patches": 40,
+      "zoom": [
+        4.935000419616699,
+        18.9350004196167,
+        -6.4,
+        2.0
+      ],
+      "similarity_window": [
+        3.935000419616699,
+        19.9350004196167,
+        -6.4,
+        6.4
+      ],
+      "all_gt": 4,
+      "all_predictions_over_03": 4,
+      "statistics": {
+        "input": {
+          "target_mean": 0.014676460064947605,
+          "foreground_mean": 0.007566817104816437,
+          "background_mean": -0.004881006199866533
+        },
+        "shared": {
+          "target_mean": 0.9358742237091064,
+          "foreground_mean": 0.9429941773414612,
+          "background_mean": 0.9635323882102966
+        },
+        "specific": {
+          "target_mean": 0.4632025957107544,
+          "foreground_mean": 0.4630662798881531,
+          "background_mean": 0.6221165657043457
+        }
+      },
+      "gate_target_mean": 0.3225959241390228,
+      "modality_scale_target_mean": [
+        0.7727761268615723,
+        1.4504319429397583,
+        0.7692917585372925
+      ],
+      "source_camera_sha256": "39e1d3d183d87a85506d568eef89bdee5be76418a434bff61e8f8f40316d84f2",
+      "source_lidar_sha256": "09065a0789208afbfeff527b745f0330a41053fc81e1cf632e2f1bc2bf1eec63"
+    }
+  ]
+}

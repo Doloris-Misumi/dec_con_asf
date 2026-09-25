@@ -1,0 +1,403 @@
+{
+  "type": "conceptual architecture illustration, not empirical PCA",
+  "individual_canvas_cm": [
+    4.17,
+    3.2
+  ],
+  "visible_text": false,
+  "axes": false,
+  "legend": false,
+  "background": "transparent",
+  "opacity": 1.0,
+  "colors": {
+    "Camera": "#4A9EEB",
+    "LiDAR": "#58B77A",
+    "4D Radar": "#9672D0"
+  },
+  "shared": {
+    "input_points_per_modality": 3,
+    "output_points_per_modality": 3,
+    "output_marker_outer_diameter_mm": 5.16,
+    "scene": [
+      {
+        "kind": "path",
+        "points": [
+          [
+            10.9,
+            6.4
+          ],
+          [
+            14.6,
+            6.4
+          ],
+          [
+            14.8,
+            14.2
+          ],
+          [
+            19.7,
+            16.0
+          ]
+        ],
+        "codes": [
+          1,
+          4,
+          4,
+          4
+        ],
+        "d": "M 10.9 6.4 C 14.6 6.4 14.8 14.2 19.7 16",
+        "role": "converging_arrow"
+      },
+      {
+        "kind": "path",
+        "points": [
+          [
+            10.9,
+            25.6
+          ],
+          [
+            14.6,
+            25.6
+          ],
+          [
+            14.8,
+            17.8
+          ],
+          [
+            19.7,
+            16.0
+          ]
+        ],
+        "codes": [
+          1,
+          4,
+          4,
+          4
+        ],
+        "d": "M 10.9 25.6 C 14.6 25.6 14.8 17.8 19.7 16",
+        "role": "converging_arrow"
+      },
+      {
+        "kind": "path",
+        "points": [
+          [
+            10.9,
+            16.0
+          ],
+          [
+            19.7,
+            16.0
+          ]
+        ],
+        "codes": [
+          1,
+          2
+        ],
+        "d": "M 10.9 16 L 19.7 16",
+        "role": "converging_arrow"
+      },
+      {
+        "kind": "polygon",
+        "points": [
+          [
+            22.0,
+            16
+          ],
+          [
+            18.85,
+            14.05
+          ],
+          [
+            18.85,
+            17.95
+          ]
+        ],
+        "fill": "#667085",
+        "role": "arrowhead"
+      },
+      {
+        "kind": "circle",
+        "x": 6.4,
+        "y": 4.5,
+        "r": 1.92,
+        "fill": "#4A9EEB",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "input_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 4.65,
+        "y": 7.3500000000000005,
+        "r": 1.92,
+        "fill": "#4A9EEB",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "input_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 8.15,
+        "y": 7.3500000000000005,
+        "r": 1.92,
+        "fill": "#4A9EEB",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "input_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 6.4,
+        "y": 14.1,
+        "r": 1.92,
+        "fill": "#58B77A",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "input_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 4.65,
+        "y": 16.95,
+        "r": 1.92,
+        "fill": "#58B77A",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "input_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 8.15,
+        "y": 16.95,
+        "r": 1.92,
+        "fill": "#58B77A",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "input_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 6.4,
+        "y": 23.700000000000003,
+        "r": 1.92,
+        "fill": "#9672D0",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "input_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 4.65,
+        "y": 26.55,
+        "r": 1.92,
+        "fill": "#9672D0",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "input_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 8.15,
+        "y": 26.55,
+        "r": 1.92,
+        "fill": "#9672D0",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "input_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 26.0,
+        "y": 11.9,
+        "r": 2.44,
+        "fill": "#4A9EEB",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "aligned_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 30.1,
+        "y": 11.9,
+        "r": 2.44,
+        "fill": "#58B77A",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "aligned_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 34.2,
+        "y": 11.9,
+        "r": 2.44,
+        "fill": "#9672D0",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "aligned_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 26.0,
+        "y": 16.0,
+        "r": 2.44,
+        "fill": "#9672D0",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "aligned_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 30.1,
+        "y": 16.0,
+        "r": 2.44,
+        "fill": "#4A9EEB",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "aligned_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 34.2,
+        "y": 16.0,
+        "r": 2.44,
+        "fill": "#58B77A",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "aligned_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 26.0,
+        "y": 20.1,
+        "r": 2.44,
+        "fill": "#58B77A",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "aligned_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 30.1,
+        "y": 20.1,
+        "r": 2.44,
+        "fill": "#9672D0",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "aligned_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 34.2,
+        "y": 20.1,
+        "r": 2.44,
+        "fill": "#4A9EEB",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "aligned_cluster"
+      }
+    ]
+  },
+  "specific": {
+    "points_per_modality": 3,
+    "marker_outer_diameter_mm": 5.5200000000000005,
+    "scene": [
+      {
+        "kind": "circle",
+        "x": 7.1,
+        "y": 7.95,
+        "r": 2.62,
+        "fill": "#4A9EEB",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "separated_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 5.199999999999999,
+        "y": 11.025,
+        "r": 2.62,
+        "fill": "#4A9EEB",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "separated_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 9.0,
+        "y": 11.025,
+        "r": 2.62,
+        "fill": "#4A9EEB",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "separated_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 20.85,
+        "y": 20.95,
+        "r": 2.62,
+        "fill": "#58B77A",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "separated_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 18.950000000000003,
+        "y": 24.025,
+        "r": 2.62,
+        "fill": "#58B77A",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "separated_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 22.75,
+        "y": 24.025,
+        "r": 2.62,
+        "fill": "#58B77A",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "separated_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 34.6,
+        "y": 7.95,
+        "r": 2.62,
+        "fill": "#9672D0",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "separated_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 32.7,
+        "y": 11.025,
+        "r": 2.62,
+        "fill": "#9672D0",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "separated_cluster"
+      },
+      {
+        "kind": "circle",
+        "x": 36.5,
+        "y": 11.025,
+        "r": 2.62,
+        "fill": "#9672D0",
+        "stroke": "#FFFFFF",
+        "stroke_width": 0.28,
+        "role": "separated_cluster"
+      }
+    ]
+  },
+  "reference_full_artboard_width_cm": 56,
+  "example_17_8cm_print_width": {
+    "scale_factor": 0.3178571428571429,
+    "inset_width_cm": 1.3254642857142858,
+    "shared_output_marker_mm": 1.6401428571428573,
+    "specific_marker_mm": 1.754571428571429
+  }
+}

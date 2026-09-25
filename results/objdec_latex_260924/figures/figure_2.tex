@@ -1,0 +1,6 @@
+\begin{figure}[p]
+\centering
+\fbox{\begin{minipage}[c][3cm][c]{0.9\linewidth}\centering\drafttodo{Insert the revised architecture figure; verify bounded modality scaling and the gate/context paths against the method equations.}\end{minipage}}
+\caption{Overview of ObjDec. Modality-specific BEV features are projected into spatially corresponding patch tokens and mapped to shared and modality-specific representations. Foreground gates and modality contributions predicted from these representations jointly regulate input tokens, while object context modulates attention queries and fused outputs. Feature transformation and spatial reassembly produce BEV features for the 3D detection head. The solid forward path uses feature-predicted control signals during both training and inference. Dashed connections carry GT-derived labels to training losses, not to the gate predictor. Unified projection, local cross-sensor attention, and subsequent feature transformation follow ASF \citep{paek2025asf}.}
+\label{fig:2}
+\end{figure}

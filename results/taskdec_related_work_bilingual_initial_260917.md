@@ -4,14 +4,16 @@
 
 命名更新（2026-09-19）：方法名统一为 **ObjDec**，全称 **Object-Guided Representation Decoupling（目标引导的表征解耦）**。
 
+定位更新（2026-09-24）：以共享／特有表征解耦及其参与融合为核心，目标区域监督与目标相关控制说明解耦如何服务于检测。两节收束段与新版引言保持一致；保留已有方法介绍及 ASF 基础机制的归属说明。
+
 ## 一、建议结构
 
 保留两个小节，每节三段。第一节介绍空间融合、近期的模态贡献控制、K-Radar 直接近邻；第二节介绍共享/特有学习基础、近期分解与使用方式，以及 ObjDec 的具体联系。不单独增加恶劣天气小节。
 
 | 正式小节 | 段落安排 | 收束点 |
 | --- | --- | --- |
-| **2.1 Multi-Sensor Fusion for 3D Object Detection** | 公共空间/查询交互 → 输入质量与模态贡献 → LiDAR–radar 和三传感器融合 | 在 ASF 的局部融合基础上联系表征组织与目标相关控制 |
-| **2.2 Shared and Modality-Specific Representation Learning** | 基础思想 → 近期的筛选/对齐/检测使用及事后分析 → ObjDec | 对应 BEV 区域、目标区域训练约束、输入/query/output 控制 |
+| **2.1 Multi-Sensor Fusion for 3D Object Detection** | 公共空间/查询交互 → 输入质量与模态贡献 → LiDAR–radar 和三传感器融合 | 在 ASF 的局部融合基础上，将表征解耦纳入融合架构 |
+| **2.2 Shared and Modality-Specific Representation Learning** | 基础思想 → 近期的筛选/对齐/检测使用及事后分析 → ObjDec | 局部解耦为核心，目标区域监督和表征参与融合构成检测中的具体设计 |
 
 当前英文正文约 440 词，23 篇方法文献，其中 14 篇来自 2025–2026 年。通过合并方法介绍控制篇幅；正式占页以模板排版为准。shared / modality-specific 是本文统一术语，介绍他人方法时保留其 common / unique / private 用语。
 
@@ -23,7 +25,7 @@
 
 近期研究进一步关注模态贡献与输入质量变化。[MoME（2025）](https://arxiv.org/abs/2503.19776) 为相机、LiDAR 及联合特征设置专家解码器，并根据查询选择专家；[CCF（2026）](https://arxiv.org/abs/2603.23276) 结合独立查询监督、几何先验和互补遮蔽，缓解跨域检测中的模态失衡。[RobuRCDet（2025）](https://proceedings.iclr.cc/paper_files/paper/2025/hash/21dabaacda3edba8bb281da45d7cbc17-Abstract-Conference.html) 则利用雷达高斯扩展和图像置信度引导的融合，处理相机与雷达受到不同扰动的情况。
 
-在 K-Radar 相关研究中，[3D-LRF](https://openaccess.thecvf.com/content/CVPR2024/papers/Chae_Towards_Robust_3D_Object_Detection_with_LiDAR_and_4D_Radar_CVPR_2024_paper.pdf) 与 [L4DR](https://arxiv.org/abs/2408.03677) 分别研究三维空间交互、前景去噪及门控融合；[DLRFusion（2025）](https://openaccess.thecvf.com/content/ICCV2025/html/Chae_Doppler-Aware_LiDAR-RADAR_Fusion_for_Weather-Robust_3D_Detection_ICCV_2025_paper.html) 将 Doppler、雷达功率和 LiDAR 特征分开编码并迭代交互。[WCBR](https://arxiv.org/abs/2604.05405) 根据环境条件调节分支贡献，[SRF（2026）](https://ave.kaist.ac.kr/2026/02/12/srf-stereo-radar-fusion-for-3d-object-detection-in-adverse-weather-conditions/) 在三维体素空间融合双目图像与雷达。对于三传感器融合，[ASF](https://arxiv.org/abs/2503.07029) 采用统一空间投影与对应 patch 内的跨传感器注意力，[RAF（2026）](https://arxiv.org/abs/2607.04587) 则利用显式监督的图像可靠性图调制相机特征。ObjDec 沿用 ASF 的投影和局部交互机制，进一步将共享/特有表征学习与目标相关融合控制联系起来。
+在 K-Radar 相关研究中，[3D-LRF](https://openaccess.thecvf.com/content/CVPR2024/papers/Chae_Towards_Robust_3D_Object_Detection_with_LiDAR_and_4D_Radar_CVPR_2024_paper.pdf) 与 [L4DR](https://arxiv.org/abs/2408.03677) 分别研究三维空间交互、前景去噪及门控融合；[DLRFusion（2025）](https://openaccess.thecvf.com/content/ICCV2025/html/Chae_Doppler-Aware_LiDAR-RADAR_Fusion_for_Weather-Robust_3D_Detection_ICCV_2025_paper.html) 将 Doppler、雷达功率和 LiDAR 特征分开编码并迭代交互。[WCBR](https://arxiv.org/abs/2604.05405) 根据环境条件调节分支贡献，[SRF（2026）](https://ave.kaist.ac.kr/2026/02/12/srf-stereo-radar-fusion-for-3d-object-detection-in-adverse-weather-conditions/) 在三维体素空间融合双目图像与雷达。对于三传感器融合，[ASF](https://arxiv.org/abs/2503.07029) 采用统一空间投影与对应 patch 内的跨传感器注意力，[RAF（2026）](https://arxiv.org/abs/2607.04587) 则利用显式监督的图像可靠性图调制相机特征。ObjDec 沿用 ASF 的投影和局部交互机制，将共享与模态特有表征解耦显式纳入局部融合架构。
 
 ### 2.2 共享与模态特有表征学习
 
@@ -31,7 +33,7 @@
 
 近期工作进一步研究两类信息的筛选、对齐与使用。[Liu 等（2025）](https://proceedings.nips.cc/paper_files/paper/2025/hash/55123f38c9f4acf417335cff41be6e27-Abstract-Conference.html) 从因果建模角度将模态特有部分进一步区分为独有与冗余信息；[MultiLoReFT（2026）](https://arxiv.org/abs/2607.16789) 通过低秩表示微调学习共享及模态特有子空间。[DecAlign（2026）](https://proceedings.iclr.cc/paper_files/paper/2026/file/f7f5f501282771c96bb3fedcc96bedfe-Paper-Conference.pdf) 分别利用原型引导的最优传输和分布匹配处理特有与共同表示。面向检测，[SPFD（2026）](https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Beyond_Duality_A_Hybrid_Framework_of_Leveraging_Shared_and_Private_CVPR_2026_paper.html) 基于频域一致性分离 RGB–Event 的共享/私有特征，并在编码器和解码器中分别使用；[LMD（2025）](https://proceedings.neurips.cc/paper_files/paper/2025/hash/d3e0aaa57c0d639f32a520cda39aec6d-Abstract-Conference.html) 则对已训练的融合网络进行事后模态贡献分解。
 
-ObjDec 关注相机、LiDAR 与四维雷达在对应 BEV 区域中的表征学习和融合计算。在训练时，目标区域约束用于组织共享与特有表示的一致性和差异性；在前向计算中，这些表示参与前景门控、模态贡献权重和目标上下文的预测，进而调节融合输入、注意力查询及融合输出。其具体设计在于将局部目标监督与三处融合控制相结合。
+在这些研究基础上，ObjDec 以共享与模态特有表征解耦来组织多传感器三维检测中的局部融合。其设计将空间对应的传感器 patch、目标区域内的表征约束，以及解耦表征对 token 更新和跨模态交互的直接参与联系起来。目标引导为两类表征的学习与使用提供检测依据，而表征解耦构成融合架构的核心组织方式。
 
 ## 三、English draft
 
@@ -41,7 +43,7 @@ Multi-sensor detectors combine observations through spatial correspondence and f
 
 Recent studies further address modality contributions and varying input quality. [MoME (2025)](https://arxiv.org/abs/2503.19776) routes queries among camera, LiDAR, and joint expert decoders. [CCF (2026)](https://arxiv.org/abs/2603.23276) combines separate query supervision, geometric priors, and complementary masking to address modality imbalance in cross-domain detection. [RobuRCDet (2025)](https://proceedings.iclr.cc/paper_files/paper/2025/hash/21dabaacda3edba8bb281da45d7cbc17-Abstract-Conference.html) uses Gaussian expansion of radar points and camera-confidence-guided fusion to accommodate different sensor disturbances.
 
-On K-Radar, [3D-LRF](https://openaccess.thecvf.com/content/CVPR2024/papers/Chae_Towards_Robust_3D_Object_Detection_with_LiDAR_and_4D_Radar_CVPR_2024_paper.pdf) and [L4DR](https://arxiv.org/abs/2408.03677) investigate spatial interaction, foreground denoising, and gated fusion. [DLRFusion (2025)](https://openaccess.thecvf.com/content/ICCV2025/html/Chae_Doppler-Aware_LiDAR-RADAR_Fusion_for_Weather-Robust_3D_Detection_ICCV_2025_paper.html) separately encodes Doppler, radar power, and LiDAR features for iterative interaction. [WCBR](https://arxiv.org/abs/2604.05405) adjusts branch contributions according to environmental conditions, while [SRF (2026)](https://ave.kaist.ac.kr/2026/02/12/srf-stereo-radar-fusion-for-3d-object-detection-in-adverse-weather-conditions/) fuses stereo images and radar in 3D voxel space. For three-sensor fusion, [ASF](https://arxiv.org/abs/2503.07029) uses unified canonical projection and cross-sensor attention within corresponding patches, whereas [RAF (2026)](https://arxiv.org/abs/2607.04587) modulates camera features using explicitly supervised image reliability maps. Building on ASF's projection and local interaction mechanisms, ObjDec connects shared and modality-specific representation learning with object-related fusion control.
+On K-Radar, [3D-LRF](https://openaccess.thecvf.com/content/CVPR2024/papers/Chae_Towards_Robust_3D_Object_Detection_with_LiDAR_and_4D_Radar_CVPR_2024_paper.pdf) and [L4DR](https://arxiv.org/abs/2408.03677) investigate spatial interaction, foreground denoising, and gated fusion. [DLRFusion (2025)](https://openaccess.thecvf.com/content/ICCV2025/html/Chae_Doppler-Aware_LiDAR-RADAR_Fusion_for_Weather-Robust_3D_Detection_ICCV_2025_paper.html) separately encodes Doppler, radar power, and LiDAR features for iterative interaction. [WCBR](https://arxiv.org/abs/2604.05405) adjusts branch contributions according to environmental conditions, while [SRF (2026)](https://ave.kaist.ac.kr/2026/02/12/srf-stereo-radar-fusion-for-3d-object-detection-in-adverse-weather-conditions/) fuses stereo images and radar in 3D voxel space. For three-sensor fusion, [ASF](https://arxiv.org/abs/2503.07029) uses unified canonical projection and cross-sensor attention within corresponding patches, whereas [RAF (2026)](https://arxiv.org/abs/2607.04587) modulates camera features using explicitly supervised image reliability maps. Building on ASF's projection and local interaction mechanisms, ObjDec makes shared and modality-specific representation decoupling an explicit part of the local fusion architecture.
 
 ### 2.2 Shared and Modality-Specific Representation Learning
 
@@ -49,7 +51,7 @@ Explicitly organizing shared and specific information has an established foundat
 
 Recent work further explores how these representations are selected, aligned, and used. [Liu et al. (2025)](https://proceedings.nips.cc/paper_files/paper/2025/hash/55123f38c9f4acf417335cff41be6e27-Abstract-Conference.html) use a causal formulation to further separate modality-specific information into unique and redundant components. [MultiLoReFT (2026)](https://arxiv.org/abs/2607.16789) learns shared and modality-specific subspaces through low-rank representation fine-tuning. [DecAlign (2026)](https://proceedings.iclr.cc/paper_files/paper/2026/file/f7f5f501282771c96bb3fedcc96bedfe-Paper-Conference.pdf) uses prototype-guided optimal transport and distribution matching for modality-specific and common representations, respectively. For detection, [SPFD (2026)](https://openaccess.thecvf.com/content/CVPR2026/html/Wang_Beyond_Duality_A_Hybrid_Framework_of_Leveraging_Shared_and_Private_CVPR_2026_paper.html) separates RGB–event shared and private features through frequency-domain coherence and uses them in both its encoder and decoder. [LMD (2025)](https://proceedings.neurips.cc/paper_files/paper/2025/hash/d3e0aaa57c0d639f32a520cda39aec6d-Abstract-Conference.html) instead provides post-hoc decomposition of modality contributions in pretrained fusion networks.
 
-ObjDec studies representation learning and fusion computation within corresponding BEV regions of camera, LiDAR, and 4D radar features. During training, constraints within object regions organize consistency and differences between shared and modality-specific representations. In the forward computation, these representations help predict foreground gates, modality contribution weights, and object context, which regulate fusion inputs, attention queries, and fused outputs. The design connects local object supervision to control at these three fusion stages.
+Building on this line of work, ObjDec uses shared and modality-specific representation decoupling to organize local fusion for multi-sensor 3D detection. Its design connects spatially corresponding sensor patches, representation constraints supervised within object regions, and direct use of the decoupled representations in token updates and cross-modal interaction. Object guidance gives the learning and use of these representations a detection-specific focus, while representation decoupling provides the organizing principle of the fusion architecture.
 
 ## 四、参考组织方式与引用核查（不进入正文）
 

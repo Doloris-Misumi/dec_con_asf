@@ -1,0 +1,25 @@
+\begin{table}[tbp]
+\centering
+\caption[Spatial granularity and full-budget results]{\textbf{Spatial granularity and full-budget results.} Best checkpoints are selected by validation under an 80-epoch budget, using Moderate AP\_R40. The 0.4 m group supplements the main 0.16 m comparison. Validation and test results are reported separately.}
+\label{tab:g1}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.42857\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=1.42857\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.89286\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.89286\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.89286\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.89286\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.89286\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.89286\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.89286\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.89284\hsize\linewidth=\hsize\centering\arraybackslash}X@{}}
+\toprule
+\textbf{Method} & \textbf{Sensors} & \textbf{Grid (m)} & \textbf{Best epoch} & \textbf{Val mean 3D} & \textbf{Test Vehicle} & \textbf{Test Pedes\-trian} & \textbf{Test Cyclist} & \textbf{Test mean 3D} & \textbf{Test mean BEV} \\
+\midrule
+Concat & C+L+R & 0.4 & 75 & 74.31 & 81.52 & 65.81 & 79.98 & 75.77 & 81.26 \\
+ASF-style & C+L+R & 0.4 & 75 & 72.76 & 78.57 & 58.93 & 79.02 & 72.17 & 78.21 \\
+ObjDec 4\(\times\)4 & C+L+R & 0.4 & 80 & 71.31 & 78.82 & 58.75 & 79.09 & 72.22 & 78.76 \\
+ObjDec 2\(\times\)2 & C+L+R & 0.4 & 80 & 74.19 & 80.73 & 62.36 & 78.99 & 74.03 & 80.26 \\
+Concat & C+L+R & 0.16 & 75 & 81.46 & 84.81 & 76.84 & 84.05 & 81.90 & 86.47 \\
+ASF-style & C+L+R & 0.16 & 80 & 81.03 & 84.54 & 76.17 & 83.18 & 81.30 & 85.72 \\
+ObjDec 2\(\times\)2 & C+L+R & 0.16 & 70 & 81.41 & 84.06 & 75.94 & 84.13 & 81.38 & 86.27 \\
+L4DR & L+R & 0.16 & 80 & 77.19 & 83.17 & 73.25 & 78.31 & 78.24 & 82.56 \\
+ObjDec-LR 2\(\times\)2 & L+R & 0.16 & 75 & 79.12 & 83.87 & 74.84 & 80.24 & 79.65 & 83.81 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}

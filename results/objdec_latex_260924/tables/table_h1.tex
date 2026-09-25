@@ -1,0 +1,20 @@
+\begin{table}[tbp]
+\centering
+\caption[Latency distributions]{\textbf{Latency distributions.} Each model/path uses 100 distinct timed frames repeated twice. The final column is the reciprocal of measured latency, excluding disk loading. Standard deviations describe timing variation rather than multi-seed detection uncertainty.}
+\label{tab:h1}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.36585\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=1.36585\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.85366\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.85366\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.85366\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.85366\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.85366\hsize\linewidth=\hsize\centering\arraybackslash}X@{}}
+\toprule
+\textbf{Model} & \textbf{Execution} & \textbf{Mean ms} & \textbf{Median ms} & \textbf{P95 ms} & \textbf{Std ms} & \textbf{1000 / mean ms} \\
+\midrule
+ASF & Eager & 84.00 & 82.63 & 93.26 & 5.34 & 11.91 \\
+ASF & CUDA Graph & 59.30 & 59.10 & 64.82 & 2.83 & 16.86 \\
+ObjDec & Eager & 84.69 & 84.50 & 89.98 & 3.01 & 11.81 \\
+ObjDec & CUDA Graph & 59.57 & 59.23 & 65.93 & 2.92 & 16.79 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}

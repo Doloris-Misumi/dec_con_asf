@@ -1,0 +1,21 @@
+\begin{table}[tbp]
+\centering
+\caption[Additional ablation metrics]{\textbf{Additional ablation metrics.} v1 at confidence 0.3. The 3D@0.3/@0.5 and BEV@0.5 columns already shown in the main ablation table are omitted. The full-model row follows the same JSON as Table~\ref{tab:c1}; ablated rows follow their experiment records.}
+\label{tab:d1}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.91304\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.69565\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.69565\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.69566\hsize\linewidth=\hsize\centering\arraybackslash}X@{}}
+\toprule
+\textbf{Variant} & \textbf{3D@0.7} & \textbf{BEV@0.7} & \textbf{BEV@0.3} \\
+\midrule
+Full ObjDec & 22.04 & 62.63 & 88.84 \\
+w/o modality contribution control & 11.08 & 61.36 & 80.38 \\
+w/o object context & 17.10 & 54.91 & 80.68 \\
+w/o decoupling supervision & 16.49 & 55.71 & 80.65 \\
+w/o foreground gate & 19.41 & 55.49 & 80.65 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}

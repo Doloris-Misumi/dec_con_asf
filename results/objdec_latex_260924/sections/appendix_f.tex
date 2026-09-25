@@ -1,0 +1,23 @@
+\section{Sensor Availability and Corrupted Inputs}
+\label{app:f}
+
+\subsection{Two input interventions}
+\label{subsec:f1}
+
+When a modality is removed, only the remaining sensor features are supplied to fusion, and gating, modality contributions, and context are recomputed for that set. Corrupted inputs instead retain the corresponding branch. C* replaces the raw RGB image with a black frame before the original normalization and camera encoder. L* uses a no-return convention: height-compressed sparse LiDAR features are zeroed before the original dense BEV backbone. This avoids sparse operators that do not support empty inputs; its precise interpretation is a no-return simulation at that feature interface.
+
+All ten settings use one fixed checkpoint within each dataset version, without retraining or checkpoint selection per combination. Tables~\ref{tab:f1} and~\ref{tab:f2} report the full v1 ObjDec and v2 Strong, respectively. Unlike the SCL path in Section~\ref{subsec:a3}, which reuses full-input controlled tokens, missing-sensor inference recomputes fusion control from the features actually available.
+
+\subsection{Threshold effects, sensor dependence, and the ASF reference}
+\label{subsec:f2}
+
+Beyond the complete-input and two-sensor combinations discussed in the main text, Tables~\ref{tab:f1} and~\ref{tab:f2} add single-sensor inputs, corrupted inputs, and the second confidence setting. On v2, C+L*+R obtains mean 3D@0.3 of 27.99 at confidence 0.3 and 34.70 at confidence 0.0. Removing LiDAR, C+R, yields 34.25 and 34.73 at those thresholds. Retaining a corrupted branch and removing that branch are not always equivalent across operating points.
+
+Black-frame C*+L+R remains close to complete-input performance, while camera-only predictions are weak. This combination establishes limited sensitivity to that particular camera-input change; a low camera contribution could also produce such behavior. The substantial decline without LiDAR indicates continued sensor dependence. If AP retention is reported, its denominator is complete-input AP for the same checkpoint and threshold; it is not interpreted as object recall.
+
+ASF Table~3 \citep{paek2025asf} provides a reference for similar availability settings, but its precise corruption rules and camera-only evaluation scope are not fully matched to the local protocol. This appendix primarily compares input settings within fixed weights and does not use the starred rows for a strict cross-method robustness ranking.
+
+
+\input{tables/table_f1.tex}
+
+\input{tables/table_f2.tex}

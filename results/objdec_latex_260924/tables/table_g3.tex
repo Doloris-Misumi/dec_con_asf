@@ -1,0 +1,53 @@
+\begin{table}[tbp]
+\centering
+\caption[VoD region-based 3D detection results]{\textbf{VoD region-based 3D detection results.} All methods use L+R without added synthetic fog. Official VoD 11-point 3D AP uses class IoUs of 0.5/0.25/0.25. Local results use 1,296 validation frames, with the same checkpoint for each method across EAA and DC. The two recent ObjDec runs select checkpoints by EAA; training and historical-reference differences are detailed in Section~\ref{subsec:g4}. Reported rows are from Table~3 of the published L4DR paper \citep{huang2025l4dr}, with means computed from its class values. Local means retain the evaluator output.}
+\label{tab:g3}
+\begin{subtable}{\linewidth}
+\caption{Entire Annotated Area (EAA)}
+\label{tab:g3a}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.96915\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=1.21960\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.76225\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.76225\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.76225\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.76225\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.76225\hsize\linewidth=\hsize\centering\arraybackslash}X@{}}
+\toprule
+\textbf{Method} & \textbf{Source} & \textbf{Epoch} & \textbf{Car} & \textbf{Pedes\-trian} & \textbf{Cyclist} & \textbf{Mean} \\
+\midrule
+PP-Concat (historical) & Local & 80 & 66.88 & 63.38 & 79.39 & 69.88 \\
+ObjDec (warm-start, historical) & Local & 79 & 67.50 & 63.66 & 79.38 & 70.18 \\
+ObjDec (2\(\times\)2 + local) & Local & 75 & 68.72 & 65.59 & 79.38 & 71.23 \\
+ObjDec (+ adapted anchors) & Local & 80 & 66.93 & 65.28 & 83.89 & 72.03 \\
+L4DR & Local & 99 & 68.69 & 65.35 & 78.98 & 71.00 \\
+\midrule
+InterFusion & Reported & --- & 66.50 & 64.50 & 78.50 & 69.83 \\
+L4DR & Reported & --- & 69.10 & 66.20 & 82.80 & 72.70 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{subtable}
+\par\medskip
+\begin{subtable}{\linewidth}
+\caption{Driving Corridor (DC)}
+\label{tab:g3b}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.96915\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=1.21960\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.76225\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.76225\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.76225\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.76225\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.76225\hsize\linewidth=\hsize\centering\arraybackslash}X@{}}
+\toprule
+\textbf{Method} & \textbf{Source} & \textbf{Epoch} & \textbf{Car} & \textbf{Pedes\-trian} & \textbf{Cyclist} & \textbf{Mean} \\
+\midrule
+PP-Concat (historical) & Local & 80 & 90.77 & 71.09 & 89.53 & 83.80 \\
+ObjDec (warm-start, historical) & Local & 79 & 90.59 & 71.02 & 89.76 & 83.79 \\
+ObjDec (2\(\times\)2 + local) & Local & 75 & 90.74 & 73.23 & 90.09 & 84.69 \\
+ObjDec (+ adapted anchors) & Local & 80 & 89.44 & 73.02 & 88.83 & 83.76 \\
+L4DR & Local & 99 & 90.51 & 75.13 & 88.90 & 84.84 \\
+\midrule
+InterFusion & Reported & --- & 90.70 & 72.00 & 88.70 & 83.80 \\
+L4DR & Reported & --- & 90.80 & 76.10 & 95.50 & 87.47 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{subtable}
+\par\medskip
+\end{table}

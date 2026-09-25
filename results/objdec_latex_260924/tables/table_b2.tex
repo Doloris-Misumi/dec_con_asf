@@ -1,0 +1,24 @@
+\begin{table}[tbp]
+\centering
+\caption[v2 evaluator cross-check with fixed predictions]{\textbf{v2 evaluator cross-check with fixed predictions.} Two-class means at confidence 0.3. GT, predictions, NMS, and confidence are fixed within each checkpoint; only precision aggregation and the 3D IoU height-center convention change. The z-center parameter does not affect geometric BEV IoU, whereas AP sampling still affects BEV AP. This check does not account for every difference between published and local results.}
+\label{tab:b2}
+\begingroup
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.22}
+\begin{tabularx}{\linewidth}{@{}>{\hsize=1.42857\hsize\linewidth=\hsize\raggedright\arraybackslash}X>{\hsize=0.89286\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.89286\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.89286\hsize\linewidth=\hsize\centering\arraybackslash}X>{\hsize=0.89285\hsize\linewidth=\hsize\centering\arraybackslash}X@{}}
+\toprule
+\textbf{Checkpoint} & \textbf{Precision values averaged} & \textbf{z-center} & \textbf{Mean 3D@0.3} & \textbf{Mean 3D@0.5} \\
+\midrule
+Strong & 11 & 1.0 & 62.01 & 39.46 \\
+Strong & 11 & 0.5 & 63.26 & 43.66 \\
+Strong & 41 & 1.0 & 63.93 & 40.04 \\
+Strong & 41 & 0.5 & 66.91 & 43.05 \\
+L4DR released & 11 & 1.0 & 66.44 & 46.37 \\
+L4DR released & 11 & 0.5 & 70.86 & 47.75 \\
+L4DR released & 41 & 1.0 & 67.43 & 45.27 \\
+L4DR released & 41 & 0.5 & 69.48 & 48.23 \\
+\bottomrule
+\end{tabularx}
+\endgroup
+\end{table}

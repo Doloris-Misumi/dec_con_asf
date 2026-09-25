@@ -1,0 +1,25 @@
+\section{Complete Results on K-Radar}
+\label{app:c}
+
+\subsection{Confidence thresholds and stricter matching}
+\label{subsec:c1}
+
+Table~\ref{tab:c1} extends the main comparison to IoU 0.7 and the additional confidence setting. At confidence 0.0, ObjDec and the official ASF archive obtain 88.06 and 87.34 for 3D@0.3, a smaller difference than at confidence 0.3 in the main text; their 3D@0.5 scores are 72.83 and 72.95. Rankings and margins for fixed weights can change with export thresholds and IoU, so operating points are reported separately. ObjDec exceeds official ASF at the stricter 3D@0.7 criterion under both confidence settings, while its BEV@0.7 is slightly lower. These results characterize sensitivity to matching conditions without extending an advantage at one operating point to all metrics.
+
+Table~\ref{tab:c2} expands the v2 class means into per-class 3D and BEV metrics. For Bus/Truck BEV@0.7, Strong improves over locally trained ASF from 16.84 to 23.13, but remains below the 29.65 obtained by official L4DR under aligned evaluation. The per-class breakdown separates fusion comparisons under matched training schedules from references with different architectures and initialization.
+
+\subsection{Weather groups and aggregation}
+\label{subsec:c2}
+
+Tables~\ref{tab:c3} and~\ref{tab:c4} provide the complete weather breakdown. Total AP is computed from the precision--recall sequence over the entire set and cannot be reconstructed by averaging weather APs. A dash marks a class--weather group with no corresponding GT. In particular, v2 Fog contains no Bus/Truck objects and is excluded from weather averages or gain/loss counts for that class.
+
+On v1, rainy-weather 3D@0.5 is 74.92, exceeding both ASF sources, whereas sleet yields 57.60, below both. On v2, Strong improves over locally trained ASF in most class--weather entries, with decreases for Sedan in light snow at IoU 0.3 and heavy snow at IoU 0.5. These complete breakdowns support analysis across conditions. Weather labels are not treated as controlled interventions, and weather-specific performance does not replace the main evidence for the representation design.
+
+
+\input{tables/table_c1.tex}
+
+\input{tables/table_c2.tex}
+
+\input{tables/table_c3.tex}
+
+\input{tables/table_c4.tex}

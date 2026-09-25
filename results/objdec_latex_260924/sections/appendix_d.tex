@@ -1,0 +1,28 @@
+\section{Component Interventions and Additional Metrics}
+\label{app:d}
+
+\subsection{What each ablation changes}
+\label{subsec:d1}
+
+This section specifies the interventions in main-text Table~\ref{tab:3}. Disabling modality contribution control sets the scaling strength in Equation~\eqref{eq:4} to zero, giving unit modality scaling while retaining representation residuals, predicted gating, and context. Disabling object context removes its supervision and its injection into queries and attention outputs. Disabling decoupling supervision sets only the shared-alignment, modality-specific similarity, and inter-branch separation loss weights to zero; both representation branches still generate features and participate in forward control. Disabling the foreground gate fixes its value to one and removes its supervision, retaining the other branches.
+
+These definitions distinguish supervision changes, gating amplitude, and the forward paths themselves. In particular, removing decoupling supervision does not remove the shared/specific networks and is not equivalent to Concat.
+
+\subsection{Strict 3D matching and BEV results}
+\label{subsec:d2}
+
+Table~\ref{tab:d1} reports 3D@0.7, BEV@0.3, and BEV@0.7, which are omitted from the main ablation table. Disabling modality contribution control reduces 3D@0.7 from 22.04 to 11.08, while BEV@0.7 remains at 61.36, close to the full model's 62.63. This intervention affects strict 3D matching and horizontal overlap differently; BEV scores alone therefore do not characterize its effect on 3D localization. All four ablations underperform the full model on the listed supplementary metrics. These observations follow the current single-seed experiments and selection procedure and do not establish statistical significance.
+
+
+\input{tables/table_d1.tex}
+
+\subsection{Fixed-weight spatial-gate and context interventions}
+\label{subsec:d3}
+
+Table~\ref{tab:d2} complements the retrained ablations with inference-time interventions on the final K-Radar v1 checkpoint. Each setting uses the same encoded features per frame. Replacing the gate by its frame-wise mean preserves its mean amplitude but removes spatial variation; permuting its values preserves the per-frame distribution while changing correspondence with local features. The three fixed seeds are repeated permutations, not independently trained models. GT is not used to generate the modified signals.
+
+Frame-mean gates reduce 3D@0.3/BEV@0.5 from 88.36/88.11 to 53.90/53.16, while the three permutations average 21.29/21.01. This supports the trained model's dependence on spatial correspondence. The same gate affects token residuals, modality scaling, and gated context; this experiment does not isolate those paths or attribute the entire decline to representation decoupling. Internal-signal distribution changes also distinguish these results from retraining without a gate.
+
+Jointly removing the query and output context increments changes 3D@0.3 and BEV@0.5 by \(-0.0146\) and \(-0.0087\) percentage points, respectively; all six overall AP changes have magnitudes below 0.08 points. Removing these residual increments retains cross-modal attention and the trained representations. These results do not establish independently large inference contributions for the context paths, nor do they remove their possible training-time effects. The paired baseline is evaluated in the same pass as the interventions and is kept separate from the historical main-table scores.
+
+\input{tables/table_d2.tex}
